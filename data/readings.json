@@ -204,7 +204,7 @@
             "The mass number A is the total number of protons plus neutrons in that nucleus. Neutrons = A − Z. Electrons are not part of A because their mass is tiny compared with protons and neutrons.",
             "In a neutral atom, the number of electrons equals the number of protons. That keeps the total charge at zero.",
             "A helpful picture: if the nucleus were the size of a marble, the electron cloud would stretch across a sports stadium. Almost all of an atom's mass sits in that tiny nucleus. Almost all of its volume is the electron cloud.",
-            "Chemists write a nuclide as ᴬX or as X-A. The element symbol already encodes Z, so you do not need to write Z unless you want the full form ᴬ_ZX."
+            "Chemists write a nuclide as ᴬX or as X-A. The element symbol already encodes Z, so you do not need to write Z unless you want the full form ᴬ<sub>Z</sub>X."
           ],
           "why": "Z and A are the two labels you need before you can count particles in any atom or ion. Without them, the rest of the chapter has nothing to stand on.",
           "figure": {
@@ -294,7 +294,7 @@
           "id": "the-mole",
           "heading": "The mole and Avogadro's number",
           "paragraphs": [
-            "The mole (symbol mol) is the SI unit for amount of substance. One mole of any substance contains Avogadro's number of particles. Avogadro's number N_A = 6.022 × 10²³ mol⁻¹. The particles may be atoms, molecules, ions, or formula units, depending on what you are counting.",
+            "The mole (symbol mol) is the SI unit for amount of substance. One mole of any substance contains Avogadro's number of particles. Avogadro's number N<sub>A</sub> = 6.022 × 10²³ mol⁻¹. The particles may be atoms, molecules, ions, or formula units, depending on what you are counting.",
             "Molar mass M is the mass of one mole of a substance, in g/mol. Numerically, the molar mass in g/mol equals the formula mass in u. Water has formula mass 18.02 u, so M(H₂O) = 18.02 g/mol.",
             "Why that match works: by definition, 1 u is tied to 1/12 the mass of a ¹²C atom, and the mole is defined so that 12 g of ¹²C is exactly 1 mol. The same scale links u and g/mol for every other substance.",
             "Saying \"1 mol of water\" means 6.022 × 10²³ water molecules. Saying \"1 mol of NaCl\" means 6.022 × 10²³ formula units of NaCl.",
@@ -308,9 +308,9 @@
           "paragraphs": [
             "Three linked conversions cover almost every early mole problem:",
             "1. Mass ↔ moles: n = m / M, and m = n × M. Mass m is in grams. Molar mass M is in g/mol. Amount n is in mol.",
-            "2. Moles ↔ particles: N = n × N_A, and n = N / N_A. N is a count of particles (no unit, or sometimes written as molecules or atoms).",
-            "3. Never multiply grams directly by N_A. That skips the mole step and gives a meaningless number. Always go grams → moles → particles, or the reverse.",
-            "Dimensional analysis still applies. Write every unit in the setup. Grams cancel when you multiply by (1 mol)/(M g). Moles cancel when you multiply by N_A. If the leftover unit is wrong, the conversion factor was upside down.",
+            "2. Moles ↔ particles: N = n × N<sub>A</sub>, and n = N / N<sub>A</sub>. N is a count of particles (no unit, or sometimes written as molecules or atoms).",
+            "3. Never multiply grams directly by N<sub>A</sub>. That skips the mole step and gives a meaningless number. Always go grams → moles → particles, or the reverse.",
+            "Dimensional analysis still applies. Write every unit in the setup. Grams cancel when you multiply by (1 mol)/(M g). Moles cancel when you multiply by N<sub>A</sub>. If the leftover unit is wrong, the conversion factor was upside down.",
             "For compounds, \"particles\" usually means molecules. For ionic solids, \"particles\" usually means formula units. For elements that form diatomic molecules (H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂), be clear whether the problem asks for moles of molecules or moles of atoms."
           ],
           "worked": {
@@ -333,7 +333,7 @@
               "title": "How many molecules in 0.555 mol H₂O?",
               "steps": [
                 "Start with n = 0.555 mol H₂O (from the previous example).",
-                "Use N = n × N_A with N_A = 6.022 × 10²³ mol⁻¹.",
+                "Use N = n × N<sub>A</sub> with N<sub>A</sub> = 6.022 × 10²³ mol⁻¹.",
                 "Set up: N = 0.555 mol × (6.022 × 10²³ molecules/mol).",
                 "Cancel mol.",
                 "Multiply: 0.555 × 6.022 = 3.34221. Attach × 10²³.",
@@ -344,7 +344,7 @@
             {
               "title": "Mass of 2.50 × 10²² atoms of Fe",
               "steps": [
-                "Convert particles to moles first: n = N / N_A.",
+                "Convert particles to moles first: n = N / N<sub>A</sub>.",
                 "n = (2.50 × 10²² atoms) / (6.022 × 10²³ atoms/mol).",
                 "Divide the powers of ten: 10²² / 10²³ = 10⁻¹. Numbers: 2.50 / 6.022 = 0.4151...",
                 "n = 0.4151... × 10⁻¹ = 0.04151... mol Fe. Keep extra digits.",
@@ -458,7 +458,7 @@
               "Moles of C: 40.0 g / 12.01 g/mol = 3.3306... mol C.",
               "Moles of H: 6.71 g / 1.008 g/mol = 6.6567... mol H.",
               "Moles of O: 53.3 g / 16.00 g/mol = 3.33125 mol O.",
-              "Smallest mole amount ≈ 3.331 mol (C and O are essentially equal).",
+              "Smallest mole amount ≈ 3.331 mol (C and O are equal).",
               "Divide C by 3.331: 3.331 / 3.331 = 1.00.",
               "Divide H by 3.331: 6.657 / 3.331 = 2.00.",
               "Divide O by 3.331: 3.331 / 3.331 = 1.00.",
@@ -756,7 +756,7 @@
             "Planck and Einstein showed that light also comes in packets called photons. The energy of one photon is E = hν, where h is Planck's constant, h = 6.626 × 10⁻³⁴ J·s. Combining with c = λν gives E = hc / λ.",
             "Units to watch: λ must be in meters when you use c in m/s. A wavelength given in nm must be converted: 1 nm = 10⁻⁹ m.",
             "Frequency has SI unit s⁻¹, also called hertz (Hz). Wavelength for visible light is often quoted in nm: violet near 400 nm, red near 700 nm. Shorter λ means higher ν and higher E per photon.",
-            "A mole of photons has energy N_A × E_photon. That quantity is useful when you compare photon energy to chemical bond energies given per mole.",
+            "A mole of photons has energy N<sub>A</sub> × E<sub>photon</sub>. That quantity is useful when you compare photon energy to chemical bond energies given per mole.",
             "Infrared photons have longer wavelength and lower energy than visible photons. Ultraviolet photons have shorter wavelength and higher energy. That is why UV light can break bonds that visible light leaves alone."
           ],
           "why": "Spectroscopy, Bohr jumps, and every later quantum formula start from E = hν. If λ and ν are swapped or units are wrong, the energy is wrong by orders of magnitude.",
@@ -790,10 +790,10 @@
               "title": "Energy of 1.00 mol of 486.1 nm photons",
               "steps": [
                 "From earlier, one 486.1 nm photon has E = 4.086 × 10⁻¹⁹ J.",
-                "For 1.00 mol of photons, multiply by N_A = 6.022 × 10²³ mol⁻¹.",
-                "E_molar = (4.086 × 10⁻¹⁹ J) × (6.022 × 10²³ mol⁻¹).",
+                "For 1.00 mol of photons, multiply by N<sub>A</sub> = 6.022 × 10²³ mol⁻¹.",
+                "E<sub>molar</sub> = (4.086 × 10⁻¹⁹ J) × (6.022 × 10²³ mol⁻¹).",
                 "Multiply numbers: 4.086 × 6.022 = 24.61. Powers: 10⁻¹⁹ × 10²³ = 10⁴.",
-                "E_molar = 2.461 × 10⁵ J/mol = 246.1 kJ/mol.",
+                "E<sub>molar</sub> = 2.461 × 10⁵ J/mol = 246.1 kJ/mol.",
                 "Sig figs: match the 4-figure photon energy. Final answer: 2.461 × 10⁵ J/mol (246.1 kJ/mol)."
               ]
             }
@@ -803,12 +803,12 @@
           "id": "bohr-hydrogen",
           "heading": "The Bohr model for hydrogen",
           "paragraphs": [
-            "Bohr's model for the hydrogen atom (one electron) says the electron can occupy only certain energy levels labeled by a positive integer n = 1, 2, 3, … The energy of level n is E_n = −13.6 eV / n². The negative sign means the electron is bound. E = 0 at infinite separation (n → ∞).",
-            "When the electron drops from a higher level n_high to a lower level n_low, the atom emits a photon. The photon energy equals the gap: ΔE = E_high − E_low (take the positive difference for the photon).",
+            "Bohr's model for the hydrogen atom (one electron) says the electron can occupy only certain energy levels labeled by a positive integer n = 1, 2, 3, … The energy of level n is E<sub>n</sub> = −13.6 eV / n². The negative sign means the electron is bound. E = 0 at infinite separation (n → ∞).",
+            "When the electron drops from a higher level n<sub>high</sub> to a lower level n<sub>low</sub>, the atom emits a photon. The photon energy equals the gap: ΔE = E<sub>high</sub> − E<sub>low</sub> (take the positive difference for the photon).",
             "The Balmer series is the set of drops that end at n = 2. The famous red line is n = 3 → 2 at about 656 nm. The blue-green line is n = 4 → 2 at 486 nm.",
             "Absorption is the reverse of emission. The electron jumps up when the atom absorbs a photon whose energy matches a level gap. Only those matching energies are absorbed strongly, which is why hydrogen's absorption spectrum shows sharp lines.",
-            "Bohr's model works quantitatively for hydrogen-like species (one electron): H, He⁺, Li²⁺. For He⁺ the energies scale by Z²: E_n = −13.6 Z² / n² eV with Z = 2.",
-            "The ground state is n = 1. Any n ≥ 2 is an excited state. When n → ∞, the electron is free and the atom is ionized. The ionization energy of H from the ground state is 13.6 eV, which equals −E_1."
+            "Bohr's model works quantitatively for hydrogen-like species (one electron): H, He⁺, Li²⁺. For He⁺ the energies scale by Z²: E<sub>n</sub> = −13.6 Z² / n² eV with Z = 2.",
+            "The ground state is n = 1. Any n ≥ 2 is an excited state. When n → ∞, the electron is free and the atom is ionized. The ionization energy of H from the ground state is 13.6 eV, which equals −E<sub>1</sub>."
           ],
           "figure": {
             "src": "art/h-bohr-levels.svg",
@@ -817,15 +817,15 @@
           "worked": {
             "title": "Photon energy for the n = 3 → 2 transition (in eV)",
             "steps": [
-              "Write E_n = −13.6 eV / n².",
-              "E_3 = −13.6 / 9 = −1.511... eV. Keep as −13.6/9.",
-              "E_2 = −13.6 / 4 = −3.40 eV.",
+              "Write E<sub>n</sub> = −13.6 eV / n².",
+              "E<sub>3</sub> = −13.6 / 9 = −1.511... eV. Keep as −13.6/9.",
+              "E<sub>2</sub> = −13.6 / 4 = −3.40 eV.",
               "The electron falls from n = 3 to n = 2, so it loses energy. The photon carries that lost energy.",
-              "Photon energy E_photon = E_3 − E_2? Careful: E_3 is less negative than E_2, so E_3 − E_2 is positive: (−13.6/9) − (−13.6/4) = −13.6/9 + 13.6/4.",
-              "Factor: E_photon = 13.6 (1/4 − 1/9) eV.",
+              "Photon energy E<sub>photon</sub> = E<sub>3</sub> − E<sub>2</sub>? Careful: E<sub>3</sub> is less negative than E<sub>2</sub>, so E<sub>3</sub> − E<sub>2</sub> is positive: (−13.6/9) − (−13.6/4) = −13.6/9 + 13.6/4.",
+              "Factor: E<sub>photon</sub> = 13.6 (1/4 − 1/9) eV.",
               "1/4 = 0.25000. 1/9 = 0.11111. Difference = 0.13889.",
               "Common denominator: 1/4 − 1/9 = 9/36 − 4/36 = 5/36.",
-              "E_photon = 13.6 × (5/36) = 68.0 / 36 = 1.888... eV.",
+              "E<sub>photon</sub> = 13.6 × (5/36) = 68.0 / 36 = 1.888... eV.",
               "Final answer: 1.89 eV (3 sig figs from 13.6)."
             ]
           },
@@ -833,9 +833,9 @@
             {
               "title": "Wavelength of the n = 3 → 2 line with the Rydberg formula",
               "steps": [
-                "Rydberg formula for hydrogen: 1/λ = R_H (1/n_low² − 1/n_high²), with R_H = 1.097 × 10⁷ m⁻¹.",
-                "Here n_low = 2, n_high = 3.",
-                "1/n_low² − 1/n_high² = 1/4 − 1/9 = 5/36 = 0.138889.",
+                "Rydberg formula for hydrogen: 1/λ = R<sub>H</sub> (1/n<sub>low</sub>² − 1/n<sub>high</sub>²), with R<sub>H</sub> = 1.097 × 10⁷ m⁻¹.",
+                "Here n<sub>low</sub> = 2, n<sub>high</sub> = 3.",
+                "1/n<sub>low</sub>² − 1/n<sub>high</sub>² = 1/4 − 1/9 = 5/36 = 0.138889.",
                 "1/λ = (1.097 × 10⁷)(0.138889) = 1.5236 × 10⁶ m⁻¹.",
                 "λ = 1 / 1.5236 × 10⁶ = 6.563 × 10⁻⁷ m.",
                 "In nm: 6.563 × 10⁻⁷ m × (10⁹ nm / 1 m) = 656.3 nm.",
@@ -844,9 +844,9 @@
             }
           ],
           "mistake": {
-            "wrong": "Computing E_photon as E_2 − E_3 and reporting a negative energy for the emitted light.",
-            "whyWrong": "Photon energy is a positive amount of energy carried by the light. E_2 is more negative than E_3, so E_2 − E_3 is negative and is not the photon energy.",
-            "correct": "Take the positive gap: E_photon = |E_high − E_low| = 13.6 (1/n_low² − 1/n_high²) eV for emission."
+            "wrong": "Computing E<sub>photon</sub> as E<sub>2</sub> − E<sub>3</sub> and reporting a negative energy for the emitted light.",
+            "whyWrong": "Photon energy is a positive amount of energy carried by the light. E<sub>2</sub> is more negative than E<sub>3</sub>, so E<sub>2</sub> − E<sub>3</sub> is negative and is not the photon energy.",
+            "correct": "Take the positive gap: E<sub>photon</sub> = |E<sub>high</sub> − E<sub>low</sub>| = 13.6 (1/n<sub>low</sub>² − 1/n<sub>high</sub>²) eV for emission."
           }
         },
         {
@@ -856,20 +856,20 @@
             "Modern quantum theory replaces Bohr orbits with orbitals. Four quantum numbers label an electron in an atom:",
             "1. Principal quantum number n = 1, 2, 3, … It sets the shell and the main energy scale.",
             "2. Angular-momentum quantum number ℓ = 0, 1, 2, …, (n − 1). It sets the subshell shape. Names: ℓ = 0 is s, 1 is p, 2 is d, 3 is f.",
-            "3. Magnetic quantum number m_ℓ = −ℓ, …, 0, …, +ℓ. It labels the orientation of the orbital. An s subshell has 1 orbital. A p subshell has 3. A d subshell has 5.",
-            "4. Spin quantum number m_s = +½ or −½. Each orbital holds at most two electrons, and they must have opposite spins (Pauli exclusion principle).",
-            "The set (n, ℓ, m_ℓ) labels one orbital. The set (n, ℓ, m_ℓ, m_s) labels one electron in that orbital.",
+            "3. Magnetic quantum number m<sub>ℓ</sub> = −ℓ, …, 0, …, +ℓ. It labels the orientation of the orbital. An s subshell has 1 orbital. A p subshell has 3. A d subshell has 5.",
+            "4. Spin quantum number m<sub>s</sub> = +½ or −½. Each orbital holds at most two electrons, and they must have opposite spins (Pauli exclusion principle).",
+            "The set (n, ℓ, m<sub>ℓ</sub>) labels one orbital. The set (n, ℓ, m<sub>ℓ</sub>, m<sub>s</sub>) labels one electron in that orbital.",
             "Shell capacity: shell n holds at most 2n² electrons. So n = 1 holds 2, n = 2 holds 8, n = 3 holds 18. That matches the familiar 2, 8, 18 pattern.",
-            "Forbidden combinations are common trap answers on exams. Examples: n = 1 with ℓ = 1 (no 1p); n = 2 with ℓ = 2 (no 2d); m_ℓ = 2 when ℓ = 1 (m_ℓ cannot exceed ℓ)."
+            "Forbidden combinations are common trap answers on exams. Examples: n = 1 with ℓ = 1 (no 1p); n = 2 with ℓ = 2 (no 2d); m<sub>ℓ</sub> = 2 when ℓ = 1 (m<sub>ℓ</sub> cannot exceed ℓ)."
           ],
           "worked": {
             "title": "Allowed quantum numbers for a 2p electron",
             "steps": [
               "For any 2p electron, n = 2 (the shell number in the label).",
               "p means ℓ = 1.",
-              "m_ℓ for ℓ = 1 can be −1, 0, or +1.",
-              "m_s can be +½ or −½.",
-              "One valid set is n = 2, ℓ = 1, m_ℓ = 0, m_s = +½.",
+              "m<sub>ℓ</sub> for ℓ = 1 can be −1, 0, or +1.",
+              "m<sub>s</sub> can be +½ or −½.",
+              "One valid set is n = 2, ℓ = 1, m<sub>ℓ</sub> = 0, m<sub>s</sub> = +½.",
               "A forbidden example: n = 2, ℓ = 2 is impossible because ℓ must be less than n (ℓ max = n − 1 = 1)."
             ]
           },
@@ -889,7 +889,7 @@
           "id": "orbital-shapes",
           "heading": "Orbital shapes",
           "paragraphs": [
-            "An orbital is a region of space where an electron is likely to be found. The shape comes from the wavefunction for that (n, ℓ, m_ℓ).",
+            "An orbital is a region of space where an electron is likely to be found. The shape comes from the wavefunction for that (n, ℓ, m<sub>ℓ</sub>).",
             "An s orbital is spherical. A p orbital has two lobes on opposite sides of the nucleus (a dumbbell). Many d orbitals have four lobes (a cloverleaf). The figure below shows the common schematic shapes for 1s, 2p, and a 3d orbital.",
             "Nodes are places where the electron density is zero. A 2s orbital has a spherical node inside. A 2p orbital has a nodal plane through the nucleus.",
             "The sign labels (+/−) on orbital lobes are the sign of the wavefunction, not electric charge. Overlap of same-sign lobes builds bonding interactions later in the bonding chapters.",
@@ -914,12 +914,12 @@
                 "a": "E = hν = (6.626×10⁻³⁴)(5.00×10¹⁴) = 3.31×10⁻¹⁹ J."
               },
               {
-                "q": "What is E_1 for hydrogen in eV?",
-                "a": "E_1 = −13.6 / 1² = −13.6 eV (the ground state)."
+                "q": "What is E<sub>1</sub> for hydrogen in eV?",
+                "a": "E<sub>1</sub> = −13.6 / 1² = −13.6 eV (the ground state)."
               },
               {
                 "q": "How many orbitals are in a d subshell, and how many electrons can it hold?",
-                "a": "ℓ = 2 → five m_ℓ values → 5 orbitals → 10 electrons max."
+                "a": "ℓ = 2 → five m<sub>ℓ</sub> values → 5 orbitals → 10 electrons max."
               }
             ]
           }
@@ -956,8 +956,8 @@
               "Fill the lowest orbital first: 1s takes 2 electrons with opposite spins. Write 1s².",
               "Next is 2s: put 2 electrons with opposite spins. Write 2s². Electrons used so far: 4. Remaining: 2.",
               "Next is 2p. There are three 2p orbitals of equal energy.",
-              "Hund's rule: place the first remaining electron in one 2p orbital (say 2p_x). Place the second in a different 2p orbital (2p_y), with the same spin direction as the first.",
-              "Do not pair both electrons in 2p_x. That would cost pairing energy and break Hund's rule.",
+              "Hund's rule: place the first remaining electron in one 2p orbital (say 2p<sub>x</sub>). Place the second in a different 2p orbital (2p<sub>y</sub>), with the same spin direction as the first.",
+              "Do not pair both electrons in 2p<sub>x</sub>. That would cost pairing energy and break Hund's rule.",
               "Carbon configuration: 1s² 2s² 2p², with two unpaired 2p electrons.",
               "Nitrogen has Z = 7. Same filling through 1s² 2s² leaves 3 electrons for the 2p subshell.",
               "Place one electron in each of the three 2p orbitals with parallel spins: 1s² 2s² 2p³, three unpaired electrons."
@@ -1115,10 +1115,10 @@
           "heading": "Atomic radius and effective nuclear charge",
           "paragraphs": [
             "Atomic radius is a measure of atom size. Across a period (left to right), atomic radius generally decreases. Down a group, atomic radius generally increases.",
-            "Why across a period: each step adds a proton to the nucleus and an electron to the same valence shell. The stronger nuclear pull wins, so the shell shrinks. Chemists describe this with effective nuclear charge Z_eff: the net positive pull felt by a valence electron after inner electrons shield some of the full nuclear charge Z.",
+            "Why across a period: each step adds a proton to the nucleus and an electron to the same valence shell. The stronger nuclear pull wins, so the shell shrinks. Chemists describe this with effective nuclear charge Z<sub>eff</sub>: the net positive pull felt by a valence electron after inner electrons shield some of the full nuclear charge Z.",
             "Why down a group: each step adds a new shell (larger n). The outer electrons sit farther from the nucleus, so the atom is larger even though Z is also larger.",
             "There is more than one experimental definition of radius (covalent, metallic, van der Waals). The periodic trends taught here are the same qualitative pattern for all of them.",
-            "Effective nuclear charge for a valence electron is often estimated as Z_eff ≈ Z − S, where S is a shielding constant from the inner electrons. Across Period 2, Z_eff rises steadily, which is why atoms shrink.",
+            "Effective nuclear charge for a valence electron is often estimated as Z<sub>eff</sub> ≈ Z − S, where S is a shielding constant from the inner electrons. Across Period 2, Z<sub>eff</sub> rises steadily, which is why atoms shrink.",
             "Noble-gas radii are often van der Waals radii and look large on some charts; compare like with like when you read a figure. For metals, metallic radii are the usual comparison down a group.",
             "Transition-metal radii change more slowly across a period than main-group radii because added electrons enter an inner d subshell and shield each other strongly."
           ],
@@ -1127,10 +1127,10 @@
             "title": "Which is larger, Na or Cl? Na or K?",
             "steps": [
               "Na and Cl are in the same period (Period 3). Na is on the left (Group 1). Cl is on the right (Group 17).",
-              "Across a period, Z_eff rises and radius falls. Prediction: Na is larger than Cl.",
+              "Across a period, Z<sub>eff</sub> rises and radius falls. Prediction: Na is larger than Cl.",
               "Na and K are in the same group (Group 1). K is in Period 4, below Na in Period 3.",
               "Down a group, a new shell is added. Prediction: K is larger than Na.",
-              "Quick Z_eff check for Na vs Cl: both have Ne-like cores, but Cl has Z = 17 while Na has Z = 11, so Cl's valence electrons feel a stronger pull.",
+              "Quick Z<sub>eff</sub> check for Na vs Cl: both have Ne-like cores, but Cl has Z = 17 while Na has Z = 11, so Cl's valence electrons feel a stronger pull.",
               "Final answers: radius Na > Cl; radius K > Na."
             ]
           }
@@ -1166,7 +1166,7 @@
               "steps": [
                 "Both ions come from Fe (Z = 26).",
                 "Fe²⁺ has 24 electrons. Fe³⁺ has 23 electrons.",
-                "Fe³⁺ has the same nuclear charge but fewer electrons, so electron–electron repulsion is lower and Z_eff per electron is higher.",
+                "Fe³⁺ has the same nuclear charge but fewer electrons, so electron–electron repulsion is lower and Z<sub>eff</sub> per electron is higher.",
                 "Fe³⁺ is smaller than Fe²⁺.",
                 "Final answer: Fe²⁺ > Fe³⁺ in radius."
               ]
@@ -1183,7 +1183,7 @@
           "heading": "Ionization energy",
           "paragraphs": [
             "First ionization energy (IE₁) is the energy needed to remove the highest-energy electron from 1 mol of gas-phase atoms: X(g) → X⁺(g) + e⁻. IE₁ generally increases across a period and decreases down a group.",
-            "Across a period: Z_eff rises, so electrons are held more tightly. Down a group: the outer electron is farther from the nucleus, so it is easier to remove.",
+            "Across a period: Z<sub>eff</sub> rises, so electrons are held more tightly. Down a group: the outer electron is farther from the nucleus, so it is easier to remove.",
             "Two famous Period 2 exceptions: Be → B and N → O. IE₁ of B is lower than Be because B starts a new 2p subshell (higher energy, less tightly held) while Be has a filled 2s². IE₁ of O is lower than N because O must pair two electrons in one 2p orbital; the pairing repulsion makes that electron easier to remove than an unpaired 2p electron in N.",
             "Second ionization energy IE₂ is the energy to remove a second electron from the already positive ion: X⁺(g) → X²⁺(g) + e⁻. IE₂ is always larger than IE₁ because you are pulling an electron away from a more positive species.",
             "A huge jump between IE₁ and IE₂ (or between IE₂ and IE₃) signals that you have broken into a noble-gas core. Na has a low IE₁ and a very high IE₂, which matches forming Na⁺ but not Na²⁺ in ordinary chemistry.",
@@ -1264,7 +1264,7 @@
             "items": [
               {
                 "q": "Which is larger, S or S²⁻?",
-                "a": "S²⁻ is larger. Adding electrons increases repulsion and lowers Z_eff per electron."
+                "a": "S²⁻ is larger. Adding electrons increases repulsion and lowers Z<sub>eff</sub> per electron."
               },
               {
                 "q": "Which has the higher IE₁, F or Cl?",
@@ -1544,7 +1544,7 @@
             "Paramagnetic means attracted into a magnetic field (unpaired electrons). Diamagnetic means weakly pushed out (all electrons paired). MO theory predicts which diatomic molecules are which.",
             "Bond order can be fractional (as in O₂⁺ = 2.5). Lewis structures struggle with that; MO handles it naturally from electron counts."
           ],
-          "why": "MO theory explains magnetism and fractional bond orders that Lewis structures cannot show cleanly — especially O₂."
+          "why": "MO theory explains magnetism and fractional bond orders that Lewis structures cannot show cleanly, especially O₂."
         },
         {
           "id": "mo-o2",
@@ -1557,7 +1557,7 @@
             "F₂ has bond order 1 and is diamagnetic. N₂ has bond order 3 and is diamagnetic. Those MO results match the Lewis pictures, unlike O₂.",
             "Writing the electron configuration for O₂: (σ2s)²(σ*2s)²(σ2p)²(π2p)⁴(π*2p)². The π* set holds two unpaired electrons.",
             "Removing one π* electron (to O₂⁺) raises bond order. Adding one (to O₂⁻) lowers it. Adding two (to O₂²⁻, peroxide) drops bond order to 1.",
-            "Classroom check: a tube of liquid O₂ hangs between the poles of a strong magnet; liquid N₂ does not. Paramagnetism of O₂ is not a book quirk — it is visible."
+            "Classroom check: a tube of liquid O₂ hangs between the poles of a strong magnet; liquid N₂ does not. Paramagnetism of O₂ is not a book quirk; it is visible."
           ],
           "figure": {
             "src": "art/mo-o2.svg",
@@ -1714,25 +1714,25 @@
           "paragraphs": [
             "Vapor pressure is the pressure of a vapor in equilibrium with its liquid (or solid) at a fixed temperature. Stronger IMFs hold molecules in the liquid more tightly, so vapor pressure is lower at the same T.",
             "Vapor pressure rises as temperature rises. More molecules have enough energy to escape.",
-            "The Clausius–Clapeyron equation links two vapor-pressure points: ln(P₂/P₁) = −(ΔH_vap / R) (1/T₂ − 1/T₁). Temperatures must be in kelvin. R = 8.314 J·mol⁻¹·K⁻¹ when ΔH_vap is in J/mol (or use 8.314 × 10⁻³ kJ·mol⁻¹·K⁻¹ with ΔH in kJ/mol).",
+            "The Clausius–Clapeyron equation links two vapor-pressure points: ln(P₂/P₁) = −(ΔH<sub>vap</sub> / R) (1/T₂ − 1/T₁). Temperatures must be in kelvin. R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span> when ΔH<sub>vap</sub> is in J/mol (or use 8.314 × 10⁻³ <span class=\"nw\">kJ·mol⁻¹·K⁻¹</span> with ΔH in kJ/mol).",
             "Boiling point is the temperature where vapor pressure equals external pressure. Normal boiling point uses 1 atm (or 1 bar, depending on the table).",
             "A liquid with high vapor pressure at room temperature is volatile. Weak IMFs → high vapor pressure → low boiling point.",
-            "When you solve Clausius–Clapeyron for ΔH_vap, rearrange: ΔH_vap = −R × ln(P₂/P₁) / (1/T₂ − 1/T₁). Keep the sign of the temperature term straight so ΔH_vap comes out positive for vaporization.",
-            "Plotting ln P against 1/T gives a straight line with slope −ΔH_vap/R for a limited range. That is the two-point Clausius–Clapeyron idea in graph form.",
-            "Units reminder: if ΔH_vap is 40.7 kJ/mol, either convert to 40700 J/mol and use R = 8.314 J·mol⁻¹·K⁻¹, or keep 40.7 kJ/mol and use R = 0.008314 kJ·mol⁻¹·K⁻¹.",
+            "When you solve Clausius–Clapeyron for ΔH<sub>vap</sub>, rearrange: ΔH<sub>vap</sub> = −R × ln(P₂/P₁) / (1/T₂ − 1/T₁). Keep the sign of the temperature term straight so ΔH<sub>vap</sub> comes out positive for vaporization.",
+            "Plotting ln P against 1/T gives a straight line with slope −ΔH<sub>vap</sub>/R for a limited range. That is the two-point Clausius–Clapeyron idea in graph form.",
+            "Units reminder: if ΔH<sub>vap</sub> is 40.7 kJ/mol, either convert to 40700 J/mol and use R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>, or keep 40.7 kJ/mol and use R = 0.008314 <span class=\"nw\">kJ·mol⁻¹·K⁻¹</span>.",
             "Boiling happens throughout the liquid when vapor pressure equals external pressure. Evaporation happens only at the surface and can occur below the boiling point."
           ],
           "worked": {
-            "title": "Find P₂ if P₁ = 1.00 atm at T₁ = 373 K, ΔH_vap = 40.7 kJ/mol, T₂ = 363 K",
+            "title": "Find P₂ if P₁ = 1.00 atm at T₁ = 373 K, ΔH<sub>vap</sub> = 40.7 kJ/mol, T₂ = 363 K",
             "steps": [
-              "This is water near its normal boiling point. ΔH_vap = 40.7 kJ/mol = 4.07 × 10⁴ J/mol.",
-              "Write ln(P₂/P₁) = −(ΔH_vap/R)(1/T₂ − 1/T₁).",
-              "R = 8.314 J·mol⁻¹·K⁻¹.",
+              "This is water near its normal boiling point. ΔH<sub>vap</sub> = 40.7 kJ/mol = 4.07 × 10⁴ J/mol.",
+              "Write ln(P₂/P₁) = −(ΔH<sub>vap</sub>/R)(1/T₂ − 1/T₁).",
+              "R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>.",
               "Compute 1/T₂ − 1/T₁ = 1/363 − 1/373.",
               "1/363 = 0.0027548. 1/373 = 0.0026810. Difference = 0.0000738 K⁻¹.",
-              "ΔH_vap/R = 40700 / 8.314 = 4895.4 K.",
-              "−(ΔH_vap/R)(difference) = −(4895.4)(0.0000738) = −0.361.",
-              "ln(P₂/1.00) = −0.361. P₂ = e^(−0.361) = 0.697 atm.",
+              "ΔH<sub>vap</sub>/R = 40700 / 8.314 = 4895.4 K.",
+              "−(ΔH<sub>vap</sub>/R)(difference) = −(4895.4)(0.0000738) = −0.361.",
+              "ln(P₂/1.00) = −0.361. P₂ = e<sup>−0.361</sup> = 0.697 atm.",
               "Sig figs: report about 0.697 atm (vapor pressure falls as T falls below the boiling point).",
               "Final answer: P₂ ≈ 0.697 atm."
             ]
@@ -1757,9 +1757,9 @@
             "A phase diagram plots pressure vs temperature and shows which phase is stable. Curves are equilibria between two phases. The triple point is where solid, liquid, and gas coexist. The critical point ends the liquid–gas curve; beyond it you cannot tell liquid from gas.",
             "Reading tip: at a given P and T, the region you land in is the stable phase. Crossing a curve means a phase change at equilibrium.",
             "Along the solid–gas curve, solid and vapor coexist (sublimation/deposition). Dry ice (solid CO₂) sublimes at 1 atm because that pressure is below CO₂'s triple-point pressure.",
-            "Critical temperature is the highest T at which a liquid can exist. Above T_c, no amount of pressure liquefies the gas into a separate liquid phase.",
+            "Critical temperature is the highest T at which a liquid can exist. Above T<sub>c</sub>, no amount of pressure liquefies the gas into a separate liquid phase.",
             "Heating a solid at constant pressure: temperature rises until the melting curve, then stays (ideally) at the melting point while solid and liquid coexist, then rises again in the liquid region until boiling.",
-            "The slope of the solid–liquid line is steep. For water it leans slightly left (ice is less dense than liquid water), which is unusual and explains pressure melting under ice skates in the classic story — though friction also matters."
+            "The slope of the solid–liquid line is steep. For water it leans slightly left (ice is less dense than liquid water), which is unusual and explains pressure melting under ice skates in the classic story, though friction also matters."
           ],
           "worked": {
             "title": "What happens when you raise T at fixed P below the critical pressure?",
@@ -1833,10 +1833,10 @@
           "heading": "The ideal-gas equation",
           "paragraphs": [
             "Ideal-gas law: PV = nRT. P is pressure, V volume, n amount in moles, T temperature in kelvin, and R the gas constant.",
-            "Match R to your units. Common choice: R = 0.082057 L·atm·mol⁻¹·K⁻¹ when P is in atm and V is in liters. Another: R = 8.314 J·mol⁻¹·K⁻¹ = 8.314 Pa·m³·mol⁻¹·K⁻¹. If P is in torr, convert to atm first (760 torr = 1 atm) or use a matching R.",
+            "Match R to your units. Common choice: R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span> when P is in atm and V is in liters. Another: R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span> = 8.314 <span class=\"nw\">Pa·m³·mol⁻¹·K⁻¹</span>. If P is in torr, convert to atm first (760 torr = 1 atm) or use a matching R.",
             "Rearrangements: P = nRT/V, V = nRT/P, n = PV/RT, T = PV/nR. Always write units in the setup so they cancel.",
-            "Unit trap: if V is in mL, convert to L before using R = 0.082057 L·atm·mol⁻¹·K⁻¹. If P is in torr, divide by 760 to get atm.",
-            "Another common R: 62.36 L·torr·mol⁻¹·K⁻¹ if you keep P in torr and V in L. Pick one system and stay inside it.",
+            "Unit trap: if V is in mL, convert to L before using R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>. If P is in torr, divide by 760 to get atm.",
+            "Another common R: 62.36 <span class=\"nw\">L·torr·mol⁻¹·K⁻¹</span> if you keep P in torr and V in L. Pick one system and stay inside it.",
             "You can solve for any one variable if the other three are known. Highlight the unknown, write the rearranged equation, substitute with units, then compute.",
             "Sig figs: temperatures like 25 °C → 298 K already limit precision; do not report ten digits from the calculator.",
             "Quick check after a P calculation: if you have about 1 mol in about 25 L at room temperature, P should be near 1 atm. If your answer is 50 atm or 0.01 atm, reread the numbers."
@@ -1845,9 +1845,9 @@
             "title": "Pressure of 2.50 mol gas in 10.0 L at 25.0 °C",
             "steps": [
               "Convert temperature: T = 25.0 + 273.15 = 298.15 K.",
-              "Choose R = 0.082057 L·atm·mol⁻¹·K⁻¹ because V is in L and we want P in atm.",
+              "Choose R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span> because V is in L and we want P in atm.",
               "Write P = nRT / V.",
-              "Substitute: P = (2.50 mol)(0.082057 L·atm·mol⁻¹·K⁻¹)(298.15 K) / (10.0 L).",
+              "Substitute: P = (2.50 mol)(0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>)(298.15 K) / (10.0 L).",
               "Compute nR = 2.50 × 0.082057 = 0.2051425.",
               "Multiply by T: 0.2051425 × 298.15 = 61.163.",
               "Divide by V: 61.163 / 10.0 = 6.1163 atm.",
@@ -1862,7 +1862,7 @@
                 "V = nRT/P = (0.500)(0.082057)(273) / 1.00.",
                 "0.500 × 0.082057 = 0.0410285.",
                 "0.0410285 × 273 = 11.201 L.",
-                "This is essentially the molar volume 22.4 L/mol times 0.500 mol.",
+                "This matches the molar volume 22.4 L/mol times 0.500 mol.",
                 "Final answer: 11.2 L."
               ]
             }
@@ -1876,7 +1876,7 @@
             "That is why CO₂ (44.01 g/mol) is denser than N₂ (28.02 g/mol) in the same room conditions, and why a CO₂ fire extinguisher can push oxygen away near the floor.",
             "You can also find an unknown molar mass: measure m, V, P, T for a gas sample, then M = mRT / PV.",
             "At the same T and P, the denser ideal gas always has the larger molar mass. Ranking densities is then just ranking M values.",
-            "For air ≈ 29 g/mol, any gas with M > 29 tends to sink in air (same T,P), and M < 29 tends to rise — ignoring drafts and temperature differences.",
+            "For air ≈ 29 g/mol, any gas with M > 29 tends to sink in air (same T,P), and M < 29 tends to rise, ignoring drafts and temperature differences.",
             "Experimental molar mass of a volatile liquid: weigh a flask, add liquid, heat to vaporize and fill the flask with vapor at known T and P, then reweigh. M = mRT/PV.",
             "Watch density units. g/L is common from this equation with R = 0.082057. If a problem wants g/mL, divide by 1000."
           ],
@@ -1884,8 +1884,8 @@
             "title": "Density of CO₂ at 1.00 atm and 298 K",
             "steps": [
               "M(CO₂) = 12.01 + 2(16.00) = 44.01 g/mol.",
-              "Use d = PM / RT with R = 0.082057 L·atm·mol⁻¹·K⁻¹.",
-              "d = (1.00 atm)(44.01 g/mol) / [(0.082057 L·atm·mol⁻¹·K⁻¹)(298 K)].",
+              "Use d = PM / RT with R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>.",
+              "d = (1.00 atm)(44.01 g/mol) / [(0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>)(298 K)].",
               "Denominator: 0.082057 × 298 = 24.453.",
               "d = 44.01 / 24.453 = 1.800 g/L.",
               "Final answer: 1.80 g/L (3 sig figs)."
@@ -1908,21 +1908,21 @@
           "id": "dalton",
           "heading": "Dalton's law of partial pressures",
           "paragraphs": [
-            "In a mixture of ideal gases, each gas behaves as if it alone occupied the volume. Dalton's law: P_total = P₁ + P₂ + … = Σ P_i.",
-            "Mole fraction of gas i: x_i = n_i / n_total. Then P_i = x_i P_total. Also x_i = P_i / P_total.",
-            "Collecting a gas over water: the total pressure includes water vapor. P_gas = P_total − P_H₂O (look up vapor pressure of water at that temperature).",
-            "Mole fractions in a mixture always sum to 1. Partial pressures always sum to P_total. Those two checks catch many arithmetic errors.",
+            "In a mixture of ideal gases, each gas behaves as if it alone occupied the volume. Dalton's law: P<sub>total</sub> = P₁ + P₂ + … = Σ P<sub>i</sub>.",
+            "Mole fraction of gas i: x<sub>i</sub> = n<sub>i</sub> / n<sub>total</sub>. Then P<sub>i</sub> = x<sub>i</sub> P<sub>total</sub>. Also x<sub>i</sub> = P<sub>i</sub> / P<sub>total</sub>.",
+            "Collecting a gas over water: the total pressure includes water vapor. P<sub>gas</sub> = P<sub>total</sub> − P<sub>H</sub>₂O (look up vapor pressure of water at that temperature).",
+            "Mole fractions in a mixture always sum to 1. Partial pressures always sum to P<sub>total</sub>. Those two checks catch many arithmetic errors.",
             "When a problem gives volume percents of gases mixed at the same T and P, volume percent equals mole percent for ideal gases.",
-            "Dry gas means you already subtracted water vapor. Wet gas means P_total includes P_H₂O.",
-            "Example: H₂ collected over water at 25 °C with barometer 758 torr. P_H₂O ≈ 23.8 torr at 25 °C. Then P_H₂ = 758 − 23.8 = 734.2 torr."
+            "Dry gas means you already subtracted water vapor. Wet gas means P<sub>total</sub> includes P<sub>H</sub>₂O.",
+            "Example: H₂ collected over water at 25 °C with barometer 758 torr. P<sub>H</sub>₂O ≈ 23.8 torr at 25 °C. Then P<sub>H</sub>₂ = 758 − 23.8 = 734.2 torr."
           ],
           "worked": {
             "title": "Partial pressure of O₂",
             "steps": [
-              "Given: n(N₂) = 0.400 mol, n(O₂) = 0.100 mol, P_total = 2.00 atm.",
-              "n_total = 0.400 + 0.100 = 0.500 mol.",
+              "Given: n(N₂) = 0.400 mol, n(O₂) = 0.100 mol, P<sub>total</sub> = 2.00 atm.",
+              "n<sub>total</sub> = 0.400 + 0.100 = 0.500 mol.",
               "x(O₂) = 0.100 / 0.500 = 0.200.",
-              "P(O₂) = x(O₂) × P_total = 0.200 × 2.00 atm = 0.400 atm.",
+              "P(O₂) = x(O₂) × P<sub>total</sub> = 0.200 × 2.00 atm = 0.400 atm.",
               "Check: P(N₂) = 0.800 × 2.00 = 1.60 atm. Sum = 2.00 atm.",
               "Final answer: 0.400 atm."
             ]
@@ -1987,7 +1987,7 @@
                 "a": "n = PV/RT = (2.00×5.00)/(0.082057×300) = 0.406 mol."
               },
               {
-                "q": "In a mixture, x(He) = 0.25 and P_total = 4.0 atm. What is P(He)?",
+                "q": "In a mixture, x(He) = 0.25 and P<sub>total</sub> = 4.0 atm. What is P(He)?",
                 "a": "P(He) = 0.25 × 4.0 = 1.0 atm."
               }
             ]
@@ -2015,30 +2015,30 @@
             "Ideal gas means the KMT assumptions hold well enough for PV = nRT to be accurate. Real gases are closest to ideal when dilute and warm.",
             "Elastic collisions keep the total kinetic energy of the particles constant in a closed insulated box. Temperature stays steady when no energy leaves the system.",
             "Mean free path is the average distance a molecule travels between collisions. Lower pressure → longer mean free path. That is why effusion and vacuum systems need low pressure to work cleanly.",
-            "From wall collisions you can derive that P = (1/3) ρ u_rms² for an ideal gas, where ρ is mass density. Combine that with KE_avg = (3/2) RT and you recover PV = nRT. So the ideal-gas law is not a separate mystery — it follows from the postulates."
+            "From wall collisions you can derive that P = (1/3) ρ u<sub>rms</sub>² for an ideal gas, where ρ is mass density. Combine that with KE<sub>avg</sub> = (3/2) RT and you recover PV = nRT. So the ideal-gas law is not a separate mystery; it follows from the postulates."
           ],
-          "why": "KMT explains why PV = nRT works, and it points to the places real gases fail — finite size and attractions."
+          "why": "KMT explains why PV = nRT works, and it points to the places real gases fail: finite size and attractions."
         },
         {
           "id": "speed-and-energy",
           "heading": "Molecular speed and kinetic energy",
           "paragraphs": [
-            "Average translational kinetic energy per mole of gas is (3/2) RT, with R = 8.314 J·mol⁻¹·K⁻¹. Per molecule it is (3/2) kT, where k is Boltzmann's constant.",
-            "Root-mean-square speed: u_rms = √(3RT / M). Here M must be in kg/mol so that the units under the square root become m²/s². Example: N₂ is 28.02 g/mol = 0.02802 kg/mol.",
-            "At the same T, lighter molecules have higher u_rms. H₂ is much faster than O₂ at room temperature. Raising T raises every gas's u_rms.",
-            "The Maxwell–Boltzmann distribution spreads molecular speeds. u_rms is one characteristic speed; the most probable speed and the average speed are slightly smaller. Intro problems usually ask for u_rms.",
-            "Because KE_avg depends only on T, not on M, two gases at the same T have the same average KE per mole, even if their u_rms values differ.",
-            "Unit trap for u_rms: molar mass must be kg/mol when R is in J. Using 28.02 g/mol without converting gives an answer too large by √1000.",
+            "Average translational kinetic energy per mole of gas is (3/2) RT, with R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>. Per molecule it is (3/2) kT, where k is Boltzmann's constant.",
+            "Root-mean-square speed: u<sub>rms</sub> = √(3RT / M). Here M must be in kg/mol so that the units under the square root become m²/s². Example: N₂ is 28.02 g/mol = 0.02802 kg/mol.",
+            "At the same T, lighter molecules have higher u<sub>rms</sub>. H₂ is much faster than O₂ at room temperature. Raising T raises every gas's u<sub>rms</sub>.",
+            "The Maxwell–Boltzmann distribution spreads molecular speeds. u<sub>rms</sub> is one characteristic speed; the most probable speed and the average speed are slightly smaller. Intro problems usually ask for u<sub>rms</sub>.",
+            "Because KE<sub>avg</sub> depends only on T, not on M, two gases at the same T have the same average KE per mole, even if their u<sub>rms</sub> values differ.",
+            "Unit trap for u<sub>rms</sub>: molar mass must be kg/mol when R is in J. Using 28.02 g/mol without converting gives an answer too large by √1000.",
             "Heavier gases move slower at the same T, but each mole still carries (3/2)RT of translational KE. The energy is the same; the speed is not.",
-            "Example scale: at 300 K, u_rms(H₂) is about 1.9 km/s, u_rms(N₂) about 0.52 km/s, and u_rms(CO₂) a bit lower still. Molecules are fast; macroscopic diffusion looks slow only because of constant collisions.",
-            "If T doubles, KE_avg doubles and u_rms rises by √2 ≈ 1.41. If M quadruples at fixed T, u_rms falls by half. Those two scalings cover most qualitative speed questions."
+            "Example scale: at 300 K, u<sub>rms</sub>(H₂) is about 1.9 km/s, u<sub>rms</sub>(N₂) about 0.52 km/s, and u<sub>rms</sub>(CO₂) a bit lower still. Molecules are fast; macroscopic diffusion looks slow only because of constant collisions.",
+            "If T doubles, KE<sub>avg</sub> doubles and u<sub>rms</sub> rises by √2 ≈ 1.41. If M quadruples at fixed T, u<sub>rms</sub> falls by half. Those two scalings cover most qualitative speed questions."
           ],
           "worked": {
-            "title": "u_rms of N₂ at 300. K",
+            "title": "u<sub>rms</sub> of N₂ at 300. K",
             "steps": [
               "Molar mass M = 28.02 g/mol = 0.02802 kg/mol.",
-              "R = 8.314 J·mol⁻¹·K⁻¹. Note 1 J = 1 kg·m²·s⁻².",
-              "Write u_rms = √(3RT / M).",
+              "R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>. Note 1 J = 1 <span class=\"nw\">kg·m²·s⁻²</span>.",
+              "Write u<sub>rms</sub> = √(3RT / M).",
               "Compute 3RT = 3 × 8.314 × 300. = 7482.6.",
               "Divide by M: 7482.6 / 0.02802 = 267045.",
               "Square root: √267045 = 516.8 m/s.",
@@ -2048,10 +2048,10 @@
           },
           "workedExamples": [
             {
-              "title": "Compare u_rms of H₂ and O₂ at the same T",
+              "title": "Compare u<sub>rms</sub> of H₂ and O₂ at the same T",
               "steps": [
-                "u_rms ∝ 1/√M at fixed T.",
-                "u_rms(H₂)/u_rms(O₂) = √(M_O₂ / M_H₂) = √(32.00 / 2.016) = √15.87 = 3.98.",
+                "u<sub>rms</sub> ∝ 1/√M at fixed T.",
+                "u<sub>rms</sub>(H₂)/u<sub>rms</sub>(O₂) = √(M<sub>O</sub>₂ / M<sub>H</sub>₂) = √(32.00 / 2.016) = √15.87 = 3.98.",
                 "H₂ molecules move about 3.98 times faster than O₂ molecules at the same temperature.",
                 "Final answer: ratio ≈ 3.98."
               ]
@@ -2064,19 +2064,19 @@
           "paragraphs": [
             "Effusion is escape of gas through a tiny hole into vacuum. Diffusion is mixing of gases through each other.",
             "Graham's law: rate of effusion ∝ 1/√M. For two gases at the same T and P: rate₁/rate₂ = √(M₂/M₁). The lighter gas effuses faster.",
-            "The same square-root mass dependence appears in u_rms, because faster molecules hit the hole more often.",
+            "The same square-root mass dependence appears in u<sub>rms</sub>, because faster molecules hit the hole more often.",
             "Time to effuse is inversely related to rate. If gas A effuses twice as fast as gas B, A needs half the time to pass the same amount through the hole.",
             "Enrichment of uranium used gaseous UF₆ effusion historically: lighter ²³⁵UF₆ effuses slightly faster than ²³⁸UF₆. The mass difference is small, so many stages were needed.",
             "Graham's law also estimates diffusion rates in free space when other factors are similar. In air, perfume molecules still meet air molecules, so real diffusion is slower than simple effusion through a pinhole.",
             "If a problem gives times instead of rates, remember t ∝ 1/rate ∝ √M. The gas with larger M takes longer.",
             "Worked pattern: write the ratio with the unknown rate or time on the left, put molar masses under square roots on the right, then solve. Cancel identical T and P assumptions that Graham's law already requires.",
-            "Sample trap: mixing up which mass goes on top. Always put the other gas's molar mass under the square root when you want rate_A / rate_B = √(M_B / M_A)."
+            "Sample trap: mixing up which mass goes on top. Always put the other gas's molar mass under the square root when you want rate<sub>A</sub> / rate<sub>B</sub> = √(M<sub>B</sub> / M<sub>A</sub>)."
           ],
           "worked": {
             "title": "H₂ vs O₂ effusion rate ratio",
             "steps": [
               "M(H₂) = 2.016 g/mol. M(O₂) = 32.00 g/mol.",
-              "rate(H₂)/rate(O₂) = √(M_O₂ / M_H₂) = √(32.00 / 2.016).",
+              "rate(H₂)/rate(O₂) = √(M<sub>O</sub>₂ / M<sub>H</sub>₂) = √(32.00 / 2.016).",
               "32.00 / 2.016 = 15.873.",
               "√15.873 = 3.984.",
               "Final answer: H₂ effuses about 3.98 times as fast as O₂."
@@ -2096,7 +2096,7 @@
           "mistake": {
             "wrong": "Writing rate₁/rate₂ = √(M₁/M₂) and concluding the heavier gas is faster.",
             "whyWrong": "The lighter gas is faster. The molar mass of the other gas goes under the square root in the numerator.",
-            "correct": "Use rate_light / rate_heavy = √(M_heavy / M_light)."
+            "correct": "Use rate<sub>light</sub> / rate<sub>heavy</sub> = √(M<sub>heavy</sub> / M<sub>light</sub>)."
           }
         },
         {
@@ -2107,7 +2107,7 @@
             "Deviations grow at high pressure (particle volume is no longer negligible) and at low temperature (attractions particles stick together more).",
             "van der Waals equation: (P + a n²/V²)(V − n b) = nRT. The a term corrects for attractions (attractions reduce the force of wall collisions, so you add a pressure correction). The b term corrects for finite particle volume (available volume is V − nb).",
             "Larger, more polarizable molecules usually have larger a. Larger molecules usually have larger b.",
-            "Compressibility factor Z = PV_m / RT. For an ideal gas Z = 1. Z < 1 often signals attractions dominating; Z > 1 at high P often signals finite volume dominating.",
+            "Compressibility factor Z = PV<sub>m</sub> / RT. For an ideal gas Z = 1. Z < 1 often signals attractions dominating; Z > 1 at high P often signals finite volume dominating.",
             "van der Waals constants a and b are substance-specific. You look them up; you do not invent them. Problems that give a and b expect you to plug into (P + a n²/V²)(V − n b) = nRT carefully with matching units.",
             "At very high pressure, molecules are forced close together. The excluded volume nb is a large fraction of V, so the ideal law overestimates how much you can compress the gas.",
             "Near condensation, attractions pull molecules together and can make the observed pressure much lower than ideal. That is where Z dips below 1.",
@@ -2155,11 +2155,11 @@
             "items": [
               {
                 "q": "What happens to average KE of gas molecules when T doubles?",
-                "a": "Average KE doubles, because KE_avg ∝ T."
+                "a": "Average KE doubles, because KE<sub>avg</sub> ∝ T."
               },
               {
-                "q": "Does u_rms of O₂ increase, decrease, or stay the same when T rises?",
-                "a": "Increase. u_rms = √(3RT/M) rises with √T."
+                "q": "Does u<sub>rms</sub> of O₂ increase, decrease, or stay the same when T rises?",
+                "a": "Increase. u<sub>rms</sub> = √(3RT/M) rises with √T."
               },
               {
                 "q": "In van der Waals, what does b correct for?",
@@ -2167,7 +2167,7 @@
               },
               {
                 "q": "Which gas effuses faster at the same T, Ne or Ar? Roughly by what factor?",
-                "a": "Ne is faster. rate(Ne)/rate(Ar) = √(M_Ar/M_Ne) ≈ √(39.95/20.18) ≈ √1.98 ≈ 1.41."
+                "a": "Ne is faster. rate(Ne)/rate(Ar) = √(M<sub>Ar</sub>/M<sub>Ne</sub>) ≈ √(39.95/20.18) ≈ √1.98 ≈ 1.41."
               }
             ]
           }
@@ -2175,198 +2175,845 @@
       ]
     },
     "thermochemistry-and-the-first-law": {
+      "topic_id": "thermochemistry-and-the-first-law",
       "reviewed": false,
       "sections": [
         {
-          "heading": "First law: ΔU = q + w",
+          "id": "first-law",
+          "heading": "First law: system, heat, and work",
           "paragraphs": [
-            "Internal energy U is a state function. Heat q into the system is positive; work w done on the system is positive in the chemistry sign convention used here (some physics books define w with the opposite sign). For expansion work against constant P, w = −PΔV."
+            "Thermochemistry tracks energy changes in chemical reactions. Define the system (the chemicals you care about) and the surroundings (everything else). Energy that leaves the system enters the surroundings.",
+            "Internal energy U is a state function: its change ΔU depends only on the start and end states, not on the path. The first law says ΔU = q + w, using the chemistry sign convention: q > 0 when heat enters the system, and w > 0 when work is done on the system.",
+            "For expansion work against a constant external pressure, w = −P<sub>ext</sub> ΔV. When a gas expands (ΔV > 0), the system does work on the surroundings, so w is negative and U falls if heat is not supplied.",
+            "Heat and work are path functions. Different routes between the same two states can exchange different amounts of heat and work, but ΔU is the same.",
+            "At constant volume, no expansion work is done (ΔV = 0), so w = 0 and ΔU = q<sub>V</sub>. Bomb calorimeters use that idea.",
+            "Open vs closed vs isolated: a closed system exchanges energy but not matter; an isolated system exchanges neither. Coffee-cup calorimeters are approximately adiabatic toward the room for a short experiment, but they are open to constant pressure.",
+            "Electrical work and other forms exist, but intro problems focus on heat and PV work. Keep the sign convention consistent with your course: here q and w into the system are positive.",
+            "State functions you will meet often: U, H, S, G, P, T, V. Path functions for energy transfer: q and w. Exam questions love asking which quantities depend only on the current state."
           ],
+          "why": "Every enthalpy and calorimetry problem sits on ΔU = q + w and on clear system/surroundings bookkeeping.",
           "worked": {
-            "title": "System absorbs 250 J heat, does 100 J work",
+            "title": "Sign of q and w for a gas that expands while absorbing heat",
             "steps": [
-              "q = +250 J (heat in)",
-              "w = −100 J (system does work on surroundings)",
-              "ΔU = q + w = 250 − 100 = +150 J"
+              "The gas (system) expands → ΔV > 0 → w = −P<sub>ext</sub> ΔV < 0 (system does work).",
+              "The gas absorbs heat → q > 0.",
+              "ΔU = q + w could be positive, negative, or zero depending on which term is larger.",
+              "Final answer: q positive, w negative; ΔU needs the magnitudes."
             ]
-          }
-        },
-        {
-          "heading": "Enthalpy and calorimetry",
-          "paragraphs": [
-            "H = U + PV. At constant pressure, q_p = ΔH. Coffee-cup calorimetry: q_sol ≈ −m c ΔT for the solution (sign flips for the reaction)."
+          },
+          "workedExamples": [
+            {
+              "title": "ΔU when q = +150 J and w = −40 J",
+              "steps": [
+                "ΔU = q + w = 150 + (−40) = 110 J.",
+                "The system gained 110 J of internal energy.",
+                "Final answer: ΔU = +110 J."
+              ]
+            }
           ]
         },
         {
-          "heading": "Hess's law and ΔH_f°",
+          "id": "enthalpy-calorimetry",
+          "heading": "Enthalpy and calorimetry",
           "paragraphs": [
-            "ΔH°_rxn = Σ n ΔH_f°(products) − Σ n ΔH_f°(reactants). Elements in standard state have ΔH_f° = 0."
+            "Enthalpy is defined as H = U + PV. It is also a state function. At constant pressure, the heat transferred equals the enthalpy change: q<sub>p</sub> = ΔH.",
+            "Most open-lab reactions run at (nearly) constant atmospheric pressure, so tabulated reaction heats are usually ΔH values.",
+            "Coffee-cup (constant-pressure) calorimetry: the solution absorbs or releases heat. For a dilute aqueous reaction, q<sub>sol</sub> ≈ m c ΔT, where m is the mass of solution, c is the specific heat capacity (often ≈ 4.18 <span class=\"nw\">J·g⁻¹·°C⁻¹</span> for dilute water solutions), and ΔT = T<sub>final</sub> − T<sub>initial</sub>.",
+            "Energy conservation: heat gained by the solution equals heat lost by the reaction (or the reverse). So q<sub>rxn</sub> = −q<sub>sol</sub> for an insulated cup that only exchanges heat between reaction and solution.",
+            "If the reaction is exothermic, the solution warms (ΔT > 0), q<sub>sol</sub> > 0, and q<sub>rxn</sub> < 0, so ΔH < 0. Endothermic reactions cool the solution.",
+            "To report ΔH per mole, divide q<sub>rxn</sub> by the moles of the limiting reactant that reacted (watch the sign).",
+            "Bomb (constant-volume) calorimetry measures q<sub>V</sub> ≈ ΔU for the combustion. Converting to ΔH needs the Δn<sub>g</sub> RT correction when asked.",
+            "Specific heat capacity c is per gram; molar heat capacity C is per mole. Do not mix them. Watch whether ΔT is in °C or K. The size of the degree is the same, so ΔT values match.",
+            "If two solutions are mixed, m is usually the total mass after mixing. If volumes add and density is about 1.00 g/mL, total mass in grams matches total volume in mL. That shortcut appears in many coffee-cup problems.",
+            "Limiting reactant still controls q<sub>rxn</sub> when one reagent runs out. Convert q<sub>rxn</sub> to ΔH per mole using moles reacted, not moles originally present of the excess reagent."
           ],
           "worked": {
-            "title": "ΔH° for CH₄ + 2 O₂ → CO₂ + 2 H₂O(l)",
+            "title": "ΔH from coffee-cup data",
             "steps": [
-              "ΔH° = [ΔH_f(CO₂) + 2 ΔH_f(H₂O(l))] − [ΔH_f(CH₄) + 0]",
-              "Using standard table values → −890.36 kJ"
+              "Given: 50.0 mL of 1.00 M HCl mixes with 50.0 mL of 1.00 M NaOH. Solution mass ≈ 100.0 g (density ≈ 1.00 g/mL). c = 4.18 <span class=\"nw\">J·g⁻¹·°C⁻¹</span>. Temperature rises 6.50 °C.",
+              "q<sub>sol</sub> = m c ΔT = (100.0 g)(4.18 <span class=\"nw\">J·g⁻¹·°C⁻¹</span>)(6.50 °C) = 2717 J = 2.717 kJ.",
+              "q<sub>rxn</sub> = −q<sub>sol</sub> = −2.717 kJ.",
+              "Moles of water formed: HCl and NaOH are 1:1; moles = 0.0500 L × 1.00 mol/L = 0.0500 mol.",
+              "ΔH per mole = q<sub>rxn</sub> / n = −2.717 kJ / 0.0500 mol = −54.3 kJ/mol.",
+              "Sign check: temperature rose → exothermic → negative ΔH. Good.",
+              "Final answer: ΔH ≈ −54.3 kJ per mole of reaction as written for 1 mol H₂O."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "q<sub>sol</sub> when 75.0 g water cools by 3.20 °C (c = 4.18 <span class=\"nw\">J·g⁻¹·°C⁻¹</span>)",
+              "steps": [
+                "ΔT = −3.20 °C (cooling).",
+                "q<sub>sol</sub> = (75.0)(4.18)(−3.20) = −1003 J ≈ −1.00 × 10³ J.",
+                "The water lost heat. If this cooling came from an endothermic reaction in the cup, q<sub>rxn</sub> = −q<sub>sol</sub> = +1.00 × 10³ J.",
+                "Final answer: q<sub>sol</sub> = −1.00 × 10³ J."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hess-formation",
+          "heading": "Hess's law and standard enthalpies of formation",
+          "paragraphs": [
+            "Hess's law: if a reaction is the sum of steps, ΔH for the reaction is the sum of the ΔH values of the steps. Enthalpy is a state function, so the path does not matter.",
+            "Standard enthalpy of formation ΔH<sub>f</sub>° is the enthalpy change when one mole of a substance forms from its elements in their standard states. By definition, ΔH<sub>f</sub>° = 0 for an element in its standard state (O₂(g), C(graphite), H₂(g), …).",
+            "For any reaction: ΔH°_rxn = Σ n ΔH<sub>f</sub>°(products) − Σ n ΔH<sub>f</sub>°(reactants), with stoichiometric coefficients n.",
+            "Always match physical states to the table (H₂O(l) vs H₂O(g) differ by the enthalpy of vaporization).",
+            "Hess's law is also how you combine measured combustion or formation reactions when a direct measurement is hard.",
+            "Standard state means the pure substance at 1 bar (older tables: 1 atm) and the specified temperature, usually 298 K for tables labeled °.",
+            "If a problem gives ΔH for a reaction written with fractional coefficients, you may scale everything, including ΔH, by the same factor to match integer moles.",
+            "Formation enthalpies can be positive (endothermic formation, as for NO) or negative (exothermic formation, as for CO₂ and H₂O). A positive ΔH<sub>f</sub>° does not mean the compound cannot exist; it means forming it from elements absorbs heat.",
+            "Think of a formation cycle: elements → compounds with tabulated ΔH<sub>f</sub>°, then rearrange. Hess's law is that cycle written as algebra."
+          ],
+          "why": "Tables of ΔH<sub>f</sub>° turn many exam ΔH questions into careful arithmetic with correct signs and states.",
+          "worked": {
+            "title": "ΔH° for CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)",
+            "steps": [
+              "Use ΔH<sub>f</sub>° values (kJ/mol): CH₄(g) = −74.8, O₂(g) = 0, CO₂(g) = −393.5, H₂O(l) = −285.8.",
+              "Σ products = 1(−393.5) + 2(−285.8) = −393.5 − 571.6 = −965.1 kJ.",
+              "Σ reactants = 1(−74.8) + 2(0) = −74.8 kJ.",
+              "ΔH° = −965.1 − (−74.8) = −965.1 + 74.8 = −890.3 kJ.",
+              "Sign check: combustion is exothermic → negative. Good.",
+              "Final answer: ΔH° ≈ −890.3 kJ."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Hess path: find ΔH for C(graphite) + ½ O₂ → CO when given combustion data",
+              "steps": [
+                "Given: C + O₂ → CO₂, ΔH₁ = −393.5 kJ; CO + ½ O₂ → CO₂, ΔH₂ = −283.0 kJ.",
+                "Target: C + ½ O₂ → CO.",
+                "Take reaction 1 as written. Reverse reaction 2 (flip sign): CO₂ → CO + ½ O₂, ΔH = +283.0 kJ.",
+                "Add: C + O₂ + CO₂ → CO₂ + CO + ½ O₂. Cancel CO₂ and cancel ½ O₂ from each side.",
+                "Left with C + ½ O₂ → CO. ΔH = −393.5 + 283.0 = −110.5 kJ.",
+                "Final answer: ΔH = −110.5 kJ."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Forgetting to flip the sign when a formation reaction is reversed, or mixing H₂O(l) and H₂O(g) values.",
+            "whyWrong": "Hess's law and ΔH<sub>f</sub>° arithmetic both depend on matching the exact reaction as written. A reversed step needs −ΔH. Wrong state uses the wrong table entry.",
+            "correct": "Write the target equation, line up each step or each ΔH<sub>f</sub>° with its state, flip signs when you reverse, then subtract Σ reactants from Σ products."
+          }
+        },
+        {
+          "id": "dh-du",
+          "heading": "Relating ΔH and ΔU for gas reactions",
+          "paragraphs": [
+            "From H = U + PV, for ideal-gas reactions at constant T: ΔH ≈ ΔU + Δn<sub>g</sub> RT, where Δn<sub>g</sub> is moles of gas products minus moles of gas reactants (from the balanced equation).",
+            "R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>. Keep ΔH and ΔU in the same energy unit (often convert RT into kJ).",
+            "If Δn<sub>g</sub> = 0 (same gas moles on both sides), ΔH ≈ ΔU. If gas moles increase, ΔH is more positive than ΔU by about Δn<sub>g</sub> RT.",
+            "Only gas moles enter Δn<sub>g</sub>. Solids and liquids are omitted from that count because their molar volumes are tiny compared with gases.",
+            "Example check: H₂(g) + Cl₂(g) → 2 HCl(g) has Δn<sub>g</sub> = 0, so ΔH ≈ ΔU."
+          ],
+          "worked": {
+            "title": "ΔU from ΔH for N₂(g) + 3 H₂(g) → 2 NH₃(g) at 298 K if ΔH = −92.2 kJ",
+            "steps": [
+              "Δn<sub>g</sub> = 2 − (1 + 3) = 2 − 4 = −2 mol gas.",
+              "ΔH = ΔU + Δn<sub>g</sub> RT ⇒ ΔU = ΔH − Δn<sub>g</sub> RT.",
+              "RT = (8.314 × 10⁻³ <span class=\"nw\">kJ·mol⁻¹·K⁻¹</span>)(298 K) = 2.478 kJ/mol.",
+              "Δn<sub>g</sub> RT = (−2)(2.478) = −4.956 kJ.",
+              "ΔU = −92.2 − (−4.956) = −92.2 + 4.956 = −87.2 kJ.",
+              "Final answer: ΔU ≈ −87.2 kJ for the reaction as written."
+            ]
+          },
+          "workedExamples": []
+        },
+        {
+          "id": "check-thermo",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is ΔH<sub>f</sub>° for O₂(g) in its standard state?",
+                "a": "0. Elements in standard states have ΔH<sub>f</sub>° = 0."
+              },
+              {
+                "q": "In an exothermic coffee-cup experiment, does the water temperature rise or fall?",
+                "a": "Rise. The reaction releases heat into the solution."
+              },
+              {
+                "q": "At constant volume, how is ΔU related to q?",
+                "a": "ΔU = q<sub>V</sub> because expansion work is zero."
+              }
             ]
           }
         }
       ]
     },
     "principles-of-chemical-equilibrium": {
+      "topic_id": "principles-of-chemical-equilibrium",
       "reviewed": false,
       "sections": [
         {
-          "heading": "K and Q",
+          "id": "k-and-q",
+          "heading": "Equilibrium constants K and Q",
           "paragraphs": [
-            "For aA + bB ⇌ cC + dD, K_c = [C]^c[D]^d / ([A]^a[B]^b) at equilibrium. Q uses the same form with current concentrations. If Q < K, forward; Q > K, reverse; Q = K, at equilibrium.",
-            "K_p uses partial pressures in bar (or atm when that is the standard). K_p = K_c (RT)^{Δn} with Δn = moles gas products − reactants, and R = 0.082057 L·atm·mol⁻¹·K⁻¹ when pressures are in atm."
+            "Chemical equilibrium is dynamic: forward and reverse rates are equal, so concentrations stop changing.",
+            "For aA + bB ⇌ cC + dD, the equilibrium constant in concentration form is K<sub>c</sub> = ([C]<sup>c</sup> [D]<sup>d</sup>) / ([A]<sup>a</sup> [B]<sup>b</sup>), using equilibrium concentrations. Pure solids and pure liquids do not appear in K.",
+            "The reaction quotient Q uses the same algebraic form with current (not necessarily equilibrium) values. Compare Q with K: if Q < K, the forward reaction is favored until equilibrium; if Q > K, the reverse; if Q = K, the system is at equilibrium.",
+            "K<sub>p</sub> uses partial pressures (often in bar, or atm when that matches the standard used in the problem). For ideal gases, K<sub>p</sub> = K<sub>c</sub> (RT)<sup>Δn</sup> where Δn = (c + d) − (a + b) counting gas moles only, and R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span> when pressures are in atm and concentrations in mol/L.",
+            "K depends only on temperature for a given reaction. Catalysts and the amounts you mix change how fast you get there or the position along the path, but they do not change K itself at fixed T.",
+            "Writing K: products over reactants, each concentration or pressure raised to its coefficient. Never put solid CaCO₃ or liquid H₂O into K<sub>c</sub> for heterogeneous equilibria like CaCO₃(s) ⇌ CaO(s) + CO₂(g); there K<sub>p</sub> = P<sub>CO</sub>₂.",
+            "Large K means products dominate at equilibrium. Small K means reactants dominate. K = 1 means a balanced mix under the standard-state convention.",
+            "Numerical values of K depend on how the equation is written. Double every coefficient and you square K. Reverse the equation and K becomes 1/K. Always match K to the equation on the page.",
+            "Partial pressures in K<sub>p</sub> must use the same pressure unit the tabulated K<sub>p</sub> assumes. Mixing bar and atm without converting creates silent errors.",
+            "Q uses the same formula as K but with the concentrations or pressures you have right now. Updating one species changes Q instantly; K stays put until temperature changes.",
+            "When all stoichiometric coefficients are multiplied by a factor n, the new constant is the old constant raised to n. That rule keeps thermodynamics consistent with how the equation is written.",
+            "Practice saying \"Q versus K\" out loud before every equilibrium direction question. That one comparison prevents most guesswork."
+          ],
+          "why": "Q vs K is the fastest way to predict direction before you solve an ICE table.",
+          "worked": {
+            "title": "Direction from Q for N₂ + 3 H₂ ⇌ 2 NH₃",
+            "steps": [
+              "Suppose K<sub>c</sub> = 0.0602 and current concentrations are [N₂] = 0.50, [H₂] = 0.50, [NH₃] = 0.50 (all mol/L).",
+              "Q<sub>c</sub> = (0.50)² / [(0.50)(0.50)³] = 0.25 / (0.50 × 0.125) = 0.25 / 0.0625 = 4.0.",
+              "Q<sub>c</sub> = 4.0 > K<sub>c</sub> = 0.0602 → too many products relative to equilibrium.",
+              "Net reaction proceeds in the reverse direction (NH₃ decomposes) until Q falls to K.",
+              "Final answer: reverse direction."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Convert K<sub>c</sub> to K<sub>p</sub> for N₂ + 3 H₂ ⇌ 2 NH₃ at 400. K",
+              "steps": [
+                "Δn = 2 − 4 = −2.",
+                "K<sub>p</sub> = K<sub>c</sub> (RT)<sup>Δn</sup> = K<sub>c</sub> (RT)<sup>−2</sup> = K<sub>c</sub> / (RT)².",
+                "If K<sub>c</sub> = 0.500, RT = (0.082057)(400.) = 32.823.",
+                "(RT)² = 1077.3.",
+                "K<sub>p</sub> = 0.500 / 1077.3 = 4.64 × 10⁻⁴.",
+                "Final answer: K<sub>p</sub> ≈ 4.64 × 10⁻⁴."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ice-tables",
+          "heading": "ICE tables",
+          "paragraphs": [
+            "An ICE table organizes Initial concentrations (or moles in a known volume), the Change in terms of x using stoichiometry, and Equilibrium values as Initial + Change.",
+            "Substitute the equilibrium row into the K expression and solve for x. Then back-substitute to get each equilibrium concentration.",
+            "Approximation: if K is small and the initial reactant concentration C is not tiny, x ≈ √(K × something) may be ≪ C. Check that x/C < about 0.05 (5% rule) before you trust the approximation; otherwise solve the exact quadratic.",
+            "Units: keep a consistent concentration unit (usually mol/L). For K<sub>p</sub> problems, use partial pressures in the unit your K<sub>p</sub> expects.",
+            "When the stoichiometry is 1:1:1 with a moderate K, you often get a quadratic equation ax² + bx + c = 0. Use x = [−b ± √(b² − 4ac)] / (2a) and keep the root that makes physical sense (concentrations ≥ 0).",
+            "Starting from pure products is fine: then x measures reverse change. Always define x clearly in the Change row.",
+            "Common pattern: start with reactants only, define +x on the product side using the stoichiometric ratios, substitute into K, solve, then report all equilibrium concentrations with correct sig figs.",
+            "If a problem gives K<sub>p</sub> and pressures, build the ICE table in partial pressures (or convert everything to moles in a known volume first). Do not mix [ ] and P in one expression.",
+            "Sanity check after solving: plug equilibrium values back into the K expression and confirm you recover the given K within rounding error.",
+            "When K is very large, equilibrium lies far to the right. Sometimes it is easier to push the reaction to completion first, then define x as a small reverse change."
           ],
           "worked": {
-            "title": "K_p from K_c for N₂ + 3 H₂ ⇌ 2 NH₃",
+            "title": "ICE for H₂(g) + I₂(g) ⇌ 2 HI(g) with K<sub>c</sub> = 50.0",
             "steps": [
-              "Δn = 2 − (1+3) = −2",
-              "T = 472 °C = 745 K",
-              "K_p = K_c (RT)^{−2} = 0.105 / (0.082057×745)²",
-              "K_p ≈ 2.81 × 10⁻⁵"
+              "Start with [H₂]₀ = 1.00 M, [I₂]₀ = 1.00 M, [HI]₀ = 0.",
+              "Change: H₂ and I₂ each −x; HI +2x.",
+              "Equilibrium: [H₂] = 1.00 − x, [I₂] = 1.00 − x, [HI] = 2x.",
+              "K<sub>c</sub> = (2x)² / [(1 − x)(1 − x)] = 4x² / (1 − x)² = 50.0.",
+              "Take square root: 2x / (1 − x) = √50.0 = 7.071.",
+              "2x = 7.071(1 − x) → 2x = 7.071 − 7.071x → 9.071x = 7.071 → x = 0.780.",
+              "[HI] = 2x = 1.56 M. [H₂] = [I₂] = 0.220 M.",
+              "Final answer: [HI] = 1.56 M; [H₂] = [I₂] = 0.220 M."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Small-K approximation for A ⇌ B + C with K<sub>c</sub> = 2.0 × 10⁻⁶, [A]₀ = 0.20 M",
+              "steps": [
+                "Equilibrium: [A] = 0.20 − x, [B] = [C] = x.",
+                "K = x² / (0.20 − x) ≈ x² / 0.20 = 2.0 × 10⁻⁶.",
+                "x² = 4.0 × 10⁻⁷ → x = 6.3 × 10⁻⁴.",
+                "Check: x / 0.20 = 0.0032 (0.32%) ≪ 5% → approximation OK.",
+                "Final answer: [B] = [C] = 6.3 × 10⁻⁴ M."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Putting stoichiometric coefficients into the exponents of K incorrectly, or treating solids as if they belong in K<sub>c</sub>.",
+            "whyWrong": "K uses equilibrium activities. Pure solids and liquids are omitted. Coefficients become exponents on the species that do appear, not multipliers in front of K.",
+            "correct": "Write K only with gases and solutes, each raised to its coefficient. Drop pure solids and liquids."
           }
         },
         {
-          "heading": "ICE tables",
+          "id": "le-chatelier",
+          "heading": "Le Châtelier's principle",
           "paragraphs": [
-            "Set Initial amounts, define Change with x using stoichiometry, write Equilibrium expressions, solve using K."
+            "Le Châtelier's principle: if you disturb a system at equilibrium, the net reaction shifts to partially counteract the disturbance.",
+            "Add reactant → forward shift. Add product → reverse shift. Remove a product → forward shift.",
+            "Increase pressure by decreasing volume → shift toward fewer gas moles. Decrease pressure → toward more gas moles. Adding inert gas at constant volume does not change partial pressures of reactants/products the same way; for ideal gases at constant V, K<sub>p</sub> problems often show no shift.",
+            "Temperature: treat heat as a reactant in an endothermic reaction or as a product in an exothermic one. Raising T shifts toward the endothermic direction and changes K (K increases with T for endothermic reactions).",
+            "A catalyst speeds both directions equally. It shortens the time to equilibrium but does not change K or the equilibrium position.",
+            "Concentration stresses change Q immediately; the system then shifts until Q returns to K. Temperature stresses change K itself.",
+            "Adding a solid reactant does not change its activity (still 1), so it does not shift a heterogeneous equilibrium the way adding a solute would.",
+            "Industrial ammonia (Haber) uses moderate T (kinetics vs equilibrium tradeoff), high P (favors NH₃), and continuous product removal. That is Le Châtelier in engineering form.",
+            "Removing heat (cooling an exothermic equilibrium) favors products. That is why some industrial reactors cool the mixture after reaction to lock in conversion, combined with kinetics considerations.",
+            "Volume and pressure stresses matter only when Δn<sub>gas</sub> ≠ 0. For H₂ + I₂ ⇌ 2 HI, gas moles stay 2 = 2, so compression does not shift the position (K<sub>x</sub> unchanged for that stoichiometry).",
+            "Exam wording trap: \"the equilibrium shifts left\" means the reverse net reaction makes more reactants until Q returns to K. Concentrations of products fall; concentrations of reactants rise (for a closed system without removal)."
           ],
           "worked": {
-            "title": "H₂ + I₂ ⇌ 2 HI, K=49.0, start 0.0100 M each",
+            "title": "Shift for 2 SO₂(g) + O₂(g) ⇌ 2 SO₃(g) (exothermic) when T rises",
             "steps": [
-              "I: 0.0100, 0.0100, 0",
-              "C: −x, −x, +2x",
-              "E: 0.0100−x, 0.0100−x, 2x",
-              "(2x)² / (0.0100−x)² = 49.0 → x = 0.0078",
-              "[H₂]=[I₂]=0.0022 M; [HI]=0.0156 M"
+              "Exothermic means heat is on the product side in the Le Châtelier picture.",
+              "Raising T is like adding heat → reverse shift (toward SO₂ and O₂).",
+              "K decreases because the reverse direction is favored at the new equilibrium.",
+              "Final answer: reverse shift; K smaller."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Effect of compressing N₂ + 3 H₂ ⇌ 2 NH₃",
+              "steps": [
+                "Gas moles: left 4, right 2.",
+                "Compressing (higher P, smaller V) favors fewer gas moles → forward (more NH₃).",
+                "Final answer: forward shift toward NH₃."
+              ]
+            },
+            {
+              "title": "Add inert gas at constant pressure to N₂ + 3 H₂ ⇌ 2 NH₃",
+              "steps": [
+                "At constant P, adding inert gas increases total volume.",
+                "Partial pressures of N₂, H₂, and NH₃ fall (mole fractions drop).",
+                "Fewer total pressures of reactants/products is like a pressure decrease → shift toward more gas moles → reverse.",
+                "Final answer: reverse shift (at constant P)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-equil",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "If Q < K, which way does the net reaction run?",
+                "a": "Forward, making more products until Q = K."
+              },
+              {
+                "q": "Does a catalyst change K at fixed T?",
+                "a": "No. It only changes the rate of reaching equilibrium."
+              },
+              {
+                "q": "For A(g) ⇌ 2 B(g), does high pressure favor A or B?",
+                "a": "A (fewer gas moles on the left)."
+              },
+              {
+                "q": "Write K<sub>c</sub> for CaCO₃(s) ⇌ CaO(s) + CO₂(g).",
+                "a": "K<sub>c</sub> = [CO₂] (solids omitted). Equivalently K<sub>p</sub> = P<sub>CO</sub>₂."
+              }
             ]
           }
         }
       ]
     },
     "entropy-gibbs-energy-and-spontaneity": {
+      "topic_id": "entropy-gibbs-energy-and-spontaneity",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Entropy",
+          "id": "entropy",
+          "heading": "Entropy and predicting ΔS",
           "paragraphs": [
-            "Entropy S measures dispersal of energy / number of microstates. Gases have much higher S than liquids or solids. Fewer gas moles → usually ΔS < 0. Standard entropy change: ΔS° = Σ n S°(products) − Σ n S°(reactants)."
+            "Entropy S measures how widely energy and matter are dispersed. More microstates → higher entropy. It is a state function.",
+            "Typical order for a pure substance: S(gas) ≫ S(liquid) > S(solid). Dissolving a solid or liquid in a solvent usually increases entropy; dissolving a gas in a liquid usually decreases entropy.",
+            "For a chemical reaction, count gas moles first: if moles of gas increase, ΔS° is often positive; if they decrease, ΔS° is often negative. Phase changes and complexity matter too, but gas count is the best first check.",
+            "Third-law entropies: tables list standard molar entropies S° (not ΔS<sub>f</sub>°). Elements do not have S° = 0 (except a perfect crystal at 0 K).",
+            "ΔS°_rxn = Σ n S°(products) − Σ n S°(reactants).",
+            "Second law: for any spontaneous process, the total entropy of the system plus surroundings increases: ΔS<sub>univ</sub> = ΔS<sub>sys</sub> + ΔS<sub>surr</sub> > 0.",
+            "At constant T and P, heat into the surroundings relates to −ΔH<sub>sys</sub> / T for the surroundings when the only exchange is that heat, so ΔS<sub>surr</sub> ≈ −ΔH<sub>sys</sub> / T. That is why exothermic reactions can drive ΔS<sub>univ</sub> up even if ΔS<sub>sys</sub> is negative.",
+            "Absolute entropy rises with temperature and with molecular complexity (more ways to store energy). Ne(g) has lower S° than C₂H₆(g) at the same T.",
+            "Entropy is not \"disorder\" in a casual desk-mess sense. It is a count of how many microscopic arrangements match the same macroscopic state. Still, the gas-vs-solid intuition is a useful ranking tool.",
+            "For the surroundings at constant T, an exothermic system (ΔH<sub>sys</sub> < 0) dumps heat that increases S<sub>surr</sub>. That is why many exothermic reactions with negative ΔS<sub>sys</sub> are still spontaneous at low T.",
+            "Heating a substance slowly and reversibly adds entropy ΔS = q<sub>rev</sub> / T. For a constant-pressure warm-up without phase change, that becomes integral of C<sub>p</sub> dT / T, which is why larger heat capacity means a larger entropy increase for the same temperature jump.",
+            "Mixing two ideal gases increases entropy because the number of position microstates rises. That is a standard ΔS > 0 example with no chemistry at all.",
+            "Quick ranking drill: compare moles of gas first, then phases, then molecular complexity. That order of checks solves most qualitative ΔS questions on exams.",
+            "Tabulated S° values already include all the heating and phase-change entropy from 0 K up to 298 K for the standard state. That is why you can subtract Σ S°_reactants from Σ S°_products without inventing extra terms for \"starting from elements.\""
           ],
+          "why": "Sign of ΔS, together with ΔH, decides how temperature affects spontaneity through ΔG.",
           "worked": {
             "title": "Sign of ΔS for 2 H₂(g) + O₂(g) → 2 H₂O(l)",
             "steps": [
-              "3 mol gas → 0 mol gas (liquid water)",
-              "Much less freedom → ΔS negative"
+              "Gas moles left: 3. Gas moles right: 0 (liquid water).",
+              "Gases disappear into a liquid → much less dispersal.",
+              "ΔS° is negative (and large in magnitude).",
+              "Final answer: ΔS° < 0."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "ΔS° for N₂(g) + 3 H₂(g) → 2 NH₃(g) from table values",
+              "steps": [
+                "Suppose S° (<span class=\"nw\">J·mol⁻¹·K⁻¹</span>): N₂ = 191.6, H₂ = 130.7, NH₃ = 192.8.",
+                "Σ products = 2(192.8) = 385.6.",
+                "Σ reactants = 191.6 + 3(130.7) = 191.6 + 392.1 = 583.7.",
+                "ΔS° = 385.6 − 583.7 = −198.1 J/K = −0.1981 kJ/K.",
+                "Matches fewer gas moles (4 → 2).",
+                "Final answer: ΔS° ≈ −198.1 J/K."
+              ]
+            },
+            {
+              "title": "Predict ΔS sign: dissolving NaCl(s) in water",
+              "steps": [
+                "Solid ions become mobile hydrated ions in solution.",
+                "Number of accessible microstates rises.",
+                "ΔS<sub>sys</sub> is positive for dissolving NaCl.",
+                "Final answer: ΔS > 0."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gibbs",
+          "heading": "Gibbs energy and spontaneity",
+          "paragraphs": [
+            "Gibbs free energy G combines enthalpy and entropy for processes at constant T and P. The change is ΔG = ΔH − TΔS with T in kelvin.",
+            "At constant T and P: ΔG < 0 means the process is spontaneous as written; ΔG > 0 means the reverse is spontaneous; ΔG = 0 means equilibrium.",
+            "Standard change ΔG° uses standard states. Signs of ΔH° and ΔS° create four cases: both negative → spontaneous at low T; both positive → spontaneous at high T; ΔH° < 0 and ΔS° > 0 → always spontaneous; ΔH° > 0 and ΔS° < 0 → never spontaneous (as written under standard conditions).",
+            "The crossover temperature where ΔG° = 0 is T = ΔH° / ΔS° (use consistent units; convert J and kJ carefully).",
+            "ΔG is the maximum non-expansion work available from a process at constant T and P (a useful interpretation, even when you only use the sign).",
+            "Standard vs nonstandard: tables give ΔG°, ΔH°, S°. Real mixtures use ΔG = ΔG° + RT ln Q. Spontaneity under lab conditions depends on ΔG, not only ΔG°.",
+            "Phase changes at the normal boiling or melting point are at equilibrium: ΔG = 0 and ΔH = TΔS for the reversible phase change.",
+            "Plotting ΔG vs T as a straight line with slope −ΔS (when ΔH and ΔS are taken as constant) shows when the line crosses zero. That crossing is the temperature where reactants and products are balanced under standard conditions.",
+            "Biological and materials problems often ask whether a process is enthalpy-driven or entropy-driven. Look at which term dominates ΔG = ΔH − TΔS.",
+            "Spontaneous does not mean fast. Diamond converting to graphite has ΔG < 0 at room temperature, yet the rate is negligible. Kinetics and thermodynamics answer different questions.",
+            "When ΔH and ΔS have the same sign, temperature is the switch. Learn the four-case table until you can rebuild it without notes.",
+            "Units drill: if ΔH° = −85.0 kJ and ΔS° = −150. J/K at 298 K, convert ΔS° to −0.150 kJ/K, then TΔS° = −44.7 kJ, so ΔG° = −85.0 − (−44.7) = −40.3 kJ. Missing the joule conversion would wreck the sign logic.",
+            "Coupled processes: a nonspontaneous step can be pulled forward when it is linked to a highly spontaneous step (as in many biochemical pathways). The sum of ΔG values for the coupled path must be negative."
+          ],
+          "worked": {
+            "title": "Is a reaction spontaneous at 298 K if ΔH° = +40.0 kJ and ΔS° = +150. J/K?",
+            "steps": [
+              "Convert: ΔS° = 0.150 kJ/K.",
+              "TΔS° = (298)(0.150) = 44.7 kJ.",
+              "ΔG° = ΔH° − TΔS° = 40.0 − 44.7 = −4.7 kJ.",
+              "ΔG° < 0 → spontaneous under standard conditions at 298 K.",
+              "Final answer: yes; ΔG° ≈ −4.7 kJ."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Find T where ΔG° = 0 for ΔH° = +40.0 kJ, ΔS° = +150. J/K",
+              "steps": [
+                "T = ΔH° / ΔS° = 40000 J / 150. J·K⁻¹ = 267 K.",
+                "Above 267 K, −TΔS outweighs +ΔH → ΔG° < 0.",
+                "Final answer: about 267 K."
+              ]
+            },
+            {
+              "title": "Classify spontaneity: ΔH° < 0, ΔS° > 0",
+              "steps": [
+                "ΔH° negative favors ΔG° < 0.",
+                "−TΔS° is also negative when ΔS° > 0.",
+                "Both terms drive ΔG° down at every T.",
+                "Final answer: spontaneous at all temperatures (under standard conditions)."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Mixing joules and kilojoules in ΔG = ΔH − TΔS (for example subtracting 298 × 150 from 40).",
+            "whyWrong": "ΔH is often in kJ while ΔS tables are in J/K. 298 × 150 = 44700 J = 44.7 kJ, not 44700 kJ. Unit mismatch flips the conclusion.",
+            "correct": "Convert ΔS to kJ/K (divide by 1000) or convert ΔH to J before subtracting TΔS."
           }
         },
         {
-          "heading": "Gibbs energy",
+          "id": "dg-k",
+          "heading": "ΔG° and the equilibrium constant",
           "paragraphs": [
-            "ΔG = ΔH − TΔS (T in kelvin). Spontaneous as written when ΔG < 0. ΔG° = −RT ln K links thermodynamics to equilibrium. When ΔH > 0 and ΔS > 0, the reaction becomes spontaneous above T = ΔH/ΔS."
+            "Thermodynamics links to equilibrium by ΔG° = −RT ln K. If ΔG° < 0, then ln K > 0 and K > 1 (products favored at equilibrium). If ΔG° > 0, K < 1.",
+            "R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>. K must be the thermodynamic equilibrium constant (dimensionless activities). In intro problems, K<sub>c</sub> or K<sub>p</sub> is often plugged in as an approximation when the standard states match the problem.",
+            "Away from standard conditions, ΔG = ΔG° + RT ln Q. At equilibrium Q = K and ΔG = 0.",
+            "Because ln K appears, a modest change in ΔG° swings K a lot. Roughly every −5.7 kJ/mol of ΔG° at 298 K multiplies K by about 10.",
+            "If a problem gives K<sub>p</sub> or K<sub>c</sub>, confirm whether the course treats that value as the K in ΔG° = −RT ln K. Many intro problems do.",
+            "When Q < K, ΔG is negative and the forward reaction is spontaneous under those conditions even if ΔG° is positive. Standard and actual conditions are different questions.",
+            "Solving for K: K = e<sup>−ΔG° / RT</sup>. Solving for ΔG°: ΔG° = −RT ln K. Keep R and ΔG° in matching energy units (J vs kJ).",
+            "A reaction can have K ≪ 1 and still make useful product if you remove product continuously (Le Châtelier), but the thermodynamic K itself stays small at that T.",
+            "Large positive ΔG° means tiny K; large negative ΔG° means huge K. You do not need a calculator to know which side equilibrium favors once you know the sign of ΔG°."
           ],
           "worked": {
-            "title": "CaCO₃(s) → CaO(s) + CO₂(g)",
+            "title": "K from ΔG° = −20.0 kJ/mol at 298 K",
             "steps": [
-              "ΔH° = +178.3 kJ, ΔS° = +160.6 J/K = 0.1606 kJ/K",
-              "Set ΔG = 0: T = ΔH/ΔS = 178.3 / 0.1606 ≈ 1110 K",
-              "Spontaneous above about 1110 K"
+              "ΔG° = −20000 J/mol.",
+              "ln K = −ΔG° / RT = 20000 / [(8.314)(298)] = 20000 / 2478 = 8.071.",
+              "K = e<sup>8.071</sup> = 3200.",
+              "Final answer: K ≈ 3.2 × 10³."
+            ]
+          },
+          "workedExamples": []
+        },
+        {
+          "id": "check-entropy",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "Does melting ice increase or decrease entropy of the system?",
+                "a": "Increase. Liquid water has more microstates than ice."
+              },
+              {
+                "q": "If ΔH > 0 and ΔS < 0, can ΔG be negative at some T?",
+                "a": "No. Both terms make ΔG positive at all T."
+              },
+              {
+                "q": "What does ΔG° = 0 imply for K?",
+                "a": "K = 1, because ln K = 0."
+              },
+              {
+                "q": "At the normal boiling point, what is ΔG for liquid ⇌ gas?",
+                "a": "Zero, the phases are in equilibrium at that T and 1 atm (or 1 bar)."
+              }
             ]
           }
         }
       ]
     },
     "chemical-kinetics": {
+      "topic_id": "chemical-kinetics",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Rate laws and order",
+          "id": "rate-laws",
+          "heading": "Rate laws and reaction order",
           "paragraphs": [
-            "Rate = k [A]^m [B]^n … Orders m,n are found experimentally, not from stoichiometry. First-order: ln[A] = ln[A]₀ − kt; half-life t½ = ln 2 / k (constant)."
+            "Kinetics studies how fast reactions go. Average rate over a time interval is Δ(concentration)/Δt with a sign chosen so rates are positive; use stoichiometric coefficients to relate rates of different species.",
+            "A differential rate law for aA + bB → products often looks like rate = k [A]<sup>m</sup> [B]<sup>n</sup>. The exponents m and n are orders. They are found from experiment, not from the balanced equation (unless the reaction is an elementary step).",
+            "Overall order is m + n. The rate constant k has units that depend on overall order (for example, for first order, time⁻¹; for second order, <span class=\"nw\">L·mol⁻¹·time⁻¹</span>).",
+            "Method of initial rates: measure rate at t ≈ 0 for several starting concentrations. If doubling [A] doubles the rate while [B] is fixed, the reaction is first order in A.",
+            "Instantaneous rate is the slope of concentration vs time at one moment. Initial rate is the instantaneous rate at the start, before products build up or reverse reactions matter.",
+            "Rate must stay consistent with stoichiometry: for 2 N₂O₅ → 4 NO₂ + O₂, rate of disappearance of N₂O₅ is twice the rate of appearance of O₂.",
+            "Zero-order reactions still depend on having enough catalyst surface or light intensity; the rate law is zero order in the monitored concentration over a limited range.",
+            "Negative orders sometimes appear when a species inhibits the rate. Treat them as experimental facts from the data.",
+            "Rates usually fall as reactants are consumed unless a product autocatalyzes the reaction. Initial-rate methods avoid that complication by reading the beginning of each run.",
+            "Always state the rate definition you are using. Saying \"the rate\" without tying it to a species can be ambiguous when stoichiometric coefficients differ.",
+            "Experimental design tip: change one concentration at a time when possible so the order in that reactant is obvious from a single pair of runs.",
+            "Concentration units inside a rate law must match how k was defined. If [A] is in mol/L and time is in seconds, first-order k is in s⁻¹ and a second-order k for rate = k[A]² is in <span class=\"nw\">L·mol⁻¹·s⁻¹</span>."
+          ],
+          "why": "Orders tell you how concentration controls speed and which integrated law to use.",
+          "worked": {
+            "title": "Find orders from initial-rate data",
+            "steps": [
+              "Expt 1: [A] = 0.10, [B] = 0.10, rate = 2.0 × 10⁻³.",
+              "Expt 2: [A] = 0.20, [B] = 0.10, rate = 8.0 × 10⁻³.",
+              "Expt 3: [A] = 0.10, [B] = 0.20, rate = 2.0 × 10⁻³.",
+              "From 1→2, [A] ×2, rate ×4 → order in A is 2 (because 2² = 4).",
+              "From 1→3, [B] ×2, rate unchanged → order in B is 0.",
+              "Rate = k [A]². Using expt 1: 2.0 × 10⁻³ = k (0.10)² → k = 0.20 <span class=\"nw\">L·mol⁻¹·s⁻¹</span> (if rate is in <span class=\"nw\">mol·L⁻¹·s⁻¹</span>).",
+              "Final answer: second order in A, zero order in B; k = 0.20 <span class=\"nw\">L·mol⁻¹·s⁻¹</span>."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Relate rates for 2 N₂O₅ → 4 NO₂ + O₂",
+              "steps": [
+                "Rate = −(1/2) Δ[N₂O₅]/Δt = +(1/4) Δ[NO₂]/Δt = +Δ[O₂]/Δt.",
+                "If O₂ appears at 1.0 × 10⁻⁴ M/s, N₂O₅ disappears at 2.0 × 10⁻⁴ M/s.",
+                "Final answer: −Δ[N₂O₅]/Δt = 2 × Δ[O₂]/Δt."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integrated",
+          "heading": "Integrated rate laws and half-life",
+          "paragraphs": [
+            "Integrated rate laws give concentration vs time.",
+            "First order: ln[A] = ln[A]₀ − k t, or [A] = [A]₀ e<sup>−kt</sup>. Plot of ln[A] vs t is linear with slope −k. Half-life t½ = ln 2 / k ≈ 0.693 / k (constant, independent of [A]₀).",
+            "Second order (rate = k[A]²): 1/[A] = 1/[A]₀ + k t. Half-life grows as [A]₀ falls: t½ = 1 / (k [A]₀).",
+            "Zero order: [A] = [A]₀ − k t. t½ = [A]₀ / (2k).",
+            "To identify order from data, test which plot is linear: [A] vs t (zero), ln[A] vs t (first), 1/[A] vs t (second).",
+            "Radioactive decay is first order. Carbon-14 dating uses the same integrated law with a known half-life.",
+            "Units of k are a quick order check: s⁻¹ suggests first order; M⁻¹·s⁻¹ suggests second order (for rate in M/s).",
+            "Worked habit: write the integrated equation, isolate the unknown (k, t, or [A]), substitute with units, then interpret whether the answer is physical (concentration between 0 and [A]₀).",
+            "Half-life questions for first order can be solved without k: number of half-lives n = t / t½, fraction left = (1/2)<sup>n</sup>.",
+            "First-order processes appear in pharmacokinetics and environmental decay models as well as chemistry labs. The math is the same exponential decay.",
+            "If a problem gives two concentrations and the time between them for a first-order reaction, k = ln([A]₀/[A]) / t.",
+            "Second-order half-life getting longer as the reactant is consumed is a qualitative signature you can use even before plotting 1/[A].",
+            "Graphical diagnosis beats memorizing alone: if ln[A] vs t curves, the reaction is not first order. If 1/[A] vs t is straight, you have second order in A (for the single-reactant form)."
           ],
           "worked": {
-            "title": "Half-life for first-order k = 1.50×10⁻³ s⁻¹",
+            "title": "First-order remaining fraction after 3 half-lives",
             "steps": [
-              "t½ = 0.693 / k = 0.693 / 1.50×10⁻³",
-              "t½ = 462 s"
+              "Each half-life halves the amount.",
+              "After 1: 1/2. After 2: 1/4. After 3: 1/8.",
+              "Fraction left = 0.125 = 12.5%.",
+              "Also: t = 3 t½ = 3(0.693/k) = 2.079/k. [A]/[A]₀ = e<sup>−k t</sup> = e<sup>−2.079</sup> = 0.125.",
+              "Final answer: 1/8 remains."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Find k if first-order t½ = 12.0 min",
+              "steps": [
+                "k = ln 2 / t½ = 0.693 / 12.0 min = 0.0578 min⁻¹.",
+                "Final answer: k = 0.0578 min⁻¹."
+              ]
+            },
+            {
+              "title": "[A] after 10.0 min if [A]₀ = 0.800 M, first-order k = 0.0578 min⁻¹",
+              "steps": [
+                "[A] = [A]₀ e<sup>−kt</sup> = 0.800 e<sup>−(0.0578)(10.0)</sup> = 0.800 e<sup>−0.578</sup>.",
+                "e<sup>−0.578</sup> = 0.561.",
+                "[A] = 0.800 × 0.561 = 0.449 M.",
+                "Final answer: 0.449 M."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Using t½ = 0.693/k for a second-order reaction, or reading orders from the balanced equation for a multi-step process.",
+            "whyWrong": "Constant half-life is a first-order signature. Overall stoichiometry does not fix the rate law when the mechanism has more than one step.",
+            "correct": "Match the integrated law to the experimental order. Use half-life formulas that belong to that order only."
           }
         },
         {
-          "heading": "Integrated first-order use",
+          "id": "arrhenius",
+          "heading": "Arrhenius equation and mechanisms",
           "paragraphs": [
-            "[A] = [A]₀ e^{−kt}. Plug in k and t to find remaining concentration."
+            "Most rate constants rise with temperature. The Arrhenius equation is k = A e<sup>−E<sub>a</sub> / RT</sup>, where E<sub>a</sub> is the activation energy and A is the pre-exponential factor.",
+            "Two-temperature form: ln(k₂/k₁) = −(E<sub>a</sub>/R)(1/T₂ − 1/T₁). Temperatures in kelvin; R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>.",
+            "A reaction mechanism is a sequence of elementary steps. The rate law of an elementary step follows its molecularity. The slowest step (rate-determining step) often sets the observed rate law.",
+            "Intermediates are made and consumed; they cancel in the overall reaction. Catalysts appear at the start and are regenerated; they open a path with lower E<sub>a</sub>.",
+            "Collision theory: molecules must collide with enough energy and with the right orientation. Higher T → larger fraction of collisions above E<sub>a</sub>.",
+            "A unimolecular elementary step is first order; a bimolecular elementary step is second order. Termolecular steps are rare.",
+            "If the first step is slow and the second is fast, the observed rate law often matches the first step's molecularity (when that step is elementary).",
+            "A graph of ln k vs 1/T is linear with slope −E<sub>a</sub>/R. That plot is how experimental activation energies are often extracted from several temperatures.",
+            "Activation energy is always positive for an elementary barrier in the usual picture. A larger E<sub>a</sub> means a steeper rise of k with temperature.",
+            "Homogeneous catalysts mix in the same phase; heterogeneous catalysts provide a surface. Both lower the effective barrier relative to the uncatalyzed path.",
+            "Mechanisms must sum to the overall reaction, cancel intermediates, and predict a rate law that matches experiment. If the predicted law disagrees with data, the mechanism is wrong or incomplete.",
+            "Catalysts do not appear in the overall stoichiometry as net consumers, but they can appear in the rate law if the mechanism needs them. Enzyme kinetics is the biological version of that idea."
           ],
           "worked": {
-            "title": "[A] after 25.0 min",
+            "title": "E<sub>a</sub> from two rate constants",
             "steps": [
-              "k = 0.0450 min⁻¹, [A]₀ = 0.800 M, t = 25.0 min",
-              "[A] = 0.800 × e^{−0.0450×25.0} = 0.800 × e^{−1.125}",
-              "[A] = 0.260 M"
+              "k₁ = 2.0 × 10⁻³ s⁻¹ at T₁ = 300. K; k₂ = 8.0 × 10⁻³ s⁻¹ at T₂ = 320. K.",
+              "ln(k₂/k₁) = ln(4.0) = 1.386.",
+              "1/T₂ − 1/T₁ = 1/320 − 1/300 = 0.003125 − 0.003333 = −0.000208 K⁻¹.",
+              "1.386 = −(E<sub>a</sub>/R)(−0.000208) = (E<sub>a</sub>/R)(0.000208).",
+              "E<sub>a</sub>/R = 1.386 / 0.000208 = 6663 K.",
+              "E<sub>a</sub> = 6663 × 8.314 = 5.54 × 10⁴ J/mol = 55.4 kJ/mol.",
+              "Final answer: E<sub>a</sub> ≈ 55.4 kJ/mol.",
+              "Sign check: k rose when T rose, so E<sub>a</sub> must come out positive. Good."
             ]
-          }
+          },
+          "workedExamples": [
+            {
+              "title": "Why a catalyst speeds a reaction without changing ΔH<sub>rxn</sub>",
+              "steps": [
+                "Catalyst provides a new path with lower E<sub>a</sub>.",
+                "Lower E<sub>a</sub> → larger k at the same T → faster rates both ways.",
+                "Reactants and products (and thus ΔH between them) are unchanged; only the barrier height changes.",
+                "Final answer: lower E<sub>a</sub> on an alternate path; ΔH unchanged."
+              ]
+            }
+          ]
         },
         {
-          "heading": "Arrhenius equation",
-          "paragraphs": [
-            "k = A e^{−Ea/RT}. From two temperatures: ln(k₂/k₁) = −(Ea/R)(1/T₂ − 1/T₁)."
-          ],
-          "worked": {
-            "title": "Ea when k doubles from 300 K to 310 K",
-            "steps": [
-              "ln(2) = −(Ea/8.314)(1/310 − 1/300)",
-              "0.693 = (Ea/8.314)(1.075×10⁻⁴)",
-              "Ea ≈ 53.6 kJ/mol"
+          "id": "check-kinetics",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the half-life formula for a first-order reaction?",
+                "a": "t½ = ln 2 / k ≈ 0.693 / k."
+              },
+              {
+                "q": "If rate = k[A][B], what is the overall order?",
+                "a": "2 (first in each, overall second)."
+              },
+              {
+                "q": "Does a catalyst change the value of E<sub>a</sub>?",
+                "a": "Yes, it lowers the effective activation energy on the catalyzed path."
+              },
+              {
+                "q": "What plot is linear for a first-order reaction?",
+                "a": "ln[A] versus time, with slope −k."
+              }
             ]
           }
         }
       ]
     },
     "acids-and-bases": {
+      "topic_id": "acids-and-bases",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Brønsted–Lowry and conjugates",
+          "id": "bronsted",
+          "heading": "Brønsted–Lowry acids and bases",
           "paragraphs": [
-            "Acid donates H⁺; base accepts H⁺. After transfer, the acid becomes its conjugate base and the base becomes its conjugate acid. Water can act as either (amphoteric)."
+            "Brønsted–Lowry: an acid donates H⁺; a base accepts H⁺. After the transfer, the acid has become its conjugate base, and the base has become its conjugate acid.",
+            "Example: in NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, water acts as an acid and NH₃ as a base. NH₄⁺ is the conjugate acid of NH₃; OH⁻ is the conjugate base of H₂O.",
+            "Amphoteric species (like water or HSO₄⁻) can act as acid or base depending on the partner.",
+            "Lewis definition (broader): acid accepts an electron pair; base donates an electron pair. BF₃ + NH₃ is a Lewis acid–base example without H⁺ transfer.",
+            "Stronger acids have weaker conjugate bases. In water, strong acids donate H⁺ completely.",
+            "In any acid–base reaction, identify two conjugate pairs. The stronger acid and stronger base sit on one side; equilibrium favors the weaker acid and weaker base.",
+            "Leveling effect: in water, all strong acids look equally strong because they all convert fully to H₃O⁺.",
+            "Autoionization means water always contributes a little H₃O⁺ and OH⁻. For ordinary strong-acid concentrations (≥ about 10⁻⁵ M), that contribution is negligible compared with the acid.",
+            "Write the proton transfer as a balanced equation before you chase Ka values. Species inventory mistakes are the main source of wrong conjugate pairs.",
+            "Amphiprotic ions like HCO₃⁻ can donate or accept H⁺. Which role wins depends on Ka vs Kb for that ion compared with the partner."
           ],
+          "why": "Conjugate pairs and Ka/Kb bookkeeping are the spine of every weak-acid pH problem.",
           "worked": {
-            "title": "Conjugate pairs in NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+            "title": "Identify conjugates for HNO₂ + H₂O ⇌ H₃O⁺ + NO₂⁻",
             "steps": [
-              "NH₃ (base) ↔ NH₄⁺ (conjugate acid)",
-              "H₂O (acid) ↔ OH⁻ (conjugate base)",
-              "Pairs: NH₄⁺/NH₃ and H₂O/OH⁻"
+              "HNO₂ donates H⁺ → acid. Its conjugate base is NO₂⁻.",
+              "H₂O accepts H⁺ → base. Its conjugate acid is H₃O⁺.",
+              "Acid/base pair 1: HNO₂ / NO₂⁻. Pair 2: H₃O⁺ / H₂O.",
+              "Final answer: HNO₂ with NO₂⁻; H₃O⁺ with H₂O."
             ]
           }
         },
         {
-          "heading": "Strong acids and pH",
+          "id": "ph-strong",
+          "heading": "pH, Kw, and strong acids/bases",
           "paragraphs": [
-            "Strong acids (HCl, HBr, HI, HNO₃, H₂SO₄ first proton, HClO₄) dissociate fully. For dilute strong monoprotic acid, [H₃O⁺] ≈ C_a; pH = −log[H₃O⁺]."
+            "Water autoionizes: 2 H₂O ⇌ H₃O⁺ + OH⁻ with K<sub>w</sub> = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C. In pure water [H₃O⁺] = [OH⁻] = 1.0 × 10⁻⁷ M.",
+            "pH = −log[H₃O⁺]; pOH = −log[OH⁻]; pH + pOH = 14.00 at 25 °C. pKa = −log Ka.",
+            "Strong acids in water (common list): HCl, HBr, HI, HNO₃, HClO₄, and H₂SO₄ for the first proton. Strong bases: group 1 hydroxides (NaOH, KOH, …) and heavy group 2 hydroxides (Ba(OH)₂, …).",
+            "For a dilute strong monoprotic acid of concentration C<sub>a</sub>, [H₃O⁺] ≈ C<sub>a</sub> and pH = −log C<sub>a</sub> (unless extremely dilute, where water's contribution matters).",
+            "For strong base C<sub>b</sub>, [OH⁻] ≈ C<sub>b</sub> (or 2 C<sub>b</sub> for Ba(OH)₂), then pOH = −log[OH⁻] and pH = 14 − pOH.",
+            "pH 7 is neutral only at 25 °C where Kw = 1.0 × 10⁻¹⁴. At higher T, Kw rises and neutral pH drops below 7 even though [H₃O⁺] = [OH⁻].",
+            "Sig figs in pH: the digits after the decimal in pH match the sig figs in the concentration. −log(0.025) = 1.60 has two decimal places because 0.025 has two sig figs.",
+            "For Ba(OH)₂ remember the factor of two for hydroxide. For H₂SO₄ in intro courses, often treat the first proton as strong and estimate with [H₃O⁺] ≈ C for dilute solutions unless the problem asks for both steps.",
+            "pH meters report decimal values; still show the −log setup in written work so the concentration source is clear.",
+            "Scientific notation helps: −log(3.0 × 10⁻⁴) = 4 − log(3.0) = 4 − 0.48 = 3.52. Practice that pattern until it is automatic.",
+            "If a strong acid concentration is 1.0 × 10⁻⁸ M, you cannot ignore water; the pH is near 6.98, not 8. Ordinary course problems usually stay above 10⁻⁶ M so the simple rule works."
           ],
           "worked": {
-            "title": "pH of 0.0250 M HCl",
+            "title": "pH of 0.025 M HNO₃",
             "steps": [
-              "[H₃O⁺] = 0.0250 M",
-              "pH = −log(0.0250) = 1.602"
+              "HNO₃ is strong → [H₃O⁺] = 0.025 M.",
+              "pH = −log(0.025) = 1.60.",
+              "Final answer: pH = 1.60.",
+              "Check: 10<sup>−1.60</sup> = 0.025, recovering the concentration."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "pH of 0.010 M Ba(OH)₂",
+              "steps": [
+                "Ba(OH)₂ → Ba²⁺ + 2 OH⁻, so [OH⁻] = 0.020 M.",
+                "pOH = −log(0.020) = 1.70.",
+                "pH = 14.00 − 1.70 = 12.30.",
+                "Final answer: pH = 12.30."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "weak-acids",
+          "heading": "Weak acids, Ka, and salts",
+          "paragraphs": [
+            "Weak acid HA: HA ⇌ H⁺ + A⁻ (or HA + H₂O ⇌ H₃O⁺ + A⁻) with Ka = [H⁺][A⁻]/[HA].",
+            "If Ka is small and C<sub>a</sub> is not tiny, [H⁺] ≈ √(Ka C<sub>a</sub>), then pH = −log[H⁺]. Check the 5% rule: x/C<sub>a</sub> should be small.",
+            "Weak base B: B + H₂O ⇌ BH⁺ + OH⁻ with Kb = [BH⁺][OH⁻]/[B]. Then [OH⁻] ≈ √(Kb C<sub>b</sub>).",
+            "For a conjugate pair, Ka × Kb = Kw. So the conjugate base of a weak acid is itself a weak base: Kb = Kw / Ka.",
+            "Salt examples: NaA (from weak HA) gives a basic solution (A⁻ hydrolyzes). NH₄Cl gives an acidic solution (NH₄⁺ is a weak acid).",
+            "Acetic acid Ka ≈ 1.8 × 10⁻⁵ is the usual textbook value; always prefer the table your exam provides.",
+            "Percent ionization = ([H⁺]/C<sub>a</sub>) × 100%. Diluting a weak acid raises percent ionization even though pH usually rises (less acidic).",
+            "Polyprotic acids (H₂SO₄, H₂CO₃) donate protons in steps with Ka₁ ≫ Ka₂. For many intro pH estimates of H₂CO₃, Ka₁ alone is enough for a first pass.",
+            "When a salt of a weak acid and weak base dissolves, compare Ka of the cation with Kb of the anion to predict acidic vs basic.",
+            "ICE for weak acids looks like the equilibrium chapter: Initial C, 0, 0; Change −x, +x, +x; Equilibrium C−x, x, x. Then Ka = x²/(C−x).",
+            "If the approximation fails (x/C > 5%), solve the quadratic: x² + Ka x − Ka C = 0.",
+            "Salt hydrolysis: A⁻ + H₂O ⇌ HA + OH⁻ with Kb = Kw/Ka. Then [OH⁻] ≈ √(Kb C<sub>salt</sub>) for dilute solutions of NaA.",
+            "Buffers (next topic) deliberately mix HA and A⁻ so that pH ≈ pKa + log([A⁻]/[HA]). The weak-acid ICE skills here are the warm-up.",
+            "Strong vs weak is about extent of dissociation, not about concentration. A dilute strong acid can have a higher pH than a concentrated weak acid; compute, do not assume."
+          ],
+          "worked": {
+            "title": "pH of 0.100 M acetic acid (Ka = 1.8 × 10⁻⁵)",
+            "steps": [
+              "Let x = [H⁺] = [A⁻]; [HA] = 0.100 − x.",
+              "Ka = x² / (0.100 − x) ≈ x² / 0.100 = 1.8 × 10⁻⁵.",
+              "x² = 1.8 × 10⁻⁶ → x = 1.34 × 10⁻³.",
+              "Check: x/0.100 = 1.3% < 5% → OK.",
+              "pH = −log(1.34 × 10⁻³) = 2.87.",
+              "Final answer: pH ≈ 2.87.",
+              "Optional exact check: x² + (1.8×10⁻⁵)x − (1.8×10⁻⁶) = 0.",
+              "The quadratic root is the same 1.34×10⁻³ here, confirming the approximation."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Kb of acetate if Ka(acetic) = 1.8 × 10⁻⁵",
+              "steps": [
+                "Kb = Kw / Ka = (1.0 × 10⁻¹⁴) / (1.8 × 10⁻⁵) = 5.6 × 10⁻¹⁰.",
+                "Final answer: Kb = 5.6 × 10⁻¹⁰."
+              ]
+            },
+            {
+              "title": "Is 0.10 M NH₄Cl acidic, basic, or neutral?",
+              "steps": [
+                "NH₄Cl → NH₄⁺ + Cl⁻.",
+                "Cl⁻ is the conjugate of strong HCl → negligible base.",
+                "NH₄⁺ is the conjugate acid of weak NH₃ → weak acid.",
+                "Final answer: acidic."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Using [H⁺] = Ka for a weak acid, or treating a weak acid like a strong one with [H⁺] = C<sub>a</sub>.",
+            "whyWrong": "Ka is a quotient, not the hydrogen-ion concentration. Weak acids only partially dissociate, so [H⁺] is much smaller than C<sub>a</sub>.",
+            "correct": "Set up Ka = x²/(C − x), approximate if valid, then pH = −log x."
           }
         },
         {
-          "heading": "Weak acids",
+          "id": "structure-strength",
+          "heading": "Structure and acid strength",
           "paragraphs": [
-            "For HA ⇌ H⁺ + A⁻, K_a = [H⁺][A⁻]/[HA]. If x ≪ C_a, [H⁺] ≈ √(K_a C_a). Acetic acid K_a ≈ 1.8×10⁻⁵ (standard value; confirm against your table)."
+            "For binary acids HX down a group (HF, HCl, HBr, HI), acid strength rises as the H–X bond weakens (HF is the weak one in water among these).",
+            "Across a period, higher electronegativity of X generally increases acidity for the same type of bond (H₂O < HF in acidity among the period-2 hydrides in the usual comparison set).",
+            "Oxoacids: more oxygen atoms or a more electronegative central atom stabilize the conjugate base and raise Ka (HClO < HClO₂ < HClO₃ < HClO₄).",
+            "These trends explain table patterns; still use Ka values for numerical pH work.",
+            "Resonance in the conjugate base (as in RCOO⁻ vs RO⁻) spreads charge and increases acid strength of carboxylic acids vs alcohols.",
+            "Inductive withdrawal by electronegative substituents near the acidic H also raises Ka (Cl₃CCOOH is stronger than CH₃COOH).",
+            "Comparing acids: write the conjugate bases, ask which anion holds the negative charge more comfortably (electronegativity, size, resonance, induction). The better-stabilized anion belongs to the stronger acid.",
+            "Within oxoacids of the same central atom, each added oxygen typically raises Ka by orders of magnitude. Memorize the pattern; look up the numbers.",
+            "Binary hydrides: bond strength dominates down a group (HI > HBr > HCl ≫ HF in water). Electronegativity dominates across a short span of the table for similar structures."
           ],
           "worked": {
-            "title": "pH of 0.100 M acetic acid",
+            "title": "Rank acid strength: HClO₂ vs HClO₃",
             "steps": [
-              "x ≈ √(1.8×10⁻⁵ × 0.100) = √1.8×10⁻⁶ = 1.34×10⁻³",
-              "pH = −log(1.34×10⁻³) = 2.87"
+              "Both are oxoacids of chlorine.",
+              "HClO₃ has more O atoms → more electron withdrawal → more stable conjugate base.",
+              "HClO₃ is the stronger acid (larger Ka).",
+              "Final answer: HClO₃ > HClO₂.",
+              "Same central atom and same charge type → oxygen count is the deciding structural clue here."
+            ]
+          },
+          "workedExamples": []
+        },
+        {
+          "id": "check-acids",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the conjugate base of HSO₄⁻?",
+                "a": "SO₄²⁻."
+              },
+              {
+                "q": "pH of 1.0 × 10⁻³ M HCl?",
+                "a": "3.00 ([H₃O⁺] = 1.0 × 10⁻³)."
+              },
+              {
+                "q": "Relation between Ka and Kb for a conjugate pair?",
+                "a": "Ka × Kb = Kw (= 1.0 × 10⁻¹⁴ at 25 °C)."
+              },
+              {
+                "q": "Approximate [H⁺] for 0.20 M HA with Ka = 1.0 × 10⁻⁶.",
+                "a": "√(Ka C) = √(2.0 × 10⁻⁷) = 4.5 × 10⁻⁴ M (about 0.22% ionization)."
+              }
             ]
           }
         }
@@ -2378,12 +3025,12 @@
         {
           "heading": "Buffers and Henderson–Hasselbalch",
           "paragraphs": [
-            "A buffer is a weak acid + its conjugate base (or weak base + conjugate acid). pH ≈ pK_a + log([A⁻]/[HA]). Best buffering when [A⁻]≈[HA] and both are reasonably concentrated."
+            "A buffer is a weak acid + its conjugate base (or weak base + conjugate acid). pH ≈ pK<sub>a</sub> + log([A⁻]/[HA]). Best buffering when [A⁻]≈[HA] and both are reasonably concentrated."
           ],
           "worked": {
             "title": "Buffer 0.150 M CH₃COOH / 0.250 M CH₃COONa",
             "steps": [
-              "pK_a (acetic) ≈ 4.74",
+              "pK<sub>a</sub> (acetic) ≈ 4.74",
               "pH = 4.74 + log(0.250/0.150) = 4.74 + log(1.667)",
               "pH = 4.74 + 0.222 = 4.96 ≈ 4.97"
             ]
@@ -2399,7 +3046,7 @@
         {
           "heading": "Equivalence point",
           "paragraphs": [
-            "For weak acid + strong base, the salt at equivalence is a weak base (A⁻), so pH > 7. Solve from K_b = K_w/K_a and the A⁻ concentration after dilution."
+            "For weak acid + strong base, the salt at equivalence is a weak base (A⁻), so pH > 7. Solve from K<sub>b</sub> = K<sub>w</sub>/K<sub>a</sub> and the A⁻ concentration after dilution."
           ]
         }
       ]
@@ -2444,31 +3091,31 @@
       "reviewed": false,
       "sections": [
         {
-          "heading": "K_sp",
+          "heading": "K<sub>sp</sub>",
           "paragraphs": [
-            "For M_mX_x(s) ⇌ m Mⁿ⁺ + x Xʸ⁻, K_sp = [M]^m [X]^x. Molar solubility s is the moles of solid that dissolve per litre."
+            "For M<sub>mX</sub>_x(s) ⇌ m Mⁿ⁺ + x Xʸ⁻, K<sub>sp</sub> = [M]<sup>m</sup> [X]<sup>x</sup>. Molar solubility s is the moles of solid that dissolve per litre."
           ],
           "worked": {
-            "title": "K_sp of CaF₂ from s = 2.1×10⁻⁴ M",
+            "title": "K<sub>sp</sub> of CaF₂ from s = 2.1×10⁻⁴ M",
             "steps": [
               "CaF₂ ⇌ Ca²⁺ + 2 F⁻",
               "[Ca²⁺]=s, [F⁻]=2s",
-              "K_sp = s(2s)² = 4s³ = 4(2.1×10⁻⁴)³",
-              "K_sp = 3.7×10⁻¹¹"
+              "K<sub>sp</sub> = s(2s)² = 4s³ = 4(2.1×10⁻⁴)³",
+              "K<sub>sp</sub> = 3.7×10⁻¹¹"
             ]
           }
         },
         {
           "heading": "Will it precipitate?",
           "paragraphs": [
-            "Compute Q with the mixed ion concentrations (after dilution). If Q > K_sp, precipitate forms; Q < K_sp, no precipitate; Q = K_sp, saturated."
+            "Compute Q with the mixed ion concentrations (after dilution). If Q > K<sub>sp</sub>, precipitate forms; Q < K<sub>sp</sub>, no precipitate; Q = K<sub>sp</sub>, saturated."
           ],
           "worked": {
             "title": "PbCl₂ after mixing",
             "steps": [
               "After equal volumes: [Pb²⁺]=5.0×10⁻⁴ M, [Cl⁻]=1.0×10⁻³ M",
               "Q = [Pb²⁺][Cl⁻]² = 5.0×10⁻¹⁰",
-              "Compare to K_sp(PbCl₂); Q < K_sp → no precipitate"
+              "Compare to K<sub>sp</sub>(PbCl₂); Q < K<sub>sp</sub> → no precipitate"
             ]
           }
         },
@@ -2570,13 +3217,13 @@
         {
           "heading": "Absorption and energy",
           "paragraphs": [
-            "Molecules absorb photons that match an allowed energy gap. E = hc/λ per photon; multiply by N_A for per-mole energy. Longer λ → smaller energy."
+            "Molecules absorb photons that match an allowed energy gap. E = hc/λ per photon; multiply by N<sub>A</sub> for per-mole energy. Longer λ → smaller energy."
           ],
           "worked": {
             "title": "Energy per mole at 450. nm",
             "steps": [
-              "E_photon = hc/λ",
-              "E_molar = N_A hc/λ ≈ 266 kJ/mol"
+              "E<sub>photon</sub> = hc/λ",
+              "E<sub>molar</sub> = N<sub>A</sub> hc/λ ≈ 266 kJ/mol"
             ]
           }
         },
@@ -2596,7 +3243,7 @@
         {
           "heading": "Conjugation and color",
           "paragraphs": [
-            "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens, so λ_max moves to longer wavelength (bathochromic shift). Enough conjugation and the absorption enters the visible — the compound looks colored."
+            "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens, so λ<sub>max</sub> moves to longer wavelength (bathochromic shift). Enough conjugation and the absorption enters the visible, and the compound looks colored."
           ],
           "figure": {
             "src": "art/homo-lumo-conjugation.svg",

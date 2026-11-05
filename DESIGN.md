@@ -104,6 +104,11 @@ Order top to bottom:
 5. **Tip box** (see §5).
 6. Sticky primary button: "Show answer" (full width, 48 px).
 
+
+### Chem notation in readings (Critiquito, 5 Nov 2026)
+- Never leave raw `_` or `^` in reading HTML. Use real subscripts/superscripts (`Z<sub>eff</sub>`, `O<sup>2−</sup>`, `10<sup>23</sup>`). Sweep every topic before publish.
+- Long unit strings on one formula line (e.g. `L·atm·mol⁻¹·K⁻¹`) must not wrap mid-unit: give the substitution its own full-width row, or wrap the unit token in a no-break span (`white-space: nowrap`).
+
 ### 4a. Concept vs calculation
 | | Concept | Calculation |
 |---|---|---|
