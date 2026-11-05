@@ -1280,24 +1280,91 @@
       ]
     },
     "chemical-bonding-i-lewis-structures-and-": {
+      "topic_id": "chemical-bonding-i-lewis-structures-and-",
       "reviewed": false,
       "sections": [
         {
+          "id": "lewis-structures",
           "heading": "Lewis structures",
           "paragraphs": [
-            "Count valence electrons, connect atoms with single bonds, complete octets (H wants 2), and use multiple bonds or formal charge to refine. Formal charge = valence − (nonbonding e⁻) − ½(bonding e⁻)."
+            "A Lewis structure shows valence electrons as dots and bonding pairs as lines. It is a bookkeeping tool for how atoms share or transfer electrons in a molecule or ion.",
+            "A reliable build path:",
+            "1. Sum the valence electrons for all atoms. For an anion, add electrons equal to the charge. For a cation, subtract electrons equal to the charge.",
+            "2. Choose a skeleton. The least electronegative atom (not hydrogen) is usually central. Connect each outer atom with a single bond (that uses 2 electrons per bond).",
+            "3. Complete octets on the outer atoms (H wants only 2 electrons, a duet).",
+            "4. Place any leftover electrons on the central atom as lone pairs.",
+            "5. If the central atom still lacks an octet, convert lone pairs from outer atoms into multiple bonds.",
+            "6. Check formal charges and adjust for better structures when needed.",
+            "Formal charge on an atom = (valence electrons in the free atom) − (nonbonding electrons) − ½(bonding electrons). The best Lewis structures usually keep formal charges small, put negative formal charge on the more electronegative atom, and keep the sum of formal charges equal to the ion charge (or zero for a molecule).",
+            "Beyond the octet: period-3 and heavier atoms (P, S, Cl, …) can expand their octets when needed (as in SF₄ and PCl₅). Be and B often have incomplete octets in stable molecules (BF₃).",
+            "Electronegativity (tendency to attract bonding electrons) helps you judge bond polarity and which atom should carry a negative formal charge. Fluorine is the most electronegative element. The scale rises toward the upper right of the main-group table (ignoring noble gases)."
           ],
+          "why": "Every later shape, polarity, and bond-enthalpy estimate starts from a correct electron count and skeleton. A wrong Lewis structure poisons the rest.",
           "figure": {
             "src": "art/lewis-h2o-co2-sf4.svg",
             "alt": "Lewis structures of H2O (bent, two lone pairs on oxygen), CO2 (linear O=C=O), and SF4 (sulfur with four F bonds and one lone pair); all formal charges zero."
+          },
+          "worked": {
+            "title": "Lewis structure of H₂O",
+            "steps": [
+              "Valence electrons: H has 1 each, O has 6. Total = 1 + 1 + 6 = 8.",
+              "Skeleton: H–O–H (O is central; H is never central).",
+              "Two O–H single bonds use 4 electrons. Electrons left = 8 − 4 = 4.",
+              "Place the remaining 4 electrons on oxygen as two lone pairs.",
+              "Check octets/duets: each H has 2 electrons. O has 4 bonding + 4 nonbonding = 8. Good.",
+              "Formal charge on O: 6 − 4 − ½(4) = 6 − 4 − 2 = 0. Each H: 1 − 0 − ½(2) = 0.",
+              "Final: bent Lewis structure with two lone pairs on oxygen; all formal charges zero."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Lewis structure of CO₂",
+              "steps": [
+                "Valence electrons: C = 4, each O = 6. Total = 4 + 12 = 16.",
+                "Skeleton: O–C–O.",
+                "Two single bonds use 4 electrons. Left = 12.",
+                "Complete octets on both O atoms first: each O needs 6 more electrons as lone pairs → that uses all 12. Central C then has only 4 electrons.",
+                "C lacks an octet. Form a double bond to one O by moving one O lone pair into a C=O bond. C now has 6 electrons; still short.",
+                "Form a second double bond to the other O. Structure: O=C=O.",
+                "Formal charges: each O is 6 − 4 − ½(4) = 0. C is 4 − 0 − ½(8) = 0.",
+                "Final: linear O=C=O with all formal charges zero."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "resonance-and-formal-charge",
+          "heading": "Resonance and formal charge",
+          "paragraphs": [
+            "Sometimes one Lewis structure is not enough. Resonance structures are two or more Lewis drawings that differ only in electron placement, not in atom positions. The real molecule is a hybrid of them. Double-headed arrows link resonance forms.",
+            "Classic example: ozone, O₃. One Lewis form has a double bond on the left and a single bond on the right; the other form swaps them. The real O–O bonds are equal and intermediate.",
+            "Use formal charge to rank resonance forms. Prefer forms with formal charges closest to zero. Prefer negative formal charge on the more electronegative atom.",
+            "Do not average resonance forms that have very different formal-charge quality. A form with large separated charges contributes less than a form with all zeros. Still draw major forms when they are equivalent, as in nitrate and ozone."
+          ],
+          "worked": {
+            "title": "Formal charges in the nitrate ion NO₃⁻",
+            "steps": [
+              "Valence electrons: N = 5, three O = 18, plus 1 for the 1− charge → total 24.",
+              "Skeleton: N central, three O around it. Three single bonds use 6 electrons. Left = 18.",
+              "Complete octets on the three O atoms (6 electrons each as lone pairs) uses all 18. N then has only 6 electrons.",
+              "Make one N=O double bond by moving an O lone pair. Now N has an octet.",
+              "In that form: the double-bonded O has formal charge 6 − 4 − ½(4) = 0. Each single-bonded O has 6 − 6 − ½(2) = −1. N has 5 − 0 − ½(8) = +1.",
+              "Sum of formal charges = +1 − 1 − 1 + 0 = −1, matching the ion charge.",
+              "There are three equivalent resonance forms (the double bond can sit toward any of the three O atoms). The real ion has three equal N–O bonds."
+            ]
           }
         },
         {
+          "id": "vsepr-shapes",
           "heading": "VSEPR shapes and polarity",
           "paragraphs": [
-            "Electron domains (bonds + lone pairs) arrange to minimize repulsion. Domains: 2 linear, 3 trigonal planar, 4 tetrahedral, 5 trigonal bipyramidal, 6 octahedral. Lone pairs take equatorial sites in TBP when possible.",
-            "Molecular shape ignores lone pairs for the name but includes them for angles. A molecule is polar if bond dipoles do not cancel."
+            "VSEPR (valence-shell electron-pair repulsion) says electron domains around a central atom spread out to minimize repulsion. A domain is a lone pair, a single bond, a double bond, or a triple bond. Multiple bonds count as one domain for shape.",
+            "Electron-domain geometries: 2 domains → linear; 3 → trigonal planar; 4 → tetrahedral; 5 → trigonal bipyramidal; 6 → octahedral.",
+            "Molecular shape names the atom positions only. Lone pairs still push and shrink bond angles. Examples: AX₂E (bent, from trigonal planar electron geometry); AX₃E (trigonal pyramidal); AX₂E₂ (bent, from tetrahedral); AX₄E (seesaw, from trigonal bipyramidal).",
+            "In trigonal bipyramidal arrangements, lone pairs prefer equatorial sites. That is why SF₄ is seesaw, not a different AX₄E isomer.",
+            "A molecule is polar if it has a nonzero net dipole. Bond dipoles point toward the more electronegative atom. If the shape is symmetric enough that bond dipoles cancel (CO₂, BF₃, CCl₄), the molecule is nonpolar even if the bonds are polar. If dipoles do not cancel (H₂O, NH₃, SF₄), the molecule is polar."
           ],
+          "why": "Shape and polarity control boiling points, solubility, and how molecules pack. VSEPR is the fast prediction tool before you meet hybridization.",
           "figure": {
             "src": "art/vsepr-sf4-seesaw.svg",
             "alt": "Three-dimensional seesaw shape of SF4 from trigonal bipyramidal electron geometry with an equatorial lone pair, and a net dipole arrow showing the molecule is polar."
@@ -1305,35 +1372,133 @@
           "worked": {
             "title": "Shape and polarity of SF₄",
             "steps": [
-              "S has 6 valence e⁻; 4 F atoms → 4 bonds + 1 lone pair = 5 domains",
-              "Electron geometry: trigonal bipyramidal; molecular shape: seesaw",
-              "Lone pair and unsymmetric shape → dipoles do not cancel → polar"
+              "Valence electrons: S = 6, each F = 7 → 6 + 28 = 34.",
+              "Skeleton: four S–F single bonds. That uses 8 electrons. Left = 26.",
+              "Complete octets on four F atoms: 4 × 6 = 24 electrons as F lone pairs. Left = 2 electrons → one lone pair on S.",
+              "Domains on S: 4 bonding pairs + 1 lone pair = 5 domains. Electron geometry: trigonal bipyramidal.",
+              "Place the lone pair equatorial. Molecular shape: seesaw (AX₄E).",
+              "The lone pair and the unsymmetric seesaw arrangement mean bond dipoles do not cancel.",
+              "Final answer: seesaw shape, polar molecule."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Shape and polarity of CO₂ vs SO₂",
+              "steps": [
+                "CO₂: C has 2 domains (two double bonds). Electron geometry and shape: linear. Two C=O dipoles point opposite ways and cancel → nonpolar.",
+                "SO₂: S has 3 domains (two S–O bonding domains + one lone pair in the common Lewis/resonance picture). Electron geometry: trigonal planar. Shape: bent (AX₂E).",
+                "Bent shape → dipoles do not cancel → polar.",
+                "Final answers: CO₂ linear nonpolar; SO₂ bent polar."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Calling SF₄ tetrahedral because there are four F atoms attached to S, and then saying it is nonpolar like CCl₄.",
+            "whyWrong": "Shape counting must include lone pairs on the central atom. SF₄ has five electron domains, not four. The seesaw shape is not tetrahedral, and its dipoles do not cancel.",
+            "correct": "Count bonding pairs and lone pairs on the central atom. For SF₄ that is 5 domains → trigonal bipyramidal electron geometry → seesaw molecular shape → polar."
           }
         },
         {
+          "id": "bond-enthalpies",
           "heading": "Bond enthalpies for reaction ΔH",
           "paragraphs": [
-            "Estimate ΔH ≈ Σ bonds broken − Σ bonds formed (using mean bond enthalpies). Breaking absorbs energy (+); forming releases (−)."
+            "Average bond enthalpy (bond energy) is the enthalpy needed to break one mole of a given type of bond in the gas phase. Tables list typical values in kJ/mol.",
+            "For a gas-phase reaction estimate: ΔH ≈ Σ(bond enthalpies of bonds broken) − Σ(bond enthalpies of bonds formed). You pay energy to break bonds. You release energy when new bonds form (that is why formed bonds are subtracted).",
+            "This is an estimate. It uses average values, not the exact bond enthalpy in one specific molecule. It still gives the right sign and a useful size for many early problems.",
+            "Standard values used in the examples below (kJ/mol): H–H 436, O=O 498, O–H 463, C–H 412, C–C 348, C=C 614, C≡C 839, N≡N 944, H–Cl 431, Cl–Cl 242.",
+            "Bond enthalpy estimates assume gas-phase species. If a reaction involves liquids or solids, the estimate misses phase-change enthalpies. Still, for many exam problems the table values are what you are asked to use."
           ],
           "worked": {
-            "title": "Estimate ΔH for H₂ + Cl₂ → 2 HCl",
+            "title": "Estimate ΔH for 2 H₂ + O₂ → 2 H₂O (gas)",
             "steps": [
-              "Break 1 H–H and 1 Cl–Cl; form 2 H–Cl",
-              "ΔH ≈ BE(H–H) + BE(Cl–Cl) − 2 BE(H–Cl)",
-              "Using typical mean values → about −184 kJ"
+              "Bonds broken: 2 H–H and 1 O=O.",
+              "Energy to break: 2(436) + 498 = 872 + 498 = 1370 kJ.",
+              "Bonds formed: each H₂O has 2 O–H bonds; two H₂O give 4 O–H bonds.",
+              "Energy released on forming: 4(463) = 1852 kJ.",
+              "ΔH ≈ 1370 − 1852 = −482 kJ for the reaction as written.",
+              "Sign check: negative means exothermic, which matches burning hydrogen in oxygen.",
+              "Final answer: about −482 kJ (estimate)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Estimate ΔH for H₂ + Cl₂ → 2 HCl",
+              "steps": [
+                "Bonds broken: 1 H–H (436) + 1 Cl–Cl (242) = 678 kJ.",
+                "Bonds formed: 2 H–Cl = 2(431) = 862 kJ.",
+                "ΔH ≈ 678 − 862 = −184 kJ.",
+                "Final answer: about −184 kJ."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-bonding-i",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the formal charge on N in the best Lewis structure of NH₄⁺?",
+                "a": "N has 4 bonding pairs and 0 lone pairs: FC = 5 − 0 − ½(8) = +1. Each H is 0. Sum = +1, matching the charge."
+              },
+              {
+                "q": "What is the molecular shape of NH₃?",
+                "a": "4 electron domains (3 bonds + 1 lone pair) → tetrahedral electron geometry → trigonal pyramidal molecular shape."
+              },
+              {
+                "q": "Is CCl₄ polar or nonpolar?",
+                "a": "Nonpolar. Tetrahedral shape lets four identical C–Cl dipoles cancel."
+              }
             ]
           }
         }
       ]
     },
     "chemical-bonding-ii-hybridization-and-mo": {
+      "topic_id": "chemical-bonding-ii-hybridization-and-mo",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Hybridization and σ / π bonds",
+          "id": "hybridization",
+          "heading": "Hybridization",
           "paragraphs": [
-            "Hybrid orbitals mix atomic orbitals to match the electron geometry: sp (linear), sp² (trigonal planar), sp³ (tetrahedral). A single bond is one σ bond. A double bond is σ + π; a triple is σ + 2π."
+            "Valence-bond theory says a covalent bond forms when atomic orbitals on two atoms overlap and share an electron pair. Hybridization is a model that mixes atomic orbitals on one atom so the resulting hybrid orbitals point toward the domains VSEPR predicts.",
+            "Common hybrids: sp (2 domains, linear, 180°), sp² (3 domains, trigonal planar, 120°), sp³ (4 domains, tetrahedral, 109.5°), sp³d (5 domains, trigonal bipyramidal), sp³d² (6 domains, octahedral).",
+            "How to assign hybridization: draw the Lewis structure, count electron domains on the atom, then match the hybrid set to that count. The hybrid set uses one s orbital plus as many p (and d, when needed) orbitals as the domain count requires.",
+            "Example map: carbon in CH₄ has 4 domains → sp³. Carbon in H₂C=CH₂ has 3 domains → sp². Carbon in HC≡CH has 2 domains → sp. Oxygen in H₂O has 4 domains (2 bonds + 2 lone pairs) → sp³.",
+            "Hybridization is a model, not a detector reading. It is chosen to match the observed or VSEPR geometry. If the electron geometry is tetrahedral, we say sp³ whether the atom is C in methane or O in water.",
+            "Lone pairs occupy hybrid orbitals too. In water, two sp³ hybrids hold O–H bonds and two hold lone pairs. The H–O–H angle is a bit less than 109.5° because lone pairs take more space than bonding pairs.",
+            "Carbon chemistry uses this map constantly. Alkane carbons (four single bonds) are sp³. Alkene carbons (three domains) are sp². Alkyne carbons (two domains) are sp. Functional-group atoms follow the same domain count.",
+            "Expanded octets on period-3 atoms need d orbitals in the simple hybrid model (sp³d, sp³d²). Some advanced treatments avoid d orbitals; for this course, match the hybrid label to the VSEPR domain count as your textbook does."
+          ],
+          "why": "Hybridization links Lewis/VSEPR geometry to orbital language. It is the bridge into σ and π bonding.",
+          "worked": {
+            "title": "Hybridization of each carbon in CH₂=CH–C≡N",
+            "steps": [
+              "Draw the chain: H₂C=CH–C≡N.",
+              "Left carbon (CH₂=): attached to 2 H and double-bonded to the next C → 3 domains → sp².",
+              "Middle carbon (–CH=): attached to 1 H, double-bonded to left C, single-bonded to the next C → 3 domains → sp².",
+              "Cyano carbon (–C≡): triple-bonded to N and single-bonded to the middle C → 2 domains → sp.",
+              "Nitrogen in –C≡N: one triple bond domain + one lone pair → 2 domains → sp.",
+              "Final answer: carbons are sp², sp², sp (left to right); N is sp."
+            ]
+          },
+          "workedExamples": []
+        },
+        {
+          "id": "sigma-pi",
+          "heading": "Sigma and pi bonds",
+          "paragraphs": [
+            "A σ (sigma) bond has electron density along the line joining the two nuclei. End-to-end overlap of hybrids or of an s orbital with a hybrid makes a σ bond. Every single, double, and triple bond contains exactly one σ bond.",
+            "A π (pi) bond has electron density above and below (or beside) the internuclear axis. Side-to-side overlap of leftover p orbitals makes π bonds. A double bond = 1 σ + 1 π. A triple bond = 1 σ + 2 π.",
+            "In ethene (H₂C=CH₂), each carbon is sp². The three sp² hybrids make the C–H and C–C σ framework. The leftover p orbital on each carbon overlaps to make the π bond. In ethyne (HC≡CH), each carbon is sp; two leftover p orbitals on each carbon make two π bonds.",
+            "Rotation about a single (σ) bond is usually easy. Rotation about a double bond breaks the π overlap, so cis–trans isomers around C=C can be stable at room temperature.",
+            "Count practice: benzene C₆H₆ has 6 C–C σ bonds in the ring, 6 C–H σ bonds, and a delocalized π system often counted as 3 π bonds in a simple Lewis picture (true MO description is delocalized around the ring).",
+            "A useful exam habit: first count how many pairs of atoms are directly connected (that is the σ count), then add π from each double (+1) and triple (+2).",
+            "In ethyne, the C–H bonds are σ overlaps of H 1s with C sp hybrids. The C–C σ bond is sp–sp. The two π bonds are side-on p–p overlaps."
           ],
           "figure": {
             "src": "art/hybrid-ethene-ethyne.svg",
@@ -1342,17 +1507,57 @@
           "worked": {
             "title": "σ and π bonds in CH₂=CH–C≡N",
             "steps": [
-              "σ bonds: 4 C–H + C–C + C–N = 6 σ",
-              "Every connection has one σ (singles, doubles, and triples each include one)",
-              "Double bond adds 1 π; triple bond adds 2 π → 3 π total",
-              "Answer: 6 σ and 3 π"
+              "Formula of CH₂=CH–C≡N is C₃H₃N. That means 3 C–H bonds.",
+              "Atom-to-atom connections: 3 C–H, one C=C, one C–C (between the alkene and the cyano carbon), and one C≡N. Total connections = 6.",
+              "Each connection includes exactly one σ bond → 6 σ bonds.",
+              "π extras: C=C contributes 1 π; C≡N contributes 2 π → 3 π bonds.",
+              "Final answer: 6 σ and 3 π."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "σ and π count in CO₂",
+              "steps": [
+                "CO₂ is O=C=O.",
+                "Two C=O connections → 2 σ bonds (one in each double bond).",
+                "Each double bond adds 1 π → 2 π bonds.",
+                "Final answer: 2 σ and 2 π."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Counting a double bond as two σ bonds, or a triple bond as three σ bonds.",
+            "whyWrong": "Only the first bond between two atoms is a σ bond. The second and third bonds are π bonds from side-on p overlap.",
+            "correct": "One σ per connected atom pair. Add one π for a double bond and two π for a triple bond."
           }
         },
         {
-          "heading": "Molecular orbital (MO) theory",
+          "id": "mo-basics",
+          "heading": "Molecular orbital basics",
           "paragraphs": [
-            "Atomic orbitals combine into bonding and antibonding MOs. Bond order = ½(bonding e⁻ − antibonding e⁻). Higher bond order → shorter, stronger bond. O₂ has two unpaired electrons in π* orbitals, so it is paramagnetic — Lewis structures miss this."
+            "Molecular orbital (MO) theory combines atomic orbitals from the whole molecule into new orbitals that belong to the molecule. Two atomic orbitals make one bonding MO (lower energy) and one antibonding MO (higher energy, marked with *).",
+            "Electrons fill MOs much like atomic orbitals: lowest energy first, Pauli limit of two electrons per MO, and Hund's rule for degenerate MOs.",
+            "Bond order = ½(number of bonding electrons − number of antibonding electrons). Higher bond order means a stronger, usually shorter bond. Bond order 0 means no stable bond (as in He₂).",
+            "For O₂ and F₂, the valence MO energy order commonly taught is: σ2s < σ*2s < σ2p < π2p < π*2p < σ*2p. (For B₂, C₂, and N₂ the π2p level sits below σ2p. Use the order the problem or table gives.)",
+            "Bonding MOs concentrate electron density between nuclei and stabilize the molecule. Antibonding MOs have a node between nuclei and destabilize it when occupied.",
+            "A photoelectron spectrum or a textbook diagram tells you the energy order. Memorize the two common orders for period-2 diatomics: π below σ for B₂/C₂/N₂, and σ below π for O₂/F₂.",
+            "Paramagnetic means attracted into a magnetic field (unpaired electrons). Diamagnetic means weakly pushed out (all electrons paired). MO theory predicts which diatomic molecules are which.",
+            "Bond order can be fractional (as in O₂⁺ = 2.5). Lewis structures struggle with that; MO handles it naturally from electron counts."
+          ],
+          "why": "MO theory explains magnetism and fractional bond orders that Lewis structures cannot show cleanly — especially O₂."
+        },
+        {
+          "id": "mo-o2",
+          "heading": "MO diagrams for O₂ and relatives",
+          "paragraphs": [
+            "O₂ has 12 valence electrons to place in the MO scheme. Filling with the O₂/F₂ order gives two electrons in the π* set. Those two π* electrons sit in different orbitals with parallel spins (Hund), so O₂ has two unpaired electrons and is paramagnetic.",
+            "Lewis structures of O₂ with all electrons paired miss that fact. Liquid oxygen sticking to a magnet is the classic classroom demo.",
+            "Related ions: remove an antibonding electron to make O₂⁺ (higher bond order). Add an electron to π* to make O₂⁻ (lower bond order).",
+            "Bond length and bond strength trends follow bond order when you compare O₂⁺, O₂, and O₂⁻: higher bond order → shorter and stronger bond.",
+            "F₂ has bond order 1 and is diamagnetic. N₂ has bond order 3 and is diamagnetic. Those MO results match the Lewis pictures, unlike O₂.",
+            "Writing the electron configuration for O₂: (σ2s)²(σ*2s)²(σ2p)²(π2p)⁴(π*2p)². The π* set holds two unpaired electrons.",
+            "Removing one π* electron (to O₂⁺) raises bond order. Adding one (to O₂⁻) lowers it. Adding two (to O₂²⁻, peroxide) drops bond order to 1.",
+            "Classroom check: a tube of liquid O₂ hangs between the poles of a strong magnet; liquid N₂ does not. Paramagnetism of O₂ is not a book quirk — it is visible."
           ],
           "figure": {
             "src": "art/mo-o2.svg",
@@ -1361,126 +1566,611 @@
           "worked": {
             "title": "Bond orders of O₂, O₂⁺, O₂⁻",
             "steps": [
-              "O₂ has 12 valence electrons in the MO scheme. Bond order = 2.",
-              "O₂⁺ removes one antibonding e⁻ → bond order 2.5",
-              "O₂⁻ adds one antibonding e⁻ → bond order 1.5",
-              "Bond length: O₂⁺ < O₂ < O₂⁻"
+              "For O₂ with 12 valence electrons in the standard diagram: bonding electrons = 8, antibonding electrons = 4.",
+              "Bond order = ½(8 − 4) = 2.",
+              "O₂⁺ has 11 valence electrons: one fewer antibonding electron than O₂, so antibonding = 3, bonding = 8.",
+              "Bond order(O₂⁺) = ½(8 − 3) = 2.5.",
+              "O₂⁻ has 13 valence electrons: one more antibonding electron than O₂, so antibonding = 5, bonding = 8.",
+              "Bond order(O₂⁻) = ½(8 − 5) = 1.5.",
+              "Trend: O₂⁺ has the strongest/shortest bond of the three; O₂⁻ has the weakest/longest.",
+              "Final answers: 2, 2.5, and 1.5."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Is O₂ diamagnetic or paramagnetic?",
+              "steps": [
+                "Fill the O₂ MO diagram through π* with 12 electrons.",
+                "The last two electrons occupy the two degenerate π* orbitals singly with parallel spins.",
+                "Unpaired electrons = 2.",
+                "Final answer: paramagnetic."
+              ]
+            },
+            {
+              "title": "Bond order of N₂ (use π2p below σ2p)",
+              "steps": [
+                "N₂ has 10 valence electrons.",
+                "Filling: (σ2s)²(σ*2s)²(π2p)⁴(σ2p)².",
+                "Bonding electrons = 8; antibonding = 2.",
+                "Bond order = ½(8 − 2) = 3.",
+                "Final answer: bond order 3 (matches the Lewis triple bond); all electrons paired → diamagnetic."
+              ]
+            },
+            {
+              "title": "Bond order of peroxide ion O₂²⁻",
+              "steps": [
+                "O₂²⁻ has 14 valence electrons (same count as F₂).",
+                "Bonding electrons still 8; antibonding electrons now 6.",
+                "Bond order = ½(8 − 6) = 1.",
+                "Final answer: bond order 1; all electrons paired → diamagnetic."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-bonding-ii",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the hybridization of B in BF₃?",
+                "a": "3 domains, no lone pairs on B → sp²."
+              },
+              {
+                "q": "How many σ and π bonds are in N₂?",
+                "a": "N≡N has 1 σ and 2 π."
+              },
+              {
+                "q": "What is the bond order of F₂ in the MO model?",
+                "a": "F₂ has 14 valence electrons; bond order = ½(8 − 6) = 1."
+              }
             ]
           }
         }
       ]
     },
     "intermolecular-forces-and-phases": {
+      "topic_id": "intermolecular-forces-and-phases",
       "reviewed": false,
       "sections": [
         {
+          "id": "imf-types",
           "heading": "Types of intermolecular forces",
           "paragraphs": [
-            "London dispersion: instantaneous dipoles; stronger for larger, more polarizable electron clouds and for longer contact area. Dipole–dipole: between permanent dipoles. Hydrogen bonding: H bonded to N, O, or F attracted to a lone pair on N, O, or F. It is unusually strong.",
-            "Stronger IMF → higher boiling/melting point (for similar molar mass)."
+            "Intermolecular forces (IMFs) are attractions between molecules (or between separate formula units). They are much weaker than the covalent or ionic bonds inside a molecule, but they control boiling point, melting point, vapor pressure, and solubility.",
+            "London dispersion forces exist in every substance. They come from temporary, instantaneous dipoles in electron clouds. Larger, more polarizable electron clouds give stronger dispersion. Longer contact area (straight chains vs balls) also strengthens dispersion.",
+            "Dipole–dipole forces act between permanent dipoles in polar molecules. The positive end of one molecule attracts the negative end of another.",
+            "Hydrogen bonding is a special strong dipole–dipole case: H bonded to N, O, or F is attracted to a lone pair on N, O, or F in another molecule. It is unusually strong for an IMF and explains many odd boiling points (water, HF, NH₃).",
+            "Ion–dipole forces appear when ionic compounds dissolve in polar solvents (NaCl in water). They are stronger than ordinary dipole–dipole forces.",
+            "All molecules have dispersion. Polar molecules add dipole–dipole. Molecules with H–N, H–O, or H–F add hydrogen bonding. When you rank substances, identify the strongest force present, then compare within that class.",
+            "Solubility rule of thumb: like dissolves like. Polar solvents (water) dissolve polar and ionic solutes. Nonpolar solvents (hexane) dissolve nonpolar solutes. Hydrogen bonding between solute and solvent helps a lot.",
+            "Dispersion forces grow quickly with size. Iodine is a solid at room temperature while fluorine is a gas, even though both are nonpolar X₂ molecules. The difference is polarizability.",
+            "Hydrogen bonding is still much weaker than a covalent O–H bond. It is strong among IMFs, not strong compared with intramolecular bonds.",
+            "Quick ranking recipe: (1) ionic lattices beat molecular IMFs for melting points; (2) among molecules, hydrogen bonding beats ordinary dipole–dipole; (3) dipole–dipole beats dispersion only when masses are similar; (4) when only dispersion remains, larger and less compact wins."
           ],
+          "why": "If you can name the strongest IMF in a pure substance, you can usually rank boiling points and decide whether a solid, liquid, or gas is expected at room temperature.",
           "worked": {
             "title": "Boiling points: HF, Ne, HCl",
             "steps": [
-              "Ne: only weak dispersion → lowest bp",
-              "HCl: dipole–dipole + dispersion",
-              "HF: hydrogen bonding → highest bp",
-              "Order: Ne < HCl < HF"
+              "Ne is a noble-gas atom. Only dispersion forces. Very weak for such a small cloud → lowest boiling point.",
+              "HCl is polar. It has dipole–dipole forces plus dispersion. Stronger than Ne.",
+              "HF can hydrogen-bond (H on F attracted to F lone pairs). That IMF is stronger than ordinary dipole–dipole in HCl.",
+              "Order of boiling points: Ne < HCl < HF.",
+              "Final answer: Ne < HCl < HF."
             ]
-          }
+          },
+          "workedExamples": [
+            {
+              "title": "Rank IMF strength: CH₄, NH₃, NaCl (as a solid lattice idea)",
+              "steps": [
+                "CH₄ is nonpolar → only dispersion.",
+                "NH₃ is polar and has N–H bonds → hydrogen bonding (+ dispersion).",
+                "NaCl is ionic. Ion–ion attractions in the lattice are much stronger than molecular IMFs.",
+                "For molecular IMFs only among the first two: CH₄ < NH₃. NaCl's melting point is far higher than either boiling point.",
+                "Final answer: molecular IMF order CH₄ < NH₃; ionic NaCl is in a different, much stronger class."
+              ]
+            }
+          ]
         },
         {
-          "heading": "Shape matters",
+          "id": "shape-and-dispersion",
+          "heading": "Shape, mass, and dispersion",
           "paragraphs": [
-            "Straight-chain alkanes have more surface contact than branched isomers, so stronger dispersion and higher boiling points. Pentane boils higher than neopentane."
+            "Among similar compounds, stronger IMFs raise boiling and melting points and lower vapor pressure at a given temperature.",
+            "For nonpolar molecules of similar shape, larger molar mass usually means a larger electron cloud and stronger dispersion. So boiling points often rise down a halogen family: F₂ < Cl₂ < Br₂ < I₂ (F₂ and Cl₂ are gases; Br₂ liquid; I₂ solid at room temperature).",
+            "Shape matters at fixed formula mass. A straight-chain alkane has more surface contact than a compact branched isomer. More contact → stronger dispersion → higher boiling point. Pentane boils higher than neopentane (2,2-dimethylpropane).",
+            "Isomer boiling-point questions almost always hinge on surface area when the formula is the same and both isomers are nonpolar. Branched → more compact → lower boiling point.",
+            "For polar vs nonpolar isomers (for example diethyl ether vs 1-butanol), hydrogen bonding in the alcohol wins over ether dipole forces.",
+            "When two molecules have similar mass and similar polarity, look at hydrogen bonding next. Alcohols boil higher than ethers of similar mass.",
+            "Network solids and metals are not \"IMF\" stories. Diamond and quartz melt high because covalent networks hold atoms, not because of London forces."
           ],
           "figure": {
             "src": "art/pentane-neopentane.svg",
             "alt": "Side-by-side carbon skeletons of straight-chain n-pentane and compact neopentane (2,2-dimethylpropane), noting that more surface contact raises boiling point via stronger London forces."
+          },
+          "worked": {
+            "title": "Why pentane boils higher than neopentane",
+            "steps": [
+              "Both are C₅H₁₂. Same molar mass, both nonpolar → only dispersion forces.",
+              "n-Pentane is a long chain. Molecules can lie side by side with large contact area.",
+              "Neopentane is compact and nearly spherical. Contact area between neighbors is smaller.",
+              "Larger contact area → stronger London forces in pentane.",
+              "Stronger IMF → higher boiling point for pentane.",
+              "Final answer: pentane has stronger dispersion from greater surface contact."
+            ]
+          },
+          "mistake": {
+            "wrong": "Ranking boiling points only by molar mass and ignoring hydrogen bonding or shape (for example predicting H₂O boils lower than H₂S because O is lighter than S).",
+            "whyWrong": "Water's hydrogen bonding outweighs the mass trend that works for H₂S, H₂Se, H₂Te. Mass is only one factor.",
+            "correct": "Name the strongest IMF first. Then use mass and shape inside the same IMF class."
           }
         },
         {
-          "heading": "Clausius–Clapeyron",
+          "id": "vapor-pressure-clausius",
+          "heading": "Vapor pressure and Clausius–Clapeyron",
           "paragraphs": [
-            "Vapor pressure rises with T. ln(P₂/P₁) = −(ΔH_vap/R)(1/T₂ − 1/T₁). Use absolute temperatures (K)."
+            "Vapor pressure is the pressure of a vapor in equilibrium with its liquid (or solid) at a fixed temperature. Stronger IMFs hold molecules in the liquid more tightly, so vapor pressure is lower at the same T.",
+            "Vapor pressure rises as temperature rises. More molecules have enough energy to escape.",
+            "The Clausius–Clapeyron equation links two vapor-pressure points: ln(P₂/P₁) = −(ΔH_vap / R) (1/T₂ − 1/T₁). Temperatures must be in kelvin. R = 8.314 J·mol⁻¹·K⁻¹ when ΔH_vap is in J/mol (or use 8.314 × 10⁻³ kJ·mol⁻¹·K⁻¹ with ΔH in kJ/mol).",
+            "Boiling point is the temperature where vapor pressure equals external pressure. Normal boiling point uses 1 atm (or 1 bar, depending on the table).",
+            "A liquid with high vapor pressure at room temperature is volatile. Weak IMFs → high vapor pressure → low boiling point.",
+            "When you solve Clausius–Clapeyron for ΔH_vap, rearrange: ΔH_vap = −R × ln(P₂/P₁) / (1/T₂ − 1/T₁). Keep the sign of the temperature term straight so ΔH_vap comes out positive for vaporization.",
+            "Plotting ln P against 1/T gives a straight line with slope −ΔH_vap/R for a limited range. That is the two-point Clausius–Clapeyron idea in graph form.",
+            "Units reminder: if ΔH_vap is 40.7 kJ/mol, either convert to 40700 J/mol and use R = 8.314 J·mol⁻¹·K⁻¹, or keep 40.7 kJ/mol and use R = 0.008314 kJ·mol⁻¹·K⁻¹.",
+            "Boiling happens throughout the liquid when vapor pressure equals external pressure. Evaporation happens only at the surface and can occur below the boiling point."
+          ],
+          "worked": {
+            "title": "Find P₂ if P₁ = 1.00 atm at T₁ = 373 K, ΔH_vap = 40.7 kJ/mol, T₂ = 363 K",
+            "steps": [
+              "This is water near its normal boiling point. ΔH_vap = 40.7 kJ/mol = 4.07 × 10⁴ J/mol.",
+              "Write ln(P₂/P₁) = −(ΔH_vap/R)(1/T₂ − 1/T₁).",
+              "R = 8.314 J·mol⁻¹·K⁻¹.",
+              "Compute 1/T₂ − 1/T₁ = 1/363 − 1/373.",
+              "1/363 = 0.0027548. 1/373 = 0.0026810. Difference = 0.0000738 K⁻¹.",
+              "ΔH_vap/R = 40700 / 8.314 = 4895.4 K.",
+              "−(ΔH_vap/R)(difference) = −(4895.4)(0.0000738) = −0.361.",
+              "ln(P₂/1.00) = −0.361. P₂ = e^(−0.361) = 0.697 atm.",
+              "Sig figs: report about 0.697 atm (vapor pressure falls as T falls below the boiling point).",
+              "Final answer: P₂ ≈ 0.697 atm."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Does vapor pressure rise or fall when IMF strength rises at fixed T?",
+              "steps": [
+                "Stronger IMFs hold molecules in the liquid more tightly.",
+                "Fewer molecules escape to vapor at equilibrium.",
+                "Vapor pressure is lower.",
+                "Final answer: vapor pressure falls as IMF strength rises (at fixed T)."
+              ]
+            }
           ]
+        },
+        {
+          "id": "phases",
+          "heading": "Phases and phase diagrams (intro)",
+          "paragraphs": [
+            "Solid, liquid, and gas are the common phases for a pure substance. Heating can melt a solid or boil a liquid. Cooling reverses those changes.",
+            "A phase diagram plots pressure vs temperature and shows which phase is stable. Curves are equilibria between two phases. The triple point is where solid, liquid, and gas coexist. The critical point ends the liquid–gas curve; beyond it you cannot tell liquid from gas.",
+            "Reading tip: at a given P and T, the region you land in is the stable phase. Crossing a curve means a phase change at equilibrium.",
+            "Along the solid–gas curve, solid and vapor coexist (sublimation/deposition). Dry ice (solid CO₂) sublimes at 1 atm because that pressure is below CO₂'s triple-point pressure.",
+            "Critical temperature is the highest T at which a liquid can exist. Above T_c, no amount of pressure liquefies the gas into a separate liquid phase.",
+            "Heating a solid at constant pressure: temperature rises until the melting curve, then stays (ideally) at the melting point while solid and liquid coexist, then rises again in the liquid region until boiling.",
+            "The slope of the solid–liquid line is steep. For water it leans slightly left (ice is less dense than liquid water), which is unusual and explains pressure melting under ice skates in the classic story — though friction also matters."
+          ],
+          "worked": {
+            "title": "What happens when you raise T at fixed P below the critical pressure?",
+            "steps": [
+              "Start in the solid region at low T.",
+              "Warm at constant P: you cross the solid–liquid (melting) curve → liquid.",
+              "Warm further: you cross the liquid–gas (boiling/vaporization) curve → gas.",
+              "If instead your fixed P is below the triple-point pressure for that substance, heating the solid can sublime directly to gas without a stable liquid.",
+              "Final answer: solid → liquid → gas when P is between the triple and critical pressures."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Why does sweating cool you?",
+              "steps": [
+                "Sweat is mostly water on the skin.",
+                "Evaporation is endothermic: the fastest molecules leave as vapor and take energy with them.",
+                "The remaining liquid and the skin lose thermal energy → temperature falls.",
+                "Final answer: evaporative cooling from vaporization of water."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-imf",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the strongest IMF in pure liquid NH₃?",
+                "a": "Hydrogen bonding (N–H···N)."
+              },
+              {
+                "q": "Which has the higher boiling point, C₂H₆ or C₃H₈? Why?",
+                "a": "C₃H₈. Both nonpolar; larger molar mass → stronger dispersion."
+              },
+              {
+                "q": "In Clausius–Clapeyron, must T be in °C or K?",
+                "a": "Kelvin. Absolute temperature only."
+              }
+            ]
+          }
         }
       ]
     },
     "gases-gas-laws-and-the-ideal-gas-equatio": {
+      "topic_id": "gases-gas-laws-and-the-ideal-gas-equatio",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Gas laws and PV = nRT",
+          "id": "gas-laws",
+          "heading": "Empirical gas laws",
           "paragraphs": [
-            "Boyle: P ∝ 1/V at fixed n,T. Charles: V ∝ T (K). Avogadro: V ∝ n. Combined ideal-gas law: PV = nRT. Use consistent R (0.082057 L·atm·mol⁻¹·K⁻¹ when P in atm and V in L)."
+            "Gases are mostly empty space. Their volume, pressure, temperature, and amount are linked by simple laws when the gas behaves ideally.",
+            "Boyle's law: at fixed n and T, P is inversely proportional to V. PV = constant. Double the pressure, halve the volume.",
+            "Charles's law: at fixed n and P, V is proportional to absolute temperature T in kelvin. V/T = constant. Use kelvin, never °C alone, in gas equations.",
+            "Avogadro's law: at fixed T and P, V is proportional to n. Equal volumes of ideal gases at the same T and P contain equal numbers of moles.",
+            "Convert °C to K with T(K) = t(°C) + 273.15. For three-sig-fig work, 25.0 °C → 298.2 K is fine; many problems use 298 K.",
+            "A combined form without n: P₁V₁/T₁ = P₂V₂/T₂ for a fixed amount of ideal gas. Cancel any quantity that does not change.",
+            "Standard temperature and pressure (STP) in many intro texts is 0 °C (273.15 K) and 1 atm. At STP, one mole of ideal gas occupies about 22.4 L. (Some modern tables use 1 bar; use the definition your problem states.)",
+            "Boyle in lab language: a syringe of trapped air shrinks when you push the plunger (raise P). Charles: a balloon shrinks in a freezer (lower T at nearly fixed P).",
+            "Always convert Celsius to kelvin before any gas equation. Writing T = 25 °C inside PV = nRT is one of the most common exam mistakes."
           ],
-          "worked": {
-            "title": "P for 2.50 mol in 10.0 L at 25.0 °C",
-            "steps": [
-              "T = 25.0 + 273.15 = 298.15 K",
-              "P = nRT / V = (2.50)(0.082057)(298.15) / 10.0",
-              "P = 6.12 atm"
-            ]
-          }
+          "why": "These three laws combine into the ideal-gas equation you will use constantly in stoichiometry and lab calculations."
         },
         {
-          "heading": "Molar mass and density",
+          "id": "ideal-gas-equation",
+          "heading": "The ideal-gas equation",
           "paragraphs": [
-            "At the same T and P, equal volumes of ideal gases have equal moles (Avogadro). So denser gas = larger molar mass. CO₂ (44 g/mol) is denser than N₂ (28 g/mol) at the same T,P."
+            "Ideal-gas law: PV = nRT. P is pressure, V volume, n amount in moles, T temperature in kelvin, and R the gas constant.",
+            "Match R to your units. Common choice: R = 0.082057 L·atm·mol⁻¹·K⁻¹ when P is in atm and V is in liters. Another: R = 8.314 J·mol⁻¹·K⁻¹ = 8.314 Pa·m³·mol⁻¹·K⁻¹. If P is in torr, convert to atm first (760 torr = 1 atm) or use a matching R.",
+            "Rearrangements: P = nRT/V, V = nRT/P, n = PV/RT, T = PV/nR. Always write units in the setup so they cancel.",
+            "Unit trap: if V is in mL, convert to L before using R = 0.082057 L·atm·mol⁻¹·K⁻¹. If P is in torr, divide by 760 to get atm.",
+            "Another common R: 62.36 L·torr·mol⁻¹·K⁻¹ if you keep P in torr and V in L. Pick one system and stay inside it.",
+            "You can solve for any one variable if the other three are known. Highlight the unknown, write the rearranged equation, substitute with units, then compute.",
+            "Sig figs: temperatures like 25 °C → 298 K already limit precision; do not report ten digits from the calculator.",
+            "Quick check after a P calculation: if you have about 1 mol in about 25 L at room temperature, P should be near 1 atm. If your answer is 50 atm or 0.01 atm, reread the numbers."
+          ],
+          "worked": {
+            "title": "Pressure of 2.50 mol gas in 10.0 L at 25.0 °C",
+            "steps": [
+              "Convert temperature: T = 25.0 + 273.15 = 298.15 K.",
+              "Choose R = 0.082057 L·atm·mol⁻¹·K⁻¹ because V is in L and we want P in atm.",
+              "Write P = nRT / V.",
+              "Substitute: P = (2.50 mol)(0.082057 L·atm·mol⁻¹·K⁻¹)(298.15 K) / (10.0 L).",
+              "Compute nR = 2.50 × 0.082057 = 0.2051425.",
+              "Multiply by T: 0.2051425 × 298.15 = 61.163.",
+              "Divide by V: 61.163 / 10.0 = 6.1163 atm.",
+              "Sig figs: 2.50, 10.0, and 25.0 support 3 sig figs.",
+              "Final answer: 6.12 atm."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Volume of 0.500 mol O₂ at 1.00 atm and 273 K",
+              "steps": [
+                "V = nRT/P = (0.500)(0.082057)(273) / 1.00.",
+                "0.500 × 0.082057 = 0.0410285.",
+                "0.0410285 × 273 = 11.201 L.",
+                "This is essentially the molar volume 22.4 L/mol times 0.500 mol.",
+                "Final answer: 11.2 L."
+              ]
+            }
           ]
         },
         {
-          "heading": "Partial pressures",
+          "id": "molar-mass-density",
+          "heading": "Molar mass and density",
           "paragraphs": [
-            "Dalton's law: P_total = Σ P_i. Mole fraction x_i = n_i / n_total; P_i = x_i P_total."
+            "From PV = nRT and n = m/M (mass over molar mass), you get PM = dRT, or d = PM/RT, where d is mass density (m/V). At fixed T and P, density is proportional to molar mass.",
+            "That is why CO₂ (44.01 g/mol) is denser than N₂ (28.02 g/mol) in the same room conditions, and why a CO₂ fire extinguisher can push oxygen away near the floor.",
+            "You can also find an unknown molar mass: measure m, V, P, T for a gas sample, then M = mRT / PV.",
+            "At the same T and P, the denser ideal gas always has the larger molar mass. Ranking densities is then just ranking M values.",
+            "For air ≈ 29 g/mol, any gas with M > 29 tends to sink in air (same T,P), and M < 29 tends to rise — ignoring drafts and temperature differences.",
+            "Experimental molar mass of a volatile liquid: weigh a flask, add liquid, heat to vaporize and fill the flask with vapor at known T and P, then reweigh. M = mRT/PV.",
+            "Watch density units. g/L is common from this equation with R = 0.082057. If a problem wants g/mL, divide by 1000."
+          ],
+          "worked": {
+            "title": "Density of CO₂ at 1.00 atm and 298 K",
+            "steps": [
+              "M(CO₂) = 12.01 + 2(16.00) = 44.01 g/mol.",
+              "Use d = PM / RT with R = 0.082057 L·atm·mol⁻¹·K⁻¹.",
+              "d = (1.00 atm)(44.01 g/mol) / [(0.082057 L·atm·mol⁻¹·K⁻¹)(298 K)].",
+              "Denominator: 0.082057 × 298 = 24.453.",
+              "d = 44.01 / 24.453 = 1.800 g/L.",
+              "Final answer: 1.80 g/L (3 sig figs)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Molar mass from 0.882 g occupying 0.500 L at 1.00 atm and 300. K",
+              "steps": [
+                "M = mRT / PV.",
+                "M = (0.882 g)(0.082057)(300.) / [(1.00)(0.500)].",
+                "Numerator: 0.882 × 0.082057 × 300 = 21.712.",
+                "Divide by 0.500: M = 43.4 g/mol.",
+                "Final answer: 43.4 g/mol."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dalton",
+          "heading": "Dalton's law of partial pressures",
+          "paragraphs": [
+            "In a mixture of ideal gases, each gas behaves as if it alone occupied the volume. Dalton's law: P_total = P₁ + P₂ + … = Σ P_i.",
+            "Mole fraction of gas i: x_i = n_i / n_total. Then P_i = x_i P_total. Also x_i = P_i / P_total.",
+            "Collecting a gas over water: the total pressure includes water vapor. P_gas = P_total − P_H₂O (look up vapor pressure of water at that temperature).",
+            "Mole fractions in a mixture always sum to 1. Partial pressures always sum to P_total. Those two checks catch many arithmetic errors.",
+            "When a problem gives volume percents of gases mixed at the same T and P, volume percent equals mole percent for ideal gases.",
+            "Dry gas means you already subtracted water vapor. Wet gas means P_total includes P_H₂O.",
+            "Example: H₂ collected over water at 25 °C with barometer 758 torr. P_H₂O ≈ 23.8 torr at 25 °C. Then P_H₂ = 758 − 23.8 = 734.2 torr."
           ],
           "worked": {
             "title": "Partial pressure of O₂",
             "steps": [
-              "n(N₂)=0.400, n(O₂)=0.100, P_tot=2.00 atm",
-              "x(O₂)=0.100/0.500=0.200",
-              "P(O₂)=0.200×2.00=0.400 atm"
+              "Given: n(N₂) = 0.400 mol, n(O₂) = 0.100 mol, P_total = 2.00 atm.",
+              "n_total = 0.400 + 0.100 = 0.500 mol.",
+              "x(O₂) = 0.100 / 0.500 = 0.200.",
+              "P(O₂) = x(O₂) × P_total = 0.200 × 2.00 atm = 0.400 atm.",
+              "Check: P(N₂) = 0.800 × 2.00 = 1.60 atm. Sum = 2.00 atm.",
+              "Final answer: 0.400 atm."
+            ]
+          },
+          "mistake": {
+            "wrong": "Using Celsius temperature directly in PV = nRT (for example plugging T = 25 instead of 298).",
+            "whyWrong": "Gas laws are proportional to absolute temperature. Using 25 in place of 298 understates T by a factor of about 12 and wrecks P or V.",
+            "correct": "Always convert to kelvin first: T = t(°C) + 273.15."
+          }
+        },
+        {
+          "id": "gas-stoichiometry",
+          "heading": "Gases in reaction stoichiometry",
+          "paragraphs": [
+            "Combine a balanced equation with PV = nRT. A common path: find moles of a gas from P, V, T → use mole ratios → convert the other substance to grams or to a new gas volume.",
+            "At the same T and P, gas volume ratios equal mole ratios for ideal gases. That lets you skip an intermediate mole calculation when every species of interest is a gas under the same conditions.",
+            "If both product and reactant are gases at the same T and P, volumes follow coefficients directly. Example: N₂ + 3 H₂ → 2 NH₃ means 1 L N₂ reacts with 3 L H₂ to make 2 L NH₃ (ideal, same T,P).",
+            "If conditions differ, convert each gas to moles with PV = nRT before applying the mole ratio.",
+            "Limiting reactant still applies. Convert every reactant to moles (using PV = nRT for gases), then see which reactant runs out first from the mole ratios.",
+            "Report gas volumes only at the T and P stated. \"Liters of O₂\" without conditions is incomplete.",
+            "Mass–volume bridge: grams → moles (molar mass) → mole ratio → moles of gas → volume from PV = nRT. Keep a clear chain so units cancel at each step."
+          ],
+          "worked": {
+            "title": "Volume of O₂ at 1.00 atm and 298 K from 2.00 g KClO₃ (2 KClO₃ → 2 KCl + 3 O₂)",
+            "steps": [
+              "Molar mass KClO₃ = 39.10 + 35.45 + 3(16.00) = 122.55 g/mol.",
+              "Moles KClO₃ = 2.00 g / 122.55 g/mol = 0.01632 mol.",
+              "Mole ratio: 3 mol O₂ / 2 mol KClO₃.",
+              "Moles O₂ = 0.01632 × (3/2) = 0.02448 mol.",
+              "V = nRT/P = (0.02448)(0.082057)(298) / 1.00 = 0.599 L.",
+              "Sig figs from 2.00 g → 3 sig figs: 0.599 L.",
+              "Final answer: 0.599 L O₂."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Liters of H₂ at STP from 2.00 g Zn with excess HCl (Zn + 2 HCl → ZnCl₂ + H₂)",
+              "steps": [
+                "Moles Zn = 2.00 / 65.38 = 0.03059 mol.",
+                "Mole ratio 1:1 → 0.03059 mol H₂.",
+                "At STP, V = n × 22.4 L/mol = 0.03059 × 22.4 = 0.685 L.",
+                "Or V = nRT/P with T = 273.15 K, P = 1 atm → same size answer.",
+                "Final answer: 0.685 L H₂ (3 sig figs)."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-gases",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is 0 °C in kelvin?",
+                "a": "273.15 K."
+              },
+              {
+                "q": "A gas has P = 2.00 atm, V = 5.00 L, T = 300. K. Find n (R = 0.082057).",
+                "a": "n = PV/RT = (2.00×5.00)/(0.082057×300) = 0.406 mol."
+              },
+              {
+                "q": "In a mixture, x(He) = 0.25 and P_total = 4.0 atm. What is P(He)?",
+                "a": "P(He) = 0.25 × 4.0 = 1.0 atm."
+              }
             ]
           }
         }
       ]
     },
     "kinetic-molecular-theory-and-real-gases": {
+      "topic_id": "kinetic-molecular-theory-and-real-gases",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Kinetic-molecular ideas",
+          "id": "kmt-postulates",
+          "heading": "Kinetic-molecular theory",
           "paragraphs": [
-            "Gas pressure comes from collisions with the walls. Average translational KE per mole = (3/2)RT. Root-mean-square speed u_rms = √(3RT/M) with M in kg/mol."
+            "Kinetic-molecular theory (KMT) models an ideal gas as many tiny particles in constant random motion. Postulates in plain words:",
+            "1. Particle volume is negligible compared with the container volume.",
+            "2. Particles move in straight lines until they collide.",
+            "3. Collisions with walls and with each other are elastic (no net loss of kinetic energy).",
+            "4. Attractions and repulsions between particles are negligible.",
+            "5. The average kinetic energy of the particles is proportional to the absolute temperature.",
+            "Pressure is the result of collisions with the walls. Faster or more frequent hits raise the pressure.",
+            "Temperature measures average translational kinetic energy. At absolute zero the average KE would be zero in this classical picture (real quantum systems still have zero-point energy, which intro KMT ignores).",
+            "Collisions with the wall transfer momentum. More moles in the same volume → more collisions → higher pressure. Higher T → faster molecules → harder hits → higher pressure. That is Boyle and Amontons/Gay-Lussac in molecular language.",
+            "Ideal gas means the KMT assumptions hold well enough for PV = nRT to be accurate. Real gases are closest to ideal when dilute and warm.",
+            "Elastic collisions keep the total kinetic energy of the particles constant in a closed insulated box. Temperature stays steady when no energy leaves the system.",
+            "Mean free path is the average distance a molecule travels between collisions. Lower pressure → longer mean free path. That is why effusion and vacuum systems need low pressure to work cleanly.",
+            "From wall collisions you can derive that P = (1/3) ρ u_rms² for an ideal gas, where ρ is mass density. Combine that with KE_avg = (3/2) RT and you recover PV = nRT. So the ideal-gas law is not a separate mystery — it follows from the postulates."
+          ],
+          "why": "KMT explains why PV = nRT works, and it points to the places real gases fail — finite size and attractions."
+        },
+        {
+          "id": "speed-and-energy",
+          "heading": "Molecular speed and kinetic energy",
+          "paragraphs": [
+            "Average translational kinetic energy per mole of gas is (3/2) RT, with R = 8.314 J·mol⁻¹·K⁻¹. Per molecule it is (3/2) kT, where k is Boltzmann's constant.",
+            "Root-mean-square speed: u_rms = √(3RT / M). Here M must be in kg/mol so that the units under the square root become m²/s². Example: N₂ is 28.02 g/mol = 0.02802 kg/mol.",
+            "At the same T, lighter molecules have higher u_rms. H₂ is much faster than O₂ at room temperature. Raising T raises every gas's u_rms.",
+            "The Maxwell–Boltzmann distribution spreads molecular speeds. u_rms is one characteristic speed; the most probable speed and the average speed are slightly smaller. Intro problems usually ask for u_rms.",
+            "Because KE_avg depends only on T, not on M, two gases at the same T have the same average KE per mole, even if their u_rms values differ.",
+            "Unit trap for u_rms: molar mass must be kg/mol when R is in J. Using 28.02 g/mol without converting gives an answer too large by √1000.",
+            "Heavier gases move slower at the same T, but each mole still carries (3/2)RT of translational KE. The energy is the same; the speed is not.",
+            "Example scale: at 300 K, u_rms(H₂) is about 1.9 km/s, u_rms(N₂) about 0.52 km/s, and u_rms(CO₂) a bit lower still. Molecules are fast; macroscopic diffusion looks slow only because of constant collisions.",
+            "If T doubles, KE_avg doubles and u_rms rises by √2 ≈ 1.41. If M quadruples at fixed T, u_rms falls by half. Those two scalings cover most qualitative speed questions."
           ],
           "worked": {
             "title": "u_rms of N₂ at 300. K",
             "steps": [
-              "M = 28.02 g/mol = 0.02802 kg/mol",
-              "R = 8.314 J·mol⁻¹·K⁻¹",
-              "u_rms = √(3×8.314×300 / 0.02802) = 517 m/s"
+              "Molar mass M = 28.02 g/mol = 0.02802 kg/mol.",
+              "R = 8.314 J·mol⁻¹·K⁻¹. Note 1 J = 1 kg·m²·s⁻².",
+              "Write u_rms = √(3RT / M).",
+              "Compute 3RT = 3 × 8.314 × 300. = 7482.6.",
+              "Divide by M: 7482.6 / 0.02802 = 267045.",
+              "Square root: √267045 = 516.8 m/s.",
+              "Sig figs: 300. K has 3 sig figs → 517 m/s.",
+              "Final answer: 517 m/s."
             ]
-          }
+          },
+          "workedExamples": [
+            {
+              "title": "Compare u_rms of H₂ and O₂ at the same T",
+              "steps": [
+                "u_rms ∝ 1/√M at fixed T.",
+                "u_rms(H₂)/u_rms(O₂) = √(M_O₂ / M_H₂) = √(32.00 / 2.016) = √15.87 = 3.98.",
+                "H₂ molecules move about 3.98 times faster than O₂ molecules at the same temperature.",
+                "Final answer: ratio ≈ 3.98."
+              ]
+            }
+          ]
         },
         {
-          "heading": "Effusion and diffusion (Graham)",
+          "id": "graham",
+          "heading": "Effusion and Graham's law",
           "paragraphs": [
-            "Rate of effusion ∝ 1/√M. Ratio of rates = √(M_heavy / M_light)."
+            "Effusion is escape of gas through a tiny hole into vacuum. Diffusion is mixing of gases through each other.",
+            "Graham's law: rate of effusion ∝ 1/√M. For two gases at the same T and P: rate₁/rate₂ = √(M₂/M₁). The lighter gas effuses faster.",
+            "The same square-root mass dependence appears in u_rms, because faster molecules hit the hole more often.",
+            "Time to effuse is inversely related to rate. If gas A effuses twice as fast as gas B, A needs half the time to pass the same amount through the hole.",
+            "Enrichment of uranium used gaseous UF₆ effusion historically: lighter ²³⁵UF₆ effuses slightly faster than ²³⁸UF₆. The mass difference is small, so many stages were needed.",
+            "Graham's law also estimates diffusion rates in free space when other factors are similar. In air, perfume molecules still meet air molecules, so real diffusion is slower than simple effusion through a pinhole.",
+            "If a problem gives times instead of rates, remember t ∝ 1/rate ∝ √M. The gas with larger M takes longer.",
+            "Worked pattern: write the ratio with the unknown rate or time on the left, put molar masses under square roots on the right, then solve. Cancel identical T and P assumptions that Graham's law already requires.",
+            "Sample trap: mixing up which mass goes on top. Always put the other gas's molar mass under the square root when you want rate_A / rate_B = √(M_B / M_A)."
           ],
           "worked": {
-            "title": "H₂ vs O₂ effusion",
+            "title": "H₂ vs O₂ effusion rate ratio",
             "steps": [
-              "rate(H₂)/rate(O₂) = √(32.00/2.016) = √15.87 ≈ 3.98",
-              "H₂ effuses about 3.98 times faster"
+              "M(H₂) = 2.016 g/mol. M(O₂) = 32.00 g/mol.",
+              "rate(H₂)/rate(O₂) = √(M_O₂ / M_H₂) = √(32.00 / 2.016).",
+              "32.00 / 2.016 = 15.873.",
+              "√15.873 = 3.984.",
+              "Final answer: H₂ effuses about 3.98 times as fast as O₂."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Which effuses faster, CH₄ or He? By what factor?",
+              "steps": [
+                "M(He) = 4.003 g/mol. M(CH₄) = 16.04 g/mol.",
+                "He is lighter → He effuses faster.",
+                "rate(He)/rate(CH₄) = √(16.04 / 4.003) = √4.007 = 2.002.",
+                "Final answer: He effuses about 2.00 times as fast as CH₄."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Writing rate₁/rate₂ = √(M₁/M₂) and concluding the heavier gas is faster.",
+            "whyWrong": "The lighter gas is faster. The molar mass of the other gas goes under the square root in the numerator.",
+            "correct": "Use rate_light / rate_heavy = √(M_heavy / M_light)."
           }
         },
         {
-          "heading": "Real gases",
+          "id": "real-gases",
+          "heading": "Real gases and van der Waals",
           "paragraphs": [
-            "Ideal gas ignores volume of molecules and attractions. At high P or low T, use van der Waals: (P + a n²/V²)(V − n b) = nRT. a corrects attractions; b corrects volume."
+            "Real gases approach ideal behavior at low pressure and high temperature: particles are far apart, so their size and attractions matter less.",
+            "Deviations grow at high pressure (particle volume is no longer negligible) and at low temperature (attractions particles stick together more).",
+            "van der Waals equation: (P + a n²/V²)(V − n b) = nRT. The a term corrects for attractions (attractions reduce the force of wall collisions, so you add a pressure correction). The b term corrects for finite particle volume (available volume is V − nb).",
+            "Larger, more polarizable molecules usually have larger a. Larger molecules usually have larger b.",
+            "Compressibility factor Z = PV_m / RT. For an ideal gas Z = 1. Z < 1 often signals attractions dominating; Z > 1 at high P often signals finite volume dominating.",
+            "van der Waals constants a and b are substance-specific. You look them up; you do not invent them. Problems that give a and b expect you to plug into (P + a n²/V²)(V − n b) = nRT carefully with matching units.",
+            "At very high pressure, molecules are forced close together. The excluded volume nb is a large fraction of V, so the ideal law overestimates how much you can compress the gas.",
+            "Near condensation, attractions pull molecules together and can make the observed pressure much lower than ideal. That is where Z dips below 1.",
+            "Practical rule: for many intro problems at ~1 atm and ~300 K, treat common gases as ideal unless the question names van der Waals or asks about deviations. Save a and b for the problems that give them.",
+            "Comparing gases: CO₂ has a larger a than H₂ because CO₂ is more polarizable and feels stronger attractions. CO₂ also has a larger b because the molecule is bigger. Tables of a and b make that comparison quantitative."
+          ],
+          "worked": {
+            "title": "When is the ideal-gas law safest?",
+            "steps": [
+              "List conditions: low pressure (for example well below 1 atm, or at least not tens of atm) and temperature well above the boiling point.",
+              "Under those conditions, V is large compared with nb, and a n²/V² is small compared with P.",
+              "Then (P + small)(V − small) ≈ PV ≈ nRT.",
+              "Final answer: low P and high T (relative to the substance's condensation conditions)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Qualitative: effect of attractions on measured P",
+              "steps": [
+                "Attractions pull molecules back as they approach the wall.",
+                "They hit the wall with less momentum than an ideal gas would.",
+                "Observed pressure is lower than the ideal PV = nRT prediction at the same n, V, T.",
+                "That is why the van der Waals form adds +a n²/V² inside the pressure factor: you restore the \"missing\" pressure in the equation.",
+                "Final answer: attractions lower observed P relative to the ideal value."
+              ]
+            },
+            {
+              "title": "Which correction matters more as V gets very large?",
+              "steps": [
+                "a n²/V² shrinks toward 0 as V grows.",
+                "n b becomes negligible compared with large V, so V − n b ≈ V.",
+                "Both corrections fade; the equation approaches PV = nRT.",
+                "Final answer: at large V (low density), both a and b corrections become unimportant."
+              ]
+            }
           ]
+        },
+        {
+          "id": "check-kmt",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What happens to average KE of gas molecules when T doubles?",
+                "a": "Average KE doubles, because KE_avg ∝ T."
+              },
+              {
+                "q": "Does u_rms of O₂ increase, decrease, or stay the same when T rises?",
+                "a": "Increase. u_rms = √(3RT/M) rises with √T."
+              },
+              {
+                "q": "In van der Waals, what does b correct for?",
+                "a": "The finite volume of the gas particles (excluded volume)."
+              },
+              {
+                "q": "Which gas effuses faster at the same T, Ne or Ar? Roughly by what factor?",
+                "a": "Ne is faster. rate(Ne)/rate(Ar) = √(M_Ar/M_Ne) ≈ √(39.95/20.18) ≈ √1.98 ≈ 1.41."
+              }
+            ]
+          }
         }
       ]
     },
