@@ -112,7 +112,7 @@ function reading(tid) {
   h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
   if (r && !r.reviewed) h += `<div class="cap">Draft, not checked yet</div>`;
   if (!r) {
-    h += `<div class="card"><p class="rp">Reading for this topic is not ready yet.</p></div>`;
+    h += `<div class="card"><p class="rp">No reading for this topic yet.</p></div>`;
   } else {
     h += `<div class="reading">`;
     (r.sections || []).forEach(sec => { h += `<section class="rsec">${renderSection(sec)}</section>`; });
@@ -122,6 +122,10 @@ function reading(tid) {
   app.innerHTML = `<div class="fade">${h}</div>`;
   $('#skipCards').onclick = () => { stopReadProgress(); go('topic', tid); };
   $('#startPractice').onclick = () => { stopReadProgress(); start(tid, qs.map(q => q.id)); };
+  // Clear last reading content above sticky Start practice (bar height + 16 + safe-area)
+  const readEl = document.querySelector('.reading');
+  const endEl = $('#readEnd');
+  if (readEl && endEl) readEl.style.paddingBottom = (endEl.offsetHeight + 16) + 'px';
   $('#bar div').style.width = '0%';
   removeEventListener('scroll', updateReadProgress);
   addEventListener('scroll', updateReadProgress, { passive: true });
