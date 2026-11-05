@@ -3,6 +3,24 @@ const KEY = 'chemPractice.v1', INTERVALS = [1, 3, 7], DAY = 864e5;
 let TOPICS = [], QS = [], READINGS = {}, S, view = 'home', viewArg = null;
 const $ = s => document.querySelector(s), app = $('#app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/** Allow trusted reading markup: <sub>, <sup>, <span class="nw">…</span>. Everything else is escaped. */
+const fmtRich = s => {
+  const slots = [];
+  const put = html => { slots.push(html); return `\0${slots.length - 1}\0`; };
+  let str = String(s);
+  let prev;
+  do {
+    prev = str;
+    str = str.replace(/<(sub|sup)>([^<]*)<\/\1>/g, (_, t, c) => put('<' + t + '>' + esc(c) + '</' + t + '>'));
+  } while (str !== prev);
+  str = str.replace(/<span class="nw">([^<]*)<\/span>/g, (_, c) => put('<span class="nw">' + esc(c) + '</span>'));
+  str = esc(str);
+  do {
+    prev = str;
+    str = str.replace(/\0(\d+)\0/g, (_, i) => slots[i]);
+  } while (str !== prev);
+  return str;
+};
 const today = () => new Date(new Date().toDateString()).getTime();
 const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
 const save = () => localStorage.setItem(KEY, JSON.stringify(S));
@@ -89,16 +107,16 @@ function secAnchorId(sec, i) {
 }
 function renderWorked(w) {
   if (!w) return '';
-  const steps = (w.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
-  return `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${esc(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
+  const steps = (w.steps || []).map(s => `<li>${fmtRich(s)}</li>`).join('');
+  return `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
 }
 function renderSection(sec, i) {
   let h = '';
   const aid = secAnchorId(sec, i);
   if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${esc(sec.heading)}</h3>`;
-  (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${esc(p)}</p>`; });
+  (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${fmtRich(p)}</p>`; });
   if (sec.why) {
-    h += `<div class="callout callout-why" data-why="1"><div class="cap">Why this matters</div><p class="rp" style="margin:0">${esc(sec.why)}</p></div>`;
+    h += `<div class="callout callout-why" data-why="1"><div class="cap">Why this matters</div><p class="rp" style="margin:0">${fmtRich(sec.why)}</p></div>`;
   }
   const works = [];
   if (sec.worked) works.push(sec.worked);
@@ -107,9 +125,9 @@ function renderSection(sec, i) {
   if (sec.mistake) {
     const m = sec.mistake;
     h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">Common mistake</div>`;
-    if (m.wrong) h += `<p class="rp"><strong>Wrong approach.</strong> ${esc(m.wrong)}</p>`;
-    if (m.whyWrong) h += `<p class="rp"><strong>Why that's wrong.</strong> ${esc(m.whyWrong)}</p>`;
-    if (m.correct) h += `<p class="rp"><strong>Do this instead.</strong> ${esc(m.correct)}</p>`;
+    if (m.wrong) h += `<p class="rp"><strong>Wrong approach.</strong> ${fmtRich(m.wrong)}</p>`;
+    if (m.whyWrong) h += `<p class="rp"><strong>Why that's wrong.</strong> ${fmtRich(m.whyWrong)}</p>`;
+    if (m.correct) h += `<p class="rp"><strong>Do this instead.</strong> ${fmtRich(m.correct)}</p>`;
     h += `</div>`;
   }
   if (sec.check && (sec.check.items || []).length) {
@@ -118,13 +136,13 @@ function renderSection(sec, i) {
     h += `<div class="callout callout-check" data-check="1">`;
     // Avoid a second "Check yourself" when the section H3 already says it
     if (chk.title && !headingIsCheck) h += `<div class="cap">${esc(chk.title)}</div>`;
-    if (chk.intro) h += `<p class="rp" style="margin:0 0 8px">${esc(chk.intro)}</p>`;
+    if (chk.intro) h += `<p class="rp" style="margin:0 0 8px">${fmtRich(chk.intro)}</p>`;
     h += `<ol class="check-list">`;
     chk.items.forEach((it, qi) => {
       const aid = `check-a-${i}-${qi}`;
-      h += `<li><div class="check-q">${esc(it.q || '')}</div>`;
+      h += `<li><div class="check-q">${fmtRich(it.q || '')}</div>`;
       h += `<button type="button" class="btn-show-ans" data-show-ans="1" aria-expanded="false" aria-controls="${aid}">Show answer</button>`;
-      h += `<div class="check-a" id="${aid}" hidden>${esc(it.a || '')}</div></li>`;
+      h += `<div class="check-a" id="${aid}" hidden>${fmtRich(it.a || '')}</div></li>`;
     });
     h += `</ol></div>`;
   }
