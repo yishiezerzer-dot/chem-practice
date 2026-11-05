@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" width="520" height="390" role="img" aria-label="VSEPR seesaw shape of SF4 with dipole">
+<rect width="520" height="390" fill="#FFFFFF"/>
+<text x="260" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">SF₄ — seesaw (VSEPR)</text>
+<text x="240" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">5 domains → trigonal bipyramidal e⁻ geometry; LP equatorial → seesaw</text>
+<line x1="200.0" y1="174.0" x2="200.0" y2="111.0" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="200.0" y1="216.0" x2="200.0" y2="279.0" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="179.64895934761822" y1="200.18026489333354" x2="105.50555478276708" y2="219.0531315098411" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="220.35104065238178" y1="200.18026489333354" x2="294.4944452172329" y2="219.0531315098411" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="200" cy="195" r="20" fill="#FFF9C4" stroke="#C9A227" stroke-width="2"/><text x="200" y="200.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#C9A227">S</text>
+<circle cx="200" cy="95" r="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="200" y="99.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="200" cy="295" r="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="200" y="299.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="90" cy="223" r="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="90" y="227.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="310" cy="223" r="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="310" y="227.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#2E7D32">F</text>
+<ellipse cx="122" cy="147" rx="32" ry="18" fill="#FFF3E0" stroke="#5F6B7A" stroke-width="1.5" transform="rotate(-40 122 147)"/>
+<text x="122" y="151" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#5F6B7A">LP</text>
+<defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#E53935"/></marker></defs>
+<line x1="400" y1="260" x2="400" y2="120" stroke="#E53935" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+<line x1="392" y1="260" x2="408" y2="260" stroke="#E53935" stroke-width="2"/>
+<text x="420" y="175" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#E53935">net dipole</text>
+<text x="420" y="193" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#E53935">δ− toward LP</text>
+<text x="420" y="211" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#E53935">polar</text>
+<text x="240" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Lone pair takes an equatorial site (90° contacts minimized).</text>
+</svg>

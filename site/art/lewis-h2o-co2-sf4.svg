@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380" role="img" aria-label="Lewis structures of water carbon dioxide and sulfur tetrafluoride">
+<rect width="700" height="380" fill="#FFFFFF"/>
+<text x="350" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Lewis structures (lone pairs shown)</text>
+<line x1="86.77353799670522" y1="157.2090418491952" x2="57.552444780157344" y2="184.18235866447014" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="113.22646200329478" y1="157.2090418491952" x2="142.44755521984266" y2="184.18235866447014" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="100" cy="145" r="18" fill="#FFCDD2" stroke="#E53935" stroke-width="2"/><text x="100" y="150.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E53935">O</text>
+<circle cx="48" cy="193" r="13" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="48" y="197.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="152" cy="193" r="13" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="152" y="197.55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="77.16842698238744" cy="119.31499905506277" r="2.4" fill="#E53935"/><circle cx="70.74055088552205" cy="126.97544348625254" r="2.4" fill="#E53935"/>
+<circle cx="129.25944911447795" cy="126.97544348625254" r="2.4" fill="#E53935"/><circle cx="122.83157301761256" cy="119.31499905506277" r="2.4" fill="#E53935"/>
+<text x="100" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">H₂O</text>
+<text x="100" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
+<text x="100" y="279" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">2 LP on O</text>
+<line x1="258.0" y1="148.5" x2="304.0" y2="148.5" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/><line x1="258.0" y1="141.5" x2="304.0" y2="141.5" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="336.0" y1="148.5" x2="382.0" y2="148.5" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/><line x1="336.0" y1="141.5" x2="382.0" y2="141.5" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="242" cy="145" r="16" fill="#FFCDD2" stroke="#E53935" stroke-width="2"/><text x="242" y="149.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#E53935">O</text>
+<circle cx="320" cy="145" r="16" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="320" y="149.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C</text>
+<circle cx="398" cy="145" r="16" fill="#FFCDD2" stroke="#E53935" stroke-width="2"/><text x="398" y="149.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#E53935">O</text>
+<circle cx="247.0" cy="115.0" r="2.4" fill="#E53935"/><circle cx="237.0" cy="115.0" r="2.4" fill="#E53935"/>
+<circle cx="237.0" cy="175.0" r="2.4" fill="#E53935"/><circle cx="247.0" cy="175.0" r="2.4" fill="#E53935"/>
+<circle cx="403.0" cy="115.0" r="2.4" fill="#E53935"/><circle cx="393.0" cy="115.0" r="2.4" fill="#E53935"/>
+<circle cx="393.0" cy="175.0" r="2.4" fill="#E53935"/><circle cx="403.0" cy="175.0" r="2.4" fill="#E53935"/>
+<text x="320" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">CO₂</text>
+<text x="320" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
+<text x="320" y="279" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">linear; 2 LP each O</text>
+<line x1="560.0" y1="128.0" x2="560.0" y2="88.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="577.0" y1="145.0" x2="617.0" y2="145.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="560.0" y1="162.0" x2="560.0" y2="202.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="543.0" y1="145.0" x2="503.0" y2="145.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="560" cy="145" r="17" fill="#FFF9C4" stroke="#C9A227" stroke-width="2"/><text x="560" y="150.25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#C9A227">S</text>
+<circle cx="560" cy="75" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="560" y="79.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="535.0" cy="71.4" r="2.4" fill="#2E7D32"/><circle cx="535.0" cy="78.6" r="2.4" fill="#2E7D32"/>
+<circle cx="563.6" cy="50.0" r="2.4" fill="#2E7D32"/><circle cx="556.4" cy="50.0" r="2.4" fill="#2E7D32"/>
+<circle cx="585.0" cy="78.6" r="2.4" fill="#2E7D32"/><circle cx="585.0" cy="71.4" r="2.4" fill="#2E7D32"/>
+<circle cx="630" cy="145" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="630" y="149.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="633.6" cy="120.0" r="2.4" fill="#2E7D32"/><circle cx="626.4" cy="120.0" r="2.4" fill="#2E7D32"/>
+<circle cx="655.0" cy="148.6" r="2.4" fill="#2E7D32"/><circle cx="655.0" cy="141.4" r="2.4" fill="#2E7D32"/>
+<circle cx="626.4" cy="170.0" r="2.4" fill="#2E7D32"/><circle cx="633.6" cy="170.0" r="2.4" fill="#2E7D32"/>
+<circle cx="560" cy="215" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="560" y="219.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="585.0" cy="218.6" r="2.4" fill="#2E7D32"/><circle cx="585.0" cy="211.4" r="2.4" fill="#2E7D32"/>
+<circle cx="556.4" cy="240.0" r="2.4" fill="#2E7D32"/><circle cx="563.6" cy="240.0" r="2.4" fill="#2E7D32"/>
+<circle cx="535.0" cy="211.4" r="2.4" fill="#2E7D32"/><circle cx="535.0" cy="218.6" r="2.4" fill="#2E7D32"/>
+<circle cx="490" cy="145" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="490" y="149.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="486.4" cy="170.0" r="2.4" fill="#2E7D32"/><circle cx="493.6" cy="170.0" r="2.4" fill="#2E7D32"/>
+<circle cx="465.0" cy="141.4" r="2.4" fill="#2E7D32"/><circle cx="465.0" cy="148.6" r="2.4" fill="#2E7D32"/>
+<circle cx="493.6" cy="120.0" r="2.4" fill="#2E7D32"/><circle cx="486.4" cy="120.0" r="2.4" fill="#2E7D32"/>
+<circle cx="586.8700576850888" cy="125.20101012677668" r="2.4" fill="#C9A227"/><circle cx="579.7989898732233" cy="118.1299423149112" r="2.4" fill="#C9A227"/>
+<text x="592" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#5F6B7A">LP</text>
+<text x="560" y="265" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">SF₄</text>
+<text x="560" y="283" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
+<text x="560" y="299" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">1 LP on S (10 e⁻)</text>
+<text x="350" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Formal charge = valence − nonbonding e⁻ − ½(bonding e⁻). All three: FC = 0.</text>
+<text x="350" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">O red · S gold · F green. Bonds stop at atom edges; lone-pair dots sit outside circles.</text>
+</svg>

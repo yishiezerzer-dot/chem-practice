@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img" aria-label="Orbital boxes for Ca Zn2+ Fe2+ unpaired electrons">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Unpaired electrons — paramagnetism</text>
+<text x="40" y="55" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Ca: [Ar] 4s²</text>
+<text x="54.0" y="64" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="40" y="72" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="50" y1="94" x2="50" y2="78" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="50,78 46,84 54,84" fill="#1A1A1A"/>
+<line x1="58" y1="78" x2="58" y2="94" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="58,94 54,88 62,88" fill="#1A1A1A"/>
+<text x="200" y="92" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#17754A">0 unpaired → diamagnetic</text>
+<text x="40" y="140" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Zn²⁺: [Ar] 3d¹⁰  (Zn is [Ar] 3d¹⁰ 4s²; lose 4s²)</text>
+<text x="122.0" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="40" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="50" y1="180" x2="50" y2="164" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="50,164 46,170 54,170" fill="#1A1A1A"/>
+<line x1="58" y1="164" x2="58" y2="180" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="58,180 54,174 62,174" fill="#1A1A1A"/>
+<rect x="74" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="84" y1="180" x2="84" y2="164" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="84,164 80,170 88,170" fill="#1A1A1A"/>
+<line x1="92" y1="164" x2="92" y2="180" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="92,180 88,174 96,174" fill="#1A1A1A"/>
+<rect x="108" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="118" y1="180" x2="118" y2="164" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="118,164 114,170 122,170" fill="#1A1A1A"/>
+<line x1="126" y1="164" x2="126" y2="180" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="126,180 122,174 130,174" fill="#1A1A1A"/>
+<rect x="142" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="152" y1="180" x2="152" y2="164" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="152,164 148,170 156,170" fill="#1A1A1A"/>
+<line x1="160" y1="164" x2="160" y2="180" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="160,180 156,174 164,174" fill="#1A1A1A"/>
+<rect x="176" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="186" y1="180" x2="186" y2="164" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="186,164 182,170 190,170" fill="#1A1A1A"/>
+<line x1="194" y1="164" x2="194" y2="180" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="194,180 190,174 198,174" fill="#1A1A1A"/>
+<text x="280" y="178" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#17754A">0 unpaired → diamagnetic</text>
+<text x="40" y="230" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Fe²⁺: [Ar] 3d⁶  (high-spin free ion)</text>
+<text x="122.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="40" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="50" y1="270" x2="50" y2="254" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="50,254 46,260 54,260" fill="#1A1A1A"/>
+<line x1="58" y1="254" x2="58" y2="270" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="58,270 54,264 62,264" fill="#1A1A1A"/>
+<rect x="74" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="88.0" y1="270" x2="88.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="88.0,254 84.0,260 92.0,260" fill="#1A1A1A"/>
+<rect x="108" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="122.0" y1="270" x2="122.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="122.0,254 118.0,260 126.0,260" fill="#1A1A1A"/>
+<rect x="142" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="156.0" y1="270" x2="156.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="156.0,254 152.0,260 160.0,260" fill="#1A1A1A"/>
+<rect x="176" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="190.0" y1="270" x2="190.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="190.0,254 186.0,260 194.0,260" fill="#1A1A1A"/>
+<text x="280" y="268" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#E53935">4 unpaired → paramagnetic</text>
+<text x="280" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Paramagnetic = has ≥1 unpaired electron; diamagnetic = all paired.</text>
+</svg>

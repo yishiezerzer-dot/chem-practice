@@ -72,8 +72,8 @@
             "For an ion, charge = protons − electrons. Example: ⁵⁶Fe³⁺ has Z = 26, so 26 protons, A − Z = 30 neutrons, and 26 − 3 = 23 electrons."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Nuclear diagram of ⁵⁶Fe³⁺ showing protons, neutrons, and missing electrons"
+            "src": "art/fe56-fe3-nucleus.svg",
+            "alt": "Diagram of an iron-56 Fe3+ ion: nucleus with 26 protons and 30 neutrons, and an electron cloud with 23 electrons after losing three."
           }
         },
         {
@@ -217,8 +217,8 @@
             "In hydrogen, electron energy levels are E_n = −13.6 eV / n². A jump from higher n to lower n emits a photon whose energy equals the level gap. The Balmer line n=3→2 is the famous red 656 nm line."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Energy-level diagram for H showing n=1,2,3 and the n=3→2 photon"
+            "src": "art/h-bohr-levels.svg",
+            "alt": "Bohr energy-level diagram for hydrogen showing n=1, 2, 3 and infinity, with a red emission arrow for the Balmer n=3 to n=2 photon at 656 nm."
           }
         },
         {
@@ -227,8 +227,8 @@
             "Quantum numbers label orbitals: n (shell), ℓ (subshell: s,p,d,f), m_ℓ (orientation), m_s (spin ±½). An orbital holds at most two electrons with opposite spins (Pauli principle)."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Shapes of 1s, 2p, and 3d orbitals (schematic)"
+            "src": "art/orbital-shapes-1s-2p-3d.svg",
+            "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, and a four-leaf 3d clover (dx2−y2 style)."
           }
         }
       ]
@@ -243,8 +243,8 @@
             "Noble-gas shorthand writes the previous noble gas in brackets, then the remaining valence configuration. The block of the periodic table (s, p, d, f) matches the last subshell filled."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Orbital box diagram for C and for N showing Hund's rule"
+            "src": "art/orbital-boxes-c-n.svg",
+            "alt": "Orbital box diagrams for carbon (1s2 2s2 2p2 with two unpaired 2p electrons) and nitrogen (1s2 2s2 2p3 with three unpaired 2p electrons) illustrating Hund’s rule."
           },
           "worked": {
             "title": "Find the element [Kr]4d¹⁰5s²5p³",
@@ -260,8 +260,8 @@
             "Cr and Cu prefer half-filled or filled d subshells: Cr is [Ar]3d⁵4s¹ (not 3d⁴4s²). For transition-metal cations, remove s electrons before d electrons: Fe is [Ar]3d⁶4s²; Fe³⁺ is [Ar]3d⁵."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Orbital box diagrams for Cr ([Ar]3d⁵4s¹) and Fe³⁺ ([Ar]3d⁵)"
+            "src": "art/orbital-boxes-cr-fe3.svg",
+            "alt": "Orbital box diagrams for chromium as [Ar] 3d5 4s1 with six unpaired electrons, and for Fe3+ as [Ar] 3d5 with five unpaired 3d electrons."
           }
         }
       ]
@@ -298,8 +298,8 @@
             "A species is paramagnetic if it has unpaired electrons. Ca ([Ar]4s²) and Zn²⁺ ([Ar]3d¹⁰) are diamagnetic; Fe²⁺ ([Ar]3d⁶) has unpaired electrons and is paramagnetic."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Orbital box diagrams for Ca, Zn²⁺, and Fe²⁺ highlighting unpaired electrons"
+            "src": "art/unpaired-ca-zn2-fe2.svg",
+            "alt": "Orbital boxes showing Ca ([Ar] 4s2) and Zn2+ ([Ar] 3d10) with zero unpaired electrons (diamagnetic), and Fe2+ ([Ar] 3d6) with four unpaired electrons (paramagnetic)."
           }
         }
       ]
@@ -313,8 +313,8 @@
             "Count valence electrons, connect atoms with single bonds, complete octets (H wants 2), and use multiple bonds or formal charge to refine. Formal charge = valence − (nonbonding e⁻) − ½(bonding e⁻)."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Lewis structures for H₂O, CO₂, and SF₄ (with lone pairs)"
+            "src": "art/lewis-h2o-co2-sf4.svg",
+            "alt": "Lewis structures of H2O (bent, two lone pairs on oxygen), CO2 (linear O=C=O), and SF4 (sulfur with four F bonds and one lone pair); all formal charges zero."
           }
         },
         {
@@ -324,8 +324,8 @@
             "Molecular shape ignores lone pairs for the name but includes them for angles. A molecule is polar if bond dipoles do not cancel."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "VSEPR shape of SF₄ (seesaw) with dipole arrow"
+            "src": "art/vsepr-sf4-seesaw.svg",
+            "alt": "Three-dimensional seesaw shape of SF4 from trigonal bipyramidal electron geometry with an equatorial lone pair, and a net dipole arrow showing the molecule is polar."
           },
           "worked": {
             "title": "Shape and polarity of SF₄",
@@ -361,8 +361,8 @@
             "Hybrid orbitals mix atomic orbitals to match the electron geometry: sp (linear), sp² (trigonal planar), sp³ (tetrahedral). A single bond is one σ bond. A double bond is σ + π; a triple is σ + 2π."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Hybridization sketch for ethene (sp²) and ethyne (sp)"
+            "src": "art/hybrid-ethene-ethyne.svg",
+            "alt": "Hybridization sketch of ethene (sp2 carbons, one sigma and one pi bond) beside ethyne (sp carbons, one sigma and two pi bonds), with sigma in blue and pi in red."
           },
           "worked": {
             "title": "σ and π bonds in CH₂=CH–C≡N",
@@ -380,8 +380,8 @@
             "Atomic orbitals combine into bonding and antibonding MOs. Bond order = ½(bonding e⁻ − antibonding e⁻). Higher bond order → shorter, stronger bond. O₂ has two unpaired electrons in π* orbitals, so it is paramagnetic — Lewis structures miss this."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "MO energy diagram for O₂, O₂⁺, and O₂⁻ with electron filling"
+            "src": "art/mo-o2.svg",
+            "alt": "Molecular orbital energy diagram for O2 with sigma 2p below pi 2p, two unpaired electrons in pi-star, bond order 2 and paramagnetism; notes compare O2+ (BO 2.5) and O2− (BO 1.5)."
           },
           "worked": {
             "title": "Bond orders of O₂, O₂⁺, O₂⁻",
@@ -420,8 +420,8 @@
             "Straight-chain alkanes have more surface contact than branched isomers, so stronger dispersion and higher boiling points. Pentane boils higher than neopentane."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Side-by-side sketches of pentane (chain) vs neopentane (compact)"
+            "src": "art/pentane-neopentane.svg",
+            "alt": "Side-by-side carbon skeletons of straight-chain n-pentane and compact neopentane (2,2-dimethylpropane), noting that more surface contact raises boiling point via stronger London forces."
           }
         },
         {
@@ -769,8 +769,8 @@
             "Oxidation is loss of electrons; reduction is gain. The oxidizing agent is reduced; the reducing agent is oxidized. In Zn + Cu²⁺ → Zn²⁺ + Cu, Cu²⁺ is the oxidizing agent and Zn is the reducing agent."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Simple electron-transfer sketch: Zn metal and Cu²⁺ ions"
+            "src": "art/zn-cu2-electron-transfer.svg",
+            "alt": "Simple redox sketch: zinc metal donates two electrons to aqueous Cu2+, labeling Zn as the reducing agent (oxidized) and Cu2+ as the oxidizing agent (reduced)."
           }
         }
       ]
@@ -813,8 +813,8 @@
             "Metal ions can bind ligands (NH₃, OH⁻, CN⁻…) to form complex ions, which can raise the apparent solubility of a precipitate (e.g. AgCl in NH₃)."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Schematic of Ag(NH₃)₂⁺ complex"
+            "src": "art/ag-nh3-2-complex.svg",
+            "alt": "Linear [Ag(NH3)2]+ complex with silver at the center and two ammine ligands, overall charge +1, coordination number 2."
           }
         }
       ]
@@ -866,8 +866,8 @@
             "A galvanic (voltaic) cell runs a spontaneous redox reaction to make electric current. Oxidation at the anode; reduction at the cathode. E°_cell = E°_cathode − E°_anode (using reduction potentials)."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "Zn|Zn²⁺||Cu²⁺|Cu galvanic cell diagram with anode, cathode, salt bridge"
+            "src": "art/galvanic-zn-cu.svg",
+            "alt": "Galvanic cell Zn|Zn2+||Cu2+|Cu with zinc anode (oxidation), copper cathode (reduction), salt bridge, electron flow through the wire toward copper, and E° cell = 1.10 V."
           },
           "worked": {
             "title": "E° for Zn–Cu cell",
@@ -934,8 +934,8 @@
             "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens, so λ_max moves to longer wavelength (bathochromic shift). Enough conjugation and the absorption enters the visible — the compound looks colored."
           ],
           "figure": {
-            "status": "pending-sketch",
-            "note": "HOMO–LUMO gap sketch for short vs long conjugated chain"
+            "src": "art/homo-lumo-conjugation.svg",
+            "alt": "Qualitative HOMO–LUMO gaps for ethene, butadiene, and hexatriene showing the gap shrinking as conjugation lengthens, which shifts absorption to longer wavelength."
           },
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 160\" role=\"img\" aria-label=\"λ_max vs conjugation (schematic, not to scale)\"><text x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">λ_max vs conjugation (schematic, not to scale)</text><rect x=\"28\" y=\"22\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"32\" font-size=\"13\" fill=\"#5F6B7A\">λ_max trend</text><path d=\"M 28.0,109.0 L 94.0,95.5 L 160.0,82.0 L 226.0,68.5 L 292.0,56.8\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"109.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"94.0\" cy=\"95.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"160.0\" cy=\"82.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"226.0\" cy=\"68.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"56.8\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=2</text><text x=\"94.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=3</text><text x=\"160.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=4</text><text x=\"226.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=5</text><text x=\"292.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=6</text></svg>"
         }
