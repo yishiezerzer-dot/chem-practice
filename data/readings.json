@@ -6,57 +6,188 @@
   },
   "readings": {
     "measurement-units-and-significant-figure": {
+      "topic_id": "measurement-units-and-significant-figure",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Measurement in chemistry",
+          "id": "what-measurement-means",
+          "heading": "What measurement means",
           "paragraphs": [
-            "Every measured value has a number and a unit. Chemistry uses SI units: metre (m), kilogram (kg), second (s), kelvin (K), mole (mol), and derived units such as litre (L) and pascal (Pa).",
-            "Prefixes scale units: kilo (k) = 10³, centi (c) = 10⁻², milli (m) = 10⁻³, micro (µ) = 10⁻⁶, nano (n) = 10⁻⁹. Dimensional analysis cancels units so conversions stay correct."
+            "Chemistry is built on measured amounts. A measurement has two parts: a number and a unit. The number alone is not enough. Saying \"the sample is 5\" does not tell you whether that is 5 grams, 5 milliliters, or 5 moles.",
+            "A unit is the agreed scale you used. Grams measure mass. Liters measure volume. Seconds measure time. Kelvin measures temperature on the absolute scale used in science.",
+            "Scientists use SI units so results can be compared across labs. The SI base units you will meet first are the kilogram (kg) for mass, the meter (m) for length, and the second (s) for time. In chemistry we often use related units that are more handy at the bench: the gram (g), the liter (L), and the milliliter (mL).",
+            "Prefixes scale a unit up or down by powers of ten. kilo (k) means 10³, so 1 kg = 1000 g. centi (c) means 10⁻², so 1 cm = 0.01 m. milli (m) means 10⁻³, so 1 mL = 0.001 L. micro (µ) means 10⁻⁶. nano (n) means 10⁻⁹.",
+            "Why prefixes exist: writing 0.000001 g is easy to miscount. Writing 1 µg keeps the digit count small and the meaning clear."
+          ],
+          "why": "Every lab number you report must carry a unit. Without the unit, the next student or instrument cannot use your result."
+        },
+        {
+          "id": "dimensional-analysis",
+          "heading": "Dimensional analysis (unit conversion)",
+          "paragraphs": [
+            "Dimensional analysis is a method for converting one unit into another by multiplying by conversion factors. A conversion factor is a fraction equal to 1, built from a true equality of units.",
+            "Example of a true equality: 1 kg = 1000 g. From that you can write two fractions that both equal 1: (1 kg)/(1000 g) and (1000 g)/(1 kg). You choose the fraction that cancels the unit you want to remove.",
+            "Units cancel the same way numbers cancel in a fraction. If grams appear on top and bottom, those grams cancel. What remains is the unit you want. That is why the method is reliable: a wrong conversion factor leaves the wrong unit in the answer, so you can catch the mistake before you finish."
+          ],
+          "worked": {
+            "title": "Convert 2.50 kg to grams",
+            "steps": [
+              "Write what you start with, including the unit: 2.50 kg.",
+              "Write the equality that links kg and g: 1 kg = 1000 g.",
+              "Build the conversion factor that puts kg on the bottom so kg will cancel: (1000 g)/(1 kg).",
+              "Multiply: 2.50 kg × (1000 g)/(1 kg).",
+              "Cancel the kg unit on top with the kg unit on the bottom.",
+              "Compute the number: 2.50 × 1000 = 2500.",
+              "The remaining unit is g. So the exact product is 2500 g.",
+              "Check significant figures. 2.50 has 3 significant figures. 1000 in this equality is an exact defined count (kilo means exactly 1000), so it does not limit sig figs.",
+              "Report 2.50 × 10³ g, or 2500 g with a clear note that 3 sig figs apply. Prefer scientific notation when trailing zeros would be unclear: 2.50 × 10³ g."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Convert 375 mL to liters",
+              "steps": [
+                "Start with 375 mL.",
+                "Equality: 1 L = 1000 mL.",
+                "Choose the factor with mL on the bottom: (1 L)/(1000 mL).",
+                "Set up: 375 mL × (1 L)/(1000 mL).",
+                "Cancel mL.",
+                "Compute: 375 ÷ 1000 = 0.375.",
+                "Unit left: L. Result so far: 0.375 L.",
+                "Sig figs: 375 has 3 significant figures (leading zeros after a decimal would not count, but here the digits are 3, 7, 5). The 1000 mL per L is exact.",
+                "Final answer: 0.375 L."
+              ]
+            }
           ]
         },
         {
+          "id": "significant-figures",
           "heading": "Significant figures",
           "paragraphs": [
-            "Significant figures (sig figs) show how precisely a value was measured. Non-zero digits always count. Zeros between digits count. Leading zeros never count. Trailing zeros count only if the decimal point is written (0.004050 has 4 sig figs; 4050 is ambiguous).",
-            "In multiplication and division, keep the fewest sig figs of any factor. In addition and subtraction, keep the fewest decimal places (least precise place)."
+            "Significant figures (sig figs) are the digits in a measured value that are known with confidence, plus one estimated digit. They tell the reader how precise the measurement was.",
+            "Why they matter: if a balance only reads to 0.01 g, writing 12.3444 g pretends you know more than the instrument can show. Sig figs stop you from inventing precision.",
+            "Counting rules for a written number:",
+            "1. Non-zero digits (1 to 9) are always significant. Example: 23.4 has 3 sig figs.",
+            "2. Zeros between non-zero digits are significant. Example: 1002 has 4 sig figs.",
+            "3. Leading zeros (zeros before the first non-zero digit) are not significant. They only place the decimal. Example: 0.00456 has 3 sig figs (4, 5, 6).",
+            "4. Trailing zeros after a decimal point are significant. Example: 12.30 has 4 sig figs. The final zero means the tenths place was measured as zero, not left blank.",
+            "5. Trailing zeros in a whole number with no decimal point are ambiguous. 1500 might have 2, 3, or 4 sig figs. Avoid the ambiguity by writing scientific notation: 1.5 × 10³ (2 sig figs) or 1.500 × 10³ (4 sig figs)."
           ],
           "worked": {
-            "title": "Sig figs in 0.004050",
+            "title": "How many sig figs in 0.02050?",
             "steps": [
-              "Write the number: 0.004050",
-              "Leading zeros before the first non-zero digit do not count → ignore 0.00",
-              "Digits that remain: 4, 0, 5, 0 → four significant figures",
-              "Answer: 4 sig figs"
+              "Write the number: 0.02050.",
+              "Leading zeros before 2 are not significant. Drop 0.0 from the count.",
+              "Digits that remain in view: 2, 0, 5, 0.",
+              "The zero between 2 and 5 is between non-zero digits, so it counts.",
+              "The trailing zero after the decimal (the last 0) counts because it sits after the decimal point.",
+              "Total: 4 significant figures (2, 0, 5, 0)."
             ]
           }
         },
         {
+          "id": "sig-figs-in-calculations",
+          "heading": "Sig figs when you calculate",
+          "paragraphs": [
+            "Multiplication and division use one rule. Addition and subtraction use a different rule. Mixing the two rules is a common source of wrong answers.",
+            "Multiplication and division: the result may have only as many significant figures as the factor with the fewest significant figures. Why: each measured factor contributes uncertainty, and the weakest link sets the limit.",
+            "Addition and subtraction: look at decimal places, not at the count of sig figs. The result may have only as many digits after the decimal as the addend with the fewest digits after the decimal. Why: you cannot know a hundredths place if one of the numbers only went to tenths."
+          ],
+          "worked": {
+            "title": "Multiply 4.56 g × 1.4 (density-style product)",
+            "steps": [
+              "Identify the operation: multiplication.",
+              "Count sig figs in 4.56: 3 sig figs.",
+              "Count sig figs in 1.4: 2 sig figs.",
+              "The tighter limit is 2 sig figs.",
+              "Compute the raw product: 4.56 × 1.4 = 6.384.",
+              "Round 6.384 to 2 sig figs. Look at the first two digits: 6 and 3. The next digit is 8, which is 5 or greater, so round the 3 up to 4.",
+              "2 sig figs for a number between 1 and 10 means one digit before the decimal and one after when written plainly, but 6.4 already has 2 sig figs.",
+              "Final answer: 6.4 (with whatever unit the product carries)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Add 12.11 mL + 0.3 mL + 1.007 mL",
+              "steps": [
+                "Identify the operation: addition.",
+                "Look at decimal places, not total sig figs.",
+                "12.11 has 2 digits after the decimal.",
+                "0.3 has 1 digit after the decimal.",
+                "1.007 has 3 digits after the decimal.",
+                "The strictest limit is 1 digit after the decimal (from 0.3).",
+                "Add the raw numbers: 12.11 + 0.3 = 12.41; 12.41 + 1.007 = 13.417.",
+                "Round 13.417 so only 1 digit remains after the decimal. The tenths digit is 4. The next digit is 1, which is less than 5, so the 4 stays.",
+                "Final answer: 13.4 mL."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Common mistake: treating 12.00 g + 1.1 g like a multiplication problem and cutting the answer to 2 sig figs as 13 g.",
+            "whyWrong": "Addition is limited by decimal places, not by the sig-fig count. 12.00 is known to the hundredths place. 1.1 is known only to the tenths place. The sum must stop at tenths, which gives 13.1 g, not a 2-sig-fig chop to 13 g.",
+            "correct": "Correct way: 12.00 + 1.1 = 13.10 raw, then round to one digit after the decimal because of 1.1. Answer: 13.1 g."
+          }
+        },
+        {
+          "id": "density",
           "heading": "Density",
           "paragraphs": [
-            "Density ρ = m / V. Common units: g/mL or g/cm³ (same size for liquids and solids). Use density to convert mass ↔ volume."
+            "Density is mass per unit volume. As a formula: density ρ = m / V. If mass is in grams and volume is in milliliters, density has units g/mL. For solids you will also see g/cm³. 1 mL = 1 cm³ by definition, so g/mL and g/cm³ match for this purpose.",
+            "Why density is useful: it lets you convert between mass and volume for a pure substance when you know one of them. Water near room temperature has a density of about 1.00 g/mL. That is a standard value you may use unless a problem gives a different temperature value.",
+            "Rearrangements you will need: m = ρ × V, and V = m / ρ. Always write the units in the setup so they cancel to the unit you want."
           ],
           "worked": {
-            "title": "Density of a liquid",
+            "title": "Mass of 25.0 mL of a liquid with density 0.789 g/mL",
             "steps": [
-              "Given: m = 19.7 g, V = 25.0 mL",
-              "ρ = m / V = 19.7 g / 25.0 mL",
-              "ρ = 0.788 g/mL (3 sig figs; both inputs have 3)"
+              "Write the given volume: V = 25.0 mL.",
+              "Write the given density: ρ = 0.789 g/mL.",
+              "Choose the form that solves for mass: m = ρ × V.",
+              "Substitute with units: m = 0.789 g/mL × 25.0 mL.",
+              "Cancel mL on top and bottom.",
+              "Multiply the numbers: 0.789 × 25.0.",
+              "0.789 × 25 = 19.725; keep the extra place for now: 19.725.",
+              "Sig figs for multiplication: 0.789 has 3 sig figs; 25.0 has 3 sig figs. Limit = 3 sig figs.",
+              "Round 19.725 to 3 sig figs. Digits: 1, 9, 7. Next digit is 2, so do not round up.",
+              "Final answer: 19.7 g."
             ]
-          }
+          },
+          "workedExamples": [
+            {
+              "title": "Volume of 40.0 g of a metal with density 8.96 g/cm³",
+              "steps": [
+                "Given: m = 40.0 g; ρ = 8.96 g/cm³.",
+                "Solve for volume: V = m / ρ.",
+                "Set up: V = 40.0 g / (8.96 g/cm³).",
+                "Cancel g.",
+                "Divide: 40.0 ÷ 8.96 = 4.464285... cm³.",
+                "Sig figs: 40.0 has 3; 8.96 has 3. Limit = 3 sig figs.",
+                "Round 4.464... to 3 sig figs: 4.46.",
+                "Final answer: 4.46 cm³."
+              ]
+            }
+          ]
         },
         {
-          "heading": "Adding with the right precision",
+          "id": "check-measurement",
+          "heading": "Check yourself",
           "paragraphs": [
-            "When you add or subtract, the answer stops at the least precise decimal place among the terms."
+            "Pause here and try these without looking up. Then read the answers."
           ],
-          "worked": {
-            "title": "12.11 g + 18.0 g + 1.013 g",
-            "steps": [
-              "Align by decimal place: 12.11, 18.0 (tenths), 1.013",
-              "Sum = 31.123 g",
-              "Least precise term (18.0) is good only to the tenth place",
-              "Report 31.1 g"
+          "check": {
+            "title": "Check yourself",
+            "items": [
+              {
+                "q": "How many significant figures are in 0.06030?",
+                "a": "4 (6, 0, 3, 0). Leading zeros do not count. The trailing zero after the decimal does count."
+              },
+              {
+                "q": "What is 2.00 kg in grams?",
+                "a": "2.00 × 10³ g (or 2000 g with 3 sig figs stated). Use 1 kg = 1000 g and cancel kg."
+              },
+              {
+                "q": "A cube of metal has mass 54.0 g and volume 20.0 cm³. What is its density?",
+                "a": "ρ = 54.0 g / 20.0 cm³ = 2.70 g/cm³ (3 sig figs from both inputs)."
+              }
             ]
           }
         }
@@ -149,46 +280,172 @@
       ]
     },
     "chemical-equations-and-stoichiometry": {
+      "topic_id": "chemical-equations-and-stoichiometry",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Balanced equations",
+          "id": "balanced-equations",
+          "heading": "Chemical equations and why we balance them",
           "paragraphs": [
-            "A balanced chemical equation conserves atoms. Coefficients are mole ratios. Never change subscripts to balance — only coefficients."
+            "A chemical equation is a compact sentence that shows reactants turning into products. Reactants are written on the left. Products are written on the right. An arrow points from reactants to products.",
+            "Example skeleton: H₂ + O₂ → H₂O. This is not yet ready to use for amounts, because it is not balanced.",
+            "Balanced means each element has the same number of atoms on both sides. Why we balance: atoms are not created or destroyed in ordinary chemical change (conservation of mass). A balanced equation is the bookkeeping that respects that rule.",
+            "Coefficients are the numbers placed in front of formulas. They scale the whole formula. In 2 H₂O the coefficient 2 means two water molecules (or two moles of water). Subscripts inside a formula are part of the identity of the substance. You may change coefficients when balancing. You must not change subscripts, or you invent a different compound.",
+            "States of matter in parentheses are optional helpers: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. They do not change the atom count."
           ],
           "worked": {
-            "title": "Balance and read mole ratios: 2 H₂ + O₂ → 2 H₂O",
+            "title": "Balance H₂ + O₂ → H₂O",
             "steps": [
-              "Left: 4 H and 2 O; right: 4 H and 2 O — balanced",
-              "Mole ratio: 2 mol H₂ react with 1 mol O₂ to make 2 mol H₂O",
-              "Mass check (optional): 4.032 g H₂ + 32.00 g O₂ → 36.03 g H₂O"
+              "Count atoms on the left: H = 2, O = 2.",
+              "Count atoms on the right: H = 2, O = 1.",
+              "Oxygen is short on the right. Place coefficient 2 in front of H₂O: H₂ + O₂ → 2 H₂O.",
+              "Recount the right side: H = 4, O = 2.",
+              "Hydrogen on the left is now short (only 2). Place coefficient 2 in front of H₂: 2 H₂ + O₂ → 2 H₂O.",
+              "Recount left: H = 4, O = 2. Right: H = 4, O = 2.",
+              "Both sides match. The balanced equation is 2 H₂ + O₂ → 2 H₂O.",
+              "Read it in moles when you do stoichiometry: 2 mol H₂ react with 1 mol O₂ to make 2 mol H₂O."
+            ]
+          },
+          "why": "A balanced equation gives the mole ratios you need for every later stoichiometry step. An unbalanced equation gives false ratios."
+        },
+        {
+          "id": "mole-ratios",
+          "heading": "Mole ratios from the balanced equation",
+          "paragraphs": [
+            "The mole (mol) is the chemist's counting unit for particles. One mole of any substance contains 6.022 × 10²³ particles (Avogadro's number). For stoichiometry you mostly need this idea: a balanced equation's coefficients are mole ratios.",
+            "From 2 H₂ + O₂ → 2 H₂O you may write ratios such as (2 mol H₂)/(1 mol O₂) or (2 mol H₂O)/(2 mol H₂). Each of those fractions equals 1 in the sense of a conversion factor between the linked amounts.",
+            "Molar mass converts grams to moles and moles to grams. Molar mass is the mass of one mole of a substance in g/mol. You build it from atomic molar masses on the periodic table. Standard values we use here: H = 1.008 g/mol, C = 12.01 g/mol, O = 16.00 g/mol, N = 14.01 g/mol, Na = 22.99 g/mol, Cl = 35.45 g/mol."
+          ],
+          "worked": {
+            "title": "Simple: moles of water from 3.00 mol H₂ (excess O₂)",
+            "steps": [
+              "Balanced equation: 2 H₂ + O₂ → 2 H₂O.",
+              "Given: 3.00 mol H₂. Oxygen is in excess, so H₂ limits the product.",
+              "Write the mole ratio that links H₂ to H₂O from the coefficients: (2 mol H₂O)/(2 mol H₂).",
+              "That ratio simplifies to (1 mol H₂O)/(1 mol H₂), but keep it clear: multiply by (2 mol H₂O)/(2 mol H₂).",
+              "Set up: 3.00 mol H₂ × (2 mol H₂O)/(2 mol H₂).",
+              "Cancel mol H₂.",
+              "Compute: 3.00 × (2/2) = 3.00 × 1 = 3.00.",
+              "Unit left: mol H₂O.",
+              "Sig figs: 3.00 has 3 sig figs. Coefficients are exact. Answer: 3.00 mol H₂O."
             ]
           }
         },
         {
+          "id": "grams-to-grams",
+          "heading": "Grams to grams through moles",
+          "paragraphs": [
+            "Lab balances read grams, not moles. So a full stoichiometry path is usually: grams of A → moles of A → moles of B → grams of B. The middle step uses the mole ratio from the balanced equation. The outer steps use molar masses.",
+            "Never multiply grams of A by a mole ratio as if grams were moles. That skips the conversion and gives a wrong size answer."
+          ],
+          "worked": {
+            "title": "Harder: mass of H₂O from 10.0 g H₂ with excess O₂",
+            "steps": [
+              "Balanced equation: 2 H₂ + O₂ → 2 H₂O.",
+              "Given mass: 10.0 g H₂. O₂ is excess.",
+              "Molar mass of H₂: 2 × 1.008 = 2.016 g/mol.",
+              "Convert grams H₂ to moles H₂: 10.0 g H₂ × (1 mol H₂)/(2.016 g H₂).",
+              "Cancel g H₂.",
+              "Compute moles H₂: 10.0 / 2.016 = 4.960317... mol H₂. Keep extra digits for now: 4.960317 mol H₂.",
+              "Apply the mole ratio to water: 4.960317 mol H₂ × (2 mol H₂O)/(2 mol H₂).",
+              "Cancel mol H₂. Moles H₂O = 4.960317 mol H₂O.",
+              "Molar mass of H₂O: 2×1.008 + 16.00 = 2.016 + 16.00 = 18.016 g/mol.",
+              "Convert to grams: 4.960317 mol H₂O × (18.016 g H₂O)/(1 mol H₂O).",
+              "Cancel mol H₂O.",
+              "Compute: 4.960317 × 18.016 = 89.365... g.",
+              "Sig figs: the given 10.0 g has 3 sig figs. Atomic masses used here are treated as at least as precise. Round the final mass to 3 sig figs.",
+              "89.365... rounds to 89.4 g because the digit after 3 is 6.",
+              "Final answer: 89.4 g H₂O."
+            ]
+          }
+        },
+        {
+          "id": "limiting-reactant",
           "heading": "Limiting reactant and percent yield",
           "paragraphs": [
-            "Convert each reactant to moles of product using the mole ratio. The reactant that makes less product is limiting. Percent yield = (actual / theoretical) × 100%."
+            "When two reactants are both given in limited amounts, one will run out first. That reactant is the limiting reactant (limiting reagent). It caps how much product can form. The other reactant is in excess. Some of it will be left over.",
+            "How to find the limiting reactant: convert each given amount to moles of product using the mole ratios. The reactant that produces the smaller amount of product is limiting. Use only that smaller amount for later yield calculations.",
+            "Theoretical yield is the mass of product predicted by stoichiometry from the limiting reactant, assuming the reaction goes to completion with no losses.",
+            "Actual yield is the mass you obtain in the lab. It is almost always less than theoretical yield because of incomplete reaction, side reactions, or loss during transfer.",
+            "Percent yield = (actual yield / theoretical yield) × 100%. Both yields must use the same unit, usually grams."
           ],
           "worked": {
-            "title": "10.0 g H₂ + 64.0 g O₂ → water",
+            "title": "Limiting reactant: 5.00 g H₂ and 40.0 g O₂ making water",
             "steps": [
-              "n(H₂) = 10.0/2.016 = 4.96 mol → can make 4.96 mol H₂O",
-              "n(O₂) = 64.0/32.00 = 2.00 mol → can make 4.00 mol H₂O",
-              "O₂ is limiting; theoretical mass H₂O = 4.00 × 18.02 = 72.1 g"
+              "Balanced equation: 2 H₂ + O₂ → 2 H₂O.",
+              "Moles of H₂: 5.00 g × (1 mol / 2.016 g) = 2.48016 mol H₂.",
+              "Moles of O₂: molar mass O₂ = 32.00 g/mol. 40.0 g × (1 mol / 32.00 g) = 1.250 mol O₂.",
+              "Moles of H₂O from H₂ if H₂ is fully used: 2.48016 mol H₂ × (2 mol H₂O)/(2 mol H₂) = 2.48016 mol H₂O.",
+              "Moles of H₂O from O₂ if O₂ is fully used: 1.250 mol O₂ × (2 mol H₂O)/(1 mol O₂) = 2.500 mol H₂O.",
+              "Compare 2.48016 mol and 2.500 mol. The smaller is 2.48016 mol. So H₂ is limiting.",
+              "Theoretical moles of water = 2.48016 mol.",
+              "Theoretical mass: 2.48016 mol × 18.016 g/mol = 44.682... g.",
+              "Round to 3 sig figs to match 5.00 g: 44.7 g H₂O theoretical."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Percent yield if the lab collects 40.0 g H₂O from the run above",
+              "steps": [
+                "Actual yield = 40.0 g.",
+                "Theoretical yield from the previous example = 44.7 g.",
+                "Percent yield = (40.0 / 44.7) × 100%.",
+                "First divide: 40.0 ÷ 44.7 = 0.894855...",
+                "Multiply by 100%: 89.4855...%.",
+                "Sig figs: 40.0 and 44.7 each have 3 sig figs. Report 3 sig figs in the percentage.",
+                "Final answer: 89.5% yield."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Common mistake: picking the limiting reactant as whichever reactant has the smaller mass in grams (here choosing H₂ only because 5.00 g < 40.0 g) without converting to moles of product.",
+            "whyWrong": "Grams of different substances are not comparable as amounts of reaction. O₂ molecules are heavier than H₂ molecules. You must compare how much product each given amount can make, using moles and the balanced coefficients.",
+            "correct": "Correct way: convert each reactant to moles of product. The smaller product amount wins. In the example, H₂ still was limiting, but that conclusion came from 2.48 mol H₂O vs 2.50 mol H₂O, not from comparing 5 g to 40 g."
+          }
+        },
+        {
+          "id": "dilution",
+          "heading": "Solution dilution",
+          "paragraphs": [
+            "Concentration in many early problems is molarity. Molarity M = moles of solute / liters of solution. A 0.50 M NaCl solution has 0.50 mol NaCl in each 1.00 L of solution.",
+            "Dilution means adding solvent (usually water) to a concentrated stock solution. The number of moles of solute stays the same. Only the volume changes. That is why the dilution equation works: M₁V₁ = M₂V₂. The product M×V is proportional to moles when volume is in liters (or when both volumes use the same unit).",
+            "M₁ and V₁ are the molarity and volume of the stock piece you measure out. M₂ and V₂ are the molarity and volume of the diluted solution after you add solvent and mix."
+          ],
+          "worked": {
+            "title": "Prepare 250. mL of 0.100 M HCl from 1.00 M HCl stock",
+            "steps": [
+              "Identify: M₁ = 1.00 M (stock), M₂ = 0.100 M (diluted), V₂ = 250. mL.",
+              "Keep volume units consistent. Convert V₂ to liters: 250. mL × (1 L)/(1000 mL) = 0.250 L.",
+              "Write M₁V₁ = M₂V₂ and solve for V₁: V₁ = (M₂V₂)/M₁.",
+              "Substitute: V₁ = (0.100 mol/L × 0.250 L) / (1.00 mol/L).",
+              "Compute the numerator: 0.100 × 0.250 = 0.0250 mol (the moles of HCl needed).",
+              "Divide by M₁: 0.0250 mol / 1.00 mol/L = 0.0250 L.",
+              "Convert V₁ to mL if that is how you will pipette: 0.0250 L × 1000 mL/L = 25.0 mL.",
+              "Sig figs: 0.100, 250., and 1.00 each support 3 sig figs. Answer: measure 25.0 mL of 1.00 M HCl and add water until the total volume is 250. mL."
             ]
           }
         },
         {
-          "heading": "Solution dilution",
+          "id": "check-stoich",
+          "heading": "Check yourself",
           "paragraphs": [
-            "Molarity M = mol solute / L solution. Dilution conserves moles of solute: M₁V₁ = M₂V₂."
+            "Try these, then reveal the answers."
           ],
-          "worked": {
-            "title": "Dilute 25.0 mL of 6.00 M HCl to 150.0 mL",
-            "steps": [
-              "M₂ = M₁V₁ / V₂ = (6.00)(25.0) / 150.0",
-              "M₂ = 1.00 M"
+          "check": {
+            "title": "Check yourself",
+            "items": [
+              {
+                "q": "In N₂ + 3 H₂ → 2 NH₃, how many moles of NH₃ form from 6.0 mol H₂ if N₂ is excess?",
+                "a": "6.0 mol H₂ × (2 mol NH₃)/(3 mol H₂) = 4.0 mol NH₃."
+              },
+              {
+                "q": "What is the molar mass of CO₂ using C = 12.01 and O = 16.00?",
+                "a": "12.01 + 2×16.00 = 44.01 g/mol."
+              },
+              {
+                "q": "You need 500. mL of 0.200 M NaCl from 1.00 M stock. What volume of stock do you take?",
+                "a": "V₁ = (0.200 × 0.500 L)/1.00 = 0.100 L = 100. mL of stock, then dilute to 500. mL."
+              }
             ]
           }
         }

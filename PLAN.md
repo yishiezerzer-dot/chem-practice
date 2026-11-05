@@ -16,9 +16,14 @@ A free study website where HUJI chemistry students practice exam-style questions
 All explanations are written by us. Each answer points students to the book's chapter and pages. No textbook screenshots or copied text.
 Diagrams and structures are redrawn by us: when a question needs a Lewis structure, electron configuration diagram, VSEPR shape, or MO diagram, **Chem Sketcher** draws it and **App Maker** embeds the sketch in the answer (never a textbook screenshot).
 
-## Reading before practice (decided 2026-11-05)
+## Reading before practice (decided 2026-11-05, tightened same day)
 Every topic opens with a **reading section** that teaches that topic in detail (the whole chemistry of the section), then the practice cards. Students learn first, then drill. Reading is original wording; book pointers only.
 Readings must **show** the chemistry, not only describe it: molecules and structures the student can see (Lewis, shapes, electron configs via Chem Sketcher), worked examples (for example balancing an equation step by step) before any card on that skill, and illustrations of periodic trends with a plain-words why. Same rule for answer reveals that need a structure.
+
+**Depth bar (Yishi):** current readings are too thin. Write as if for a new student who will notice any skipped step. Spell out every step between ideas (why this rule, what to do next, what the intermediate result is). No "you already know" leaps. Prefer longer, careful explanations over short summaries. Expand all 23 topics to this bar; use one upgraded topic as the template before mass rewrite if needed.
+
+**Long-reading UI (Critiquito):** a short list of section jump-links at the top of each reading, keep the scroll progress bar, and show every worked-example step in full (never hide steps behind a tap).
+
 
 ## v1 (in)
 - General Chemistry (HUJI, chemistry majors) only, organized by syllabus topic.
@@ -102,3 +107,6 @@ Readings must **show** the chemistry, not only describe it: molecules and struct
 - 2026-11-05: Topic order remapped to Yishi's Hebrew main-topics list (bonding early; quantitative last). Added reading-before-practice and Chem Sketcher → App Maker embed rule.
 
 - 2026-11-05: Starter block before atoms (Yishi). Readings must show molecules, worked methods, and trend illustrations before cards.
+
+- 2026-11-05: Yishi: readings too minimal — expand with no skipped steps; teach for new students.
+

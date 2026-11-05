@@ -58,11 +58,22 @@ Layout, top to bottom:
    - Heading (20/28 bold).
    - Body paragraphs (17/26), max ~65 characters per line.
    - Optional **Worked example** card: tip-bg fill (`color/tip-bg`) OR a 4 px primary left border on surface, radius 12, padding 16. Caption "Worked example", then bold title, then numbered steps (same step style as calculation reveals). Must look different from a plain content card while scrolling. Equations: break only before `=`, keep value + unit together, sideways scroll if needed.
-   - Optional **chart** (schematic only): full content width, max height ~200 px. Title inside the SVG in 15 px meta/caption style (`color/muted`), worded like "Relative size (schematic, not to scale)". No numeric bar labels or axis values. Series colors: primary blue + neutral gray only — never knew-green, unsure-amber, or didnt-red. Visible key for each color series (e.g. anions / cations). External caption may still say the chart is schematic (not Atkins data).
-   - Optional **figure**: if `src` is set, render `<img class="rsketch">` inside `.rfig` — `max-width: 100%`, height auto, centered. Use `alt` from Chem Sketcher. If still `status: pending-sketch`, show a dashed placeholder (radius 12, muted border, padding 16) with caption "Figure coming soon" and the note.
+   - Optional **chart** (schematic only): full content width, max height ~200 px. Title inside the SVG in 15 px meta/caption style (`color/muted`), worded like "Relative size (schematic, not to scale)". No numeric bar labels or axis values. Series colors: primary blue + neutral gray only — never knew-green, unsure-amber, or didnt-red. Visible key for each color series (e.g. anions / cations) on its own row below the title, ~8 px gap, swatches vertically centered with their labels. Never put the key on the same line as the title. External caption may still say the chart is schematic (not Atkins data).
+   - Optional **figure**: if `src` is set, render `<img class="rsketch">` inside `.rfig` — `max-width: 100%`, height auto, centered. Use `alt` from Chem Sketcher. On phones (≤430 px): tap opens a lightbox. The image must render at ≥2× its natural pixel width inside a pan/scroll container (both axes), with pinch-zoom allowed (`touch-action: pinch-zoom`; do not lock the page with `user-scalable=no` while the lightbox is open). Dim the backdrop to ≥85% opacity. Caption under the inline figure: "Tap to enlarge". Prefer Chem Sketcher stacked/narrow layouts when available. If still `status: pending-sketch`, show a dashed placeholder (radius 12, muted border, padding 16) with caption "Figure coming soon" and the note.
 8. Bottom of reading: sticky primary button "Start practice (N cards)" only — same sticky bottom pattern as the rating bar (padding = bar height + 16 + safe-area so the last paragraph is never covered).
 
 Tokens: reuse existing ones. No new colors. Charts use primary blue + neutral gray (+ muted/text for labels); never rating colors as series fills; no rainbow series unless tokens gain a plot palette later.
+
+
+### Reading depth (Yishi, 5 Nov 2026)
+Readings must teach, not summarize. Write for a student who is seeing the idea for the first time:
+- Never skip an intermediate step (algebra, unit cancel, electron count, sign convention).
+- Each non-obvious claim gets one short "why" line or a worked example that shows the hop.
+- Prefer more short paragraphs and more worked examples over one dense paragraph.
+- Optional callout boxes (reuse tip-bg): **Why this matters**, **Common mistake**, and **Check yourself** (2–3 Q&A with answers shown in full).
+- Worked examples may use `worked` (one) and/or `workedExamples` (list). Every step stays visible; never collapse steps behind a tap.
+- Under the reading title and Skip to cards, show **In this reading**: a short TOC of section links. Section headings get stable `id`s and `scroll-margin-top` so the sticky top bar does not cover them. Keep the reading progress bar (`#bar`).
+- Long readings stay usable: keep the scroll progress bar, H2 section headings in a real outline, and Skip to cards at the top. Do not hide steps behind "show more".
 
 Accessibility: headings in a real outline (h1 topic, h2 section). Placeholder figures need a short alt describing what will be drawn. Skip to cards sits near the top (after the title); sticky Start practice must not trap keyboard focus away from it.
 
