@@ -1,6 +1,6 @@
 // Chem Practice v1 — plain JS, progress saved in localStorage.
 const KEY = 'chemPractice.v1', INTERVALS = [1, 3, 7], DAY = 864e5;
-let TOPICS = [], QS = [], S, view = 'home', viewArg = null;
+let TOPICS = [], QS = [], READINGS = {}, S, view = 'home', viewArg = null;
 const $ = s => document.querySelector(s), app = $('#app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const today = () => new Date(new Date().toDateString()).getTime();
@@ -12,12 +12,26 @@ const topicOf = id => TOPICS.find(t => t.id === id);
 const qsFor = tid => QS.filter(q => q.topic === tid);
 const isDue = id => S.cards[id] && S.cards[id].due <= today();
 const ref = t => { const u = t.textbook_units.map(x => x.unit === 'F' ? 'Fundamentals' : x.unit === 'MT' ? 'Major Techniques' : 'Focus ' + x.unit).join(' + '), ts = t.textbook_topics.map(x => x.topic); return u + ' · Topic' + (ts.length > 1 ? 's ' : ' ') + ts.join(', '); };
+const readingOf = tid => READINGS[tid] || null;
 
 async function init() {
-  const [t, q] = await Promise.all([fetch('data/topics.json').then(r => r.json()), fetch('data/questions.json').then(r => r.json())]);
-  TOPICS = t.topics.sort((a, b) => a.order - b.order); QS = q.questions;
+  const [t, q, r] = await Promise.all([
+    fetch('data/topics.json').then(x => x.json()),
+    fetch('data/questions.json').then(x => x.json()),
+    fetch('data/readings.json').then(x => x.json())
+  ]);
+  TOPICS = t.topics.slice().sort((a, b) => a.order - b.order);
+  QS = q.questions;
+  READINGS = r.readings || {};
   S = fresh(load());
-  $('#back').onclick = () => go(view === 'card' ? (S.session?.topic === 'due' ? 'home' : 'topic') : 'home', S.session?.topic);
+  $('#back').onclick = () => {
+    if (view === 'card') {
+      if (S.session?.topic === 'due') go('home');
+      else go('topic', S.session?.topic);
+    } else if (view === 'topic') go('reading', viewArg);
+    else if (view === 'reading') go('home');
+    else go('home');
+  };
   $('#weakBtn').onclick = () => go('weak');
   $('#importFile').onchange = doImport;
   document.addEventListener('keydown', e => {
@@ -30,8 +44,7 @@ async function init() {
 }
 function go(v, arg) { view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
 function setTop(title, back) { $('#title').textContent = title; $('#back').hidden = !back; $("#weakBtn").hidden = view !== "home"; $('#bar').hidden = view !== 'card'; }
-const v2 = () => view !== 'home';
-function render() { ({ home, topic, card, end, weak })[view](viewArg); }
+function render() { ({ home, reading, topic, card, end, weak })[view](viewArg); }
 
 function home() {
   setTop('Chem Practice', false);
@@ -54,19 +67,57 @@ function home() {
   if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>Back up your progress</span><button class="link" id="nudgeX" aria-label="Dismiss">✕</button></div>`;
   h += `<p class="cap" style="margin-top:24px">Progress is saved on this device only.</p><button class="link" id="exp">Export progress</button><button class="link" id="imp">Import progress</button>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
-  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('topic', b.dataset.t));
+  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
   $('#resume') && ($('#resume').onclick = () => go('card'));
   $('#reviewDue') && ($('#reviewDue').onclick = () => start('due', due.map(q => q.id)));
   $('#nudgeX') && ($('#nudgeX').onclick = () => { S.nudgeHide = Date.now() + 7 * DAY; save(); render(); });
   $('#exp').onclick = doExport; $('#imp').onclick = () => $('#importFile').click();
 }
 
+function renderSection(sec) {
+  let h = '';
+  if (sec.heading) h += `<h3 class="rh">${esc(sec.heading)}</h3>`;
+  (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${esc(p)}</p>`; });
+  if (sec.worked) {
+    h += `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${esc(sec.worked.title)}</div><ol class="steps">${sec.worked.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div>`;
+  }
+  if (sec.svg) {
+    // Trusted inline SVG from our own readings.json (not user input)
+    h += `<div class="rfig" role="figure">${sec.svg}</div>`;
+  }
+  if (sec.figure && sec.figure.status === 'pending-sketch') {
+    h += `<div class="placeholder" data-pending-sketch="1"><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(sec.figure.note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+  }
+  return h;
+}
+
+function reading(tid) {
+  const t = topicOf(tid), r = readingOf(tid), qs = qsFor(tid);
+  setTop(t.topic_en, true);
+  let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
+  if (r && !r.reviewed) h += `<div class="cap">Draft, not checked yet</div>`;
+  if (!r) {
+    h += `<div class="card"><p class="rp">Reading for this topic is not ready yet.</p></div>`;
+  } else {
+    h += `<div class="reading">`;
+    (r.sections || []).forEach(sec => { h += `<section class="rsec">${renderSection(sec)}</section>`; });
+    h += `</div>`;
+  }
+  h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
+  h += `<div class="sticky" id="readEnd"><button class="btn" id="startPractice">Start practice (${qs.length} cards)</button></div>`;
+  app.innerHTML = `<div class="fade">${h}</div>`;
+  $('#skipCards').onclick = () => go('topic', tid);
+  $('#startPractice').onclick = () => start(tid, qs.map(q => q.id));
+}
+
 function topic(tid) {
   const t = topicOf(tid), qs = qsFor(tid); setTop(t.topic_en, true);
   let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
+  h += `<button class="link" id="reopenReading" style="padding-inline:0;margin-bottom:8px">Read the section again</button>`;
   qs.forEach((q, i) => { const c = S.cards[q.id]; h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow">${esc(q.q)}</span><span class="cap">${c ? (isDue(q.id) ? 'Due' : '✓ Done') : 'New'}</span></div>`; });
   h += `<div class="sticky"><button class="btn" id="go">Start practice (${qs.length} cards)</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
+  $('#reopenReading').onclick = () => go('reading', tid);
   $('#go').onclick = () => start(tid, qs.map(q => q.id));
 }
 
@@ -96,12 +147,19 @@ function fmtStep(s) {
     return seg.length <= 42 ? `<span class="nw">${h}</span>` : h;
   }).join(' ');
 }
+function qImage(q) {
+  if (!q.image) return '';
+  const src = esc(q.image);
+  const alt = esc(q.imageAlt || 'Answer figure');
+  return `<div class="qimg"><img src="${src}" alt="${alt}" loading="lazy"></div>`;
+}
 function reveal(q, t) {
   document.querySelectorAll('.tipbox, .tipline').forEach(e => e.remove());
   const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
   const gap = (n) => rest < n ? 'at the end' : `~${n} cards`;
   const ns = nextStep(q.id, worst), knewLbl = `Next: in ${INTERVALS[ns]} day${INTERVALS[ns] > 1 ? 's' : ''}`;
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">Answer</div><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${esc(q.answer)}</span>` : esc(q.answer)}</div>
+  ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${fmtStep(s)}</li>`).join('')}</ol>` : `<p>${esc(q.explanation)}</p>`}
   <div class="meta">📖 Atkins 8e · ${esc(q.ref)}</div>${q.reviewed ? '' : '<div class="cap">Draft, not checked yet</div>'}
   <a class="link" style="display:inline-block;padding-inline:0" href="mailto:yishi.ezerzer@mail.huji.ac.il?subject=${encodeURIComponent('Chem Practice, issue with: ' + q.id)}&body=${encodeURIComponent('Question ' + q.id + ': ' + q.q + '\n\nWhat is wrong:\n')}">Report a problem</a></div>`;
@@ -151,7 +209,7 @@ function weak() {
   if (few.length) h += `<div class="sect">Not enough practice yet</div>` + few.map(row).join('');
   h += `<p class="cap">Topics you haven't tried don't show here.</p>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
-  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('topic', b.dataset.t));
+  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
 }
 
 function doExport() {
