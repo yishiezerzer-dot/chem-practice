@@ -11,7 +11,7 @@
       "sections": [
         {
           "id": "what-measurement-means",
-          "heading": "What measurement means",
+          "heading": "Measurement",
           "paragraphs": [
             "Chemistry is built on measured amounts. A measurement has two parts: a number and a unit. The number alone is not enough. Saying \"the sample is 5\" does not tell you whether that is 5 grams, 5 milliliters, or 5 moles.",
             "A unit is the agreed scale you used. Grams measure mass. Liters measure volume. Seconds measure time. Kelvin measures temperature on the absolute scale used in science.",
@@ -102,8 +102,7 @@
               "The tighter limit is 2 sig figs.",
               "Compute the raw product: 4.56 × 1.4 = 6.384.",
               "Round 6.384 to 2 sig figs. Look at the first two digits: 6 and 3. The next digit is 8, which is 5 or greater, so round the 3 up to 4.",
-              "2 sig figs for a number between 1 and 10 means one digit before the decimal and one after when written plainly, but 6.4 already has 2 sig figs.",
-              "Final answer: 6.4 (with whatever unit the product carries)."
+              "Final answer: 6.4 (with the product's unit)."
             ]
           },
           "workedExamples": [
@@ -123,7 +122,7 @@
             }
           ],
           "mistake": {
-            "wrong": "treating 12.00 g + 1.1 g like a multiplication problem and cutting the answer to 2 sig figs as 13 g.",
+            "wrong": "Treating 12.00 g + 1.1 g like a multiplication problem and cutting the answer to 2 sig figs as 13 g.",
             "whyWrong": "Addition is limited by decimal places, not by the sig-fig count. 12.00 is known to the hundredths place. 1.1 is known only to the tenths place. The sum must stop at tenths, which gives 13.1 g, not a 2-sig-fig chop to 13 g.",
             "correct": "12.00 + 1.1 = 13.10 raw, then round to one digit after the decimal because of 1.1. Answer: 13.1 g."
           }
@@ -170,9 +169,7 @@
         {
           "id": "check-measurement",
           "heading": "Check yourself",
-          "paragraphs": [
-            "Pause here and try these without looking up. Then read the answers."
-          ],
+          "paragraphs": [],
           "check": {
             "title": "Check yourself",
             "items": [
@@ -188,7 +185,8 @@
                 "q": "A cube of metal has mass 54.0 g and volume 20.0 cm³. What is its density?",
                 "a": "ρ = 54.0 g / 20.0 cm³ = 2.70 g/cm³ (3 sig figs from both inputs)."
               }
-            ]
+            ],
+            "intro": "Try these without looking back, then tap Show answer to check."
           }
         }
       ]
@@ -398,9 +396,9 @@
             }
           ],
           "mistake": {
-            "wrong": "picking the limiting reactant as whichever reactant has the smaller mass in grams (here choosing H₂ only because 5.00 g < 40.0 g) without converting to moles of product.",
+            "wrong": "Picking the limiting reactant as whichever reactant has the smaller mass in grams (here choosing H₂ only because 5.00 g < 40.0 g) without converting to moles of product.",
             "whyWrong": "Grams of different substances are not comparable as amounts of reaction. O₂ molecules are heavier than H₂ molecules. You must compare how much product each given amount can make, using moles and the balanced coefficients.",
-            "correct": "convert each reactant to moles of product. The smaller product amount wins. In the example, H₂ still was limiting, but that conclusion came from 2.48 mol H₂O vs 2.50 mol H₂O, not from comparing 5 g to 40 g."
+            "correct": "Convert each reactant to moles of product. The smaller product amount wins. In the example, H₂ still was limiting, but that conclusion came from 2.48 mol H₂O vs 2.50 mol H₂O, not from comparing 5 g to 40 g."
           }
         },
         {
@@ -428,9 +426,7 @@
         {
           "id": "check-stoich",
           "heading": "Check yourself",
-          "paragraphs": [
-            "Try these, then reveal the answers."
-          ],
+          "paragraphs": [],
           "check": {
             "title": "Check yourself",
             "items": [
@@ -446,7 +442,8 @@
                 "q": "You need 500. mL of 0.200 M NaCl from 1.00 M stock. What volume of stock do you take?",
                 "a": "V₁ = (0.200 × 0.500 L)/1.00 = 0.100 L = 100. mL of stock, then dilute to 500. mL."
               }
-            ]
+            ],
+            "intro": "Try these without looking back, then tap Show answer to check."
           }
         }
       ]

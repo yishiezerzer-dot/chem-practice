@@ -108,13 +108,19 @@ function renderSection(sec, i) {
     const m = sec.mistake;
     h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">Common mistake</div>`;
     if (m.wrong) h += `<p class="rp"><strong>Wrong approach.</strong> ${esc(m.wrong)}</p>`;
-    if (m.whyWrong) h += `<p class="rp"><strong>Why it is wrong.</strong> ${esc(m.whyWrong)}</p>`;
-    if (m.correct) h += `<p class="rp"><strong>Correct way.</strong> ${esc(m.correct)}</p>`;
+    if (m.whyWrong) h += `<p class="rp"><strong>Why that's wrong.</strong> ${esc(m.whyWrong)}</p>`;
+    if (m.correct) h += `<p class="rp"><strong>Do this instead.</strong> ${esc(m.correct)}</p>`;
     h += `</div>`;
   }
   if (sec.check && (sec.check.items || []).length) {
-    h += `<div class="callout callout-check" data-check="1"><div class="cap">${esc(sec.check.title || 'Check yourself')}</div><ol class="check-list">`;
-    sec.check.items.forEach((it, qi) => {
+    const chk = sec.check;
+    const headingIsCheck = /check yourself/i.test(sec.heading || '') || /check yourself/i.test(chk.title || '');
+    h += `<div class="callout callout-check" data-check="1">`;
+    // Avoid a second "Check yourself" when the section H3 already says it
+    if (chk.title && !headingIsCheck) h += `<div class="cap">${esc(chk.title)}</div>`;
+    if (chk.intro) h += `<p class="rp" style="margin:0 0 8px">${esc(chk.intro)}</p>`;
+    h += `<ol class="check-list">`;
+    chk.items.forEach((it, qi) => {
       const aid = `check-a-${i}-${qi}`;
       h += `<li><div class="check-q">${esc(it.q || '')}</div>`;
       h += `<button type="button" class="btn-show-ans" data-show-ans="1" aria-expanded="false" aria-controls="${aid}">Show answer</button>`;
@@ -212,8 +218,9 @@ function reading(tid) {
   const t = topicOf(tid), r = readingOf(tid), qs = qsFor(tid);
   setTop('Reading', true);
   let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
+  // Order under H1: Draft badge → Skip to cards → In this reading TOC
+  if (r && !r.reviewed) h += `<div class="cap" data-draft-badge="1">Draft, not checked yet</div>`;
   h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
-  if (r && !r.reviewed) h += `<div class="cap">Draft, not checked yet</div>`;
   if (!r) {
     h += `<div class="card"><p class="rp">No reading for this topic yet.</p></div>`;
   } else {
