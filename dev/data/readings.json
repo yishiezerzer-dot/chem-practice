@@ -192,88 +192,384 @@
       ]
     },
     "atoms-elements-and-the-mole": {
+      "topic_id": "atoms-elements-and-the-mole",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Atoms and isotopes",
+          "id": "nuclear-atom",
+          "heading": "The nuclear atom",
           "paragraphs": [
-            "An atom has protons (Z, atomic number) and neutrons in the nucleus, with electrons outside. Mass number A = protons + neutrons. Isotopes of an element share Z but differ in neutrons.",
-            "For an ion, charge = protons − electrons. Example: ⁵⁶Fe³⁺ has Z = 26, so 26 protons, A − Z = 30 neutrons, and 26 − 3 = 23 electrons."
+            "An atom has a tiny, dense nucleus and a much larger cloud of electrons around it. The nucleus holds protons and neutrons. Protons have a charge of +1. Electrons have a charge of −1. Neutrons have charge 0.",
+            "The atomic number Z is the number of protons. Z defines the element. Every carbon atom has Z = 6. Every iron atom has Z = 26.",
+            "The mass number A is the total number of protons plus neutrons in that nucleus. Neutrons = A − Z. Electrons are not part of A because their mass is tiny compared with protons and neutrons.",
+            "In a neutral atom, the number of electrons equals the number of protons. That keeps the total charge at zero.",
+            "A helpful picture: if the nucleus were the size of a marble, the electron cloud would stretch across a sports stadium. Almost all of an atom's mass sits in that tiny nucleus. Almost all of its volume is the electron cloud.",
+            "Chemists write a nuclide as ᴬX or as X-A. The element symbol already encodes Z, so you do not need to write Z unless you want the full form ᴬ_ZX."
           ],
+          "why": "Z and A are the two labels you need before you can count particles in any atom or ion. Without them, the rest of the chapter has nothing to stand on.",
           "figure": {
             "src": "art/fe56-fe3-nucleus.svg",
             "alt": "Diagram of an iron-56 Fe3+ ion: nucleus with 26 protons and 30 neutrons, and an electron cloud with 23 electrons after losing three."
           }
         },
         {
-          "heading": "Average atomic mass",
+          "id": "isotopes-and-ions",
+          "heading": "Isotopes and ions",
           "paragraphs": [
-            "The periodic-table atomic mass is a weighted average of isotope masses: Σ (fraction × mass)."
+            "Isotopes are atoms of the same element (same Z) with different numbers of neutrons (different A). Carbon-12 and carbon-14 both have 6 protons. Carbon-12 has 6 neutrons. Carbon-14 has 8 neutrons.",
+            "An ion is an atom or group of atoms with a net charge. A cation has lost electrons and is positive. An anion has gained electrons and is negative.",
+            "For a monoatomic ion, charge = protons − electrons. Rearranged: electrons = protons − charge. For Fe³⁺, Z = 26 and charge = +3, so electrons = 26 − 3 = 23.",
+            "Isotope symbols you will see often: ¹H (protium), ²H or D (deuterium), ¹²C, ¹³C, ¹⁴C, ²³⁵U, ²³⁸U. Same Z within each element; different A.",
+            "When a problem says \"an atom of iron-56,\" it means A = 56 and Z = 26. When it says \"the Fe³⁺ ion,\" you still use Z = 26 for protons, then adjust electrons for the charge."
           ],
           "worked": {
-            "title": "Average atomic mass of Cl",
+            "title": "Particles in ⁵⁶Fe³⁺",
             "steps": [
-              "Isotopes: 75.78% ³⁵Cl (34.969 u) and 24.22% ³⁷Cl (36.966 u)",
-              "Convert % to fractions: 0.7578 and 0.2422",
-              "Average = 0.7578×34.969 + 0.2422×36.966",
-              "= 26.50 + 8.953 = 35.45 u"
+              "Read the nuclide symbol. The mass number A is the upper left number: 56. The element is Fe, so look up Z for iron: Z = 26.",
+              "Protons = Z = 26.",
+              "Neutrons = A − Z = 56 − 26 = 30.",
+              "The ion charge is 3+, written as Fe³⁺. That means the ion has three fewer electrons than protons.",
+              "Electrons = protons − charge = 26 − 3 = 23.",
+              "Summary: 26 protons, 30 neutrons, 23 electrons."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Particles in ³⁵Cl⁻",
+              "steps": [
+                "A = 35. Element Cl has Z = 17.",
+                "Protons = 17.",
+                "Neutrons = 35 − 17 = 18.",
+                "Charge is 1−, so the ion has one extra electron compared with the neutral atom.",
+                "Electrons = protons − (charge) = 17 − (−1) = 18.",
+                "Summary: 17 protons, 18 neutrons, 18 electrons."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "average-atomic-mass",
+          "heading": "Average atomic mass",
+          "paragraphs": [
+            "Most elements in nature are mixtures of isotopes. The atomic mass on the periodic table is not the mass of one isotope. It is a weighted average of the isotope masses, weighted by how common each isotope is.",
+            "Formula: average atomic mass = Σ (fractional abundance × isotopic mass). Fractional abundance is the percent abundance divided by 100. The sum of all fractional abundances for an element must equal 1.",
+            "Isotopic masses are measured on a mass spectrometer and are close to, but not exactly equal to, the integer mass numbers. Use the given isotopic mass in u (unified atomic mass units), not A itself.",
+            "The unit u (also written amu in older texts) is defined so that a ¹²C atom has mass exactly 12 u. Other isotope masses are measured relative to that standard.",
+            "If a problem gives only two isotopes, you need both abundances and both masses. If it gives one abundance, the other is 100% minus that value, but only when exactly two isotopes are present."
+          ],
+          "worked": {
+            "title": "Average atomic mass of chlorine",
+            "steps": [
+              "Data (standard textbook values): ³⁵Cl is 75.77% abundant with mass 34.969 u. ³⁷Cl is 24.23% abundant with mass 36.966 u.",
+              "Convert percents to fractions: 75.77% → 0.7577. 24.23% → 0.2423.",
+              "Check that the fractions add to 1: 0.7577 + 0.2423 = 1.0000. Good.",
+              "Contribution from ³⁵Cl: 0.7577 × 34.969 = 26.4960... u. Keep extra digits for now.",
+              "Contribution from ³⁷Cl: 0.2423 × 36.966 = 8.9569... u.",
+              "Add the contributions: 26.4960 + 8.9569 = 35.4529... u.",
+              "Round to match the usual table precision (two decimals for Cl): 35.45 u.",
+              "Final answer: 35.45 u. That matches the periodic-table value for chlorine."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Average atomic mass of bromine",
+              "steps": [
+                "Data: ⁷⁹Br is 50.69% with mass 78.918 u. ⁸¹Br is 49.31% with mass 80.916 u.",
+                "Fractions: 0.5069 and 0.4931. Sum = 1.0000.",
+                "0.5069 × 78.918 = 40.0035... u.",
+                "0.4931 × 80.916 = 39.8997... u.",
+                "Sum: 40.0035 + 39.8997 = 79.9032... u.",
+                "Round to two decimals as on many tables: 79.90 u.",
+                "Final answer: 79.90 u."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Averaging the two chlorine isotope masses as (34.969 + 36.966)/2 = 35.968 u and calling that the atomic mass.",
+            "whyWrong": "A simple mean treats both isotopes as equally common. Chlorine is not 50/50. ³⁵Cl is about three times as common as ³⁷Cl, so the average must sit closer to 35 than to 37.",
+            "correct": "Weight each mass by its fractional abundance, then add. For Cl that gives about 35.45 u, not 35.97 u."
           }
         },
         {
-          "heading": "The mole",
+          "id": "the-mole",
+          "heading": "The mole and Avogadro's number",
           "paragraphs": [
-            "One mole contains Avogadro's number N_A ≈ 6.022 × 10²³ particles. Molar mass M (g/mol) equals the formula mass in u. n = m / M converts grams to moles."
+            "The mole (symbol mol) is the SI unit for amount of substance. One mole of any substance contains Avogadro's number of particles. Avogadro's number N_A = 6.022 × 10²³ mol⁻¹. The particles may be atoms, molecules, ions, or formula units, depending on what you are counting.",
+            "Molar mass M is the mass of one mole of a substance, in g/mol. Numerically, the molar mass in g/mol equals the formula mass in u. Water has formula mass 18.02 u, so M(H₂O) = 18.02 g/mol.",
+            "Why that match works: by definition, 1 u is tied to 1/12 the mass of a ¹²C atom, and the mole is defined so that 12 g of ¹²C is exactly 1 mol. The same scale links u and g/mol for every other substance.",
+            "Saying \"1 mol of water\" means 6.022 × 10²³ water molecules. Saying \"1 mol of NaCl\" means 6.022 × 10²³ formula units of NaCl.",
+            "Standard atomic molar masses used here (g/mol): H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55.85. Use a problem's given value if it differs slightly."
+          ],
+          "why": "Lab balances read grams. Reaction equations talk in moles. The mole is the bridge between the two languages."
+        },
+        {
+          "id": "mass-mole-particle",
+          "heading": "Mass, moles, and particles",
+          "paragraphs": [
+            "Three linked conversions cover almost every early mole problem:",
+            "1. Mass ↔ moles: n = m / M, and m = n × M. Mass m is in grams. Molar mass M is in g/mol. Amount n is in mol.",
+            "2. Moles ↔ particles: N = n × N_A, and n = N / N_A. N is a count of particles (no unit, or sometimes written as molecules or atoms).",
+            "3. Never multiply grams directly by N_A. That skips the mole step and gives a meaningless number. Always go grams → moles → particles, or the reverse.",
+            "Dimensional analysis still applies. Write every unit in the setup. Grams cancel when you multiply by (1 mol)/(M g). Moles cancel when you multiply by N_A. If the leftover unit is wrong, the conversion factor was upside down.",
+            "For compounds, \"particles\" usually means molecules. For ionic solids, \"particles\" usually means formula units. For elements that form diatomic molecules (H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂), be clear whether the problem asks for moles of molecules or moles of atoms."
           ],
           "worked": {
             "title": "Moles of water in 10.0 g H₂O",
             "steps": [
-              "M(H₂O) = 2(1.008) + 16.00 = 18.02 g/mol",
-              "n = m / M = 10.0 g / 18.02 g·mol⁻¹",
-              "n = 0.555 mol"
+              "Write the formula mass of H₂O from atomic molar masses: H = 1.008 g/mol, O = 16.00 g/mol.",
+              "M(H₂O) = 2(1.008) + 16.00 = 2.016 + 16.00 = 18.016 g/mol. Round to 18.02 g/mol for three-to-four significant use (standard table style).",
+              "Given mass m = 10.0 g.",
+              "Use n = m / M.",
+              "Set up: n = 10.0 g / (18.02 g/mol).",
+              "Cancel g.",
+              "Divide: 10.0 ÷ 18.02 = 0.554938... mol.",
+              "Sig figs: 10.0 has 3 sig figs. 18.02 has 4. Limit = 3 sig figs.",
+              "Round 0.5549... to 3 sig figs: 0.555.",
+              "Final answer: 0.555 mol H₂O."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "How many molecules in 0.555 mol H₂O?",
+              "steps": [
+                "Start with n = 0.555 mol H₂O (from the previous example).",
+                "Use N = n × N_A with N_A = 6.022 × 10²³ mol⁻¹.",
+                "Set up: N = 0.555 mol × (6.022 × 10²³ molecules/mol).",
+                "Cancel mol.",
+                "Multiply: 0.555 × 6.022 = 3.34221. Attach × 10²³.",
+                "Sig figs: 0.555 has 3; 6.022 has 4. Limit = 3 sig figs.",
+                "Final answer: 3.34 × 10²³ molecules of H₂O."
+              ]
+            },
+            {
+              "title": "Mass of 2.50 × 10²² atoms of Fe",
+              "steps": [
+                "Convert particles to moles first: n = N / N_A.",
+                "n = (2.50 × 10²² atoms) / (6.022 × 10²³ atoms/mol).",
+                "Divide the powers of ten: 10²² / 10²³ = 10⁻¹. Numbers: 2.50 / 6.022 = 0.4151...",
+                "n = 0.4151... × 10⁻¹ = 0.04151... mol Fe. Keep extra digits.",
+                "Molar mass of Fe from the table: 55.85 g/mol.",
+                "m = n × M = 0.04151... mol × 55.85 g/mol.",
+                "Compute: 0.04151 × 55.85 ≈ 2.318 g.",
+                "Sig figs: 2.50 × 10²² has 3 sig figs. Round mass to 3 sig figs.",
+                "Final answer: 2.32 g Fe."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-atoms-mole",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "How many electrons does ²⁷Al³⁺ have?",
+                "a": "Z(Al) = 13, so protons = 13. Electrons = 13 − 3 = 10."
+              },
+              {
+                "q": "What is the average atomic mass if an element is 80.0% isotope mass 10.01 u and 20.0% isotope mass 11.01 u?",
+                "a": "0.800×10.01 + 0.200×11.01 = 8.008 + 2.202 = 10.21 u."
+              },
+              {
+                "q": "How many moles are in 25.0 g of O₂? (O = 16.00 g/mol)",
+                "a": "M(O₂) = 32.00 g/mol. n = 25.0 / 32.00 = 0.781 mol O₂."
+              }
             ]
           }
         }
       ]
     },
     "chemical-compounds-formulas-and-oxidatio": {
+      "topic_id": "chemical-compounds-formulas-and-oxidatio",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Formulas and percent composition",
+          "id": "formula-types",
+          "heading": "Empirical and molecular formulas",
           "paragraphs": [
-            "An empirical formula is the simplest whole-number ratio of atoms. A molecular formula is a whole-number multiple of the empirical formula. Mass percent of an element = (mass of element in 1 mol of compound / molar mass) × 100%."
+            "A chemical formula tells which elements are present and in what ratio. An empirical formula is the simplest whole-number ratio of atoms. A molecular formula gives the actual number of each atom in one molecule. The molecular formula is always a whole-number multiple of the empirical formula.",
+            "Example: hydrogen peroxide has molecular formula H₂O₂. The simplest ratio is HO, so the empirical formula is HO. Glucose has molecular formula C₆H₁₂O₆ and empirical formula CH₂O.",
+            "Ionic compounds are usually written as empirical formulas (the formula unit), because a crystal does not contain separate neutral molecules of NaCl. Molecular compounds can have empirical and molecular formulas that differ.",
+            "Subscripts in a formula are fixed by nature for that compound. You may not change them to balance an equation; you change coefficients in front of formulas instead.",
+            "Hydrates such as CuSO₄·5H₂O count the water molecules in the formula mass. M(CuSO₄·5H₂O) = M(CuSO₄) + 5×M(H₂O).",
+            "Structural formulas and condensed structural formulas show connectivity (for example CH₃COOH for acetic acid). Those are richer than the molecular formula C₂H₄O₂, which only gives atom counts."
           ],
-          "worked": {
-            "title": "Mass % N in NH₄NO₃",
-            "steps": [
-              "M(NH₄NO₃) = 14.01 + 4(1.008) + 14.01 + 3(16.00) = 80.05 g/mol",
-              "Mass of N in 1 mol = 2 × 14.01 = 28.02 g",
-              "% N = (28.02 / 80.05) × 100% = 35.0%"
-            ]
-          }
+          "why": "Lab analysis often gives the empirical formula first. You need a molar mass from another experiment before you can lift that ratio up to the true molecular formula."
         },
         {
-          "heading": "Empirical formula from % composition",
+          "id": "percent-composition",
+          "heading": "Mass percent composition",
           "paragraphs": [
-            "Assume 100 g of sample so % becomes grams. Convert each element to moles, divide by the smallest mole amount, and scale to whole numbers."
+            "Mass percent of an element in a compound = (mass of that element in 1 mol of compound / molar mass of the compound) × 100%.",
+            "Build the molar mass from atomic molar masses. Count every atom in the formula. If an element appears in two places (as in NH₄NO₃, which has N in both the ammonium and the nitrate parts), add both contributions.",
+            "Mass percents of all elements in a compound must add to 100% (within rounding). That is a quick check after you finish.",
+            "Percent composition does not tell you how atoms are connected. CH₂O could be formaldehyde, acetic acid (C₂H₄O₂ has the same empirical formula), or glucose. Connectivity needs more information.",
+            "Worked percent problems almost always ask for one element, but you can compute all elements the same way. If three elements' percents add to about 100%, your molar mass and atom counts are consistent."
+          ],
+          "worked": {
+            "title": "Mass percent of N in NH₄NO₃",
+            "steps": [
+              "Write atomic molar masses: N = 14.01, H = 1.008, O = 16.00 g/mol.",
+              "Molar mass of NH₄NO₃: N + 4 H + N + 3 O = 14.01 + 4(1.008) + 14.01 + 3(16.00).",
+              "4(1.008) = 4.032.",
+              "3(16.00) = 48.00.",
+              "Sum: 14.01 + 4.032 + 14.01 + 48.00 = 80.052 g/mol. Use 80.05 g/mol.",
+              "Mass of N in 1 mol of NH₄NO₃: there are 2 N atoms, so 2 × 14.01 = 28.02 g.",
+              "Percent N = (28.02 / 80.05) × 100%.",
+              "Divide: 28.02 ÷ 80.05 = 0.349906...",
+              "Multiply by 100%: 34.9906...%.",
+              "Sig figs: inputs support 4 figures in the masses; percent is commonly reported to 3 significant figures here as 35.0%, or to one decimal as 35.0%.",
+              "Final answer: 35.0% N."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Mass percent of O in CO₂",
+              "steps": [
+                "M(CO₂) = 12.01 + 2(16.00) = 12.01 + 32.00 = 44.01 g/mol.",
+                "Mass of O in 1 mol = 32.00 g.",
+                "Percent O = (32.00 / 44.01) × 100% = 72.7107...%.",
+                "Round to four significant figures matching the inputs: 72.71% O.",
+                "Final answer: 72.71% O."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "empirical-from-percent",
+          "heading": "Empirical formula from percent composition",
+          "paragraphs": [
+            "A standard path turns percent composition into an empirical formula:",
+            "1. Assume you have 100.0 g of the compound. Then each percent becomes a mass in grams.",
+            "2. Convert each element's mass to moles using its molar mass.",
+            "3. Divide every mole amount by the smallest mole amount. That gives a ratio near whole numbers.",
+            "4. If you get values like 1.50 or 1.33, multiply all ratio numbers by 2 or 3 to clear the fraction. Then write the subscripts.",
+            "Rounding tip: ratios like 1.98 or 2.02 are almost certainly 2. Ratios like 1.25 suggest multiply by 4 (1.25 × 4 = 5). Ratios like 1.33 suggest multiply by 3 (1.33 × 3 = 4).",
+            "If the analysis data come as masses instead of percents, skip the \"assume 100 g\" step and convert the given masses to moles directly.",
+            "Significant figures in empirical-formula work: mole amounts may look messy (3.3306…), but the final ratio should clean up to whole numbers within about 0.1. If it does not, recheck the arithmetic or the given percents."
           ],
           "worked": {
             "title": "40.0% C, 6.71% H, 53.3% O → empirical formula",
             "steps": [
-              "In 100 g: 40.0 g C, 6.71 g H, 53.3 g O",
-              "mol C = 40.0/12.01 = 3.33; mol H = 6.71/1.008 = 6.66; mol O = 53.3/16.00 = 3.33",
-              "Divide by 3.33 → C₁ H₂ O₁",
-              "Empirical formula: CH₂O"
+              "Assume 100.0 g of sample. Then masses are 40.0 g C, 6.71 g H, 53.3 g O.",
+              "Moles of C: 40.0 g / 12.01 g/mol = 3.3306... mol C.",
+              "Moles of H: 6.71 g / 1.008 g/mol = 6.6567... mol H.",
+              "Moles of O: 53.3 g / 16.00 g/mol = 3.33125 mol O.",
+              "Smallest mole amount ≈ 3.331 mol (C and O are essentially equal).",
+              "Divide C by 3.331: 3.331 / 3.331 = 1.00.",
+              "Divide H by 3.331: 6.657 / 3.331 = 2.00.",
+              "Divide O by 3.331: 3.331 / 3.331 = 1.00.",
+              "Whole-number ratio C:H:O = 1:2:1.",
+              "Empirical formula: CH₂O."
             ]
+          },
+          "mistake": {
+            "wrong": "Treating the percent numbers as already being moles and writing C₄₀H₇O₅₃.",
+            "whyWrong": "Percent is a mass fraction, not a mole count. Carbon atoms and oxygen atoms have different masses, so 40 g of C is not the same number of moles as 40 g of O.",
+            "correct": "Convert each percent-as-grams into moles first, then divide by the smallest mole amount to get the atom ratio."
           }
         },
         {
-          "heading": "Molecular formula and oxidation states",
+          "id": "molecular-from-empirical",
+          "heading": "Molecular formula from empirical formula",
           "paragraphs": [
-            "If molar mass / empirical-formula mass = n, multiply subscripts by n. Example: CH₂O with M = 180 g/mol → n = 180/30 = 6 → C₆H₁₂O₆.",
-            "Oxidation state (oxidation number) is a bookkeeping charge: O is usually −2, H is +1 with nonmetals, elemental form is 0, and the sum equals the ion or molecule charge."
+            "Once you have the empirical formula, you still need the molar mass of the real compound (from osmometry, mass spectrometry, or the problem statement).",
+            "Compute the empirical-formula mass (the mass of one empirical unit). Then n = (molar mass) / (empirical-formula mass). Multiply every subscript in the empirical formula by that whole number n.",
+            "If n comes out to 1.00, the empirical and molecular formulas are the same. That is common for many ionic compounds and for some small molecules like H₂O and CH₄.",
+            "Always recompute the molar mass from your final molecular formula and check that it matches the given molar mass within rounding."
+          ],
+          "worked": {
+            "title": "CH₂O with molar mass 180. g/mol",
+            "steps": [
+              "Empirical formula: CH₂O.",
+              "Empirical-formula mass = 12.01 + 2(1.008) + 16.00 = 12.01 + 2.016 + 16.00 = 30.026 g per empirical unit. Use 30.03 g/mol.",
+              "Given molar mass of the compound = 180. g/mol (3 sig figs; the trailing decimal marks the zero as significant).",
+              "n = 180. / 30.03 = 5.994... ≈ 6.",
+              "n must be a whole number. Round 5.994 to 6.",
+              "Multiply subscripts by 6: C₆H₁₂O₆.",
+              "Final answer: molecular formula C₆H₁₂O₆ (glucose)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Empirical HO with molar mass 34.02 g/mol",
+              "steps": [
+                "Empirical-formula mass of HO = 1.008 + 16.00 = 17.008 g/mol.",
+                "n = 34.02 / 17.008 = 2.000...",
+                "n = 2.",
+                "Multiply: H₂O₂.",
+                "Final answer: H₂O₂."
+              ]
+            }
           ]
+        },
+        {
+          "id": "oxidation-states",
+          "heading": "Oxidation states",
+          "paragraphs": [
+            "An oxidation state (oxidation number) is a bookkeeping charge assigned to an atom in a compound. It is not always the real charge on that atom. It is a tool for tracking electron transfer in redox chemistry.",
+            "Standard rules, applied in order:",
+            "1. An atom in its elemental form has oxidation state 0 (examples: Fe(s), O₂, H₂, S₈).",
+            "2. A monoatomic ion has oxidation state equal to its charge (Na⁺ is +1, Cl⁻ is −1, Fe³⁺ is +3).",
+            "3. Fluorine in compounds is always −1.",
+            "4. Hydrogen is +1 when bonded to nonmetals, and −1 in metal hydrides (NaH).",
+            "5. Oxygen is usually −2. Exceptions: peroxides (H₂O₂) where O is −1, and OF₂ where O is +2.",
+            "6. The sum of oxidation states in a neutral molecule is 0. In a polyatomic ion, the sum equals the ion charge.",
+            "Group trend shortcuts that match the rules: alkali metals (Group 1) in compounds are +1. Alkaline earth metals (Group 2) are +2. Halogens are usually −1 when they are the most electronegative atom in the compound.",
+            "Oxidation states can be fractional in averages for some compounds (for example, Fe₃O₄), but intro problems almost always give integer states. Stick to the integer rules above unless a problem says otherwise.",
+            "In redox later, oxidation means an increase in oxidation state (electron loss in the bookkeeping sense). Reduction means a decrease in oxidation state. Assigning states correctly is the first step in identifying what was oxidized and what was reduced.",
+            "Peroxide check: in H₂O₂ each oxygen is −1, not −2. If you blindly assign O = −2 in H₂O₂, hydrogen would have to be +2 to keep the molecule neutral, which breaks the hydrogen rule. Spot the O–O single bond and switch to the peroxide exception."
+          ],
+          "worked": {
+            "title": "Oxidation state of N in NO₃⁻",
+            "steps": [
+              "The ion charge is −1, so the sum of oxidation states = −1.",
+              "There are 3 oxygen atoms. Each O is −2 (not a peroxide or OF₂ case).",
+              "Total from oxygen: 3 × (−2) = −6.",
+              "Let the oxidation state of N be x.",
+              "Write: x + (−6) = −1.",
+              "Solve: x − 6 = −1, so x = −1 + 6 = +5.",
+              "Final answer: N is +5 in NO₃⁻."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Oxidation state of C in CO₂ and of Cr in Cr₂O₇²⁻",
+              "steps": [
+                "CO₂ is neutral, so the sum is 0. Two O at −2 each give −4. Let C be x: x − 4 = 0 → x = +4. Carbon is +4.",
+                "Cr₂O₇²⁻ has charge −2. Seven O at −2 each give −14. Let each Cr be y. Two Cr give 2y.",
+                "2y + (−14) = −2.",
+                "2y = −2 + 14 = 12.",
+                "y = 6. Each Cr is +6."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-compounds",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the mass percent of H in H₂O? (H = 1.008, O = 16.00)",
+                "a": "M = 18.016 g/mol. Mass H = 2.016 g. Percent = (2.016/18.016)×100% = 11.19% H."
+              },
+              {
+                "q": "A compound is 92.3% C and 7.7% H. What is its empirical formula?",
+                "a": "In 100 g: 7.69 mol C and 7.64 mol H → ratio ≈ 1:1 → CH."
+              },
+              {
+                "q": "What is the oxidation state of S in SO₄²⁻?",
+                "a": "4 O at −2 = −8. Let S = x. x − 8 = −2 → x = +6."
+              }
+            ]
+          }
         }
       ]
     },
@@ -449,111 +745,536 @@
       ]
     },
     "electrons-in-atoms-quantum-theory-and-or": {
+      "topic_id": "electrons-in-atoms-quantum-theory-and-or",
       "reviewed": false,
       "sections": [
         {
+          "id": "light-energy",
           "heading": "Light as energy packets",
           "paragraphs": [
-            "Light is electromagnetic radiation. Frequency ν and wavelength λ are linked by c = λν, with c = 2.998 × 10⁸ m/s. Photon energy E = hν = hc/λ, where h = 6.626 × 10⁻³⁴ J·s."
+            "Visible light is one slice of electromagnetic radiation. Every wave has a wavelength λ (distance from crest to crest) and a frequency ν (number of oscillations per second). They are linked by c = λν, where c is the speed of light in vacuum, c = 2.998 × 10⁸ m/s.",
+            "Planck and Einstein showed that light also comes in packets called photons. The energy of one photon is E = hν, where h is Planck's constant, h = 6.626 × 10⁻³⁴ J·s. Combining with c = λν gives E = hc / λ.",
+            "Units to watch: λ must be in meters when you use c in m/s. A wavelength given in nm must be converted: 1 nm = 10⁻⁹ m.",
+            "Frequency has SI unit s⁻¹, also called hertz (Hz). Wavelength for visible light is often quoted in nm: violet near 400 nm, red near 700 nm. Shorter λ means higher ν and higher E per photon.",
+            "A mole of photons has energy N_A × E_photon. That quantity is useful when you compare photon energy to chemical bond energies given per mole.",
+            "Infrared photons have longer wavelength and lower energy than visible photons. Ultraviolet photons have shorter wavelength and higher energy. That is why UV light can break bonds that visible light leaves alone."
           ],
+          "why": "Spectroscopy, Bohr jumps, and every later quantum formula start from E = hν. If λ and ν are swapped or units are wrong, the energy is wrong by orders of magnitude.",
           "worked": {
-            "title": "Energy of a 486.1 nm photon",
+            "title": "Energy of a 486.1 nm photon (Balmer H-β)",
             "steps": [
-              "λ = 486.1 nm = 4.861 × 10⁻⁷ m",
-              "E = hc/λ = (6.626×10⁻³⁴)(2.998×10⁸) / (4.861×10⁻⁷)",
-              "E = 4.087 × 10⁻¹⁹ J"
+              "Write λ = 486.1 nm.",
+              "Convert to meters: 486.1 nm × (10⁻⁹ m)/(1 nm) = 4.861 × 10⁻⁷ m.",
+              "Write E = hc / λ with h = 6.626 × 10⁻³⁴ J·s and c = 2.998 × 10⁸ m/s.",
+              "First compute hc: (6.626 × 10⁻³⁴)(2.998 × 10⁸) = 1.986 × 10⁻²⁵ J·m (to four figures).",
+              "Divide by λ: E = (1.986 × 10⁻²⁵ J·m) / (4.861 × 10⁻⁷ m).",
+              "Cancel m. Divide the numbers: 1.986 / 4.861 = 0.4086. Powers of ten: 10⁻²⁵ / 10⁻⁷ = 10⁻¹⁸.",
+              "E = 0.4086 × 10⁻¹⁸ J = 4.086 × 10⁻¹⁹ J.",
+              "Sig figs: 486.1 has 4 sig figs. Report E = 4.086 × 10⁻¹⁹ J.",
+              "Final answer: 4.086 × 10⁻¹⁹ J per photon."
             ]
-          }
+          },
+          "workedExamples": [
+            {
+              "title": "Frequency of the same 486.1 nm light",
+              "steps": [
+                "Use ν = c / λ.",
+                "λ = 4.861 × 10⁻⁷ m (from above).",
+                "ν = (2.998 × 10⁸ m/s) / (4.861 × 10⁻⁷ m).",
+                "Cancel m. 2.998 / 4.861 = 0.6167. Powers: 10⁸ / 10⁻⁷ = 10¹⁵.",
+                "ν = 0.6167 × 10¹⁵ s⁻¹ = 6.167 × 10¹⁴ s⁻¹ (Hz).",
+                "Final answer: 6.167 × 10¹⁴ Hz."
+              ]
+            },
+            {
+              "title": "Energy of 1.00 mol of 486.1 nm photons",
+              "steps": [
+                "From earlier, one 486.1 nm photon has E = 4.086 × 10⁻¹⁹ J.",
+                "For 1.00 mol of photons, multiply by N_A = 6.022 × 10²³ mol⁻¹.",
+                "E_molar = (4.086 × 10⁻¹⁹ J) × (6.022 × 10²³ mol⁻¹).",
+                "Multiply numbers: 4.086 × 6.022 = 24.61. Powers: 10⁻¹⁹ × 10²³ = 10⁴.",
+                "E_molar = 2.461 × 10⁵ J/mol = 246.1 kJ/mol.",
+                "Sig figs: match the 4-figure photon energy. Final answer: 2.461 × 10⁵ J/mol (246.1 kJ/mol)."
+              ]
+            }
+          ]
         },
         {
+          "id": "bohr-hydrogen",
           "heading": "The Bohr model for hydrogen",
           "paragraphs": [
-            "In hydrogen, electron energy levels are E_n = −13.6 eV / n². A jump from higher n to lower n emits a photon whose energy equals the level gap. The Balmer line n=3→2 is the famous red 656 nm line."
+            "Bohr's model for the hydrogen atom (one electron) says the electron can occupy only certain energy levels labeled by a positive integer n = 1, 2, 3, … The energy of level n is E_n = −13.6 eV / n². The negative sign means the electron is bound. E = 0 at infinite separation (n → ∞).",
+            "When the electron drops from a higher level n_high to a lower level n_low, the atom emits a photon. The photon energy equals the gap: ΔE = E_high − E_low (take the positive difference for the photon).",
+            "The Balmer series is the set of drops that end at n = 2. The famous red line is n = 3 → 2 at about 656 nm. The blue-green line is n = 4 → 2 at 486 nm.",
+            "Absorption is the reverse of emission. The electron jumps up when the atom absorbs a photon whose energy matches a level gap. Only those matching energies are absorbed strongly, which is why hydrogen's absorption spectrum shows sharp lines.",
+            "Bohr's model works quantitatively for hydrogen-like species (one electron): H, He⁺, Li²⁺. For He⁺ the energies scale by Z²: E_n = −13.6 Z² / n² eV with Z = 2.",
+            "The ground state is n = 1. Any n ≥ 2 is an excited state. When n → ∞, the electron is free and the atom is ionized. The ionization energy of H from the ground state is 13.6 eV, which equals −E_1."
           ],
           "figure": {
             "src": "art/h-bohr-levels.svg",
             "alt": "Bohr energy-level diagram for hydrogen showing n=1, 2, 3 and infinity, with a red emission arrow for the Balmer n=3 to n=2 photon at 656 nm."
+          },
+          "worked": {
+            "title": "Photon energy for the n = 3 → 2 transition (in eV)",
+            "steps": [
+              "Write E_n = −13.6 eV / n².",
+              "E_3 = −13.6 / 9 = −1.511... eV. Keep as −13.6/9.",
+              "E_2 = −13.6 / 4 = −3.40 eV.",
+              "The electron falls from n = 3 to n = 2, so it loses energy. The photon carries that lost energy.",
+              "Photon energy E_photon = E_3 − E_2? Careful: E_3 is less negative than E_2, so E_3 − E_2 is positive: (−13.6/9) − (−13.6/4) = −13.6/9 + 13.6/4.",
+              "Factor: E_photon = 13.6 (1/4 − 1/9) eV.",
+              "1/4 = 0.25000. 1/9 = 0.11111. Difference = 0.13889.",
+              "Common denominator: 1/4 − 1/9 = 9/36 − 4/36 = 5/36.",
+              "E_photon = 13.6 × (5/36) = 68.0 / 36 = 1.888... eV.",
+              "Final answer: 1.89 eV (3 sig figs from 13.6)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Wavelength of the n = 3 → 2 line with the Rydberg formula",
+              "steps": [
+                "Rydberg formula for hydrogen: 1/λ = R_H (1/n_low² − 1/n_high²), with R_H = 1.097 × 10⁷ m⁻¹.",
+                "Here n_low = 2, n_high = 3.",
+                "1/n_low² − 1/n_high² = 1/4 − 1/9 = 5/36 = 0.138889.",
+                "1/λ = (1.097 × 10⁷)(0.138889) = 1.5236 × 10⁶ m⁻¹.",
+                "λ = 1 / 1.5236 × 10⁶ = 6.563 × 10⁻⁷ m.",
+                "In nm: 6.563 × 10⁻⁷ m × (10⁹ nm / 1 m) = 656.3 nm.",
+                "Final answer: 656.3 nm (the red Balmer line)."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Computing E_photon as E_2 − E_3 and reporting a negative energy for the emitted light.",
+            "whyWrong": "Photon energy is a positive amount of energy carried by the light. E_2 is more negative than E_3, so E_2 − E_3 is negative and is not the photon energy.",
+            "correct": "Take the positive gap: E_photon = |E_high − E_low| = 13.6 (1/n_low² − 1/n_high²) eV for emission."
           }
         },
         {
-          "heading": "Orbitals and quantum numbers",
+          "id": "quantum-numbers",
+          "heading": "Quantum numbers",
           "paragraphs": [
-            "Quantum numbers label orbitals: n (shell), ℓ (subshell: s,p,d,f), m_ℓ (orientation), m_s (spin ±½). An orbital holds at most two electrons with opposite spins (Pauli principle)."
+            "Modern quantum theory replaces Bohr orbits with orbitals. Four quantum numbers label an electron in an atom:",
+            "1. Principal quantum number n = 1, 2, 3, … It sets the shell and the main energy scale.",
+            "2. Angular-momentum quantum number ℓ = 0, 1, 2, …, (n − 1). It sets the subshell shape. Names: ℓ = 0 is s, 1 is p, 2 is d, 3 is f.",
+            "3. Magnetic quantum number m_ℓ = −ℓ, …, 0, …, +ℓ. It labels the orientation of the orbital. An s subshell has 1 orbital. A p subshell has 3. A d subshell has 5.",
+            "4. Spin quantum number m_s = +½ or −½. Each orbital holds at most two electrons, and they must have opposite spins (Pauli exclusion principle).",
+            "The set (n, ℓ, m_ℓ) labels one orbital. The set (n, ℓ, m_ℓ, m_s) labels one electron in that orbital.",
+            "Shell capacity: shell n holds at most 2n² electrons. So n = 1 holds 2, n = 2 holds 8, n = 3 holds 18. That matches the familiar 2, 8, 18 pattern.",
+            "Forbidden combinations are common trap answers on exams. Examples: n = 1 with ℓ = 1 (no 1p); n = 2 with ℓ = 2 (no 2d); m_ℓ = 2 when ℓ = 1 (m_ℓ cannot exceed ℓ)."
+          ],
+          "worked": {
+            "title": "Allowed quantum numbers for a 2p electron",
+            "steps": [
+              "For any 2p electron, n = 2 (the shell number in the label).",
+              "p means ℓ = 1.",
+              "m_ℓ for ℓ = 1 can be −1, 0, or +1.",
+              "m_s can be +½ or −½.",
+              "One valid set is n = 2, ℓ = 1, m_ℓ = 0, m_s = +½.",
+              "A forbidden example: n = 2, ℓ = 2 is impossible because ℓ must be less than n (ℓ max = n − 1 = 1)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "How many electrons can fit in n = 3?",
+              "steps": [
+                "Use capacity 2n² with n = 3.",
+                "2 × 3² = 2 × 9 = 18.",
+                "Broken down by subshell: 3s (1 orbital, 2 e⁻) + 3p (3 orbitals, 6 e⁻) + 3d (5 orbitals, 10 e⁻) = 18.",
+                "Final answer: 18 electrons."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "orbital-shapes",
+          "heading": "Orbital shapes",
+          "paragraphs": [
+            "An orbital is a region of space where an electron is likely to be found. The shape comes from the wavefunction for that (n, ℓ, m_ℓ).",
+            "An s orbital is spherical. A p orbital has two lobes on opposite sides of the nucleus (a dumbbell). Many d orbitals have four lobes (a cloverleaf). The figure below shows the common schematic shapes for 1s, 2p, and a 3d orbital.",
+            "Nodes are places where the electron density is zero. A 2s orbital has a spherical node inside. A 2p orbital has a nodal plane through the nucleus.",
+            "The sign labels (+/−) on orbital lobes are the sign of the wavefunction, not electric charge. Overlap of same-sign lobes builds bonding interactions later in the bonding chapters.",
+            "Do not picture an electron traveling on a Bohr ring when you use orbitals. The orbital picture replaces that ring with a probability cloud."
           ],
           "figure": {
             "src": "art/orbital-shapes-1s-2p-3d.svg",
             "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, and a four-leaf 3d clover (dx2−y2 style)."
+          },
+          "why": "Orbital shapes matter later for bonding: which orbitals overlap, and at what angle, sets molecular geometry."
+        },
+        {
+          "id": "check-electrons",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "A photon has frequency 5.00 × 10¹⁴ Hz. What is its energy?",
+                "a": "E = hν = (6.626×10⁻³⁴)(5.00×10¹⁴) = 3.31×10⁻¹⁹ J."
+              },
+              {
+                "q": "What is E_1 for hydrogen in eV?",
+                "a": "E_1 = −13.6 / 1² = −13.6 eV (the ground state)."
+              },
+              {
+                "q": "How many orbitals are in a d subshell, and how many electrons can it hold?",
+                "a": "ℓ = 2 → five m_ℓ values → 5 orbitals → 10 electrons max."
+              }
+            ]
           }
         }
       ]
     },
     "electron-configurations-and-the-periodic": {
+      "topic_id": "electron-configurations-and-the-periodic",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Building configurations",
+          "id": "aufbau-pauli-hund",
+          "heading": "Aufbau, Pauli, and Hund",
           "paragraphs": [
-            "Fill orbitals in order of increasing energy (Aufbau): 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p … Hund's rule: put one electron in each degenerate orbital before pairing.",
-            "Noble-gas shorthand writes the previous noble gas in brackets, then the remaining valence configuration. The block of the periodic table (s, p, d, f) matches the last subshell filled."
+            "A ground-state electron configuration lists how electrons fill orbitals in an atom at lowest energy. Three rules guide the filling:",
+            "1. Aufbau (building-up): fill lower-energy orbitals before higher ones. A common order is 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p …",
+            "2. Pauli exclusion: no two electrons in an atom can share the same four quantum numbers. Practical result: an orbital holds at most two electrons, and they must have opposite spins.",
+            "3. Hund's rule: when electrons occupy degenerate orbitals (same energy, like the three 2p orbitals), put one electron in each orbital with parallel spins before pairing any of them.",
+            "Degenerate means equal in energy. The three 2p orbitals are degenerate in a free atom. Hund's rule applies to any set of degenerate orbitals (2p, 3p, 3d, …).",
+            "A box diagram draws one box per orbital and arrows for electrons (↑ and ↓ for the two spins). Empty box = empty orbital. One arrow = unpaired. Two arrows = paired.",
+            "Why Hund's rule exists in plain terms: electrons repel each other. Spreading them across different orbitals (with the same spin) keeps them farther apart on average than pairing them in one orbital. That arrangement is lower in energy.",
+            "Pauli's rule is absolute. Hund and Aufbau describe the lowest-energy arrangement; excited atoms can violate Aufbau temporarily when light pumps an electron up.",
+            "After you finish a box diagram, count the arrows. The number of arrows must equal Z for a neutral atom, or Z minus the positive charge (or Z plus the negative charge size) for an ion."
           ],
+          "why": "These three rules let you write the ground-state configuration for almost any main-group or first-row transition element without memorizing each one separately.",
           "figure": {
             "src": "art/orbital-boxes-c-n.svg",
             "alt": "Orbital box diagrams for carbon (1s2 2s2 2p2 with two unpaired 2p electrons) and nitrogen (1s2 2s2 2p3 with three unpaired 2p electrons) illustrating Hund’s rule."
           },
           "worked": {
-            "title": "Find the element [Kr]4d¹⁰5s²5p³",
+            "title": "Orbital diagram for carbon and nitrogen",
             "steps": [
-              "After Kr, add 4d¹⁰ 5s² 5p³ → total electrons beyond Kr: 15",
-              "Period 5, group 15 (pnictogen) → antimony, Sb"
+              "Carbon has Z = 6, so 6 electrons total.",
+              "Fill the lowest orbital first: 1s takes 2 electrons with opposite spins. Write 1s².",
+              "Next is 2s: put 2 electrons with opposite spins. Write 2s². Electrons used so far: 4. Remaining: 2.",
+              "Next is 2p. There are three 2p orbitals of equal energy.",
+              "Hund's rule: place the first remaining electron in one 2p orbital (say 2p_x). Place the second in a different 2p orbital (2p_y), with the same spin direction as the first.",
+              "Do not pair both electrons in 2p_x. That would cost pairing energy and break Hund's rule.",
+              "Carbon configuration: 1s² 2s² 2p², with two unpaired 2p electrons.",
+              "Nitrogen has Z = 7. Same filling through 1s² 2s² leaves 3 electrons for the 2p subshell.",
+              "Place one electron in each of the three 2p orbitals with parallel spins: 1s² 2s² 2p³, three unpaired electrons."
             ]
           }
         },
         {
-          "heading": "Exceptions and ions",
+          "id": "writing-configurations",
+          "heading": "Writing configurations and noble-gas shorthand",
           "paragraphs": [
-            "Cr and Cu prefer half-filled or filled d subshells: Cr is [Ar]3d⁵4s¹ (not 3d⁴4s²). For transition-metal cations, remove s electrons before d electrons: Fe is [Ar]3d⁶4s²; Fe³⁺ is [Ar]3d⁵."
+            "The full configuration lists every subshell. Noble-gas shorthand replaces the inner core with the symbol of the previous noble gas in brackets, then writes only the remaining electrons.",
+            "Example: Na is 1s² 2s² 2p⁶ 3s¹, which shortens to [Ne] 3s¹. The electrons after the noble-gas core are the valence electrons for main-group elements.",
+            "The block of the periodic table matches the last subshell being filled: s-block (Groups 1–2), p-block (Groups 13–18), d-block (transition metals), f-block (lanthanides and actinides).",
+            "Period number matches the highest n in the configuration for main-group elements. Na ends in 3s¹ and sits in Period 3. Cl ends in 3p⁵ and also sits in Period 3.",
+            "Group number for main-group elements relates to valence electron count. Na has 1 valence electron (Group 1). Cl has 7 valence electrons (Group 17 in the IUPAC numbering).",
+            "Order of writing vs order of filling: electrons fill 4s before 3d in Aufbau, but many texts write the configuration in order of increasing n (… 3d then 4s) for ions. For neutral atoms, writing Aufbau order (4s before 3d) or n-order (3d before 4s) are both accepted if the electron counts are correct.",
+            "Condensed tip: after you write a configuration, add the superscripts. If the sum is not Z, you missed or double-counted a subshell.",
+            "Calcium check: Ca (Z = 20) is [Ar] 4s². It sits in Period 4, Group 2, s-block. If your configuration for Ca ends in 3d or 4p, the electron count or Aufbau order is wrong.",
+            "Valence vs core: for main-group atoms the valence electrons are those beyond the previous noble-gas core. Those are the electrons that take part in bonding. Core electrons stay put in ordinary chemical reactions."
+          ],
+          "worked": {
+            "title": "Identify the element [Kr] 4d¹⁰ 5s² 5p³",
+            "steps": [
+              "Kr is krypton, Z = 36. Everything in brackets is the Kr core.",
+              "Count electrons written after Kr: 4d¹⁰ adds 10, 5s² adds 2, 5p³ adds 3. Total added = 15.",
+              "Atomic number of the element = 36 + 15 = 51.",
+              "Z = 51 is antimony, Sb.",
+              "Check on the table: Period 5, Group 15 (the nitrogen family). The last subshell is 5p, so it sits in the p-block. That matches Sb.",
+              "Final answer: Sb (antimony)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Write the ground-state configuration of S (Z = 16)",
+              "steps": [
+                "Fill in order: 1s² 2s² 2p⁶ 3s² 3p⁴.",
+                "Check the electron count: 2+2+6+2+4 = 16. Good.",
+                "Noble-gas shorthand: neon is 1s² 2s² 2p⁶, so S is [Ne] 3s² 3p⁴.",
+                "Final answer: 1s² 2s² 2p⁶ 3s² 3p⁴, or [Ne] 3s² 3p⁴."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exceptions-cr-cu",
+          "heading": "Cr and Cu exceptions",
+          "paragraphs": [
+            "Two first-row exceptions appear in almost every textbook. Chromium and copper prefer a half-filled or filled d subshell over the strict Aufbau prediction.",
+            "Cr (Z = 24): the expected [Ar] 4s² 3d⁴ is higher in energy than the observed [Ar] 4s¹ 3d⁵. Half-filled 3d⁵ is especially stable.",
+            "Cu (Z = 29): the expected [Ar] 4s² 3d⁹ is higher than the observed [Ar] 4s¹ 3d¹⁰. A filled 3d¹⁰ is especially stable.",
+            "Memorize these two. Do not invent other exceptions unless a problem or table says so.",
+            "After Cr and Cu, later exceptions exist in heavier transition metals, but intro courses usually test Cr and Cu only. When in doubt on an exam, apply Aufbau unless the element is Cr or Cu (or the problem states an exception).",
+            "Mo and Ag show similar patterns to Cr and Cu in some tables, but your first priority is Cr and Cu.",
+            "A memory hook many students use: half-full (d⁵) and full (d¹⁰) d subshells are worth \"stealing\" one s electron. Cr steals to make d⁵. Cu steals to make d¹⁰."
           ],
           "figure": {
             "src": "art/orbital-boxes-cr-fe3.svg",
             "alt": "Orbital box diagrams for chromium as [Ar] 3d5 4s1 with six unpaired electrons, and for Fe3+ as [Ar] 3d5 with five unpaired 3d electrons."
+          },
+          "worked": {
+            "title": "Ground-state configuration of Cr",
+            "steps": [
+              "Z(Cr) = 24. Argon core is 18 electrons, so 6 remain.",
+              "Strict Aufbau would suggest 4s² 3d⁴.",
+              "Apply the chromium exception: move one electron from 4s into 3d to make 3d⁵ 4s¹.",
+              "Write [Ar] 3d⁵ 4s¹ (order of writing 3d before 4s in the final label is common for transition metals; either 4s¹ 3d⁵ or 3d⁵ 4s¹ is understood).",
+              "Orbital picture: five unpaired 3d electrons and one unpaired 4s electron → six unpaired electrons total."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Ground-state configuration of Cu",
+              "steps": [
+                "Z(Cu) = 29. Argon core = 18. Electrons left = 11.",
+                "Strict Aufbau would suggest 4s² 3d⁹.",
+                "Apply the copper exception: one electron moves from 4s to 3d to complete 3d¹⁰.",
+                "Write [Ar] 4s¹ 3d¹⁰ (or [Ar] 3d¹⁰ 4s¹).",
+                "Unpaired electrons: only the single 4s electron is unpaired (3d¹⁰ is fully paired).",
+                "Final answer: [Ar] 4s¹ 3d¹⁰."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ions-configurations",
+          "heading": "Configurations of ions",
+          "paragraphs": [
+            "For main-group ions, add or remove valence electrons from the neutral configuration. O is [He] 2s² 2p⁴. O²⁻ is [He] 2s² 2p⁶, which is the same as Ne.",
+            "For transition-metal cations, remove the s electrons before the d electrons. Neutral Fe is [Ar] 4s² 3d⁶. Fe²⁺ is [Ar] 3d⁶. Fe³⁺ is [Ar] 3d⁵.",
+            "Why s before d: in the ion, the 3d orbitals drop below 4s, so the 4s electrons are the ones lost first when the atom is ionized.",
+            "Isoelectronic warning: Na⁺, Ne, and F⁻ all have the configuration 1s² 2s² 2p⁶. Same electron arrangement does not mean same size or same ionization energy; those still depend on nuclear charge.",
+            "When a problem asks for the number of unpaired electrons in an ion, draw the orbital boxes after you write the ion configuration. Do not use the neutral atom's unpaired count.",
+            "Main-group anion example: Cl is [Ne] 3s² 3p⁵. Cl⁻ adds one electron to finish 3p⁶: [Ne] 3s² 3p⁶, same as Ar. That is why chloride is a closed-shell, noble-gas-like ion.",
+            "Same method for Mn²⁺ (Z = 25): neutral Mn is [Ar] 4s² 3d⁵; Mn²⁺ is [Ar] 3d⁵ with five unpaired electrons. Always rebuild the ion from the neutral atom rather than guessing the d count."
+          ],
+          "worked": {
+            "title": "Configuration of Fe³⁺",
+            "steps": [
+              "Neutral Fe (Z = 26): [Ar] 4s² 3d⁶.",
+              "Fe³⁺ has lost 3 electrons.",
+              "Remove the two 4s electrons first: that accounts for 2 of the 3.",
+              "Remove one more electron from 3d: 3d⁶ → 3d⁵.",
+              "Fe³⁺ configuration: [Ar] 3d⁵.",
+              "This is a half-filled d subshell with five unpaired electrons."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Configuration of Cu⁺",
+              "steps": [
+                "Neutral Cu is the exception: [Ar] 4s¹ 3d¹⁰.",
+                "Cu⁺ loses the 4s electron.",
+                "Cu⁺ is [Ar] 3d¹⁰.",
+                "Final answer: [Ar] 3d¹⁰ (diamagnetic, no unpaired electrons)."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Writing Fe³⁺ as [Ar] 4s² 3d³ by stripping three electrons from 3d and leaving 4s alone.",
+            "whyWrong": "Transition-metal cations lose 4s electrons before 3d electrons. Leaving 4s² while emptying 3d reverses the real ionization order.",
+            "correct": "Start from Fe [Ar] 4s² 3d⁶. Remove 4s² first, then one 3d electron → [Ar] 3d⁵."
+          }
+        },
+        {
+          "id": "check-configs",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "What is the noble-gas shorthand for Cl (Z = 17)?",
+                "a": "[Ne] 3s² 3p⁵."
+              },
+              {
+                "q": "How many unpaired electrons does N have in the ground state?",
+                "a": "Three (Hund's rule fills 2p with one electron in each of the three orbitals)."
+              },
+              {
+                "q": "What is the configuration of Fe²⁺?",
+                "a": "[Ar] 3d⁶ (remove 4s² from Fe [Ar] 4s² 3d⁶)."
+              }
+            ]
           }
         }
       ]
     },
     "periodic-trends-in-atomic-properties": {
+      "topic_id": "periodic-trends-in-atomic-properties",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Atomic and ionic radius",
+          "id": "atomic-radius",
+          "heading": "Atomic radius and effective nuclear charge",
           "paragraphs": [
-            "Atomic radius generally decreases across a period (more protons pull the same shell tighter) and increases down a group (new shells). For isoelectronic ions (same electron count), more protons → smaller radius."
+            "Atomic radius is a measure of atom size. Across a period (left to right), atomic radius generally decreases. Down a group, atomic radius generally increases.",
+            "Why across a period: each step adds a proton to the nucleus and an electron to the same valence shell. The stronger nuclear pull wins, so the shell shrinks. Chemists describe this with effective nuclear charge Z_eff: the net positive pull felt by a valence electron after inner electrons shield some of the full nuclear charge Z.",
+            "Why down a group: each step adds a new shell (larger n). The outer electrons sit farther from the nucleus, so the atom is larger even though Z is also larger.",
+            "There is more than one experimental definition of radius (covalent, metallic, van der Waals). The periodic trends taught here are the same qualitative pattern for all of them.",
+            "Effective nuclear charge for a valence electron is often estimated as Z_eff ≈ Z − S, where S is a shielding constant from the inner electrons. Across Period 2, Z_eff rises steadily, which is why atoms shrink.",
+            "Noble-gas radii are often van der Waals radii and look large on some charts; compare like with like when you read a figure. For metals, metallic radii are the usual comparison down a group.",
+            "Transition-metal radii change more slowly across a period than main-group radii because added electrons enter an inner d subshell and shield each other strongly."
+          ],
+          "why": "Radius trends explain bond lengths, ion sizes, and why lattice energies and hydration energies change across the table.",
+          "worked": {
+            "title": "Which is larger, Na or Cl? Na or K?",
+            "steps": [
+              "Na and Cl are in the same period (Period 3). Na is on the left (Group 1). Cl is on the right (Group 17).",
+              "Across a period, Z_eff rises and radius falls. Prediction: Na is larger than Cl.",
+              "Na and K are in the same group (Group 1). K is in Period 4, below Na in Period 3.",
+              "Down a group, a new shell is added. Prediction: K is larger than Na.",
+              "Quick Z_eff check for Na vs Cl: both have Ne-like cores, but Cl has Z = 17 while Na has Z = 11, so Cl's valence electrons feel a stronger pull.",
+              "Final answers: radius Na > Cl; radius K > Na."
+            ]
+          }
+        },
+        {
+          "id": "ionic-radius",
+          "heading": "Ionic radius",
+          "paragraphs": [
+            "Cations are smaller than their parent atoms because they have lost the outer shell (or lost electrons from it) and the remaining electrons feel a stronger pull per electron. Anions are larger than their parent atoms because extra electrons increase electron–electron repulsion and the same nuclear charge is spread over more electrons.",
+            "Isoelectronic ions have the same number of electrons. For an isoelectronic set, the ion with the most protons is the smallest, because Z is highest while the electron count is fixed.",
+            "For a single element, radius order is usually anion > neutral atom > cation. Example for oxygen: O²⁻ > O > O⁺ (O⁺ is uncommon in simple compounds but the size idea holds).",
+            "When comparing ions that are not isoelectronic, you need both electron count and nuclear charge. Prefer isoelectronic comparisons when the problem allows them.",
+            "The schematic chart in this section shows the isoelectronic set O²⁻, F⁻, Na⁺, Mg²⁺ drawn larger to smaller. It is a teaching sketch, not a scale drawing of measured picometers."
           ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 188\" role=\"img\" aria-label=\"Relative size (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">Relative size (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">anions</text><rect x=\"110\" y=\"28\" width=\"12\" height=\"12\" fill=\"#8A93A0\" rx=\"2\"/><text x=\"126\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">cations</text></g><rect x=\"28.0\" y=\"56.0\" width=\"58.0\" height=\"108.0\" fill=\"#2B5FD9\" rx=\"3\"/><rect x=\"94.0\" y=\"74.0\" width=\"58.0\" height=\"90.0\" fill=\"#2B5FD9\" rx=\"3\"/><rect x=\"160.0\" y=\"98.0\" width=\"58.0\" height=\"66.0\" fill=\"#8A93A0\" rx=\"3\"/><rect x=\"226.0\" y=\"116.0\" width=\"58.0\" height=\"48.0\" fill=\"#8A93A0\" rx=\"3\"/><text x=\"57.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">O²⁻</text><text x=\"123.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">F⁻</text><text x=\"189.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Na⁺</text><text x=\"255.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Mg²⁺</text></svg>",
           "worked": {
             "title": "Order Na⁺, Mg²⁺, F⁻, O²⁻ by increasing radius",
             "steps": [
-              "All have 10 electrons (isoelectronic with Ne)",
-              "Nuclear charge: Mg 12 > Na 11 > F 9 > O 8",
-              "Higher Z pulls electrons closer → smaller ion",
-              "Order: Mg²⁺ < Na⁺ < F⁻ < O²⁻"
+              "Count electrons for each ion.",
+              "Na⁺: Na has Z = 11; Na⁺ has 10 electrons.",
+              "Mg²⁺: Mg has Z = 12; Mg²⁺ has 10 electrons.",
+              "F⁻: F has Z = 9; F⁻ has 10 electrons.",
+              "O²⁻: O has Z = 8; O²⁻ has 10 electrons.",
+              "All four are isoelectronic with Ne (10 electrons).",
+              "Compare nuclear charge Z: Mg 12 > Na 11 > F 9 > O 8.",
+              "Higher Z pulls the same 10 electrons closer, so the radius is smaller.",
+              "Order of increasing radius: Mg²⁺ < Na⁺ < F⁻ < O²⁻."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Which is larger, Fe²⁺ or Fe³⁺?",
+              "steps": [
+                "Both ions come from Fe (Z = 26).",
+                "Fe²⁺ has 24 electrons. Fe³⁺ has 23 electrons.",
+                "Fe³⁺ has the same nuclear charge but fewer electrons, so electron–electron repulsion is lower and Z_eff per electron is higher.",
+                "Fe³⁺ is smaller than Fe²⁺.",
+                "Final answer: Fe²⁺ > Fe³⁺ in radius."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Ordering the isoelectronic set by atomic number of the element alone without checking the electron count, or ranking by the ion charge sign only (all anions bigger than all cations is true here, but that shortcut fails when charges differ within cations).",
+            "whyWrong": "The reliable rule for isoelectronic ions is: more protons → smaller ion. Charge sign is a clue, but the proton count is the reason.",
+            "correct": "Confirm the ions share the same electron count, then sort by Z. Here Mg²⁺ (Z=12) is smallest and O²⁻ (Z=8) is largest."
           }
         },
         {
+          "id": "ionization-energy",
           "heading": "Ionization energy",
           "paragraphs": [
-            "First ionization energy (IE₁) generally rises across a period and falls down a group. Exceptions: Be→B and N→O. Removing a paired 2p electron from O is easier than removing an unpaired 2p electron from N because of electron–electron repulsion in the pair."
+            "First ionization energy (IE₁) is the energy needed to remove the highest-energy electron from 1 mol of gas-phase atoms: X(g) → X⁺(g) + e⁻. IE₁ generally increases across a period and decreases down a group.",
+            "Across a period: Z_eff rises, so electrons are held more tightly. Down a group: the outer electron is farther from the nucleus, so it is easier to remove.",
+            "Two famous Period 2 exceptions: Be → B and N → O. IE₁ of B is lower than Be because B starts a new 2p subshell (higher energy, less tightly held) while Be has a filled 2s². IE₁ of O is lower than N because O must pair two electrons in one 2p orbital; the pairing repulsion makes that electron easier to remove than an unpaired 2p electron in N.",
+            "Second ionization energy IE₂ is the energy to remove a second electron from the already positive ion: X⁺(g) → X²⁺(g) + e⁻. IE₂ is always larger than IE₁ because you are pulling an electron away from a more positive species.",
+            "A huge jump between IE₁ and IE₂ (or between IE₂ and IE₃) signals that you have broken into a noble-gas core. Na has a low IE₁ and a very high IE₂, which matches forming Na⁺ but not Na²⁺ in ordinary chemistry.",
+            "Removing successive electrons always costs more energy: IE₁ < IE₂ < IE₃ < … for a given element. The jumps are modest while you remove valence electrons and become huge when you start removing core electrons.",
+            "Metals tend to have low IE₁ (they form cations easily). Nonmetals tend to have high IE₁ (they hold electrons tightly and more often form anions or share electrons)."
           ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"IE₁ across period 2 (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">IE₁ across period 2 (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">IE₁ trend</text></g><path d=\"M 28.0,112.5 L 65.7,94.5 L 103.4,100.8 L 141.1,88.2 L 178.9,73.8 L 216.6,81.0 L 254.3,63.0 L 292.0,54.0\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"112.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"65.7\" cy=\"94.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"103.4\" cy=\"100.8\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"141.1\" cy=\"88.2\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"178.9\" cy=\"73.8\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"216.6\" cy=\"81.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"254.3\" cy=\"63.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"54.0\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Li</text><text x=\"65.7\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Be</text><text x=\"103.4\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">B</text><text x=\"141.1\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">C</text><text x=\"178.9\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">N</text><text x=\"216.6\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">O</text><text x=\"254.3\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">F</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Ne</text></svg>"
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"IE₁ across period 2 (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">IE₁ across period 2 (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">IE₁ trend</text></g><path d=\"M 28.0,112.5 L 65.7,94.5 L 103.4,100.8 L 141.1,88.2 L 178.9,73.8 L 216.6,81.0 L 254.3,63.0 L 292.0,54.0\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"112.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"65.7\" cy=\"94.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"103.4\" cy=\"100.8\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"141.1\" cy=\"88.2\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"178.9\" cy=\"73.8\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"216.6\" cy=\"81.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"254.3\" cy=\"63.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"54.0\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Li</text><text x=\"65.7\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Be</text><text x=\"103.4\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">B</text><text x=\"141.1\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">C</text><text x=\"178.9\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">N</text><text x=\"216.6\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">O</text><text x=\"254.3\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">F</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">Ne</text></svg>",
+          "worked": {
+            "title": "Why is IE₁(O) less than IE₁(N)?",
+            "steps": [
+              "Write the valence configurations: N is 2s² 2p³. O is 2s² 2p⁴.",
+              "In N, the three 2p electrons sit one in each 2p orbital (Hund). No pairs in 2p.",
+              "In O, four 2p electrons mean one of the 2p orbitals holds a pair.",
+              "The paired electrons repel each other. That repulsion raises the energy of the electron you remove from O.",
+              "So less energy is needed to remove one electron from O than from N, even though O has a higher nuclear charge.",
+              "Result: IE₁ dips from N to O on the Period 2 plot."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Rank IE₁ for Na, Mg, Al",
+              "steps": [
+                "All are Period 3. General trend: IE₁ rises left → right, but watch the Mg → Al exception (like Be → B).",
+                "Na is 3s¹. Mg is 3s². Al is 3s² 3p¹.",
+                "Mg has a filled 3s² subshell. Al starts the 3p subshell.",
+                "IE₁ order: Na < Al < Mg. (Al is below Mg because of the p-subshell start; both are above Na.)",
+                "Final answer: Na has the lowest IE₁ of the three; Mg has the highest."
+              ]
+            }
+          ]
         },
         {
-          "heading": "Paramagnetism",
+          "id": "electron-affinity-magnetism",
+          "heading": "Electron affinity and magnetism",
           "paragraphs": [
-            "A species is paramagnetic if it has unpaired electrons. Ca ([Ar]4s²) and Zn²⁺ ([Ar]3d¹⁰) are diamagnetic; Fe²⁺ ([Ar]3d⁶) has unpaired electrons and is paramagnetic."
+            "Electron affinity (EA) is the energy change when a gas-phase atom gains an electron: X(g) + e⁻ → X⁻(g). A more negative EA means a more exothermic (favorable) gain. Halogens have very negative electron affinities. Noble gases have EA near zero or positive (unfavorable).",
+            "Paramagnetism and diamagnetism come from unpaired electrons. A species with one or more unpaired electrons is paramagnetic (attracted into a magnetic field). A species with all electrons paired is diamagnetic (weakly repelled).",
+            "To decide, write the ground-state configuration or orbital diagram and count unpaired electrons. Ca is [Ar] 4s² → 0 unpaired → diamagnetic. Fe²⁺ is [Ar] 3d⁶ → in the high-spin free-ion picture used in intro chemistry, four unpaired → paramagnetic. Zn²⁺ is [Ar] 3d¹⁰ → 0 unpaired → diamagnetic.",
+            "Sign caution: some older tables report electron affinity as a positive number meaning \"energy released.\" Modern thermochemical tables usually report ΔE for X(g)+e⁻→X⁻(g) as a negative value when the process is exothermic. Read the sign convention in the problem.",
+            "In coordination chemistry, Fe²⁺ can be high-spin or low-spin depending on the ligands. Intro general chemistry almost always means the free-ion high-spin count (four unpaired for 3d⁶) when it asks about Fe²⁺ paramagnetism.",
+            "Fluorine's electron affinity is slightly less negative than chlorine's in many tables, even though F is more electronegative. The small F atom packs electron–electron repulsion into a tight space when it forms F⁻. That detail is optional for early exams; the main pattern is that halogens have the most favorable (most negative) EA values.",
+            "Magnetism check procedure: (1) write the configuration of the species asked, (2) draw the valence orbital boxes with Hund's rule, (3) count unpaired arrows. Zero means diamagnetic. One or more means paramagnetic."
           ],
           "figure": {
             "src": "art/unpaired-ca-zn2-fe2.svg",
             "alt": "Orbital boxes showing Ca ([Ar] 4s2) and Zn2+ ([Ar] 3d10) with zero unpaired electrons (diamagnetic), and Fe2+ ([Ar] 3d6) with four unpaired electrons (paramagnetic)."
+          },
+          "worked": {
+            "title": "Is Fe²⁺ paramagnetic?",
+            "steps": [
+              "Fe is [Ar] 4s² 3d⁶. Fe²⁺ is [Ar] 3d⁶.",
+              "Place six electrons in five 3d orbitals with Hund's rule: one in each of five orbitals first (5 electrons), then pair the sixth in one orbital.",
+              "Unpaired count: 4 (five orbitals start with one each; pairing removes one unpaired, leaving four unpaired).",
+              "Four unpaired electrons means Fe²⁺ is paramagnetic.",
+              "Final answer: paramagnetic (4 unpaired electrons in the free-ion orbital diagram)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Ca vs Zn²⁺ vs Fe²⁺ magnetism",
+              "steps": [
+                "Ca: [Ar] 4s². The 4s box has two paired electrons. Unpaired = 0 → diamagnetic.",
+                "Zn²⁺: Zn is [Ar] 4s² 3d¹⁰; Zn²⁺ loses 4s² → [Ar] 3d¹⁰. All five 3d boxes paired. Unpaired = 0 → diamagnetic.",
+                "Fe²⁺: [Ar] 3d⁶. High-spin free-ion boxes: ↑ ↑ ↑ ↑ ↑ then pair one → four unpaired.",
+                "Unpaired = 4 → paramagnetic.",
+                "Final answers: Ca diamagnetic; Zn²⁺ diamagnetic; Fe²⁺ paramagnetic."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-trends",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "title": "Check yourself",
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "Which is larger, S or S²⁻?",
+                "a": "S²⁻ is larger. Adding electrons increases repulsion and lowers Z_eff per electron."
+              },
+              {
+                "q": "Which has the higher IE₁, F or Cl?",
+                "a": "F. IE₁ falls down a group; F's valence electrons are closer to the nucleus than Cl's."
+              },
+              {
+                "q": "Is Zn²⁺ paramagnetic or diamagnetic?",
+                "a": "Diamagnetic. Zn²⁺ is [Ar] 3d¹⁰ with all electrons paired."
+              }
+            ]
           }
         }
       ]
