@@ -75,12 +75,42 @@ function home() {
   $('#exp').onclick = doExport; $('#imp').onclick = () => $('#importFile').click();
 }
 
-function renderSection(sec) {
+function secAnchorId(sec, i) {
+  if (sec.id) return String(sec.id).replace(/[^a-zA-Z0-9_-]/g, '-');
+  const base = String(sec.heading || 'section').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return (base || 'section') + '-' + i;
+}
+function renderWorked(w) {
+  if (!w) return '';
+  const steps = (w.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
+  return `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${esc(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
+}
+function renderSection(sec, i) {
   let h = '';
-  if (sec.heading) h += `<h3 class="rh">${esc(sec.heading)}</h3>`;
+  const aid = secAnchorId(sec, i);
+  if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${esc(sec.heading)}</h3>`;
   (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${esc(p)}</p>`; });
-  if (sec.worked) {
-    h += `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${esc(sec.worked.title)}</div><ol class="steps">${sec.worked.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol></div>`;
+  if (sec.why) {
+    h += `<div class="callout callout-why" data-why="1"><div class="cap">Why this matters</div><p class="rp" style="margin:0">${esc(sec.why)}</p></div>`;
+  }
+  const works = [];
+  if (sec.worked) works.push(sec.worked);
+  (sec.workedExamples || []).forEach(w => works.push(w));
+  works.forEach(w => { h += renderWorked(w); });
+  if (sec.mistake) {
+    const m = sec.mistake;
+    h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">Common mistake</div>`;
+    if (m.wrong) h += `<p class="rp"><strong>Wrong approach.</strong> ${esc(m.wrong)}</p>`;
+    if (m.whyWrong) h += `<p class="rp"><strong>Why it is wrong.</strong> ${esc(m.whyWrong)}</p>`;
+    if (m.correct) h += `<p class="rp"><strong>Correct way.</strong> ${esc(m.correct)}</p>`;
+    h += `</div>`;
+  }
+  if (sec.check && (sec.check.items || []).length) {
+    h += `<div class="callout callout-check" data-check="1"><div class="cap">${esc(sec.check.title || 'Check yourself')}</div><ol class="check-list">`;
+    sec.check.items.forEach(it => {
+      h += `<li><div class="check-q">${esc(it.q || '')}</div><div class="check-a"><span class="cap">Answer</span> ${esc(it.a || '')}</div></li>`;
+    });
+    h += `</ol></div>`;
   }
   if (sec.svg) {
     // Trusted inline SVG from our own readings.json (not user input)
@@ -177,8 +207,21 @@ function reading(tid) {
   if (!r) {
     h += `<div class="card"><p class="rp">No reading for this topic yet.</p></div>`;
   } else {
+    const secs = r.sections || [];
+    if (secs.length) {
+      h += `<nav class="rtoc" aria-label="In this reading"><div class="cap">In this reading</div><ol class="rtoc-list">`;
+      secs.forEach((sec, i) => {
+        const aid = secAnchorId(sec, i);
+        const label = sec.heading || ('Section ' + (i + 1));
+        h += `<li><a class="rtoc-link" href="#${esc(aid)}">${esc(label)}</a></li>`;
+      });
+      h += `</ol></nav>`;
+    }
     h += `<div class="reading">`;
-    (r.sections || []).forEach(sec => { h += `<section class="rsec">${renderSection(sec)}</section>`; });
+    secs.forEach((sec, i) => {
+      const aid = secAnchorId(sec, i);
+      h += `<section class="rsec" id="sec-${esc(aid)}">${renderSection(sec, i)}</section>`;
+    });
     h += `</div>`;
   }
   h += `<div class="sticky" id="readEnd"><button class="btn" id="startPractice">Start practice (${qs.length} cards)</button></div>`;
