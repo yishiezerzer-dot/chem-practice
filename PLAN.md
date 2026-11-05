@@ -13,7 +13,12 @@ A free study website where HUJI chemistry students practice exam-style questions
 3. **Design.** A design bot (figma bro) designs the question screen, the answer reveal, and the dashboards.
 
 ## Content rule (decided)
-All explanations are written by us. Each answer points students to the book's chapter and pages. No textbook screenshots or copied text. Diagrams and structures are redrawn by us.
+All explanations are written by us. Each answer points students to the book's chapter and pages. No textbook screenshots or copied text.
+Diagrams and structures are redrawn by us: when a question needs a Lewis structure, electron configuration diagram, VSEPR shape, or MO diagram, **Chem Sketcher** draws it and **App Maker** embeds the sketch in the answer (never a textbook screenshot).
+
+## Reading before practice (decided 2026-11-05)
+Every topic opens with a **reading section** that teaches that topic in detail (the whole chemistry of the section), then the practice cards. Students learn first, then drill. Reading is original wording; book pointers only.
+Readings must **show** the chemistry, not only describe it: molecules and structures the student can see (Lewis, shapes, electron configs via Chem Sketcher), worked examples (for example balancing an equation step by step) before any card on that skill, and illustrations of periodic trends with a plain-words why. Same rule for answer reveals that need a structure.
 
 ## v1 (in)
 - General Chemistry (HUJI, chemistry majors) only, organized by syllabus topic.
@@ -29,7 +34,7 @@ All explanations are written by us. Each answer points students to the book's ch
 - Later: paid extras, mock exams with a timer, flashcards.
 
 ## Learning flow (decided)
-- Questions are grouped by syllabus topic in course order (chapter 1 to the end), never shuffled randomly across the whole course.
+- Questions are grouped by syllabus topic: a short starter block (measurement, mole, formulas, stoichiometry), then Yishi's Hebrew main-topics order (atoms/periodic → bonding early, including ionic/covalent/polar, Lewis, VSEPR, MO → equilibrium/thermochem → entropy/Gibbs → kinetics/acids/redox/precipitation → spectroscopy), never shuffled randomly across the whole course.
 - Each question is a card: question, then reveal answer with explanation and book reference.
 - After the reveal the student taps **Knew it / Unsure / Didn't know**. Each button shows when that card will come back.
 - Unsure and Didn't know cards come back later in the same session. The session ends when every card is marked Knew it.
@@ -47,15 +52,15 @@ All explanations are written by us. Each answer points students to the book's ch
 - The GitHub repo has separate dev and production environments. Changes go to dev first and move to production only after Yishi approves.
 
 ## Screens (v1)
-1. Home: pick a topic from the syllabus.
-2. Topic page: a list of questions with simple done/not done marks.
+1. Home: pick a topic from the syllabus (order from `data/topics.json`).
+2. Topic page: **Reading** first (full teach-up for that section), then a list of practice cards with simple done/not done marks.
 3. Question card: question plus the try-it-first tip, then a Reveal button (no answer input, as Yishi decided).
-4. Answer reveal: right or wrong, plus the step-by-step explanation and source reference.
+4. Answer reveal: step-by-step explanation, Chem Sketcher diagram when the structure matters, and source reference.
 5. Progress and weak topics view: done per topic, plus the weakest chapters first, kept in the browser.
 
 ## Data
-- Topics: name, syllabus order, textbook chapter reference.
-- Questions: topic, text, choices, correct answer, explanation, source reference, reviewed yes/no.
+- Topics: name, syllabus `order`, section theme, textbook chapter reference, plus a reading markdown body (teach-up).
+- Questions: topic, text, explanation, source reference, reviewed yes/no, optional sketch asset path (from Chem Sketcher).
 - Student progress (with a 'saved on this device' hint and export/import): only in the browser for v1 and v2, with no personal data.
 
 ## Cost
@@ -91,3 +96,9 @@ All explanations are written by us. Each answer points students to the book's ch
 - 2026-11-05: Book refs have no page numbers (no book copy). Yishi to fill pages from his copy, or keep section-level refs.
 
 - 2026-11-05: Yishi approved: create repo, push to \`dev\`, publish \`dev\` on GitHub Pages for review. Production stays Coming soon until he says go.
+
+- 2026-11-05: Dev live at https://yishiezerzer-dot.github.io/chem-practice/dev/ · repo https://github.com/yishiezerzer-dot/chem-practice (`dev` / `main`). Production Coming soon until Yishi approves.
+
+- 2026-11-05: Topic order remapped to Yishi's Hebrew main-topics list (bonding early; quantitative last). Added reading-before-practice and Chem Sketcher → App Maker embed rule.
+
+- 2026-11-05: Starter block before atoms (Yishi). Readings must show molecules, worked methods, and trend illustrations before cards.

@@ -1,0 +1,945 @@
+{
+  "meta": {
+    "course": "69107",
+    "book": "Atkins 8e",
+    "note": "Draft readings. reviewed:false on every topic. Structure figures use pending-sketch placeholders for Chem Sketcher. No book page numbers."
+  },
+  "readings": {
+    "measurement-units-and-significant-figure": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "What measurement means in chemistry",
+          "paragraphs": [
+            "Every measured value has a number and a unit. Chemistry uses SI units: metre (m), kilogram (kg), second (s), kelvin (K), mole (mol), and derived units such as litre (L) and pascal (Pa).",
+            "Prefixes scale units: kilo (k) = 10³, centi (c) = 10⁻², milli (m) = 10⁻³, micro (µ) = 10⁻⁶, nano (n) = 10⁻⁹. Dimensional analysis (cancel units) keeps conversions honest."
+          ]
+        },
+        {
+          "heading": "Significant figures",
+          "paragraphs": [
+            "Significant figures (sig figs) show how precisely a value was measured. Non-zero digits always count. Zeros between digits count. Leading zeros never count. Trailing zeros count only if the decimal point is written (0.004050 has 4 sig figs; 4050 is ambiguous).",
+            "In multiplication and division, keep the fewest sig figs of any factor. In addition and subtraction, keep the fewest decimal places (least precise place)."
+          ],
+          "worked": {
+            "title": "Sig figs in 0.004050",
+            "steps": [
+              "Write the number: 0.004050",
+              "Leading zeros before the first non-zero digit do not count → ignore 0.00",
+              "Digits that remain: 4, 0, 5, 0 → four significant figures",
+              "Answer: 4 sig figs"
+            ]
+          }
+        },
+        {
+          "heading": "Density",
+          "paragraphs": [
+            "Density ρ = m / V. Common units: g/mL or g/cm³ (same size for liquids and solids). Use density to convert mass ↔ volume."
+          ],
+          "worked": {
+            "title": "Density of a liquid",
+            "steps": [
+              "Given: m = 19.7 g, V = 25.0 mL",
+              "ρ = m / V = 19.7 g / 25.0 mL",
+              "ρ = 0.788 g/mL (3 sig figs; both inputs have 3)"
+            ]
+          }
+        },
+        {
+          "heading": "Adding with the right precision",
+          "paragraphs": [
+            "When you add or subtract, the answer stops at the least precise decimal place among the terms."
+          ],
+          "worked": {
+            "title": "12.11 g + 18.0 g + 1.013 g",
+            "steps": [
+              "Align by decimal place: 12.11, 18.0 (tenths), 1.013",
+              "Sum = 31.123 g",
+              "Least precise term (18.0) is good only to the tenth place",
+              "Report 31.1 g"
+            ]
+          }
+        }
+      ]
+    },
+    "atoms-elements-and-the-mole": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Atoms and isotopes",
+          "paragraphs": [
+            "An atom has protons (Z, atomic number) and neutrons in the nucleus, with electrons outside. Mass number A = protons + neutrons. Isotopes of an element share Z but differ in neutrons.",
+            "For an ion, charge = protons − electrons. Example: ⁵⁶Fe³⁺ has Z = 26, so 26 protons, A − Z = 30 neutrons, and 26 − 3 = 23 electrons."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Nuclear diagram of ⁵⁶Fe³⁺ showing protons, neutrons, and missing electrons"
+          }
+        },
+        {
+          "heading": "Average atomic mass",
+          "paragraphs": [
+            "The periodic-table atomic mass is a weighted average of isotope masses: Σ (fraction × mass)."
+          ],
+          "worked": {
+            "title": "Average atomic mass of Cl",
+            "steps": [
+              "Isotopes: 75.78% ³⁵Cl (34.969 u) and 24.22% ³⁷Cl (36.966 u)",
+              "Convert % to fractions: 0.7578 and 0.2422",
+              "Average = 0.7578×34.969 + 0.2422×36.966",
+              "= 26.50 + 8.953 = 35.45 u"
+            ]
+          }
+        },
+        {
+          "heading": "The mole",
+          "paragraphs": [
+            "One mole contains Avogadro's number N_A ≈ 6.022 × 10²³ particles. Molar mass M (g/mol) equals the formula mass in u. n = m / M converts grams to moles."
+          ],
+          "worked": {
+            "title": "Moles of water in 10.0 g H₂O",
+            "steps": [
+              "M(H₂O) = 2(1.008) + 16.00 = 18.02 g/mol",
+              "n = m / M = 10.0 g / 18.02 g·mol⁻¹",
+              "n = 0.555 mol"
+            ]
+          }
+        }
+      ]
+    },
+    "chemical-compounds-formulas-and-oxidatio": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Formulas and percent composition",
+          "paragraphs": [
+            "An empirical formula is the simplest whole-number ratio of atoms. A molecular formula is a whole-number multiple of the empirical formula. Mass percent of an element = (mass of element in 1 mol of compound / molar mass) × 100%."
+          ],
+          "worked": {
+            "title": "Mass % N in NH₄NO₃",
+            "steps": [
+              "M(NH₄NO₃) = 14.01 + 4(1.008) + 14.01 + 3(16.00) = 80.05 g/mol",
+              "Mass of N in 1 mol = 2 × 14.01 = 28.02 g",
+              "% N = (28.02 / 80.05) × 100% = 35.0%"
+            ]
+          }
+        },
+        {
+          "heading": "Empirical formula from % composition",
+          "paragraphs": [
+            "Assume 100 g of sample so % becomes grams. Convert each element to moles, divide by the smallest mole amount, and scale to whole numbers."
+          ],
+          "worked": {
+            "title": "40.0% C, 6.71% H, 53.3% O → empirical formula",
+            "steps": [
+              "In 100 g: 40.0 g C, 6.71 g H, 53.3 g O",
+              "mol C = 40.0/12.01 = 3.33; mol H = 6.71/1.008 = 6.66; mol O = 53.3/16.00 = 3.33",
+              "Divide by 3.33 → C₁ H₂ O₁",
+              "Empirical formula: CH₂O"
+            ]
+          }
+        },
+        {
+          "heading": "Molecular formula and oxidation states",
+          "paragraphs": [
+            "If molar mass / empirical-formula mass = n, multiply subscripts by n. Example: CH₂O with M = 180 g/mol → n = 180/30 = 6 → C₆H₁₂O₆.",
+            "Oxidation state (oxidation number) is a bookkeeping charge: O is usually −2, H is +1 with nonmetals, elemental form is 0, and the sum equals the ion or molecule charge."
+          ]
+        }
+      ]
+    },
+    "chemical-equations-and-stoichiometry": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Balanced equations",
+          "paragraphs": [
+            "A balanced chemical equation conserves atoms. Coefficients are mole ratios. Never change subscripts to balance — only coefficients."
+          ],
+          "worked": {
+            "title": "Balance and read mole ratios: 2 H₂ + O₂ → 2 H₂O",
+            "steps": [
+              "Left: 4 H and 2 O; right: 4 H and 2 O — balanced",
+              "Mole ratio: 2 mol H₂ react with 1 mol O₂ to make 2 mol H₂O",
+              "Mass check (optional): 4.032 g H₂ + 32.00 g O₂ → 36.03 g H₂O"
+            ]
+          }
+        },
+        {
+          "heading": "Limiting reactant and percent yield",
+          "paragraphs": [
+            "Convert each reactant to moles of product using the mole ratio. The reactant that makes less product is limiting. Percent yield = (actual / theoretical) × 100%."
+          ],
+          "worked": {
+            "title": "10.0 g H₂ + 64.0 g O₂ → water",
+            "steps": [
+              "n(H₂) = 10.0/2.016 = 4.96 mol → can make 4.96 mol H₂O",
+              "n(O₂) = 64.0/32.00 = 2.00 mol → can make 4.00 mol H₂O",
+              "O₂ is limiting; theoretical mass H₂O = 4.00 × 18.02 = 72.1 g"
+            ]
+          }
+        },
+        {
+          "heading": "Solution dilution",
+          "paragraphs": [
+            "Molarity M = mol solute / L solution. Dilution conserves moles of solute: M₁V₁ = M₂V₂."
+          ],
+          "worked": {
+            "title": "Dilute 25.0 mL of 6.00 M HCl to 150.0 mL",
+            "steps": [
+              "M₂ = M₁V₁ / V₂ = (6.00)(25.0) / 150.0",
+              "M₂ = 1.00 M"
+            ]
+          }
+        }
+      ]
+    },
+    "electrons-in-atoms-quantum-theory-and-or": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Light as energy packets",
+          "paragraphs": [
+            "Light is electromagnetic radiation. Frequency ν and wavelength λ are linked by c = λν, with c = 2.998 × 10⁸ m/s. Photon energy E = hν = hc/λ, where h = 6.626 × 10⁻³⁴ J·s."
+          ],
+          "worked": {
+            "title": "Energy of a 486.1 nm photon",
+            "steps": [
+              "λ = 486.1 nm = 4.861 × 10⁻⁷ m",
+              "E = hc/λ = (6.626×10⁻³⁴)(2.998×10⁸) / (4.861×10⁻⁷)",
+              "E = 4.087 × 10⁻¹⁹ J"
+            ]
+          }
+        },
+        {
+          "heading": "The Bohr model for hydrogen",
+          "paragraphs": [
+            "In hydrogen, electron energy levels are E_n = −13.6 eV / n². A jump from higher n to lower n emits a photon whose energy equals the level gap. The Balmer line n=3→2 is the famous red 656 nm line."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Energy-level diagram for H showing n=1,2,3 and the n=3→2 photon"
+          }
+        },
+        {
+          "heading": "Orbitals and quantum numbers",
+          "paragraphs": [
+            "Quantum numbers label orbitals: n (shell), ℓ (subshell: s,p,d,f), m_ℓ (orientation), m_s (spin ±½). An orbital holds at most two electrons with opposite spins (Pauli principle)."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Shapes of 1s, 2p, and 3d orbitals (schematic)"
+          }
+        }
+      ]
+    },
+    "electron-configurations-and-the-periodic": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Building configurations",
+          "paragraphs": [
+            "Fill orbitals in order of increasing energy (Aufbau): 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p … Hund's rule: put one electron in each degenerate orbital before pairing.",
+            "Noble-gas shorthand writes the previous noble gas in brackets, then the remaining valence configuration. The block of the periodic table (s, p, d, f) matches the last subshell filled."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Orbital box diagram for C and for N showing Hund's rule"
+          },
+          "worked": {
+            "title": "Find the element [Kr]4d¹⁰5s²5p³",
+            "steps": [
+              "After Kr, add 4d¹⁰ 5s² 5p³ → total electrons beyond Kr: 15",
+              "Period 5, group 15 (pnictogen) → antimony, Sb"
+            ]
+          }
+        },
+        {
+          "heading": "Exceptions and ions",
+          "paragraphs": [
+            "Cr and Cu prefer half-filled or filled d subshells: Cr is [Ar]3d⁵4s¹ (not 3d⁴4s²). For transition-metal cations, remove s electrons before d electrons: Fe is [Ar]3d⁶4s²; Fe³⁺ is [Ar]3d⁵."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Orbital box diagrams for Cr ([Ar]3d⁵4s¹) and Fe³⁺ ([Ar]3d⁵)"
+          }
+        }
+      ]
+    },
+    "periodic-trends-in-atomic-properties": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Atomic and ionic radius",
+          "paragraphs": [
+            "Atomic radius generally decreases across a period (more protons pull the same shell tighter) and increases down a group (new shells). For isoelectronic ions (same electron count), more protons → smaller radius."
+          ],
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 160\" role=\"img\" aria-label=\"Relative size (schematic): O²⁻, F⁻, Na⁺, Mg²⁺\"><text x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1A1A1A\">Relative size (schematic): O²⁻, F⁻, Na⁺, Mg²⁺</text><rect x=\"28.0\" y=\"34.0\" width=\"58.0\" height=\"102.0\" fill=\"#2B5FD9\" rx=\"3\"/><rect x=\"94.0\" y=\"51.0\" width=\"58.0\" height=\"85.0\" fill=\"#2B5FD9\" rx=\"3\"/><rect x=\"160.0\" y=\"73.7\" width=\"58.0\" height=\"62.3\" fill=\"#17754A\" rx=\"3\"/><rect x=\"226.0\" y=\"90.7\" width=\"58.0\" height=\"45.3\" fill=\"#17754A\" rx=\"3\"/><text x=\"57.0\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">O²⁻</text><text x=\"57.0\" y=\"30.0\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1A1A1A\">90</text><text x=\"123.0\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">F⁻</text><text x=\"123.0\" y=\"47.0\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1A1A1A\">75</text><text x=\"189.0\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">Na⁺</text><text x=\"189.0\" y=\"69.7\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1A1A1A\">55</text><text x=\"255.0\" y=\"152\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">Mg²⁺</text><text x=\"255.0\" y=\"86.7\" text-anchor=\"middle\" font-size=\"10\" fill=\"#1A1A1A\">40</text></svg>",
+          "worked": {
+            "title": "Order Na⁺, Mg²⁺, F⁻, O²⁻ by increasing radius",
+            "steps": [
+              "All have 10 electrons (isoelectronic with Ne)",
+              "Nuclear charge: Mg 12 > Na 11 > F 9 > O 8",
+              "Higher Z pulls electrons closer → smaller ion",
+              "Order: Mg²⁺ < Na⁺ < F⁻ < O²⁻"
+            ]
+          }
+        },
+        {
+          "heading": "Ionization energy",
+          "paragraphs": [
+            "First ionization energy (IE₁) generally rises across a period and falls down a group. Exceptions: Be→B and N→O. Removing a paired 2p electron from O is easier than removing an unpaired 2p electron from N because of electron–electron repulsion in the pair."
+          ],
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 140\" role=\"img\" aria-label=\"IE₁ trend across period 2 (schematic)\"><text x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1A1A1A\">IE₁ trend across period 2 (schematic)</text><path d=\"M 28.0,87.3 L 65.7,70.9 L 103.4,76.6 L 141.1,65.2 L 178.9,52.0 L 216.6,58.6 L 254.3,42.2 L 292.0,34.0\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"87.3\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"65.7\" cy=\"70.9\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"103.4\" cy=\"76.6\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"141.1\" cy=\"65.2\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"178.9\" cy=\"52.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"216.6\" cy=\"58.6\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"254.3\" cy=\"42.2\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"34.0\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">Li</text><text x=\"65.7\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">Be</text><text x=\"103.4\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">B</text><text x=\"141.1\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">C</text><text x=\"178.9\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">N</text><text x=\"216.6\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">O</text><text x=\"254.3\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">F</text><text x=\"292.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">Ne</text></svg>"
+        },
+        {
+          "heading": "Paramagnetism",
+          "paragraphs": [
+            "A species is paramagnetic if it has unpaired electrons. Ca ([Ar]4s²) and Zn²⁺ ([Ar]3d¹⁰) are diamagnetic; Fe²⁺ ([Ar]3d⁶) has unpaired electrons and is paramagnetic."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Orbital box diagrams for Ca, Zn²⁺, and Fe²⁺ highlighting unpaired electrons"
+          }
+        }
+      ]
+    },
+    "chemical-bonding-i-lewis-structures-and-": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Lewis structures",
+          "paragraphs": [
+            "Count valence electrons, connect atoms with single bonds, complete octets (H wants 2), and use multiple bonds or formal charge to refine. Formal charge = valence − (nonbonding e⁻) − ½(bonding e⁻)."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Lewis structures for H₂O, CO₂, and SF₄ (with lone pairs)"
+          }
+        },
+        {
+          "heading": "VSEPR shapes and polarity",
+          "paragraphs": [
+            "Electron domains (bonds + lone pairs) arrange to minimize repulsion. Domains: 2 linear, 3 trigonal planar, 4 tetrahedral, 5 trigonal bipyramidal, 6 octahedral. Lone pairs take equatorial sites in TBP when possible.",
+            "Molecular shape ignores lone pairs for the name but includes them for angles. A molecule is polar if bond dipoles do not cancel."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "VSEPR shape of SF₄ (seesaw) with dipole arrow"
+          },
+          "worked": {
+            "title": "Shape and polarity of SF₄",
+            "steps": [
+              "S has 6 valence e⁻; 4 F atoms → 4 bonds + 1 lone pair = 5 domains",
+              "Electron geometry: trigonal bipyramidal; molecular shape: seesaw",
+              "Lone pair and unsymmetric shape → dipoles do not cancel → polar"
+            ]
+          }
+        },
+        {
+          "heading": "Bond enthalpies for reaction ΔH",
+          "paragraphs": [
+            "Estimate ΔH ≈ Σ bonds broken − Σ bonds formed (using mean bond enthalpies). Breaking absorbs energy (+); forming releases (−)."
+          ],
+          "worked": {
+            "title": "Estimate ΔH for H₂ + Cl₂ → 2 HCl",
+            "steps": [
+              "Break 1 H–H and 1 Cl–Cl; form 2 H–Cl",
+              "ΔH ≈ BE(H–H) + BE(Cl–Cl) − 2 BE(H–Cl)",
+              "Using typical mean values → about −184 kJ"
+            ]
+          }
+        }
+      ]
+    },
+    "chemical-bonding-ii-hybridization-and-mo": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Hybridization and σ / π bonds",
+          "paragraphs": [
+            "Hybrid orbitals mix atomic orbitals to match the electron geometry: sp (linear), sp² (trigonal planar), sp³ (tetrahedral). A single bond is one σ bond. A double bond is σ + π; a triple is σ + 2π."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Hybridization sketch for ethene (sp²) and ethyne (sp)"
+          },
+          "worked": {
+            "title": "σ and π bonds in CH₂=CH–C≡N",
+            "steps": [
+              "Count all connections: C–H, C–C, C–C, C–N singles/multiples",
+              "Skeleton has 6 σ bonds (every single connection has one σ)",
+              "Double bond adds 1 π; triple bond adds 2 π → 3 π total",
+              "Answer: 6 σ and 3 π"
+            ]
+          }
+        },
+        {
+          "heading": "Molecular orbital (MO) theory",
+          "paragraphs": [
+            "Atomic orbitals combine into bonding and antibonding MOs. Bond order = ½(bonding e⁻ − antibonding e⁻). Higher bond order → shorter, stronger bond. O₂ has two unpaired electrons in π* orbitals, so it is paramagnetic — Lewis structures miss this."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "MO energy diagram for O₂, O₂⁺, and O₂⁻ with electron filling"
+          },
+          "worked": {
+            "title": "Bond orders of O₂, O₂⁺, O₂⁻",
+            "steps": [
+              "O₂ (12 valence e⁻ in MO count for O₂): bond order 2",
+              "O₂⁺ removes one antibonding e⁻ → bond order 2.5",
+              "O₂⁻ adds one antibonding e⁻ → bond order 1.5",
+              "Bond length: O₂⁺ < O₂ < O₂⁻"
+            ]
+          }
+        }
+      ]
+    },
+    "intermolecular-forces-and-phases": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Types of intermolecular forces",
+          "paragraphs": [
+            "London dispersion: instantaneous dipoles; stronger for larger, more polarizable electron clouds and for longer contact area. Dipole–dipole: between permanent dipoles. Hydrogen bonding: H bonded to N, O, or F attracted to a lone pair on N, O, or F — unusually strong.",
+            "Stronger IMF → higher boiling/melting point (for similar molar mass)."
+          ],
+          "worked": {
+            "title": "Boiling points: HF, Ne, HCl",
+            "steps": [
+              "Ne: only weak dispersion → lowest bp",
+              "HCl: dipole–dipole + dispersion",
+              "HF: hydrogen bonding → highest bp",
+              "Order: Ne < HCl < HF"
+            ]
+          }
+        },
+        {
+          "heading": "Shape matters",
+          "paragraphs": [
+            "Straight-chain alkanes have more surface contact than branched isomers, so stronger dispersion and higher boiling points. Pentane boils higher than neopentane."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Side-by-side sketches of pentane (chain) vs neopentane (compact)"
+          }
+        },
+        {
+          "heading": "Clausius–Clapeyron",
+          "paragraphs": [
+            "Vapor pressure rises with T. ln(P₂/P₁) = −(ΔH_vap/R)(1/T₂ − 1/T₁). Use absolute temperatures (K)."
+          ]
+        }
+      ]
+    },
+    "gases-gas-laws-and-the-ideal-gas-equatio": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Gas laws and PV = nRT",
+          "paragraphs": [
+            "Boyle: P ∝ 1/V at fixed n,T. Charles: V ∝ T (K). Avogadro: V ∝ n. Combined ideal-gas law: PV = nRT. Use consistent R (0.082057 L·atm·mol⁻¹·K⁻¹ when P in atm and V in L)."
+          ],
+          "worked": {
+            "title": "P for 2.50 mol in 10.0 L at 25.0 °C",
+            "steps": [
+              "T = 25.0 + 273.15 = 298.15 K",
+              "P = nRT / V = (2.50)(0.082057)(298.15) / 10.0",
+              "P = 6.12 atm"
+            ]
+          }
+        },
+        {
+          "heading": "Molar mass and density",
+          "paragraphs": [
+            "At the same T and P, equal volumes of ideal gases have equal moles (Avogadro). So denser gas = larger molar mass. CO₂ (44 g/mol) is denser than N₂ (28 g/mol) at the same T,P."
+          ]
+        },
+        {
+          "heading": "Partial pressures",
+          "paragraphs": [
+            "Dalton's law: P_total = Σ P_i. Mole fraction x_i = n_i / n_total; P_i = x_i P_total."
+          ],
+          "worked": {
+            "title": "Partial pressure of O₂",
+            "steps": [
+              "n(N₂)=0.400, n(O₂)=0.100, P_tot=2.00 atm",
+              "x(O₂)=0.100/0.500=0.200",
+              "P(O₂)=0.200×2.00=0.400 atm"
+            ]
+          }
+        }
+      ]
+    },
+    "kinetic-molecular-theory-and-real-gases": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Kinetic-molecular ideas",
+          "paragraphs": [
+            "Gas pressure comes from collisions with the walls. Average translational KE per mole = (3/2)RT. Root-mean-square speed u_rms = √(3RT/M) with M in kg/mol."
+          ],
+          "worked": {
+            "title": "u_rms of N₂ at 300. K",
+            "steps": [
+              "M = 28.02 g/mol = 0.02802 kg/mol",
+              "R = 8.314 J·mol⁻¹·K⁻¹",
+              "u_rms = √(3×8.314×300 / 0.02802) = 517 m/s"
+            ]
+          }
+        },
+        {
+          "heading": "Effusion and diffusion (Graham)",
+          "paragraphs": [
+            "Rate of effusion ∝ 1/√M. Ratio of rates = √(M_heavy / M_light)."
+          ],
+          "worked": {
+            "title": "H₂ vs O₂ effusion",
+            "steps": [
+              "rate(H₂)/rate(O₂) = √(32.00/2.016) = √15.87 ≈ 3.98",
+              "H₂ effuses about 3.98 times faster"
+            ]
+          }
+        },
+        {
+          "heading": "Real gases",
+          "paragraphs": [
+            "Ideal gas ignores volume of molecules and attractions. At high P or low T, use van der Waals: (P + a n²/V²)(V − n b) = nRT. a corrects attractions; b corrects volume."
+          ]
+        }
+      ]
+    },
+    "thermochemistry-and-the-first-law": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "First law: ΔU = q + w",
+          "paragraphs": [
+            "Internal energy U is a state function. Heat q into the system is positive; work w done on the system is positive in the chemistry sign convention used here (some physics texts flip w). For expansion work against constant P, w = −PΔV."
+          ],
+          "worked": {
+            "title": "System absorbs 250 J heat, does 100 J work",
+            "steps": [
+              "q = +250 J (heat in)",
+              "w = −100 J (system does work on surroundings)",
+              "ΔU = q + w = 250 − 100 = +150 J"
+            ]
+          }
+        },
+        {
+          "heading": "Enthalpy and calorimetry",
+          "paragraphs": [
+            "H = U + PV. At constant pressure, q_p = ΔH. Coffee-cup calorimetry: q_sol ≈ −m c ΔT for the solution (sign flips for the reaction)."
+          ]
+        },
+        {
+          "heading": "Hess's law and ΔH_f°",
+          "paragraphs": [
+            "ΔH°_rxn = Σ n ΔH_f°(products) − Σ n ΔH_f°(reactants). Elements in standard state have ΔH_f° = 0."
+          ],
+          "worked": {
+            "title": "ΔH° for CH₄ + 2 O₂ → CO₂ + 2 H₂O(l)",
+            "steps": [
+              "ΔH° = [ΔH_f(CO₂) + 2 ΔH_f(H₂O(l))] − [ΔH_f(CH₄) + 0]",
+              "Using standard table values → −890.36 kJ"
+            ]
+          }
+        }
+      ]
+    },
+    "principles-of-chemical-equilibrium": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "K and Q",
+          "paragraphs": [
+            "For aA + bB ⇌ cC + dD, K_c = [C]^c[D]^d / ([A]^a[B]^b) at equilibrium. Q uses the same form with current concentrations. If Q < K, forward; Q > K, reverse; Q = K, at equilibrium.",
+            "K_p uses partial pressures in bar (or atm when that is the standard). K_p = K_c (RT)^{Δn} with Δn = moles gas products − reactants, and R = 0.082057 L·atm·mol⁻¹·K⁻¹ when pressures are in atm."
+          ],
+          "worked": {
+            "title": "K_p from K_c for N₂ + 3 H₂ ⇌ 2 NH₃",
+            "steps": [
+              "Δn = 2 − (1+3) = −2",
+              "T = 472 °C = 745 K",
+              "K_p = K_c (RT)^{−2} = 0.105 / (0.082057×745)²",
+              "K_p ≈ 2.81 × 10⁻⁵"
+            ]
+          }
+        },
+        {
+          "heading": "ICE tables",
+          "paragraphs": [
+            "Set Initial amounts, define Change with x using stoichiometry, write Equilibrium expressions, solve using K."
+          ],
+          "worked": {
+            "title": "H₂ + I₂ ⇌ 2 HI, K=49.0, start 0.0100 M each",
+            "steps": [
+              "I: 0.0100, 0.0100, 0",
+              "C: −x, −x, +2x",
+              "E: 0.0100−x, 0.0100−x, 2x",
+              "(2x)² / (0.0100−x)² = 49.0 → x = 0.0078",
+              "[H₂]=[I₂]=0.0022 M; [HI]=0.0156 M"
+            ]
+          }
+        }
+      ]
+    },
+    "entropy-gibbs-energy-and-spontaneity": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Entropy",
+          "paragraphs": [
+            "Entropy S measures dispersal of energy / number of microstates. Gases have much higher S than liquids or solids. Fewer gas moles → usually ΔS < 0. Standard entropy change: ΔS° = Σ n S°(products) − Σ n S°(reactants)."
+          ],
+          "worked": {
+            "title": "Sign of ΔS for 2 H₂(g) + O₂(g) → 2 H₂O(l)",
+            "steps": [
+              "3 mol gas → 0 mol gas (liquid water)",
+              "Much less freedom → ΔS negative"
+            ]
+          }
+        },
+        {
+          "heading": "Gibbs energy",
+          "paragraphs": [
+            "ΔG = ΔH − TΔS (T in kelvin). Spontaneous as written when ΔG < 0. ΔG° = −RT ln K links thermodynamics to equilibrium. When ΔH > 0 and ΔS > 0, the reaction becomes spontaneous above T = ΔH/ΔS."
+          ],
+          "worked": {
+            "title": "CaCO₃(s) → CaO(s) + CO₂(g)",
+            "steps": [
+              "ΔH° = +178.3 kJ, ΔS° = +160.6 J/K = 0.1606 kJ/K",
+              "Set ΔG = 0: T = ΔH/ΔS = 178.3 / 0.1606 ≈ 1110 K",
+              "Spontaneous above about 1110 K"
+            ]
+          }
+        }
+      ]
+    },
+    "chemical-kinetics": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Rate laws and order",
+          "paragraphs": [
+            "Rate = k [A]^m [B]^n … Orders m,n are found experimentally, not from stoichiometry. First-order: ln[A] = ln[A]₀ − kt; half-life t½ = ln 2 / k (constant)."
+          ],
+          "worked": {
+            "title": "Half-life for first-order k = 1.50×10⁻³ s⁻¹",
+            "steps": [
+              "t½ = 0.693 / k = 0.693 / 1.50×10⁻³",
+              "t½ = 462 s"
+            ]
+          }
+        },
+        {
+          "heading": "Integrated first-order use",
+          "paragraphs": [
+            "[A] = [A]₀ e^{−kt}. Plug in k and t to find remaining concentration."
+          ],
+          "worked": {
+            "title": "[A] after 25.0 min",
+            "steps": [
+              "k = 0.0450 min⁻¹, [A]₀ = 0.800 M, t = 25.0 min",
+              "[A] = 0.800 × e^{−0.0450×25.0} = 0.800 × e^{−1.125}",
+              "[A] = 0.260 M"
+            ]
+          }
+        },
+        {
+          "heading": "Arrhenius equation",
+          "paragraphs": [
+            "k = A e^{−Ea/RT}. From two temperatures: ln(k₂/k₁) = −(Ea/R)(1/T₂ − 1/T₁)."
+          ],
+          "worked": {
+            "title": "Ea when k doubles from 300 K to 310 K",
+            "steps": [
+              "ln(2) = −(Ea/8.314)(1/310 − 1/300)",
+              "0.693 = (Ea/8.314)(1.075×10⁻⁴)",
+              "Ea ≈ 53.6 kJ/mol"
+            ]
+          }
+        }
+      ]
+    },
+    "acids-and-bases": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Brønsted–Lowry and conjugates",
+          "paragraphs": [
+            "Acid donates H⁺; base accepts H⁺. After transfer, the acid becomes its conjugate base and the base becomes its conjugate acid. Water can act as either (amphoteric)."
+          ],
+          "worked": {
+            "title": "Conjugate pairs in NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+            "steps": [
+              "NH₃ (base) ↔ NH₄⁺ (conjugate acid)",
+              "H₂O (acid) ↔ OH⁻ (conjugate base)",
+              "Pairs: NH₄⁺/NH₃ and H₂O/OH⁻"
+            ]
+          }
+        },
+        {
+          "heading": "Strong acids and pH",
+          "paragraphs": [
+            "Strong acids (HCl, HBr, HI, HNO₃, H₂SO₄ first proton, HClO₄) dissociate fully. For dilute strong monoprotic acid, [H₃O⁺] ≈ C_a; pH = −log[H₃O⁺]."
+          ],
+          "worked": {
+            "title": "pH of 0.0250 M HCl",
+            "steps": [
+              "[H₃O⁺] = 0.0250 M",
+              "pH = −log(0.0250) = 1.602"
+            ]
+          }
+        },
+        {
+          "heading": "Weak acids",
+          "paragraphs": [
+            "For HA ⇌ H⁺ + A⁻, K_a = [H⁺][A⁻]/[HA]. If x ≪ C_a, [H⁺] ≈ √(K_a C_a). Acetic acid K_a ≈ 1.8×10⁻⁵ (standard value; confirm against your table)."
+          ],
+          "worked": {
+            "title": "pH of 0.100 M acetic acid",
+            "steps": [
+              "x ≈ √(1.8×10⁻⁵ × 0.100) = √1.8×10⁻⁶ = 1.34×10⁻³",
+              "pH = −log(1.34×10⁻³) = 2.87"
+            ]
+          }
+        }
+      ]
+    },
+    "buffers-indicators-and-titration-curves": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Buffers and Henderson–Hasselbalch",
+          "paragraphs": [
+            "A buffer is a weak acid + its conjugate base (or weak base + conjugate acid). pH ≈ pK_a + log([A⁻]/[HA]). Best buffering when [A⁻]≈[HA] and both are reasonably concentrated."
+          ],
+          "worked": {
+            "title": "Buffer 0.150 M CH₃COOH / 0.250 M CH₃COONa",
+            "steps": [
+              "pK_a (acetic) ≈ 4.74",
+              "pH = 4.74 + log(0.250/0.150) = 4.74 + log(1.667)",
+              "pH = 4.74 + 0.222 = 4.96 ≈ 4.97"
+            ]
+          },
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 140\" role=\"img\" aria-label=\"Schematic titration curve (weak acid + strong base)\"><text x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1A1A1A\">Schematic titration curve (weak acid + strong base)</text><path d=\"M 28.0,99.6 L 116.0,79.1 L 204.0,46.3 L 292.0,38.1\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"99.6\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"116.0\" cy=\"79.1\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"204.0\" cy=\"46.3\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"38.1\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">start</text><text x=\"116.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">buffer</text><text x=\"204.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">eq.</text><text x=\"292.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">excess</text></svg>"
+        },
+        {
+          "heading": "Adding strong base to a buffer",
+          "paragraphs": [
+            "OH⁻ converts HA → A⁻. Update the mole amounts, then reapply Henderson–Hasselbalch."
+          ]
+        },
+        {
+          "heading": "Equivalence point",
+          "paragraphs": [
+            "For weak acid + strong base, the salt at equivalence is a weak base (A⁻), so pH > 7. Solve from K_b = K_w/K_a and the A⁻ concentration after dilution."
+          ]
+        }
+      ]
+    },
+    "types-of-reactions-in-aqueous-solution": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Electrolytes",
+          "paragraphs": [
+            "Strong electrolytes dissociate fully (strong acids, strong soluble bases, soluble ionic salts). Weak electrolytes partially dissociate (weak acids/bases). Non-electrolytes (e.g. glucose, ethanol) dissolve as molecules."
+          ]
+        },
+        {
+          "heading": "Precipitation and net ionic equations",
+          "paragraphs": [
+            "Write the full molecular equation, then the complete ionic equation, then cancel spectator ions to get the net ionic equation. Solubility rules decide which salts precipitate."
+          ],
+          "worked": {
+            "title": "AgNO₃(aq) + NaCl(aq)",
+            "steps": [
+              "Molecular: AgNO₃ + NaCl → AgCl(s) + NaNO₃",
+              "Ionic: Ag⁺ + NO₃⁻ + Na⁺ + Cl⁻ → AgCl(s) + Na⁺ + NO₃⁻",
+              "Cancel Na⁺ and NO₃⁻",
+              "Net ionic: Ag⁺(aq) + Cl⁻(aq) → AgCl(s)"
+            ]
+          }
+        },
+        {
+          "heading": "Redox in solution",
+          "paragraphs": [
+            "Oxidation is loss of electrons; reduction is gain. The oxidizing agent is reduced; the reducing agent is oxidized. In Zn + Cu²⁺ → Zn²⁺ + Cu, Cu²⁺ is the oxidizing agent and Zn is the reducing agent."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Simple electron-transfer sketch: Zn metal and Cu²⁺ ions"
+          }
+        }
+      ]
+    },
+    "solubility-precipitation-and-complex-ion": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "K_sp",
+          "paragraphs": [
+            "For M_mX_x(s) ⇌ m Mⁿ⁺ + x Xʸ⁻, K_sp = [M]^m [X]^x. Molar solubility s is the moles of solid that dissolve per litre."
+          ],
+          "worked": {
+            "title": "K_sp of CaF₂ from s = 2.1×10⁻⁴ M",
+            "steps": [
+              "CaF₂ ⇌ Ca²⁺ + 2 F⁻",
+              "[Ca²⁺]=s, [F⁻]=2s",
+              "K_sp = s(2s)² = 4s³ = 4(2.1×10⁻⁴)³",
+              "K_sp = 3.7×10⁻¹¹"
+            ]
+          }
+        },
+        {
+          "heading": "Will it precipitate?",
+          "paragraphs": [
+            "Compute Q with the mixed ion concentrations (after dilution). If Q > K_sp, precipitate forms; Q < K_sp, no precipitate; Q = K_sp, saturated."
+          ],
+          "worked": {
+            "title": "PbCl₂ after mixing",
+            "steps": [
+              "After equal volumes: [Pb²⁺]=5.0×10⁻⁴ M, [Cl⁻]=1.0×10⁻³ M",
+              "Q = [Pb²⁺][Cl⁻]² = 5.0×10⁻¹⁰",
+              "Compare to K_sp(PbCl₂); Q < K_sp → no precipitate"
+            ]
+          }
+        },
+        {
+          "heading": "Complex ions",
+          "paragraphs": [
+            "Metal ions can bind ligands (NH₃, OH⁻, CN⁻…) to form complex ions, which can raise the apparent solubility of a precipitate (e.g. AgCl in NH₃)."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Schematic of Ag(NH₃)₂⁺ complex"
+          }
+        }
+      ]
+    },
+    "balancing-redox-equations-and-titrations": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Half-reaction method (acidic)",
+          "paragraphs": [
+            "Split into oxidation and reduction half-reactions. Balance atoms other than O and H, then O with H₂O, then H with H⁺, then charge with e⁻. Multiply to equalize electrons and add."
+          ],
+          "worked": {
+            "title": "MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺ (acidic)",
+            "steps": [
+              "Reduction: MnO₄⁻ → Mn²⁺; add 4 H₂O, 8 H⁺, 5 e⁻",
+              "Oxidation: Fe²⁺ → Fe³⁺ + e⁻; ×5",
+              "Add: MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O"
+            ]
+          }
+        },
+        {
+          "heading": "Basic solution",
+          "paragraphs": [
+            "Balance as if acidic, then add OH⁻ to both sides to neutralize H⁺, forming water, and cancel extra H₂O."
+          ],
+          "worked": {
+            "title": "MnO₄⁻ + I⁻ → MnO₂ + I₂ (basic)",
+            "steps": [
+              "Acidic balance first, then convert H⁺ to H₂O with OH⁻",
+              "Result: 2 MnO₄⁻ + 6 I⁻ + 4 H₂O → 2 MnO₂ + 3 I₂ + 8 OH⁻"
+            ]
+          }
+        },
+        {
+          "heading": "Redox titration",
+          "paragraphs": [
+            "Use the balanced electron ratio to relate moles of titrant to analyte. Example: 1 MnO₄⁻ oxidizes 5 Fe²⁺ in acid."
+          ]
+        }
+      ]
+    },
+    "electrochemistry": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Galvanic cells",
+          "paragraphs": [
+            "A galvanic (voltaic) cell runs a spontaneous redox reaction to make electric current. Oxidation at the anode; reduction at the cathode. E°_cell = E°_cathode − E°_anode (using reduction potentials)."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "Zn|Zn²⁺||Cu²⁺|Cu galvanic cell diagram with anode, cathode, salt bridge"
+          },
+          "worked": {
+            "title": "E° for Zn–Cu cell",
+            "steps": [
+              "E°(Cu²⁺/Cu) = +0.34 V; E°(Zn²⁺/Zn) = −0.76 V (standard table values)",
+              "E°_cell = 0.34 − (−0.76) = +1.10 V"
+            ]
+          }
+        },
+        {
+          "heading": "ΔG°, K, and E°",
+          "paragraphs": [
+            "ΔG° = −n F E°_cell. Positive E°_cell means ΔG° < 0 and K > 1 (products favored at standard state)."
+          ]
+        },
+        {
+          "heading": "Nernst equation",
+          "paragraphs": [
+            "At 25 °C: E = E° − (0.0592/n) log Q. Lower [product ions] / higher [reactant ions] raises E for the forward cell reaction."
+          ],
+          "worked": {
+            "title": "Zn|Zn²⁺(1.0 M)||Cu²⁺(0.010 M)|Cu",
+            "steps": [
+              "n = 2; Q = [Zn²⁺]/[Cu²⁺] = 1.0/0.010 = 100",
+              "E = 1.10 − (0.0592/2) log(100) = 1.10 − 0.0296×2",
+              "E = 1.04 V"
+            ]
+          }
+        }
+      ]
+    },
+    "light-matter-interaction-and-spectroscop": {
+      "reviewed": false,
+      "sections": [
+        {
+          "heading": "Absorption and energy",
+          "paragraphs": [
+            "Molecules absorb photons that match an allowed energy gap. E = hc/λ per photon; multiply by N_A for per-mole energy. Longer λ → smaller energy."
+          ],
+          "worked": {
+            "title": "Energy per mole at 450. nm",
+            "steps": [
+              "E_photon = hc/λ",
+              "E_molar = N_A hc/λ ≈ 266 kJ/mol"
+            ]
+          }
+        },
+        {
+          "heading": "IR and wavenumbers",
+          "paragraphs": [
+            "Infrared often reported as wavenumber ν̃ = 1/λ (cm⁻¹). Bond vibrations: stronger/lighter bonds → higher wavenumber."
+          ],
+          "worked": {
+            "title": "CO stretch at 2143 cm⁻¹",
+            "steps": [
+              "λ = 1/ν̃ = 1/2143 cm⁻¹ = 4.666×10⁻⁴ cm = 4.666 μm",
+              "E = hc/λ = 4.257×10⁻²⁰ J per photon"
+            ]
+          }
+        },
+        {
+          "heading": "Conjugation and color",
+          "paragraphs": [
+            "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens, so λ_max moves to longer wavelength (bathochromic shift). Enough conjugation and the absorption enters the visible — the compound looks colored."
+          ],
+          "figure": {
+            "status": "pending-sketch",
+            "note": "HOMO–LUMO gap sketch for short vs long conjugated chain"
+          },
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 140\" role=\"img\" aria-label=\"Schematic: λ_max rises with conjugation length\"><text x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1A1A1A\">Schematic: λ_max rises with conjugation length</text><path d=\"M 28.0,91.4 L 94.0,79.1 L 160.0,66.8 L 226.0,54.5 L 292.0,43.8\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"91.4\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"94.0\" cy=\"79.1\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"160.0\" cy=\"66.8\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"226.0\" cy=\"54.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"43.8\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">2</text><text x=\"94.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">3</text><text x=\"160.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">4</text><text x=\"226.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">5</text><text x=\"292.0\" y=\"134\" text-anchor=\"middle\" font-size=\"11\" fill=\"#5F6B7A\">6</text></svg>"
+        }
+      ]
+    }
+  }
+}
