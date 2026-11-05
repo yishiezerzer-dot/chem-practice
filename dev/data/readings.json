@@ -123,9 +123,9 @@
             }
           ],
           "mistake": {
-            "wrong": "Common mistake: treating 12.00 g + 1.1 g like a multiplication problem and cutting the answer to 2 sig figs as 13 g.",
+            "wrong": "treating 12.00 g + 1.1 g like a multiplication problem and cutting the answer to 2 sig figs as 13 g.",
             "whyWrong": "Addition is limited by decimal places, not by the sig-fig count. 12.00 is known to the hundredths place. 1.1 is known only to the tenths place. The sum must stop at tenths, which gives 13.1 g, not a 2-sig-fig chop to 13 g.",
-            "correct": "Correct way: 12.00 + 1.1 = 13.10 raw, then round to one digit after the decimal because of 1.1. Answer: 13.1 g."
+            "correct": "12.00 + 1.1 = 13.10 raw, then round to one digit after the decimal because of 1.1. Answer: 13.1 g."
           }
         },
         {
@@ -398,9 +398,9 @@
             }
           ],
           "mistake": {
-            "wrong": "Common mistake: picking the limiting reactant as whichever reactant has the smaller mass in grams (here choosing H₂ only because 5.00 g < 40.0 g) without converting to moles of product.",
+            "wrong": "picking the limiting reactant as whichever reactant has the smaller mass in grams (here choosing H₂ only because 5.00 g < 40.0 g) without converting to moles of product.",
             "whyWrong": "Grams of different substances are not comparable as amounts of reaction. O₂ molecules are heavier than H₂ molecules. You must compare how much product each given amount can make, using moles and the balanced coefficients.",
-            "correct": "Correct way: convert each reactant to moles of product. The smaller product amount wins. In the example, H₂ still was limiting, but that conclusion came from 2.48 mol H₂O vs 2.50 mol H₂O, not from comparing 5 g to 40 g."
+            "correct": "convert each reactant to moles of product. The smaller product amount wins. In the example, H₂ still was limiting, but that conclusion came from 2.48 mol H₂O vs 2.50 mol H₂O, not from comparing 5 g to 40 g."
           }
         },
         {

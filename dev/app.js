@@ -44,7 +44,14 @@ async function init() {
   go('home');
 }
 function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgress(); view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
-function setTop(title, back) { $('#title').textContent = title; $('#back').hidden = !back; $("#weakBtn").hidden = view !== "home"; $('#bar').hidden = !(view === 'card' || view === 'reading'); }
+function setTop(title, back) {
+  $('#title').textContent = title;
+  $('#back').hidden = !back;
+  $("#weakBtn").hidden = view !== "home";
+  const sec = $('#secBtn');
+  if (sec) sec.hidden = view !== 'reading';
+  $('#bar').hidden = !(view === 'card' || view === 'reading');
+}
 function render() { ({ home, reading, topic, card, end, weak })[view](viewArg); }
 
 function home() {
@@ -107,8 +114,11 @@ function renderSection(sec, i) {
   }
   if (sec.check && (sec.check.items || []).length) {
     h += `<div class="callout callout-check" data-check="1"><div class="cap">${esc(sec.check.title || 'Check yourself')}</div><ol class="check-list">`;
-    sec.check.items.forEach(it => {
-      h += `<li><div class="check-q">${esc(it.q || '')}</div><div class="check-a"><span class="cap">Answer</span> ${esc(it.a || '')}</div></li>`;
+    sec.check.items.forEach((it, qi) => {
+      const aid = `check-a-${i}-${qi}`;
+      h += `<li><div class="check-q">${esc(it.q || '')}</div>`;
+      h += `<button type="button" class="btn-show-ans" data-show-ans="1" aria-expanded="false" aria-controls="${aid}">Show answer</button>`;
+      h += `<div class="check-a" id="${aid}" hidden>${esc(it.a || '')}</div></li>`;
     });
     h += `</ol></div>`;
   }
@@ -209,7 +219,7 @@ function reading(tid) {
   } else {
     const secs = r.sections || [];
     if (secs.length) {
-      h += `<nav class="rtoc" aria-label="In this reading"><div class="cap">In this reading</div><ol class="rtoc-list">`;
+      h += `<nav class="rtoc" id="readingToc" aria-label="In this reading"><div class="cap">In this reading</div><ol class="rtoc-list">`;
       secs.forEach((sec, i) => {
         const aid = secAnchorId(sec, i);
         const label = sec.heading || ('Section ' + (i + 1));
@@ -233,6 +243,28 @@ function reading(tid) {
   const endEl = $('#readEnd');
   if (readEl && endEl) readEl.style.paddingBottom = (endEl.offsetHeight + 16) + 'px';
   wireSketchLightbox();
+  document.querySelectorAll('[data-show-ans]').forEach(btn => {
+    btn.onclick = () => {
+      const id = btn.getAttribute('aria-controls');
+      const ans = id ? document.getElementById(id) : null;
+      if (!ans) return;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      const next = !open;
+      btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+      ans.hidden = !next;
+      btn.textContent = next ? 'Hide answer' : 'Show answer';
+    };
+  });
+  const secBtn = $('#secBtn');
+  if (secBtn) {
+    secBtn.onclick = () => {
+      const toc = document.getElementById('readingToc') || document.querySelector('.rtoc');
+      if (!toc) return;
+      // Offset for sticky top bar (56) + breathing room; auto scroll so it always lands
+      const top = toc.getBoundingClientRect().top + window.pageYOffset - 68;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+    };
+  }
   $('#bar div').style.width = '0%';
   removeEventListener('scroll', updateReadProgress);
   addEventListener('scroll', updateReadProgress, { passive: true });
