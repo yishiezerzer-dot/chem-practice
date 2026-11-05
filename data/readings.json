@@ -1835,7 +1835,7 @@
             "Ideal-gas law: PV = nRT. P is pressure, V volume, n amount in moles, T temperature in kelvin, and R the gas constant.",
             "Match R to your units. Common choice: R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span> when P is in atm and V is in liters. Another: R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span> = 8.314 <span class=\"nw\">Pa·m³·mol⁻¹·K⁻¹</span>. If P is in torr, convert to atm first (760 torr = 1 atm) or use a matching R.",
             "Rearrangements: P = nRT/V, V = nRT/P, n = PV/RT, T = PV/nR. Always write units in the setup so they cancel.",
-            "Unit trap: if V is in mL, convert to L before using R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>. If P is in torr, divide by 760 to get atm.",
+            "If V is in mL, convert to L before using R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span>. If P is in torr, divide by 760 to get atm.",
             "Another common R: 62.36 <span class=\"nw\">L·torr·mol⁻¹·K⁻¹</span> if you keep P in torr and V in L. Pick one system and stay inside it.",
             "You can solve for any one variable if the other three are known. Highlight the unknown, write the rearranged equation, substitute with units, then compute.",
             "Sig figs: temperatures like 25 °C → 298 K already limit precision; do not report ten digits from the calculator.",
@@ -2028,7 +2028,7 @@
             "At the same T, lighter molecules have higher u<sub>rms</sub>. H₂ is much faster than O₂ at room temperature. Raising T raises every gas's u<sub>rms</sub>.",
             "The Maxwell–Boltzmann distribution spreads molecular speeds. u<sub>rms</sub> is one characteristic speed; the most probable speed and the average speed are slightly smaller. Intro problems usually ask for u<sub>rms</sub>.",
             "Because KE<sub>avg</sub> depends only on T, not on M, two gases at the same T have the same average KE per mole, even if their u<sub>rms</sub> values differ.",
-            "Unit trap for u<sub>rms</sub>: molar mass must be kg/mol when R is in J. Using 28.02 g/mol without converting gives an answer too large by √1000.",
+            "Molar mass must be kg/mol when R is in J. Using 28.02 g/mol without converting gives an answer too large by √1000.",
             "Heavier gases move slower at the same T, but each mole still carries (3/2)RT of translational KE. The energy is the same; the speed is not.",
             "Example scale: at 300 K, u<sub>rms</sub>(H₂) is about 1.9 km/s, u<sub>rms</sub>(N₂) about 0.52 km/s, and u<sub>rms</sub>(CO₂) a bit lower still. Molecules are fast; macroscopic diffusion looks slow only because of constant collisions.",
             "If T doubles, KE<sub>avg</sub> doubles and u<sub>rms</sub> rises by √2 ≈ 1.41. If M quadruples at fixed T, u<sub>rms</sub> falls by half. Those two scalings cover most qualitative speed questions."
@@ -3176,7 +3176,7 @@
               ]
             }
           ],
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"Titration curve (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">Titration curve (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">pH vs volume</text></g><path d=\"M 28.0,126.0 L 116.0,103.5 L 204.0,67.5 L 292.0,58.5\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"126.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"116.0\" cy=\"103.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"204.0\" cy=\"67.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"58.5\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">start</text><text x=\"116.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">buffer</text><text x=\"204.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">eq.</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">excess</text></svg>"
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 180\" role=\"img\" aria-label=\"Titration curve (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160\" y=\"16\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">Titration curve (schematic, not to scale)</text><line x1=\"52\" y1=\"40\" x2=\"52\" y2=\"142\" stroke=\"#8A93A0\" stroke-width=\"1.5\"/><line x1=\"52\" y1=\"142\" x2=\"300\" y2=\"142\" stroke=\"#8A93A0\" stroke-width=\"1.5\"/><text x=\"18\" y=\"96\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5F6B7A\" transform=\"rotate(-90 18 96)\">pH</text><text x=\"176\" y=\"168\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5F6B7A\">NaOH added</text><path d=\"M 52,128 C 100,127 125,124 140,118 C 152,113 156,100 158,78 C 160,56 164,44 190,36 C 220,28 260,26 300,26\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2.25\" stroke-linecap=\"round\"/><line x1=\"159\" y1=\"142\" x2=\"159\" y2=\"40\" stroke=\"#8A93A0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"159\" cy=\"78\" r=\"3.5\" fill=\"#fff\" stroke=\"#2B5FD9\" stroke-width=\"1.75\"/></svg>"
         },
         {
           "id": "check-buffers",
@@ -3966,44 +3966,199 @@
       ]
     },
     "light-matter-interaction-and-spectroscop": {
+      "topic_id": "light-matter-interaction-and-spectroscop",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Absorption and energy",
+          "id": "em-radiation",
+          "heading": "Electromagnetic radiation and photon energy",
           "paragraphs": [
-            "Molecules absorb photons that match an allowed energy gap. E = hc/λ per photon; multiply by N<sub>A</sub> for per-mole energy. Longer λ → smaller energy."
+            "Light carries energy in packets called photons. One photon has energy E = hν = hc/λ, where h is Planck's constant, ν is frequency, c is the speed of light, and λ is wavelength.",
+            "Use consistent SI units when you plug into E = hc/λ: λ in meters, h = <span class=\"nw\">6.626×10⁻³⁴ J·s</span>, c = <span class=\"nw\">2.998×10⁸ m/s</span>. Chemists often want energy per mole: multiply the per-photon energy by N<sub>A</sub> (≈ <span class=\"nw\">6.022×10²³ mol⁻¹</span>) and report kJ/mol.",
+            "Longer wavelength means smaller photon energy. Infrared photons are gentler than visible; ultraviolet photons are harsher. Frequency and wavelength are inverse: ν = c/λ.",
+            "Wavenumber ν̃ = 1/λ is common in IR. If λ is in cm, ν̃ has units cm⁻¹. Larger wavenumber means higher energy.",
+            "A molecule or atom absorbs only when the photon energy matches an allowed gap between levels. Off-resonance light mostly passes through.",
+            "Emission is the reverse story: an excited species drops to a lower level and can release a photon with E = ΔE.",
+            "Radio and microwave radiation sit at still longer wavelength and couple to rotations or spin flips in specialized experiments (NMR is a cousin, not the focus here).",
+            "When an exam gives λ in nm, convert to meters before using SI constants. Mixing nm with meters in hc/λ is the classic silent error."
           ],
+          "why": "Every spectroscopy calculation starts from matching a measured λ or ν to an energy gap. Getting E = hc/λ and the per-mole conversion right prevents unit disasters later.",
           "worked": {
             "title": "Energy per mole at 450. nm",
             "steps": [
-              "E<sub>photon</sub> = hc/λ",
-              "E<sub>molar</sub> = N<sub>A</sub> hc/λ ≈ 266 kJ/mol"
+              "Convert wavelength: λ = 450. nm = 450. × 10⁻⁹ m = 4.50 × 10⁻⁷ m.",
+              "E<sub>photon</sub> = hc/λ. With hc ≈ <span class=\"nw\">1.986×10⁻²⁵ J·m</span>, E = (1.986 × 10⁻²⁵)/(4.50 × 10⁻⁷) = 4.41 × 10⁻¹⁹ J.",
+              "E<sub>molar</sub> = N<sub>A</sub> × E<sub>photon</sub> ≈ (6.022 × 10²³)(4.41 × 10⁻¹⁹) = 2.66 × 10⁵ J/mol ≈ <span class=\"nw\">266 kJ/mol</span>.",
+              "Final answer: about 266 kJ per mole of photons at 450 nm."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Frequency of a 250. nm UV photon",
+              "steps": [
+                "λ = 250. nm = 2.50 × 10⁻⁷ m.",
+                "ν = c/λ = (2.998 × 10⁸)/(2.50 × 10⁻⁷) = 1.20 × 10¹⁵ Hz (<span class=\"nw\">1.20×10¹⁵ s⁻¹</span>).",
+                "Check: UV should sit above visible frequencies (~10¹⁴ Hz). 10¹⁵ Hz is reasonable.",
+                "Final answer: ν = 1.20 × 10¹⁵ Hz."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "absorption-emission",
+          "heading": "Absorption, emission, and ΔE = hν",
+          "paragraphs": [
+            "Absorption raises a species from a lower level to a higher one. The required photon energy is exactly the gap ΔE between those levels (within line width).",
+            "Emission returns the system downhill. Fluorescence and phosphorescence are emission after prior excitation; line emission from atoms shows sharp ΔE values.",
+            "For hydrogen-like atoms, the Bohr/Rydberg picture still teaches the habit: 1/λ = R(1/n₁² − 1/n₂²). The same habit, ΔE ↔ λ, carries into molecules with orbital gaps.",
+            "Selection rules decide which gaps are strongly allowed. For this course, treat a given λ<sub>max</sub> as evidence that some allowed gap matches that photon energy.",
+            "A spectrum plots absorbance or intensity against wavelength (or wavenumber). Peaks mark the transitions that are open under the experiment's conditions.",
+            "Continuous spectra (blackbody, hot solids) differ from line spectra (atoms) and band spectra (molecules). Know which picture your problem assumes."
+          ],
+          "worked": {
+            "title": "Wavelength matching a 3.00 eV gap",
+            "steps": [
+              "Convert eV to joules: 1 eV = <span class=\"nw\">1.602×10⁻¹⁹ J</span>, so ΔE = 3.00 × 1.602 × 10⁻¹⁹ = 4.81 × 10⁻¹⁹ J.",
+              "λ = hc/ΔE = (1.986 × 10⁻²⁵)/(4.81 × 10⁻¹⁹) = 4.13 × 10⁻⁷ m = 413 nm.",
+              "413 nm sits at the violet edge of the visible. A dye with this gap can look colored.",
+              "Final answer: λ ≈ 413 nm."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Photon energy for the H atom n=2 → n=1 line",
+              "steps": [
+                "Use 1/λ = R<sub>H</sub>(1/1² − 1/2²) with R<sub>H</sub> ≈ 1.097 × 10⁷ m⁻¹.",
+                "1/λ = 1.097 × 10⁷ (1 − 1/4) = 1.097 × 10⁷ × 0.75 = 8.23 × 10⁶ m⁻¹.",
+                "λ = 1/(8.23 × 10⁶) = 1.22 × 10⁻⁷ m = 122 nm (UV, Lyman).",
+                "E<sub>photon</sub> = hc/λ ≈ (1.986 × 10⁻²⁵)/(1.22 × 10⁻⁷) ≈ 1.63 × 10⁻¹⁸ J ≈ <span class=\"nw\">982 kJ/mol</span>.",
+                "Final answer: λ ≈ 122 nm; molar photon energy ~ 9.8 × 10² kJ/mol."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "beer-lambert",
+          "heading": "UV-visible absorption and Beer-Lambert",
+          "paragraphs": [
+            "UV-vis spectroscopy tracks electronic transitions. The measured absorbance A relates to concentration by the Beer-Lambert law: A = ε b c.",
+            "ε is the molar absorptivity (M⁻¹ cm⁻¹), b is path length (usually 1.00 cm), and c is molarity. A is dimensionless (log of intensity ratio).",
+            "Beer-Lambert holds best in dilute solutions where the absorbing species does not aggregate and the instrument is in its linear range.",
+            "If two spectra share the same λ<sub>max</sub> shape but one is taller, concentration (or path length) changed. A shift of λ<sub>max</sub> itself means the chromophore or its environment changed.",
+            "Quantitative work: measure A at λ<sub>max</sub>, know ε and b, solve for c. Always match the blank solvent and cuvette path to the calibration.",
+            "If A is too high (above ~1–1.5 on many instruments), dilute and scale. Nonlinear detector response and stray light both corrupt very high A readings."
+          ],
+          "why": "Labs and exams often turn an absorbance reading into a concentration. The formula is short; the unit discipline is what separates full credit from a scramble.",
+          "worked": {
+            "title": "Concentration from A = 0.620",
+            "steps": [
+              "Given ε = <span class=\"nw\">1.50×10⁴ M⁻¹·cm⁻¹</span>, b = 1.00 cm, A = 0.620 at λ<sub>max</sub>.",
+              "A = ε b c → c = A/(ε b) = 0.620 / (1.50 × 10⁴ × 1.00) = 4.13 × 10⁻⁵ M.",
+              "Check: A near 0.6 with ε ~ 10⁴ implies c in the 10⁻⁵ M range. Sensible for a strong dye.",
+              "Final answer: c = 4.13 × 10⁻⁵ M."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Absorbance after a 1:5 dilution",
+              "steps": [
+                "Stock has A = 0.90 in a 1.00 cm cuvette. Dilute 1.00 mL stock to 5.00 mL total with solvent.",
+                "Concentration drops by 5, so A<sub>new</sub> = 0.90 / 5 = 0.18 if Beer-Lambert still holds and ε, b unchanged.",
+                "Do not change λ when you compare; stay at the same λ<sub>max</sub>.",
+                "Final answer: A ≈ 0.18 after the 1:5 dilution."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Using A = ε b c with c in mol/L but b left in mm, or forgetting that A is log-based and treating percent transmittance as absorbance.",
+            "whyWrong": "Path length must match ε's length unit (usually cm). Percent transmittance T% relates by A = 2 − log₁₀(T%); mixing T% with A without converting invents a fake concentration.",
+            "correct": "Convert b to cm, confirm ε's units, and if the instrument gave %T, convert to A before solving for c."
           }
         },
         {
-          "heading": "IR and wavenumbers",
+          "id": "ir-wavenumbers",
+          "heading": "IR spectroscopy and wavenumbers",
           "paragraphs": [
-            "Infrared often reported as wavenumber ν̃ = 1/λ (cm⁻¹). Bond vibrations: stronger/lighter bonds → higher wavenumber."
+            "Infrared light excites molecular vibrations. Bonds stretch and bend at characteristic wavenumbers.",
+            "Stronger bonds and lighter atoms vibrate at higher wavenumber. A C≡C or C≡N stretch sits higher than a C=C stretch; C−H is high partly because H is light.",
+            "A quick conversion: λ (cm) = 1/ν̃. Then convert to meters if you need joules per photon.",
+            "Functional-group tables are pattern recognition, not magic. Confirm with the rest of the spectrum and the molecular formula when you have them.",
+            "Fingerprint region (roughly below 1500 cm⁻¹) is dense and molecule-specific. Use it to match knowns more than to assign every peak on a first pass.",
+            "O−H and N−H stretches are high and often broad when hydrogen bonding is present. C=O near 1700 cm⁻¹ is a workhorse checkpoint in organic problems.",
+            "Comparing two related molecules: deuterium substitution lowers a stretch that involved that H, because reduced mass rises."
           ],
           "worked": {
             "title": "CO stretch at 2143 cm⁻¹",
             "steps": [
-              "λ = 1/ν̃ = 1/2143 cm⁻¹ = 4.666×10⁻⁴ cm = 4.666 μm",
-              "E = hc/λ = 4.257×10⁻²⁰ J per photon"
+              "ν̃ = 2143 cm⁻¹ → λ = 1/2143 cm = 4.666 × 10⁻⁴ cm = 4.666 μm = 4.666 × 10⁻⁶ m.",
+              "E<sub>photon</sub> = hc/λ = (1.986 × 10⁻²⁵)/(4.666 × 10⁻⁶) = 4.26 × 10⁻²⁰ J.",
+              "Per mole: N<sub>A</sub> E ≈ 25.6 kJ/mol. IR photons are much softer than the 266 kJ/mol visible example above.",
+              "Final answer: λ = 4.666 μm; E ≈ 4.26 × 10⁻²⁰ J per photon."
             ]
           }
         },
         {
-          "heading": "Conjugation and color",
+          "id": "conjugation-color",
+          "heading": "Conjugation, HOMO–LUMO gaps, and color",
           "paragraphs": [
-            "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens, so λ<sub>max</sub> moves to longer wavelength (bathochromic shift). Enough conjugation and the absorption enters the visible, and the compound looks colored."
+            "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens. A smaller gap means a longer λ<sub>max</sub> (bathochromic shift).",
+            "When λ<sub>max</sub> moves into the visible, the compound absorbs some visible wavelengths and looks colored. The color you see is roughly complementary to what is absorbed.",
+            "Enough conjugation (or a strong push-pull chromophore) and a once UV-only absorber becomes a dye. Organic electronics and natural pigments both lean on this idea.",
+            "The schematic chart for this topic shows λ<sub>max</sub> rising with conjugation length. Treat the y-axis as qualitative; the trend direction is the point.",
+            "Solvent, protonation, and metal binding can also move λ<sub>max</sub>. Report conditions when you quote a spectrum.",
+            "Not every colored compound is a long polyene. Charge-transfer bands and metal d–d transitions also land in the visible. Still, the gap ↔ λ link is the same."
           ],
           "figure": {
             "src": "art/homo-lumo-conjugation.svg",
             "alt": "Qualitative HOMO–LUMO gaps for ethene, butadiene, and hexatriene showing the gap shrinking as conjugation lengthens, which shifts absorption to longer wavelength."
           },
-          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"λ_max vs conjugation (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">λ_max vs conjugation (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">λ_max trend</text></g><path d=\"M 28.0,117.0 L 94.0,103.5 L 160.0,90.0 L 226.0,76.5 L 292.0,64.8\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"117.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"94.0\" cy=\"103.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"160.0\" cy=\"90.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"226.0\" cy=\"76.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"64.8\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=2</text><text x=\"94.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=3</text><text x=\"160.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=4</text><text x=\"226.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=5</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=6</text></svg>"
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"λ_max vs conjugation (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">λ_max vs conjugation (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">λ_max trend</text></g><path d=\"M 28.0,117.0 L 94.0,103.5 L 160.0,90.0 L 226.0,76.5 L 292.0,64.8\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"117.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"94.0\" cy=\"103.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"160.0\" cy=\"90.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"226.0\" cy=\"76.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"64.8\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=2</text><text x=\"94.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=3</text><text x=\"160.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=4</text><text x=\"226.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=5</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=6</text></svg>",
+          "worked": {
+            "title": "Absorbed vs observed color",
+            "steps": [
+              "A solution absorbs strongly near 450 nm (blue-violet). Complementary light is transmitted.",
+              "Complementary to blue-violet is yellow-orange, so the sample looks yellow-orange in white light.",
+              "If a longer conjugated dye absorbs near 600 nm (orange-red), it can look blue-green.",
+              "Final answer: absorbed 450 nm → observed color toward yellow-orange."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Which dye has the longer λ<sub>max</sub>?",
+              "steps": [
+                "Dye A: short conjugated path. Dye B: same chromophore type but two extra conjugated double bonds.",
+                "Longer conjugation → smaller HOMO–LUMO gap → longer λ<sub>max</sub>. Dye B absorbs at longer wavelength.",
+                "If Dye A λ<sub>max</sub> is 320 nm (UV), Dye B might sit at 380–420 nm depending on structure.",
+                "Final answer: Dye B has the longer λ<sub>max</sub>."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-spectroscopy",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "Write the per-photon energy in terms of λ.",
+                "a": "E = hc/λ."
+              },
+              {
+                "q": "Beer-Lambert law?",
+                "a": "A = ε b c."
+              },
+              {
+                "q": "Does longer conjugation raise or lower λ<sub>max</sub>?",
+                "a": "Raises λ<sub>max</sub> (gap shrinks)."
+              },
+              {
+                "q": "Convert 2000 cm⁻¹ to a wavelength in μm.",
+                "a": "λ = 1/2000 cm = 5.00 × 10⁻⁴ cm = 5.00 μm."
+              }
+            ]
+          }
         }
       ]
     }
