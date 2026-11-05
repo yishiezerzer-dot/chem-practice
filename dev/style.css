@@ -46,6 +46,7 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 .worked-title{font-weight:600;margin:4px 0 8px}
 .rfig{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px;margin:12px 0;overflow:auto}
 .rfig svg{display:block;width:100%;height:auto;max-width:320px;margin:0 auto}
+.rfig img.rsketch,.rsketch{display:block;width:100%;max-width:100%;height:auto;margin:0 auto}
 .placeholder{border:1px dashed var(--muted);border-radius:12px;padding:16px;margin:12px 0;background:var(--bg)}
 .read-actions{margin:0 0 8px}
 .qimg{margin:12px 0}.qimg img{display:block;max-width:100%;max-height:240px;height:auto;border-radius:8px;border:1px solid var(--border)}

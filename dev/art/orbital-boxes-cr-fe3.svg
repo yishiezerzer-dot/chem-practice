@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320" role="img" aria-label="Orbital boxes for Cr exception and Fe3+ ion">
+<rect width="560" height="320" fill="#FFFFFF"/>
+<text x="280" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Exceptions and ions — orbital boxes</text>
+<text x="40" y="58" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Cr (Z=24): [Ar] 3d⁵ 4s¹  (not 3d⁴ 4s²)</text>
+<text x="122.0" y="70" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="40" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="54.0" y1="100" x2="54.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="54.0,84 50.0,90 58.0,90" fill="#1A1A1A"/>
+<rect x="74" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="88.0" y1="100" x2="88.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="88.0,84 84.0,90 92.0,90" fill="#1A1A1A"/>
+<rect x="108" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="122.0" y1="100" x2="122.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="122.0,84 118.0,90 126.0,90" fill="#1A1A1A"/>
+<rect x="142" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="156.0" y1="100" x2="156.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="156.0,84 152.0,90 160.0,90" fill="#1A1A1A"/>
+<rect x="176" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="190.0" y1="100" x2="190.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="190.0,84 186.0,90 194.0,90" fill="#1A1A1A"/>
+<text x="236.0" y="70" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="222" y="78" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="236.0" y1="100" x2="236.0" y2="84" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="236.0,84 232.0,90 240.0,90" fill="#1A1A1A"/>
+<text x="40" y="128" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Half-filled 3d + half-filled 4s preferred</text>
+<text x="40" y="170" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Fe³⁺: Fe is [Ar] 3d⁶ 4s² → remove 4s then 3d → [Ar] 3d⁵</text>
+<text x="122.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="40" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="54.0" y1="212" x2="54.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="54.0,196 50.0,202 58.0,202" fill="#1A1A1A"/>
+<rect x="74" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="88.0" y1="212" x2="88.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="88.0,196 84.0,202 92.0,202" fill="#1A1A1A"/>
+<rect x="108" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="122.0" y1="212" x2="122.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="122.0,196 118.0,202 126.0,202" fill="#1A1A1A"/>
+<rect x="142" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="156.0" y1="212" x2="156.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="156.0,196 152.0,202 160.0,202" fill="#1A1A1A"/>
+<rect x="176" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<line x1="190.0" y1="212" x2="190.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="190.0,196 186.0,202 194.0,202" fill="#1A1A1A"/>
+<text x="236.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="222" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="40" y="240" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">4s empty; five unpaired 3d electrons (half-filled)</text>
+<text x="280" y="290" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Transition-metal cations: remove s electrons before d electrons.</text>
+</svg>

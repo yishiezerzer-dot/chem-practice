@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img" aria-label="HOMO LUMO gap decreasing from ethene to hexatriene">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">HOMO–LUMO gap shrinks with conjugation</text>
+<line x1="60" y1="260" x2="140" y2="260" stroke="#2B5FD9" stroke-width="3"/>
+<line x1="60" y1="120" x2="140" y2="120" stroke="#E53935" stroke-width="3"/>
+<line x1="92" y1="244" x2="92" y2="256" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="92,244 89,250 95,250" fill="#1A1A1A"/>
+<line x1="108" y1="256" x2="108" y2="244" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="108,256 105,250 111,250" fill="#1A1A1A"/>
+<line x1="150" y1="120" x2="150" y2="260" stroke="#5F6B7A" stroke-width="1.5"/>
+<text x="158" y="194.0" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">ΔE</text>
+<text x="100" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#E53935">LUMO</text>
+<text x="100" y="278" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#2B5FD9">HOMO</text>
+<text x="100" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">ethene</text>
+<text x="100" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">H₂C=CH₂</text>
+<line x1="240" y1="242" x2="320" y2="242" stroke="#2B5FD9" stroke-width="3"/>
+<line x1="240" y1="147" x2="320" y2="147" stroke="#E53935" stroke-width="3"/>
+<line x1="272" y1="226" x2="272" y2="238" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="272,226 269,232 275,232" fill="#1A1A1A"/>
+<line x1="288" y1="238" x2="288" y2="226" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="288,238 285,232 291,232" fill="#1A1A1A"/>
+<line x1="330" y1="147" x2="330" y2="242" stroke="#5F6B7A" stroke-width="1.5"/>
+<text x="338" y="198.5" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">ΔE</text>
+<text x="280" y="135" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#E53935">LUMO</text>
+<text x="280" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#2B5FD9">HOMO</text>
+<text x="280" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">butadiene</text>
+<text x="280" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">H₂C=CH−CH=CH₂</text>
+<line x1="420" y1="228" x2="500" y2="228" stroke="#2B5FD9" stroke-width="3"/>
+<line x1="420" y1="173" x2="500" y2="173" stroke="#E53935" stroke-width="3"/>
+<line x1="452" y1="212" x2="452" y2="224" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="452,212 449,218 455,218" fill="#1A1A1A"/>
+<line x1="468" y1="224" x2="468" y2="212" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="468,224 465,218 471,218" fill="#1A1A1A"/>
+<line x1="510" y1="173" x2="510" y2="228" stroke="#5F6B7A" stroke-width="1.5"/>
+<text x="518" y="204.5" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">ΔE</text>
+<text x="460" y="161" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#E53935">LUMO</text>
+<text x="460" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#2B5FD9">HOMO</text>
+<text x="460" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">hexatriene</text>
+<text x="460" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">H₂C=CH−CH=CH−CH=CH₂</text>
+<defs><marker id="tr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#17754A"/></marker></defs>
+<line x1="140" y1="340" x2="420" y2="340" stroke="#17754A" stroke-width="2" marker-end="url(#tr)"/>
+<text x="280" y="355" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#17754A">more conjugation → smaller gap → longer λ_max</text>
+</svg>

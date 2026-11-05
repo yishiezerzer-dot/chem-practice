@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img" aria-label="Hybrid orbitals ethene sp2 and ethyne sp with sigma and pi">
+<rect width="560" height="400" fill="#FFFFFF"/>
+<text x="280" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Hybridization: ethene (sp²) and ethyne (sp)</text>
+<text x="150" y="55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">ethene H₂C=CH₂ — sp²</text>
+<line x1="121.0" y1="140.0" x2="179.0" y2="140.0" stroke="#2B5FD9" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="93.13542753401967" y1="129.265386816494" x2="71.15689357036149" y2="109.38004656366039" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="93.13542753401967" y1="150.734613183506" x2="71.15689357036149" y2="170.6199534363396" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="206.86457246598033" y1="129.265386816494" x2="228.8431064296385" y2="109.38004656366039" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="206.86457246598033" y1="150.734613183506" x2="228.8431064296385" y2="170.6199534363396" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M 115,116 Q 150,96 185,116" fill="none" stroke="#E53935" stroke-width="2"/>
+<path d="M 115,164 Q 150,184 185,164" fill="none" stroke="#E53935" stroke-width="2"/>
+<circle cx="105" cy="140" r="16" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="105" y="144.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C</text>
+<circle cx="195" cy="140" r="16" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="195" y="144.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C</text>
+<circle cx="63" cy="102" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="63" y="105.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="63" cy="178" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="63" y="181.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="237" cy="102" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="237" y="105.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="237" cy="178" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="237" y="181.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="150" y="215" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">σ (blue) + π (red) = double bond</text>
+<text x="150" y="233" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">each C: 3 sp² + 1 unhybridized p</text>
+<text x="420" y="55" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">ethyne HC≡CH — sp</text>
+<line x1="391.0" y1="140.0" x2="449.0" y2="140.0" stroke="#2B5FD9" stroke-width="3.0" stroke-linecap="round"/>
+<line x1="359.0" y1="140.0" x2="338.0" y2="140.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="481.0" y1="140.0" x2="502.0" y2="140.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M 385,120 Q 420,102 455,120" fill="none" stroke="#E53935" stroke-width="2"/>
+<path d="M 385,160 Q 420,178 455,160" fill="none" stroke="#E53935" stroke-width="2"/>
+<ellipse cx="420" cy="85" rx="24" ry="13" fill="#FFCDD2" stroke="#E53935" stroke-width="1" opacity="0.75"/>
+<ellipse cx="420" cy="195" rx="24" ry="13" fill="#FFCDD2" stroke="#E53935" stroke-width="1" opacity="0.75"/>
+<text x="420" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#E53935">π</text>
+<circle cx="375" cy="140" r="16" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="375" y="144.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C</text>
+<circle cx="465" cy="140" r="16" fill="#EEEEEE" stroke="#1A1A1A" stroke-width="2"/><text x="465" y="144.9" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C</text>
+<circle cx="327" cy="140" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="327" y="143.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="513" cy="140" r="11" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/><text x="513" y="143.85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="420" y="215" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">σ + 2π = triple bond</text>
+<text x="420" y="233" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">each C: 2 sp + 2 unhybridized p</text>
+<text x="280" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">Legend</text>
+<line x1="120" y1="295" x2="160" y2="295" stroke="#2B5FD9" stroke-width="3"/>
+<text x="170" y="300" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#1A1A1A">σ bond (end-on overlap of hybrids)</text>
+<line x1="120" y1="320" x2="160" y2="320" stroke="#E53935" stroke-width="2"/>
+<text x="170" y="325" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#1A1A1A">π bond (side-on overlap of p orbitals)</text>
+<text x="280" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Single = 1σ; double = 1σ+1π; triple = 1σ+2π.</text>
+</svg>

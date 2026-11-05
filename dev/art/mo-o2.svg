@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 480" width="620" height="480" role="img" aria-label="Molecular orbital diagram for O2 O2+ and O2-">
+<rect width="620" height="480" fill="#FFFFFF"/>
+<text x="310" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">MO diagram for O₂ (and O₂⁺, O₂⁻)</text>
+<text x="310" y="44" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">O₂ ordering: σ₂p below π₂p  ·  2 unpaired in π*  ·  bond order 2  ·  paramagnetic</text>
+<text x="200" y="60" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">O₂ (12 valence e⁻)</text>
+<text x="110" y="105" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">σ*2p</text>
+<line x1="165" y1="100" x2="235" y2="100" stroke="#2B5FD9" stroke-width="2.5"/>
+<text x="110" y="155" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">π*2p</text>
+<line x1="152" y1="150" x2="212" y2="150" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="188" y1="150" x2="248" y2="150" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="182" y1="138" x2="182" y2="148" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="182,138 178.5,144 185.5,144" fill="#1A1A1A"/>
+<line x1="218" y1="138" x2="218" y2="148" stroke="#1A1A1A" stroke-width="2"/>
+<polygon points="218,138 214.5,144 221.5,144" fill="#1A1A1A"/>
+<text x="110" y="235" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">π2p</text>
+<line x1="152" y1="230" x2="212" y2="230" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="188" y1="230" x2="248" y2="230" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="177" y1="216" x2="177" y2="228" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="177,216 174,222 180,222" fill="#1A1A1A"/>
+<line x1="187" y1="228" x2="187" y2="216" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="187,228 184,222 190,222" fill="#1A1A1A"/>
+<line x1="213" y1="216" x2="213" y2="228" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="213,216 210,222 216,222" fill="#1A1A1A"/>
+<line x1="223" y1="228" x2="223" y2="216" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="223,228 220,222 226,222" fill="#1A1A1A"/>
+<text x="110" y="295" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">σ2p</text>
+<line x1="165" y1="290" x2="235" y2="290" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="194" y1="276" x2="194" y2="288" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="194,276 191,282 197,282" fill="#1A1A1A"/>
+<line x1="206" y1="288" x2="206" y2="276" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="206,288 203,282 209,282" fill="#1A1A1A"/>
+<text x="110" y="355" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">σ*2s</text>
+<line x1="165" y1="350" x2="235" y2="350" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="194" y1="336" x2="194" y2="348" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="194,336 191,342 197,342" fill="#1A1A1A"/>
+<line x1="206" y1="348" x2="206" y2="336" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="206,348 203,342 209,342" fill="#1A1A1A"/>
+<text x="110" y="405" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">σ2s</text>
+<line x1="165" y1="400" x2="235" y2="400" stroke="#2B5FD9" stroke-width="2.5"/>
+<line x1="194" y1="386" x2="194" y2="398" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="194,386 191,392 197,392" fill="#1A1A1A"/>
+<line x1="206" y1="398" x2="206" y2="386" stroke="#1A1A1A" stroke-width="1.8"/>
+<polygon points="206,398 203,392 209,392" fill="#1A1A1A"/>
+<text x="200" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">BO = ½(8−4) = 2</text>
+<text x="200" y="458" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#E53935">paramagnetic</text>
+<text x="480" y="80" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">Compare ions</text>
+<text x="480" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#1A1A1A">O₂⁺: remove 1 e⁻ from π*</text>
+<text x="480" y="130" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#17754A">→ 1 unpaired; BO = 2.5</text>
+<text x="480" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#1A1A1A">O₂⁻: add 1 e⁻ to π*</text>
+<text x="480" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#17754A">→ 1 unpaired; BO = 1.5</text>
+<text x="480" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">Bond length:</text>
+<text x="480" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#1A1A1A">O₂⁺ &lt; O₂ &lt; O₂⁻</text>
+<text x="480" y="300" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">Bonding MOs below;</text>
+<text x="480" y="318" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">antibonding (* ) above.</text>
+<text x="480" y="350" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">For O₂/F₂: σ2p &lt; π2p</text>
+<text x="480" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">(unlike B₂/C₂/N₂).</text>
+<line x1="40" y1="400" x2="40" y2="90" stroke="#1A1A1A" stroke-width="1.5"/>
+<polygon points="40,82 36,92 44,92" fill="#1A1A1A"/>
+<text x="28" y="85" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">E</text>
+</svg>

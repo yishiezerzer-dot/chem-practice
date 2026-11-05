@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="540" height="320" role="img" aria-label="Schematic shapes of 1s, 2p, and 3d orbitals">
+<rect width="540" height="320" fill="#FFFFFF"/>
+<text x="270" y="22" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Orbital shapes (schematic)</text>
+<circle cx="90" cy="130" r="42" fill="#BBDEFB" stroke="#2B5FD9" stroke-width="2"/>
+<circle cx="90" cy="130" r="3" fill="#1A1A1A"/>
+<text x="90" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">1s</text>
+<text x="90" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">sphere</text>
+<ellipse cx="250" cy="96" rx="24" ry="26" fill="#C8E6C9" stroke="#17754A" stroke-width="2"/>
+<ellipse cx="250" cy="164" rx="24" ry="26" fill="#FFCDD2" stroke="#E53935" stroke-width="2"/>
+<line x1="240" y1="130" x2="260" y2="130" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="290" y="96" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#17754A">+</text>
+<text x="290" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#E53935">−</text>
+<text x="250" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">2p</text>
+<text x="250" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">dumbbell</text>
+<ellipse cx="398" cy="98" rx="20" ry="13" transform="rotate(45 398 98)" fill="#BBDEFB" stroke="#2B5FD9" stroke-width="1.5"/>
+<ellipse cx="462" cy="98" rx="20" ry="13" transform="rotate(-45 462 98)" fill="#BBDEFB" stroke="#2B5FD9" stroke-width="1.5"/>
+<ellipse cx="398" cy="162" rx="20" ry="13" transform="rotate(-45 398 162)" fill="#BBDEFB" stroke="#2B5FD9" stroke-width="1.5"/>
+<ellipse cx="462" cy="162" rx="20" ry="13" transform="rotate(45 462 162)" fill="#BBDEFB" stroke="#2B5FD9" stroke-width="1.5"/>
+<circle cx="430" cy="130" r="3" fill="#1A1A1A"/>
+<text x="430" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">3d</text>
+<text x="430" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">clover (e.g. dₓᵧ)</text>
+<text x="270" y="295" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">Schematic phase/lobes only — not to scale.</text>
+</svg>

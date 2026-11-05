@@ -85,8 +85,13 @@ function renderSection(sec) {
     // Trusted inline SVG from our own readings.json (not user input)
     h += `<div class="rfig" role="figure">${sec.svg}</div>`;
   }
-  if (sec.figure && sec.figure.status === 'pending-sketch') {
-    h += `<div class="placeholder" data-pending-sketch="1"><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(sec.figure.note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+  if (sec.figure) {
+    if (sec.figure.src) {
+      const alt = esc(sec.figure.alt || 'Figure');
+      h += `<div class="rfig" role="figure"><img class="rsketch" src="${esc(sec.figure.src)}" alt="${alt}" loading="lazy" decoding="async"/></div>`;
+    } else if (sec.figure.status === 'pending-sketch') {
+      h += `<div class="placeholder" data-pending-sketch="1"><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(sec.figure.note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+    }
   }
   return h;
 }
