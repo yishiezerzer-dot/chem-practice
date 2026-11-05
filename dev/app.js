@@ -124,6 +124,8 @@ function openLightbox(fromBtn) {
   const img = fromBtn.querySelector('img.rsketch') || fromBtn;
   const alt = img.getAttribute('alt') || 'Figure';
   const full = img.getAttribute('data-full') || img.getAttribute('src') || '';
+  const inlineW = Math.max(1, img.getBoundingClientRect().width || img.clientWidth || 320);
+  const targetW = Math.max(inlineW * 2, 361); // 2× page CSS width, larger than 360 viewport
   closeLightbox();
   lightboxReturnFocus = fromBtn;
   const lb = document.createElement('div');
@@ -132,13 +134,32 @@ function openLightbox(fromBtn) {
   lb.setAttribute('role', 'dialog');
   lb.setAttribute('aria-modal', 'true');
   lb.setAttribute('aria-label', alt);
-  lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="Close">✕</button><img src="${esc(full)}" alt="${esc(alt)}"/>`;
+  lb.dataset.inlineWidth = String(inlineW);
+  lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="Close">✕</button>`
+    + `<div class="lightbox-scroll" data-lightbox-scroll="1">`
+    + `<img src="${esc(full)}" alt="${esc(alt)}" style="width:${targetW}px;max-width:none;height:auto" data-lightbox-img="1"/>`
+    + `</div>`;
   document.body.appendChild(lb);
   document.body.style.overflow = 'hidden';
   const closer = lb.querySelector('.lightbox-close');
+  const sc = lb.querySelector('.lightbox-scroll');
+  const big = sc.querySelector('img');
   closer.onclick = e => { e.stopPropagation(); closeLightbox(); };
+  // Backdrop / empty scroll area closes; image click does not
   lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
-  lb.querySelector('img').addEventListener('click', e => e.stopPropagation());
+  sc.addEventListener('click', e => { if (e.target === sc) closeLightbox(); });
+  big.addEventListener('click', e => e.stopPropagation());
+  const scrollToCenterLeft = () => {
+    const maxX = Math.max(0, sc.scrollWidth - sc.clientWidth);
+    const maxY = Math.max(0, sc.scrollHeight - sc.clientHeight);
+    // center-left: ~25% across horizontally, vertically centered
+    sc.scrollLeft = maxX * 0.25;
+    sc.scrollTop = maxY * 0.5;
+  };
+  if (big.complete) scrollToCenterLeft();
+  else big.addEventListener('load', scrollToCenterLeft, { once: true });
+  // Layout may settle a frame later
+  requestAnimationFrame(() => requestAnimationFrame(scrollToCenterLeft));
   closer.focus();
 }
 function wireSketchLightbox() {
