@@ -42,8 +42,8 @@ async function init() {
   });
   go('home');
 }
-function go(v, arg) { view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
-function setTop(title, back) { $('#title').textContent = title; $('#back').hidden = !back; $("#weakBtn").hidden = view !== "home"; $('#bar').hidden = view !== 'card'; }
+function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgress(); view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
+function setTop(title, back) { $('#title').textContent = title; $('#back').hidden = !back; $("#weakBtn").hidden = view !== "home"; $('#bar').hidden = !(view === 'card' || view === 'reading'); }
 function render() { ({ home, reading, topic, card, end, weak })[view](viewArg); }
 
 function home() {
@@ -91,10 +91,20 @@ function renderSection(sec) {
   return h;
 }
 
+function updateReadProgress() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const pct = max > 0 ? Math.min(100, Math.max(0, 100 * scrollY / max)) : 0;
+  const fill = $('#bar div'); if (fill) fill.style.width = pct + '%';
+}
+function stopReadProgress() {
+  removeEventListener('scroll', updateReadProgress);
+  const fill = $('#bar div'); if (fill && view !== 'card') fill.style.width = '0%';
+}
 function reading(tid) {
   const t = topicOf(tid), r = readingOf(tid), qs = qsFor(tid);
-  setTop(t.topic_en, true);
+  setTop('Reading', true);
   let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
+  h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
   if (r && !r.reviewed) h += `<div class="cap">Draft, not checked yet</div>`;
   if (!r) {
     h += `<div class="card"><p class="rp">Reading for this topic is not ready yet.</p></div>`;
@@ -103,11 +113,14 @@ function reading(tid) {
     (r.sections || []).forEach(sec => { h += `<section class="rsec">${renderSection(sec)}</section>`; });
     h += `</div>`;
   }
-  h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
   h += `<div class="sticky" id="readEnd"><button class="btn" id="startPractice">Start practice (${qs.length} cards)</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
-  $('#skipCards').onclick = () => go('topic', tid);
-  $('#startPractice').onclick = () => start(tid, qs.map(q => q.id));
+  $('#skipCards').onclick = () => { stopReadProgress(); go('topic', tid); };
+  $('#startPractice').onclick = () => { stopReadProgress(); start(tid, qs.map(q => q.id)); };
+  $('#bar div').style.width = '0%';
+  removeEventListener('scroll', updateReadProgress);
+  addEventListener('scroll', updateReadProgress, { passive: true });
+  updateReadProgress();
 }
 
 function topic(tid) {

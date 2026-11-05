@@ -42,13 +42,12 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 .rh{font-size:20px;line-height:28px;margin:24px 0 8px}
 .rp{margin:0 0 12px;font-size:17px;line-height:26px;max-width:65ch}
 .rsec{margin-bottom:8px}
-.worked{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin:12px 0 16px}
+.worked{background:var(--tip);border:1px solid var(--border);border-inline-start:4px solid var(--primary);border-radius:12px;padding:16px;margin:12px 0 16px}
 .worked-title{font-weight:600;margin:4px 0 8px}
 .rfig{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px;margin:12px 0;overflow:auto}
 .rfig svg{display:block;width:100%;height:auto;max-width:320px;margin:0 auto}
 .placeholder{border:1px dashed var(--muted);border-radius:12px;padding:16px;margin:12px 0;background:var(--bg)}
-.read-actions{margin:8px 0 0}
+.read-actions{margin:0 0 8px}
 .qimg{margin:12px 0}.qimg img{display:block;max-width:100%;max-height:240px;height:auto;border-radius:8px;border:1px solid var(--border)}
 
 .reading{padding-bottom:8px}
-.read-actions{padding-bottom:8px}
