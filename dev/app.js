@@ -35,6 +35,7 @@ async function init() {
   $('#weakBtn').onclick = () => go('weak');
   $('#importFile').onchange = doImport;
   document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && $('#lightbox')) { e.preventDefault(); closeLightbox(); return; }
     if (view !== 'card') return;
     const b = { '1': '.r-didnt', '2': '.r-unsure', '3': '.r-knew' }[e.key];
     if (b && $(b)) $(b).click();
@@ -88,7 +89,9 @@ function renderSection(sec) {
   if (sec.figure) {
     if (sec.figure.src) {
       const alt = esc(sec.figure.alt || 'Figure');
-      h += `<div class="rfig" role="figure"><img class="rsketch" src="${esc(sec.figure.src)}" alt="${alt}" loading="lazy" decoding="async"/></div>`;
+      const src = sec.figure.src;
+      const full = src.replace(/\.svg$/i, '.png');
+      h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button><div class="rsketch-hint">Tap to enlarge</div></div>`;
     } else if (sec.figure.status === 'pending-sketch') {
       h += `<div class="placeholder" data-pending-sketch="1"><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(sec.figure.note || 'Chem Sketcher will add this drawing.')}</p></div>`;
     }
@@ -105,6 +108,45 @@ function stopReadProgress() {
   removeEventListener('scroll', updateReadProgress);
   const fill = $('#bar div'); if (fill && view !== 'card') fill.style.width = '0%';
 }
+
+let lightboxReturnFocus = null;
+function closeLightbox() {
+  const lb = $('#lightbox');
+  if (!lb) return;
+  lb.remove();
+  document.body.style.overflow = '';
+  if (lightboxReturnFocus && typeof lightboxReturnFocus.focus === 'function') {
+    try { lightboxReturnFocus.focus(); } catch (_) {}
+  }
+  lightboxReturnFocus = null;
+}
+function openLightbox(fromBtn) {
+  const img = fromBtn.querySelector('img.rsketch') || fromBtn;
+  const alt = img.getAttribute('alt') || 'Figure';
+  const full = img.getAttribute('data-full') || img.getAttribute('src') || '';
+  closeLightbox();
+  lightboxReturnFocus = fromBtn;
+  const lb = document.createElement('div');
+  lb.id = 'lightbox';
+  lb.className = 'lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', alt);
+  lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="Close">✕</button><img src="${esc(full)}" alt="${esc(alt)}"/>`;
+  document.body.appendChild(lb);
+  document.body.style.overflow = 'hidden';
+  const closer = lb.querySelector('.lightbox-close');
+  closer.onclick = e => { e.stopPropagation(); closeLightbox(); };
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  lb.querySelector('img').addEventListener('click', e => e.stopPropagation());
+  closer.focus();
+}
+function wireSketchLightbox() {
+  document.querySelectorAll('[data-sketch-btn]').forEach(btn => {
+    btn.onclick = () => openLightbox(btn);
+  });
+}
+
 function reading(tid) {
   const t = topicOf(tid), r = readingOf(tid), qs = qsFor(tid);
   setTop('Reading', true);
@@ -126,6 +168,7 @@ function reading(tid) {
   const readEl = document.querySelector('.reading');
   const endEl = $('#readEnd');
   if (readEl && endEl) readEl.style.paddingBottom = (endEl.offsetHeight + 16) + 'px';
+  wireSketchLightbox();
   $('#bar div').style.width = '0%';
   removeEventListener('scroll', updateReadProgress);
   addEventListener('scroll', updateReadProgress, { passive: true });
