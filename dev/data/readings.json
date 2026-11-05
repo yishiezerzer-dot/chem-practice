@@ -9,10 +9,10 @@
       "reviewed": false,
       "sections": [
         {
-          "heading": "What measurement means in chemistry",
+          "heading": "Measurement in chemistry",
           "paragraphs": [
             "Every measured value has a number and a unit. Chemistry uses SI units: metre (m), kilogram (kg), second (s), kelvin (K), mole (mol), and derived units such as litre (L) and pascal (Pa).",
-            "Prefixes scale units: kilo (k) = 10³, centi (c) = 10⁻², milli (m) = 10⁻³, micro (µ) = 10⁻⁶, nano (n) = 10⁻⁹. Dimensional analysis (cancel units) keeps conversions honest."
+            "Prefixes scale units: kilo (k) = 10³, centi (c) = 10⁻², milli (m) = 10⁻³, micro (µ) = 10⁻⁶, nano (n) = 10⁻⁹. Dimensional analysis cancels units so conversions stay correct."
           ]
         },
         {
@@ -367,8 +367,8 @@
           "worked": {
             "title": "σ and π bonds in CH₂=CH–C≡N",
             "steps": [
-              "Count all connections: C–H, C–C, C–C, C–N singles/multiples",
-              "Skeleton has 6 σ bonds (every single connection has one σ)",
+              "σ bonds: 4 C–H + C–C + C–N = 6 σ",
+              "Every connection has one σ (singles, doubles, and triples each include one)",
               "Double bond adds 1 π; triple bond adds 2 π → 3 π total",
               "Answer: 6 σ and 3 π"
             ]
@@ -386,7 +386,7 @@
           "worked": {
             "title": "Bond orders of O₂, O₂⁺, O₂⁻",
             "steps": [
-              "O₂ (12 valence e⁻ in MO count for O₂): bond order 2",
+              "O₂ has 12 valence electrons in the MO scheme. Bond order = 2.",
               "O₂⁺ removes one antibonding e⁻ → bond order 2.5",
               "O₂⁻ adds one antibonding e⁻ → bond order 1.5",
               "Bond length: O₂⁺ < O₂ < O₂⁻"
@@ -401,7 +401,7 @@
         {
           "heading": "Types of intermolecular forces",
           "paragraphs": [
-            "London dispersion: instantaneous dipoles; stronger for larger, more polarizable electron clouds and for longer contact area. Dipole–dipole: between permanent dipoles. Hydrogen bonding: H bonded to N, O, or F attracted to a lone pair on N, O, or F — unusually strong.",
+            "London dispersion: instantaneous dipoles; stronger for larger, more polarizable electron clouds and for longer contact area. Dipole–dipole: between permanent dipoles. Hydrogen bonding: H bonded to N, O, or F attracted to a lone pair on N, O, or F. It is unusually strong.",
             "Stronger IMF → higher boiling/melting point (for similar molar mass)."
           ],
           "worked": {
@@ -515,7 +515,7 @@
         {
           "heading": "First law: ΔU = q + w",
           "paragraphs": [
-            "Internal energy U is a state function. Heat q into the system is positive; work w done on the system is positive in the chemistry sign convention used here (some physics texts flip w). For expansion work against constant P, w = −PΔV."
+            "Internal energy U is a state function. Heat q into the system is positive; work w done on the system is positive in the chemistry sign convention used here (some physics books define w with the opposite sign). For expansion work against constant P, w = −PΔV."
           ],
           "worked": {
             "title": "System absorbs 250 J heat, does 100 J work",
