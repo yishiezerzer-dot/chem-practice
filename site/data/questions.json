@@ -1,0 +1,1703 @@
+{
+ "meta": {
+  "batch": "M2 draft 1",
+  "date": "2026-11-05",
+  "note": "Drafted by App Maker. reviewed=false until Yishi checks each one. Book refs are Atkins 8e unit/topic only; page numbers still to add. M5: added 5 questions each for topics 4-23 (reviewed=false)."
+ },
+ "questions": [
+  {
+   "id": "t1-q1",
+   "topic": "measurement-units-and-significant-figure",
+   "type": "calc",
+   "q": "A 25.0 mL sample of a liquid has a mass of 19.7 g. What is its density?",
+   "given": [
+    "V = 25.0 mL",
+    "m = 19.7 g"
+   ],
+   "answer": "0.788 g/mL",
+   "steps": [
+    "Density is mass divided by volume: d = m / V",
+    "d = 19.7 g / 25.0 mL = 0.788 g/mL",
+    "Both values have 3 significant figures, so the answer keeps 3."
+   ],
+   "ref": "Fundamentals, Topic A",
+   "reviewed": false
+  },
+  {
+   "id": "t1-q2",
+   "topic": "measurement-units-and-significant-figure",
+   "type": "concept",
+   "q": "How many significant figures are in 0.004050?",
+   "answer": "4",
+   "explanation": "Leading zeros (0.00) only place the decimal point, so they don't count. The 4, the zero between 4 and 5, the 5, and the trailing zero after the decimal point all count. That gives 4 significant figures.",
+   "ref": "Fundamentals, Topic A",
+   "reviewed": false
+  },
+  {
+   "id": "t1-q3",
+   "topic": "measurement-units-and-significant-figure",
+   "type": "calc",
+   "q": "Add and report with correct significant figures: 12.11 g + 18.0 g + 1.013 g.",
+   "given": [
+    "12.11 g",
+    "18.0 g",
+    "1.013 g"
+   ],
+   "answer": "31.1 g",
+   "steps": [
+    "Raw sum: 12.11 + 18.0 + 1.013 = 31.123 g",
+    "In addition, the answer keeps the fewest decimal places of any term. 18.0 has one decimal place.",
+    "Round to one decimal place: 31.1 g"
+   ],
+   "ref": "Fundamentals, Topic A",
+   "reviewed": false
+  },
+  {
+   "id": "t1-q4",
+   "topic": "measurement-units-and-significant-figure",
+   "type": "calc",
+   "q": "Convert 1.25 m³ to liters.",
+   "given": [
+    "V = 1.25 m³",
+    "1 m³ = 1000 L"
+   ],
+   "answer": "1.25 × 10³ L",
+   "steps": [
+    "1 m = 10 dm, so 1 m³ = 10³ dm³ = 1000 L (1 L = 1 dm³)",
+    "1.25 m³ × 1000 L/m³ = 1250 L",
+    "Written with 3 significant figures: 1.25 × 10³ L"
+   ],
+   "ref": "Fundamentals, Topic A",
+   "reviewed": false
+  },
+  {
+   "id": "t1-q5",
+   "topic": "measurement-units-and-significant-figure",
+   "type": "calc",
+   "q": "3.0 g of NaCl is dissolved in 50.0 g of water. What is the mass percent of NaCl in the solution?",
+   "given": [
+    "m(NaCl) = 3.0 g",
+    "m(water) = 50.0 g"
+   ],
+   "answer": "5.7 %",
+   "steps": [
+    "Mass of solution = 3.0 g + 50.0 g = 53.0 g",
+    "Mass percent = 3.0 g / 53.0 g × 100 = 5.66 %",
+    "3.0 has 2 significant figures, so report 5.7 %"
+   ],
+   "ref": "Fundamentals, Topic A",
+   "reviewed": false
+  },
+  {
+   "id": "t2-q1",
+   "topic": "atoms-elements-and-the-mole",
+   "type": "concept",
+   "q": "How many protons, neutrons and electrons are in the ion ⁵⁶Fe³⁺?",
+   "answer": "26 protons, 30 neutrons, 23 electrons",
+   "explanation": "Iron's atomic number is 26, so it has 26 protons. The mass number 56 minus 26 protons gives 30 neutrons. A 3+ charge means it lost 3 electrons: 26 − 3 = 23 electrons.",
+   "ref": "Fundamentals, Topic B",
+   "reviewed": false
+  },
+  {
+   "id": "t2-q2",
+   "topic": "atoms-elements-and-the-mole",
+   "type": "calc",
+   "q": "Chlorine is 75.78 % ³⁵Cl (34.969 u) and 24.22 % ³⁷Cl (36.966 u). What is its average atomic mass?",
+   "given": [
+    "³⁵Cl: 34.969 u, 75.78 %",
+    "³⁷Cl: 36.966 u, 24.22 %"
+   ],
+   "answer": "35.45 u",
+   "steps": [
+    "Average mass = sum of (fraction × isotope mass)",
+    "0.7578 × 34.969 u = 26.50 u",
+    "0.2422 × 36.966 u = 8.953 u",
+    "26.50 u + 8.953 u = 35.45 u"
+   ],
+   "ref": "Fundamentals, Topic B",
+   "reviewed": false
+  },
+  {
+   "id": "t2-q3",
+   "topic": "atoms-elements-and-the-mole",
+   "type": "calc",
+   "q": "How many moles of water are in 10.0 g of H₂O?",
+   "given": [
+    "m = 10.0 g",
+    "M(H₂O) = 18.02 g/mol"
+   ],
+   "answer": "0.555 mol",
+   "steps": [
+    "Molar mass: 2 × 1.008 + 16.00 = 18.02 g/mol",
+    "n = m / M = 10.0 g / 18.02 g/mol = 0.555 mol"
+   ],
+   "ref": "Fundamentals, Topic E",
+   "reviewed": false
+  },
+  {
+   "id": "t2-q4",
+   "topic": "atoms-elements-and-the-mole",
+   "type": "calc",
+   "q": "How many atoms in total are in 0.250 mol of CO₂?",
+   "given": [
+    "n = 0.250 mol",
+    "N_A = 6.022 × 10²³ mol⁻¹"
+   ],
+   "answer": "4.52 × 10²³ atoms",
+   "steps": [
+    "Molecules = n × N_A = 0.250 × 6.022 × 10²³ = 1.506 × 10²³",
+    "Each CO₂ has 3 atoms (1 C + 2 O)",
+    "Atoms = 3 × 1.506 × 10²³ = 4.52 × 10²³"
+   ],
+   "ref": "Fundamentals, Topic E",
+   "reviewed": false
+  },
+  {
+   "id": "t2-q5",
+   "topic": "atoms-elements-and-the-mole",
+   "type": "concept",
+   "q": "What do isotopes of the same element have in common, and how do they differ?",
+   "answer": "Same number of protons, different number of neutrons",
+   "explanation": "Isotopes share the atomic number (protons), so they are the same element and react almost the same way chemically. They differ in neutrons, so their mass numbers and masses differ.",
+   "ref": "Fundamentals, Topic B",
+   "reviewed": false
+  },
+  {
+   "id": "t3-q1",
+   "topic": "chemical-compounds-formulas-and-oxidatio",
+   "type": "calc",
+   "q": "What is the mass percent of nitrogen in ammonium nitrate, NH₄NO₃?",
+   "given": [
+    "M(N) = 14.01 g/mol",
+    "M(NH₄NO₃) = 80.04 g/mol"
+   ],
+   "answer": "35.0 %",
+   "steps": [
+    "There are 2 N atoms: 2 × 14.01 = 28.02 g/mol",
+    "Molar mass of NH₄NO₃: 2(14.01) + 4(1.008) + 3(16.00) = 80.04 g/mol",
+    "Mass % N = 28.02 / 80.04 × 100 = 35.0 %"
+   ],
+   "ref": "Fundamentals, Topic F",
+   "reviewed": false
+  },
+  {
+   "id": "t3-q2",
+   "topic": "chemical-compounds-formulas-and-oxidatio",
+   "type": "calc",
+   "q": "A compound is 40.0 % C, 6.71 % H and 53.3 % O by mass. What is its empirical formula?",
+   "given": [
+    "C 40.0 %",
+    "H 6.71 %",
+    "O 53.3 %"
+   ],
+   "answer": "CH₂O",
+   "steps": [
+    "Take 100 g: 40.0 g C, 6.71 g H, 53.3 g O",
+    "Moles: C 40.0/12.01 = 3.33; H 6.71/1.008 = 6.66; O 53.3/16.00 = 3.33",
+    "Divide by the smallest (3.33): C 1, H 2, O 1",
+    "Empirical formula: CH₂O"
+   ],
+   "ref": "Fundamentals, Topic F",
+   "reviewed": false
+  },
+  {
+   "id": "t3-q3",
+   "topic": "chemical-compounds-formulas-and-oxidatio",
+   "type": "calc",
+   "q": "A compound has empirical formula CH₂O and molar mass 180 g/mol. What is its molecular formula?",
+   "given": [
+    "Empirical formula CH₂O",
+    "M = 180 g/mol"
+   ],
+   "answer": "C₆H₁₂O₆",
+   "steps": [
+    "Mass of CH₂O unit: 12.01 + 2(1.008) + 16.00 = 30.03 g/mol",
+    "Ratio: 180 / 30.03 = 6.0",
+    "Multiply every subscript by 6: C₆H₁₂O₆"
+   ],
+   "ref": "Fundamentals, Topic F",
+   "reviewed": false
+  },
+  {
+   "id": "t3-q4",
+   "topic": "chemical-compounds-formulas-and-oxidatio",
+   "type": "concept",
+   "q": "What is the oxidation state of Mn in KMnO₄?",
+   "answer": "+7",
+   "explanation": "K is +1 and each O is −2, so four O give −8. The compound is neutral: (+1) + Mn + (−8) = 0, so Mn = +7.",
+   "ref": "Fundamentals, Topic K",
+   "reviewed": false
+  },
+  {
+   "id": "t3-q5",
+   "topic": "chemical-compounds-formulas-and-oxidatio",
+   "type": "concept",
+   "q": "What is the average oxidation state of S in the thiosulfate ion, S₂O₃²⁻?",
+   "answer": "+2",
+   "explanation": "Three O atoms give 3 × (−2) = −6. The ion's total charge is −2, so the two S atoms together are +4. That's +2 each on average. (The two S atoms aren't really equal, which is why we say average.)",
+   "ref": "Fundamentals, Topic K",
+   "reviewed": false
+  },
+  {
+   "id": "t4-q1",
+   "topic": "chemical-equations-and-stoichiometry",
+   "type": "calc",
+   "q": "10.0 g of H₂ reacts with 64.0 g of O₂ to form water (2H₂ + O₂ → 2H₂O). Which reactant is limiting, and what mass of water can form?",
+   "given": [
+    "m(H₂) = 10.0 g, M = 2.016 g/mol",
+    "m(O₂) = 64.0 g, M = 32.00 g/mol",
+    "M(H₂O) = 18.02 g/mol"
+   ],
+   "answer": "O₂ is limiting; 72.1 g H₂O",
+   "steps": [
+    "n(H₂) = 10.0 / 2.016 = 4.96 mol; n(O₂) = 64.0 / 32.00 = 2.00 mol",
+    "2.00 mol O₂ needs 4.00 mol H₂, and 4.96 mol is available, so O₂ is limiting",
+    "n(H₂O) = 2 × 2.00 = 4.00 mol",
+    "m = 4.00 mol × 18.02 g/mol = 72.1 g"
+   ],
+   "ref": "Fundamentals, Topic M",
+   "reviewed": false
+  },
+  {
+   "id": "t4-q2",
+   "topic": "chemical-equations-and-stoichiometry",
+   "type": "calc",
+   "q": "25.0 mL of 6.00 M HCl is diluted with water to a final volume of 150.0 mL. What is the new concentration?",
+   "given": [
+    "c₁ = 6.00 M",
+    "V₁ = 25.0 mL",
+    "V₂ = 150.0 mL"
+   ],
+   "answer": "1.00 M",
+   "steps": [
+    "Moles of solute stay the same: c₁V₁ = c₂V₂",
+    "c₂ = (6.00 M × 25.0 mL) / 150.0 mL = 1.00 M"
+   ],
+   "ref": "Fundamentals, Topic G",
+   "reviewed": false
+  },
+  {
+   "id": "t4-q3",
+   "topic": "chemical-equations-and-stoichiometry",
+   "type": "calc",
+   "q": "Heating 5.00 g of CaCO₃ (CaCO₃ → CaO + CO₂) gives 2.50 g of CaO. What is the percent yield?",
+   "given": [
+    "m(CaCO₃) = 5.00 g, M = 100.09 g/mol",
+    "M(CaO) = 56.08 g/mol",
+    "actual yield = 2.50 g CaO"
+   ],
+   "answer": "89.2%",
+   "steps": [
+    "n(CaCO₃) = 5.00 / 100.09 = 0.04996 mol, which gives 0.04996 mol CaO (1:1)",
+    "Theoretical yield = 0.04996 mol × 56.08 g/mol = 2.80 g",
+    "Percent yield = 2.50 / 2.80 × 100% = 89.2%"
+   ],
+   "ref": "Fundamentals, Topic M",
+   "reviewed": false
+  },
+  {
+   "id": "t4-q4",
+   "topic": "chemical-equations-and-stoichiometry",
+   "type": "concept",
+   "q": "Balance the combustion of propane: C₃H₈ + O₂ → CO₂ + H₂O.",
+   "answer": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+   "explanation": "Balance C first (3 CO₂), then H (4 H₂O), then O last: 3×2 + 4 = 10 O atoms, so 5 O₂.",
+   "ref": "Fundamentals, Topic H",
+   "reviewed": false
+  },
+  {
+   "id": "t4-q5",
+   "topic": "chemical-equations-and-stoichiometry",
+   "type": "concept",
+   "q": "True or false: the reactant present in the smaller mass is always the limiting reactant.",
+   "answer": "False",
+   "explanation": "The limiting reactant depends on moles and the mole ratio in the balanced equation, not on mass. Convert each mass to moles and compare with the stoichiometric ratio.",
+   "ref": "Fundamentals, Topic M",
+   "reviewed": false
+  },
+  {
+   "id": "t5-q1",
+   "topic": "types-of-reactions-in-aqueous-solution",
+   "type": "concept",
+   "q": "Write the net ionic equation for mixing aqueous AgNO₃ and NaCl.",
+   "answer": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)",
+   "explanation": "AgCl is insoluble, so it precipitates. Na⁺ and NO₃⁻ stay dissolved and unchanged, so they are spectator ions and are left out.",
+   "ref": "Fundamentals, Topic I",
+   "reviewed": false
+  },
+  {
+   "id": "t5-q2",
+   "topic": "types-of-reactions-in-aqueous-solution",
+   "type": "concept",
+   "q": "Classify each as a strong electrolyte, weak electrolyte or non-electrolyte in water: KNO₃, HF, C₆H₁₂O₆ (glucose).",
+   "answer": "KNO₃: strong; HF: weak; glucose: non-electrolyte",
+   "explanation": "KNO₃ is a soluble ionic compound and dissociates fully. HF is a weak acid that ionizes only partly. Glucose dissolves as neutral molecules and makes no ions.",
+   "ref": "Fundamentals, Topic J",
+   "reviewed": false
+  },
+  {
+   "id": "t5-q3",
+   "topic": "types-of-reactions-in-aqueous-solution",
+   "type": "concept",
+   "q": "In the reaction Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s), identify the oxidizing agent and the reducing agent.",
+   "answer": "Oxidizing agent: Cu²⁺; reducing agent: Zn",
+   "explanation": "Zn loses electrons (0 → +2), so it is oxidized and is the reducing agent. Cu²⁺ gains electrons (+2 → 0), so it is reduced and is the oxidizing agent.",
+   "ref": "Fundamentals, Topic K",
+   "reviewed": false
+  },
+  {
+   "id": "t5-q4",
+   "topic": "types-of-reactions-in-aqueous-solution",
+   "type": "calc",
+   "q": "What is the concentration of sulfate ions in 0.150 M Al₂(SO₄)₃ solution (assume complete dissociation)?",
+   "given": [
+    "c(Al₂(SO₄)₃) = 0.150 M"
+   ],
+   "answer": "0.450 M SO₄²⁻",
+   "steps": [
+    "Al₂(SO₄)₃ → 2Al³⁺ + 3SO₄²⁻",
+    "[SO₄²⁻] = 3 × 0.150 M = 0.450 M"
+   ],
+   "ref": "Fundamentals, Topic I",
+   "reviewed": false
+  },
+  {
+   "id": "t5-q5",
+   "topic": "types-of-reactions-in-aqueous-solution",
+   "type": "calc",
+   "q": "Excess NaCl solution is added to 50.0 mL of 0.100 M AgNO₃. What mass of AgCl precipitates?",
+   "given": [
+    "V = 50.0 mL",
+    "c(AgNO₃) = 0.100 M",
+    "M(AgCl) = 143.32 g/mol"
+   ],
+   "answer": "0.717 g",
+   "steps": [
+    "n(Ag⁺) = 0.0500 L × 0.100 M = 5.00 × 10⁻³ mol",
+    "Ag⁺ + Cl⁻ → AgCl is 1:1, so n(AgCl) = 5.00 × 10⁻³ mol",
+    "m = 5.00 × 10⁻³ mol × 143.32 g/mol = 0.717 g"
+   ],
+   "ref": "Fundamentals, Topic I",
+   "reviewed": false
+  },
+  {
+   "id": "t6-q1",
+   "topic": "balancing-redox-equations-and-titrations",
+   "type": "concept",
+   "q": "Balance in acidic solution: MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺.",
+   "answer": "MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O",
+   "explanation": "Mn goes from +7 to +2 (gains 5 e⁻), each Fe loses 1 e⁻, so 5 Fe²⁺ are needed. Balance O with 4 H₂O and H with 8 H⁺; both sides then carry a charge of +17.",
+   "ref": "Fundamentals, Topic K",
+   "reviewed": false
+  },
+  {
+   "id": "t6-q2",
+   "topic": "balancing-redox-equations-and-titrations",
+   "type": "concept",
+   "q": "Balance in basic solution: MnO₄⁻ + I⁻ → MnO₂ + I₂.",
+   "answer": "2MnO₄⁻ + 6I⁻ + 4H₂O → 2MnO₂ + 3I₂ + 8OH⁻",
+   "explanation": "Each Mn gains 3 e⁻ and each I₂ formed releases 2 e⁻, so 2 MnO₄⁻ match 3 I₂ (6 e⁻). Balancing in acid and then adding OH⁻ to both sides to cancel H⁺ gives 4 H₂O on the left and 8 OH⁻ on the right; charge is −8 on both sides.",
+   "ref": "Fundamentals, Topic K",
+   "reviewed": false
+  },
+  {
+   "id": "t6-q3",
+   "topic": "balancing-redox-equations-and-titrations",
+   "type": "calc",
+   "q": "25.00 mL of an Fe²⁺ solution needs 18.40 mL of 0.02000 M KMnO₄ to reach the endpoint (MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O). What is [Fe²⁺]?",
+   "given": [
+    "V(Fe²⁺) = 25.00 mL",
+    "V(MnO₄⁻) = 18.40 mL",
+    "c(MnO₄⁻) = 0.02000 M"
+   ],
+   "answer": "0.07360 M",
+   "steps": [
+    "n(MnO₄⁻) = 0.01840 L × 0.02000 M = 3.680 × 10⁻⁴ mol",
+    "n(Fe²⁺) = 5 × 3.680 × 10⁻⁴ = 1.840 × 10⁻³ mol",
+    "[Fe²⁺] = 1.840 × 10⁻³ mol / 0.02500 L = 0.07360 M"
+   ],
+   "ref": "Fundamentals, Topic L",
+   "reviewed": false
+  },
+  {
+   "id": "t6-q4",
+   "topic": "balancing-redox-equations-and-titrations",
+   "type": "calc",
+   "q": "20.00 mL of H₂SO₄ solution is neutralized by 32.50 mL of 0.1000 M NaOH. What is the H₂SO₄ concentration?",
+   "given": [
+    "V(H₂SO₄) = 20.00 mL",
+    "V(NaOH) = 32.50 mL",
+    "c(NaOH) = 0.1000 M"
+   ],
+   "answer": "0.08125 M",
+   "steps": [
+    "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+    "n(NaOH) = 0.03250 L × 0.1000 M = 3.250 × 10⁻³ mol",
+    "n(H₂SO₄) = 3.250 × 10⁻³ / 2 = 1.625 × 10⁻³ mol",
+    "c = 1.625 × 10⁻³ mol / 0.02000 L = 0.08125 M"
+   ],
+   "ref": "Fundamentals, Topic L",
+   "reviewed": false
+  },
+  {
+   "id": "t6-q5",
+   "topic": "balancing-redox-equations-and-titrations",
+   "type": "calc",
+   "q": "A 0.5106 g sample of KHP (potassium hydrogen phthalate, a monoprotic acid) needs 24.35 mL of NaOH to reach the endpoint. What is the NaOH concentration?",
+   "given": [
+    "m(KHP) = 0.5106 g",
+    "M(KHP) = 204.22 g/mol",
+    "V(NaOH) = 24.35 mL"
+   ],
+   "answer": "0.1027 M",
+   "steps": [
+    "n(KHP) = 0.5106 / 204.22 = 2.500 × 10⁻³ mol",
+    "KHP reacts 1:1 with NaOH, so n(NaOH) = 2.500 × 10⁻³ mol",
+    "c = 2.500 × 10⁻³ mol / 0.02435 L = 0.1027 M"
+   ],
+   "ref": "Fundamentals, Topic L",
+   "reviewed": false
+  },
+  {
+   "id": "t7-q1",
+   "topic": "gases-gas-laws-and-the-ideal-gas-equatio",
+   "type": "calc",
+   "q": "What pressure do 2.50 mol of an ideal gas exert in a 10.0 L container at 25.0 °C?",
+   "given": [
+    "n = 2.50 mol",
+    "V = 10.0 L",
+    "T = 25.0 °C = 298.15 K",
+    "R = 0.08206 L·atm/(mol·K)"
+   ],
+   "answer": "6.12 atm",
+   "steps": [
+    "P = nRT / V",
+    "P = (2.50 × 0.08206 × 298.15) / 10.0 = 6.12 atm"
+   ],
+   "ref": "Focus 3, Topic 3B",
+   "reviewed": false
+  },
+  {
+   "id": "t7-q2",
+   "topic": "gases-gas-laws-and-the-ideal-gas-equatio",
+   "type": "concept",
+   "q": "At the same temperature and pressure, which has the greater mass: 1.0 L of CO₂ or 1.0 L of N₂?",
+   "answer": "1.0 L of CO₂",
+   "explanation": "Equal volumes of gases at the same T and P hold the same number of moles (Avogadro's principle). CO₂ (44.01 g/mol) has a larger molar mass than N₂ (28.02 g/mol), so the same number of moles weighs more.",
+   "ref": "Focus 3, Topic 3A",
+   "reviewed": false
+  },
+  {
+   "id": "t7-q3",
+   "topic": "gases-gas-laws-and-the-ideal-gas-equatio",
+   "type": "calc",
+   "q": "A gas mixture contains 0.400 mol N₂ and 0.100 mol O₂ at a total pressure of 2.00 atm. What is the partial pressure of O₂?",
+   "given": [
+    "n(N₂) = 0.400 mol",
+    "n(O₂) = 0.100 mol",
+    "P(total) = 2.00 atm"
+   ],
+   "answer": "0.400 atm",
+   "steps": [
+    "Mole fraction x(O₂) = 0.100 / (0.400 + 0.100) = 0.200",
+    "P(O₂) = x(O₂) × P(total) = 0.200 × 2.00 atm = 0.400 atm"
+   ],
+   "ref": "Focus 3, Topic 3C",
+   "reviewed": false
+  },
+  {
+   "id": "t7-q4",
+   "topic": "gases-gas-laws-and-the-ideal-gas-equatio",
+   "type": "concept",
+   "q": "A gas at constant pressure is heated from 10 °C to 20 °C. Does its volume double? Explain.",
+   "answer": "No, it rises by only about 3.5%",
+   "explanation": "Charles's law uses absolute temperature. The temperature goes from 283 K to 293 K, so V₂/V₁ = 293/283 ≈ 1.035, not 2.",
+   "ref": "Focus 3, Topic 3B",
+   "reviewed": false
+  },
+  {
+   "id": "t7-q5",
+   "topic": "gases-gas-laws-and-the-ideal-gas-equatio",
+   "type": "calc",
+   "q": "What volume of O₂, measured at 0 °C and 1.00 atm, forms when 12.25 g of KClO₃ fully decomposes (2KClO₃ → 2KCl + 3O₂)?",
+   "given": [
+    "m(KClO₃) = 12.25 g",
+    "M(KClO₃) = 122.55 g/mol",
+    "T = 273.15 K, P = 1.00 atm",
+    "R = 0.08206 L·atm/(mol·K)"
+   ],
+   "answer": "3.36 L",
+   "steps": [
+    "n(KClO₃) = 12.25 / 122.55 = 0.09996 mol",
+    "n(O₂) = 0.09996 × 3/2 = 0.1499 mol",
+    "V = nRT / P = 0.1499 × 0.08206 × 273.15 / 1.00 = 3.36 L"
+   ],
+   "ref": "Focus 3, Topic 3C",
+   "reviewed": false
+  },
+  {
+   "id": "t8-q1",
+   "topic": "kinetic-molecular-theory-and-real-gases",
+   "type": "calc",
+   "q": "Calculate the root-mean-square speed of N₂ molecules at 300. K.",
+   "given": [
+    "T = 300. K",
+    "M(N₂) = 28.02 g/mol = 0.02802 kg/mol",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "517 m/s",
+   "steps": [
+    "v(rms) = √(3RT / M), with M in kg/mol",
+    "v(rms) = √(3 × 8.314 × 300. / 0.02802) = 517 m/s"
+   ],
+   "ref": "Focus 3, Topic 3A",
+   "reviewed": false
+  },
+  {
+   "id": "t8-q2",
+   "topic": "kinetic-molecular-theory-and-real-gases",
+   "type": "calc",
+   "q": "How many times faster does H₂ effuse than O₂ at the same temperature?",
+   "given": [
+    "M(H₂) = 2.016 g/mol",
+    "M(O₂) = 32.00 g/mol"
+   ],
+   "answer": "3.98 times faster",
+   "steps": [
+    "Graham's law: rate(H₂) / rate(O₂) = √(M(O₂) / M(H₂))",
+    "= √(32.00 / 2.016) = 3.98"
+   ],
+   "ref": "Focus 3, Topic 3A",
+   "reviewed": false
+  },
+  {
+   "id": "t8-q3",
+   "topic": "kinetic-molecular-theory-and-real-gases",
+   "type": "calc",
+   "q": "What is the average translational kinetic energy of 1 mol of gas molecules at 25 °C?",
+   "given": [
+    "T = 298.15 K",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "3.72 kJ/mol",
+   "steps": [
+    "E(k, molar) = (3/2)RT",
+    "= 1.5 × 8.314 × 298.15 = 3.72 × 10³ J/mol = 3.72 kJ/mol"
+   ],
+   "ref": "Focus 3, Topic 3A",
+   "reviewed": false
+  },
+  {
+   "id": "t8-q4",
+   "topic": "kinetic-molecular-theory-and-real-gases",
+   "type": "concept",
+   "q": "Under what conditions do real gases deviate most from ideal behavior, and why?",
+   "answer": "At high pressure and low temperature",
+   "explanation": "At high pressure the molecules' own volume is a significant fraction of the container volume. At low temperature the molecules move slowly enough that intermolecular attractions matter. The ideal gas model ignores both effects.",
+   "ref": "Focus 3, Topic 3E",
+   "reviewed": false
+  },
+  {
+   "id": "t8-q5",
+   "topic": "kinetic-molecular-theory-and-real-gases",
+   "type": "concept",
+   "q": "In the van der Waals equation, what do the constants a and b represent? Which would have the larger a value, He or H₂O?",
+   "answer": "a corrects for attractions, b for molecular volume; H₂O has the larger a",
+   "explanation": "The a term accounts for attractive forces between molecules, which lower the pressure. The b term accounts for the volume the molecules occupy. H₂O has strong hydrogen bonds while He has only weak dispersion forces, so H₂O's a is much larger.",
+   "ref": "Focus 3, Topic 3E",
+   "reviewed": false
+  },
+  {
+   "id": "t9-q1",
+   "topic": "thermochemistry-and-the-first-law",
+   "type": "calc",
+   "q": "A system absorbs 250 J of heat and does 100 J of work on its surroundings. What is ΔU?",
+   "given": [
+    "q = +250 J (heat absorbed)",
+    "w = −100 J (work done by the system)"
+   ],
+   "answer": "ΔU = +150 J",
+   "steps": [
+    "ΔU = q + w",
+    "ΔU = (+250 J) + (−100 J) = +150 J"
+   ],
+   "ref": "Focus 4, Topic 4A",
+   "reviewed": false
+  },
+  {
+   "id": "t9-q2",
+   "topic": "thermochemistry-and-the-first-law",
+   "type": "calc",
+   "q": "50.0 mL of 1.00 M HCl and 50.0 mL of 1.00 M NaOH are mixed in a coffee-cup calorimeter, and the temperature rises by 6.80 °C. Assume 100.0 g of solution with specific heat 4.184 J/(g·°C). Find ΔH of neutralization per mole of water formed.",
+   "given": [
+    "m = 100.0 g",
+    "c(s) = 4.184 J/(g·°C)",
+    "ΔT = 6.80 °C",
+    "n(H⁺) = n(OH⁻) = 0.0500 mol"
+   ],
+   "answer": "−56.9 kJ/mol",
+   "steps": [
+    "q(solution) = mcΔT = 100.0 × 4.184 × 6.80 = 2845 J",
+    "The reaction released this heat: q(reaction) = −2845 J",
+    "n(H₂O) = 0.0500 mol",
+    "ΔH = −2845 J / 0.0500 mol = −5.69 × 10⁴ J/mol = −56.9 kJ/mol"
+   ],
+   "ref": "Focus 4, Topic 4D",
+   "reviewed": false
+  },
+  {
+   "id": "t9-q3",
+   "topic": "thermochemistry-and-the-first-law",
+   "type": "calc",
+   "q": "Use standard enthalpies of formation to find ΔH° for CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l).",
+   "given": [
+    "ΔH°f(CH₄, g) = −74.81 kJ/mol",
+    "ΔH°f(CO₂, g) = −393.51 kJ/mol",
+    "ΔH°f(H₂O, l) = −285.83 kJ/mol",
+    "ΔH°f(O₂, g) = 0"
+   ],
+   "answer": "−890.36 kJ",
+   "steps": [
+    "ΔH° = Σ ΔH°f(products) − Σ ΔH°f(reactants)",
+    "Products: −393.51 + 2(−285.83) = −965.17 kJ",
+    "Reactants: −74.81 + 0 = −74.81 kJ",
+    "ΔH° = −965.17 − (−74.81) = −890.36 kJ"
+   ],
+   "ref": "Focus 4, Topic 4D",
+   "reviewed": false
+  },
+  {
+   "id": "t9-q4",
+   "topic": "thermochemistry-and-the-first-law",
+   "type": "concept",
+   "q": "For N₂(g) + 3H₂(g) → 2NH₃(g) at constant temperature, is ΔH larger, smaller or equal to ΔU?",
+   "answer": "ΔH is smaller (more negative) than ΔU",
+   "explanation": "ΔH = ΔU + Δn(gas)RT. Here Δn(gas) = 2 − 4 = −2, so ΔH = ΔU − 2RT, which is less than ΔU.",
+   "ref": "Focus 4, Topic 4C",
+   "reviewed": false
+  },
+  {
+   "id": "t9-q5",
+   "topic": "thermochemistry-and-the-first-law",
+   "type": "concept",
+   "q": "An exothermic reaction runs at constant pressure in an open beaker. What are the signs of q and ΔH for the system, and what happens to the temperature of the surroundings?",
+   "answer": "q < 0, ΔH < 0; the surroundings warm up",
+   "explanation": "Exothermic means the system releases heat, so q is negative. At constant pressure ΔH = q, so ΔH is also negative. The heat goes into the surroundings, raising their temperature.",
+   "ref": "Focus 4, Topic 4C",
+   "reviewed": false
+  },
+  {
+   "id": "t10-q1",
+   "topic": "electrons-in-atoms-quantum-theory-and-or",
+   "type": "calc",
+   "q": "Calculate the energy of one photon of light with wavelength 486.1 nm.",
+   "given": [
+    "λ = 486.1 nm = 4.861 × 10⁻⁷ m",
+    "h = 6.626 × 10⁻³⁴ J·s",
+    "c = 2.998 × 10⁸ m/s"
+   ],
+   "answer": "4.087 × 10⁻¹⁹ J",
+   "steps": [
+    "E = hc / λ",
+    "E = (6.626 × 10⁻³⁴ × 2.998 × 10⁸) / 4.861 × 10⁻⁷ = 4.087 × 10⁻¹⁹ J"
+   ],
+   "ref": "Focus 1, Topic 1B",
+   "reviewed": false
+  },
+  {
+   "id": "t10-q2",
+   "topic": "electrons-in-atoms-quantum-theory-and-or",
+   "type": "calc",
+   "q": "What is the frequency of red light with a wavelength of 650. nm?",
+   "given": [
+    "λ = 650. nm = 6.50 × 10⁻⁷ m",
+    "c = 2.998 × 10⁸ m/s"
+   ],
+   "answer": "4.61 × 10¹⁴ Hz",
+   "steps": [
+    "ν = c / λ",
+    "ν = 2.998 × 10⁸ / 6.50 × 10⁻⁷ = 4.61 × 10¹⁴ s⁻¹"
+   ],
+   "ref": "Focus 1, Topic 1A",
+   "reviewed": false
+  },
+  {
+   "id": "t10-q3",
+   "topic": "electrons-in-atoms-quantum-theory-and-or",
+   "type": "calc",
+   "q": "Find the wavelength of light emitted when an electron in a hydrogen atom falls from n = 3 to n = 2.",
+   "given": [
+    "n(upper) = 3, n(lower) = 2",
+    "Rydberg constant R = 1.0974 × 10⁷ m⁻¹"
+   ],
+   "answer": "656 nm",
+   "steps": [
+    "1/λ = R(1/n₁² − 1/n₂²) = 1.0974 × 10⁷ × (1/4 − 1/9)",
+    "1/λ = 1.0974 × 10⁷ × 0.13889 = 1.5242 × 10⁶ m⁻¹",
+    "λ = 6.56 × 10⁻⁷ m = 656 nm (red Balmer line)"
+   ],
+   "ref": "Focus 1, Topic 1D",
+   "reviewed": false
+  },
+  {
+   "id": "t10-q4",
+   "topic": "electrons-in-atoms-quantum-theory-and-or",
+   "type": "concept",
+   "q": "Is the set of quantum numbers n = 2, l = 2, mₗ = 0 allowed? Explain.",
+   "answer": "No",
+   "explanation": "l can only take the values 0 to n − 1. For n = 2, l can be 0 or 1, so l = 2 (a d orbital) is not allowed.",
+   "ref": "Focus 1, Topic 1D",
+   "reviewed": false
+  },
+  {
+   "id": "t10-q5",
+   "topic": "electrons-in-atoms-quantum-theory-and-or",
+   "type": "concept",
+   "q": "How many radial nodes and how many angular nodes does a 3p orbital have?",
+   "answer": "1 radial node and 1 angular node (2 nodes in total)",
+   "explanation": "A p orbital has l = 1, so it has 1 angular node (a nodal plane). Radial nodes = n − l − 1 = 3 − 1 − 1 = 1.",
+   "ref": "Focus 1, Topic 1D",
+   "reviewed": false
+  },
+  {
+   "id": "t11-q1",
+   "topic": "electron-configurations-and-the-periodic",
+   "type": "concept",
+   "q": "Which element has the ground-state configuration [Kr]4d¹⁰5s²5p³, and where is it in the periodic table?",
+   "answer": "Antimony (Sb), period 5, group 15",
+   "explanation": "The highest n is 5, so it is in period 5. Five valence electrons in 5s and 5p (5s²5p³) put it in group 15, which in period 5 is Sb.",
+   "ref": "Focus 1, Topic 1E",
+   "reviewed": false
+  },
+  {
+   "id": "t11-q2",
+   "topic": "electron-configurations-and-the-periodic",
+   "type": "concept",
+   "q": "Write the ground-state electron configuration of chromium (Z = 24), and explain why it is unusual.",
+   "answer": "[Ar]3d⁵4s¹",
+   "explanation": "The expected filling order gives [Ar]3d⁴4s². But 3d and 4s are close in energy, and a half-filled 3d⁵ subshell with all six electrons unpaired is lower in energy, so one 4s electron moves into 3d.",
+   "ref": "Focus 1, Topic 1E",
+   "reviewed": false
+  },
+  {
+   "id": "t11-q3",
+   "topic": "electron-configurations-and-the-periodic",
+   "type": "concept",
+   "q": "Write the electron configurations of Fe (Z = 26) and Fe³⁺.",
+   "answer": "Fe: [Ar]3d⁶4s²; Fe³⁺: [Ar]3d⁵",
+   "explanation": "When transition metals form cations, the 4s electrons are removed before the 3d electrons. Fe³⁺ loses both 4s electrons and one 3d electron.",
+   "ref": "Focus 1, Topic 1E",
+   "reviewed": false
+  },
+  {
+   "id": "t11-q4",
+   "topic": "electron-configurations-and-the-periodic",
+   "type": "calc",
+   "q": "How many electrons in a ground-state selenium atom (Z = 34) have l = 1?",
+   "given": [
+    "Se: Z = 34",
+    "l = 1 means p orbitals"
+   ],
+   "answer": "16",
+   "steps": [
+    "Se: 1s²2s²2p⁶3s²3p⁶3d¹⁰4s²4p⁴",
+    "p electrons: 2p⁶ + 3p⁶ + 4p⁴",
+    "6 + 6 + 4 = 16"
+   ],
+   "ref": "Focus 1, Topic 1E",
+   "reviewed": false
+  },
+  {
+   "id": "t11-q5",
+   "topic": "electron-configurations-and-the-periodic",
+   "type": "calc",
+   "q": "What is the maximum number of electrons that can occupy the n = 4 shell?",
+   "given": [
+    "n = 4",
+    "l = 0, 1, 2, 3"
+   ],
+   "answer": "32",
+   "steps": [
+    "Number of orbitals in shell n = n² = 16",
+    "Each orbital holds 2 electrons with opposite spins (Pauli)",
+    "Maximum = 2n² = 32"
+   ],
+   "ref": "Focus 1, Topic 1E",
+   "reviewed": false
+  },
+  {
+   "id": "t12-q1",
+   "topic": "periodic-trends-in-atomic-properties",
+   "type": "concept",
+   "q": "Arrange these isoelectronic ions in order of increasing radius: Na⁺, Mg²⁺, F⁻, O²⁻.",
+   "answer": "Mg²⁺ < Na⁺ < F⁻ < O²⁻",
+   "explanation": "All have 10 electrons. The more protons in the nucleus, the larger the effective nuclear charge pulling on the same electrons, so the ion is smaller. Mg has 12 protons and O has 8.",
+   "ref": "Focus 1, Topic 1F",
+   "reviewed": false
+  },
+  {
+   "id": "t12-q2",
+   "topic": "periodic-trends-in-atomic-properties",
+   "type": "concept",
+   "q": "Why is the first ionization energy of nitrogen higher than that of oxygen, even though oxygen is further right in period 2?",
+   "answer": "O's fourth 2p electron is paired, and pairing repulsion makes it easier to remove",
+   "explanation": "N (2p³) has one electron in each 2p orbital. In O (2p⁴), two electrons share an orbital, and their repulsion raises the energy of one of them, so less energy is needed to remove it.",
+   "ref": "Focus 1, Topic 1F",
+   "reviewed": false
+  },
+  {
+   "id": "t12-q3",
+   "topic": "periodic-trends-in-atomic-properties",
+   "type": "concept",
+   "q": "Which of these are paramagnetic: Ca, Zn²⁺, Fe²⁺?",
+   "answer": "Only Fe²⁺",
+   "explanation": "Ca ([Ar]4s²) and Zn²⁺ ([Ar]3d¹⁰) have all electrons paired, so they are diamagnetic. Fe²⁺ ([Ar]3d⁶) has 4 unpaired electrons, so it is paramagnetic.",
+   "ref": "Focus 1, Topic 1F",
+   "reviewed": false
+  },
+  {
+   "id": "t12-q4",
+   "topic": "periodic-trends-in-atomic-properties",
+   "type": "calc",
+   "q": "The first ionization energy of sodium is 496 kJ/mol. What is the longest wavelength of light that can ionize one Na atom?",
+   "given": [
+    "IE = 496 kJ/mol = 4.96 × 10⁵ J/mol",
+    "N_A = 6.022 × 10²³ mol⁻¹",
+    "h = 6.626 × 10⁻³⁴ J·s, c = 2.998 × 10⁸ m/s"
+   ],
+   "answer": "241 nm",
+   "steps": [
+    "Energy per atom: E = 4.96 × 10⁵ / 6.022 × 10²³ = 8.24 × 10⁻¹⁹ J",
+    "λ = hc / E = (6.626 × 10⁻³⁴ × 2.998 × 10⁸) / 8.24 × 10⁻¹⁹",
+    "λ = 2.41 × 10⁻⁷ m = 241 nm"
+   ],
+   "ref": "Focus 1, Topic 1F",
+   "reviewed": false
+  },
+  {
+   "id": "t12-q5",
+   "topic": "periodic-trends-in-atomic-properties",
+   "type": "concept",
+   "q": "For magnesium, the third ionization energy is much larger than the second. Why?",
+   "answer": "The third electron comes from the core (2p), not the valence shell",
+   "explanation": "Mg has two valence electrons (3s²). After both are gone, Mg²⁺ has a neon-like core, and the next electron is closer to the nucleus and much less shielded.",
+   "ref": "Focus 1, Topic 1F",
+   "reviewed": false
+  },
+  {
+   "id": "t13-q1",
+   "topic": "chemical-bonding-i-lewis-structures-and-",
+   "type": "calc",
+   "q": "Use mean bond enthalpies to estimate ΔH for H₂(g) + Cl₂(g) → 2HCl(g).",
+   "given": [
+    "H–H: 436 kJ/mol",
+    "Cl–Cl: 242 kJ/mol",
+    "H–Cl: 431 kJ/mol"
+   ],
+   "answer": "−184 kJ",
+   "steps": [
+    "ΔH ≈ Σ(bonds broken) − Σ(bonds formed)",
+    "Broken: 436 + 242 = 678 kJ",
+    "Formed: 2 × 431 = 862 kJ",
+    "ΔH ≈ 678 − 862 = −184 kJ"
+   ],
+   "ref": "Focus 2, Topic 2D",
+   "reviewed": false
+  },
+  {
+   "id": "t13-q2",
+   "topic": "chemical-bonding-i-lewis-structures-and-",
+   "type": "calc",
+   "q": "Use mean bond enthalpies to estimate ΔH for CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g).",
+   "given": [
+    "C–H: 412 kJ/mol",
+    "O=O: 496 kJ/mol",
+    "C=O (in CO₂): 743 kJ/mol",
+    "O–H: 463 kJ/mol"
+   ],
+   "answer": "−698 kJ",
+   "steps": [
+    "Broken: 4 C–H + 2 O=O = 4(412) + 2(496) = 2640 kJ",
+    "Formed: 2 C=O + 4 O–H = 2(743) + 4(463) = 3338 kJ",
+    "ΔH ≈ 2640 − 3338 = −698 kJ"
+   ],
+   "ref": "Focus 2, Topic 2D",
+   "reviewed": false
+  },
+  {
+   "id": "t13-q3",
+   "topic": "chemical-bonding-i-lewis-structures-and-",
+   "type": "concept",
+   "q": "Use VSEPR to predict the shape of SF₄. Is the molecule polar?",
+   "answer": "Seesaw; polar",
+   "explanation": "S has 4 bonding pairs and 1 lone pair (5 electron domains, trigonal bipyramidal arrangement). The lone pair sits in an equatorial position, giving a seesaw shape whose bond dipoles do not cancel.",
+   "ref": "Focus 2, Topic 2E",
+   "reviewed": false
+  },
+  {
+   "id": "t13-q4",
+   "topic": "chemical-bonding-i-lewis-structures-and-",
+   "type": "concept",
+   "q": "CO₂ and SO₂ both have polar bonds. Why is CO₂ nonpolar while SO₂ is polar?",
+   "answer": "CO₂ is linear; SO₂ is bent",
+   "explanation": "In linear CO₂ the two C=O bond dipoles point in opposite directions and cancel. S in SO₂ has a lone pair, so the molecule is bent and the bond dipoles add to a net dipole.",
+   "ref": "Focus 2, Topic 2E",
+   "reviewed": false
+  },
+  {
+   "id": "t13-q5",
+   "topic": "chemical-bonding-i-lewis-structures-and-",
+   "type": "concept",
+   "q": "Draw the Lewis structure of the nitrate ion, NO₃⁻. How many resonance structures are there, and what is the formal charge on N?",
+   "answer": "3 equivalent resonance structures; formal charge on N = +1",
+   "explanation": "Each structure has one N=O and two N–O bonds, with the double bond in any of three positions. N has 4 bonds and no lone pairs: 5 − 0 − 4 = +1. Each single-bonded O is −1, giving a total charge of −1.",
+   "ref": "Focus 2, Topic 2B",
+   "reviewed": false
+  },
+  {
+   "id": "t14-q1",
+   "topic": "chemical-bonding-ii-hybridization-and-mo",
+   "type": "calc",
+   "q": "How many σ bonds and how many π bonds are in acrylonitrile, CH₂=CH–C≡N?",
+   "given": [
+    "Single bond = 1σ",
+    "Double bond = 1σ + 1π",
+    "Triple bond = 1σ + 2π"
+   ],
+   "answer": "6 σ bonds and 3 π bonds",
+   "steps": [
+    "C–H bonds: 3 (all σ)",
+    "C=C: 1σ + 1π; C–C: 1σ; C≡N: 1σ + 2π",
+    "σ = 3 + 1 + 1 + 1 = 6; π = 1 + 2 = 3"
+   ],
+   "ref": "Focus 2, Topic 2F",
+   "reviewed": false
+  },
+  {
+   "id": "t14-q2",
+   "topic": "chemical-bonding-ii-hybridization-and-mo",
+   "type": "calc",
+   "q": "Use MO theory to find the bond orders of O₂, O₂⁺ and O₂⁻, and rank them by bond length.",
+   "given": [
+    "Valence electrons: O₂ = 12, O₂⁺ = 11, O₂⁻ = 13",
+    "Bond order = ½(bonding − antibonding)"
+   ],
+   "answer": "O₂⁺: 2.5, O₂: 2, O₂⁻: 1.5; bond length O₂⁺ < O₂ < O₂⁻",
+   "steps": [
+    "O₂: σ2s² σ*2s² σ2p² π2p⁴ π*2p² gives 8 bonding, 4 antibonding: BO = 2",
+    "O₂⁺ removes one π* electron: BO = (8 − 3)/2 = 2.5",
+    "O₂⁻ adds one π* electron: BO = (8 − 5)/2 = 1.5",
+    "Higher bond order means a shorter bond"
+   ],
+   "ref": "Focus 2, Topic 2G",
+   "reviewed": false
+  },
+  {
+   "id": "t14-q3",
+   "topic": "chemical-bonding-ii-hybridization-and-mo",
+   "type": "concept",
+   "q": "Why is O₂ paramagnetic, when its Lewis structure shows all electrons paired?",
+   "answer": "It has two unpaired electrons in the π*2p orbitals",
+   "explanation": "In the MO diagram, the last two electrons go into two degenerate π* orbitals, one each with parallel spins (Hund's rule). The Lewis structure cannot show this.",
+   "ref": "Focus 2, Topic 2G",
+   "reviewed": false
+  },
+  {
+   "id": "t14-q4",
+   "topic": "chemical-bonding-ii-hybridization-and-mo",
+   "type": "concept",
+   "q": "What is the hybridization of the carbon atoms in ethene (C₂H₄) and in ethyne (C₂H₂)?",
+   "answer": "Ethene: sp²; ethyne: sp",
+   "explanation": "Each C in ethene has 3 electron domains (trigonal planar), so it is sp², with one unhybridized p orbital forming the π bond. Each C in ethyne has 2 domains (linear), so it is sp, with two p orbitals forming two π bonds.",
+   "ref": "Focus 2, Topic 2F",
+   "reviewed": false
+  },
+  {
+   "id": "t14-q5",
+   "topic": "chemical-bonding-ii-hybridization-and-mo",
+   "type": "concept",
+   "q": "Why are all six C–C bonds in benzene the same length?",
+   "answer": "The π electrons are delocalized over the whole ring",
+   "explanation": "In MO theory, the six p orbitals combine into π molecular orbitals that spread over all six carbons. Each C–C bond has a bond order of 1.5, between a single and a double bond.",
+   "ref": "Focus 2, Topic 2G",
+   "reviewed": false
+  },
+  {
+   "id": "t15-q1",
+   "topic": "light-matter-interaction-and-spectroscop",
+   "type": "calc",
+   "q": "A dye absorbs light most strongly at 450. nm. What energy does this correspond to per mole of photons?",
+   "given": [
+    "λ = 450. nm = 4.50 × 10⁻⁷ m",
+    "h = 6.626 × 10⁻³⁴ J·s, c = 2.998 × 10⁸ m/s",
+    "N_A = 6.022 × 10²³ mol⁻¹"
+   ],
+   "answer": "266 kJ/mol",
+   "steps": [
+    "E (one photon) = hc / λ = 4.414 × 10⁻¹⁹ J",
+    "E (per mole) = 4.414 × 10⁻¹⁹ × 6.022 × 10²³ = 2.66 × 10⁵ J/mol",
+    "= 266 kJ/mol"
+   ],
+   "ref": "Focus 1, Topic 1B",
+   "reviewed": false
+  },
+  {
+   "id": "t15-q2",
+   "topic": "light-matter-interaction-and-spectroscop",
+   "type": "calc",
+   "q": "Carbon monoxide absorbs infrared radiation at a wavenumber of 2143 cm⁻¹. Find the wavelength in μm and the photon energy in J.",
+   "given": [
+    "wavenumber = 2143 cm⁻¹ = 2.143 × 10⁵ m⁻¹",
+    "h = 6.626 × 10⁻³⁴ J·s, c = 2.998 × 10⁸ m/s"
+   ],
+   "answer": "λ = 4.666 μm; E = 4.257 × 10⁻²⁰ J",
+   "steps": [
+    "λ = 1 / wavenumber = 1 / 2.143 × 10⁵ m⁻¹ = 4.666 × 10⁻⁶ m = 4.666 μm",
+    "E = hc × wavenumber = 6.626 × 10⁻³⁴ × 2.998 × 10⁸ × 2.143 × 10⁵",
+    "E = 4.257 × 10⁻²⁰ J"
+   ],
+   "ref": "Major Techniques, Topic MT1",
+   "reviewed": false
+  },
+  {
+   "id": "t15-q3",
+   "topic": "light-matter-interaction-and-spectroscop",
+   "type": "concept",
+   "q": "As a molecule's chain of conjugated double bonds gets longer, its absorption maximum moves to longer wavelength. Why?",
+   "answer": "The HOMO–LUMO gap gets smaller",
+   "explanation": "Longer conjugation spreads the π orbitals over more atoms, bringing the π molecular orbital energies closer together. A smaller energy gap means a lower-energy photon, which has a longer wavelength.",
+   "ref": "Major Techniques, Topic MT2",
+   "reviewed": false
+  },
+  {
+   "id": "t15-q4",
+   "topic": "light-matter-interaction-and-spectroscop",
+   "type": "concept",
+   "q": "A solution strongly absorbs orange-red light (about 620 nm) and transmits the rest of the visible spectrum. What color does it look?",
+   "answer": "Blue-green (cyan)",
+   "explanation": "The color we see is made of the wavelengths that are not absorbed. Removing orange-red leaves mostly the complementary color, blue-green.",
+   "ref": "Major Techniques, Topic MT2",
+   "reviewed": false
+  },
+  {
+   "id": "t15-q5",
+   "topic": "light-matter-interaction-and-spectroscop",
+   "type": "concept",
+   "q": "Why do gas-phase hydrogen atoms emit light only at certain sharp wavelengths instead of a continuous spectrum?",
+   "answer": "Because the electron's energy levels are quantized",
+   "explanation": "A photon is emitted when the electron drops between two allowed levels, with E(photon) = hν = E(upper) − E(lower). Only certain energy differences exist, so only certain wavelengths appear.",
+   "ref": "Focus 1, Topic 1D",
+   "reviewed": false
+  },
+  {
+   "id": "t16-q1",
+   "topic": "intermolecular-forces-and-phases",
+   "type": "concept",
+   "q": "Rank in order of increasing boiling point: HF, Ne, HCl.",
+   "answer": "Ne < HCl < HF",
+   "explanation": "Ne has only weak dispersion forces. HCl is polar and adds dipole-dipole forces. HF forms strong hydrogen bonds, so it has the highest boiling point.",
+   "ref": "Focus 3, Topic 3D",
+   "reviewed": false
+  },
+  {
+   "id": "t16-q2",
+   "topic": "intermolecular-forces-and-phases",
+   "type": "concept",
+   "q": "Pentane (CH₃CH₂CH₂CH₂CH₃) and neopentane (C(CH₃)₄) have the same formula, C₅H₁₂. Which has the higher boiling point, and why?",
+   "answer": "Pentane",
+   "explanation": "Both have only dispersion forces. Pentane's long chain has more surface contact between neighboring molecules than compact, spherical neopentane, so its dispersion forces are stronger.",
+   "ref": "Focus 3, Topic 3D",
+   "reviewed": false
+  },
+  {
+   "id": "t16-q3",
+   "topic": "intermolecular-forces-and-phases",
+   "type": "calc",
+   "q": "Water boils at 100.0 °C at 1.00 atm, and ΔH(vap) = 40.7 kJ/mol. Use the Clausius-Clapeyron equation to estimate the vapor pressure of water at 80.0 °C.",
+   "given": [
+    "P₁ = 1.00 atm at T₁ = 373.15 K",
+    "T₂ = 353.15 K",
+    "ΔH(vap) = 40.7 kJ/mol",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "0.476 atm",
+   "steps": [
+    "ln(P₂/P₁) = −(ΔH(vap)/R)(1/T₂ − 1/T₁)",
+    "1/353.15 − 1/373.15 = 1.518 × 10⁻⁴ K⁻¹",
+    "ln(P₂/P₁) = −(40700 / 8.314) × 1.518 × 10⁻⁴ = −0.743",
+    "P₂ = 1.00 × e^(−0.743) = 0.476 atm"
+   ],
+   "ref": "Focus 5, Topic 5A",
+   "reviewed": false
+  },
+  {
+   "id": "t16-q4",
+   "topic": "intermolecular-forces-and-phases",
+   "type": "calc",
+   "q": "A liquid has a vapor pressure of 100. Torr at 34.9 °C and 400. Torr at 63.5 °C. Estimate its enthalpy of vaporization.",
+   "given": [
+    "P₁ = 100. Torr, T₁ = 308.05 K",
+    "P₂ = 400. Torr, T₂ = 336.65 K",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "41.8 kJ/mol",
+   "steps": [
+    "ln(P₂/P₁) = (ΔH(vap)/R)(1/T₁ − 1/T₂)",
+    "ln(4.00) = 1.386; 1/308.05 − 1/336.65 = 2.758 × 10⁻⁴ K⁻¹",
+    "ΔH(vap) = 8.314 × 1.386 / 2.758 × 10⁻⁴ = 4.18 × 10⁴ J/mol = 41.8 kJ/mol"
+   ],
+   "ref": "Focus 5, Topic 5A",
+   "reviewed": false
+  },
+  {
+   "id": "t16-q5",
+   "topic": "intermolecular-forces-and-phases",
+   "type": "concept",
+   "q": "The triple point of CO₂ is at 5.1 atm and −57 °C. What happens when solid CO₂ (dry ice) is warmed at 1 atm?",
+   "answer": "It sublimes directly to gas",
+   "explanation": "Liquid CO₂ cannot exist at pressures below the triple-point pressure. At 1 atm the phase diagram goes straight from the solid region to the gas region.",
+   "ref": "Focus 5, Topic 5B",
+   "reviewed": false
+  },
+  {
+   "id": "t17-q1",
+   "topic": "entropy-gibbs-energy-and-spontaneity",
+   "type": "concept",
+   "q": "Predict the sign of ΔS for 2H₂(g) + O₂(g) → 2H₂O(l).",
+   "answer": "Negative",
+   "explanation": "Three moles of gas turn into two moles of liquid. Molecules in a liquid have far fewer accessible positions than in a gas, so the entropy of the system decreases.",
+   "ref": "Focus 4, Topic 4G",
+   "reviewed": false
+  },
+  {
+   "id": "t17-q2",
+   "topic": "entropy-gibbs-energy-and-spontaneity",
+   "type": "calc",
+   "q": "Calculate ΔS° for N₂(g) + 3H₂(g) → 2NH₃(g).",
+   "given": [
+    "S°(N₂, g) = 191.61 J/(mol·K)",
+    "S°(H₂, g) = 130.68 J/(mol·K)",
+    "S°(NH₃, g) = 192.45 J/(mol·K)"
+   ],
+   "answer": "−198.75 J/K",
+   "steps": [
+    "ΔS° = Σ S°(products) − Σ S°(reactants)",
+    "= 2(192.45) − [191.61 + 3(130.68)]",
+    "= 384.90 − 583.65 = −198.75 J/K"
+   ],
+   "ref": "Focus 4, Topic 4H",
+   "reviewed": false
+  },
+  {
+   "id": "t17-q3",
+   "topic": "entropy-gibbs-energy-and-spontaneity",
+   "type": "calc",
+   "q": "For CaCO₃(s) → CaO(s) + CO₂(g), ΔH° = +178.3 kJ and ΔS° = +160.6 J/K. Above what temperature is the reaction spontaneous (assume ΔH° and ΔS° do not change with temperature)?",
+   "given": [
+    "ΔH° = +178.3 kJ",
+    "ΔS° = +160.6 J/K = 0.1606 kJ/K"
+   ],
+   "answer": "Above about 1110 K",
+   "steps": [
+    "Spontaneous when ΔG° = ΔH° − TΔS° < 0",
+    "Set ΔG° = 0: T = ΔH° / ΔS° = 178.3 / 0.1606 = 1110 K",
+    "Since ΔS° > 0, the reaction is spontaneous above 1110 K"
+   ],
+   "ref": "Focus 4, Topic 4J",
+   "reviewed": false
+  },
+  {
+   "id": "t17-q4",
+   "topic": "entropy-gibbs-energy-and-spontaneity",
+   "type": "calc",
+   "q": "A reaction has ΔG° = −33.0 kJ/mol at 25 °C. What is its equilibrium constant K?",
+   "given": [
+    "ΔG° = −33.0 kJ/mol",
+    "T = 298.15 K",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "K ≈ 6.0 × 10⁵",
+   "steps": [
+    "ΔG° = −RT ln K, so ln K = −ΔG° / RT",
+    "ln K = 33000 / (8.314 × 298.15) = 13.31",
+    "K = e^13.31 = 6.0 × 10⁵"
+   ],
+   "ref": "Focus 4, Topic 4J",
+   "reviewed": false
+  },
+  {
+   "id": "t17-q5",
+   "topic": "entropy-gibbs-energy-and-spontaneity",
+   "type": "concept",
+   "q": "A reaction has ΔH < 0 and ΔS < 0. At which temperatures is it spontaneous?",
+   "answer": "At low temperatures",
+   "explanation": "ΔG = ΔH − TΔS. With ΔS < 0, the −TΔS term is positive and grows with T. At low T the negative ΔH dominates and ΔG < 0; at high T, ΔG becomes positive.",
+   "ref": "Focus 4, Topic 4J",
+   "reviewed": false
+  },
+  {
+   "id": "t18-q1",
+   "topic": "principles-of-chemical-equilibrium",
+   "type": "calc",
+   "q": "For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), Kc = 0.105 at 472 °C. Find Kp at this temperature.",
+   "given": [
+    "Kc = 0.105",
+    "T = 472 °C = 745 K",
+    "R = 0.08206 L·atm/(mol·K)"
+   ],
+   "answer": "Kp = 2.81 × 10⁻⁵",
+   "steps": [
+    "Kp = Kc(RT)^Δn, with Δn = 2 − 4 = −2",
+    "RT = 0.08206 × 745.15 = 61.15",
+    "Kp = 0.105 / (61.15)² = 2.81 × 10⁻⁵"
+   ],
+   "ref": "Focus 5, Topic 5G",
+   "reviewed": false
+  },
+  {
+   "id": "t18-q2",
+   "topic": "principles-of-chemical-equilibrium",
+   "type": "calc",
+   "q": "For H₂(g) + I₂(g) ⇌ 2HI(g), K = 50.5 at a certain temperature. A mixture has [H₂] = 0.0100 M, [I₂] = 0.0200 M and [HI] = 0.500 M. Which way will the reaction shift?",
+   "given": [
+    "K = 50.5",
+    "[H₂] = 0.0100 M, [I₂] = 0.0200 M, [HI] = 0.500 M"
+   ],
+   "answer": "Q = 1.25 × 10³ > K, so the reaction shifts left (toward H₂ and I₂)",
+   "steps": [
+    "Q = [HI]² / ([H₂][I₂])",
+    "Q = (0.500)² / (0.0100 × 0.0200) = 0.250 / 2.00 × 10⁻⁴ = 1.25 × 10³",
+    "Q > K, so products are in excess and the reaction runs in reverse"
+   ],
+   "ref": "Focus 5, Topic 5H",
+   "reviewed": false
+  },
+  {
+   "id": "t18-q3",
+   "topic": "principles-of-chemical-equilibrium",
+   "type": "calc",
+   "q": "0.0100 M H₂ and 0.0100 M I₂ are mixed (no HI at the start). For H₂ + I₂ ⇌ 2HI, K = 49.0. Find the equilibrium concentrations.",
+   "given": [
+    "[H₂]₀ = [I₂]₀ = 0.0100 M",
+    "[HI]₀ = 0",
+    "K = 49.0"
+   ],
+   "answer": "[H₂] = [I₂] = 0.0022 M; [HI] = 0.0156 M",
+   "steps": [
+    "ICE: [H₂] = [I₂] = 0.0100 − x, [HI] = 2x",
+    "K = (2x)² / (0.0100 − x)² = 49.0, so 2x / (0.0100 − x) = 7.00",
+    "2x = 0.0700 − 7.00x, so x = 0.0700 / 9.00 = 7.78 × 10⁻³ M",
+    "[H₂] = [I₂] = 0.0100 − 0.00778 = 0.0022 M; [HI] = 2x = 0.0156 M"
+   ],
+   "ref": "Focus 5, Topic 5H",
+   "reviewed": false
+  },
+  {
+   "id": "t18-q4",
+   "topic": "principles-of-chemical-equilibrium",
+   "type": "concept",
+   "q": "The equilibrium N₂O₄(g) ⇌ 2NO₂(g) is compressed into a smaller volume at constant temperature. Which way does it shift?",
+   "answer": "Toward N₂O₄ (left)",
+   "explanation": "Compression raises the pressure, and the system responds by reducing the number of gas molecules. The left side has 1 mol of gas and the right side has 2.",
+   "ref": "Focus 5, Topic 5I",
+   "reviewed": false
+  },
+  {
+   "id": "t18-q5",
+   "topic": "principles-of-chemical-equilibrium",
+   "type": "concept",
+   "q": "For an exothermic reaction at equilibrium, what happens to K when the temperature is raised?",
+   "answer": "K decreases",
+   "explanation": "For an exothermic reaction, heat acts like a product. Raising the temperature shifts the equilibrium toward the reactants, and unlike a pressure or concentration change, it actually changes the value of K.",
+   "ref": "Focus 5, Topic 5I",
+   "reviewed": false
+  },
+  {
+   "id": "t19-q1",
+   "topic": "acids-and-bases",
+   "type": "concept",
+   "q": "In NH₃(aq) + H₂O(l) ⇌ NH₄⁺(aq) + OH⁻(aq), identify the two conjugate acid-base pairs.",
+   "answer": "NH₄⁺/NH₃ and H₂O/OH⁻",
+   "explanation": "NH₃ accepts a proton (base) and becomes its conjugate acid NH₄⁺. H₂O donates a proton (acid) and becomes its conjugate base OH⁻.",
+   "ref": "Focus 6, Topic 6A",
+   "reviewed": false
+  },
+  {
+   "id": "t19-q2",
+   "topic": "acids-and-bases",
+   "type": "calc",
+   "q": "What is the pH of 0.0250 M HCl?",
+   "given": [
+    "c(HCl) = 0.0250 M (strong acid)"
+   ],
+   "answer": "pH = 1.602",
+   "steps": [
+    "HCl ionizes completely, so [H₃O⁺] = 0.0250 M",
+    "pH = −log(0.0250) = 1.602",
+    "3 significant figures in the concentration give 3 decimal places in the pH"
+   ],
+   "ref": "Focus 6, Topic 6B",
+   "reviewed": false
+  },
+  {
+   "id": "t19-q3",
+   "topic": "acids-and-bases",
+   "type": "calc",
+   "q": "Calculate the pH of 0.100 M acetic acid.",
+   "given": [
+    "c = 0.100 M",
+    "Ka = 1.8 × 10⁻⁵"
+   ],
+   "answer": "pH = 2.87",
+   "steps": [
+    "Ka = x² / (0.100 − x) ≈ x² / 0.100",
+    "x = √(1.8 × 10⁻⁵ × 0.100) = 1.3 × 10⁻³ M = [H₃O⁺]",
+    "x is about 1.3% of 0.100, so the approximation is fine",
+    "pH = −log(1.34 × 10⁻³) = 2.87"
+   ],
+   "ref": "Focus 6, Topic 6C",
+   "reviewed": false
+  },
+  {
+   "id": "t19-q4",
+   "topic": "acids-and-bases",
+   "type": "calc",
+   "q": "Calculate the pH of 0.20 M NaF at 25 °C.",
+   "given": [
+    "c(F⁻) = 0.20 M",
+    "Ka(HF) = 3.5 × 10⁻⁴",
+    "Kw = 1.0 × 10⁻¹⁴"
+   ],
+   "answer": "pH = 8.38",
+   "steps": [
+    "F⁻ is a weak base: Kb = Kw / Ka = 1.0 × 10⁻¹⁴ / 3.5 × 10⁻⁴ = 2.9 × 10⁻¹¹",
+    "[OH⁻] = √(Kb × c) = √(2.86 × 10⁻¹¹ × 0.20) = 2.4 × 10⁻⁶ M",
+    "pOH = 5.62, so pH = 14.00 − 5.62 = 8.38"
+   ],
+   "ref": "Focus 6, Topic 6D",
+   "reviewed": false
+  },
+  {
+   "id": "t19-q5",
+   "topic": "acids-and-bases",
+   "type": "concept",
+   "q": "Rank these acids from weakest to strongest: HClO₄, HClO, HClO₃.",
+   "answer": "HClO < HClO₃ < HClO₄",
+   "explanation": "More O atoms on Cl pull electron density away from the O–H bond and spread the negative charge of the conjugate base over more atoms. That makes the proton easier to lose.",
+   "ref": "Focus 6, Topic 6C",
+   "reviewed": false
+  },
+  {
+   "id": "t20-q1",
+   "topic": "buffers-indicators-and-titration-curves",
+   "type": "calc",
+   "q": "Find the pH of a buffer that is 0.150 M CH₃COOH and 0.250 M CH₃COONa.",
+   "given": [
+    "[HA] = 0.150 M",
+    "[A⁻] = 0.250 M",
+    "pKa = 4.75"
+   ],
+   "answer": "pH = 4.97",
+   "steps": [
+    "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA])",
+    "pH = 4.75 + log(0.250 / 0.150) = 4.75 + 0.22 = 4.97"
+   ],
+   "ref": "Focus 6, Topic 6G",
+   "reviewed": false
+  },
+  {
+   "id": "t20-q2",
+   "topic": "buffers-indicators-and-titration-curves",
+   "type": "calc",
+   "q": "0.010 mol of NaOH is added to 1.00 L of a buffer that is 0.100 M CH₃COOH and 0.100 M CH₃COONa. What is the new pH? (Ignore any volume change.)",
+   "given": [
+    "n(HA) = n(A⁻) = 0.100 mol",
+    "n(OH⁻) added = 0.010 mol",
+    "pKa = 4.75"
+   ],
+   "answer": "pH = 4.84",
+   "steps": [
+    "OH⁻ converts HA to A⁻: n(HA) = 0.090 mol, n(A⁻) = 0.110 mol",
+    "pH = 4.75 + log(0.110 / 0.090) = 4.75 + 0.087 = 4.84",
+    "The pH rose by only 0.09, which shows the buffer working"
+   ],
+   "ref": "Focus 6, Topic 6G",
+   "reviewed": false
+  },
+  {
+   "id": "t20-q3",
+   "topic": "buffers-indicators-and-titration-curves",
+   "type": "calc",
+   "q": "25.00 mL of 0.1000 M CH₃COOH is titrated with 0.1000 M NaOH. What is the pH at the equivalence point?",
+   "given": [
+    "V(acid) = 25.00 mL, c = 0.1000 M",
+    "c(NaOH) = 0.1000 M",
+    "Ka = 1.8 × 10⁻⁵, Kw = 1.0 × 10⁻¹⁴"
+   ],
+   "answer": "pH = 8.72",
+   "steps": [
+    "At equivalence, 25.00 mL of base has been added: n(CH₃COO⁻) = 2.500 × 10⁻³ mol in 50.00 mL, so [A⁻] = 0.05000 M",
+    "Kb = 1.0 × 10⁻¹⁴ / 1.8 × 10⁻⁵ = 5.6 × 10⁻¹⁰",
+    "[OH⁻] = √(5.56 × 10⁻¹⁰ × 0.05000) = 5.3 × 10⁻⁶ M, so pOH = 5.28",
+    "pH = 14.00 − 5.28 = 8.72"
+   ],
+   "ref": "Focus 6, Topic 6H",
+   "reviewed": false
+  },
+  {
+   "id": "t20-q4",
+   "topic": "buffers-indicators-and-titration-curves",
+   "type": "concept",
+   "q": "Which indicator suits a titration of acetic acid with NaOH: methyl orange (changes color near pH 3.1-4.4) or phenolphthalein (near pH 8.2-10)?",
+   "answer": "Phenolphthalein",
+   "explanation": "A weak acid titrated with a strong base has an equivalence point above 7 (about 8.7), because the acetate ion is basic. The indicator's color change should fall within the steep part of the curve around that pH.",
+   "ref": "Focus 6, Topic 6H",
+   "reviewed": false
+  },
+  {
+   "id": "t20-q5",
+   "topic": "buffers-indicators-and-titration-curves",
+   "type": "concept",
+   "q": "Sodium acetate is dissolved in a solution of acetic acid. What happens to the percent ionization of the acid and to the pH?",
+   "answer": "Percent ionization decreases and pH increases",
+   "explanation": "This is the common-ion effect: the added acetate pushes CH₃COOH ⇌ H⁺ + CH₃COO⁻ to the left, lowering [H₃O⁺].",
+   "ref": "Focus 6, Topic 6G",
+   "reviewed": false
+  },
+  {
+   "id": "t21-q1",
+   "topic": "solubility-precipitation-and-complex-ion",
+   "type": "calc",
+   "q": "The molar solubility of CaF₂ in water is 2.1 × 10⁻⁴ M. Calculate Ksp.",
+   "given": [
+    "s = 2.1 × 10⁻⁴ M",
+    "CaF₂(s) ⇌ Ca²⁺ + 2F⁻"
+   ],
+   "answer": "Ksp = 3.7 × 10⁻¹¹",
+   "steps": [
+    "[Ca²⁺] = s, [F⁻] = 2s",
+    "Ksp = s(2s)² = 4s³",
+    "Ksp = 4(2.1 × 10⁻⁴)³ = 3.7 × 10⁻¹¹"
+   ],
+   "ref": "Focus 6, Topic 6I",
+   "reviewed": false
+  },
+  {
+   "id": "t21-q2",
+   "topic": "solubility-precipitation-and-complex-ion",
+   "type": "calc",
+   "q": "Ksp of Ag₂CrO₄ is 1.1 × 10⁻¹². What is its molar solubility in pure water?",
+   "given": [
+    "Ksp = 1.1 × 10⁻¹²",
+    "Ag₂CrO₄(s) ⇌ 2Ag⁺ + CrO₄²⁻"
+   ],
+   "answer": "6.5 × 10⁻⁵ M",
+   "steps": [
+    "[Ag⁺] = 2s, [CrO₄²⁻] = s, so Ksp = 4s³",
+    "s = (1.1 × 10⁻¹² / 4)^(1/3) = 6.5 × 10⁻⁵ M"
+   ],
+   "ref": "Focus 6, Topic 6I",
+   "reviewed": false
+  },
+  {
+   "id": "t21-q3",
+   "topic": "solubility-precipitation-and-complex-ion",
+   "type": "calc",
+   "q": "100.0 mL of 0.0010 M Pb(NO₃)₂ is mixed with 100.0 mL of 0.0020 M NaCl. Will PbCl₂ precipitate?",
+   "given": [
+    "Ksp(PbCl₂) = 1.6 × 10⁻⁵",
+    "Total volume = 200.0 mL"
+   ],
+   "answer": "No; Q = 5.0 × 10⁻¹⁰ < Ksp",
+   "steps": [
+    "Mixing halves each concentration: [Pb²⁺] = 5.0 × 10⁻⁴ M, [Cl⁻] = 1.0 × 10⁻³ M",
+    "Q = [Pb²⁺][Cl⁻]² = 5.0 × 10⁻⁴ × (1.0 × 10⁻³)² = 5.0 × 10⁻¹⁰",
+    "Q < Ksp, so no precipitate forms"
+   ],
+   "ref": "Focus 6, Topic 6J",
+   "reviewed": false
+  },
+  {
+   "id": "t21-q4",
+   "topic": "solubility-precipitation-and-complex-ion",
+   "type": "concept",
+   "q": "Which is more soluble in acidic solution than in pure water: AgCl or CaCO₃? Explain.",
+   "answer": "CaCO₃",
+   "explanation": "CO₃²⁻ is a basic anion. H⁺ converts it to HCO₃⁻ (and then to CO₂), which removes it from the equilibrium and shifts the dissolution to the right. Cl⁻ is the conjugate base of a strong acid, so acid does not affect AgCl's solubility.",
+   "ref": "Focus 6, Topic 6I",
+   "reviewed": false
+  },
+  {
+   "id": "t21-q5",
+   "topic": "solubility-precipitation-and-complex-ion",
+   "type": "concept",
+   "q": "AgCl barely dissolves in water but dissolves in aqueous ammonia. Why?",
+   "answer": "Ag⁺ forms the complex ion [Ag(NH₃)₂]⁺",
+   "explanation": "NH₃ binds Ag⁺ with a large formation constant, so free [Ag⁺] stays very low. Q for AgCl drops below Ksp, and more solid dissolves.",
+   "ref": "Focus 6, Topic 6I",
+   "reviewed": false
+  },
+  {
+   "id": "t22-q1",
+   "topic": "electrochemistry",
+   "type": "calc",
+   "q": "Calculate E°cell for a galvanic cell made from Zn|Zn²⁺ and Cu²⁺|Cu.",
+   "given": [
+    "E°(Cu²⁺/Cu) = +0.34 V",
+    "E°(Zn²⁺/Zn) = −0.76 V"
+   ],
+   "answer": "E°cell = +1.10 V",
+   "steps": [
+    "Cu²⁺ has the higher reduction potential, so it is the cathode; Zn is the anode",
+    "E°cell = E°(cathode) − E°(anode)",
+    "E°cell = 0.34 − (−0.76) = +1.10 V"
+   ],
+   "ref": "Focus 6, Topic 6M",
+   "reviewed": false
+  },
+  {
+   "id": "t22-q2",
+   "topic": "electrochemistry",
+   "type": "concept",
+   "q": "A redox reaction has a positive E°cell. What does this tell you about ΔG° and K?",
+   "answer": "ΔG° < 0 and K > 1",
+   "explanation": "ΔG° = −nFE°, so a positive E° means a negative ΔG°. Since ΔG° = −RT ln K, a negative ΔG° means ln K > 0, so K > 1 and products are favored at equilibrium.",
+   "ref": "Focus 6, Topic 6N",
+   "reviewed": false
+  },
+  {
+   "id": "t22-q3",
+   "topic": "electrochemistry",
+   "type": "calc",
+   "q": "Find the potential at 25 °C of the cell Zn(s)|Zn²⁺(1.0 M)||Cu²⁺(0.010 M)|Cu(s).",
+   "given": [
+    "E°cell = 1.10 V",
+    "n = 2",
+    "[Zn²⁺] = 1.0 M, [Cu²⁺] = 0.010 M",
+    "RT/F × ln10 = 0.05916 V at 25 °C"
+   ],
+   "answer": "E = 1.04 V",
+   "steps": [
+    "Cell reaction: Zn + Cu²⁺ → Zn²⁺ + Cu, so Q = [Zn²⁺]/[Cu²⁺] = 1.0 / 0.010 = 100",
+    "Nernst: E = E° − (0.05916 / n) log Q",
+    "E = 1.10 − (0.05916 / 2)(2.00) = 1.10 − 0.059 = 1.04 V"
+   ],
+   "ref": "Focus 6, Topic 6N",
+   "reviewed": false
+  },
+  {
+   "id": "t22-q4",
+   "topic": "electrochemistry",
+   "type": "calc",
+   "q": "A current of 2.00 A flows through a CuSO₄ solution for 30.0 min. What mass of copper is deposited at the cathode?",
+   "given": [
+    "I = 2.00 A",
+    "t = 30.0 min = 1800. s",
+    "Cu²⁺ + 2e⁻ → Cu",
+    "F = 96485 C/mol, M(Cu) = 63.55 g/mol"
+   ],
+   "answer": "1.19 g",
+   "steps": [
+    "Q = It = 2.00 × 1800. = 3.60 × 10³ C",
+    "n(e⁻) = 3600 / 96485 = 0.03731 mol",
+    "n(Cu) = 0.03731 / 2 = 0.01866 mol",
+    "m = 0.01866 × 63.55 = 1.19 g"
+   ],
+   "ref": "Focus 6, Topic 6O",
+   "reviewed": false
+  },
+  {
+   "id": "t22-q5",
+   "topic": "electrochemistry",
+   "type": "concept",
+   "q": "In a Zn/Cu galvanic cell, which electrode is the anode, which way do electrons flow in the external wire, and what does the salt bridge do?",
+   "answer": "Zn is the anode; electrons flow from Zn to Cu; the salt bridge keeps both compartments electrically neutral",
+   "explanation": "Oxidation (Zn → Zn²⁺ + 2e⁻) happens at the anode, and the electrons travel through the wire to the Cu cathode, where Cu²⁺ is reduced. Ions move through the salt bridge to balance the charge building up in each half-cell, which keeps current flowing.",
+   "ref": "Focus 6, Topic 6L",
+   "reviewed": false
+  },
+  {
+   "id": "t23-q1",
+   "topic": "chemical-kinetics",
+   "type": "calc",
+   "q": "A first-order reaction has k = 1.50 × 10⁻³ s⁻¹. What is its half-life?",
+   "given": [
+    "k = 1.50 × 10⁻³ s⁻¹",
+    "First order"
+   ],
+   "answer": "462 s",
+   "steps": [
+    "For first order, t½ = ln 2 / k",
+    "t½ = 0.6931 / 1.50 × 10⁻³ = 462 s"
+   ],
+   "ref": "Focus 7, Topic 7B",
+   "reviewed": false
+  },
+  {
+   "id": "t23-q2",
+   "topic": "chemical-kinetics",
+   "type": "calc",
+   "q": "A first-order reaction has k = 0.0450 min⁻¹ and [A]₀ = 0.800 M. What is [A] after 25.0 min?",
+   "given": [
+    "k = 0.0450 min⁻¹",
+    "[A]₀ = 0.800 M",
+    "t = 25.0 min"
+   ],
+   "answer": "0.260 M",
+   "steps": [
+    "ln([A]/[A]₀) = −kt",
+    "kt = 0.0450 × 25.0 = 1.125",
+    "[A] = 0.800 × e^(−1.125) = 0.260 M"
+   ],
+   "ref": "Focus 7, Topic 7B",
+   "reviewed": false
+  },
+  {
+   "id": "t23-q3",
+   "topic": "chemical-kinetics",
+   "type": "calc",
+   "q": "A reaction's rate constant doubles when the temperature rises from 300. K to 310. K. Estimate the activation energy.",
+   "given": [
+    "k₂/k₁ = 2.00",
+    "T₁ = 300. K, T₂ = 310. K",
+    "R = 8.314 J/(mol·K)"
+   ],
+   "answer": "53.6 kJ/mol",
+   "steps": [
+    "Arrhenius: ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂)",
+    "1/300. − 1/310. = 1.075 × 10⁻⁴ K⁻¹",
+    "Ea = 8.314 × ln 2 / 1.075 × 10⁻⁴ = 5.36 × 10⁴ J/mol = 53.6 kJ/mol"
+   ],
+   "ref": "Focus 7, Topic 7D",
+   "reviewed": false
+  },
+  {
+   "id": "t23-q4",
+   "topic": "chemical-kinetics",
+   "type": "calc",
+   "q": "For A + B → products: doubling [A] (with [B] fixed) makes the initial rate 4 times faster, and doubling [B] (with [A] fixed) leaves the rate unchanged. Write the rate law.",
+   "given": [
+    "[A] × 2 gives rate × 4",
+    "[B] × 2 gives rate × 1"
+   ],
+   "answer": "Rate = k[A]²",
+   "steps": [
+    "2ᵐ = 4, so the order in A is m = 2",
+    "2ⁿ = 1, so the order in B is n = 0",
+    "Rate = k[A]²[B]⁰ = k[A]²; overall order 2"
+   ],
+   "ref": "Focus 7, Topic 7A",
+   "reviewed": false
+  },
+  {
+   "id": "t23-q5",
+   "topic": "chemical-kinetics",
+   "type": "concept",
+   "q": "How does a catalyst speed up a reaction? Does it change ΔH or the equilibrium constant?",
+   "answer": "It provides a path with lower activation energy; ΔH and K do not change",
+   "explanation": "The catalyst opens an alternative mechanism with a lower Ea, so more collisions have enough energy to react. It speeds up the forward and reverse reactions equally and is not consumed, so the reactants, products, ΔH and K stay the same.",
+   "ref": "Focus 7, Topic 7E",
+   "reviewed": false
+  }
+ ]
+}
