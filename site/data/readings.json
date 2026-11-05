@@ -1557,7 +1557,7 @@
             "F₂ has bond order 1 and is diamagnetic. N₂ has bond order 3 and is diamagnetic. Those MO results match the Lewis pictures, unlike O₂.",
             "Writing the electron configuration for O₂: (σ2s)²(σ*2s)²(σ2p)²(π2p)⁴(π*2p)². The π* set holds two unpaired electrons.",
             "Removing one π* electron (to O₂⁺) raises bond order. Adding one (to O₂⁻) lowers it. Adding two (to O₂²⁻, peroxide) drops bond order to 1.",
-            "Classroom check: a tube of liquid O₂ hangs between the poles of a strong magnet; liquid N₂ does not. Paramagnetism of O₂ is not a book quirk; it is visible."
+            "Classroom check: a tube of liquid O₂ hangs between the poles of a strong magnet; liquid N₂ does not. Paramagnetism of O₂ is not a book quirk. You can see it."
           ],
           "figure": {
             "src": "art/mo-o2.svg",
@@ -2189,7 +2189,7 @@
             "At constant volume, no expansion work is done (ΔV = 0), so w = 0 and ΔU = q<sub>V</sub>. Bomb calorimeters use that idea.",
             "Open vs closed vs isolated: a closed system exchanges energy but not matter; an isolated system exchanges neither. Coffee-cup calorimeters are approximately adiabatic toward the room for a short experiment, but they are open to constant pressure.",
             "Electrical work and other forms exist, but intro problems focus on heat and PV work. Keep the sign convention consistent with your course: here q and w into the system are positive.",
-            "State functions you will meet often: U, H, S, G, P, T, V. Path functions for energy transfer: q and w. Exam questions love asking which quantities depend only on the current state."
+            "Common state functions: U, H, S, G, P, T, V. Path functions for energy transfer: q and w. Exam questions often ask which quantities depend only on the current state."
           ],
           "why": "Every enthalpy and calorimetry problem sits on ΔU = q + w and on clear system/surroundings bookkeeping.",
           "worked": {
@@ -2257,7 +2257,7 @@
           "paragraphs": [
             "Hess's law: if a reaction is the sum of steps, ΔH for the reaction is the sum of the ΔH values of the steps. Enthalpy is a state function, so the path does not matter.",
             "Standard enthalpy of formation ΔH<sub>f</sub>° is the enthalpy change when one mole of a substance forms from its elements in their standard states. By definition, ΔH<sub>f</sub>° = 0 for an element in its standard state (O₂(g), C(graphite), H₂(g), …).",
-            "For any reaction: ΔH°_rxn = Σ n ΔH<sub>f</sub>°(products) − Σ n ΔH<sub>f</sub>°(reactants), with stoichiometric coefficients n.",
+            "For any reaction: ΔH<sub>rxn</sub>° = Σ n ΔH<sub>f</sub>°(products) − Σ n ΔH<sub>f</sub>°(reactants), with stoichiometric coefficients n.",
             "Always match physical states to the table (H₂O(l) vs H₂O(g) differ by the enthalpy of vaporization).",
             "Hess's law is also how you combine measured combustion or formation reactions when a direct measurement is hard.",
             "Standard state means the pure substance at 1 bar (older tables: 1 atm) and the specified temperature, usually 298 K for tables labeled °.",
@@ -2363,7 +2363,7 @@
             "Partial pressures in K<sub>p</sub> must use the same pressure unit the tabulated K<sub>p</sub> assumes. Mixing bar and atm without converting creates silent errors.",
             "Q uses the same formula as K but with the concentrations or pressures you have right now. Updating one species changes Q instantly; K stays put until temperature changes.",
             "When all stoichiometric coefficients are multiplied by a factor n, the new constant is the old constant raised to n. That rule keeps thermodynamics consistent with how the equation is written.",
-            "Practice saying \"Q versus K\" out loud before every equilibrium direction question. That one comparison prevents most guesswork."
+            "That one comparison prevents most guesswork."
           ],
           "why": "Q vs K is the fastest way to predict direction before you solve an ICE table.",
           "worked": {
@@ -2475,7 +2475,7 @@
               "steps": [
                 "At constant P, adding inert gas increases total volume.",
                 "Partial pressures of N₂, H₂, and NH₃ fall (mole fractions drop).",
-                "Fewer total pressures of reactants/products is like a pressure decrease → shift toward more gas moles → reverse.",
+                "Lower partial pressures of N₂, H₂, and NH₃ act like a pressure drop → shift toward more gas moles → reverse.",
                 "Final answer: reverse shift (at constant P)."
               ]
             }
@@ -2522,7 +2522,7 @@
             "Typical order for a pure substance: S(gas) ≫ S(liquid) > S(solid). Dissolving a solid or liquid in a solvent usually increases entropy; dissolving a gas in a liquid usually decreases entropy.",
             "For a chemical reaction, count gas moles first: if moles of gas increase, ΔS° is often positive; if they decrease, ΔS° is often negative. Phase changes and complexity matter too, but gas count is the best first check.",
             "Third-law entropies: tables list standard molar entropies S° (not ΔS<sub>f</sub>°). Elements do not have S° = 0 (except a perfect crystal at 0 K).",
-            "ΔS°_rxn = Σ n S°(products) − Σ n S°(reactants).",
+            "ΔS<sub>rxn</sub>° = Σ n S°(products) − Σ n S°(reactants).",
             "Second law: for any spontaneous process, the total entropy of the system plus surroundings increases: ΔS<sub>univ</sub> = ΔS<sub>sys</sub> + ΔS<sub>surr</sub> > 0.",
             "At constant T and P, heat into the surroundings relates to −ΔH<sub>sys</sub> / T for the surroundings when the only exchange is that heat, so ΔS<sub>surr</sub> ≈ −ΔH<sub>sys</sub> / T. That is why exothermic reactions can drive ΔS<sub>univ</sub> up even if ΔS<sub>sys</sub> is negative.",
             "Absolute entropy rises with temperature and with molecular complexity (more ways to store energy). Ne(g) has lower S° than C₂H₆(g) at the same T.",
@@ -2531,7 +2531,7 @@
             "Heating a substance slowly and reversibly adds entropy ΔS = q<sub>rev</sub> / T. For a constant-pressure warm-up without phase change, that becomes integral of C<sub>p</sub> dT / T, which is why larger heat capacity means a larger entropy increase for the same temperature jump.",
             "Mixing two ideal gases increases entropy because the number of position microstates rises. That is a standard ΔS > 0 example with no chemistry at all.",
             "Quick ranking drill: compare moles of gas first, then phases, then molecular complexity. That order of checks solves most qualitative ΔS questions on exams.",
-            "Tabulated S° values already include all the heating and phase-change entropy from 0 K up to 298 K for the standard state. That is why you can subtract Σ S°_reactants from Σ S°_products without inventing extra terms for \"starting from elements.\""
+            "Tabulated S° values already include all the heating and phase-change entropy from 0 K up to 298 K for the standard state. That is why you can subtract Σ S°(reactants) from Σ S°(products) without inventing extra terms for \"starting from elements.\""
           ],
           "why": "Sign of ΔS, together with ΔH, decides how temperature affects spontaneity through ΔG.",
           "worked": {
@@ -2691,7 +2691,7 @@
             "Negative orders sometimes appear when a species inhibits the rate. Treat them as experimental facts from the data.",
             "Rates usually fall as reactants are consumed unless a product autocatalyzes the reaction. Initial-rate methods avoid that complication by reading the beginning of each run.",
             "Always state the rate definition you are using. Saying \"the rate\" without tying it to a species can be ambiguous when stoichiometric coefficients differ.",
-            "Experimental design tip: change one concentration at a time when possible so the order in that reactant is obvious from a single pair of runs.",
+            "Change one concentration at a time when possible so the order in that reactant is obvious from a single pair of runs.",
             "Concentration units inside a rate law must match how k was defined. If [A] is in mol/L and time is in seconds, first-order k is in s⁻¹ and a second-order k for rate = k[A]² is in <span class=\"nw\">L·mol⁻¹·s⁻¹</span>."
           ],
           "why": "Orders tell you how concentration controls speed and which integrated law to use.",
@@ -2729,12 +2729,12 @@
             "To identify order from data, test which plot is linear: [A] vs t (zero), ln[A] vs t (first), 1/[A] vs t (second).",
             "Radioactive decay is first order. Carbon-14 dating uses the same integrated law with a known half-life.",
             "Units of k are a quick order check: s⁻¹ suggests first order; M⁻¹·s⁻¹ suggests second order (for rate in M/s).",
-            "Worked habit: write the integrated equation, isolate the unknown (k, t, or [A]), substitute with units, then interpret whether the answer is physical (concentration between 0 and [A]₀).",
+            "Write the integrated equation, isolate the unknown (k, t, or [A]), substitute with units, then interpret whether the answer is physical (concentration between 0 and [A]₀).",
             "Half-life questions for first order can be solved without k: number of half-lives n = t / t½, fraction left = (1/2)<sup>n</sup>.",
             "First-order processes appear in pharmacokinetics and environmental decay models as well as chemistry labs. The math is the same exponential decay.",
             "If a problem gives two concentrations and the time between them for a first-order reaction, k = ln([A]₀/[A]) / t.",
             "Second-order half-life getting longer as the reactant is consumed is a qualitative signature you can use even before plotting 1/[A].",
-            "Graphical diagnosis beats memorizing alone: if ln[A] vs t curves, the reaction is not first order. If 1/[A] vs t is straight, you have second order in A (for the single-reactant form)."
+            "A plot beats memorizing alone: if ln[A] vs t curves, the reaction is not first order. If 1/[A] vs t is straight, you have second order in A (for the single-reactant form)."
           ],
           "worked": {
             "title": "First-order remaining fraction after 3 half-lives",
@@ -3020,192 +3020,946 @@
       ]
     },
     "buffers-indicators-and-titration-curves": {
+      "topic_id": "buffers-indicators-and-titration-curves",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Buffers and Henderson–Hasselbalch",
+          "id": "buffers-hh",
+          "heading": "Buffers and Henderson-Hasselbalch",
           "paragraphs": [
-            "A buffer is a weak acid + its conjugate base (or weak base + conjugate acid). pH ≈ pK<sub>a</sub> + log([A⁻]/[HA]). Best buffering when [A⁻]≈[HA] and both are reasonably concentrated."
+            "A buffer resists pH change when small amounts of strong acid or base are added. The usual recipe is a weak acid HA plus its conjugate base A<sup>−</sup> (often as a salt), or a weak base plus its conjugate acid.",
+            "The common-ion effect is why buffers work: added A<sup>−</sup> shifts HA ⇌ H<sup>+</sup> + A<sup>−</sup> left, so [H<sup>+</sup>] stays lower than for the weak acid alone at the same formal concentration.",
+            "Henderson-Hasselbalch: pH = pK<sub>a</sub> + log([A<sup>−</sup>]/[HA]). Use equilibrium concentrations. When the acid and salt are in the same volume, the volume cancels and you can use mole ratios.",
+            "A buffer works best near pH ≈ pK<sub>a</sub>, where [A<sup>−</sup>] ≈ [HA]. Capacity falls when either component is nearly used up, or when total buffer concentration is tiny.",
+            "Do not use Henderson-Hasselbalch for a strong acid alone, or after you have completely neutralized one buffer component with a large dump of strong base.",
+            "pK<sub>a</sub> = −log K<sub>a</sub>. For acetic acid, K<sub>a</sub> ≈ 1.8 × 10<sup>−5</sup>, so pK<sub>a</sub> ≈ 4.74 at 25 °C. That is a standard table value used in this course.",
+            "Blood and many lab reagents are buffers. The chemistry is the same: a conjugate pair sharing protons with water.",
+            "Effective buffer range is often quoted as pK<sub>a</sub> ± 1. Outside that window the ratio [A<sup>−</sup>]/[HA] becomes extreme and capacity collapses.",
+            "You can make a buffer by partial neutralization: start with HA and add less than one equivalent of strong base, or start with A<sup>−</sup> and add less than one equivalent of strong acid.",
+            "Temperature shifts K<sub>a</sub> slightly. Use the pK<sub>a</sub> given in the problem rather than memorizing every table variant.",
+            "Henderson-Hasselbalch comes from K<sub>a</sub> = [H<sup>+</sup>][A<sup>−</sup>]/[HA]. Take −log and rearrange. The approximation fails when x = [H<sup>+</sup>] is not small compared with [HA] and [A<sup>−</sup>], or when the solution is extremely dilute.",
+            "Ammonia / ammonium buffers use pOH = pK<sub>b</sub> + log([BH<sup>+</sup>]/[B]), or convert through pK<sub>a</sub> of NH<sub>4</sub><sup>+</sup> (pK<sub>a</sub> ≈ 9.25) and the acid form of Henderson-Hasselbalch.",
+            "Write concentrations as mol/L inside Henderson-Hasselbalch, or cancel equal volumes and use mole ratios. Mixing a log of grams without converting to moles is a common exam slip."
           ],
+          "why": "Almost every titration-curve and biochemistry pH question is a buffer problem in disguise. Henderson-Hasselbalch is the fast path when the assumptions hold.",
           "worked": {
-            "title": "Buffer 0.150 M CH₃COOH / 0.250 M CH₃COONa",
+            "title": "pH of a 0.100 M acetic acid / 0.100 M acetate buffer",
             "steps": [
-              "pK<sub>a</sub> (acetic) ≈ 4.74",
-              "pH = 4.74 + log(0.250/0.150) = 4.74 + log(1.667)",
-              "pH = 4.74 + 0.222 = 4.96 ≈ 4.97"
+              "pK<sub>a</sub> (acetic) ≈ 4.74.",
+              "pH = 4.74 + log(0.100/0.100) = 4.74 + log(1) = 4.74.",
+              "Ratio 1:1 sits at pH = pK<sub>a</sub>.",
+              "Assumption check: both concentrations ≫ [H<sup>+</sup>] from water; OK for 0.1 M."
             ]
           },
+          "workedExamples": [
+            {
+              "title": "pH when [acetate]/[acetic] = 2.0",
+              "steps": [
+                "pH = 4.74 + log(2.0) = 4.74 + 0.30 = 5.04.",
+                "More base form → higher pH than pK<sub>a</sub>.",
+                "If the ratio were 0.50, pH = 4.74 + log(0.50) = 4.44."
+              ]
+            },
+            {
+              "title": "Prepare a pH 5.00 acetate buffer; pK<sub>a</sub> = 4.74",
+              "steps": [
+                "5.00 = 4.74 + log([A<sup>−</sup>]/[HA]) → log(ratio) = 0.26 → ratio = 10<sup>0.26</sup> ≈ 1.82.",
+                "So [A<sup>−</sup>] ≈ 1.82 [HA].",
+                "One recipe: 0.182 M acetate and 0.100 M acetic acid in the same solution.",
+                "Capacity scales with total concentration; double both for a stronger buffer at the same pH."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "buffer-stress",
+          "heading": "Adding strong acid or base to a buffer",
+          "paragraphs": [
+            "Treat the strong acid or base as reacting completely with the opposite buffer component first. Then reapply Henderson-Hasselbalch with the new amounts.",
+            "Adding OH<sup>−</sup> converts HA → A<sup>−</sup>. Adding H<sub>3</sub>O<sup>+</sup> converts A<sup>−</sup> → HA. Update moles, then divide by total volume if concentrations are needed.",
+            "If you add more strong base than moles of HA, you leave excess OH<sup>−</sup> and the buffer is broken; solve as a strong base problem (or a weak base if only A<sup>−</sup> remains).",
+            "Same warning for excess strong acid past the A<sup>−</sup> amount.",
+            "Work in moles for the stoichiometry step. Convert back to molarity only when the formula asks for concentrations.",
+            "Dilution alone changes capacity more than pH for a 1:1 buffer, because the ratio [A<sup>−</sup>]/[HA] is unchanged if both are diluted equally.",
+            "Track the limiting reagent when the added strong acid or base is large. If HA is consumed completely, leftover OH<sup>−</sup> sets the pH.",
+            "Laboratory buffers often list target pH and total concentration. The stoichiometry step above is how those bottles were designed.",
+            "On a titration curve, the flat buffer region is exactly this stoichiometry story repeated at every point before equivalence. Half-equivalence is the special case where the ratio is 1."
+          ],
+          "worked": {
+            "title": "Add 0.010 mol OH<sup>−</sup> to 1.00 L of 0.100 M HA / 0.100 M A<sup>−</sup>",
+            "steps": [
+              "Initial moles: HA = 0.100, A<sup>−</sup> = 0.100.",
+              "OH<sup>−</sup> converts HA → A<sup>−</sup>: HA becomes 0.090; A<sup>−</sup> becomes 0.110.",
+              "pH = pK<sub>a</sub> + log(0.110/0.090). For acetic, 4.74 + log(1.222) = 4.74 + 0.087 = 4.83.",
+              "pH rose only about 0.09 units; that is buffer action.",
+              "Compare: 0.010 mol OH<sup>−</sup> in 1.00 L of pure water would give pH 12.00."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Add 0.010 mol H<sub>3</sub>O<sup>+</sup> to the same buffer",
+              "steps": [
+                "H<sub>3</sub>O<sup>+</sup> converts A<sup>−</sup> → HA: A<sup>−</sup> = 0.090; HA = 0.110.",
+                "pH = 4.74 + log(0.090/0.110) = 4.74 − 0.087 = 4.65.",
+                "Symmetric drop versus the base-addition case."
+              ]
+            },
+            {
+              "title": "Break a buffer with excess base",
+              "steps": [
+                "Start: 0.050 mol HA and 0.050 mol A<sup>−</sup> in 1.00 L.",
+                "Add 0.060 mol OH<sup>−</sup>. HA can absorb only 0.050 mol.",
+                "After reaction: HA = 0; A<sup>−</sup> = 0.100 mol; leftover OH<sup>−</sup> = 0.010 mol.",
+                "[OH<sup>−</sup>] ≈ 0.010 M → pOH = 2.00 → pH = 12.00.",
+                "Henderson-Hasselbalch no longer applies."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Plugging the strong base concentration straight into Henderson-Hasselbalch without the stoichiometry step.",
+            "whyWrong": "Henderson-Hasselbalch needs the weak acid/conjugate ratio after the strong acid or base has reacted.",
+            "correct": "React completely first, update moles of HA and A<sup>−</sup>, then use pH = pK<sub>a</sub> + log([A<sup>−</sup>]/[HA])."
+          }
+        },
+        {
+          "id": "titration-curves",
+          "heading": "Titration curves and indicators",
+          "paragraphs": [
+            "A titration curve plots pH versus volume of titrant. Key regions: start, buffer region, half-equivalence, equivalence, and excess titrant.",
+            "For weak acid + strong base: at half-equivalence, [HA] = [A<sup>−</sup>] so pH = pK<sub>a</sub>. At equivalence, only A<sup>−</sup> remains; pH > 7 and you solve a weak-base problem with K<sub>b</sub> = K<sub>w</sub>/K<sub>a</sub>.",
+            "For strong acid + strong base: equivalence pH = 7 at 25 °C (ideally). The steep jump is centered on 7.",
+            "For weak base + strong acid: equivalence pH < 7 because the conjugate acid remains.",
+            "An indicator is itself a weak acid (HIn) with a vivid color change near its pK<sub>a</sub>. Choose an indicator whose transition range sits inside the steep part of the curve.",
+            "Phenolphthalein (colorless → pink near pH 8-10) fits many weak-acid/strong-base titrations. Methyl orange fits some strong-acid/weak-base cases better.",
+            "The schematic titration curve in this reading marks the buffer region, the equivalence jump, and the excess-titrant plateau. It is not to scale; use it for shape, not for reading exact volumes.",
+            "The steepness near equivalence grows when both acid and base are stronger and more concentrated. Weak/weak titrations have murky endpoints.",
+            "Polyprotic acids show multiple jumps if the K<sub>a</sub> values are well separated (factor of ~10<sup>4</sup> or more). Carbonic acid is messier because of CO<sub>2</sub> equilibrium.",
+            "Indicators do not change at a single pH; they change over a range of about two pH units centered near pK<sub>In</sub>. Matching that window to the steep jump keeps the color error small.",
+            "If you titrate a strong acid with strong base, several indicators can work because the jump spans many pH units. Weak acid curves are pickier.",
+            "Sketch the axes before memorizing numbers: volume of titrant on x, pH on y. Mark half-equivalence and equivalence with vertical lines, then think about which species dominate in each interval."
+          ],
+          "worked": {
+            "title": "pH at half-equivalence for acetic acid titrated with NaOH",
+            "steps": [
+              "At half-equivalence, half of HA has become A<sup>−</sup>, so [HA] ≈ [A<sup>−</sup>] (same volume).",
+              "pH = pK<sub>a</sub> ≈ 4.74.",
+              "This point is the middle of the buffer region on the curve.",
+              "It is not the equivalence point; equivalence needs twice that volume of base (for a 1:1 acid)."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Equivalence pH sketch for 25.0 mL of 0.100 M acetic + 0.100 M NaOH",
+              "steps": [
+                "Equivalence volume of NaOH = 25.0 mL. Total volume = 50.0 mL.",
+                "Moles A<sup>−</sup> = 0.00250. [A<sup>−</sup>] = 0.00250 / 0.0500 = 0.0500 M.",
+                "K<sub>b</sub> = K<sub>w</sub>/K<sub>a</sub> = 1.0×10<sup>−14</sup> / 1.8×10<sup>−5</sup> = 5.6×10<sup>−10</sup>.",
+                "For A<sup>−</sup> + H<sub>2</sub>O ⇌ HA + OH<sup>−</sup>: x<sup>2</sup> / 0.0500 ≈ 5.6×10<sup>−10</sup> → x ≈ 5.3×10<sup>−6</sup> = [OH<sup>−</sup>].",
+                "pOH ≈ 5.28; pH ≈ 8.72 (weak-base equivalence)."
+              ]
+            },
+            {
+              "title": "Pick an indicator",
+              "steps": [
+                "Weak acid / strong base equivalence near pH 8-9.",
+                "Phenolphthalein’s transition sits there → good choice.",
+                "Methyl orange changes near pH 4 → would switch too early for this titration."
+              ]
+            },
+            {
+              "title": "Initial pH of 0.100 M acetic acid before any base",
+              "steps": [
+                "Weak acid: x<sup>2</sup> / 0.100 = 1.8×10<sup>−5</sup> → x = [H<sub>3</sub>O<sup>+</sup>] ≈ 1.3×10<sup>−3</sup>.",
+                "pH ≈ 2.89.",
+                "This is the left edge of the titration curve, well below the buffer region.",
+                "After the first few mL of NaOH, you enter the buffer region and Henderson-Hasselbalch takes over."
+              ]
+            }
+          ],
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"Titration curve (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">Titration curve (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">pH vs volume</text></g><path d=\"M 28.0,126.0 L 116.0,103.5 L 204.0,67.5 L 292.0,58.5\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"126.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"116.0\" cy=\"103.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"204.0\" cy=\"67.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"58.5\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">start</text><text x=\"116.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">buffer</text><text x=\"204.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">eq.</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">excess</text></svg>"
         },
         {
-          "heading": "Adding strong base to a buffer",
-          "paragraphs": [
-            "OH⁻ converts HA → A⁻. Update the mole amounts, then reapply Henderson–Hasselbalch."
-          ]
-        },
-        {
-          "heading": "Equivalence point",
-          "paragraphs": [
-            "For weak acid + strong base, the salt at equivalence is a weak base (A⁻), so pH > 7. Solve from K<sub>b</sub> = K<sub>w</sub>/K<sub>a</sub> and the A⁻ concentration after dilution."
-          ]
+          "id": "check-buffers",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "Write Henderson-Hasselbalch for a weak acid buffer.",
+                "a": "pH = pK<sub>a</sub> + log([A<sup>−</sup>]/[HA])."
+              },
+              {
+                "q": "pH at half-equivalence for a weak acid / strong base titration?",
+                "a": "pH = pK<sub>a</sub>."
+              },
+              {
+                "q": "Why is equivalence pH > 7 for acetic + NaOH?",
+                "a": "The solution contains A<sup>−</sup>, a weak base."
+              },
+              {
+                "q": "What does adding OH<sup>−</sup> do to HA in a buffer?",
+                "a": "Converts HA into A<sup>−</sup> (stoichiometrically)."
+              }
+            ]
+          }
         }
       ]
     },
     "types-of-reactions-in-aqueous-solution": {
+      "topic_id": "types-of-reactions-in-aqueous-solution",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Electrolytes",
+          "id": "electrolytes",
+          "heading": "Electrolytes and what dissolves",
           "paragraphs": [
-            "Strong electrolytes dissociate fully (strong acids, strong soluble bases, soluble ionic salts). Weak electrolytes partially dissociate (weak acids/bases). Non-electrolytes (e.g. glucose, ethanol) dissolve as molecules."
+            "An electrolyte is a solute that produces ions in water and lets the solution conduct electricity. A nonelectrolyte dissolves as molecules and does not raise conductivity much (sugar is the classic case).",
+            "Strong electrolytes split into ions so thoroughly in dilute water that we write them as fully dissociated in net ionic equations. Strong acids (HCl, HBr, HI, HNO<sub>3</sub>, H<sub>2</sub>SO<sub>4</sub> first proton, HClO<sub>4</sub>), strong soluble bases (group 1 hydroxides; Ba(OH)<sub>2</sub>, Sr(OH)<sub>2</sub>, and Ca(OH)<sub>2</sub> when dissolved), and soluble ionic salts belong here.",
+            "Weak electrolytes only partly ionize. Weak acids (acetic acid, HF) and weak bases (ammonia) are the usual examples. Write them as molecules in net ionic equations unless you are doing an equilibrium calculation.",
+            "Solubility rules are a practical filter, not a deep theory. All group 1 and NH<sub>4</sub><sup>+</sup> salts are soluble. All nitrates and most acetates are soluble. Most Cl<sup>−</sup>, Br<sup>−</sup>, I<sup>−</sup> salts are soluble except Ag<sup>+</sup>, Pb<sup>2+</sup>, Hg<sub>2</sub><sup>2+</sup>. Most sulfates are soluble except Ba<sup>2+</sup>, Pb<sup>2+</sup>, Ca<sup>2+</sup> (borderline), Sr<sup>2+</sup>. Most carbonates, phosphates, and sulfides are insoluble except with group 1 or NH<sub>4</sub><sup>+</sup>. Most hydroxides are insoluble except group 1 and Ba<sup>2+</sup> (Ca and Sr are sparingly soluble).",
+            "When two aqueous salt solutions mix, check whether a pair of ions can form an insoluble solid. If yes, that solid is the precipitate. If every possible pairing is soluble, no precipitation reaction occurs.",
+            "Concentration after mixing matters for later K<sub>sp</sub> work: dilute each ion by the total volume before you compare Q with K<sub>sp</sub>. For this topic, the qualitative solubility rules are enough to predict which solid appears.",
+            "Writing the physical states (aq), (s), (l), (g) is part of the answer on exams. Leaving them off loses easy marks even when the formulas are right.",
+            "A quick self-check: if your \"net ionic\" still contains Na<sup>+</sup> or NO<sub>3</sub><sup>−</sup> on both sides, you have not finished canceling spectators.",
+            "Conductivity demos are qualitative. A bright bulb means many mobile ions; a dim bulb means few; darkness means almost none. Concentration still matters: a dilute strong electrolyte can look weaker than a concentrated weak one in a careless demo.",
+            "Memorize the strong acids as a short list rather than inventing a theory on the spot. H₂SO₄ is strong in its first proton; HSO₄⁻ is a weakish acid with its own K<sub>a</sub>, which matters later in buffer and polyprotic work.",
+            "Insoluble ionic solids are still ionic in the crystal. They are weak electrolytes in the practical sense that almost no ions enter solution until a reaction (acid, complexation) pulls them in.",
+            "When a problem says \"write the net ionic equation,\" graders look for canceled spectators, correct charges, and states. A molecular equation alone is not enough."
+          ],
+          "why": "Net ionic equations and every later precipitation or acid-base problem start from knowing which species are really ions in water and which stay molecular.",
+          "worked": {
+            "title": "Classify NaCl, CH<sub>3</sub>COOH, and C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+            "steps": [
+              "NaCl is an ionic salt that dissolves fully → strong electrolyte; write Na<sup>+</sup>(aq) + Cl<sup>−</sup>(aq).",
+              "CH<sub>3</sub>COOH (acetic acid) is a weak acid → weak electrolyte; mostly molecules with a little H<sub>3</sub>O<sup>+</sup> and CH<sub>3</sub>COO<sup>−</sup>.",
+              "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (glucose) dissolves as molecules with no ions → nonelectrolyte.",
+              "Check: only the strong electrolyte should light a conductivity bulb brightly in a simple demo."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Will AgNO<sub>3</sub>(aq) + NaCl(aq) form a precipitate?",
+              "steps": [
+                "Ions present: Ag<sup>+</sup>, NO<sub>3</sub><sup>−</sup>, Na<sup>+</sup>, Cl<sup>−</sup>.",
+                "Possible solids: AgCl, AgNO<sub>3</sub>, NaCl, NaNO<sub>3</sub>.",
+                "AgNO<sub>3</sub>, NaCl, and NaNO<sub>3</sub> are soluble. AgCl is insoluble (chloride exception).",
+                "Precipitate: AgCl(s). Spectators: Na<sup>+</sup> and NO<sub>3</sub><sup>−</sup>."
+              ]
+            },
+            {
+              "title": "Predict the precipitate: BaCl<sub>2</sub>(aq) + Na<sub>2</sub>SO<sub>4</sub>(aq)",
+              "steps": [
+                "Ions: Ba<sup>2+</sup>, Cl<sup>−</sup>, Na<sup>+</sup>, SO<sub>4</sub><sup>2−</sup>.",
+                "BaSO<sub>4</sub> is insoluble (sulfate exception). NaCl is soluble.",
+                "Precipitate BaSO<sub>4</sub>(s).",
+                "Net ionic: Ba<sup>2+</sup>(aq) + SO<sub>4</sub><sup>2−</sup>(aq) → BaSO<sub>4</sub>(s)."
+              ]
+            }
           ]
         },
         {
+          "id": "net-ionic",
           "heading": "Precipitation and net ionic equations",
           "paragraphs": [
-            "Write the full molecular equation, then the complete ionic equation, then cancel spectator ions to get the net ionic equation. Solubility rules decide which salts precipitate."
+            "Three layers of equation tell different stories. The molecular equation shows compounds as if they were intact formulas. The complete ionic equation shows strong electrolytes as ions. The net ionic equation drops spectators and keeps only what changes.",
+            "Spectators are ions that appear the same on both sides. Cancel them. What remains is the chemistry: often a solid forming, a weak electrolyte forming, or a gas forming.",
+            "Acid-base neutralization in water is often H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup> → 2 H<sub>2</sub>O (or H<sup>+</sup> + OH<sup>−</sup> → H<sub>2</sub>O). When a weak acid is involved, keep the weak acid as a molecule on the left.",
+            "Gas-forming reactions show up when carbonate or sulfite meets strong acid: CO<sub>3</sub><sup>2−</sup> + 2 H<sub>3</sub>O<sup>+</sup> → CO<sub>2</sub>(g) + 3 H<sub>2</sub>O (stoichiometry depends how you count water).",
+            "Always check charge balance and atom balance on the net ionic equation. Students often cancel an ion that is not actually a spectator because it was written with the wrong coefficient.",
+            "Solubility rules decide the solid. Charge and atoms decide whether your ionic bookkeeping is honest.",
+            "When a weak acid forms, keep it molecular on the product side. Example: H<sub>3</sub>O<sup>+</sup> + CH<sub>3</sub>COO<sup>−</sup> → CH<sub>3</sub>COOH + H<sub>2</sub>O shows neutralization that makes a buffer component.",
+            "Double-check coefficients before canceling. Canceling 2 NO<sub>3</sub><sup>−</sup> against 1 NO<sub>3</sub><sup>−</sup> is a bookkeeping error, not chemistry.",
+            "Precipitation, acid-base, and gas-forming reactions can all appear in the same homework set. Classify first, then write the equations. Redox gets its own balancing toolkit in the next reading."
           ],
           "worked": {
-            "title": "AgNO₃(aq) + NaCl(aq)",
+            "title": "Net ionic for Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2 KI(aq)",
             "steps": [
-              "Molecular: AgNO₃ + NaCl → AgCl(s) + NaNO₃",
-              "Ionic: Ag⁺ + NO₃⁻ + Na⁺ + Cl⁻ → AgCl(s) + Na⁺ + NO₃⁻",
-              "Cancel Na⁺ and NO₃⁻",
-              "Net ionic: Ag⁺(aq) + Cl⁻(aq) → AgCl(s)"
+              "Molecular: Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2 KI(aq) → PbI<sub>2</sub>(s) + 2 KNO<sub>3</sub>(aq).",
+              "Complete ionic: Pb<sup>2+</sup>(aq) + 2 NO<sub>3</sub><sup>−</sup>(aq) + 2 K<sup>+</sup>(aq) + 2 I<sup>−</sup>(aq) → PbI<sub>2</sub>(s) + 2 K<sup>+</sup>(aq) + 2 NO<sub>3</sub><sup>−</sup>(aq).",
+              "Cancel spectators K<sup>+</sup> and NO<sub>3</sub><sup>−</sup>.",
+              "Net ionic: Pb<sup>2+</sup>(aq) + 2 I<sup>−</sup>(aq) → PbI<sub>2</sub>(s).",
+              "Check: atoms and charge (+2 on left, 0 on right for the solid) match the formation of neutral PbI<sub>2</sub>."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Net ionic for NH<sub>3</sub>(aq) + HCl(aq)",
+              "steps": [
+                "HCl is strong: write H<sub>3</sub>O<sup>+</sup> + Cl<sup>−</sup>. NH<sub>3</sub> is a weak base: keep NH<sub>3</sub>.",
+                "Molecular picture: NH<sub>3</sub>(aq) + HCl(aq) → NH<sub>4</sub>Cl(aq).",
+                "Complete ionic: NH<sub>3</sub>(aq) + H<sub>3</sub>O<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → NH<sub>4</sub><sup>+</sup>(aq) + Cl<sup>−</sup>(aq) + H<sub>2</sub>O(l) (water bookkeeping may vary).",
+                "Cancel Cl<sup>−</sup>. Net: NH<sub>3</sub>(aq) + H<sub>3</sub>O<sup>+</sup>(aq) → NH<sub>4</sub><sup>+</sup>(aq) + H<sub>2</sub>O(l).",
+                "Do not write H<sup>+</sup> + OH<sup>−</sup> here; there is no strong base."
+              ]
+            },
+            {
+              "title": "Net ionic for Na<sub>2</sub>CO<sub>3</sub>(aq) + 2 HCl(aq)",
+              "steps": [
+                "Molecular: Na<sub>2</sub>CO<sub>3</sub> + 2 HCl → 2 NaCl + H<sub>2</sub>O + CO<sub>2</sub>(g).",
+                "Ionic: 2 Na<sup>+</sup> + CO<sub>3</sub><sup>2−</sup> + 2 H<sub>3</sub>O<sup>+</sup> + 2 Cl<sup>−</sup> → 2 Na<sup>+</sup> + 2 Cl<sup>−</sup> + 3 H<sub>2</sub>O + CO<sub>2</sub> (water count may vary by text).",
+                "Cancel Na<sup>+</sup> and Cl<sup>−</sup>.",
+                "Net: CO<sub>3</sub><sup>2−</sup>(aq) + 2 H<sub>3</sub>O<sup>+</sup>(aq) → CO<sub>2</sub>(g) + 3 H<sub>2</sub>O(l).",
+                "Gas evolution is the visible clue that this is not a simple precipitation."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Writing Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl and also canceling Ag<sup>+</sup> because \"silver appears on both sides\" of a wrong complete ionic equation.",
+            "whyWrong": "Spectators must be identical species with the same coefficient on both sides. Ag<sup>+</sup> is consumed when AgCl forms; it is not a spectator.",
+            "correct": "Cancel only ions that truly do nothing. Keep Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s) as the net ionic equation."
           }
         },
         {
-          "heading": "Redox in solution",
+          "id": "redox-solution",
+          "heading": "Redox in aqueous solution",
           "paragraphs": [
-            "Oxidation is loss of electrons; reduction is gain. The oxidizing agent is reduced; the reducing agent is oxidized. In Zn + Cu²⁺ → Zn²⁺ + Cu, Cu²⁺ is the oxidizing agent and Zn is the reducing agent."
+            "Oxidation is loss of electrons; reduction is gain. The oxidizing agent is the species that gets reduced. The reducing agent is the species that gets oxidized.",
+            "In aqueous reactions you often track oxidation numbers to spot the electron transfer. Rules of thumb: elemental form is 0; monoatomic ion charge equals its oxidation number; oxygen is usually −2 (peroxides −1); hydrogen is usually +1 with nonmetals.",
+            "A displacement reaction such as Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s) is a clean redox example. Zinc is oxidized (0 → +2). Copper(II) is reduced (+2 → 0).",
+            "Not every aqueous reaction is redox. Precipitation of AgCl has no oxidation-number change. Neutralization of strong acid with strong base is not redox either.",
+            "When both precipitation and redox are possible, identify them separately. Many exam items mix a solubility question with an oxidizing-agent label on purpose.",
+            "Assigning oxidizing and reducing agents: name the whole reactant species that donates or accepts electrons, not just the element symbol after the fact.",
+            "Oxidation numbers are a bookkeeping tool, not literal charges on atoms in covalent molecules. They still correctly flag which element is oxidized or reduced.",
+            "In acidic dichromate or permanganate oxidations. The next topic covers balancing those electrons. Here, focus on labeling agents and spotting whether a reaction is redox at all."
+          ],
+          "worked": {
+            "title": "Agents in Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s)",
+            "steps": [
+              "Oxidation numbers: Zn 0 → +2 (oxidation). Cu +2 → 0 (reduction).",
+              "Electrons: Zn loses 2 e<sup>−</sup>; Cu<sup>2+</sup> gains 2 e<sup>−</sup>.",
+              "Reducing agent: Zn(s) (it is oxidized). Oxidizing agent: Cu<sup>2+</sup>(aq) (it is reduced).",
+              "Net ionic is already written; spectators from the original salts are omitted."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Is Ba<sup>2+</sup> + SO<sub>4</sub><sup>2−</sup> → BaSO<sub>4</sub>(s) redox?",
+              "steps": [
+                "Oxidation numbers: Ba stays +2, S stays +6 in sulfate, O stays −2.",
+                "No element changes oxidation number.",
+                "This is precipitation only, not redox.",
+                "Oxidizing/reducing agents do not apply."
+              ]
+            },
+            {
+              "title": "Agents in 2 Br<sup>−</sup> + Cl<sub>2</sub> → Br<sub>2</sub> + 2 Cl<sup>−</sup>",
+              "steps": [
+                "Br −1 → 0 (oxidation). Cl 0 → −1 (reduction).",
+                "Reducing agent: Br<sup>−</sup>. Oxidizing agent: Cl<sub>2</sub>.",
+                "This is a halogen displacement, common in aqueous halide tests.",
+                "No precipitate forms; color changes (bromine) may appear."
+              ]
+            }
           ],
           "figure": {
             "src": "art/zn-cu2-electron-transfer.svg",
             "alt": "Simple redox sketch: zinc metal donates two electrons to aqueous Cu2+, labeling Zn as the reducing agent (oxidized) and Cu2+ as the oxidizing agent (reduced)."
           }
+        },
+        {
+          "id": "check-aqueous",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "Classify HF(aq): strong electrolyte, weak electrolyte, or nonelectrolyte?",
+                "a": "Weak electrolyte (weak acid)."
+              },
+              {
+                "q": "Net ionic for AgNO<sub>3</sub>(aq) + NaCl(aq)?",
+                "a": "Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s)."
+              },
+              {
+                "q": "In Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu, what is the oxidizing agent?",
+                "a": "Cu<sup>2+</sup> (it is reduced)."
+              },
+              {
+                "q": "Name one soluble and one insoluble chloride.",
+                "a": "Soluble: NaCl (or most chlorides). Insoluble: AgCl (also PbCl<sub>2</sub>, Hg<sub>2</sub>Cl<sub>2</sub>)."
+              }
+            ]
+          }
         }
       ]
     },
     "solubility-precipitation-and-complex-ion": {
+      "topic_id": "solubility-precipitation-and-complex-ion",
       "reviewed": false,
       "sections": [
         {
-          "heading": "K<sub>sp</sub>",
+          "id": "ksp",
+          "heading": "K<sub>sp</sub> and molar solubility",
           "paragraphs": [
-            "For M<sub>mX</sub>_x(s) ⇌ m Mⁿ⁺ + x Xʸ⁻, K<sub>sp</sub> = [M]<sup>m</sup> [X]<sup>x</sup>. Molar solubility s is the moles of solid that dissolve per litre."
+            "For a sparingly soluble salt M<sub>m</sub>X<sub>x</sub>(s) ⇌ m M<sup>n+</sup>(aq) + x X<sup>y−</sup>(aq), the solubility product is K<sub>sp</sub> = [M]<sup>m</sup>[X]<sup>x</sup>. The solid does not appear in K.",
+            "Molar solubility s is the moles of solid that dissolve per liter of solution (to make a saturated solution). Relate s to ion concentrations with the stoichiometry of the dissolution equation.",
+            "Example: AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup>, K<sub>sp</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>] = s<sup>2</sup>, so s = √K<sub>sp</sub>.",
+            "Example: PbCl<sub>2</sub>(s) ⇌ Pb<sup>2+</sup> + 2 Cl<sup>−</sup>, K<sub>sp</sub> = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup> = (s)(2s)<sup>2</sup> = 4s<sup>3</sup>, so s = (K<sub>sp</sub>/4)<sup>1/3</sup>.",
+            "K<sub>sp</sub> values are temperature dependent. Use the table value that matches the problem temperature (often 25 °C).",
+            "Comparing K<sub>sp</sub> numbers directly only ranks solubility when the salts have the same ion stoichiometry (both MX, or both MX<sub>2</sub>, …). Otherwise compare molar solubilities s.",
+            "Units: K<sub>sp</sub> is formally dimensionless in thermodynamics, but in this course you treat the concentration values as numerical with mol/L implied.",
+            "Saturated means equilibrium with undissolved solid present. A clear solution can still be unsaturated, saturated, or (briefly) supersaturated; the presence of leftover solid is the sure saturated clue.",
+            "From measured s you can compute K<sub>sp</sub>. From K<sub>sp</sub> you can predict s. Exam problems travel both directions.",
+            "Watch the exponent carefully for MX<sub>2</sub> and M<sub>2</sub>X salts. Forgetting the 2s and the square is the most common algebra error.",
+            "For M<sub>2</sub>X salts such as Ag<sub>2</sub>CrO<sub>4</sub>: Ag<sub>2</sub>CrO<sub>4</sub>(s) ⇌ 2 Ag<sup>+</sup> + CrO<sub>4</sub><sup>2−</sup>, K<sub>sp</sub> = (2s)<sup>2</sup>(s) = 4s<sup>3</sup>. Same algebra family as PbCl<sub>2</sub>, different ions.",
+            "Do not confuse solubility (g/L or mol/L) with K<sub>sp</sub>. They are related through stoichiometry, but they are not the same number.",
+            "Temperature tables matter for lab planning. Heating often raises K<sub>sp</sub> for many ionic solids, which is why warm solutions can hold more salt before crystallizing on cooling.",
+            "A saturated solution of a sparingly soluble salt still looks \"empty\" of solid once filtered, but the ion concentrations are fixed by K<sub>sp</sub>. Adding a tiny crystal seed to a supersaturated solution can crash out solid suddenly.",
+            "When writing K<sub>sp</sub> expressions, omit water and solids. Include aqueous ions only. Charge does not appear explicitly, but the stoichiometry must match the balanced dissolution equation."
+          ],
+          "why": "Every precipitate prediction and selective precipitation problem starts from a correct K<sub>sp</sub> expression and the link from s to ion concentrations.",
+          "worked": {
+            "title": "s for AgCl if K<sub>sp</sub> = 1.8 × 10<sup>−10</sup>",
+            "steps": [
+              "AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup>.",
+              "K<sub>sp</sub> = s · s = s<sup>2</sup> = 1.8 × 10<sup>−10</sup>.",
+              "s = √(1.8 × 10<sup>−10</sup>) = 1.3 × 10<sup>−5</sup> M.",
+              "So [Ag<sup>+</sup>] = [Cl<sup>−</sup>] = 1.3 × 10<sup>−5</sup> M in pure water."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "s for PbCl<sub>2</sub> if K<sub>sp</sub> = 1.7 × 10<sup>−5</sup>",
+              "steps": [
+                "PbCl<sub>2</sub>(s) ⇌ Pb<sup>2+</sup> + 2 Cl<sup>−</sup>.",
+                "K<sub>sp</sub> = (s)(2s)<sup>2</sup> = 4s<sup>3</sup> = 1.7 × 10<sup>−5</sup>.",
+                "s<sup>3</sup> = 4.25 × 10<sup>−6</sup>.",
+                "s ≈ 1.6 × 10<sup>−2</sup> M.",
+                "[Cl<sup>−</sup>] = 2s ≈ 3.2 × 10<sup>−2</sup> M."
+              ]
+            },
+            {
+              "title": "K<sub>sp</sub> from s = 1.3 × 10<sup>−4</sup> M for AgBr (MX)",
+              "steps": [
+                "AgBr(s) ⇌ Ag<sup>+</sup> + Br<sup>−</sup>.",
+                "K<sub>sp</sub> = s<sup>2</sup> = (1.3×10<sup>−4</sup>)<sup>2</sup> = 1.7 × 10<sup>−8</sup>.",
+                "Compare with a table value to check your measurement.",
+                "Same math as AgCl; only the number changes."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "precipitate-q",
+          "heading": "Will it precipitate? Q versus K<sub>sp</sub>",
+          "paragraphs": [
+            "When solutions mix, compute the reaction quotient Q with the ion concentrations after dilution. Compare Q with K<sub>sp</sub>.",
+            "If Q < K<sub>sp</sub>, the solution is unsaturated: no precipitate (more solid could dissolve).",
+            "If Q = K<sub>sp</sub>, the solution is saturated: at equilibrium with solid.",
+            "If Q > K<sub>sp</sub>, the solution is supersaturated with respect to the solid: precipitate forms until Q falls to K<sub>sp</sub>.",
+            "Dilution first: if 10.0 mL of 0.010 M AgNO<sub>3</sub> mixes with 10.0 mL of 0.010 M NaCl, each ion’s concentration becomes half before you form Q.",
+            "Common-ion effect: added Cl<sup>−</sup> lowers the solubility of AgCl because the product [Ag<sup>+</sup>][Cl<sup>−</sup>] must still equal K<sub>sp</sub>.",
+            "pH can matter when the anion is basic (F<sup>−</sup>, CO<sub>3</sub><sup>2−</sup>, S<sup>2−</sup>, …). Acid converts the anion to its conjugate acid and can dissolve the solid.",
+            "Selective precipitation uses K<sub>sp</sub> differences. Sulfide ion concentrations controlled by pH can separate Cu<sup>2+</sup> from Zn<sup>2+</sup> in classic qualitative analysis.",
+            "When two possible precipitates compete, the smaller required ion product (relative to its K<sub>sp</sub>) tends to form first as a reagent is added slowly.",
+            "Ion product Q uses the same form as K<sub>sp</sub> but with whatever concentrations you have right now, not necessarily equilibrium values.",
+            "If a problem gives masses and volumes, convert to molarity before forming Q. Grams cannot enter the K<sub>sp</sub> expression directly.",
+            "Common-ion calculations usually assume the added ion concentration dwarfs s, so [common ion] ≈ initial added value. If that assumption fails (tiny added ion, larger K<sub>sp</sub>), solve the exact quadratic or cubic.",
+            "pH-sensitive solubility shows up for CaF<sub>2</sub>, CaCO<sub>3</sub>, and metal hydroxides. Lowering pH protonates F<sup>−</sup>, CO<sub>3</sub><sup>2−</sup>, or OH<sup>−</sup> and pulls more solid into solution.",
+            "Write a one-line decision each time: Q ? K<sub>sp</sub>. Circling the comparison on your paper prevents \"I computed Q but forgot what it meant\" errors under time pressure."
           ],
           "worked": {
-            "title": "K<sub>sp</sub> of CaF₂ from s = 2.1×10⁻⁴ M",
+            "title": "Mix 50.0 mL of 0.0100 M Pb(NO<sub>3</sub>)<sub>2</sub> with 50.0 mL of 0.100 M NaCl; K<sub>sp</sub>(PbCl<sub>2</sub>) = 1.7 × 10<sup>−5</sup>",
             "steps": [
-              "CaF₂ ⇌ Ca²⁺ + 2 F⁻",
-              "[Ca²⁺]=s, [F⁻]=2s",
-              "K<sub>sp</sub> = s(2s)² = 4s³ = 4(2.1×10⁻⁴)³",
-              "K<sub>sp</sub> = 3.7×10⁻¹¹"
+              "After mixing, total volume = 100.0 mL.",
+              "[Pb<sup>2+</sup>] = 0.0100 × (50/100) = 0.00500 M.",
+              "[Cl<sup>−</sup>] = 0.100 × (50/100) = 0.0500 M.",
+              "Q = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup> = (0.00500)(0.0500)<sup>2</sup> = 1.25 × 10<sup>−5</sup>.",
+              "Q = 1.25 × 10<sup>−5</sup> < K<sub>sp</sub> = 1.7 × 10<sup>−5</sup> → no precipitate.",
+              "A slightly higher [Cl<sup>−</sup>] would push Q over K<sub>sp</sub>."
             ]
+          },
+          "workedExamples": [
+            {
+              "title": "Common ion: solubility of AgCl in 0.100 M NaCl",
+              "steps": [
+                "Let s = [Ag<sup>+</sup>] from dissolving AgCl. [Cl<sup>−</sup>] ≈ 0.100 + s ≈ 0.100 (s tiny).",
+                "K<sub>sp</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>] ≈ s(0.100) = 1.8 × 10<sup>−10</sup>.",
+                "s = 1.8 × 10<sup>−9</sup> M.",
+                "Much smaller than 1.3 × 10<sup>−5</sup> M in pure water."
+              ]
+            },
+            {
+              "title": "Does AgCl form if [Ag<sup>+</sup>]=1.0×10<sup>−5</sup> and [Cl<sup>−</sup>]=1.0×10<sup>−5</sup>? K<sub>sp</sub>=1.8×10<sup>−10</sup>",
+              "steps": [
+                "Q = (1.0×10<sup>−5</sup>)(1.0×10<sup>−5</sup>) = 1.0×10<sup>−10</sup>.",
+                "Q < K<sub>sp</sub> → no precipitate.",
+                "Raise either concentration about twofold and Q crosses K<sub>sp</sub>.",
+                "Always state the comparison explicitly on paper."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Using the stock concentrations before mixing when computing Q.",
+            "whyWrong": "Mixing dilutes every ion. Q uses the concentrations in the combined solution.",
+            "correct": "Dilute first with V<sub>ion</sub>/V<sub>total</sub>, then form Q, then compare with K<sub>sp</sub>."
           }
         },
         {
-          "heading": "Will it precipitate?",
+          "id": "complex-ions",
+          "heading": "Complex ions and apparent solubility",
           "paragraphs": [
-            "Compute Q with the mixed ion concentrations (after dilution). If Q > K<sub>sp</sub>, precipitate forms; Q < K<sub>sp</sub>, no precipitate; Q = K<sub>sp</sub>, saturated."
+            "A complex ion forms when a metal ion binds ligands such as NH<sub>3</sub>, OH<sup>−</sup>, or CN<sup>−</sup>. Example: Ag<sup>+</sup> + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>.",
+            "The formation constant K<sub>f</sub> is large for many ammine and cyano complexes. Large K<sub>f</sub> means the complex is favored.",
+            "Complexation can dissolve a precipitate: AgCl(s) dissolves in aqueous ammonia because free Ag<sup>+</sup> is pulled into [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>, so more solid dissolves to replenish Ag<sup>+</sup>.",
+            "Overall dissolving AgCl in NH<sub>3</sub> combines K<sub>sp</sub> and K<sub>f</sub>. The net equilibrium constant is K = K<sub>sp</sub> · K<sub>f</sub> for AgCl(s) + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + Cl<sup>−</sup>.",
+            "Coordination number is the number of ligand donor atoms bound to the metal. [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> is linear with coordination number 2.",
+            "On exams, write the complex formula with brackets and the charge outside: [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>, [Fe(CN)<sub>6</sub>]<sup>4−</sup>, [Cu(NH<sub>3</sub>)<sub>4</sub>]<sup>2+</sup>.",
+            "Ligands are Lewis bases; the metal ion is a Lewis acid. Ammonia, cyanide, and hydroxide are common ligands in this course.",
+            "Dissolving amphoteric hydroxides in excess OH<sup>−</sup> (forming species such as [Al(OH)<sub>4</sub>]<sup>−</sup>) is another complexation route to higher apparent solubility.",
+            "Write stepwise K<sub>f</sub> values when a problem gives them. Overall K<sub>f</sub> is the product of the stepwise constants.",
+            "Formation of [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> is why silver chloride dissolves in ammonia in the qualitative analysis scheme, while silver iodide (much smaller K<sub>sp</sub>) may not dissolve as readily under the same NH<sub>3</sub> concentration.",
+            "Complex charges equal metal charge plus ligand charges. NH<sub>3</sub> is neutral, so Ag<sup>+</sup> plus two NH<sub>3</sub> stays +1. CN<sup>−</sup> ligands make large negative complexes such as [Fe(CN)<sub>6</sub>]<sup>4−</sup>.",
+            "In the figure for this topic, [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> is linear. Geometry follows coordination number and d-electron count for many transition-metal complexes, but silver(I) ammine is the simple linear case you need here."
           ],
           "worked": {
-            "title": "PbCl₂ after mixing",
+            "title": "Net K for AgCl dissolving in NH<sub>3</sub>",
             "steps": [
-              "After equal volumes: [Pb²⁺]=5.0×10⁻⁴ M, [Cl⁻]=1.0×10⁻³ M",
-              "Q = [Pb²⁺][Cl⁻]² = 5.0×10⁻¹⁰",
-              "Compare to K<sub>sp</sub>(PbCl₂); Q < K<sub>sp</sub> → no precipitate"
+              "K<sub>sp</sub>: AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup>.",
+              "K<sub>f</sub>: Ag<sup>+</sup> + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>.",
+              "Add: AgCl(s) + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + Cl<sup>−</sup>.",
+              "K<sub>net</sub> = K<sub>sp</sub> · K<sub>f</sub>.",
+              "Large K<sub>f</sub> can make K<sub>net</sub> large enough that AgCl dissolves."
             ]
-          }
-        },
-        {
-          "heading": "Complex ions",
-          "paragraphs": [
-            "Metal ions can bind ligands (NH₃, OH⁻, CN⁻…) to form complex ions, which can raise the apparent solubility of a precipitate (e.g. AgCl in NH₃)."
+          },
+          "workedExamples": [
+            {
+              "title": "Label the complex in the figure",
+              "steps": [
+                "Silver at the center binds two NH<sub>3</sub> ligands.",
+                "Overall charge +1; formula [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>.",
+                "Coordination number 2; geometry linear.",
+                "This is the species that raises silver’s apparent solubility in ammonia."
+              ]
+            },
+            {
+              "title": "Why AgCl dissolves in NH<sub>3</sub> but not in NaNO<sub>3</sub>",
+              "steps": [
+                "NaNO<sub>3</sub> adds spectator ions only; [Ag<sup>+</sup>][Cl<sup>−</sup>] still limited by K<sub>sp</sub>.",
+                "NH<sub>3</sub> binds Ag<sup>+</sup> into [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>, lowering free [Ag<sup>+</sup>].",
+                "Solid AgCl dissolves to restore the K<sub>sp</sub> product until ligands are scarce.",
+                "Nitrate cannot play that ligand role here."
+              ]
+            },
+            {
+              "title": "Order of magnitude: K<sub>net</sub> = K<sub>sp</sub> K<sub>f</sub>",
+              "steps": [
+                "Suppose K<sub>sp</sub>(AgCl) = 1.8×10<sup>−10</sup> and K<sub>f</sub>([Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>) ≈ 1.7×10<sup>7</sup>.",
+                "K<sub>net</sub> ≈ 1.8×10<sup>−10</sup> × 1.7×10<sup>7</sup> ≈ 3×10<sup>−3</sup>.",
+                "Not huge, but large enough that moderate [NH<sub>3</sub>] dissolves appreciable AgCl.",
+                "Smaller K<sub>sp</sub> salts need larger K<sub>f</sub> or higher ligand concentration."
+              ]
+            }
           ],
           "figure": {
             "src": "art/ag-nh3-2-complex.svg",
             "alt": "Linear [Ag(NH3)2]+ complex with silver at the center and two ammine ligands, overall charge +1, coordination number 2."
           }
+        },
+        {
+          "id": "check-solubility",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "K<sub>sp</sub> expression for PbCl<sub>2</sub>?",
+                "a": "K<sub>sp</sub> = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup>."
+              },
+              {
+                "q": "If Q > K<sub>sp</sub>, what happens?",
+                "a": "Precipitate forms until Q = K<sub>sp</sub>."
+              },
+              {
+                "q": "Why does AgCl dissolve in NH<sub>3</sub>?",
+                "a": "Ag<sup>+</sup> forms [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>, lowering free [Ag<sup>+</sup>] so more solid dissolves."
+              },
+              {
+                "q": "Relation for MX salt: K<sub>sp</sub> and s?",
+                "a": "K<sub>sp</sub> = s<sup>2</sup>, so s = √K<sub>sp</sub>."
+              }
+            ]
+          }
         }
       ]
     },
     "balancing-redox-equations-and-titrations": {
+      "topic_id": "balancing-redox-equations-and-titrations",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Half-reaction method (acidic)",
+          "id": "acidic-half",
+          "heading": "Half-reaction method in acid",
           "paragraphs": [
-            "Split into oxidation and reduction half-reactions. Balance atoms other than O and H, then O with H₂O, then H with H⁺, then charge with e⁻. Multiply to equalize electrons and add."
+            "The half-reaction method splits a redox process into oxidation and reduction, balances each half, then combines them so electrons cancel.",
+            "In acidic solution the toolkit is: balance atoms other than O and H first; balance O with H<sub>2</sub>O; balance H with H<sup>+</sup> (or H<sub>3</sub>O<sup>+</sup>); balance charge with electrons.",
+            "Multiply whole half-reactions by integers so the electron counts match. Add. Cancel electrons and any species that appear on both sides.",
+            "Check at the end: atoms balanced, charge balanced, and electrons gone. If charge fails, an electron coefficient is usually wrong.",
+            "Common acidic examples: MnO<sub>4</sub><sup>−</sup> → Mn<sup>2+</sup>, Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> → Cr<sup>3+</sup>, and NO<sub>3</sub><sup>−</sup> → NO. Each needs water and H<sup>+</sup> on the correct sides.",
+            "Keep polyatomic ions intact only when they do not change. Once Mn in MnO<sub>4</sub><sup>−</sup> becomes Mn<sup>2+</sup>, the oxygens must be balanced with water.",
+            "Write one half-reaction completely before touching the other. Mixing steps across halves is the fastest way to lose an oxygen or an electron.",
+            "If the problem gives only formulas without medium, look for H<sup>+</sup> or OH<sup>−</sup> among the reactants or products, or read the words acidic solution / basic solution.",
+            "Permanganate in acid goes to Mn<sup>2+</sup> (nearly colorless). In neutral or basic conditions it often stops at MnO<sub>2</sub> (brown solid). The product tells you which balance to use.",
+            "After adding the halves, cancel electrons first, then cancel water, H<sup>+</sup>, or other species that appear on both sides. Leave the net ionic form unless the problem asks for a molecular equation with spectator counterions.",
+            "If a half-reaction already looks balanced in atoms but not in charge, electrons are the missing piece. Do not invent random coefficients on H<sub>2</sub>O to \"fix\" charge.",
+            "Keep a running charge tally after every step. If atoms balance but charge does not, electrons are wrong or you skipped a coefficient on H<sup>+</sup>."
           ],
+          "why": "Half-reactions make electron bookkeeping visible. Guessing coefficients on the full equation hides the charge errors until the end.",
           "worked": {
-            "title": "MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺ (acidic)",
+            "title": "Balance MnO<sub>4</sub><sup>−</sup> + Fe<sup>2+</sup> → Mn<sup>2+</sup> + Fe<sup>3+</sup> (acidic)",
             "steps": [
-              "Reduction: MnO₄⁻ → Mn²⁺; add 4 H₂O, 8 H⁺, 5 e⁻",
-              "Oxidation: Fe²⁺ → Fe³⁺ + e⁻; ×5",
-              "Add: MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O"
+              "Reduction: MnO<sub>4</sub><sup>−</sup> → Mn<sup>2+</sup>. Add 4 H<sub>2</sub>O on the right to balance O.",
+              "Add 8 H<sup>+</sup> on the left to balance H: MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O.",
+              "Left charge = −1 + 8 = +7; right = +2. Add 5 e<sup>−</sup> on the left: MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 5 e<sup>−</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O.",
+              "Oxidation: Fe<sup>2+</sup> → Fe<sup>3+</sup> + e<sup>−</sup>.",
+              "Multiply oxidation by 5: 5 Fe<sup>2+</sup> → 5 Fe<sup>3+</sup> + 5 e<sup>−</sup>.",
+              "Add: MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 5 Fe<sup>2+</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O + 5 Fe<sup>3+</sup>.",
+              "Check charge: left −1 + 8 + 10 = +17; right +2 + 15 = +17. Atoms match."
             ]
-          }
-        },
-        {
-          "heading": "Basic solution",
-          "paragraphs": [
-            "Balance as if acidic, then add OH⁻ to both sides to neutralize H⁺, forming water, and cancel extra H₂O."
-          ],
-          "worked": {
-            "title": "MnO₄⁻ + I⁻ → MnO₂ + I₂ (basic)",
-            "steps": [
-              "Acidic balance first, then convert H⁺ to H₂O with OH⁻",
-              "Result: 2 MnO₄⁻ + 6 I⁻ + 4 H₂O → 2 MnO₂ + 3 I₂ + 8 OH⁻"
-            ]
-          }
-        },
-        {
-          "heading": "Redox titration",
-          "paragraphs": [
-            "Use the balanced electron ratio to relate moles of titrant to analyte. Example: 1 MnO₄⁻ oxidizes 5 Fe²⁺ in acid."
+          },
+          "workedExamples": [
+            {
+              "title": "Balance Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + Cl<sup>−</sup> → Cr<sup>3+</sup> + Cl<sub>2</sub> (acidic)",
+              "steps": [
+                "Reduction: Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> → 2 Cr<sup>3+</sup>. Add 7 H<sub>2</sub>O on the right.",
+                "Add 14 H<sup>+</sup> on the left. Charge: left −2 + 14 = +12; right +6. Add 6 e<sup>−</sup> on the left.",
+                "Oxidation: 2 Cl<sup>−</sup> → Cl<sub>2</sub> + 2 e<sup>−</sup>.",
+                "Multiply oxidation by 3 to get 6 e<sup>−</sup>.",
+                "Add and simplify: Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + 14 H<sup>+</sup> + 6 Cl<sup>−</sup> → 2 Cr<sup>3+</sup> + 7 H<sub>2</sub>O + 3 Cl<sub>2</sub>.",
+                "Verify atoms and charge (+6 on both sides)."
+              ]
+            },
+            {
+              "title": "Electrons needed: SO<sub>3</sub><sup>2−</sup> → SO<sub>4</sub><sup>2−</sup> in acid",
+              "steps": [
+                "S from +4 to +6 → oxidation; lose 2 e<sup>−</sup> per S.",
+                "Balance O: SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup>.",
+                "Balance H: SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup> + 2 H<sup>+</sup>.",
+                "Charge: left −2; right −2+2=+0 → add 2 e<sup>−</sup> on the right.",
+                "Half: SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup> + 2 H<sup>+</sup> + 2 e<sup>−</sup>."
+              ]
+            }
           ]
+        },
+        {
+          "id": "basic-half",
+          "heading": "Balancing in basic solution",
+          "paragraphs": [
+            "One reliable path: balance as if the solution were acidic, then convert H<sup>+</sup> to water with OH<sup>−</sup>.",
+            "After the acidic balance, add the same number of OH<sup>−</sup> to both sides as the number of H<sup>+</sup> you have. Each H<sup>+</sup> + OH<sup>−</sup> pair becomes H<sub>2</sub>O.",
+            "Cancel extra water molecules that now appear on both sides. Check charge again.",
+            "Some texts balance O and H with OH<sup>−</sup> and H<sub>2</sub>O directly in base. Either method is fine if the final equation is correct.",
+            "Basic media show up with hypochlorite, peroxide in bleach chemistry, and many organic oxidations. The algebra is the same; only the acid/base bookkeeping changes.",
+            "If your final equation still shows H<sup>+</sup> in a \"basic\" answer, you stopped too early.",
+            "After converting to base, scan for leftover H<sup>+</sup>. If any remain, you missed OH<sup>−</sup> pairs.",
+            "Some problems ask you to start from a skeleton with OH<sup>−</sup> already present. You can still use the acidic-then-convert route; just check the final OH<sup>−</sup> coefficient against the answer key style.",
+            "Basic hydrogen peroxide and bleach problems often hide the medium in the ingredient list (NaOH present). Still balance electrons explicitly; guessing coefficients from oxygen atoms alone fails when charge is off."
+          ],
+          "worked": {
+            "title": "Balance MnO<sub>4</sub><sup>−</sup> + I<sup>−</sup> → MnO<sub>2</sub> + I<sub>2</sub> (basic)",
+            "steps": [
+              "Balance as acidic first. Reduction: MnO<sub>4</sub><sup>−</sup> + 4 H<sup>+</sup> + 3 e<sup>−</sup> → MnO<sub>2</sub> + 2 H<sub>2</sub>O.",
+              "Oxidation: 2 I<sup>−</sup> → I<sub>2</sub> + 2 e<sup>−</sup>.",
+              "Match electrons (LCM 6): multiply reduction by 2 and oxidation by 3.",
+              "Acidic sum: 2 MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 6 I<sup>−</sup> → 2 MnO<sub>2</sub> + 4 H<sub>2</sub>O + 3 I<sub>2</sub>.",
+              "Add 8 OH<sup>−</sup> to both sides. Convert 8 H<sup>+</sup> + 8 OH<sup>−</sup> into 8 H<sub>2</sub>O on the left.",
+              "Cancel 4 H<sub>2</sub>O from each side. Basic net: 2 MnO<sub>4</sub><sup>−</sup> + 4 H<sub>2</sub>O + 6 I<sup>−</sup> → 2 MnO<sub>2</sub> + 3 I<sub>2</sub> + 8 OH<sup>−</sup>.",
+              "Check charge: left −2 − 6 = −8; right −8. Atoms match."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Quick check: convert H<sup>+</sup> form to basic",
+              "steps": [
+                "Suppose you have … + 2 H<sup>+</sup> → … on an acidic equation.",
+                "Add 2 OH<sup>−</sup> to both sides.",
+                "Replace 2 H<sup>+</sup> + 2 OH<sup>−</sup> with 2 H<sub>2</sub>O on the left.",
+                "Cancel water if both sides have it.",
+                "Confirm no H<sup>+</sup> remains."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Adding OH<sup>−</sup> to only one side \"because the solution is basic.\"",
+            "whyWrong": "You must add the same number of OH<sup>−</sup> to both sides or you change the net charge balance you already fixed.",
+            "correct": "Add OH<sup>−</sup> equally to both sides, make water from H<sup>+</sup> + OH<sup>−</sup>, then cancel extra water."
+          }
+        },
+        {
+          "id": "redox-titration",
+          "heading": "Redox titration stoichiometry",
+          "paragraphs": [
+            "A redox titration uses a balanced equation to relate moles of titrant to moles of analyte through the electron ratio.",
+            "Classic pair: purple MnO<sub>4</sub><sup>−</sup> oxidizing Fe<sup>2+</sup> in acid. The endpoint is the first lasting pink from a tiny excess of MnO<sub>4</sub><sup>−</sup>.",
+            "From the balanced equation, 1 mol MnO<sub>4</sub><sup>−</sup> reacts with 5 mol Fe<sup>2+</sup>. That 1:5 ratio drives every concentration calculation.",
+            "Another common pair: I<sub>2</sub> with S<sub>2</sub>O<sub>3</sub><sup>2−</sup> (thiosulfate), ratio 1 I<sub>2</sub> : 2 S<sub>2</sub>O<sub>3</sub><sup>2−</sup>.",
+            "Procedure: find moles of titrant from M × V (liters). Convert to moles of analyte with the mole ratio. Divide by analyte volume (liters) for molarity, or convert to grams if asked.",
+            "Volumes in mL must become L before multiplying by mol/L, or keep everything in mmol consistently.",
+            "Blank corrections and indicator volumes matter in careful lab work. For exam stoichiometry, focus on the mole ratio and unit conversions.",
+            "If both analyte and titrant concentrations are unknown, you cannot finish with one titration. Standardization of the titrant against a primary standard comes first.",
+            "Report the analyte concentration with the correct significant figures from the buret readings and the titrant molarity. Trailing volume digits from a glass buret usually support two decimal places in mL."
+          ],
+          "worked": {
+            "title": "Fe<sup>2+</sup> concentration from KMnO<sub>4</sub> titration",
+            "steps": [
+              "Data: 25.00 mL Fe<sup>2+</sup> solution needs 18.40 mL of 0.0200 M KMnO<sub>4</sub>. Acidic conditions; product Mn<sup>2+</sup>.",
+              "Moles MnO<sub>4</sub><sup>−</sup> = 0.01840 L × 0.0200 mol/L = 3.68 × 10<sup>−4</sup> mol.",
+              "Mole ratio: 5 Fe<sup>2+</sup> / 1 MnO<sub>4</sub><sup>−</sup> → moles Fe<sup>2+</sup> = 5 × 3.68 × 10<sup>−4</sup> = 1.84 × 10<sup>−3</sup> mol.",
+              "Molarity Fe<sup>2+</sup> = (1.84 × 10<sup>−3</sup> mol) / 0.02500 L = 0.0736 M.",
+              "Sig figs: 0.0200 and volumes support three significant figures → 0.0736 M."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Mass of Fe in an ore sample",
+              "steps": [
+                "Same ratio: moles Fe = 5 × moles MnO<sub>4</sub><sup>−</sup>.",
+                "Suppose 2.50 × 10<sup>−4</sup> mol MnO<sub>4</sub><sup>−</sup> were used.",
+                "Moles Fe = 1.25 × 10<sup>−3</sup>.",
+                "Mass Fe = 1.25 × 10<sup>−3</sup> × 55.85 g/mol = 0.0698 g."
+              ]
+            },
+            {
+              "title": "Volume of 0.0500 M KMnO<sub>4</sub> to titrate 20.0 mL of 0.100 M Fe<sup>2+</sup>",
+              "steps": [
+                "Moles Fe<sup>2+</sup> = 0.0200 L × 0.100 mol/L = 0.00200 mol.",
+                "Moles MnO<sub>4</sub><sup>−</sup> = 0.00200 / 5 = 4.00 × 10<sup>−4</sup> mol.",
+                "Volume = moles / M = 4.00×10<sup>−4</sup> / 0.0500 = 0.00800 L = 8.00 mL.",
+                "Check: Fe is more concentrated and the ratio needs 5 Fe per MnO<sub>4</sub><sup>−</sup>, so a smaller titrant volume is expected."
+              ]
+            },
+            {
+              "title": "Grams of Fe from 22.50 mL of 0.0250 M KMnO<sub>4</sub>",
+              "steps": [
+                "Moles MnO<sub>4</sub><sup>−</sup> = 0.02250 × 0.0250 = 5.625 × 10<sup>−4</sup> mol.",
+                "Moles Fe = 5 × 5.625 × 10<sup>−4</sup> = 2.8125 × 10<sup>−3</sup> mol.",
+                "Mass Fe = 2.8125 × 10<sup>−3</sup> × 55.85 ≈ 0.157 g.",
+                "Assumes all iron is Fe<sup>2+</sup> in acid and the 1:5 ratio."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "check-redox",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "In acidic solution, what do you add to balance oxygen?",
+                "a": "H<sub>2</sub>O on the side that needs oxygen."
+              },
+              {
+                "q": "Mole ratio Fe<sup>2+</sup> : MnO<sub>4</sub><sup>−</sup> in acid to Mn<sup>2+</sup>?",
+                "a": "5 : 1."
+              },
+              {
+                "q": "How do you convert an acidic balance into a basic one?",
+                "a": "Add OH<sup>−</sup> to both sides to neutralize H<sup>+</sup>, make water, cancel extras."
+              },
+              {
+                "q": "Why is the MnO<sub>4</sub><sup>−</sup> endpoint pink?",
+                "a": "A tiny excess of purple MnO<sub>4</sub><sup>−</sup> persists after Fe<sup>2+</sup> is gone."
+              }
+            ]
+          }
         }
       ]
     },
     "electrochemistry": {
+      "topic_id": "electrochemistry",
       "reviewed": false,
       "sections": [
         {
-          "heading": "Galvanic cells",
+          "id": "galvanic",
+          "heading": "Galvanic cells and E°",
           "paragraphs": [
-            "A galvanic (voltaic) cell runs a spontaneous redox reaction to make electric current. Oxidation at the anode; reduction at the cathode. E°_cell = E°_cathode − E°_anode (using reduction potentials)."
+            "A galvanic (voltaic) cell turns a spontaneous redox reaction into electric current. Oxidation occurs at the anode; reduction occurs at the cathode. Electrons flow in the external wire from anode to cathode.",
+            "A salt bridge (or porous barrier) keeps charge balance by letting ions migrate. Without it, charge would build up and the current would stop.",
+            "Cell notation: anode | anode ion || cathode ion | cathode. Example: Zn(s)|Zn<sup>2+</sup>(aq)||Cu<sup>2+</sup>(aq)|Cu(s).",
+            "Standard cell potential: E<sub>cell</sub>° = E<sub>cathode</sub>° − E<sub>anode</sub>°, using standard reduction potentials. Equivalently E<sub>cell</sub>° = E<sub>red</sub>° + E<sub>ox</sub>° with E<sub>ox</sub>° = −E<sub>red</sub>°(anode couple).",
+            "For Zn/Cu: E°(Cu<sup>2+</sup>/Cu) = +0.34 V, E°(Zn<sup>2+</sup>/Zn) = −0.76 V. E<sub>cell</sub>° = 0.34 − (−0.76) = 1.10 V.",
+            "A positive E<sub>cell</sub>° means the reaction as written is spontaneous under standard conditions (each ion at about 1 M, gases at 1 bar, 25 °C).",
+            "Never multiply tabulated E° values by stoichiometric coefficients. Potentials are intensive. You do multiply ΔG by the electron count.",
+            "More positive reduction potential means a stronger tendency to be reduced (stronger oxidizing agent on the left of the couple). F<sub>2</sub> is high; Li<sup>+</sup> is very low.",
+            "Spectator ions in the salt bridge are often K<sup>+</sup>, Na<sup>+</sup>, NO<sub>3</sub><sup>−</sup>, or Cl<sup>−</sup> chosen so they do not plate or precipitate unexpectedly.",
+            "If a problem lists E° values for several couples, pick the most positive couple as the cathode reduction and the most negative as the anode oxidation for the spontaneous cell.",
+            "Line notation puts the anode on the left by convention. If you swap left and right, you have written the reverse cell and E changes sign.",
+            "Inert electrodes (Pt, graphite) appear when both oxidized and reduced forms are in solution, as in Fe<sup>3+</sup>/Fe<sup>2+</sup> on platinum.",
+            "The Zn/Cu cell in the figure shows electron flow through the wire toward copper, Zn anode dissolving, Cu plating at the cathode, and E<sub>cell</sub>° = 1.10 V under standard conditions."
+          ],
+          "why": "Cell diagrams and E° arithmetic are the entry ticket to ΔG°, K, and Nernst problems. Sign errors usually start here.",
+          "worked": {
+            "title": "E° for Zn(s) + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu(s)",
+            "steps": [
+              "Reduction (cathode): Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu, E° = +0.34 V.",
+              "Oxidation (anode): Zn → Zn<sup>2+</sup> + 2 e<sup>−</sup>, based on E<sub>red</sub>°(Zn<sup>2+</sup>/Zn) = −0.76 V.",
+              "E<sub>cell</sub>° = 0.34 − (−0.76) = 1.10 V.",
+              "Electrons in the wire travel from Zn toward Cu.",
+              "Salt bridge: anions toward the anode half-cell; cations toward the cathode half-cell."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Which way do electrons flow?",
+              "steps": [
+                "Anode is Zn (oxidation).",
+                "Cathode is Cu (reduction).",
+                "Electrons: Zn electrode → wire → Cu electrode.",
+                "If you reverse the wire connections in your head, the sign of E flips and the cell is no longer galvanic as written."
+              ]
+            },
+            {
+              "title": "Spontaneous cell from Ag<sup>+</sup>/Ag (E°=0.80 V) and Fe<sup>2+</sup>/Fe (E°=−0.44 V)",
+              "steps": [
+                "Cathode: Ag<sup>+</sup> + e<sup>−</sup> → Ag (more positive E°).",
+                "Anode: Fe → Fe<sup>2+</sup> + 2 e<sup>−</sup>.",
+                "Balance electrons: 2 Ag<sup>+</sup> + Fe → 2 Ag + Fe<sup>2+</sup>.",
+                "E<sub>cell</sub>° = 0.80 − (−0.44) = 1.24 V.",
+                "Do not multiply 0.80 by 2."
+              ]
+            }
           ],
           "figure": {
             "src": "art/galvanic-zn-cu.svg",
-            "alt": "Galvanic cell Zn|Zn2+||Cu2+|Cu with zinc anode (oxidation), copper cathode (reduction), salt bridge, electron flow through the wire toward copper, and E° cell = 1.10 V."
-          },
-          "worked": {
-            "title": "E° for Zn–Cu cell",
-            "steps": [
-              "E°(Cu²⁺/Cu) = +0.34 V; E°(Zn²⁺/Zn) = −0.76 V (standard table values)",
-              "E°_cell = 0.34 − (−0.76) = +1.10 V"
-            ]
+            "alt": "Galvanic cell Zn|Zn2+||Cu2+|Cu with zinc anode (oxidation), copper cathode (reduction), salt bridge, electron flow through the wire toward copper, and E<sub>cell</sub>° = 1.10 V."
           }
         },
         {
+          "id": "thermo-links",
           "heading": "ΔG°, K, and E°",
           "paragraphs": [
-            "ΔG° = −n F E°_cell. Positive E°_cell means ΔG° < 0 and K > 1 (products favored at standard state)."
+            "The links: ΔG° = −n F E<sub>cell</sub>° and ΔG° = −RT ln K. Combined: n F E<sub>cell</sub>° = RT ln K, or E<sub>cell</sub>° = (RT/nF) ln K.",
+            "F (Faraday constant) ≈ 96485 C/mol e<sup>−</sup>. n is the number of moles of electrons transferred in the balanced equation as written.",
+            "Positive E<sub>cell</sub>° ↔ negative ΔG° ↔ K > 1 (products favored at standard state).",
+            "At 25 °C a handy log<sub>10</sub> form is E° = (0.0592 V / n) log K, so log K = n E° / 0.0592.",
+            "Large n or large E° makes K enormous. That is why many galvanic reactions \"go to completion\" for practical purposes.",
+            "Keep units straight: ΔG in J when F is in C/mol and E in V (because 1 J = 1 C·V).",
+            "Faraday’s constant links chemical amount to charge. Remember F ≈ 96485 C/mol; some problems round to 96500.",
+            "When ΔG° is asked in kJ, divide J by 1000 and watch the sign. A positive E° must give a negative ΔG°.",
+            "Because K depends exponentially on nE°, a 0.1 V change in E° at n = 2 shifts log K by about 3.4. Small potential differences still mean large equilibrium ratios.",
+            "Standard states matter: 1 M and 1 bar are the references behind E°. Real seawater or blood is far from standard, so Nernst corrections are not optional in careful work."
+          ],
+          "worked": {
+            "title": "ΔG° and K for the Zn/Cu cell (n = 2, E° = 1.10 V)",
+            "steps": [
+              "ΔG° = −n F E° = −(2)(96485 C/mol)(1.10 V).",
+              "ΔG° = −2.123 × 10<sup>5</sup> J/mol = −212 kJ/mol (per mole of reaction as written).",
+              "log K = n E° / 0.0592 = 2(1.10)/0.0592 = 37.2.",
+              "K = 10<sup>37.2</sup> ≈ 1.6 × 10<sup>37</sup> (huge; products favored).",
+              "Signs: E° > 0, ΔG° < 0, K ≫ 1 , all consistent."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Find E° from K",
+              "steps": [
+                "Suppose n = 2 and K = 1.0 × 10<sup>10</sup>.",
+                "E° = (0.0592/2) log(1.0×10<sup>10</sup>) = 0.0296 × 10 = 0.296 V.",
+                "Check: positive E° matches K > 1."
+              ]
+            }
+          ],
+          "mistake": {
+            "wrong": "Multiplying E° by n the same way you multiply ΔG.",
+            "whyWrong": "E° is intensive. n belongs in ΔG° = −nFE° and in the Nernst factor, not as a multiplier of the tabulated potential itself.",
+            "correct": "Leave E° as tabulated. Put n only into −nFE° and (0.0592/n) log Q."
+          }
+        },
+        {
+          "id": "nernst-faraday",
+          "heading": "Nernst equation and Faraday electrolysis",
+          "paragraphs": [
+            "Nonstandard conditions use the Nernst equation. At 25 °C: E = E° − (0.0592/n) log Q.",
+            "Q is the reaction quotient for the cell reaction as written. Solids and pure liquids are 1. Concentrations enter for aqueous ions; pressures (in bar) for gases.",
+            "If Q < 1 (reactants favored in the quotient sense), log Q is negative and E > E°. If Q > 1, E < E°.",
+            "At equilibrium Q = K and E = 0, which recovers E° = (0.0592/n) log K.",
+            "Electrolysis drives a nonspontaneous reaction with an external power supply. Electrons still enter at the cathode (reduction) and leave at the anode (oxidation), but now the signs of the electrodes differ from the galvanic case in useful ways; track half-reactions carefully.",
+            "Faraday’s law: moles of e<sup>−</sup> = charge / F = (I t) / F with I in amperes and t in seconds (because 1 A·s = 1 C). Relate moles of e<sup>−</sup> to moles of product with the half-reaction stoichiometry.",
+            "Example: Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu needs 2 mol e<sup>−</sup> per mole Cu plated.",
+            "Concentration cells have E° = 0 because the same couple appears on both sides. Then E = −(0.0592/n) log Q, driven only by the concentration ratio.",
+            "In electrolysis of aqueous NaCl, water may be reduced or oxidized instead of Na<sup>+</sup> or Cl<sup>−</sup> depending on potentials and overpotential. Read the problem’s stated products carefully.",
+            "Current efficiency less than 100% means some charge made side products. Exam Faraday problems usually assume 100% efficiency unless told otherwise.",
+            "For gases in Q, use pressure in bar (approximately atm for this course unless told otherwise). For example, 2 H<sup>+</sup> + 2 e<sup>−</sup> → H<sub>2</sub> uses P<sub>H₂</sub> in Q.",
+            "Electroplating problems sometimes ask for thickness. Convert mass to volume with density, then thickness = volume / area. That is stoichiometry plus geometry, still powered by Faraday’s law.",
+            "When current and time are given, convert minutes to seconds before using Q = I t. Mixing minutes with amperes is a silent unit error that wrecks Faraday calculations."
+          ],
+          "worked": {
+            "title": "Nernst for Zn|Zn<sup>2+</sup>(0.100 M)||Cu<sup>2+</sup>(1.00 M)|Cu",
+            "steps": [
+              "Cell reaction: Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu. n = 2. E° = 1.10 V.",
+              "Q = [Zn<sup>2+</sup>]/[Cu<sup>2+</sup>] = 0.100/1.00 = 0.100.",
+              "E = 1.10 − (0.0592/2) log(0.100) = 1.10 − 0.0296(−1) = 1.10 + 0.0296 = 1.13 V.",
+              "E > E° because Q < 1."
+            ]
+          },
+          "workedExamples": [
+            {
+              "title": "Mass of Cu plated by 2.00 A for 1.00 h",
+              "steps": [
+                "Charge = I t = (2.00 A)(3600 s) = 7200 C.",
+                "Moles e<sup>−</sup> = 7200 / 96485 ≈ 0.0746 mol e<sup>−</sup>.",
+                "Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu → moles Cu = 0.0746 / 2 = 0.0373 mol.",
+                "Mass = 0.0373 × 63.55 g/mol ≈ 2.37 g."
+              ]
+            },
+            {
+              "title": "Time to plate 1.00 g Ag (Ag<sup>+</sup> + e<sup>−</sup> → Ag) at 1.50 A",
+              "steps": [
+                "Moles Ag = 1.00 / 107.87 ≈ 0.00927 mol.",
+                "Moles e<sup>−</sup> = 0.00927 (1 e<sup>−</sup> per Ag).",
+                "Charge = 0.00927 × 96485 ≈ 894 C.",
+                "t = Q / I = 894 / 1.50 ≈ 596 s ≈ 9.93 min."
+              ]
+            },
+            {
+              "title": "Concentration cell: Cu|Cu<sup>2+</sup>(0.010 M)||Cu<sup>2+</sup>(1.0 M)|Cu",
+              "steps": [
+                "Same couple on both sides → E° = 0.",
+                "Spontaneous direction: reduction in the 1.0 M half-cell; oxidation in the 0.010 M half-cell.",
+                "Q = [Cu<sup>2+</sup>]<sub>dilute</sub> / [Cu<sup>2+</sup>]<sub>concentrated</sub> = 0.010/1.0 = 0.010; n = 2.",
+                "E = 0 − (0.0592/2) log(0.010) = 0.0592 V.",
+                "Cu metal dissolves in the dilute half-cell and plates in the concentrated half-cell."
+              ]
+            },
+            {
+              "title": "Charge to deposit 0.500 g Au from Au<sup>3+</sup> (Au<sup>3+</sup> + 3 e<sup>−</sup> → Au)",
+              "steps": [
+                "Moles Au = 0.500 / 196.97 ≈ 0.00254 mol.",
+                "Moles e<sup>−</sup> = 3 × 0.00254 = 0.00762 mol.",
+                "Charge = 0.00762 × 96485 ≈ 735 C.",
+                "At 0.500 A, t = 735 / 0.500 = 1470 s ≈ 24.5 min."
+              ]
+            }
           ]
         },
         {
-          "heading": "Nernst equation",
-          "paragraphs": [
-            "At 25 °C: E = E° − (0.0592/n) log Q. Lower [product ions] / higher [reactant ions] raises E for the forward cell reaction."
-          ],
-          "worked": {
-            "title": "Zn|Zn²⁺(1.0 M)||Cu²⁺(0.010 M)|Cu",
-            "steps": [
-              "n = 2; Q = [Zn²⁺]/[Cu²⁺] = 1.0/0.010 = 100",
-              "E = 1.10 − (0.0592/2) log(100) = 1.10 − 0.0296×2",
-              "E = 1.04 V"
+          "id": "check-electrochemistry",
+          "heading": "Check yourself",
+          "paragraphs": [],
+          "check": {
+            "intro": "Try these without looking back, then tap Show answer to check.",
+            "items": [
+              {
+                "q": "E<sub>cell</sub>° for Zn/Cu with E°(Cu)=+0.34 V and E°(Zn)=−0.76 V?",
+                "a": "1.10 V."
+              },
+              {
+                "q": "Relation between ΔG° and E°?",
+                "a": "ΔG° = −n F E°."
+              },
+              {
+                "q": "Nernst equation at 25 °C?",
+                "a": "E = E° − (0.0592/n) log Q."
+              },
+              {
+                "q": "Moles of electrons from current I for time t?",
+                "a": "n_e = I t / F (I in A, t in s, F ≈ 96485 C/mol)."
+              }
             ]
           }
         }
