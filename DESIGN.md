@@ -1,4 +1,4 @@
-# Chem Practice — DESIGN SPEC v0.3 (figma bro, 5 Nov 2026; Critiquito + Copy Humanizer applied; English v1)
+# Chem Practice — DESIGN SPEC v0.4.1 (figma bro, 5 Nov 2026; Critiquito reading fixes synced)
 
 Spec only. Nothing is built. Values below are proposals for v1, not measured from an existing file.
 Platform: mobile first (students on phones), 360–430 px wide; desktop centers content at max 680 px.
@@ -37,11 +37,34 @@ Contrast checked (WCAG formula) on white / on #FAFAF7: knew 5.7 / 5.5, unsure 5.
 - Header: course "69107 · Introduction to Chemistry" (meta), title "Pick a topic".
 - "Continue" card at top if a session is in progress: topic name, "12 cards left", primary button "Resume".
 - "Due today" chip row if spaced cards are due: "8 cards due across 3 topics" → button "Review due".
-- Topic list sorted by `order` from topics.json, never alphabetical. Each row 64 px:
+- Topic list sorted by `order` from topics.json, never alphabetical. Tapping a topic opens the Reading screen (§3b), not the cards directly. Each row 64 px:
   - order number in a 32 px circle (muted), topic name (body), chapter ref (caption, e.g. "Focus 1 · Topic 1A").
   - end side: progress ring 24 px (share of cards in Knew-it state) + due count badge if > 0.
 - Group rows under Atkins section headers (Fundamentals, Focus 1…10) as sticky 13 px uppercase labels.
 - Empty topic (no reviewed questions yet): text stays full muted color (no opacity change); only the number circle is dimmed to border color; label "Coming soon"; not tappable, aria-disabled.
+
+## 3b. Reading screen (added 5 Nov 2026, matches live build)
+
+Flow change from v0.3: tapping a topic opens **Reading** first, then practice. A "Skip to cards" link jumps straight to the cards. After a reading, the topic page can reopen it with "Read the section again".
+
+Layout, top to bottom:
+1. Top bar 56 px: back (to Home) + the word "Reading" (or empty). Never put the topic name in the top bar; the on-page H1 already shows it in full (same rule as cards using "Card N of 5").
+2. Thin progress bar under the top bar (4 px, primary fill = scroll position / content height), same pattern as the card session bar.
+3. Chapter ref (caption, muted).
+4. H1 topic name (20/28 or 28/34 on mobile, wrap freely).
+5. Draft badge when `reviewed:false`: caption muted, "Draft, not checked yet".
+6. **"Skip to cards"** text link (primary) directly under the title/badge, so a student who wants to skip can do it without scrolling. Do not put Skip only next to Start practice at the bottom.
+7. Sections in order. Each section:
+   - Heading (20/28 bold).
+   - Body paragraphs (17/26), max ~65 characters per line.
+   - Optional **Worked example** card: tip-bg fill (`color/tip-bg`) OR a 4 px primary left border on surface, radius 12, padding 16. Caption "Worked example", then bold title, then numbered steps (same step style as calculation reveals). Must look different from a plain content card while scrolling. Equations: break only before `=`, keep value + unit together, sideways scroll if needed.
+   - Optional **chart** (schematic only): full content width, max height ~200 px. Title inside the SVG in 15 px meta/caption style (`color/muted`), worded like "Relative size (schematic, not to scale)". No numeric bar labels or axis values. Series colors: primary blue + neutral gray only — never knew-green, unsure-amber, or didnt-red. Visible key for each color series (e.g. anions / cations). External caption may still say the chart is schematic (not Atkins data).
+   - Optional **figure**: if `status: pending-sketch`, show a dashed placeholder (radius 12, muted border, padding 16) with caption "Figure coming soon" and the Chem Sketcher note. When the SVG arrives, replace the placeholder; keep alt text.
+8. Bottom of reading: sticky primary button "Start practice (N cards)" only — same sticky bottom pattern as the rating bar (padding = bar height + 16 + safe-area so the last paragraph is never covered).
+
+Tokens: reuse existing ones. No new colors. Charts use primary blue + neutral gray (+ muted/text for labels); never rating colors as series fills; no rainbow series unless tokens gain a plot palette later.
+
+Accessibility: headings in a real outline (h1 topic, h2 section). Placeholder figures need a short alt describing what will be drawn. Skip to cards sits near the top (after the title); sticky Start practice must not trap keyboard focus away from it.
 
 ## 4. Question card
 Order top to bottom:
