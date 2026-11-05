@@ -1,0 +1,1697 @@
+{
+ "meta": {
+  "course_number": "69107",
+  "course_name_he": "מבוא לכימיה",
+  "course_name_en": "Introduction to Chemistry",
+  "year": "תשפ\"ז 2026-27 (catalog marked not final)",
+  "semester": "A",
+  "credits": 7,
+  "lecturer": "Prof. Daniel Harries (coordinator in תשפ\"ו). תשפ\"ז teaching staff: Prof. Daniel Harries, Elad Ozeri, Yinon Derei, Nevo Levi (Hebrew names transliterated)",
+  "textbook": "Atkins, Jones, Laverman, Young, Patterson, Chemical Principles: The Quest for Insight, 8th ed., Macmillan Learning / W.H. Freeman, ©2023 (ISBN-10 1319137989, per publisher URL). The user says 69107 uses Atkins; the 69107 syllabus itself names no reading. Edition chosen as the latest. Structure: Fundamentals A-M, Focus 1-10 with lettered Topics, plus online-only Major Techniques. Petrucci 11th ed. kept only as a secondary reference.",
+  "weekly_schedule": "Not published in the syllabus; syllabus_week is null for every topic.",
+  "sources": [
+   "https://shnaton.huji.ac.il/index.php/NewSyl/69107/1/2027/",
+   "https://shnaton.huji.ac.il/index.php/NewSyl/69107/1/2026/",
+   "https://catalog.huji.ac.il/pages/wfrChugData.aspx?dataType=courses&degreeCode=72&entityId=560&faculty=2&year=2024",
+   "https://shnaton.huji.ac.il/index.php/Program/02/0560/8033/2024/0/1",
+   "https://shnaton.huji.ac.il/index.php/NewSyl/69174/1/2022/",
+   "https://www.macmillanlearning.com/college/us/product/Chemical-Principles/p/1319137989 (Atkins 8e TOC)",
+   "https://www.pearsoncanada.ca/media/highered-showcase/multi-product-showcase/petrucci-preface.pdf (Petrucci 11e TOC, secondary)"
+  ],
+  "syllabus_topic_list_he": "הכרת התהליכים הכימיים השונים, סטוכיומטריה, גזים, תרמוכימיה, אורביטלים, קשר כימי, שווי משקל כימי ויסודות התרמודינמיקה, חומצות ובסיסים, מלחים ושיקוע, אלקטרוכימיה.",
+  "atkins_coverage": {
+   "spectroscopy": "No core topic: 1B Quantum theory (radiation, atomic spectra), 1D hydrogen atom, 2G MO theory; IR/microwave and UV-vis are online-only Major Techniques 1-2",
+   "entropy": "Focus 4, Topics 4F-4J",
+   "kinetics": "Focus 7, Topics 7A-7E"
+  }
+ },
+ "topics": [
+  {
+   "order": 1,
+   "topic_en": "Measurement, units and significant figures",
+   "topic_he": "מדידות, יחידות וספרות משמעותיות",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Convert between SI units and prefixes using dimensional analysis",
+    "Report a calculated result with the right number of significant figures",
+    "Use density and percent composition to move between mass, volume and amount"
+   ],
+   "prerequisites": [],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 1,
+      "title": "Matter: Its Properties and Measurement"
+     }
+    ],
+    "sections": [
+     {
+      "section": "1-4",
+      "title": "Measurement of Matter: SI (Metric) Units"
+     },
+     {
+      "section": "1-5",
+      "title": "Density and Percent Composition: Their Use in Problem Solving"
+     },
+     {
+      "section": "1-6",
+      "title": "Uncertainties in Scientific Measurements"
+     },
+     {
+      "section": "1-7",
+      "title": "Significant Figures"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "A",
+     "title": "Matter and energy"
+    }
+   ],
+   "id": "measurement-units-and-significant-figure"
+  },
+  {
+   "order": 2,
+   "topic_en": "Atoms, elements and the mole",
+   "topic_he": "אטומים, יסודות ומושג המול",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Describe the nuclear atom in terms of protons, neutrons and electrons",
+    "Compute an average atomic mass from isotope abundances",
+    "Convert among mass, moles and number of particles using Avogadro's number"
+   ],
+   "prerequisites": [
+    1
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 2,
+      "title": "Atoms and the Atomic Theory"
+     }
+    ],
+    "sections": [
+     {
+      "section": "2-3",
+      "title": "The Nuclear Atom"
+     },
+     {
+      "section": "2-4",
+      "title": "Chemical Elements"
+     },
+     {
+      "section": "2-5",
+      "title": "Atomic Mass"
+     },
+     {
+      "section": "2-7",
+      "title": "The Concept of the Mole and the Avogadro Constant"
+     },
+     {
+      "section": "2-8",
+      "title": "Using the Mole Concept in Calculations"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "B",
+     "title": "Elements and atoms"
+    },
+    {
+     "topic": "E",
+     "title": "Moles and molar masses"
+    }
+   ],
+   "id": "atoms-elements-and-the-mole"
+  },
+  {
+   "order": 3,
+   "topic_en": "Chemical compounds, formulas and oxidation states",
+   "topic_he": "תרכובות, נוסחאות ודרגות חמצון",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Find mass percent composition of a compound",
+    "Derive empirical and molecular formulas from analysis data",
+    "Assign oxidation states to atoms in molecules and ions"
+   ],
+   "prerequisites": [
+    2
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 3,
+      "title": "Chemical Compounds"
+     }
+    ],
+    "sections": [
+     {
+      "section": "3-1",
+      "title": "Types of Chemical Compounds and Their Formulas"
+     },
+     {
+      "section": "3-2",
+      "title": "The Mole Concept and Chemical Compounds"
+     },
+     {
+      "section": "3-3",
+      "title": "Composition of Chemical Compounds"
+     },
+     {
+      "section": "3-4",
+      "title": "Oxidation States: A Useful Tool in Describing Chemical Compounds"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "C",
+     "title": "Compounds"
+    },
+    {
+     "topic": "D",
+     "title": "Nomenclature"
+    },
+    {
+     "topic": "F",
+     "title": "The determination of composition"
+    }
+   ],
+   "id": "chemical-compounds-formulas-and-oxidatio"
+  },
+  {
+   "order": 4,
+   "topic_en": "Chemical equations and stoichiometry",
+   "topic_he": "משוואות כימיות וסטויכיומטריה",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Balance chemical equations",
+    "Use mole ratios to relate amounts of reactants and products",
+    "Identify the limiting reactant and calculate theoretical and percent yield",
+    "Do molarity and dilution calculations"
+   ],
+   "prerequisites": [
+    3
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 4,
+      "title": "Chemical Reactions"
+     }
+    ],
+    "sections": [
+     {
+      "section": "4-1",
+      "title": "Chemical Reactions and Chemical Equations"
+     },
+     {
+      "section": "4-2",
+      "title": "Chemical Equations and Stoichiometry"
+     },
+     {
+      "section": "4-3",
+      "title": "Chemical Reactions in Solution"
+     },
+     {
+      "section": "4-4",
+      "title": "Determining the Limiting Reactant"
+     },
+     {
+      "section": "4-5",
+      "title": "Other Practical Matters in Reaction Stoichiometry"
+     },
+     {
+      "section": "4-6",
+      "title": "The Extent of Reaction"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "G",
+     "title": "Mixtures and solutions"
+    },
+    {
+     "topic": "H",
+     "title": "Chemical equations"
+    },
+    {
+     "topic": "L",
+     "title": "Reaction stoichiometry"
+    },
+    {
+     "topic": "M",
+     "title": "Limiting reactants"
+    }
+   ],
+   "id": "chemical-equations-and-stoichiometry"
+  },
+  {
+   "order": 5,
+   "topic_en": "Types of reactions in aqueous solution",
+   "topic_he": "סוגי תגובות בתמיסה מימית",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Classify electrolytes as strong, weak or non-electrolytes",
+    "Write net ionic equations for precipitation, acid-base and redox reactions",
+    "Predict precipitates using solubility rules",
+    "Identify oxidizing and reducing agents"
+   ],
+   "prerequisites": [
+    4
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 5,
+      "title": "Introduction to Reactions in Aqueous Solutions"
+     }
+    ],
+    "sections": [
+     {
+      "section": "5-1",
+      "title": "The Nature of Aqueous Solutions"
+     },
+     {
+      "section": "5-2",
+      "title": "Precipitation Reactions"
+     },
+     {
+      "section": "5-3",
+      "title": "Acid–Base Reactions"
+     },
+     {
+      "section": "5-4",
+      "title": "Oxidation–Reduction Reactions: Some General Principles"
+     },
+     {
+      "section": "5-6",
+      "title": "Oxidizing and Reducing Agents"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "I",
+     "title": "Precipitation reactions"
+    },
+    {
+     "topic": "J",
+     "title": "Acids and bases"
+    },
+    {
+     "topic": "K",
+     "title": "Redox reactions"
+    }
+   ],
+   "id": "types-of-reactions-in-aqueous-solution"
+  },
+  {
+   "order": 6,
+   "topic_en": "Balancing redox equations and titrations",
+   "topic_he": "איזון תגובות חמצון-חיזור וטיטרציות",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Balance redox equations by the half-reaction method in acidic and basic solution",
+    "Solve titration stoichiometry problems",
+    "Find an unknown concentration from titration data"
+   ],
+   "prerequisites": [
+    3,
+    5
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 5,
+      "title": "Introduction to Reactions in Aqueous Solutions"
+     }
+    ],
+    "sections": [
+     {
+      "section": "5-5",
+      "title": "Balancing Oxidation–Reduction Equations"
+     },
+     {
+      "section": "5-7",
+      "title": "Stoichiometry of Reactions in Aqueous Solutions: Titrations"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "F",
+     "title": "Fundamentals"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "K",
+     "title": "Redox reactions"
+    },
+    {
+     "topic": "L",
+     "title": "Reaction stoichiometry"
+    }
+   ],
+   "id": "balancing-redox-equations-and-titrations"
+  },
+  {
+   "order": 7,
+   "topic_en": "Gases: gas laws and the ideal gas equation",
+   "topic_he": "גזים: חוקי הגזים ומשוואת הגז האידאלי",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Apply the ideal gas equation to find P, V, T or n",
+    "Use gas laws in reaction stoichiometry",
+    "Use Dalton's law and mole fractions for gas mixtures"
+   ],
+   "prerequisites": [
+    4
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 6,
+      "title": "Gases"
+     }
+    ],
+    "sections": [
+     {
+      "section": "6-1",
+      "title": "Properties of Gases: Gas Pressure"
+     },
+     {
+      "section": "6-2",
+      "title": "The Simple Gas Laws"
+     },
+     {
+      "section": "6-3",
+      "title": "Combining the Gas Laws: The Ideal Gas Equation and the General Gas Equation"
+     },
+     {
+      "section": "6-4",
+      "title": "Applications of the Ideal Gas Equation"
+     },
+     {
+      "section": "6-5",
+      "title": "Gases in Chemical Reactions"
+     },
+     {
+      "section": "6-6",
+      "title": "Mixtures of Gases"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "3",
+     "title": "Focus 3: States of Matter"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "3A",
+     "title": "The nature of gases"
+    },
+    {
+     "topic": "3B",
+     "title": "The gas laws in action"
+    },
+    {
+     "topic": "3C",
+     "title": "Gases in mixtures and reactions"
+    }
+   ],
+   "id": "gases-gas-laws-and-the-ideal-gas-equatio"
+  },
+  {
+   "order": 8,
+   "topic_en": "Kinetic-molecular theory and real gases",
+   "topic_he": "התאוריה הקינטית של גזים וגזים ריאליים",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Relate molecular speed and kinetic energy to temperature",
+    "Compare effusion rates using Graham's law",
+    "Explain when and why gases deviate from ideal behavior (van der Waals)"
+   ],
+   "prerequisites": [
+    7
+   ],
+   "confidence_note": "3A (nature of gases, incl. kinetic model) and 3E (real gases); Atkins has no separate kinetic-theory topic, so 3A is inferred.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 6,
+      "title": "Gases"
+     }
+    ],
+    "sections": [
+     {
+      "section": "6-7",
+      "title": "Kinetic–Molecular Theory of Gases"
+     },
+     {
+      "section": "6-8",
+      "title": "Gas Properties Relating to the Kinetic–Molecular Theory"
+     },
+     {
+      "section": "6-9",
+      "title": "Nonideal (Real) Gases"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "3",
+     "title": "Focus 3: States of Matter"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "3A",
+     "title": "The nature of gases"
+    },
+    {
+     "topic": "3E",
+     "title": "Real gases"
+    }
+   ],
+   "id": "kinetic-molecular-theory-and-real-gases"
+  },
+  {
+   "order": 9,
+   "topic_en": "Thermochemistry and the first law",
+   "topic_he": "תרמוכימיה והחוק הראשון",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Distinguish system, surroundings, heat and work and apply ΔU = q + w",
+    "Compute heats of reaction from calorimetry data",
+    "Use Hess's law and standard enthalpies of formation to find ΔH",
+    "Relate ΔH and ΔU for reactions involving gases"
+   ],
+   "prerequisites": [
+    4,
+    7
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 7,
+      "title": "Thermochemistry"
+     }
+    ],
+    "sections": [
+     {
+      "section": "7-1",
+      "title": "Getting Started: Some Terminology"
+     },
+     {
+      "section": "7-2",
+      "title": "Heat"
+     },
+     {
+      "section": "7-3",
+      "title": "Heats of Reaction and Calorimetry"
+     },
+     {
+      "section": "7-4",
+      "title": "Work"
+     },
+     {
+      "section": "7-5",
+      "title": "The First Law of Thermodynamics"
+     },
+     {
+      "section": "7-6",
+      "title": "Application of the First Law to Chemical Reactions"
+     },
+     {
+      "section": "7-7",
+      "title": "Indirect Determination of ΔrH: Hess's Law"
+     },
+     {
+      "section": "7-8",
+      "title": "Standard Enthalpies of Formation"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "4",
+     "title": "Focus 4: Thermodynamics"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "4A",
+     "title": "Internal energy"
+    },
+    {
+     "topic": "4B",
+     "title": "Work and heat"
+    },
+    {
+     "topic": "4C",
+     "title": "Enthalpy"
+    },
+    {
+     "topic": "4D",
+     "title": "Thermochemistry"
+    },
+    {
+     "topic": "4E",
+     "title": "Contributions to enthalpy"
+    }
+   ],
+   "id": "thermochemistry-and-the-first-law"
+  },
+  {
+   "order": 10,
+   "topic_en": "Electrons in atoms: quantum theory and orbitals",
+   "topic_he": "אלקטרונים באטום: תורת הקוונטים ואורביטלים",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Relate wavelength, frequency and photon energy",
+    "Explain hydrogen line spectra with the Bohr energy levels",
+    "Assign and interpret the four quantum numbers",
+    "Describe the shapes and nodes of s, p and d orbitals"
+   ],
+   "prerequisites": [
+    2
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 8,
+      "title": "Electrons in Atoms"
+     }
+    ],
+    "sections": [
+     {
+      "section": "8-1",
+      "title": "Electromagnetic Radiation"
+     },
+     {
+      "section": "8-2",
+      "title": "Prelude to Quantum Theory"
+     },
+     {
+      "section": "8-3",
+      "title": "Energy Levels, Spectrum, and Ionization Energy of the Hydrogen Atom"
+     },
+     {
+      "section": "8-4",
+      "title": "Two Ideas Leading to Quantum Mechanics"
+     },
+     {
+      "section": "8-5",
+      "title": "Wave Mechanics"
+     },
+     {
+      "section": "8-6",
+      "title": "Quantum Theory of the Hydrogen Atom"
+     },
+     {
+      "section": "8-7",
+      "title": "Interpreting and Representing the Orbitals of the Hydrogen Atom"
+     },
+     {
+      "section": "8-8",
+      "title": "Electron Spin: A Fourth Quantum Number"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "1",
+     "title": "Focus 1: Atoms"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "1A",
+     "title": "Investigating atoms"
+    },
+    {
+     "topic": "1B",
+     "title": "Quantum theory"
+    },
+    {
+     "topic": "1C",
+     "title": "Wavefunctions and energy levels"
+    },
+    {
+     "topic": "1D",
+     "title": "The hydrogen atom"
+    }
+   ],
+   "id": "electrons-in-atoms-quantum-theory-and-or"
+  },
+  {
+   "order": 11,
+   "topic_en": "Electron configurations and the periodic table",
+   "topic_he": "קונפיגורציה אלקטרונית והטבלה המחזורית",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Write ground-state electron configurations and orbital diagrams",
+    "Apply the aufbau principle, Pauli exclusion principle and Hund's rule",
+    "Connect a configuration to an element's place in the periodic table"
+   ],
+   "prerequisites": [
+    10
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 8,
+      "title": "Electrons in Atoms"
+     },
+     {
+      "chapter": 9,
+      "title": "The Periodic Table and Some Atomic Properties"
+     }
+    ],
+    "sections": [
+     {
+      "section": "8-9",
+      "title": "Multielectron Atoms"
+     },
+     {
+      "section": "8-10",
+      "title": "Electron Configurations"
+     },
+     {
+      "section": "8-11",
+      "title": "Electron Configurations and the Periodic Table"
+     },
+     {
+      "section": "9-1",
+      "title": "Classifying the Elements: The Periodic Law and the Periodic Table"
+     },
+     {
+      "section": "9-2",
+      "title": "Metals and Nonmetals and Their Ions"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "1",
+     "title": "Focus 1: Atoms"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "1E",
+     "title": "Many-electron atoms"
+    }
+   ],
+   "id": "electron-configurations-and-the-periodic"
+  },
+  {
+   "order": 12,
+   "topic_en": "Periodic trends in atomic properties",
+   "topic_he": "מגמות מחזוריות בתכונות האטום",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Explain trends in atomic and ionic radii with effective nuclear charge",
+    "Predict ionization energy and electron affinity trends",
+    "Decide whether an atom or ion is paramagnetic"
+   ],
+   "prerequisites": [
+    11
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 9,
+      "title": "The Periodic Table and Some Atomic Properties"
+     }
+    ],
+    "sections": [
+     {
+      "section": "9-3",
+      "title": "Sizes of Atoms and Ions"
+     },
+     {
+      "section": "9-4",
+      "title": "Ionization Energy"
+     },
+     {
+      "section": "9-5",
+      "title": "Electron Affinity"
+     },
+     {
+      "section": "9-6",
+      "title": "Magnetic Properties"
+     },
+     {
+      "section": "9-7",
+      "title": "Polarizability"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "1",
+     "title": "Focus 1: Atoms"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "1F",
+     "title": "Periodicity"
+    }
+   ],
+   "id": "periodic-trends-in-atomic-properties"
+  },
+  {
+   "order": 13,
+   "topic_en": "Chemical bonding I: Lewis structures and molecular shape",
+   "topic_he": "קשר כימי א': מבני לואיס וצורת מולקולות",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Draw Lewis structures with formal charges and resonance forms",
+    "Predict molecular geometry and polarity with VSEPR",
+    "Use electronegativity to judge bond polarity",
+    "Estimate reaction enthalpies from bond energies"
+   ],
+   "prerequisites": [
+    12
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 10,
+      "title": "Chemical Bonding I: Basic Concepts"
+     }
+    ],
+    "sections": [
+     {
+      "section": "10-1",
+      "title": "Lewis Theory: An Overview"
+     },
+     {
+      "section": "10-2",
+      "title": "Covalent Bonding: An Introduction"
+     },
+     {
+      "section": "10-3",
+      "title": "Polar Covalent Bonds and Electrostatic Potential Maps"
+     },
+     {
+      "section": "10-4",
+      "title": "Writing Lewis Structures"
+     },
+     {
+      "section": "10-5",
+      "title": "Resonance"
+     },
+     {
+      "section": "10-6",
+      "title": "Exceptions to the Octet Rule"
+     },
+     {
+      "section": "10-7",
+      "title": "Shapes of Molecules"
+     },
+     {
+      "section": "10-8",
+      "title": "Bond Order and Bond Lengths"
+     },
+     {
+      "section": "10-9",
+      "title": "Bond Energies"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "2",
+     "title": "Focus 2: Bonds Between Atoms"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "2A",
+     "title": "Ionic bonding"
+    },
+    {
+     "topic": "2B",
+     "title": "Covalent bonding"
+    },
+    {
+     "topic": "2C",
+     "title": "Beyond the octet rule"
+    },
+    {
+     "topic": "2D",
+     "title": "The properties of bonds"
+    },
+    {
+     "topic": "2E",
+     "title": "The VSEPR model"
+    }
+   ],
+   "id": "chemical-bonding-i-lewis-structures-and-"
+  },
+  {
+   "order": 14,
+   "topic_en": "Chemical bonding II: hybridization and molecular orbitals",
+   "topic_he": "קשר כימי ב': הכלאה ואורביטלים מולקולריים",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Assign hybridization to central atoms",
+    "Describe sigma and pi bonds in multiple bonds",
+    "Build MO diagrams for homonuclear diatomics and find bond order and magnetism",
+    "Explain delocalized bonding with MO theory"
+   ],
+   "prerequisites": [
+    13
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 11,
+      "title": "Chemical Bonding II: Valence Bond and Molecular Orbital Theories"
+     }
+    ],
+    "sections": [
+     {
+      "section": "11-1",
+      "title": "What a Bonding Theory Should Do"
+     },
+     {
+      "section": "11-2",
+      "title": "Introduction to the Valence Bond Method"
+     },
+     {
+      "section": "11-3",
+      "title": "Hybridization of Atomic Orbitals"
+     },
+     {
+      "section": "11-4",
+      "title": "Multiple Covalent Bonds"
+     },
+     {
+      "section": "11-5",
+      "title": "Molecular Orbital Theory"
+     },
+     {
+      "section": "11-6",
+      "title": "Delocalized Electrons: An Explanation Based on Molecular Orbital Theory"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "2",
+     "title": "Focus 2: Bonds Between Atoms"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "2F",
+     "title": "Valence-bond theory"
+    },
+    {
+     "topic": "2G",
+     "title": "Molecular orbital theory"
+    }
+   ],
+   "id": "chemical-bonding-ii-hybridization-and-mo"
+  },
+  {
+   "order": 15,
+   "topic_en": "Light-matter interaction and spectroscopy basics",
+   "topic_he": "אינטראקציה של אור עם חומר ויסודות ספקטרוסקופיה",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Link absorbed or emitted photon energy to energy-level differences",
+    "Explain why molecules absorb at specific wavelengths using orbital energy gaps",
+    "Interpret a simple absorption or emission spectrum qualitatively"
+   ],
+   "prerequisites": [
+    10,
+    14
+   ],
+   "confidence_note": "Low confidence. Atkins has no core spectroscopy topic: atomic spectra are in 1B/1D, MO energy gaps in 2G, and IR/microwave and UV-vis are the online-only Major Techniques 1-2. Placement in the order is inferred.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 8,
+      "title": "Electrons in Atoms"
+     },
+     {
+      "chapter": 11,
+      "title": "Chemical Bonding II: Valence Bond and Molecular Orbital Theories"
+     }
+    ],
+    "sections": [
+     {
+      "section": "8-1",
+      "title": "Electromagnetic Radiation"
+     },
+     {
+      "section": "8-3",
+      "title": "Energy Levels, Spectrum, and Ionization Energy of the Hydrogen Atom"
+     },
+     {
+      "section": "11-5",
+      "title": "Molecular Orbital Theory"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "1",
+     "title": "Focus 1: Atoms"
+    },
+    {
+     "unit": "2",
+     "title": "Focus 2: Bonds Between Atoms"
+    },
+    {
+     "unit": "MT",
+     "title": "Major Techniques (online only)"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "1B",
+     "title": "Quantum theory"
+    },
+    {
+     "topic": "1D",
+     "title": "The hydrogen atom"
+    },
+    {
+     "topic": "2G",
+     "title": "Molecular orbital theory"
+    },
+    {
+     "topic": "MT1",
+     "title": "Infrared and microwave spectroscopy"
+    },
+    {
+     "topic": "MT2",
+     "title": "Ultraviolet and visible spectroscopy"
+    }
+   ],
+   "id": "light-matter-interaction-and-spectroscop"
+  },
+  {
+   "order": 16,
+   "topic_en": "Intermolecular forces and phases",
+   "topic_he": "כוחות בין-מולקולריים ומצבי צבירה",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Identify dispersion, dipole-dipole and hydrogen-bond interactions",
+    "Relate intermolecular forces to boiling point and vapor pressure",
+    "Read a phase diagram"
+   ],
+   "prerequisites": [
+    13
+   ],
+   "confidence_note": "Low confidence: not named in the 69107 topic list. In Atkins it sits in Focus 3 (3D, 3F) and Focus 5 (5A, 5B).",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 12,
+      "title": "Intermolecular Forces: Liquids and Solids"
+     }
+    ],
+    "sections": [
+     {
+      "section": "12-1",
+      "title": "Intermolecular Forces"
+     },
+     {
+      "section": "12-2",
+      "title": "Some Properties of Liquids"
+     },
+     {
+      "section": "12-4",
+      "title": "Phase Diagrams"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "3",
+     "title": "Focus 3: States of Matter"
+    },
+    {
+     "unit": "5",
+     "title": "Focus 5: Equilibrium"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "3D",
+     "title": "Intermolecular forces"
+    },
+    {
+     "topic": "3F",
+     "title": "Liquids"
+    },
+    {
+     "topic": "5A",
+     "title": "Vapor pressure"
+    },
+    {
+     "topic": "5B",
+     "title": "Phase equilibria of one-component systems"
+    }
+   ],
+   "id": "intermolecular-forces-and-phases"
+  },
+  {
+   "order": 17,
+   "topic_en": "Entropy, Gibbs energy and spontaneity",
+   "topic_he": "אנטרופיה, אנרגיה חופשית וספונטניות",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Predict the sign of ΔS for physical and chemical changes",
+    "Compute ΔS° and ΔG° from tabulated data",
+    "Use ΔG = ΔH − TΔS to decide spontaneity over temperature",
+    "Relate ΔG° to the equilibrium constant K"
+   ],
+   "prerequisites": [
+    9
+   ],
+   "confidence_note": "Atkins puts entropy and Gibbs energy in Focus 4 (4F-4J), right after thermochemistry and before equilibrium (Focus 5), which matches the syllabus pairing 'equilibrium and the foundations of thermodynamics'.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 13,
+      "title": "Spontaneous Change: Entropy and Gibbs Energy"
+     }
+    ],
+    "sections": [
+     {
+      "section": "13-1",
+      "title": "Entropy: Boltzmann's View"
+     },
+     {
+      "section": "13-2",
+      "title": "Entropy Change: Clausius's View"
+     },
+     {
+      "section": "13-3",
+      "title": "Combining Boltzmann's and Clausius's Ideas: Absolute Entropies"
+     },
+     {
+      "section": "13-4",
+      "title": "Criterion for Spontaneous Change: The Second Law of Thermodynamics"
+     },
+     {
+      "section": "13-5",
+      "title": "Gibbs Energy Change of a System of Variable Composition: ΔrG° and ΔrG"
+     },
+     {
+      "section": "13-6",
+      "title": "ΔrG° and K as Functions of Temperature"
+     },
+     {
+      "section": "13-7",
+      "title": "Coupled Reactions"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "4",
+     "title": "Focus 4: Thermodynamics"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "4F",
+     "title": "Entropy"
+    },
+    {
+     "topic": "4G",
+     "title": "The molecular interpretation of entropy"
+    },
+    {
+     "topic": "4H",
+     "title": "Absolute entropies"
+    },
+    {
+     "topic": "4I",
+     "title": "Global changes in entropy"
+    },
+    {
+     "topic": "4J",
+     "title": "Gibbs free energy"
+    }
+   ],
+   "id": "entropy-gibbs-energy-and-spontaneity"
+  },
+  {
+   "order": 18,
+   "topic_en": "Principles of chemical equilibrium",
+   "topic_he": "עקרונות שיווי משקל כימי",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Write Kc and Kp expressions and convert between them",
+    "Use Q versus K to predict the direction of reaction",
+    "Predict equilibrium shifts with Le Châtelier's principle",
+    "Solve equilibrium concentrations with ICE tables"
+   ],
+   "prerequisites": [
+    4,
+    7,
+    17
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 15,
+      "title": "Principles of Chemical Equilibrium"
+     }
+    ],
+    "sections": [
+     {
+      "section": "15-1",
+      "title": "The Nature of the Equilibrium State"
+     },
+     {
+      "section": "15-2",
+      "title": "The Equilibrium Constant Expression"
+     },
+     {
+      "section": "15-3",
+      "title": "Relationships Involving Equilibrium Constants"
+     },
+     {
+      "section": "15-4",
+      "title": "The Magnitude of an Equilibrium Constant"
+     },
+     {
+      "section": "15-5",
+      "title": "Predicting the Direction of Net Chemical Change"
+     },
+     {
+      "section": "15-6",
+      "title": "Altering Equilibrium Conditions: Le Châtelier's Principle"
+     },
+     {
+      "section": "15-7",
+      "title": "Equilibrium Calculations: Some Illustrative Examples"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "5",
+     "title": "Focus 5: Equilibrium"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "5F",
+     "title": "Chemical equilibrium"
+    },
+    {
+     "topic": "5G",
+     "title": "Alternative forms of the equilibrium constant"
+    },
+    {
+     "topic": "5H",
+     "title": "Equilibrium calculations"
+    },
+    {
+     "topic": "5I",
+     "title": "The response of equilibria to changes in conditions"
+    }
+   ],
+   "id": "principles-of-chemical-equilibrium"
+  },
+  {
+   "order": 19,
+   "topic_en": "Acids and bases",
+   "topic_he": "חומצות ובסיסים",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Identify conjugate acid-base pairs (Brønsted-Lowry and Lewis)",
+    "Calculate pH of strong and weak acid and base solutions",
+    "Use Ka, Kb and Kw relationships, including for salts",
+    "Relate molecular structure to acid strength"
+   ],
+   "prerequisites": [
+    18
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 16,
+      "title": "Acids and Bases"
+     }
+    ],
+    "sections": [
+     {
+      "section": "16-1",
+      "title": "Acids, Bases, and Conjugate Acid–Base Pairs"
+     },
+     {
+      "section": "16-2",
+      "title": "Self-Ionization of Water and the pH Scale"
+     },
+     {
+      "section": "16-3",
+      "title": "Ionization of Acids and Bases in Water"
+     },
+     {
+      "section": "16-4",
+      "title": "Strong Acids and Strong Bases"
+     },
+     {
+      "section": "16-5",
+      "title": "Weak Acids and Weak Bases"
+     },
+     {
+      "section": "16-6",
+      "title": "Polyprotic Acids"
+     },
+     {
+      "section": "16-8",
+      "title": "Ions as Acids and Bases"
+     },
+     {
+      "section": "16-10",
+      "title": "Molecular Structure and Acid–Base Behavior"
+     },
+     {
+      "section": "16-11",
+      "title": "Lewis Acids and Bases"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "6",
+     "title": "Focus 6: Reactions"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "6A",
+     "title": "The nature of acids and bases"
+    },
+    {
+     "topic": "6B",
+     "title": "Autoprotolysis and pH"
+    },
+    {
+     "topic": "6C",
+     "title": "Weak acids and bases"
+    },
+    {
+     "topic": "6D",
+     "title": "The pH of aqueous solutions"
+    },
+    {
+     "topic": "6E",
+     "title": "Polyprotic acids"
+    },
+    {
+     "topic": "6F",
+     "title": "The pH of very dilute solutions"
+    }
+   ],
+   "id": "acids-and-bases"
+  },
+  {
+   "order": 20,
+   "topic_en": "Buffers, indicators and titration curves",
+   "topic_he": "בופרים, אינדיקטורים ועקומות טיטרציה",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Explain the common-ion effect",
+    "Calculate buffer pH with the Henderson-Hasselbalch equation",
+    "Calculate pH at key points of a titration curve",
+    "Choose a suitable indicator for a titration"
+   ],
+   "prerequisites": [
+    19,
+    6
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 17,
+      "title": "Additional Aspects of Acid–Base Equilibria"
+     }
+    ],
+    "sections": [
+     {
+      "section": "17-1",
+      "title": "Common-Ion Effect in Acid–Base Equilibria"
+     },
+     {
+      "section": "17-2",
+      "title": "Buffer Solutions"
+     },
+     {
+      "section": "17-3",
+      "title": "Acid–Base Indicators"
+     },
+     {
+      "section": "17-4",
+      "title": "Neutralization Reactions and Titration Curves"
+     },
+     {
+      "section": "17-5",
+      "title": "Solutions of Salts of Polyprotic Acids"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "6",
+     "title": "Focus 6: Reactions"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "6G",
+     "title": "Buffers"
+    },
+    {
+     "topic": "6H",
+     "title": "Acid-base titrations"
+    }
+   ],
+   "id": "buffers-indicators-and-titration-curves"
+  },
+  {
+   "order": 21,
+   "topic_en": "Solubility, precipitation and complex ions",
+   "topic_he": "מסיסות, שיקוע ויונים קומפלקסיים",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Convert between molar solubility and Ksp",
+    "Predict whether a precipitate forms by comparing Q with Ksp",
+    "Account for common-ion and pH effects on solubility",
+    "Use formation constants for complex-ion equilibria"
+   ],
+   "prerequisites": [
+    18,
+    19
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 18,
+      "title": "Solubility and Complex-Ion Equilibria"
+     }
+    ],
+    "sections": [
+     {
+      "section": "18-1",
+      "title": "Solubility Product Constant, Ksp"
+     },
+     {
+      "section": "18-2",
+      "title": "Relationship Between Solubility and Ksp"
+     },
+     {
+      "section": "18-3",
+      "title": "Common-Ion Effect in Solubility Equilibria"
+     },
+     {
+      "section": "18-5",
+      "title": "Criteria for Precipitation and Its Completeness"
+     },
+     {
+      "section": "18-6",
+      "title": "Fractional Precipitation"
+     },
+     {
+      "section": "18-7",
+      "title": "Solubility and pH"
+     },
+     {
+      "section": "18-8",
+      "title": "Equilibria Involving Complex Ions"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "6",
+     "title": "Focus 6: Reactions"
+    },
+    {
+     "unit": "5",
+     "title": "Focus 5: Equilibrium"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "6I",
+     "title": "Solubility equilibria"
+    },
+    {
+     "topic": "6J",
+     "title": "Precipitation"
+    },
+    {
+     "topic": "5D",
+     "title": "Solubility"
+    }
+   ],
+   "id": "solubility-precipitation-and-complex-ion"
+  },
+  {
+   "order": 22,
+   "topic_en": "Electrochemistry",
+   "topic_he": "אלקטרוכימיה",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Diagram a galvanic cell and write its half-reactions",
+    "Calculate E°cell from standard reduction potentials",
+    "Relate E°cell, ΔG° and K",
+    "Use the Nernst equation for non-standard conditions",
+    "Do Faraday's-law electrolysis calculations"
+   ],
+   "prerequisites": [
+    6,
+    17
+   ],
+   "confidence_note": "Atkins topic mapping is inferred from the syllabus topic list and the publisher's table of contents.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 19,
+      "title": "Electrochemistry"
+     }
+    ],
+    "sections": [
+     {
+      "section": "19-1",
+      "title": "Electrode Potentials and Their Measurement"
+     },
+     {
+      "section": "19-2",
+      "title": "Standard Electrode Potentials"
+     },
+     {
+      "section": "19-3",
+      "title": "Ecell, ΔrG, and K"
+     },
+     {
+      "section": "19-4",
+      "title": "Ecell as a Function of Concentrations"
+     },
+     {
+      "section": "19-5",
+      "title": "Batteries: Producing Electricity Through Chemical Reactions"
+     },
+     {
+      "section": "19-7",
+      "title": "Electrolysis: Causing Nonspontaneous Reactions to Occur"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "6",
+     "title": "Focus 6: Reactions"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "6K",
+     "title": "Representing redox reactions"
+    },
+    {
+     "topic": "6L",
+     "title": "Galvanic cells"
+    },
+    {
+     "topic": "6M",
+     "title": "Standard potentials"
+    },
+    {
+     "topic": "6N",
+     "title": "Applications of electrode potentials"
+    },
+    {
+     "topic": "6O",
+     "title": "Electrolysis"
+    }
+   ],
+   "id": "electrochemistry"
+  },
+  {
+   "order": 23,
+   "topic_en": "Chemical kinetics",
+   "topic_he": "קינטיקה כימית",
+   "syllabus_week": null,
+   "learning_goals": [
+    "Find rate laws and reaction orders from experimental data",
+    "Use integrated rate laws and half-lives for zero, first and second order",
+    "Use the Arrhenius equation to find activation energy",
+    "Connect a mechanism with its rate-determining step to the rate law",
+    "Explain how catalysts change reaction rates"
+   ],
+   "prerequisites": [
+    18
+   ],
+   "confidence_note": "Atkins puts kinetics in Focus 7 (7A-7E), after Reactions (Focus 6). The 69107 topic list doesn't name it, so last place follows the book; medium-low confidence.",
+   "secondary_reference_petrucci11": {
+    "chapters": [
+     {
+      "chapter": 20,
+      "title": "Chemical Kinetics"
+     }
+    ],
+    "sections": [
+     {
+      "section": "20-1",
+      "title": "Rate of a Chemical Reaction"
+     },
+     {
+      "section": "20-2",
+      "title": "Measuring Reaction Rates"
+     },
+     {
+      "section": "20-3",
+      "title": "Effect of Concentration on Reaction Rates: The Rate Law"
+     },
+     {
+      "section": "20-4",
+      "title": "Zero-Order Reactions"
+     },
+     {
+      "section": "20-5",
+      "title": "First-Order Reactions"
+     },
+     {
+      "section": "20-6",
+      "title": "Second-Order Reactions"
+     },
+     {
+      "section": "20-8",
+      "title": "Theoretical Models for Chemical Kinetics"
+     },
+     {
+      "section": "20-9",
+      "title": "The Effect of Temperature on Reaction Rates"
+     },
+     {
+      "section": "20-10",
+      "title": "Reaction Mechanisms"
+     },
+     {
+      "section": "20-11",
+      "title": "Catalysis"
+     }
+    ]
+   },
+   "textbook_units": [
+    {
+     "unit": "7",
+     "title": "Focus 7: Kinetics"
+    }
+   ],
+   "textbook_topics": [
+    {
+     "topic": "7A",
+     "title": "Reaction rates"
+    },
+    {
+     "topic": "7B",
+     "title": "Integrated rate laws"
+    },
+    {
+     "topic": "7C",
+     "title": "Reaction mechanisms"
+    },
+    {
+     "topic": "7D",
+     "title": "Models of reactions"
+    },
+    {
+     "topic": "7E",
+     "title": "Catalysis"
+    }
+   ],
+   "id": "chemical-kinetics"
+  }
+ ]
+}

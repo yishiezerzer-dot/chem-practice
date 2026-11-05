@@ -1,0 +1,39 @@
+:root{--bg:#FAFAF7;--surface:#fff;--text:#1A1A1A;--muted:#5F6B7A;--border:#E3E5E8;--primary:#2B5FD9;--knew:#17754A;--unsure:#8F5B0A;--didnt:#C2412D;--tip:#EEF3FD}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/26px Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.topbar{position:sticky;top:0;z-index:5;height:56px;display:flex;align-items:center;gap:8px;padding-inline:8px;background:var(--bg);border-bottom:1px solid var(--border)}
+.topbar h1{flex:1;font-size:20px;line-height:28px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.icon{min-width:48px;min-height:48px;border:0;background:none;font-size:22px;cursor:pointer;color:var(--text);border-radius:8px}
+.pbar{height:4px;background:var(--border)}.pbar div{height:100%;background:var(--knew);width:0;transition:width .15s}
+main{max-width:680px;margin:0 auto;padding:16px}
+@media(min-width:700px){main{padding:24px}}
+.meta{font-size:15px;line-height:22px;color:var(--muted)}.cap{font-size:13px;line-height:18px;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+h2{font-size:28px;line-height:34px;margin:4px 0 16px}
+.sect{position:sticky;top:56px;background:var(--bg);font-size:13px;line-height:18px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);padding:12px 0 4px}
+.row{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:8px;width:100%;text-align:start;font:inherit;color:inherit;cursor:pointer}
+.row[aria-disabled=true]{cursor:default}.row[aria-disabled=true] .meta{color:var(--muted)}
+.num{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--muted);color:var(--muted);font-size:15px}
+.row[aria-disabled=true] .num{border-color:var(--border);color:var(--border)}
+.grow{flex:1;min-width:0}
+.badge{background:var(--primary);color:#fff;border-radius:12px;padding:0 8px;font-size:13px;line-height:22px}
+.btn{display:block;width:100%;min-height:48px;border-radius:8px;border:0;background:var(--primary);color:#fff;font-family:inherit;font-size:17px;line-height:24px;font-weight:600;cursor:pointer;padding:8px 16px}
+.btn.sec{background:var(--surface);color:var(--primary);border:1px solid var(--primary)}
+.link{background:none;border:0;color:var(--primary);font:inherit;font-size:15px;cursor:pointer;padding:12px 8px;min-height:48px;text-decoration:underline}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.tag{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:0 8px;font-size:13px}
+.given{background:var(--bg);border-radius:8px;padding:8px 12px;margin:12px 0;font-variant-numeric:tabular-nums}
+.tipbox{background:var(--tip);border-radius:8px;padding:12px;font-size:15px;line-height:22px;margin:16px 0;display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap}
+.sticky{position:sticky;bottom:0;background:var(--bg);padding:16px 0 calc(16px + env(safe-area-inset-bottom));margin-top:8px}
+.ans{font-size:20px;line-height:28px;font-weight:700}.ansbox{display:inline-block;border:2px solid var(--text);border-radius:8px;padding:4px 12px}
+ol.steps{padding-inline-start:24px}ol.steps li{margin-bottom:8px}
+.rate{display:flex;gap:8px}.rate button{flex:1;min-height:56px;border-radius:8px;background:var(--surface);border:2px solid;font:inherit;cursor:pointer;padding:4px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rate b{font-size:15px;line-height:20px}.rate small{font-size:13px;line-height:18px}
+.r-didnt{border-color:var(--didnt)!important;color:var(--didnt)}.r-unsure{border-color:var(--unsure)!important;color:var(--unsure)}.r-knew{border-color:var(--knew)!important;color:var(--knew)}
+.rate button:active{color:#fff}.r-didnt:active{background:var(--didnt)}.r-unsure:active{background:var(--unsure)}.r-knew:active{background:var(--knew)}
+.stack{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--border);margin:6px 0}
+.fade{animation:f .15s ease-out}@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.fade{animation:none}.pbar div{transition:none}}
+dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
+.nudge{display:flex;align-items:center;justify-content:space-between;background:var(--tip);border-radius:8px;padding:4px 12px;font-size:15px}
+.nw{white-space:nowrap}
