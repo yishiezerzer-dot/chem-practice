@@ -110,3 +110,5 @@ Readings must **show** the chemistry, not only describe it: molecules and struct
 
 - 2026-11-05: Yishi: readings too minimal — expand with no skipped steps; teach for new students.
 
+
+- 2026-11-05: Critiquito: Check-yourself answers behind Show answer (OK to hide; not explanation steps). Top-bar Sections jump. Fix before expanding other 21.

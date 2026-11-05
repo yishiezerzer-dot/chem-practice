@@ -66,11 +66,29 @@ Tokens: reuse existing ones. No new colors. Charts use primary blue + neutral gr
 
 
 ### Reading depth (Yishi, 5 Nov 2026)
+**Deep-reading chrome (live on Measurement & Stoichiometry samples):**
+- **"In this reading"** TOC card under Skip to cards: surface, 1 px border, radius 12, numbered links to each H2 (`scroll-margin-top` clears the sticky top bar). Keep it.
+- Callouts:
+  - **Why this matters:** tip-bg + 4 px primary left edge.
+  - **Common mistake:** warm tint `#FCF2F0` + 4 px didnt left edge; optional Wrong / Why wrong / Correct sub-lines.
+  - **Check yourself:** soft gray tint `#F4F5F6` + 4 px neutral edge `#6B7280` (≥3:1 on the tint). Short numbered self-test questions. **Exception:** hide each answer behind a "Show answer" button (one per question). Self-tests are not worked-example steps — never accordion those steps.
+- **Common mistake:** soft amber tint `#FFF8EB` + 4 px amber edge `#B45309` (≥3:1 on the tint). Do **not** reuse Knew / Didn't know greens and reds for callouts — those colors mean rating feedback.
+- Intro line (with Show answer): "Try these without looking back, then tap Show answer to check."
+- Mistake UI labels: "Wrong approach." / "Why that's wrong." / "Do this instead." — JSON `wrong` / `correct` must not repeat those labels.
+- Order under the H1: Draft badge → Skip to cards → TOC → sections.
+- Worked examples stay fully expanded; never accordion the steps.
+
+**Long-reading chrome (Critiquito, 5 Nov 2026):**
+- Top bar: add a compact **Sections** control that scrolls back to the "In this reading" TOC. Keep the progress bar.
+- Order under H1: Draft badge → Skip to cards → TOC → body.
+- Mistake / Check callouts use amber / gray (above), not Knew / Didn't-know.
+
+
 Readings must teach, not summarize. Write for a student who is seeing the idea for the first time:
 - Never skip an intermediate step (algebra, unit cancel, electron count, sign convention).
 - Each non-obvious claim gets one short "why" line or a worked example that shows the hop.
 - Prefer more short paragraphs and more worked examples over one dense paragraph.
-- Optional callout boxes (reuse tip-bg): **Why this matters**, **Common mistake**, and **Check yourself** (2–3 Q&A with answers shown in full).
+- Optional callouts: **Why this matters** (tip-bg + primary edge), **Common mistake** (amber `#FFF8EB` / edge `#B45309`), **Check yourself** (gray `#F4F5F6` / edge `#6B7280`). Self-test answers sit behind "Show answer" buttons. Never reuse Knew/Didn't-know colors for callouts.
 - Worked examples may use `worked` (one) and/or `workedExamples` (list). Every step stays visible; never collapse steps behind a tap.
 - Under the reading title and Skip to cards, show **In this reading**: a short TOC of section links. Section headings get stable `id`s and `scroll-margin-top` so the sticky top bar does not cover them. Keep the reading progress bar (`#bar`).
 - Long readings stay usable: keep the scroll progress bar, H2 section headings in a real outline, and Skip to cards at the top. Do not hide steps behind "show more".
