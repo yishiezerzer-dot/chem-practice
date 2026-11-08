@@ -157,11 +157,30 @@ function renderSection(sec, i) {
       const full = src.replace(/\.svg$/i, '.png');
       h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button><div class="rsketch-hint">Tap to enlarge</div></div>`;
     } else if (sec.figure.status === 'pending-sketch') {
-      h += `<div class="placeholder" data-pending-sketch="1"><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(sec.figure.note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+      h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }
   }
   return h;
 }
+
+function figPlaceholder(note, attr = '') {
+  return `<div class="placeholder" ${attr}><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+}
+// Missing or failed sketch images: swap the broken <img> for the dashed placeholder (DESIGN §3b).
+// Capture phase, because image error events do not bubble.
+document.addEventListener('error', e => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement)) return;
+  if (img.hasAttribute('data-lightbox-img')) {
+    const fb = img.getAttribute('data-fallback');
+    if (fb && img.getAttribute('src') !== fb) img.setAttribute('src', fb);
+    else closeLightbox();
+    return;
+  }
+  const box = img.closest('.rfig, .qimg');
+  if (!box || !img.matches('img.rsketch, .qimg img')) return;
+  box.outerHTML = figPlaceholder(img.getAttribute('alt'), 'data-missing-sketch="1"');
+}, true);
 
 function updateReadProgress() {
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -201,7 +220,7 @@ function openLightbox(fromBtn) {
   lb.dataset.inlineWidth = String(inlineW);
   lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="Close">✕</button>`
     + `<div class="lightbox-scroll" data-lightbox-scroll="1">`
-    + `<img src="${esc(full)}" alt="${esc(alt)}" style="width:${targetW}px;max-width:none;height:auto" data-lightbox-img="1"/>`
+    + `<img src="${esc(full)}" alt="${esc(alt)}" style="width:${targetW}px;max-width:none;height:auto" data-lightbox-img="1" data-fallback="${esc(img.getAttribute('src') || '')}"/>`
     + `</div>`;
   document.body.appendChild(lb);
   document.body.style.overflow = 'hidden';
