@@ -112,3 +112,24 @@ Readings must **show** the chemistry, not only describe it: molecules and struct
 
 
 - 2026-11-05: Critiquito: Check-yourself answers behind Show answer (OK to hide; not explanation steps). Top-bar Sections jump. Fix before expanding other 21.
+
+- 2026-11-05: All 23 topics now have deep readings on `dev` (dev 7f3feda, gh-pages 27a7df4). Still labeled Draft until Yishi chemistry review. Critiquito checking titration S-curve fix. Chem Sketcher slots and page numbers still open. Production stays Coming soon until he says go.
+
+- 2026-11-05: Reading design + copy signed off (Critiquito shot 41; Copy Humanizer clear). All 23 deep readings on `dev` stay Draft until Yishi chemistry review. Open: Chem Sketcher slots, page numbers, production go.
+
+## Claude Code rounds (decided 2026-11-08)
+Setup: Claude Code builds only, on branch `claude/<milestone>` in https://github.com/yishiezerzer-dot/chem-practice. App Maker merges into `dev` and publishes. The App & Web Lab tests (Critiquito, Copy Humanizer, figma bro), App Planner updates this plan, and Claude Code Relay passes instructions. Claude Code does no testing, publishing, or merging, and never touches `main`. Each round ends with a short "done, what changed, files touched" note.
+
+**C1: Chem Sketcher slots wired in** (model: Opus 5.5, Yishi's pick for the first round)
+- Done when every pending-sketch slot in `data/readings.json` and `data/questions.json` points to an `art/<id>.svg` path, with a visible placeholder if the file is missing (proof: dev link + screenshot).
+- Done when nothing on the page shows the raw slot text (proof: screenshot).
+
+**C2: Yishi review fixes** (model: lighter, since these are small data edits)
+- Done when every issue Yishi reports with Report a problem is fixed in the data files and marked in a `REVIEW_LOG.md` (proof: the log).
+- Done when reviewed items have `reviewed: true` and lose the Draft label (proof: screenshot).
+
+**C3: Production release prep** (model: lighter, since it's mostly a careful copy to `main`)
+- Done when `main` has a release build of the reviewed content, with nothing labeled Draft (proof: diff summary).
+- Done when production goes live only after Yishi says go (proof: his message + link).
+
+Model rule: every Claude prompt names its model at the top. Heavy model for new features or big rewrites, a lighter one for data edits, copy fixes, and routine steps. Yishi has the final say.
