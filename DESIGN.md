@@ -178,7 +178,7 @@ Order top to bottom:
 - Hebrew content is an overlay in `data/he/` laid over the English by id. Anything not translated falls back to English, shown LTR with an "English only" (באנגלית בלבד) tag.
 - Formulas, equations, units and numbers stay LTR inside RTL text, isolated in `<bdi>`.
 - Chemistry terms: Hebrew first, English in brackets the first time in each reading and card, e.g. צפיפות <bdi>(density)</bdi>.
-- Home group headers are Hebrew (יסודות / חלק N). Book references stay "Atkins 8e", drawing labels and the issue-form labels stay English.
+- Home group headers are Hebrew (יסודות / פרק N). Book references stay "Atkins 8e", drawing labels and the issue-form labels stay English.
 - Style rules live in PLAN.md "Hebrew style rules"; shared terms in `data/he/glossary.json`.
 
 ## 12. Accessibility

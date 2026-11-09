@@ -21,7 +21,7 @@ window.I18N.he = Object.freeze({
   learned: (k, n) => `${k}/${n} נלמדו`,
   dueBadge: d => `${d} לחזרה`,
   sectFundamentals: 'יסודות',
-  sectFocus: n => `חלק ${n}`,
+  sectFocus: n => `פרק ${n}`,
   comingSoon: 'בקרוב',
   backupNudge: 'גבו את ההתקדמות שלכם',
   dismiss: 'סגירה',

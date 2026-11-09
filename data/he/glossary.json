@@ -8,6 +8,10 @@
     "en": "actual yield"
   },
   {
+    "he": "אדיאבטי",
+    "en": "adiabatic"
+  },
+  {
     "he": "מתכת אלקלית",
     "en": "alkali metal"
   },
@@ -22,6 +26,10 @@
   {
     "he": "אנליט",
     "en": "analyte"
+  },
+  {
+    "he": "מספר קוונטי של התנע הזוויתי",
+    "en": "angular-momentum quantum number"
   },
   {
     "he": "אניון",
@@ -48,6 +56,14 @@
     "en": "atomic number"
   },
   {
+    "he": "רדיוס אטומי",
+    "en": "atomic radius"
+  },
+  {
+    "he": "עקרון הבנייה",
+    "en": "Aufbau principle"
+  },
+  {
     "he": "מסה אטומית ממוצעת",
     "en": "average atomic mass"
   },
@@ -64,12 +80,40 @@
     "en": "balanced equation"
   },
   {
+    "he": "סדרת בלמר",
+    "en": "Balmer series"
+  },
+  {
     "he": "ברומטר",
     "en": "barometer"
   },
   {
     "he": "בסיס",
     "en": "base"
+  },
+  {
+    "he": "בלוק",
+    "en": "block"
+  },
+  {
+    "he": "מודל בוהר",
+    "en": "Bohr model"
+  },
+  {
+    "he": "קבוע בולצמן",
+    "en": "Boltzmann constant"
+  },
+  {
+    "he": "דיפול קשר",
+    "en": "bond dipole"
+  },
+  {
+    "he": "אנתלפיית קשר",
+    "en": "bond enthalpy"
+  },
+  {
+    "he": "דיאגרמת תיבות",
+    "en": "box diagram"
   },
   {
     "he": "חוק בויל",
@@ -82,6 +126,14 @@
   {
     "he": "ביורטה",
     "en": "buret"
+  },
+  {
+    "he": "קלורימטר",
+    "en": "calorimeter"
+  },
+  {
+    "he": "קלורימטריה",
+    "en": "calorimetry"
   },
   {
     "he": "קטיון",
@@ -116,6 +168,10 @@
     "en": "compound"
   },
   {
+    "he": "גורם הדחיסות",
+    "en": "compressibility factor"
+  },
+  {
     "he": "ריכוז",
     "en": "concentration"
   },
@@ -128,12 +184,28 @@
     "en": "conversion factor"
   },
   {
+    "he": "אלקטרון ליבה",
+    "en": "core electron"
+  },
+  {
     "he": "חוק דלתון",
     "en": "Dalton's law"
   },
   {
+    "he": "מנוון",
+    "en": "degenerate"
+  },
+  {
     "he": "צפיפות",
     "en": "density"
+  },
+  {
+    "he": "דיאמגנטי",
+    "en": "diamagnetic"
+  },
+  {
+    "he": "דיפוזיה",
+    "en": "diffusion"
   },
   {
     "he": "מיהול",
@@ -144,6 +216,10 @@
     "en": "dimensional analysis"
   },
   {
+    "he": "דיפול",
+    "en": "dipole"
+  },
+  {
     "he": "תגובת תחלוף",
     "en": "displacement reaction"
   },
@@ -152,12 +228,48 @@
     "en": "disproportionation"
   },
   {
+    "he": "מטען גרעיני אפקטיבי",
+    "en": "effective nuclear charge"
+  },
+  {
+    "he": "אפוזיה",
+    "en": "effusion"
+  },
+  {
+    "he": "התנגשות אלסטית",
+    "en": "elastic collision"
+  },
+  {
     "he": "אלקטרוליט",
     "en": "electrolyte"
   },
   {
+    "he": "קרינה אלקטרומגנטית",
+    "en": "electromagnetic radiation"
+  },
+  {
     "he": "אלקטרון",
     "en": "electron"
+  },
+  {
+    "he": "זיקה אלקטרונית",
+    "en": "electron affinity"
+  },
+  {
+    "he": "קונפיגורציה אלקטרונית",
+    "en": "electron configuration"
+  },
+  {
+    "he": "תחום אלקטרונים",
+    "en": "electron domain"
+  },
+  {
+    "he": "גאומטריית תחומי אלקטרונים",
+    "en": "electron-domain geometry"
+  },
+  {
+    "he": "אלקטרושליליות",
+    "en": "electronegativity"
   },
   {
     "he": "יסוד",
@@ -172,6 +284,14 @@
     "en": "end point"
   },
   {
+    "he": "אנדותרמי",
+    "en": "endothermic"
+  },
+  {
+    "he": "רמת אנרגיה",
+    "en": "energy level"
+  },
+  {
     "he": "אנתלפיה",
     "en": "enthalpy"
   },
@@ -184,12 +304,36 @@
     "en": "excess reagent"
   },
   {
+    "he": "מצב מעורר",
+    "en": "excited state"
+  },
+  {
+    "he": "אקסותרמי",
+    "en": "exothermic"
+  },
+  {
+    "he": "החוק הראשון",
+    "en": "first law"
+  },
+  {
+    "he": "פרק",
+    "en": "Focus"
+  },
+  {
+    "he": "מטען פורמלי",
+    "en": "formal charge"
+  },
+  {
     "he": "מסת נוסחה",
     "en": "formula mass"
   },
   {
     "he": "יחידת נוסחה",
     "en": "formula unit"
+  },
+  {
+    "he": "תדירות",
+    "en": "frequency"
   },
   {
     "he": "גז",
@@ -200,12 +344,40 @@
     "en": "gas constant"
   },
   {
+    "he": "חוק גרהם",
+    "en": "Graham's law"
+  },
+  {
+    "he": "מצב יסוד",
+    "en": "ground state"
+  },
+  {
+    "he": "קבוצה",
+    "en": "group"
+  },
+  {
     "he": "חצי תגובה",
     "en": "half-reaction"
   },
   {
     "he": "הלוגן",
     "en": "halogen"
+  },
+  {
+    "he": "חום",
+    "en": "heat"
+  },
+  {
+    "he": "חוק הס",
+    "en": "Hess's law"
+  },
+  {
+    "he": "ספין גבוה",
+    "en": "high-spin"
+  },
+  {
+    "he": "כלל הונד",
+    "en": "Hund's rule"
   },
   {
     "he": "הידרט",
@@ -232,12 +404,28 @@
     "en": "insoluble"
   },
   {
+    "he": "אנרגיה פנימית",
+    "en": "internal energy"
+  },
+  {
     "he": "יון",
     "en": "ion"
   },
   {
     "he": "תרכובת יונית",
     "en": "ionic compound"
+  },
+  {
+    "he": "רדיוס יוני",
+    "en": "ionic radius"
+  },
+  {
+    "he": "אנרגיית יינון",
+    "en": "ionization energy"
+  },
+  {
+    "he": "איזואלקטרוני",
+    "en": "isoelectronic"
   },
   {
     "he": "איזוטופ",
@@ -248,12 +436,36 @@
     "en": "Kelvin"
   },
   {
+    "he": "אנרגיה קינטית",
+    "en": "kinetic energy"
+  },
+  {
+    "he": "התאוריה הקינטית של גזים",
+    "en": "kinetic-molecular theory"
+  },
+  {
     "he": "אפס מוביל",
     "en": "leading zero"
   },
   {
+    "he": "מבנה לואיס",
+    "en": "Lewis structure"
+  },
+  {
     "he": "מגיב מגביל",
     "en": "limiting reagent"
+  },
+  {
+    "he": "זוג אלקטרונים לא קושר",
+    "en": "lone pair"
+  },
+  {
+    "he": "ספין נמוך",
+    "en": "low-spin"
+  },
+  {
+    "he": "מספר קוונטי מגנטי",
+    "en": "magnetic quantum number"
   },
   {
     "he": "מנומטר",
@@ -274,6 +486,14 @@
   {
     "he": "ספקטרומטר מסות",
     "en": "mass spectrometer"
+  },
+  {
+    "he": "התפלגות מקסוול־בולצמן",
+    "en": "Maxwell–Boltzmann distribution"
+  },
+  {
+    "he": "מסלול חופשי ממוצע",
+    "en": "mean free path"
   },
   {
     "he": "מדידה",
@@ -312,6 +532,10 @@
     "en": "molecular formula"
   },
   {
+    "he": "צורה מולקולרית",
+    "en": "molecular shape"
+  },
+  {
     "he": "מולקולה",
     "en": "molecule"
   },
@@ -328,6 +552,14 @@
     "en": "neutron"
   },
   {
+    "he": "גז אציל",
+    "en": "noble gas"
+  },
+  {
+    "he": "צומת",
+    "en": "node"
+  },
+  {
     "he": "לא־אלקטרוליט",
     "en": "nonelectrolyte"
   },
@@ -338,6 +570,14 @@
   {
     "he": "נוקליד",
     "en": "nuclide"
+  },
+  {
+    "he": "אוקטט",
+    "en": "octet"
+  },
+  {
+    "he": "אורביטל",
+    "en": "orbital"
   },
   {
     "he": "חמצון",
@@ -352,8 +592,20 @@
     "en": "oxidizing agent"
   },
   {
+    "he": "פרמגנטי",
+    "en": "paramagnetic"
+  },
+  {
     "he": "לחץ חלקי",
     "en": "partial pressure"
+  },
+  {
+    "he": "פונקציית מסלול",
+    "en": "path function"
+  },
+  {
+    "he": "עקרון האיסור של פאולי",
+    "en": "Pauli exclusion principle"
   },
   {
     "he": "הרכב באחוזי מסה",
@@ -364,8 +616,28 @@
     "en": "percent yield"
   },
   {
+    "he": "מחזור",
+    "en": "period"
+  },
+  {
+    "he": "טבלה מחזורית",
+    "en": "periodic table"
+  },
+  {
     "he": "פרוקסיד",
     "en": "peroxide"
+  },
+  {
+    "he": "פוטון",
+    "en": "photon"
+  },
+  {
+    "he": "קבוע פלנק",
+    "en": "Planck's constant"
+  },
+  {
+    "he": "קוטביות",
+    "en": "polarity"
   },
   {
     "he": "יון רב־אטומי",
@@ -396,6 +668,10 @@
     "en": "primary standard"
   },
   {
+    "he": "מספר קוונטי ראשי",
+    "en": "principal quantum number"
+  },
+  {
     "he": "תוצר",
     "en": "product"
   },
@@ -404,8 +680,16 @@
     "en": "proton"
   },
   {
+    "he": "מספר קוונטי",
+    "en": "quantum number"
+  },
+  {
     "he": "מגיב",
     "en": "reactant"
+  },
+  {
+    "he": "גז ריאלי",
+    "en": "real gas"
   },
   {
     "he": "תגובת חמצון־חיזור",
@@ -420,8 +704,28 @@
     "en": "reduction"
   },
   {
+    "he": "תהודה",
+    "en": "resonance"
+  },
+  {
+    "he": "מבנה תהודה",
+    "en": "resonance structure"
+  },
+  {
+    "he": "מהירות ריבועית ממוצעת",
+    "en": "root-mean-square speed"
+  },
+  {
     "he": "עיגול",
     "en": "round"
+  },
+  {
+    "he": "קבוע ריידברג",
+    "en": "Rydberg constant"
+  },
+  {
+    "he": "נוסחת ריידברג",
+    "en": "Rydberg formula"
   },
   {
     "he": "מלח",
@@ -432,12 +736,20 @@
     "en": "scientific notation"
   },
   {
+    "he": "קליפה",
+    "en": "shell"
+  },
+  {
+    "he": "מיגון",
+    "en": "shielding"
+  },
+  {
     "he": "ספרה משמעותית",
     "en": "significant figure"
   },
   {
-    "he": "כללי מסיסות",
-    "en": "solubility rules"
+    "he": "כלל מסיסות",
+    "en": "solubility rule"
   },
   {
     "he": "מסיס",
@@ -456,12 +768,32 @@
     "en": "solvent"
   },
   {
+    "he": "קיבול חום סגולי",
+    "en": "specific heat capacity"
+  },
+  {
     "he": "יון צופה",
     "en": "spectator ion"
   },
   {
+    "he": "ספין",
+    "en": "spin"
+  },
+  {
+    "he": "מספר הספין הקוונטי",
+    "en": "spin quantum number"
+  },
+  {
+    "he": "אנתלפיית היווצרות סטנדרטית",
+    "en": "standard enthalpy of formation"
+  },
+  {
     "he": "תמיסה סטנדרטית",
     "en": "standard solution"
+  },
+  {
+    "he": "מצב סטנדרטי",
+    "en": "standard state"
   },
   {
     "he": "תנאי תקן",
@@ -470,6 +802,10 @@
   {
     "he": "סטנדרטיזציה",
     "en": "standardization"
+  },
+  {
+    "he": "פונקציית מצב",
+    "en": "state function"
   },
   {
     "he": "מצב צבירה",
@@ -496,6 +832,18 @@
     "en": "subscript"
   },
   {
+    "he": "תת־קליפה",
+    "en": "subshell"
+  },
+  {
+    "he": "סביבה",
+    "en": "surroundings"
+  },
+  {
+    "he": "מערכת",
+    "en": "system"
+  },
+  {
     "he": "טמפרטורה",
     "en": "temperature"
   },
@@ -516,6 +864,10 @@
     "en": "trailing zero"
   },
   {
+    "he": "מתכת מעבר",
+    "en": "transition metal"
+  },
+  {
     "he": "אי־ודאות",
     "en": "uncertainty"
   },
@@ -528,6 +880,18 @@
     "en": "unit"
   },
   {
+    "he": "אלקטרון בודד",
+    "en": "unpaired electron"
+  },
+  {
+    "he": "אלקטרון ערכיות",
+    "en": "valence electron"
+  },
+  {
+    "he": "משוואת ואן דר ואלס",
+    "en": "van der Waals equation"
+  },
+  {
     "he": "לחץ אדים",
     "en": "vapor pressure"
   },
@@ -536,7 +900,19 @@
     "en": "volume"
   },
   {
+    "he": "פונקציית גל",
+    "en": "wavefunction"
+  },
+  {
+    "he": "אורך גל",
+    "en": "wavelength"
+  },
+  {
     "he": "אלקטרוליט חלש",
     "en": "weak electrolyte"
+  },
+  {
+    "he": "עבודה",
+    "en": "work"
   }
 ]
