@@ -458,7 +458,7 @@ function reveal(q, t) {
   const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   // Hebrew steps: Hebrew lines use the reading markup; formula-only lines are isolated left-to-right.
   // A formula-only line is one unbreakable left-to-right unit (CSS lets it scroll sideways); English-fallback cards keep the English layout.
-  const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(esc(s));
+  const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${fbAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
