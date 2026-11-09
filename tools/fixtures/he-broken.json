@@ -1,0 +1,23 @@
+{
+  "_note": "Test fixture for node tools/check-he.js --self-test. Deliberately broken; never listed in data/he/index.json.",
+  "topic_id": "measurement-units-and-significant-figure",
+  "name": "מדידה, יחידות וספרות משמעותיות",
+  "reading": {
+    "sections": [
+      {
+        "id": "what-measurement-means",
+        "heading": "מדידה <bdi>(measurement)</bdi>",
+        "paragraphs": [
+          "מדידה היא מספר עם יחידה; בלי יחידה אין לה משמעות.",
+          "ב־25 °C התא Zn(s)|Zn<sup>2+</sup>(aq)||Cu<sup>2+</sup>(aq)|Cu(s) נותן E°cell = 0.34 − (−0.76).",
+          "נפח של 5 cm³ הוא <bdi>5 מ״ל</bdi>."
+        ]
+      }
+    ]
+  },
+  "questions": {
+    "t1-q1": {
+      "q": "כמה ספרות משמעותיות יש ב־<bdi>0.00450 g</bdi>?"
+    }
+  }
+}

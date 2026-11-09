@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Hebrew overlay checker. Usage: node tools/check-he.js [topicId ...]  (no args = every id in data/he/index.json)
-// Exit code 1 if any topic fails. No dependencies.
+//        node tools/check-he.js --self-test   (runs the rules on tools/fixtures/he-broken.json and expects each to fail)
+// Exit code 1 if any topic fails (or, in self-test, if a rule misses its planted fault). No dependencies.
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
 const rd = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
@@ -8,7 +9,9 @@ const readings = rd('data/readings.json').readings;           // object keyed by
 const cards = rd('data/questions.json').questions;            // array, each with .topic and .id
 const topicsEn = rd('data/topics.json').topics;
 const index = rd('data/he/index.json').topics;
-const ids = process.argv.length > 2 ? process.argv.slice(2) : index;
+const selfTest = process.argv[2] === '--self-test';
+const ids = selfTest ? [] : process.argv.length > 2 ? process.argv.slice(2) : index;
+const { heWrap } = require(path.join(root, 'site/bidi.js'));          // same wrapper the site uses in Hebrew mode
 
 const HEB = /[֐-׿]/;
 const SUPSUB = /[⁰¹²³⁴-⁹⁺⁻₀-₉₊₋]/g;
@@ -44,12 +47,12 @@ function sectionPairs(es, hs, label, out, issues) {
 }
 const allStrings = (o, acc = []) => { if (typeof o === 'string') acc.push(o); else if (o && typeof o === 'object') Object.values(o).forEach(v => allStrings(v, acc)); return acc; };
 
-function checkTopic(id) {
+function checkTopic(id, fixture) {
   const lines = [], fails = [];
   const rec = (ok, text) => { lines.push(`  ${ok ? 'ok  ' : 'FAIL'} ${text}`); if (!ok) fails.push(text); };
   const hePath = path.join(root, 'data/he/topics', id + '.json');
-  if (!fs.existsSync(hePath)) { rec(false, 'Hebrew file missing'); return { lines, fails }; }
-  const he = JSON.parse(fs.readFileSync(hePath, 'utf8'));
+  if (!fixture && !fs.existsSync(hePath)) { rec(false, 'Hebrew file missing'); return { lines, fails }; }
+  const he = fixture || JSON.parse(fs.readFileSync(hePath, 'utf8'));
   const topic = topicsEn.find(t => t.id === id), reading = readings[id];
   if (!topic || !reading) { rec(false, 'topic or English reading not found'); return { lines, fails }; }
   const enCards = cards.filter(q => q.topic === id);
@@ -84,17 +87,34 @@ function checkTopic(id) {
   rec(bdiHeb === 0, `Hebrew letters inside <bdi>: ${bdiHeb}`);
   let semi = 0;
   for (const s0 of strs) {
-    const s = s0.replace(/&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z]+);/g, m => ' '.repeat(m.length)); // HTML entities are not semicolons
+    const s = s0.replace(/&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z]+);/g, m => ' '.repeat(m.length)) // HTML entities are not semicolons
+      .replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (m, c) => '<bdi>' + c.replace(/;/g, ' ') + '</bdi>'); // nor is ; inside a formula
     for (let i = s.indexOf(';'); i >= 0; i = s.indexOf(';', i + 1)) {
       if (!(/<\/bdi>\s*$/.test(s.slice(0, i)) && /^\s*<bdi/.test(s.slice(i + 1)))) semi++;
     }
   }
   rec(semi === 0, `semicolons in Hebrew prose: ${semi}`);
+  // Latin, Greek, math or formula runs outside a <bdi> in Hebrew prose (rule and exceptions: see site/bidi.js).
+  const loose = strs.filter(s => heWrap(s) !== s);
+  rec(loose.length === 0, `formula/Latin runs outside <bdi>: ${loose.length} strings` + loose.slice(0, 3).map(x => `\n         ${x.slice(0, 90)}`).join(''));
+  if (fixture) return { lines, fails };
 
   rec(index.includes(id), 'listed in data/he/index.json');
   const sitePath = path.join(root, 'site/data/he/topics', id + '.json');
   rec(fs.existsSync(sitePath) && fs.readFileSync(sitePath).equals(fs.readFileSync(hePath)), 'site/data/he/topics copy is byte-identical');
   return { lines, fails };
+}
+
+if (selfTest) {
+  // Replaces the old "untranslated topic" check: no real topic is untranslated any more, so a small broken fixture
+  // (one section and one card of the measurement topic, with a planted fault per rule) proves every rule still bites.
+  const fx = rd('tools/fixtures/he-broken.json');
+  const { lines, fails } = checkTopic(fx.topic_id, fx);
+  console.log(lines.join('\n'));
+  const expect = ['untranslated fields', 'sections:', 'cards:', 'raw super/subscript', 'Hebrew letters inside', 'semicolons', 'formula/Latin runs'];
+  const missed = expect.filter(e => !fails.some(f => f.startsWith(e)));
+  console.log(`\nself-test: ${expect.length - missed.length}/${expect.length} rules caught their planted fault${missed.length ? ' — MISSED: ' + missed.join(', ') : ''}`);
+  process.exit(missed.length ? 1 : 0);
 }
 
 let failed = 0;

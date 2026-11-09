@@ -136,8 +136,8 @@
           {
             "title": "הערכת <bdi>ΔH</bdi> עבור <bdi>H<sub>2</sub> + Cl<sub>2</sub> → 2 HCl</bdi>",
             "steps": [
-              "קשרים שנשברו: 1 <bdi>H–H</bdi> (436) + 1 <bdi>Cl–Cl</bdi> (242) = <bdi>678 kJ</bdi>.",
-              "קשרים שנוצרו: 2 <bdi>H–Cl</bdi> = <bdi>2(431) = 862 kJ</bdi>.",
+              "קשרים שנשברו: 1 <bdi>H–H (436) + 1 Cl–Cl (242) = 678 kJ</bdi>.",
+              "קשרים שנוצרו: 2 <bdi>H–Cl = 2(431) = 862 kJ</bdi>.",
               "<bdi>ΔH ≈ 678 − 862 = −184 kJ</bdi>.",
               "תשובה סופית: בערך <bdi>−184 kJ</bdi>."
             ]
@@ -195,8 +195,8 @@
       ],
       "answer": "−698 kJ",
       "steps": [
-        "נשברו: 4 <bdi>C–H</bdi> + 2 <bdi>O=O</bdi> = <bdi>4(412) + 2(496) = 2640 kJ</bdi>",
-        "נוצרו: 2 <bdi>C=O</bdi> + 4 <bdi>O–H</bdi> = <bdi>2(743) + 4(463) = 3338 kJ</bdi>",
+        "נשברו: 4 <bdi>C–H + 2 O=O = 4(412) + 2(496) = 2640 kJ</bdi>",
+        "נוצרו: 2 <bdi>C=O + 4 O–H = 2(743) + 4(463) = 3338 kJ</bdi>",
         "<bdi>ΔH ≈ 2640 − 3338 = −698 kJ</bdi>"
       ]
     },
@@ -212,7 +212,7 @@
     },
     "t13-q5": {
       "q": "ציירו את מבנה לואיס <bdi>(Lewis structure)</bdi> של יון הניטראט, <bdi>NO<sub>3</sub><sup>−</sup></bdi>. כמה מבני תהודה <bdi>(resonance structure)</bdi> יש, ומהו המטען הפורמלי <bdi>(formal charge)</bdi> על <bdi>N</bdi>?",
-      "answer": "3 מבני תהודה שקולים, המטען הפורמלי על <bdi>N</bdi> = <bdi>+1</bdi>",
+      "answer": "3 מבני תהודה שקולים, המטען הפורמלי על <bdi>N = +1</bdi>",
       "explanation": "בכל מבנה יש קשר <bdi>N=O</bdi> אחד ושני קשרי <bdi>N–O</bdi>, והקשר הכפול נמצא באחד משלושה מקומות. ל־<bdi>N</bdi> יש 4 קשרים ואין זוגות לא קושרים: <bdi>5 − 0 − 4 = +1</bdi>. כל <bdi>O</bdi> בקשר יחיד הוא <bdi>−1</bdi>, וכך המטען הכולל הוא <bdi>−1</bdi>."
     }
   }

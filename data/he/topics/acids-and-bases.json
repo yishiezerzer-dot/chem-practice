@@ -162,7 +162,7 @@
             },
             {
               "q": "מהו ה־<bdi>pH</bdi> של <bdi>1.0 × 10<sup>−3</sup> M HCl</bdi>?",
-              "a": "<bdi>3.00</bdi> (<bdi>[H<sub>3</sub>O<sup>+</sup>] = 1.0 × 10<sup>−3</sup></bdi>)."
+              "a": "<bdi>3.00 ([H<sub>3</sub>O<sup>+</sup>] = 1.0 × 10<sup>−3</sup>)</bdi>."
             },
             {
               "q": "מה היחס בין <bdi>K<sub>a</sub></bdi> ל־<bdi>K<sub>b</sub></bdi> של זוג צמוד?",

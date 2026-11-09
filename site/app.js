@@ -16,14 +16,15 @@ const T = (k, ...a) => { const L = window.I18N[LANG] || {}; const s = k in L ? L
 const fmtRich = s => {
   const slots = [];
   const put = html => { slots.push(html); return `\0${slots.length - 1}\0`; };
-  let str = String(s);
+  // Hebrew mode safety net (H2b): isolate any formula/Latin run the data left unwrapped (site/bidi.js). English is untouched.
+  let str = isHe() && window.heWrap ? window.heWrap(String(s)) : String(s);
   let prev;
   do {
     prev = str;
     str = str.replace(/<(sub|sup)>([^<]*)<\/\1>/g, (_, t, c) => put('<' + t + '>' + esc(c) + '</' + t + '>'));
   } while (str !== prev);
   str = str.replace(/<span class="nw">([^<]*)<\/span>/g, (_, c) => put('<span class="nw">' + esc(c) + '</span>'));
-  str = str.replace(/<bdi>([^<]*)<\/bdi>/g, (_, c) => put('<bdi dir="ltr">' + esc(c) + '</bdi>'));
+  str = str.replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (_, c) => put('<bdi dir="ltr" class="fx">' + esc(c) + '</bdi>'));
   str = esc(str);
   do {
     prev = str;

@@ -119,9 +119,9 @@
           "title": "ריכוז <bdi>Fe<sup>2+</sup></bdi> מטיטרציה עם <bdi>KMnO<sub>4</sub></bdi>",
           "steps": [
             "נתונים: <bdi>25.00 mL</bdi> של תמיסת <bdi>Fe<sup>2+</sup></bdi> דורשים <bdi>18.40 mL</bdi> של <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0200 M</bdi>. תנאים חומציים, והתוצר הוא <bdi>Mn<sup>2+</sup></bdi>.",
-            "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.01840 L × 0.0200 mol/L = 3.68 × 10<sup>−4</sup> mol</bdi>.",
-            "יחס מולים: <bdi>5 Fe<sup>2+</sup> / 1 MnO<sub>4</sub><sup>−</sup></bdi>, ולכן מולי <bdi>Fe<sup>2+</sup></bdi> = <bdi>5 × 3.68 × 10<sup>−4</sup> = 1.84 × 10<sup>−3</sup> mol</bdi>.",
-            "מולריות <bdi>Fe<sup>2+</sup></bdi> = <bdi>(1.84 × 10<sup>−3</sup> mol) / 0.02500 L = 0.0736 M</bdi>.",
+            "מולי <bdi>MnO<sub>4</sub><sup>−</sup> = 0.01840 L × 0.0200 mol/L = 3.68 × 10<sup>−4</sup> mol</bdi>.",
+            "יחס מולים: <bdi>5 Fe<sup>2+</sup> / 1 MnO<sub>4</sub><sup>−</sup></bdi>, ולכן מולי <bdi>Fe<sup>2+</sup> = 5 × 3.68 × 10<sup>−4</sup> = 1.84 × 10<sup>−3</sup> mol</bdi>.",
+            "מולריות <bdi>Fe<sup>2+</sup> = (1.84 × 10<sup>−3</sup> mol) / 0.02500 L = 0.0736 M</bdi>.",
             "ספרות משמעותיות: <bdi>0.0200</bdi> והנפחים תומכים בשלוש ספרות משמעותיות, ולכן <bdi>0.0736 M</bdi>."
           ]
         },
@@ -129,27 +129,27 @@
           {
             "title": "מסת <bdi>Fe</bdi> בדגימת עפרה",
             "steps": [
-              "אותו יחס: מולי <bdi>Fe</bdi> = <bdi>5 ×</bdi> מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi>.",
+              "אותו יחס: מולי <bdi>Fe = 5 ×</bdi> מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi>.",
               "נניח שנצרכו <bdi>2.50 × 10<sup>−4</sup> mol MnO<sub>4</sub><sup>−</sup></bdi>.",
-              "מולי <bdi>Fe</bdi> = <bdi>1.25 × 10<sup>−3</sup></bdi>.",
-              "מסת <bdi>Fe</bdi> = <bdi>1.25 × 10<sup>−3</sup> × 55.85 g/mol = 0.0698 g</bdi>."
+              "מולי <bdi>Fe = 1.25 × 10<sup>−3</sup></bdi>.",
+              "מסת <bdi>Fe = 1.25 × 10<sup>−3</sup> × 55.85 g/mol = 0.0698 g</bdi>."
             ]
           },
           {
             "title": "נפח <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0500 M</bdi> לטיטרציה של <bdi>20.0 mL</bdi> של <bdi>Fe<sup>2+</sup></bdi> בריכוז <bdi>0.100 M</bdi>",
             "steps": [
-              "מולי <bdi>Fe<sup>2+</sup></bdi> = <bdi>0.0200 L × 0.100 mol/L = 0.00200 mol</bdi>.",
-              "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.00200 / 5 = 4.00 × 10<sup>−4</sup> mol</bdi>.",
-              "נפח = מולים / <bdi>M</bdi> = <bdi>4.00 × 10<sup>−4</sup> / 0.0500 = 0.00800 L = 8.00 mL</bdi>.",
+              "מולי <bdi>Fe<sup>2+</sup> = 0.0200 L × 0.100 mol/L = 0.00200 mol</bdi>.",
+              "מולי <bdi>MnO<sub>4</sub><sup>−</sup> = 0.00200 / 5 = 4.00 × 10<sup>−4</sup> mol</bdi>.",
+              "נפח = מולים / <bdi>M = 4.00 × 10<sup>−4</sup> / 0.0500 = 0.00800 L = 8.00 mL</bdi>.",
               "בדקו: ל־<bdi>Fe</bdi> ריכוז גבוה יותר והיחס דורש <bdi>5 Fe</bdi> על כל <bdi>MnO<sub>4</sub><sup>−</sup></bdi>, ולכן צפוי נפח טיטרנט קטן יותר."
             ]
           },
           {
             "title": "גרמי <bdi>Fe</bdi> מ־<bdi>22.50 mL</bdi> של <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0250 M</bdi>",
             "steps": [
-              "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.02250 × 0.0250 = 5.625 × 10<sup>−4</sup> mol</bdi>.",
-              "מולי <bdi>Fe</bdi> = <bdi>5 × 5.625 × 10<sup>−4</sup> = 2.8125 × 10<sup>−3</sup> mol</bdi>.",
-              "מסת <bdi>Fe</bdi> = <bdi>2.8125 × 10<sup>−3</sup> × 55.85 ≈ 0.157 g</bdi>.",
+              "מולי <bdi>MnO<sub>4</sub><sup>−</sup> = 0.02250 × 0.0250 = 5.625 × 10<sup>−4</sup> mol</bdi>.",
+              "מולי <bdi>Fe = 5 × 5.625 × 10<sup>−4</sup> = 2.8125 × 10<sup>−3</sup> mol</bdi>.",
+              "מסת <bdi>Fe = 2.8125 × 10<sup>−3</sup> × 55.85 ≈ 0.157 g</bdi>.",
               "ההנחה: כל הברזל הוא <bdi>Fe<sup>2+</sup></bdi> בחומצה והיחס הוא <bdi>1:5</bdi>."
             ]
           }
@@ -161,10 +161,22 @@
         "check": {
           "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
           "items": [
-            { "q": "בתמיסה חומצית, מה מוסיפים כדי לאזן חמצן?", "a": "<bdi>H<sub>2</sub>O</bdi> בצד שזקוק לחמצן." },
-            { "q": "מהו יחס המולים <bdi>Fe<sup>2+</sup> : MnO<sub>4</sub><sup>−</sup></bdi> בחומצה כשהתוצר הוא <bdi>Mn<sup>2+</sup></bdi>?", "a": "<bdi>5 : 1</bdi>." },
-            { "q": "איך ממירים איזון חומצי לאיזון בסיסי?", "a": "מוסיפים <bdi>OH<sup>−</sup></bdi> לשני האגפים כדי לנטרל את <bdi>H<sup>+</sup></bdi>, יוצרים מים ומצמצמים את העודפים." },
-            { "q": "למה נקודת הסיום של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> היא ורודה?", "a": "עודף זעיר של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> סגול נשאר אחרי ש־<bdi>Fe<sup>2+</sup></bdi> נגמר." }
+            {
+              "q": "בתמיסה חומצית, מה מוסיפים כדי לאזן חמצן?",
+              "a": "<bdi>H<sub>2</sub>O</bdi> בצד שזקוק לחמצן."
+            },
+            {
+              "q": "מהו יחס המולים <bdi>Fe<sup>2+</sup> : MnO<sub>4</sub><sup>−</sup></bdi> בחומצה כשהתוצר הוא <bdi>Mn<sup>2+</sup></bdi>?",
+              "a": "<bdi>5 : 1</bdi>."
+            },
+            {
+              "q": "איך ממירים איזון חומצי לאיזון בסיסי?",
+              "a": "מוסיפים <bdi>OH<sup>−</sup></bdi> לשני האגפים כדי לנטרל את <bdi>H<sup>+</sup></bdi>, יוצרים מים ומצמצמים את העודפים."
+            },
+            {
+              "q": "למה נקודת הסיום של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> היא ורודה?",
+              "a": "עודף זעיר של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> סגול נשאר אחרי ש־<bdi>Fe<sup>2+</sup></bdi> נגמר."
+            }
           ]
         }
       }
@@ -211,7 +223,7 @@
       ]
     },
     "t6-q5": {
-      "q": "דגימה של <bdi>0.5106 g</bdi> <bdi>KHP</bdi> (אשלגן מימן פתלט, חומצה חד־פרוטונית) דורשת <bdi>24.35 mL</bdi> של <bdi>NaOH</bdi> כדי להגיע לנקודת הסיום <bdi>(end point)</bdi>. מהו ריכוז ה־<bdi>NaOH</bdi>?",
+      "q": "דגימה של <bdi>0.5106 g KHP</bdi> (אשלגן מימן פתלט, חומצה חד־פרוטונית) דורשת <bdi>24.35 mL</bdi> של <bdi>NaOH</bdi> כדי להגיע לנקודת הסיום <bdi>(end point)</bdi>. מהו ריכוז ה־<bdi>NaOH</bdi>?",
       "given": [
         "m(KHP) = 0.5106 g",
         "M(KHP) = 204.22 g/mol",
@@ -220,7 +232,7 @@
       "answer": "<bdi>0.1027 M</bdi>",
       "steps": [
         "n(KHP) = 0.5106 / 204.22 = 2.500 × 10<sup>−3</sup> mol",
-        "<bdi>KHP</bdi> מגיב ביחס 1:1 עם <bdi>NaOH</bdi>, ולכן n(NaOH) = 2.500 × 10<sup>−3</sup> mol",
+        "<bdi>KHP</bdi> מגיב ביחס 1:1 עם <bdi>NaOH</bdi>, ולכן <bdi>n(NaOH) = 2.500 × 10<sup>−3</sup> mol</bdi>",
         "c = 2.500 × 10<sup>−3</sup> mol / 0.02435 L = 0.1027 M"
       ]
     }

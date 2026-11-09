@@ -60,7 +60,7 @@
         "paragraphs": [
           "הקשרים: <bdi>ΔG° = −n F E°<sub>cell</sub></bdi> ו־<bdi>ΔG° = −RT ln K</bdi>. בשילוב: <bdi>n F E°<sub>cell</sub> = RT ln K</bdi>, או <bdi>E°<sub>cell</sub> = (RT/nF) ln K</bdi>.",
           "<bdi>F</bdi> (קבוע פאראדיי <bdi>(Faraday constant)</bdi>) <bdi>≈ 96485 C/mol e<sup>−</sup></bdi>. <bdi>n</bdi> הוא מספר מולי האלקטרונים שעוברים במשוואה המאוזנת כפי שנכתבה.",
-          "<bdi>E°<sub>cell</sub></bdi> חיובי <bdi>↔</bdi> <bdi>ΔG°</bdi> שלילי <bdi>↔</bdi> <bdi>K > 1</bdi> (התוצרים מועדפים במצב התקני).",
+          "<bdi>E°<sub>cell</sub></bdi> חיובי <bdi>↔ ΔG°</bdi> שלילי <bdi>↔ K > 1</bdi> (התוצרים מועדפים במצב התקני).",
           "ב־<bdi>25 °C</bdi> יש צורה נוחה עם לוגריתם עשרוני: <bdi>E° = (0.0592 V / n) log K</bdi>, ולכן <bdi>log K = n E° / 0.0592</bdi>.",
           "<bdi>n</bdi> גדול או <bdi>E°</bdi> גדול הופכים את <bdi>K</bdi> לעצום. לכן תגובות גלווניות רבות ״הולכות עד הסוף״ לכל מטרה מעשית.",
           "שימו לב ליחידות: <bdi>ΔG</bdi> ב־<bdi>J</bdi> כש־<bdi>F</bdi> ב־<bdi>C/mol</bdi> ו־<bdi>E</bdi> ב־<bdi>V</bdi> (כי <bdi>1 J = 1 C·V</bdi>).",

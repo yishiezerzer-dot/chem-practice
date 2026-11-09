@@ -143,7 +143,7 @@
         "mistake": {
           "wrong": "כותבים את <bdi>Fe<sup>3+</sup></bdi> כ־<bdi>[Ar] 4s<sup>2</sup> 3d<sup>3</sup></bdi> בכך שמסירים שלושה אלקטרונים מ־<bdi>3d</bdi> ומשאירים את <bdi>4s</bdi> במקומו.",
           "whyWrong": "קטיונים של מתכות מעבר מאבדים אלקטרוני <bdi>4s</bdi> לפני אלקטרוני <bdi>3d</bdi>. השארת <bdi>4s<sup>2</sup></bdi> תוך ריקון <bdi>3d</bdi> הופכת את סדר היינון האמיתי.",
-          "correct": "התחילו מ־<bdi>Fe</bdi> <bdi>[Ar] 4s<sup>2</sup> 3d<sup>6</sup></bdi>. הסירו קודם את <bdi>4s<sup>2</sup></bdi>, ואז אלקטרון <bdi>3d</bdi> אחד, וכך מתקבל <bdi>[Ar] 3d<sup>5</sup></bdi>."
+          "correct": "התחילו מ־<bdi>Fe [Ar] 4s<sup>2</sup> 3d<sup>6</sup></bdi>. הסירו קודם את <bdi>4s<sup>2</sup></bdi>, ואז אלקטרון <bdi>3d</bdi> אחד, וכך מתקבל <bdi>[Ar] 3d<sup>5</sup></bdi>."
         }
       },
       {
@@ -164,7 +164,7 @@
             },
             {
               "q": "מהי הקונפיגורציה של <bdi>Fe<sup>2+</sup></bdi>?",
-              "a": "<bdi>[Ar] 3d<sup>6</sup></bdi> (מסירים <bdi>4s<sup>2</sup></bdi> מ־<bdi>Fe</bdi> <bdi>[Ar] 4s<sup>2</sup> 3d<sup>6</sup></bdi>)."
+              "a": "<bdi>[Ar] 3d<sup>6</sup></bdi> (מסירים <bdi>4s<sup>2</sup></bdi> מ־<bdi>Fe [Ar] 4s<sup>2</sup> 3d<sup>6</sup></bdi>)."
             }
           ]
         }
@@ -184,7 +184,7 @@
     },
     "t11-q3": {
       "q": "כתבו את הקונפיגורציות האלקטרוניות של <bdi>Fe</bdi> (<bdi>Z = 26</bdi>) ושל <bdi>Fe<sup>3+</sup></bdi>.",
-      "answer": "<bdi>Fe: [Ar]3d<sup>6</sup>4s<sup>2</sup></bdi>; <bdi>Fe<sup>3+</sup>: [Ar]3d<sup>5</sup></bdi>",
+      "answer": "<bdi>Fe: [Ar]3d<sup>6</sup>4s<sup>2</sup>; Fe<sup>3+</sup>: [Ar]3d<sup>5</sup></bdi>",
       "explanation": "כשמתכות מעבר יוצרות קטיונים <bdi>(cation)</bdi>, אלקטרוני ה־<bdi>4s</bdi> מוסרים לפני אלקטרוני ה־<bdi>3d</bdi>. <bdi>Fe<sup>3+</sup></bdi> מאבד את שני אלקטרוני ה־<bdi>4s</bdi> ואלקטרון <bdi>3d</bdi> אחד."
     },
     "t11-q4": {
@@ -208,7 +208,7 @@
       ],
       "answer": "32",
       "steps": [
-        "מספר האורביטלים <bdi>(orbital)</bdi> בקליפה <bdi>n</bdi> = <bdi>n<sup>2</sup> = 16</bdi>",
+        "מספר האורביטלים <bdi>(orbital)</bdi> בקליפה <bdi>n = n<sup>2</sup> = 16</bdi>",
         "כל אורביטל מכיל 2 אלקטרונים עם ספינים מנוגדים (פאולי)",
         "המקסימום = <bdi>2n<sup>2</sup> = 32</bdi>"
       ]
