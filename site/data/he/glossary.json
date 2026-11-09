@@ -1,0 +1,542 @@
+[
+  {
+    "he": "חומצה",
+    "en": "acid"
+  },
+  {
+    "he": "תפוקה בפועל",
+    "en": "actual yield"
+  },
+  {
+    "he": "מתכת אלקלית",
+    "en": "alkali metal"
+  },
+  {
+    "he": "מתכת אדמה אלקלית",
+    "en": "alkaline earth metal"
+  },
+  {
+    "he": "כמות חומר",
+    "en": "amount of substance"
+  },
+  {
+    "he": "אנליט",
+    "en": "analyte"
+  },
+  {
+    "he": "אניון",
+    "en": "anion"
+  },
+  {
+    "he": "תמיסה מימית",
+    "en": "aqueous solution"
+  },
+  {
+    "he": "אטמוספרה",
+    "en": "atmosphere"
+  },
+  {
+    "he": "אטום",
+    "en": "atom"
+  },
+  {
+    "he": "מסה אטומית",
+    "en": "atomic mass"
+  },
+  {
+    "he": "מספר אטומי",
+    "en": "atomic number"
+  },
+  {
+    "he": "מסה אטומית ממוצעת",
+    "en": "average atomic mass"
+  },
+  {
+    "he": "קבוע אבוגדרו",
+    "en": "Avogadro constant"
+  },
+  {
+    "he": "חוק אבוגדרו",
+    "en": "Avogadro's law"
+  },
+  {
+    "he": "משוואה מאוזנת",
+    "en": "balanced equation"
+  },
+  {
+    "he": "ברומטר",
+    "en": "barometer"
+  },
+  {
+    "he": "בסיס",
+    "en": "base"
+  },
+  {
+    "he": "חוק בויל",
+    "en": "Boyle's law"
+  },
+  {
+    "he": "תמיסה חוצצת",
+    "en": "buffer"
+  },
+  {
+    "he": "ביורטה",
+    "en": "buret"
+  },
+  {
+    "he": "קטיון",
+    "en": "cation"
+  },
+  {
+    "he": "חוק שארל",
+    "en": "Charles's law"
+  },
+  {
+    "he": "משוואה כימית",
+    "en": "chemical equation"
+  },
+  {
+    "he": "נוסחה כימית",
+    "en": "chemical formula"
+  },
+  {
+    "he": "מקדם סטויכיומטרי",
+    "en": "coefficient"
+  },
+  {
+    "he": "שריפה",
+    "en": "combustion"
+  },
+  {
+    "he": "משוואה יונית מלאה",
+    "en": "complete ionic equation"
+  },
+  {
+    "he": "תרכובת",
+    "en": "compound"
+  },
+  {
+    "he": "ריכוז",
+    "en": "concentration"
+  },
+  {
+    "he": "שימור מסה",
+    "en": "conservation of mass"
+  },
+  {
+    "he": "מקדם המרה",
+    "en": "conversion factor"
+  },
+  {
+    "he": "חוק דלתון",
+    "en": "Dalton's law"
+  },
+  {
+    "he": "צפיפות",
+    "en": "density"
+  },
+  {
+    "he": "מיהול",
+    "en": "dilution"
+  },
+  {
+    "he": "אנליזה ממדית",
+    "en": "dimensional analysis"
+  },
+  {
+    "he": "תגובת תחלוף",
+    "en": "displacement reaction"
+  },
+  {
+    "he": "דיספרופורציה",
+    "en": "disproportionation"
+  },
+  {
+    "he": "אלקטרוליט",
+    "en": "electrolyte"
+  },
+  {
+    "he": "אלקטרון",
+    "en": "electron"
+  },
+  {
+    "he": "יסוד",
+    "en": "element"
+  },
+  {
+    "he": "נוסחה אמפירית",
+    "en": "empirical formula"
+  },
+  {
+    "he": "נקודת סיום",
+    "en": "end point"
+  },
+  {
+    "he": "אנתלפיה",
+    "en": "enthalpy"
+  },
+  {
+    "he": "נקודת שקילות",
+    "en": "equivalence point"
+  },
+  {
+    "he": "מגיב עודף",
+    "en": "excess reagent"
+  },
+  {
+    "he": "מסת נוסחה",
+    "en": "formula mass"
+  },
+  {
+    "he": "יחידת נוסחה",
+    "en": "formula unit"
+  },
+  {
+    "he": "גז",
+    "en": "gas"
+  },
+  {
+    "he": "קבוע הגזים",
+    "en": "gas constant"
+  },
+  {
+    "he": "חצי תגובה",
+    "en": "half-reaction"
+  },
+  {
+    "he": "הלוגן",
+    "en": "halogen"
+  },
+  {
+    "he": "הידרט",
+    "en": "hydrate"
+  },
+  {
+    "he": "הידריד",
+    "en": "hydride"
+  },
+  {
+    "he": "גז אידאלי",
+    "en": "ideal gas"
+  },
+  {
+    "he": "חוק הגזים האידאליים",
+    "en": "ideal gas law"
+  },
+  {
+    "he": "מחוון",
+    "en": "indicator"
+  },
+  {
+    "he": "אינו מסיס",
+    "en": "insoluble"
+  },
+  {
+    "he": "יון",
+    "en": "ion"
+  },
+  {
+    "he": "תרכובת יונית",
+    "en": "ionic compound"
+  },
+  {
+    "he": "איזוטופ",
+    "en": "isotope"
+  },
+  {
+    "he": "קלווין",
+    "en": "Kelvin"
+  },
+  {
+    "he": "אפס מוביל",
+    "en": "leading zero"
+  },
+  {
+    "he": "מגיב מגביל",
+    "en": "limiting reagent"
+  },
+  {
+    "he": "מנומטר",
+    "en": "manometer"
+  },
+  {
+    "he": "מסה",
+    "en": "mass"
+  },
+  {
+    "he": "מספר מסה",
+    "en": "mass number"
+  },
+  {
+    "he": "אחוז מסה",
+    "en": "mass percent"
+  },
+  {
+    "he": "ספקטרומטר מסות",
+    "en": "mass spectrometer"
+  },
+  {
+    "he": "מדידה",
+    "en": "measurement"
+  },
+  {
+    "he": "מסה מולרית",
+    "en": "molar mass"
+  },
+  {
+    "he": "נפח מולרי",
+    "en": "molar volume"
+  },
+  {
+    "he": "מולריות",
+    "en": "molarity"
+  },
+  {
+    "he": "מול",
+    "en": "mole"
+  },
+  {
+    "he": "שבר מולי",
+    "en": "mole fraction"
+  },
+  {
+    "he": "תרכובת מולקולרית",
+    "en": "molecular compound"
+  },
+  {
+    "he": "משוואה מולקולרית",
+    "en": "molecular equation"
+  },
+  {
+    "he": "נוסחה מולקולרית",
+    "en": "molecular formula"
+  },
+  {
+    "he": "מולקולה",
+    "en": "molecule"
+  },
+  {
+    "he": "משוואה יונית נטו",
+    "en": "net ionic equation"
+  },
+  {
+    "he": "סתירה",
+    "en": "neutralization"
+  },
+  {
+    "he": "נייטרון",
+    "en": "neutron"
+  },
+  {
+    "he": "לא־אלקטרוליט",
+    "en": "nonelectrolyte"
+  },
+  {
+    "he": "גרעין",
+    "en": "nucleus"
+  },
+  {
+    "he": "נוקליד",
+    "en": "nuclide"
+  },
+  {
+    "he": "חמצון",
+    "en": "oxidation"
+  },
+  {
+    "he": "מספר חמצון",
+    "en": "oxidation state"
+  },
+  {
+    "he": "מחמצן",
+    "en": "oxidizing agent"
+  },
+  {
+    "he": "לחץ חלקי",
+    "en": "partial pressure"
+  },
+  {
+    "he": "הרכב באחוזי מסה",
+    "en": "percent composition"
+  },
+  {
+    "he": "אחוז תפוקה",
+    "en": "percent yield"
+  },
+  {
+    "he": "פרוקסיד",
+    "en": "peroxide"
+  },
+  {
+    "he": "יון רב־אטומי",
+    "en": "polyatomic ion"
+  },
+  {
+    "he": "משקע",
+    "en": "precipitate"
+  },
+  {
+    "he": "שיקוע",
+    "en": "precipitation"
+  },
+  {
+    "he": "דיוק",
+    "en": "precision"
+  },
+  {
+    "he": "קידומת",
+    "en": "prefix"
+  },
+  {
+    "he": "לחץ",
+    "en": "pressure"
+  },
+  {
+    "he": "תקן ראשוני",
+    "en": "primary standard"
+  },
+  {
+    "he": "תוצר",
+    "en": "product"
+  },
+  {
+    "he": "פרוטון",
+    "en": "proton"
+  },
+  {
+    "he": "מגיב",
+    "en": "reactant"
+  },
+  {
+    "he": "תגובת חמצון־חיזור",
+    "en": "redox reaction"
+  },
+  {
+    "he": "מחזר",
+    "en": "reducing agent"
+  },
+  {
+    "he": "חיזור",
+    "en": "reduction"
+  },
+  {
+    "he": "עיגול",
+    "en": "round"
+  },
+  {
+    "he": "מלח",
+    "en": "salt"
+  },
+  {
+    "he": "כתיב מדעי",
+    "en": "scientific notation"
+  },
+  {
+    "he": "ספרה משמעותית",
+    "en": "significant figure"
+  },
+  {
+    "he": "כללי מסיסות",
+    "en": "solubility rules"
+  },
+  {
+    "he": "מסיס",
+    "en": "soluble"
+  },
+  {
+    "he": "מומס",
+    "en": "solute"
+  },
+  {
+    "he": "תמיסה",
+    "en": "solution"
+  },
+  {
+    "he": "ממס",
+    "en": "solvent"
+  },
+  {
+    "he": "יון צופה",
+    "en": "spectator ion"
+  },
+  {
+    "he": "תמיסה סטנדרטית",
+    "en": "standard solution"
+  },
+  {
+    "he": "תנאי תקן",
+    "en": "standard temperature and pressure"
+  },
+  {
+    "he": "סטנדרטיזציה",
+    "en": "standardization"
+  },
+  {
+    "he": "מצב צבירה",
+    "en": "state of matter"
+  },
+  {
+    "he": "תמיסת אב",
+    "en": "stock solution"
+  },
+  {
+    "he": "סטויכיומטריה",
+    "en": "stoichiometry"
+  },
+  {
+    "he": "אלקטרוליט חזק",
+    "en": "strong electrolyte"
+  },
+  {
+    "he": "נוסחה מבנית",
+    "en": "structural formula"
+  },
+  {
+    "he": "אינדקס תחתי",
+    "en": "subscript"
+  },
+  {
+    "he": "טמפרטורה",
+    "en": "temperature"
+  },
+  {
+    "he": "תפוקה תיאורטית",
+    "en": "theoretical yield"
+  },
+  {
+    "he": "טיטרנט",
+    "en": "titrant"
+  },
+  {
+    "he": "טיטרציה",
+    "en": "titration"
+  },
+  {
+    "he": "אפס בסוף המספר",
+    "en": "trailing zero"
+  },
+  {
+    "he": "אי־ודאות",
+    "en": "uncertainty"
+  },
+  {
+    "he": "יחידת מסה אטומית",
+    "en": "unified atomic mass unit"
+  },
+  {
+    "he": "יחידה",
+    "en": "unit"
+  },
+  {
+    "he": "לחץ אדים",
+    "en": "vapor pressure"
+  },
+  {
+    "he": "נפח",
+    "en": "volume"
+  },
+  {
+    "he": "אלקטרוליט חלש",
+    "en": "weak electrolyte"
+  }
+]

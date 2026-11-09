@@ -20,6 +20,8 @@ window.I18N.he = Object.freeze({
   dueAcross: (n, k) => `${n === 1 ? 'כרטיס אחד ממתין' : `${n} כרטיסים ממתינים`} לחזרה ב${k === 1 ? 'נושא אחד' : `־${k} נושאים`}`,
   learned: (k, n) => `${k}/${n} נלמדו`,
   dueBadge: d => `${d} לחזרה`,
+  sectFundamentals: 'יסודות',
+  sectFocus: n => `חלק ${n}`,
   comingSoon: 'בקרוב',
   backupNudge: 'גבו את ההתקדמות שלכם',
   dismiss: 'סגירה',

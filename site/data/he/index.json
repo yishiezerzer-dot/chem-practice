@@ -2,6 +2,12 @@
   "lang": "he",
   "note": "Hebrew content overlay. English in data/*.json stays the source of truth. One file per topic in topics/<topic id>.json; list each translated topic id here. Missing topics, sections, cards or fields fall back to English.",
   "topics": [
-    "measurement-units-and-significant-figure"
+    "measurement-units-and-significant-figure",
+    "atoms-elements-and-the-mole",
+    "chemical-compounds-formulas-and-oxidatio",
+    "chemical-equations-and-stoichiometry",
+    "types-of-reactions-in-aqueous-solution",
+    "balancing-redox-equations-and-titrations",
+    "gases-gas-laws-and-the-ideal-gas-equatio"
   ]
 }

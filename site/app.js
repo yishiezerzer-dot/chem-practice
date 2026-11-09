@@ -176,8 +176,8 @@ function home() {
   if (due.length) h += `<div class="card"><div>${esc(T('dueAcross', due.length, dueTopics))}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">${esc(T('reviewDue'))}</button></div>`;
   let lastSect = '';
   for (const t of TOPICS) {
-    const sect = t.textbook_units[0].unit === 'F' ? 'Fundamentals' : 'Focus ' + t.textbook_units[0].unit;
-    if (sect !== lastSect) { h += `<div class="sect">${ltr(esc(sect))}</div>`; lastSect = sect; }
+    const unit = t.textbook_units[0].unit;
+    if (unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
     h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(tName(t))}</div><div class="cap">${bookRef(t)} · <span class="nw">${esc(T('learned', knew, n))}</span></div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
            : `<div class="row" aria-disabled="true"><span class="num">${t.order}</span><span class="grow"><div class="meta">${esc(tName(t))}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
