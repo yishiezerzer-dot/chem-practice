@@ -69,7 +69,7 @@
             "<bdi>K<sub>c</sub> = (2x)<sup>2</sup> / [(1 − x)(1 − x)] = 4x<sup>2</sup> / (1 − x)<sup>2</sup> = 50.0</bdi>.",
             "הוציאו שורש ריבועי: <bdi>2x / (1 − x) = √50.0 = 7.071</bdi>.",
             "<bdi>2x = 7.071(1 − x) → 2x = 7.071 − 7.071x → 9.071x = 7.071 → x = 0.780</bdi>.",
-            "<bdi>[HI] = 2x = 1.56 M</bdi>. <bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.220 M</bdi>.",
+            "<bdi>[HI] = 2x = 1.56 M. [H<sub>2</sub>] = [I<sub>2</sub>] = 0.220 M</bdi>.",
             "התשובה הסופית: <bdi>[HI] = 1.56 M</bdi>, <bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.220 M</bdi>."
           ]
         },
@@ -200,12 +200,12 @@
         "[HI]<sub>0</sub> = 0",
         "K = 49.0"
       ],
-      "answer": "<bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.0022 M</bdi>; <bdi>[HI] = 0.0156 M</bdi>",
+      "answer": "<bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.0022 M; [HI] = 0.0156 M</bdi>",
       "steps": [
         "טבלת <bdi>ICE</bdi>: <bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.0100 − x</bdi>, <bdi>[HI] = 2x</bdi>",
         "<bdi>K = (2x)<sup>2</sup> / (0.0100 − x)<sup>2</sup> = 49.0</bdi>, ולכן <bdi>2x / (0.0100 − x) = 7.00</bdi>",
         "<bdi>2x = 0.0700 − 7.00x</bdi>, ולכן <bdi>x = 0.0700 / 9.00 = 7.78 × 10<sup>−3</sup> M</bdi>",
-        "<bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.0100 − 0.00778 = 0.0022 M</bdi>; <bdi>[HI] = 2x = 0.0156 M</bdi>"
+        "<bdi>[H<sub>2</sub>] = [I<sub>2</sub>] = 0.0100 − 0.00778 = 0.0022 M; [HI] = 2x = 0.0156 M</bdi>"
       ]
     },
     "t18-q4": {

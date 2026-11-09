@@ -24,6 +24,7 @@ English in `data/*.json` is the source of truth and is never edited for Hebrew. 
 ## Writing rules
 - Term rule: the Hebrew term with the English in brackets the first time it appears in each reading and in each card, e.g. צפיפות <bdi>(density)</bdi>, in dictionary form (singular, lowercase; proper unit names keep the capital: <bdi>(Kelvin)</bdi>). Never repeat the bracket for the same term in the same reading or card. Wrap the English term with its brackets in `<bdi>…</bdi>` (headings, body, cards, check items) so the brackets do not flip in right-to-left text. Plain Hebrew after that.
 - Formulas, equations, units and numbers with units go inside `<bdi>…</bdi>` so they read left to right, e.g. `<bdi>1 kg = 1000 g</bdi>`. Use `<sub>`/`<sup>` inside it (`<bdi>10<sup>3</sup></bdi>`). Plain counting numbers in a sentence (3 ספרות) need no wrapper.
+- One formula = one `<bdi>`: never split it into several isolates joined by `=`, `−` or spaces (they would show in reverse order). Sentence punctuation goes after `</bdi>`. Use a plain `<` / `>` for comparisons, not `&lt;`. `tools/check-he.js` flags any Latin, Greek or formula run left outside a `<bdi>` (H2b), and the site wraps leftovers on its own as a safety net (`site/bidi.js`).
 - A card line with no Hebrew letters at all (a pure formula such as `d = 19.7 g / 25.0 mL = 0.788 g/mL`) is isolated left-to-right automatically; no `<bdi>` needed.
 - Do not use straight double quotes inside strings; use “ ” for quotes and ״ (gershayim) for Hebrew abbreviations.
 - Book references stay "Atkins 8e" in English (they come from the English data).
@@ -35,7 +36,7 @@ English in `data/*.json` is the source of truth and is never edited for Hebrew. 
 2. Add each topic id to `index.json` → `topics`.
 3. Add new terms to `glossary.json` (array of `{"he","en"}`, sorted by en).
 4. Copy the folder to the site: `cp -r data/he site/data/` (same rule as the other data files).
-5. Run `node tools/check-he.js <topic ids>` and get all PASS.
+5. Run `node tools/check-he.js <topic ids>` and get all PASS. `node tools/check-he.js --self-test` checks the checker itself against the broken fixture in `tools/fixtures/he-broken.json`.
 6. No code changes are needed.
 
 ## H2 batch plan

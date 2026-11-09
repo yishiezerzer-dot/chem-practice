@@ -24,7 +24,7 @@
         "heading": "חוק הגזים האידאליים <bdi>(ideal gas law)</bdi>",
         "paragraphs": [
           "חוק הגזים האידאליים: <bdi>PV = nRT</bdi>. <bdi>P</bdi> הוא לחץ, <bdi>V</bdi> נפח, <bdi>n</bdi> כמות במולים, <bdi>T</bdi> טמפרטורה בקלווין ו־<bdi>R</bdi> קבוע הגזים <bdi>(gas constant)</bdi>.",
-          "התאימו את <bdi>R</bdi> ליחידות שלכם. בחירה נפוצה: <bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi> כש־<bdi>P</bdi> באטמוספרות <bdi>(atmosphere)</bdi> ו־<bdi>V</bdi> בליטרים. אפשרות אחרת: <bdi>R = 8.314 J·mol<sup>−1</sup>·K<sup>−1</sup></bdi> = <bdi>8.314 Pa·m<sup>3</sup>·mol<sup>−1</sup>·K<sup>−1</sup></bdi>. אם <bdi>P</bdi> ב־<bdi>torr</bdi>, המירו קודם ל־<bdi>atm</bdi> (<bdi>760 torr = 1 atm</bdi>) או השתמשו ב־<bdi>R</bdi> מתאים.",
+          "התאימו את <bdi>R</bdi> ליחידות שלכם. בחירה נפוצה: <bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi> כש־<bdi>P</bdi> באטמוספרות <bdi>(atmosphere)</bdi> ו־<bdi>V</bdi> בליטרים. אפשרות אחרת: <bdi>R = 8.314 J·mol<sup>−1</sup>·K<sup>−1</sup> = 8.314 Pa·m<sup>3</sup>·mol<sup>−1</sup>·K<sup>−1</sup></bdi>. אם <bdi>P</bdi> ב־<bdi>torr</bdi>, המירו קודם ל־<bdi>atm</bdi> (<bdi>760 torr = 1 atm</bdi>) או השתמשו ב־<bdi>R</bdi> מתאים.",
           "סידורים של הנוסחה: <bdi>P = nRT/V</bdi>, <bdi>V = nRT/P</bdi>, <bdi>n = PV/RT</bdi>, <bdi>T = PV/nR</bdi>. כתבו תמיד יחידות בהצבה כדי שיצטמצמו.",
           "אם <bdi>V</bdi> ב־<bdi>mL</bdi>, המירו ל־<bdi>L</bdi> לפני השימוש ב־<bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi>. אם <bdi>P</bdi> ב־<bdi>torr</bdi>, חלקו ב־760 כדי לקבל <bdi>atm</bdi>.",
           "<bdi>R</bdi> נפוץ אחר: <bdi>62.36 L·torr·mol<sup>−1</sup>·K<sup>−1</sup></bdi> אם משאירים את <bdi>P</bdi> ב־<bdi>torr</bdi> ואת <bdi>V</bdi> ב־<bdi>L</bdi>. בחרו מערכת אחת והישארו בתוכה.",
@@ -153,7 +153,7 @@
             "title": "ליטרים של <bdi>H<sub>2</sub></bdi> בתנאי תקן מ־<bdi>2.00 g Zn</bdi> עם <bdi>HCl</bdi> בעודף (<bdi>Zn + 2 HCl → ZnCl<sub>2</sub> + H<sub>2</sub></bdi>)",
             "steps": [
               "מולי <bdi>Zn = 2.00 / 65.38 = 0.03059 mol</bdi>.",
-              "יחס מולים <bdi>1:1</bdi> → <bdi>0.03059 mol H<sub>2</sub></bdi>.",
+              "יחס מולים <bdi>1:1 → 0.03059 mol H<sub>2</sub></bdi>.",
               "בתנאי תקן, <bdi>V = n × 22.4 L/mol = 0.03059 × 22.4 = 0.685 L</bdi>.",
               "או <bdi>V = nRT/P</bdi> עם <bdi>T = 273.15 K</bdi>, <bdi>P = 1 atm</bdi> → תשובה באותו סדר גודל.",
               "התשובה הסופית: <bdi>0.685 L H<sub>2</sub></bdi> (3 ספרות משמעותיות)."
@@ -214,7 +214,7 @@
       ],
       "answer": "<bdi>0.400 atm</bdi>",
       "steps": [
-        "השבר המולי x(O<sub>2</sub>) = 0.100 / (0.400 + 0.100) = 0.200",
+        "השבר המולי <bdi>x(O<sub>2</sub>) = 0.100 / (0.400 + 0.100) = 0.200</bdi>",
         "<bdi>P(O<sub>2</sub>) = x(O<sub>2</sub>) × P(total) = 0.200 × 2.00 atm = 0.400 atm</bdi>"
       ]
     },
