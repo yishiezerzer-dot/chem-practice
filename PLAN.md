@@ -138,6 +138,30 @@ Why: Yishi reviews on weekends and wants every problem he spots saved in one pla
 - Done when `main` has a release build of the reviewed content, with nothing labeled Draft (proof: diff summary).
 - Done when production goes live only after Yishi says go (proof: his message + link).
 
+## Hebrew rounds (APPROVED by Yishi 2026-11-09)
+Decisions (Yishi, 2026-11-09): the site opens in Hebrew by default with a toggle to English that remembers the choice. Chemistry terms are written in Hebrew with the English in brackets the first time, for example אנתלפיה (enthalpy). Copy Humanizer polishes the Hebrew, then Yishi skims it on weekends with the report button.
+Rules: the English content stays the source of truth and isn't changed. Hebrew lives in its own files next to it, for example `data/he/`. Formulas, equations, units and numbers stay left-to-right inside the Hebrew text. Book references stay as Atkins 8e (English). Labels inside the drawings stay English for now (later list).
+
+**H1: Hebrew site frame and one sample topic** (model: heavy, Opus 5.5, new feature)
+- Done when the site opens in Hebrew, right-to-left, and the toggle switches to English and back, with the choice remembered after a reload (proof: dev link + 2 screenshots).
+- Done when all buttons, menus and labels are in Hebrew, and the first topic (reading and cards) is fully translated using the term rule (proof: screenshot).
+- Done when formulas and numbers display correctly inside the Hebrew text, and the report button still works and says which language it came from (proof: screenshot).
+
+**H2: Translate the other 22 topics** (model: lighter, Sonnet, in about 4 batches of 5 to 6 topics, following H1's sample)
+- Done when every topic's reading and cards are in Hebrew with nothing left in English by mistake (proof: test count of untranslated fields = 0).
+- Done when a topic in Hebrew has the same number of sections and cards as in English (proof: test).
+
+**H3: Hebrew polish** (Copy Humanizer, then the Lab)
+- Done when Copy Humanizer has gone over every reading and card, and Claude has applied the fixes (proof: Copy Humanizer's sign-off).
+- Done when Critiquito has checked the right-to-left layout on a phone (proof: screenshots).
+- Then Yishi skims it on weekends with the report button.
+
 Model rule: every Claude prompt names its model at the top. Heavy model for new features or big rewrites, a lighter one for data edits, copy fixes, and routine steps. Yishi has the final say.
 
 - 2026-11-09: Yishi checked most of the chemistry: the calculation methods are right; exact numbers don't matter for now. He'll keep reviewing on weekends through the in-app button (C2b proposed).
+
+- 2026-11-09: Yishi approves every Chem Sketcher drawing from a preview image before it goes to Claude or the repo.
+
+- 2026-11-09: Yishi approved all 15 Chem Sketcher drawings. Seven were redrawn under the same names (orbital-shapes-1s-2p-3d, fe56-fe3-nucleus, orbital-boxes-c-n, orbital-boxes-cr-fe3, unpaired-ca-zn2-fe2, vsepr-sf4-seesaw, lewis-h2o-co2-sf4); old versions are in art/_prev/. After C2b merges: App Maker pushes the 7 new SVGs to a branch, and Claude swaps them in (round C2c).
+- 2026-11-09: C2b is live on dev (5c64b79). Weekend review notes now come in as GitHub issues labeled review. C2c was sent to Claude: the 7 redrawn SVGs and wrapping for card step text that was cut off on phones.
+- 2026-11-09: C2c is live on dev (104a2ed). All 15 drawings are approved and live. Claude stays idle until Yishi sends weekend review issues.
