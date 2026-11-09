@@ -1,62 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img" aria-label="Orbital boxes for Ca Zn2+ Fe2+ unpaired electrons">
-<rect width="560" height="360" fill="#FFFFFF"/>
-<text x="280" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Unpaired electrons — paramagnetism</text>
-<text x="40" y="55" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Ca: [Ar] 4s²</text>
-<text x="54.0" y="64" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">4s</text>
-<rect x="40" y="72" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="50" y1="94" x2="50" y2="78" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="50,78 46,84 54,84" fill="#1A1A1A"/>
-<line x1="58" y1="78" x2="58" y2="94" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="58,94 54,88 62,88" fill="#1A1A1A"/>
-<text x="200" y="92" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#17754A">0 unpaired → diamagnetic</text>
-<text x="40" y="140" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Zn²⁺: [Ar] 3d¹⁰  (Zn is [Ar] 3d¹⁰ 4s²; lose 4s²)</text>
-<text x="122.0" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
-<rect x="40" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="50" y1="180" x2="50" y2="164" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="50,164 46,170 54,170" fill="#1A1A1A"/>
-<line x1="58" y1="164" x2="58" y2="180" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="58,180 54,174 62,174" fill="#1A1A1A"/>
-<rect x="74" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="84" y1="180" x2="84" y2="164" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="84,164 80,170 88,170" fill="#1A1A1A"/>
-<line x1="92" y1="164" x2="92" y2="180" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="92,180 88,174 96,174" fill="#1A1A1A"/>
-<rect x="108" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="118" y1="180" x2="118" y2="164" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="118,164 114,170 122,170" fill="#1A1A1A"/>
-<line x1="126" y1="164" x2="126" y2="180" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="126,180 122,174 130,174" fill="#1A1A1A"/>
-<rect x="142" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="152" y1="180" x2="152" y2="164" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="152,164 148,170 156,170" fill="#1A1A1A"/>
-<line x1="160" y1="164" x2="160" y2="180" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="160,180 156,174 164,174" fill="#1A1A1A"/>
-<rect x="176" y="158" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="186" y1="180" x2="186" y2="164" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="186,164 182,170 190,170" fill="#1A1A1A"/>
-<line x1="194" y1="164" x2="194" y2="180" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="194,180 190,174 198,174" fill="#1A1A1A"/>
-<text x="280" y="178" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#17754A">0 unpaired → diamagnetic</text>
-<text x="40" y="230" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">Fe²⁺: [Ar] 3d⁶  (high-spin free ion)</text>
-<text x="122.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">3d</text>
-<rect x="40" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="50" y1="270" x2="50" y2="254" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="50,254 46,260 54,260" fill="#1A1A1A"/>
-<line x1="58" y1="254" x2="58" y2="270" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="58,270 54,264 62,264" fill="#1A1A1A"/>
-<rect x="74" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="88.0" y1="270" x2="88.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="88.0,254 84.0,260 92.0,260" fill="#1A1A1A"/>
-<rect x="108" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="122.0" y1="270" x2="122.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="122.0,254 118.0,260 126.0,260" fill="#1A1A1A"/>
-<rect x="142" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="156.0" y1="270" x2="156.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="156.0,254 152.0,260 160.0,260" fill="#1A1A1A"/>
-<rect x="176" y="248" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="190.0" y1="270" x2="190.0" y2="254" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="190.0,254 186.0,260 194.0,260" fill="#1A1A1A"/>
-<text x="280" y="268" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#E53935">4 unpaired → paramagnetic</text>
-<text x="280" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Paramagnetic = has ≥1 unpaired electron; diamagnetic = all paired.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 438" width="760" height="438" role="img" aria-label="Orbital boxes for Ca, Zn2+ and Fe2+ stacked by energy">
+<rect width="760" height="438" fill="#FFFFFF"/>
+<text x="380.0" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">Unpaired electrons and paramagnetism</text>
+<text x="113.0" y="358.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">1s</text>
+<rect x="122.0" y="340" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="361" x2="131.0" y2="350" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,345 127.0,352 135.0,352" fill="#1A1A1A"/><line x1="139.0" y1="345" x2="139.0" y2="356" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,361 135.0,354 143.0,354" fill="#1A1A1A"/>
+<text x="113.0" y="318.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2s</text>
+<rect x="122.0" y="300" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="321" x2="131.0" y2="310" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,305 127.0,312 135.0,312" fill="#1A1A1A"/><line x1="139.0" y1="305" x2="139.0" y2="316" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,321 135.0,314 143.0,314" fill="#1A1A1A"/>
+<text x="82.0" y="278.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2p</text>
+<rect x="91.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="100.0" y1="281" x2="100.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="100.0,265 96.0,272 104.0,272" fill="#1A1A1A"/><line x1="108.0" y1="265" x2="108.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="108.0,281 104.0,274 112.0,274" fill="#1A1A1A"/>
+<rect x="122.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="281" x2="131.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,265 127.0,272 135.0,272" fill="#1A1A1A"/><line x1="139.0" y1="265" x2="139.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,281 135.0,274 143.0,274" fill="#1A1A1A"/>
+<rect x="153.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="162.0" y1="281" x2="162.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="162.0,265 158.0,272 166.0,272" fill="#1A1A1A"/><line x1="170.0" y1="265" x2="170.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="170.0,281 166.0,274 174.0,274" fill="#1A1A1A"/>
+<text x="113.0" y="238.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3s</text>
+<rect x="122.0" y="220" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="241" x2="131.0" y2="230" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,225 127.0,232 135.0,232" fill="#1A1A1A"/><line x1="139.0" y1="225" x2="139.0" y2="236" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,241 135.0,234 143.0,234" fill="#1A1A1A"/>
+<text x="82.0" y="198.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3p</text>
+<rect x="91.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="100.0" y1="201" x2="100.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="100.0,185 96.0,192 104.0,192" fill="#1A1A1A"/><line x1="108.0" y1="185" x2="108.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="108.0,201 104.0,194 112.0,194" fill="#1A1A1A"/>
+<rect x="122.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="201" x2="131.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,185 127.0,192 135.0,192" fill="#1A1A1A"/><line x1="139.0" y1="185" x2="139.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,201 135.0,194 143.0,194" fill="#1A1A1A"/>
+<rect x="153.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="162.0" y1="201" x2="162.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="162.0,185 158.0,192 166.0,192" fill="#1A1A1A"/><line x1="170.0" y1="185" x2="170.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="170.0,201 166.0,194 174.0,194" fill="#1A1A1A"/>
+<text x="113.0" y="158.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="122.0" y="140" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="131.0" y1="161" x2="131.0" y2="150" stroke="#1A1A1A" stroke-width="2"/><polygon points="131.0,145 127.0,152 135.0,152" fill="#1A1A1A"/><line x1="139.0" y1="145" x2="139.0" y2="156" stroke="#1A1A1A" stroke-width="2"/><polygon points="139.0,161 135.0,154 143.0,154" fill="#1A1A1A"/>
+<text x="135" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Ca (Z = 20)</text>
+<text x="135" y="81" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">[Ar] 4s²</text>
+<text x="135" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#17754A">0 unpaired: diamagnetic</text>
+<text x="363.0" y="358.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">1s</text>
+<rect x="372.0" y="340" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="361" x2="381.0" y2="350" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,345 377.0,352 385.0,352" fill="#1A1A1A"/><line x1="389.0" y1="345" x2="389.0" y2="356" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,361 385.0,354 393.0,354" fill="#1A1A1A"/>
+<text x="363.0" y="318.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2s</text>
+<rect x="372.0" y="300" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="321" x2="381.0" y2="310" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,305 377.0,312 385.0,312" fill="#1A1A1A"/><line x1="389.0" y1="305" x2="389.0" y2="316" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,321 385.0,314 393.0,314" fill="#1A1A1A"/>
+<text x="332.0" y="278.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2p</text>
+<rect x="341.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="350.0" y1="281" x2="350.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="350.0,265 346.0,272 354.0,272" fill="#1A1A1A"/><line x1="358.0" y1="265" x2="358.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="358.0,281 354.0,274 362.0,274" fill="#1A1A1A"/>
+<rect x="372.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="281" x2="381.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,265 377.0,272 385.0,272" fill="#1A1A1A"/><line x1="389.0" y1="265" x2="389.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,281 385.0,274 393.0,274" fill="#1A1A1A"/>
+<rect x="403.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="412.0" y1="281" x2="412.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="412.0,265 408.0,272 416.0,272" fill="#1A1A1A"/><line x1="420.0" y1="265" x2="420.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="420.0,281 416.0,274 424.0,274" fill="#1A1A1A"/>
+<text x="363.0" y="238.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3s</text>
+<rect x="372.0" y="220" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="241" x2="381.0" y2="230" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,225 377.0,232 385.0,232" fill="#1A1A1A"/><line x1="389.0" y1="225" x2="389.0" y2="236" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,241 385.0,234 393.0,234" fill="#1A1A1A"/>
+<text x="332.0" y="198.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3p</text>
+<rect x="341.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="350.0" y1="201" x2="350.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="350.0,185 346.0,192 354.0,192" fill="#1A1A1A"/><line x1="358.0" y1="185" x2="358.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="358.0,201 354.0,194 362.0,194" fill="#1A1A1A"/>
+<rect x="372.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="201" x2="381.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,185 377.0,192 385.0,192" fill="#1A1A1A"/><line x1="389.0" y1="185" x2="389.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,201 385.0,194 393.0,194" fill="#1A1A1A"/>
+<rect x="403.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="412.0" y1="201" x2="412.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="412.0,185 408.0,192 416.0,192" fill="#1A1A1A"/><line x1="420.0" y1="185" x2="420.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="420.0,201 416.0,194 424.0,194" fill="#1A1A1A"/>
+<text x="363.0" y="158.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="372.0" y="140" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="301.0" y="118.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="310.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="319.0" y1="121" x2="319.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="319.0,105 315.0,112 323.0,112" fill="#1A1A1A"/><line x1="327.0" y1="105" x2="327.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="327.0,121 323.0,114 331.0,114" fill="#1A1A1A"/>
+<rect x="341.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="350.0" y1="121" x2="350.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="350.0,105 346.0,112 354.0,112" fill="#1A1A1A"/><line x1="358.0" y1="105" x2="358.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="358.0,121 354.0,114 362.0,114" fill="#1A1A1A"/>
+<rect x="372.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="381.0" y1="121" x2="381.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="381.0,105 377.0,112 385.0,112" fill="#1A1A1A"/><line x1="389.0" y1="105" x2="389.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="389.0,121 385.0,114 393.0,114" fill="#1A1A1A"/>
+<rect x="403.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="412.0" y1="121" x2="412.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="412.0,105 408.0,112 416.0,112" fill="#1A1A1A"/><line x1="420.0" y1="105" x2="420.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="420.0,121 416.0,114 424.0,114" fill="#1A1A1A"/>
+<rect x="434.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="443.0" y1="121" x2="443.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="443.0,105 439.0,112 447.0,112" fill="#1A1A1A"/><line x1="451.0" y1="105" x2="451.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="451.0,121 447.0,114 455.0,114" fill="#1A1A1A"/>
+<text x="385" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Zn²⁺ (Z = 30, 28 e⁻)</text>
+<text x="385" y="81" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">[Ar] 3d¹⁰  (Zn lost 4s²)</text>
+<text x="385" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#17754A">0 unpaired: diamagnetic</text>
+<text x="613.0" y="358.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">1s</text>
+<rect x="622.0" y="340" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="631.0" y1="361" x2="631.0" y2="350" stroke="#1A1A1A" stroke-width="2"/><polygon points="631.0,345 627.0,352 635.0,352" fill="#1A1A1A"/><line x1="639.0" y1="345" x2="639.0" y2="356" stroke="#1A1A1A" stroke-width="2"/><polygon points="639.0,361 635.0,354 643.0,354" fill="#1A1A1A"/>
+<text x="613.0" y="318.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2s</text>
+<rect x="622.0" y="300" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="631.0" y1="321" x2="631.0" y2="310" stroke="#1A1A1A" stroke-width="2"/><polygon points="631.0,305 627.0,312 635.0,312" fill="#1A1A1A"/><line x1="639.0" y1="305" x2="639.0" y2="316" stroke="#1A1A1A" stroke-width="2"/><polygon points="639.0,321 635.0,314 643.0,314" fill="#1A1A1A"/>
+<text x="582.0" y="278.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2p</text>
+<rect x="591.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="600.0" y1="281" x2="600.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="600.0,265 596.0,272 604.0,272" fill="#1A1A1A"/><line x1="608.0" y1="265" x2="608.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="608.0,281 604.0,274 612.0,274" fill="#1A1A1A"/>
+<rect x="622.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="631.0" y1="281" x2="631.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="631.0,265 627.0,272 635.0,272" fill="#1A1A1A"/><line x1="639.0" y1="265" x2="639.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="639.0,281 635.0,274 643.0,274" fill="#1A1A1A"/>
+<rect x="653.0" y="260" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="662.0" y1="281" x2="662.0" y2="270" stroke="#1A1A1A" stroke-width="2"/><polygon points="662.0,265 658.0,272 666.0,272" fill="#1A1A1A"/><line x1="670.0" y1="265" x2="670.0" y2="276" stroke="#1A1A1A" stroke-width="2"/><polygon points="670.0,281 666.0,274 674.0,274" fill="#1A1A1A"/>
+<text x="613.0" y="238.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3s</text>
+<rect x="622.0" y="220" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="631.0" y1="241" x2="631.0" y2="230" stroke="#1A1A1A" stroke-width="2"/><polygon points="631.0,225 627.0,232 635.0,232" fill="#1A1A1A"/><line x1="639.0" y1="225" x2="639.0" y2="236" stroke="#1A1A1A" stroke-width="2"/><polygon points="639.0,241 635.0,234 643.0,234" fill="#1A1A1A"/>
+<text x="582.0" y="198.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3p</text>
+<rect x="591.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="600.0" y1="201" x2="600.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="600.0,185 596.0,192 604.0,192" fill="#1A1A1A"/><line x1="608.0" y1="185" x2="608.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="608.0,201 604.0,194 612.0,194" fill="#1A1A1A"/>
+<rect x="622.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="631.0" y1="201" x2="631.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="631.0,185 627.0,192 635.0,192" fill="#1A1A1A"/><line x1="639.0" y1="185" x2="639.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="639.0,201 635.0,194 643.0,194" fill="#1A1A1A"/>
+<rect x="653.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="662.0" y1="201" x2="662.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="662.0,185 658.0,192 666.0,192" fill="#1A1A1A"/><line x1="670.0" y1="185" x2="670.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="670.0,201 666.0,194 674.0,194" fill="#1A1A1A"/>
+<text x="613.0" y="158.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">4s</text>
+<rect x="622.0" y="140" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="551.0" y="118.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">3d</text>
+<rect x="560.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="569.0" y1="121" x2="569.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="569.0,105 565.0,112 573.0,112" fill="#1A1A1A"/><line x1="577.0" y1="105" x2="577.0" y2="116" stroke="#1A1A1A" stroke-width="2"/><polygon points="577.0,121 573.0,114 581.0,114" fill="#1A1A1A"/>
+<rect x="591.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="604.0" y1="121" x2="604.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="604.0,105 600.0,112 608.0,112" fill="#1A1A1A"/>
+<rect x="622.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="635.0" y1="121" x2="635.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="635.0,105 631.0,112 639.0,112" fill="#1A1A1A"/>
+<rect x="653.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="666.0" y1="121" x2="666.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="666.0,105 662.0,112 670.0,112" fill="#1A1A1A"/>
+<rect x="684.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="697.0" y1="121" x2="697.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="697.0,105 693.0,112 701.0,112" fill="#1A1A1A"/>
+<text x="635" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Fe²⁺ (Z = 26, 24 e⁻)</text>
+<text x="635" y="81" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">[Ar] 3d⁶  (Fe lost 4s²)</text>
+<text x="635" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#E53935">4 unpaired: paramagnetic</text>
+<text x="380.0" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Paramagnetic = at least 1 unpaired electron; diamagnetic = all paired.</text>
 </svg>

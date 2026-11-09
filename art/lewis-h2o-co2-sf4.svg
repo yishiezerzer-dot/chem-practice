@@ -24,32 +24,32 @@
 <text x="320" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">CO₂</text>
 <text x="320" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
 <text x="320" y="279" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">linear; 2 LP each O</text>
-<line x1="560.0" y1="128.0" x2="560.0" y2="88.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
-<line x1="577.0" y1="145.0" x2="617.0" y2="145.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
-<line x1="560.0" y1="162.0" x2="560.0" y2="202.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
-<line x1="543.0" y1="145.0" x2="503.0" y2="145.0" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
-<circle cx="560" cy="145" r="17" fill="#FFF9C4" stroke="#C9A227" stroke-width="2"/><text x="560" y="150.25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#C9A227">S</text>
-<circle cx="560" cy="75" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="560" y="79.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
-<circle cx="535.0" cy="71.4" r="2.4" fill="#2E7D32"/><circle cx="535.0" cy="78.6" r="2.4" fill="#2E7D32"/>
-<circle cx="563.6" cy="50.0" r="2.4" fill="#2E7D32"/><circle cx="556.4" cy="50.0" r="2.4" fill="#2E7D32"/>
-<circle cx="585.0" cy="78.6" r="2.4" fill="#2E7D32"/><circle cx="585.0" cy="71.4" r="2.4" fill="#2E7D32"/>
-<circle cx="630" cy="145" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="630" y="149.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
-<circle cx="633.6" cy="120.0" r="2.4" fill="#2E7D32"/><circle cx="626.4" cy="120.0" r="2.4" fill="#2E7D32"/>
-<circle cx="655.0" cy="148.6" r="2.4" fill="#2E7D32"/><circle cx="655.0" cy="141.4" r="2.4" fill="#2E7D32"/>
-<circle cx="626.4" cy="170.0" r="2.4" fill="#2E7D32"/><circle cx="633.6" cy="170.0" r="2.4" fill="#2E7D32"/>
-<circle cx="560" cy="215" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="560" y="219.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
-<circle cx="585.0" cy="218.6" r="2.4" fill="#2E7D32"/><circle cx="585.0" cy="211.4" r="2.4" fill="#2E7D32"/>
-<circle cx="556.4" cy="240.0" r="2.4" fill="#2E7D32"/><circle cx="563.6" cy="240.0" r="2.4" fill="#2E7D32"/>
-<circle cx="535.0" cy="211.4" r="2.4" fill="#2E7D32"/><circle cx="535.0" cy="218.6" r="2.4" fill="#2E7D32"/>
-<circle cx="490" cy="145" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="490" y="149.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
-<circle cx="486.4" cy="170.0" r="2.4" fill="#2E7D32"/><circle cx="493.6" cy="170.0" r="2.4" fill="#2E7D32"/>
-<circle cx="465.0" cy="141.4" r="2.4" fill="#2E7D32"/><circle cx="465.0" cy="148.6" r="2.4" fill="#2E7D32"/>
-<circle cx="493.6" cy="120.0" r="2.4" fill="#2E7D32"/><circle cx="486.4" cy="120.0" r="2.4" fill="#2E7D32"/>
-<circle cx="586.8700576850888" cy="125.20101012677668" r="2.4" fill="#C9A227"/><circle cx="579.7989898732233" cy="118.1299423149112" r="2.4" fill="#C9A227"/>
-<text x="592" y="99" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#5F6B7A">LP</text>
-<text x="560" y="265" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">SF₄</text>
-<text x="560" y="283" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
-<text x="560" y="299" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">1 LP on S (10 e⁻)</text>
+<line x1="573.794532228117" y1="133.04279364249666" x2="570.1072190435334" y2="81.17369184307474" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="573.794532228117" y1="166.95720635750334" x2="570.1072190435334" y2="218.82630815692528" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="560.7447991137541" y1="159.26224852251184" x2="518.8177376836189" y2="186.50415594166432" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="560.7447991137541" y1="140.73775147748816" x2="518.8177376836189" y2="113.49584405833569" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="575" cy="150" r="17" fill="#FFF9C4" stroke="#C9A227" stroke-width="2"/><text x="575" y="155.25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#C9A227">S</text>
+<circle cx="569.1853907473875" cy="68.20641639321924" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="569.1853907473875" y="72.40641639321925" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="544.990529773337" cy="66.31731543075938" r="2.4" fill="#2E7D32"/><circle cx="545.5010808296639" cy="73.49919106452549" r="2.4" fill="#2E7D32"/>
+<circle cx="571.0744917098474" cy="44.011555419168715" r="2.4" fill="#2E7D32"/><circle cx="563.8926160760813" cy="44.522106475495676" r="2.4" fill="#2E7D32"/>
+<circle cx="593.380251721438" cy="70.09551735567912" r="2.4" fill="#2E7D32"/><circle cx="592.869700665111" cy="62.91364172191301" r="2.4" fill="#2E7D32"/>
+<circle cx="569.1853907473875" cy="231.79358360678077" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="569.1853907473875" y="235.99358360678076" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="592.869700665111" cy="237.086358278087" r="2.4" fill="#2E7D32"/><circle cx="593.380251721438" cy="229.90448264432086" r="2.4" fill="#2E7D32"/>
+<circle cx="563.8926160760813" cy="255.47789352450434" r="2.4" fill="#2E7D32"/><circle cx="571.0744917098474" cy="255.9884445808313" r="2.4" fill="#2E7D32"/>
+<circle cx="545.5010808296639" cy="226.5008089354745" r="2.4" fill="#2E7D32"/><circle cx="544.990529773337" cy="233.68268456924065" r="2.4" fill="#2E7D32"/>
+<circle cx="507.9167017117838" cy="193.58705187064396" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="507.9167017117838" y="197.78705187064395" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="517.9740688500073" cy="215.6734586912878" r="2.4" fill="#2E7D32"/><circle cx="524.0115656959466" cy="211.75062402292986" r="2.4" fill="#2E7D32"/>
+<circle cx="485.83029489113994" cy="203.64441900886743" r="2.4" fill="#2E7D32"/><circle cx="489.7531295594979" cy="209.6819158548069" r="2.4" fill="#2E7D32"/>
+<circle cx="497.8593345735603" cy="171.50064505000012" r="2.4" fill="#2E7D32"/><circle cx="491.82183772762085" cy="175.42347971835807" r="2.4" fill="#2E7D32"/>
+<circle cx="507.9167017117838" cy="106.41294812935605" r="13" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/><text x="507.9167017117838" y="110.61294812935606" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">F</text>
+<circle cx="491.82183772762085" cy="124.57652028164195" r="2.4" fill="#2E7D32"/><circle cx="497.8593345735603" cy="128.4993549499999" r="2.4" fill="#2E7D32"/>
+<circle cx="489.7531295594979" cy="90.31808414519314" r="2.4" fill="#2E7D32"/><circle cx="485.83029489113994" cy="96.35558099113261" r="2.4" fill="#2E7D32"/>
+<circle cx="524.0115656959466" cy="88.24937597707016" r="2.4" fill="#2E7D32"/><circle cx="517.9740688500073" cy="84.32654130871221" r="2.4" fill="#2E7D32"/>
+<circle cx="605.0" cy="155.0" r="2.4" fill="#C9A227"/><circle cx="605.0" cy="145.0" r="2.4" fill="#C9A227"/>
+<text x="623" y="155" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#5F6B7A">LP</text>
+<text x="565" y="275" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">SF₄</text>
+<text x="565" y="293" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">all FC = 0</text>
+<text x="565" y="309" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">1 LP on S (10 e⁻)</text>
 <text x="350" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Formal charge = valence − nonbonding e⁻ − ½(bonding e⁻). All three: FC = 0.</text>
 <text x="350" y="360" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#5F6B7A">O red · S gold · F green. Bonds stop at atom edges; lone-pair dots sit outside circles.</text>
 </svg>
