@@ -22,7 +22,7 @@ English in `data/*.json` is the source of truth and is never edited for Hebrew. 
 - Only text fields are read. `id`, `reviewed`, `ref`, `type`, `topic` and figure `src` always come from the English. Figure alt text and drawing labels stay English for now.
 
 ## Writing rules
-- Term rule: the Hebrew term with the English in brackets the first time it appears in each reading and in each card, e.g. צפיפות (density). Plain Hebrew after that.
+- Term rule: the Hebrew term with the English in brackets the first time it appears in each reading and in each card, e.g. צפיפות <bdi>(density)</bdi>. Wrap the English term with its brackets in `<bdi>…</bdi>` (headings, body, cards, check items) so the brackets do not flip in right-to-left text. Plain Hebrew after that.
 - Formulas, equations, units and numbers with units go inside `<bdi>…</bdi>` so they read left to right, e.g. `<bdi>1 kg = 1000 g</bdi>`. Use `<sub>`/`<sup>` inside it (`<bdi>10<sup>3</sup></bdi>`). Plain counting numbers in a sentence (3 ספרות) need no wrapper.
 - A card line with no Hebrew letters at all (a pure formula such as `d = 19.7 g / 25.0 mL = 0.788 g/mL`) is isolated left-to-right automatically; no `<bdi>` needed.
 - Do not use straight double quotes inside strings; use “ ” for quotes and ״ (gershayim) for Hebrew abbreviations.

@@ -91,5 +91,10 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 
 /* Hebrew / RTL (H1) */
 bdi[dir=ltr]{unicode-bidi:isolate}
+/* Hebrew steps: the number marker stays on the right; each formula is one unbreakable left-to-right unit that scrolls sideways if too wide. */
+ol.steps:dir(rtl){list-style:none;counter-reset:step;padding-inline-start:0}
+ol.steps:dir(rtl)>li{counter-increment:step;position:relative;padding-inline-start:28px}
+ol.steps:dir(rtl)>li::before{content:counter(step) ".";position:absolute;inset-inline-start:0;direction:ltr;unicode-bidi:isolate}
+ol.steps:dir(rtl) bdi[dir=ltr]{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:bottom;white-space:nowrap}
 .lang-btn{font-size:13px;padding:8px 10px}
 .en-only{color:var(--muted);font-size:13px;line-height:18px}
