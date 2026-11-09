@@ -79,7 +79,7 @@
         "worked": {
           "title": "יחס קצבי אפוזיה של <bdi>H<sub>2</sub></bdi> ושל <bdi>O<sub>2</sub></bdi>",
           "steps": [
-            "<bdi>M(H<sub>2</sub>) = 2.016 g/mol</bdi>. <bdi>M(O<sub>2</sub>) = 32.00 g/mol</bdi>.",
+            "<bdi>M(H<sub>2</sub>) = 2.016 g/mol. M(O<sub>2</sub>) = 32.00 g/mol</bdi>.",
             "<bdi>rate(H<sub>2</sub>)/rate(O<sub>2</sub>) = √(M<sub>O<sub>2</sub></sub> / M<sub>H<sub>2</sub></sub>) = √(32.00 / 2.016)</bdi>.",
             "<bdi>32.00 / 2.016 = 15.873</bdi>.",
             "<bdi>√15.873 = 3.984</bdi>.",
@@ -90,7 +90,7 @@
           {
             "title": "איזה גז עובר אפוזיה מהר יותר, <bdi>CH<sub>4</sub></bdi> או <bdi>He</bdi>? פי כמה?",
             "steps": [
-              "<bdi>M(He) = 4.003 g/mol</bdi>. <bdi>M(CH<sub>4</sub>) = 16.04 g/mol</bdi>.",
+              "<bdi>M(He) = 4.003 g/mol. M(CH<sub>4</sub>) = 16.04 g/mol</bdi>.",
               "<bdi>He</bdi> קל יותר ← <bdi>He</bdi> עובר אפוזיה מהר יותר.",
               "<bdi>rate(He)/rate(CH<sub>4</sub>) = √(16.04 / 4.003) = √4.007 = 2.002</bdi>.",
               "התשובה הסופית: <bdi>He</bdi> עובר אפוזיה מהר פי <bdi>2.00</bdi> בערך מ־<bdi>CH<sub>4</sub></bdi>."

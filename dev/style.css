@@ -91,7 +91,7 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 
 /* Hebrew / RTL (H1) */
 bdi[dir=ltr]{unicode-bidi:isolate}
-/* Hebrew steps: the number marker stays on the right; each formula is one unbreakable left-to-right unit that scrolls sideways if too wide. */
+/* Hebrew steps: the number marker stays on the right. Hebrew mode (H2b): every formula isolate, in steps and prose alike, is one unbreakable left-to-right unit that scrolls sideways if too wide. */
 ol.steps[dir=rtl],ol.rtoc-list[dir=rtl]{list-style:none;padding-inline-start:0}
 ol.steps[dir=rtl]{counter-reset:step}
 ol.rtoc-list[dir=rtl]{counter-reset:rtoc}
@@ -99,6 +99,6 @@ ol.steps[dir=rtl]>li{counter-increment:step;position:relative;padding-right:28px
 ol.rtoc-list[dir=rtl]>li{counter-increment:rtoc;position:relative;padding-right:20px;padding-left:0}
 ol.steps[dir=rtl]>li::before{content:counter(step) ".";position:absolute;right:0;direction:ltr;unicode-bidi:isolate}
 ol.rtoc-list[dir=rtl]>li::before{content:counter(rtoc) ".";position:absolute;right:0;direction:ltr;unicode-bidi:isolate}
-ol.steps[dir=rtl] bdi[dir=ltr]{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:bottom;white-space:nowrap}
+ol.steps[dir=rtl] bdi[dir=ltr],html[lang=he] bdi.fx{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:bottom;white-space:nowrap}
 .lang-btn{font-size:13px;padding:8px 10px}
 .en-only{color:var(--muted);font-size:13px;line-height:18px}
