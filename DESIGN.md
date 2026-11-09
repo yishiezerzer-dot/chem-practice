@@ -60,6 +60,7 @@ Layout, top to bottom:
    - Optional **Worked example** card: tip-bg fill (`color/tip-bg`) OR a 4 px primary left border on surface, radius 12, padding 16. Caption "Worked example", then bold title, then numbered steps (same step style as calculation reveals). Must look different from a plain content card while scrolling. Equations: break only before `=`, keep value + unit together, sideways scroll if needed.
    - Optional **chart** (schematic only): full content width, max height ~200 px. Title inside the SVG in 15 px meta/caption style (`color/muted`), worded like "Relative size (schematic, not to scale)". No numeric bar labels or axis values. Series colors: primary blue + neutral gray only — never knew-green, unsure-amber, or didnt-red. Visible key for each color series (e.g. anions / cations) on its own row below the title, ~8 px gap, swatches vertically centered with their labels. Never put the key on the same line as the title. External caption may still say the chart is schematic (not Atkins data).
    - Optional **figure**: if `src` is set, render `<img class="rsketch">` inside `.rfig` — `max-width: 100%`, height auto, centered. Use `alt` from Chem Sketcher. On phones (≤430 px): tap opens a lightbox. The image must render at ≥2× its natural pixel width inside a pan/scroll container (both axes), with pinch-zoom allowed (`touch-action: pinch-zoom`; do not lock the page with `user-scalable=no` while the lightbox is open). Dim the backdrop to ≥85% opacity. Caption under the inline figure: "Tap to enlarge". Prefer Chem Sketcher stacked/narrow layouts when available. If still `status: pending-sketch`, show a dashed placeholder (radius 12, muted border, padding 16) with caption "Figure coming soon" and the note.
+   - Last item in every section: **Report a problem** link (see "Report a problem" under §4a).
 8. Bottom of reading: sticky primary button "Start practice (N cards)" only — same sticky bottom pattern as the rating bar (padding = bar height + 16 + safe-area so the last paragraph is never covered).
 
 Tokens: reuse existing ones. No new colors. Charts use primary blue + neutral gray (+ muted/text for labels); never rating colors as series fills; no rainbow series unless tokens gain a plot palette later.
@@ -101,6 +102,7 @@ Order top to bottom:
 2. Progress bar 4 px under top bar: Knew-it cards / total in session.
 3. Question text, body 17/26, max 65 characters per line. Formulas via KaTeX, chem via mhchem (\ce{H2O}).
 4. Optional figure (redrawn by us, never a textbook scan): full card width, max 240 px tall, alt text required.
+   - Last line inside the question card: **Report a problem** link (see "Report a problem" below), visible before and after the reveal.
 5. **Tip box** (see §5).
 6. Sticky primary button: "Show answer" (full width, 48 px).
 
@@ -117,6 +119,12 @@ Order top to bottom:
 | Tip text | "Answer it in your head first, then check." | "Solve it in your notebook first, then check." |
 | Reveal | short answer + explanation paragraph(s) | final answer box + numbered steps (§6) |
 
+### Report a problem (C2b, 9 Nov 2026)
+- Shown at all times to every visitor: on every practice card (inside the question card, before and after the reveal) and at the end of every reading section.
+- Style: small text link, caption 13/18, `color/primary`, underlined, ~48 px tall tap area, no new colors. Unobtrusive; never a filled button.
+- Opens a prefilled GitHub issue in a new tab (`/issues/new` with `title`, `body`, `labels=review`). No backend, no account on our side; the reporter finishes it on GitHub.
+- Title: "Review: <topic> – <card id or section id>". Body: topic name and id, card id or reading section id, question text or section heading (tags stripped, cut at 300 characters), then an empty "What's wrong:" line.
+
 ## 5. "Try it first" tip
 - Box: tip-bg, radius 8, padding 12, 15/22 text, small lightbulb icon on the start side.
 - Shown on every card until the student dismisses with "Hide tips" (saved in browser); then a 13 px one-line reminder remains above the button.
@@ -127,7 +135,7 @@ Order top to bottom:
 - **Answer** block: label "Answer" (caption), answer in 20/28 bold. Calculation: final value in a bordered box, with units and sig figs.
 - **Explanation**: concept = 1–3 short paragraphs; calculation = numbered steps, each step one line of reasoning + one equation line, results highlighted in text color bold.
 - **Book reference** row (meta, muted): book icon + "Atkins 8e · Topic 2B, pp. xx–xx". Text only, no scans.
-- "Report a problem" link (caption) at the very end (opens a mailto or a form later; no account).
+- No separate "Report a problem" link in the reveal: the card's own report link (§4a, Report a problem) stays visible above it.
 - Then the rating bar (§7).
 
 ## 7. Knew it / Unsure / Didn't know

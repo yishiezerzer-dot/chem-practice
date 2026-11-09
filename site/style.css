@@ -86,4 +86,4 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 .check-a[hidden]{display:none!important}
 .check-a:not([hidden]){margin-top:4px;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
 .rtoc{scroll-margin-top:calc(56px + 12px)}
-
+.report-btn{display:inline-block;color:var(--primary);font-size:13px;line-height:18px;text-decoration:underline;padding:15px 0}
