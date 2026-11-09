@@ -897,7 +897,7 @@
           ],
           "figure": {
             "src": "art/orbital-shapes-1s-2p-3d.svg",
-            "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, and a four-leaf 3d clover (dx2−y2 style)."
+            "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, a four-leaf 3d clover (dx2−y2 style), and a 3d dz2 dumbbell with a ring around its middle."
           },
           "why": "Orbital shapes matter later for bonding: which orbitals overlap, and at what angle, sets molecular geometry."
         },

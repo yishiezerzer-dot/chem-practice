@@ -1,7 +1,7 @@
 {
   "fe56-fe3-nucleus": "Diagram of an iron-56 Fe3+ ion: nucleus with 26 protons and 30 neutrons, and an electron cloud with 23 electrons after losing three.",
   "h-bohr-levels": "Bohr energy-level diagram for hydrogen showing n=1, 2, 3 and infinity, with a red emission arrow for the Balmer n=3 to n=2 photon at 656 nm.",
-  "orbital-shapes-1s-2p-3d": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, and a four-leaf 3d clover (dx2−y2 style).",
+  "orbital-shapes-1s-2p-3d": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, a four-leaf 3d clover (dx2−y2 style), and a 3d dz2 dumbbell with a ring around its middle.",
   "orbital-boxes-c-n": "Orbital box diagrams for carbon (1s2 2s2 2p2 with two unpaired 2p electrons) and nitrogen (1s2 2s2 2p3 with three unpaired 2p electrons) illustrating Hund’s rule.",
   "orbital-boxes-cr-fe3": "Orbital box diagrams for chromium as [Ar] 3d5 4s1 with six unpaired electrons, and for Fe3+ as [Ar] 3d5 with five unpaired 3d electrons.",
   "unpaired-ca-zn2-fe2": "Orbital boxes showing Ca ([Ar] 4s2) and Zn2+ ([Ar] 3d10) with zero unpaired electrons (diamagnetic), and Fe2+ ([Ar] 3d6) with four unpaired electrons (paramagnetic).",
