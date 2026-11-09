@@ -353,7 +353,7 @@ function card() {
   setTop(`Card ${done + 1} of ${ss.total}`, true); $('#bar div').style.width = (100 * done / ss.total) + '%';
   const tip = calc ? 'Solve it in your notebook first, then check.' : 'Answer it in your head first, then check.';
   let h = `<div class="cap">${esc(t.topic_en)} · <span class="tag">${calc ? 'Calculation' : 'Concept'}</span></div>
-  <div class="card" style="margin-top:8px"><p style="margin:0">${esc(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">Given</div>${q.given.map(g => `<div>${esc(g)}</div>`).join('')}</div>` : ''}</div>
+  <div class="card" style="margin-top:8px"><p style="margin:0">${esc(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">Given</div>${q.given.map(g => `<div>${esc(g)}</div>`).join('')}</div>` : ''}${reportBtn(t, 'card', q.id, q.q)}</div>
   ${S.hideTips ? `<div class="cap tipline">${tip}</div>` : `<div class="tipbox"><span aria-hidden="true">💡</span><span class="grow">${tip}</span><button class="link" id="hideTips" style="padding:0 4px;min-height:24px">Hide tips</button></div>`}
   <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show">Show answer</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
@@ -382,8 +382,7 @@ function reveal(q, t) {
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">Answer</div><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${esc(q.answer)}</span>` : esc(q.answer)}</div>
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${fmtStep(s)}</li>`).join('')}</ol>` : `<p>${esc(q.explanation)}</p>`}
-  <div class="meta">📖 Atkins 8e · ${esc(q.ref)}</div>${q.reviewed ? '' : '<div class="cap">Draft, not checked yet</div>'}
-  ${reportBtn(t, 'card', q.id, q.q)}</div>`;
+  <div class="meta">📖 Atkins 8e · ${esc(q.ref)}</div>${q.reviewed ? '' : '<div class="cap">Draft, not checked yet</div>'}</div>`;
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>Didn't know</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>Unsure</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>Knew it</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
   const top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16; scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
