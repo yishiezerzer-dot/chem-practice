@@ -31,6 +31,21 @@ const qsFor = tid => QS.filter(q => q.topic === tid);
 const isDue = id => S.cards[id] && S.cards[id].due <= today();
 const ref = t => { const u = t.textbook_units.map(x => x.unit === 'F' ? 'Fundamentals' : x.unit === 'MT' ? 'Major Techniques' : 'Focus ' + x.unit).join(' + '), ts = t.textbook_topics.map(x => x.topic); return u + ' · Topic' + (ts.length > 1 ? 's ' : ' ') + ts.join(', '); };
 const readingOf = tid => READINGS[tid] || null;
+const plain = x => String(x == null ? '' : x).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+const clip = (x, n = 300) => { x = plain(x); return x.length > n ? x.slice(0, n - 1).trimEnd() + '…' : x; };
+// Prefilled GitHub issue link (no backend, no token); the reader finishes and submits it on GitHub.
+function reportBtn(t, kind, id, text) {
+  const tn = plain(t.topic_en), isCard = kind === 'card';
+  const q = [['title', `Review: ${tn} – ${id}`],
+    ['body', `Topic: ${tn} (${t.id})
+${isCard ? 'Card' : 'Reading section'}: ${id}
+${isCard ? 'Question' : 'Section'}: ${clip(text)}
+
+What's wrong:
+`],
+    ['labels', 'review']].map(([k, v]) => k + '=' + encodeURIComponent(v)).join('&');
+  return `<a class="report-btn" href="https://github.com/yishiezerzer-dot/chem-practice/issues/new?${q}" target="_blank" rel="noopener noreferrer" aria-label="Report a problem with ${isCard ? 'card' : 'section'} ${esc(id)}">Report a problem</a>`;
+}
 
 async function init() {
   const [t, q, r] = await Promise.all([
@@ -110,7 +125,7 @@ function renderWorked(w) {
   const steps = (w.steps || []).map(s => `<li>${fmtRich(s)}</li>`).join('');
   return `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
 }
-function renderSection(sec, i) {
+function renderSection(sec, i, t) {
   let h = '';
   const aid = secAnchorId(sec, i);
   if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${esc(sec.heading)}</h3>`;
@@ -160,6 +175,7 @@ function renderSection(sec, i) {
       h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }
   }
+  h += reportBtn(t, 'section', sec.id || 's' + (i + 1), sec.heading || '');
   return h;
 }
 
@@ -274,7 +290,7 @@ function reading(tid) {
     h += `<div class="reading">`;
     secs.forEach((sec, i) => {
       const aid = secAnchorId(sec, i);
-      h += `<section class="rsec" id="sec-${esc(aid)}">${renderSection(sec, i)}</section>`;
+      h += `<section class="rsec" id="sec-${esc(aid)}">${renderSection(sec, i, t)}</section>`;
     });
     h += `</div>`;
   }
@@ -367,7 +383,7 @@ function reveal(q, t) {
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${fmtStep(s)}</li>`).join('')}</ol>` : `<p>${esc(q.explanation)}</p>`}
   <div class="meta">📖 Atkins 8e · ${esc(q.ref)}</div>${q.reviewed ? '' : '<div class="cap">Draft, not checked yet</div>'}
-  <a class="link" style="display:inline-block;padding-inline:0" href="mailto:yishi.ezerzer@mail.huji.ac.il?subject=${encodeURIComponent('Chem Practice, issue with: ' + q.id)}&body=${encodeURIComponent('Question ' + q.id + ': ' + q.q + '\n\nWhat is wrong:\n')}">Report a problem</a></div>`;
+  ${reportBtn(t, 'card', q.id, q.q)}</div>`;
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>Didn't know</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>Unsure</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>Knew it</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
   const top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16; scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
