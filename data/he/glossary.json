@@ -1,5 +1,9 @@
 [
   {
+    "he": "בליעה",
+    "en": "absorption"
+  },
+  {
     "he": "חומצה",
     "en": "acid"
   },
@@ -34,6 +38,10 @@
   {
     "he": "אניון",
     "en": "anion"
+  },
+  {
+    "he": "אורביטל אנטי־קושר",
+    "en": "antibonding orbital"
   },
   {
     "he": "תמיסה מימית",
@@ -92,12 +100,20 @@
     "en": "base"
   },
   {
+    "he": "חוק בר־למברט",
+    "en": "Beer-Lambert law"
+  },
+  {
     "he": "בלוק",
     "en": "block"
   },
   {
     "he": "מודל בוהר",
     "en": "Bohr model"
+  },
+  {
+    "he": "נקודת רתיחה",
+    "en": "boiling point"
   },
   {
     "he": "קבוע בולצמן",
@@ -110,6 +126,14 @@
   {
     "he": "אנתלפיית קשר",
     "en": "bond enthalpy"
+  },
+  {
+    "he": "סדר קשר",
+    "en": "bond order"
+  },
+  {
+    "he": "אורביטל קושר",
+    "en": "bonding orbital"
   },
   {
     "he": "דיאגרמת תיבות",
@@ -136,6 +160,10 @@
     "en": "calorimetry"
   },
   {
+    "he": "זרז",
+    "en": "catalyst"
+  },
+  {
     "he": "קטיון",
     "en": "cation"
   },
@@ -148,8 +176,20 @@
     "en": "chemical equation"
   },
   {
+    "he": "שיווי משקל כימי",
+    "en": "chemical equilibrium"
+  },
+  {
     "he": "נוסחה כימית",
     "en": "chemical formula"
+  },
+  {
+    "he": "כרומופור",
+    "en": "chromophore"
+  },
+  {
+    "he": "משוואת קלאוזיוס־קלפיירון",
+    "en": "Clausius–Clapeyron equation"
   },
   {
     "he": "מקדם סטויכיומטרי",
@@ -176,6 +216,10 @@
     "en": "concentration"
   },
   {
+    "he": "הצמדה",
+    "en": "conjugation"
+  },
+  {
     "he": "שימור מסה",
     "en": "conservation of mass"
   },
@@ -186,6 +230,10 @@
   {
     "he": "אלקטרון ליבה",
     "en": "core electron"
+  },
+  {
+    "he": "נקודה קריטית",
+    "en": "critical point"
   },
   {
     "he": "חוק דלתון",
@@ -218,6 +266,10 @@
   {
     "he": "דיפול",
     "en": "dipole"
+  },
+  {
+    "he": "כוח דיפול־דיפול",
+    "en": "dipole–dipole force"
   },
   {
     "he": "תגובת תחלוף",
@@ -276,6 +328,10 @@
     "en": "element"
   },
   {
+    "he": "פליטה",
+    "en": "emission"
+  },
+  {
     "he": "נוסחה אמפירית",
     "en": "empirical formula"
   },
@@ -296,6 +352,18 @@
     "en": "enthalpy"
   },
   {
+    "he": "אנתלפיית אידוי",
+    "en": "enthalpy of vaporization"
+  },
+  {
+    "he": "אנטרופיה",
+    "en": "entropy"
+  },
+  {
+    "he": "קבוע שיווי משקל",
+    "en": "equilibrium constant"
+  },
+  {
     "he": "נקודת שקילות",
     "en": "equivalence point"
   },
@@ -314,6 +382,10 @@
   {
     "he": "החוק הראשון",
     "en": "first law"
+  },
+  {
+    "he": "פלואורסצנציה",
+    "en": "fluorescence"
   },
   {
     "he": "פרק",
@@ -344,6 +416,10 @@
     "en": "gas constant"
   },
   {
+    "he": "אנרגיה חופשית של גיבס",
+    "en": "Gibbs free energy"
+  },
+  {
     "he": "חוק גרהם",
     "en": "Graham's law"
   },
@@ -368,6 +444,10 @@
     "en": "heat"
   },
   {
+    "he": "קיבול חום",
+    "en": "heat capacity"
+  },
+  {
     "he": "חוק הס",
     "en": "Hess's law"
   },
@@ -380,12 +460,24 @@
     "en": "Hund's rule"
   },
   {
+    "he": "אורביטל היברידי",
+    "en": "hybrid orbital"
+  },
+  {
+    "he": "הכלאה",
+    "en": "hybridization"
+  },
+  {
     "he": "הידרט",
     "en": "hydrate"
   },
   {
     "he": "הידריד",
     "en": "hydride"
+  },
+  {
+    "he": "קשר מימן",
+    "en": "hydrogen bond"
   },
   {
     "he": "גז אידאלי",
@@ -404,12 +496,20 @@
     "en": "insoluble"
   },
   {
+    "he": "כוח בין־מולקולרי",
+    "en": "intermolecular force"
+  },
+  {
     "he": "אנרגיה פנימית",
     "en": "internal energy"
   },
   {
     "he": "יון",
     "en": "ion"
+  },
+  {
+    "he": "כוח יון־דיפול",
+    "en": "ion–dipole force"
   },
   {
     "he": "תרכובת יונית",
@@ -444,6 +544,10 @@
     "en": "kinetic-molecular theory"
   },
   {
+    "he": "עקרון לה שטלייה",
+    "en": "Le Chatelier's principle"
+  },
+  {
     "he": "אפס מוביל",
     "en": "leading zero"
   },
@@ -454,6 +558,10 @@
   {
     "he": "מגיב מגביל",
     "en": "limiting reagent"
+  },
+  {
+    "he": "כוח פיזור של לונדון",
+    "en": "London dispersion force"
   },
   {
     "he": "זוג אלקטרונים לא קושר",
@@ -500,6 +608,14 @@
     "en": "measurement"
   },
   {
+    "he": "מיקרו־מצב",
+    "en": "microstate"
+  },
+  {
+    "he": "בליעות מולרית",
+    "en": "molar absorptivity"
+  },
+  {
     "he": "מסה מולרית",
     "en": "molar mass"
   },
@@ -530,6 +646,14 @@
   {
     "he": "נוסחה מולקולרית",
     "en": "molecular formula"
+  },
+  {
+    "he": "אורביטל מולקולרי",
+    "en": "molecular orbital"
+  },
+  {
+    "he": "תאוריית האורביטלים המולקולריים",
+    "en": "molecular orbital theory"
   },
   {
     "he": "צורה מולקולרית",
@@ -628,8 +752,24 @@
     "en": "peroxide"
   },
   {
+    "he": "פאזה",
+    "en": "phase"
+  },
+  {
+    "he": "דיאגרמת פאזות",
+    "en": "phase diagram"
+  },
+  {
+    "he": "זרחנות",
+    "en": "phosphorescence"
+  },
+  {
     "he": "פוטון",
     "en": "photon"
+  },
+  {
+    "he": "קשר פאי",
+    "en": "pi bond"
   },
   {
     "he": "קבוע פלנק",
@@ -638,6 +778,10 @@
   {
     "he": "קוטביות",
     "en": "polarity"
+  },
+  {
+    "he": "יכולת להתקטב",
+    "en": "polarizability"
   },
   {
     "he": "יון רב־אטומי",
@@ -688,6 +832,10 @@
     "en": "reactant"
   },
   {
+    "he": "מנת תגובה",
+    "en": "reaction quotient"
+  },
+  {
     "he": "גז ריאלי",
     "en": "real gas"
   },
@@ -736,12 +884,20 @@
     "en": "scientific notation"
   },
   {
+    "he": "החוק השני",
+    "en": "second law"
+  },
+  {
     "he": "קליפה",
     "en": "shell"
   },
   {
     "he": "מיגון",
     "en": "shielding"
+  },
+  {
+    "he": "קשר סיגמה",
+    "en": "sigma bond"
   },
   {
     "he": "ספרה משמעותית",
@@ -782,6 +938,10 @@
   {
     "he": "מספר הספין הקוונטי",
     "en": "spin quantum number"
+  },
+  {
+    "he": "ספונטני",
+    "en": "spontaneous"
   },
   {
     "he": "אנתלפיית היווצרות סטנדרטית",
@@ -828,6 +988,10 @@
     "en": "structural formula"
   },
   {
+    "he": "המראה",
+    "en": "sublimation"
+  },
+  {
     "he": "אינדקס תחתי",
     "en": "subscript"
   },
@@ -852,6 +1016,10 @@
     "en": "theoretical yield"
   },
   {
+    "he": "החוק השלישי",
+    "en": "third law"
+  },
+  {
     "he": "טיטרנט",
     "en": "titrant"
   },
@@ -866,6 +1034,10 @@
   {
     "he": "מתכת מעבר",
     "en": "transition metal"
+  },
+  {
+    "he": "נקודה משולשת",
+    "en": "triple point"
   },
   {
     "he": "אי־ודאות",
@@ -888,6 +1060,10 @@
     "en": "valence electron"
   },
   {
+    "he": "תורת קשר הערכיות",
+    "en": "valence-bond theory"
+  },
+  {
     "he": "משוואת ואן דר ואלס",
     "en": "van der Waals equation"
   },
@@ -906,6 +1082,10 @@
   {
     "he": "אורך גל",
     "en": "wavelength"
+  },
+  {
+    "he": "מספר גל",
+    "en": "wavenumber"
   },
   {
     "he": "אלקטרוליט חלש",
