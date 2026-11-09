@@ -15,6 +15,8 @@ const SUPSUB = /[⁰¹²³⁴-⁹⁺⁻₀-₉₊₋]/g;
 const UNITS = new Set(['mol', 'kmol', 'mmol', 'kg', 'mg', 'min', 'atm', 'kPa', 'mmHg', 'torr', 'bar', 'kJ', 'cal', 'kcal', 'nm', 'cm', 'mm', 'dm', 'mL', 'psi', 'ppm', 'Hz', 'eV']);
 // Heuristic: an English string is "prose" (must be translated) if it has a word of 3+ Latin letters that is neither
 // a unit nor formula-shaped (Na, NaCl, CaCO ...). Pure formulas, numbers and units are exempt when Hebrew has no Hebrew letters.
+// A whole string that is one <bdi> formula (only <sub>/<sup> inside, optional final full stop) counts as translated.
+const FORMULA_ONLY = /^<bdi>(?:[^<]|<\/?su[bp]>)*<\/bdi>\.?$/;
 const isProse = s => (String(s).match(/[A-Za-z]{3,}/g) || []).some(w => !UNITS.has(w) && !/^([A-Z][a-z]?)+$/.test(w));
 
 /** Collect [label, english, hebrew] for a string or array of strings; record array length mismatches. */
@@ -62,6 +64,7 @@ function checkTopic(id) {
   const untranslated = out.filter(([, en, h]) => {
     if (!en.trim()) return false;
     if (typeof h !== 'string' || !h.trim()) return true;
+    if (FORMULA_ONLY.test(h.trim())) return false; // a step that is only a formula in <bdi> is allowed (e.g. <bdi>P = nRT / V</bdi>)
     return isProse(en) && !HEB.test(h) && isProse(h.replace(/<[^>]*>/g, '')); // Hebrew without Hebrew letters is fine if it is only a formula (e.g. m(H2O) = 50.0 g)
   });
   rec(untranslated.length === 0, `untranslated fields: ${untranslated.length} of ${out.length}` + untranslated.slice(0, 5).map(u => `\n         ${u[0]}`).join(''));
