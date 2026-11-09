@@ -21,6 +21,8 @@ window.I18N.en = Object.freeze({
   dueAcross: (n, k) => `${n} card${n > 1 ? 's' : ''} due across ${k} topic${k > 1 ? 's' : ''}`,
   learned: (k, n) => `${k}/${n} learned`,
   dueBadge: d => `${d} due`,
+  sectFundamentals: 'Fundamentals',
+  sectFocus: n => 'Focus ' + n,
   comingSoon: 'Coming soon',
   backupNudge: 'Back up your progress',
   dismiss: 'Dismiss',

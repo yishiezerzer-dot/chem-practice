@@ -1,0 +1,227 @@
+{
+  "topic_id": "chemical-equations-and-stoichiometry",
+  "name": "משוואות כימיות וסטויכיומטריה",
+  "reading": {
+    "sections": [
+      {
+        "id": "balanced-equations",
+        "heading": "משוואות כימיות <bdi>(chemical equation)</bdi> ולמה מאזנים אותן",
+        "paragraphs": [
+          "משוואה כימית היא משפט קצר שמראה מגיבים <bdi>(reactant)</bdi> שהופכים לתוצרים <bdi>(product)</bdi>. המגיבים נכתבים בצד שמאל. התוצרים נכתבים בצד ימין. חץ מצביע מהמגיבים אל התוצרים.",
+          "שלד לדוגמה: <bdi>H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</bdi>. אי אפשר עדיין להשתמש בו לחישוב כמויות, כי הוא לא מאוזן.",
+          "משוואה מאוזנת <bdi>(balanced equation)</bdi> פירושה שלכל יסוד יש אותו מספר אטומים בשני הצדדים. למה מאזנים: אטומים לא נוצרים ולא נעלמים בשינוי כימי רגיל (שימור מסה <bdi>(conservation of mass)</bdi>). משוואה מאוזנת היא הנהלת החשבונות שמכבדת את הכלל הזה.",
+          "מקדמים <bdi>(coefficient)</bdi> הם המספרים שכתובים לפני הנוסחאות. הם מכפילים את הנוסחה כולה. ב־<bdi>2 H<sub>2</sub>O</bdi> המקדם 2 פירושו שתי מולקולות מים (או שני מולים של מים). האינדקסים התחתיים <bdi>(subscript)</bdi> בתוך נוסחה הם חלק מזהות החומר. בעת איזון מותר לשנות מקדמים. אסור לשנות אינדקסים תחתיים, כי אז ממציאים תרכובת אחרת.",
+          "מצבי צבירה <bdi>(state of matter)</bdi> בסוגריים הם עזרים אופציונליים: <bdi>(s)</bdi> מוצק, <bdi>(l)</bdi> נוזל, <bdi>(g)</bdi> גז, <bdi>(aq)</bdi> מומס במים. הם לא משנים את ספירת האטומים."
+        ],
+        "worked": {
+          "title": "אזנו את <bdi>H<sub>2</sub> + O<sub>2</sub> → H<sub>2</sub>O</bdi>",
+          "steps": [
+            "ספרו אטומים בצד המגיבים: <bdi>H = 2</bdi>, <bdi>O = 2</bdi>.",
+            "ספרו אטומים בצד התוצרים: <bdi>H = 2</bdi>, <bdi>O = 1</bdi>.",
+            "בצד התוצרים חסר חמצן. הציבו מקדם 2 לפני <bdi>H<sub>2</sub>O</bdi>: <bdi>H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "ספרו שוב את צד התוצרים: <bdi>H = 4</bdi>, <bdi>O = 2</bdi>.",
+            "עכשיו מימן חסר בצד המגיבים (יש רק 2). הציבו מקדם 2 לפני <bdi>H<sub>2</sub></bdi>: <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "ספרו שוב. מגיבים: <bdi>H = 4</bdi>, <bdi>O = 2</bdi>. תוצרים: <bdi>H = 4</bdi>, <bdi>O = 2</bdi>.",
+            "שני הצדדים תואמים. המשוואה המאוזנת היא <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "קראו אותה במולים כשעושים סטויכיומטריה: <bdi>2 mol H<sub>2</sub></bdi> מגיבים עם <bdi>1 mol O<sub>2</sub></bdi> ויוצרים <bdi>2 mol H<sub>2</sub>O</bdi>."
+          ]
+        },
+        "why": "משוואה מאוזנת נותנת את יחסי המולים שצריך בכל שלב סטויכיומטרי בהמשך. משוואה לא מאוזנת נותנת יחסים שגויים."
+      },
+      {
+        "id": "mole-ratios",
+        "heading": "יחסי מולים ממשוואה מאוזנת",
+        "paragraphs": [
+          "המול <bdi>(mole)</bdi> (<bdi>mol</bdi>) הוא יחידת הספירה של הכימאי לחלקיקים. מול אחד של כל חומר מכיל <bdi>6.022 × 10<sup>23</sup></bdi> חלקיקים (קבוע אבוגדרו <bdi>(Avogadro constant)</bdi>). בסטויכיומטריה <bdi>(stoichiometry)</bdi> צריך בעיקר את הרעיון הזה: המקדמים במשוואה מאוזנת הם יחסי מולים.",
+          "מתוך <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi> אפשר לכתוב יחסים כמו <bdi>(2 mol H<sub>2</sub>)/(1 mol O<sub>2</sub>)</bdi> או <bdi>(2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>)</bdi>. כל אחד מהשברים האלה שווה ל־1 במובן של מקדם המרה <bdi>(conversion factor)</bdi> בין הכמויות הקשורות.",
+          "מסה מולרית <bdi>(molar mass)</bdi> ממירה גרמים למולים ומולים לגרמים. מסה מולרית היא המסה של מול אחד של חומר ב־<bdi>g/mol</bdi>. בונים אותה מהמסות המולריות של היסודות בטבלה המחזורית. הערכים הסטנדרטיים שבהם משתמשים כאן: <bdi>H = 1.008 g/mol</bdi>, <bdi>C = 12.01 g/mol</bdi>, <bdi>O = 16.00 g/mol</bdi>, <bdi>N = 14.01 g/mol</bdi>, <bdi>Na = 22.99 g/mol</bdi>, <bdi>Cl = 35.45 g/mol</bdi>."
+        ],
+        "worked": {
+          "title": "פשוט: מולים של מים מ־<bdi>3.00 mol H<sub>2</sub></bdi> (עם עודף <bdi>O<sub>2</sub></bdi>)",
+          "steps": [
+            "המשוואה המאוזנת: <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "הנתון: <bdi>3.00 mol H<sub>2</sub></bdi>. החמצן בעודף, ולכן <bdi>H<sub>2</sub></bdi> מגביל את כמות התוצר.",
+            "כתבו מהמקדמים את יחס המולים שמקשר בין <bdi>H<sub>2</sub></bdi> ל־<bdi>H<sub>2</sub>O</bdi>: <bdi>(2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>)</bdi>.",
+            "היחס הזה מצטמצם ל־<bdi>(1 mol H<sub>2</sub>O)/(1 mol H<sub>2</sub>)</bdi>, אבל כדי שיהיה ברור הכפילו ב־<bdi>(2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>)</bdi>.",
+            "הציבו: <bdi>3.00 mol H<sub>2</sub> × (2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>)</bdi>.",
+            "צמצמו את <bdi>mol H<sub>2</sub></bdi>.",
+            "חשבו: <bdi>3.00 × (2/2) = 3.00 × 1 = 3.00</bdi>.",
+            "היחידה שנשארת: <bdi>mol H<sub>2</sub>O</bdi>.",
+            "ספרות משמעותיות <bdi>(significant figure)</bdi>: ל־<bdi>3.00</bdi> יש 3 ספרות משמעותיות. המקדמים מדויקים. התשובה: <bdi>3.00 mol H<sub>2</sub>O</bdi>."
+          ]
+        }
+      },
+      {
+        "id": "grams-to-grams",
+        "heading": "מגרמים לגרמים דרך מולים",
+        "paragraphs": [
+          "המאזניים במעבדה קוראים גרמים ולא מולים. לכן המסלול הסטויכיומטרי המלא הוא בדרך כלל: גרמים של A ← מולים של A ← מולים של B ← גרמים של B. בשלב האמצעי משתמשים ביחס המולים מהמשוואה המאוזנת. בשלבים החיצוניים משתמשים במסות מולריות.",
+          "לעולם אל תכפילו גרמים של A ביחס מולים כאילו הגרמים הם מולים. זה מדלג על ההמרה ונותן תשובה בסדר גודל שגוי."
+        ],
+        "worked": {
+          "title": "קשה יותר: המסה של <bdi>H<sub>2</sub>O</bdi> מ־<bdi>10.0 g H<sub>2</sub></bdi> עם עודף <bdi>O<sub>2</sub></bdi>",
+          "steps": [
+            "המשוואה המאוזנת: <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "המסה הנתונה: <bdi>10.0 g H<sub>2</sub></bdi>. <bdi>O<sub>2</sub></bdi> בעודף.",
+            "המסה המולרית של <bdi>H<sub>2</sub></bdi>: <bdi>2 × 1.008 = 2.016 g/mol</bdi>.",
+            "המירו גרמים של <bdi>H<sub>2</sub></bdi> למולים של <bdi>H<sub>2</sub></bdi>: <bdi>10.0 g H<sub>2</sub> × (1 mol H<sub>2</sub>)/(2.016 g H<sub>2</sub>)</bdi>.",
+            "צמצמו את <bdi>g H<sub>2</sub></bdi>.",
+            "חשבו מולים של <bdi>H<sub>2</sub></bdi>: <bdi>10.0 / 2.016 = 4.960317... mol H<sub>2</sub></bdi>. בשלב הזה שמרו ספרות נוספות: <bdi>4.960317 mol H<sub>2</sub></bdi>.",
+            "הפעילו את יחס המולים למים: <bdi>4.960317 mol H<sub>2</sub> × (2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>)</bdi>.",
+            "צמצמו את <bdi>mol H<sub>2</sub></bdi>. מולים של <bdi>H<sub>2</sub>O</bdi> = <bdi>4.960317 mol H<sub>2</sub>O</bdi>.",
+            "המסה המולרית של <bdi>H<sub>2</sub>O</bdi>: <bdi>2×1.008 + 16.00 = 2.016 + 16.00 = 18.016 g/mol</bdi>.",
+            "המירו לגרמים: <bdi>4.960317 mol H<sub>2</sub>O × (18.016 g H<sub>2</sub>O)/(1 mol H<sub>2</sub>O)</bdi>.",
+            "צמצמו את <bdi>mol H<sub>2</sub>O</bdi>.",
+            "חשבו: <bdi>4.960317 × 18.016 = 89.365... g</bdi>.",
+            "ספרות משמעותיות: ל־<bdi>10.0 g</bdi> הנתון יש 3 ספרות משמעותיות. המסות האטומיות שבהן השתמשנו נחשבות מדויקות לפחות באותה מידה. עגלו <bdi>(round)</bdi> את המסה הסופית ל־3 ספרות משמעותיות.",
+            "<bdi>89.365...</bdi> מעוגל ל־<bdi>89.4 g</bdi> כי הספרה אחרי ה־3 היא 6.",
+            "תשובה סופית: <bdi>89.4 g H<sub>2</sub>O</bdi>."
+          ]
+        }
+      },
+      {
+        "id": "limiting-reactant",
+        "heading": "מגיב מגביל <bdi>(limiting reagent)</bdi> ואחוז תפוקה <bdi>(percent yield)</bdi>",
+        "paragraphs": [
+          "כששני מגיבים נתונים שניהם בכמויות מוגבלות, אחד מהם ייגמר ראשון. המגיב הזה הוא המגיב המגביל. הוא קובע את תקרת כמות התוצר שיכולה להיווצר. המגיב האחר הוא מגיב עודף <bdi>(excess reagent)</bdi>. חלק ממנו יישאר.",
+          "איך מוצאים את המגיב המגביל: ממירים כל כמות נתונה למולים של תוצר בעזרת יחסי המולים. המגיב שמניב כמות קטנה יותר של תוצר הוא המגביל. משתמשים רק בכמות הקטנה יותר בחישובי התפוקה שאחר כך.",
+          "תפוקה תיאורטית <bdi>(theoretical yield)</bdi> היא מסת התוצר שהסטויכיומטריה חוזה מהמגיב המגביל, בהנחה שהתגובה מתקדמת עד הסוף וללא הפסדים.",
+          "תפוקה בפועל <bdi>(actual yield)</bdi> היא המסה שמקבלים במעבדה. כמעט תמיד היא קטנה מהתפוקה התיאורטית בגלל תגובה לא מלאה, תגובות לוואי או אובדן בזמן העברה.",
+          "אחוז תפוקה = (תפוקה בפועל / תפוקה תיאורטית) × <bdi>100%</bdi>. שתי התפוקות חייבות להיות באותה יחידה, בדרך כלל גרמים."
+        ],
+        "worked": {
+          "title": "מגיב מגביל: <bdi>5.00 g H<sub>2</sub></bdi> ו־<bdi>40.0 g O<sub>2</sub></bdi> שיוצרים מים",
+          "steps": [
+            "המשוואה המאוזנת: <bdi>2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O</bdi>.",
+            "מולים של <bdi>H<sub>2</sub></bdi>: <bdi>5.00 g × (1 mol / 2.016 g) = 2.48016 mol H<sub>2</sub></bdi>.",
+            "מולים של <bdi>O<sub>2</sub></bdi>: המסה המולרית של <bdi>O<sub>2</sub></bdi> היא <bdi>32.00 g/mol</bdi>. <bdi>40.0 g × (1 mol / 32.00 g) = 1.250 mol O<sub>2</sub></bdi>.",
+            "מולים של <bdi>H<sub>2</sub>O</bdi> מ־<bdi>H<sub>2</sub></bdi> אם <bdi>H<sub>2</sub></bdi> נצרך כולו: <bdi>2.48016 mol H<sub>2</sub> × (2 mol H<sub>2</sub>O)/(2 mol H<sub>2</sub>) = 2.48016 mol H<sub>2</sub>O</bdi>.",
+            "מולים של <bdi>H<sub>2</sub>O</bdi> מ־<bdi>O<sub>2</sub></bdi> אם <bdi>O<sub>2</sub></bdi> נצרך כולו: <bdi>1.250 mol O<sub>2</sub> × (2 mol H<sub>2</sub>O)/(1 mol O<sub>2</sub>) = 2.500 mol H<sub>2</sub>O</bdi>.",
+            "השוו <bdi>2.48016 mol</bdi> ו־<bdi>2.500 mol</bdi>. הקטן מביניהם הוא <bdi>2.48016 mol</bdi>. לכן <bdi>H<sub>2</sub></bdi> הוא המגביל.",
+            "מולי המים התיאורטיים = <bdi>2.48016 mol</bdi>.",
+            "המסה התיאורטית: <bdi>2.48016 mol × 18.016 g/mol = 44.682... g</bdi>.",
+            "עגלו ל־3 ספרות משמעותיות כדי להתאים ל־<bdi>5.00 g</bdi>: <bdi>44.7 g H<sub>2</sub>O</bdi> תיאורטי."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "אחוז התפוקה אם המעבדה אוספת <bdi>40.0 g H<sub>2</sub>O</bdi> מהניסוי שלמעלה",
+            "steps": [
+              "התפוקה בפועל = <bdi>40.0 g</bdi>.",
+              "התפוקה התיאורטית מהדוגמה הקודמת = <bdi>44.7 g</bdi>.",
+              "אחוז תפוקה = <bdi>(40.0 / 44.7) × 100%</bdi>.",
+              "חלקו קודם: <bdi>40.0 ÷ 44.7 = 0.894855...</bdi>",
+              "הכפילו ב־<bdi>100%</bdi>: <bdi>89.4855...%</bdi>.",
+              "ספרות משמעותיות: ל־<bdi>40.0</bdi> ול־<bdi>44.7</bdi> יש 3 ספרות משמעותיות כל אחד. דווחו על 3 ספרות משמעותיות באחוז.",
+              "תשובה סופית: <bdi>89.5%</bdi> תפוקה."
+            ]
+          }
+        ],
+        "mistake": {
+          "wrong": "בוחרים כמגיב המגביל את המגיב שמסתו בגרמים קטנה יותר (כאן בוחרים ב־<bdi>H<sub>2</sub></bdi> רק כי <bdi>5.00 g &lt; 40.0 g</bdi>) בלי להמיר למולים של תוצר.",
+          "whyWrong": "גרמים של חומרים שונים אינם ניתנים להשוואה ככמויות של תגובה. מולקולות <bdi>O<sub>2</sub></bdi> כבדות ממולקולות <bdi>H<sub>2</sub></bdi>. צריך להשוות כמה תוצר כל כמות נתונה יכולה ליצור, בעזרת מולים והמקדמים במשוואה המאוזנת.",
+          "correct": "המירו כל מגיב למולים של תוצר. כמות התוצר הקטנה יותר מכריעה. בדוגמה <bdi>H<sub>2</sub></bdi> אכן היה המגביל, אבל המסקנה הגיעה מההשוואה בין <bdi>2.48 mol H<sub>2</sub>O</bdi> ל־<bdi>2.50 mol H<sub>2</sub>O</bdi>, ולא מהשוואה בין <bdi>5 g</bdi> ל־<bdi>40 g</bdi>."
+        }
+      },
+      {
+        "id": "dilution",
+        "heading": "מיהול <bdi>(dilution)</bdi> של תמיסה",
+        "paragraphs": [
+          "ריכוז <bdi>(concentration)</bdi> בבעיות מוקדמות רבות הוא מולריות <bdi>(molarity)</bdi>. מולריות <bdi>M</bdi> = מולים של מומס <bdi>(solute)</bdi> / ליטרים של תמיסה <bdi>(solution)</bdi>. בתמיסת <bdi>NaCl</bdi> של <bdi>0.50 M</bdi> יש <bdi>0.50 mol NaCl</bdi> בכל <bdi>1.00 L</bdi> של תמיסה.",
+          "מיהול פירושו הוספת ממס <bdi>(solvent)</bdi> (בדרך כלל מים) לתמיסת אב <bdi>(stock solution)</bdi> מרוכזת. מספר המולים של המומס נשאר זהה. רק הנפח משתנה. בגלל זה עובדת משוואת המיהול: <bdi>M<sub>1</sub>V<sub>1</sub> = M<sub>2</sub>V<sub>2</sub></bdi>. המכפלה <bdi>M×V</bdi> פרופורציונית למולים כשהנפח בליטרים (או כששני הנפחים ביחידה זהה).",
+          "<bdi>M<sub>1</sub></bdi> ו־<bdi>V<sub>1</sub></bdi> הם המולריות והנפח של חלק תמיסת האב שמודדים. <bdi>M<sub>2</sub></bdi> ו־<bdi>V<sub>2</sub></bdi> הם המולריות והנפח של התמיסה המהולה אחרי שמוסיפים ממס ומערבבים."
+        ],
+        "worked": {
+          "title": "הכנת <bdi>250. mL</bdi> של <bdi>0.100 M HCl</bdi> מתמיסת אב של <bdi>1.00 M HCl</bdi>",
+          "steps": [
+            "זהו: <bdi>M<sub>1</sub> = 1.00 M</bdi> (תמיסת האב), <bdi>M<sub>2</sub> = 0.100 M</bdi> (המהולה), <bdi>V<sub>2</sub> = 250. mL</bdi>.",
+            "שמרו על עקביות ביחידות הנפח. המירו את <bdi>V<sub>2</sub></bdi> לליטרים: <bdi>250. mL × (1 L)/(1000 mL) = 0.250 L</bdi>.",
+            "כתבו <bdi>M<sub>1</sub>V<sub>1</sub> = M<sub>2</sub>V<sub>2</sub></bdi> ופתרו עבור <bdi>V<sub>1</sub></bdi>: <bdi>V<sub>1</sub> = (M<sub>2</sub>V<sub>2</sub>)/M<sub>1</sub></bdi>.",
+            "הציבו: <bdi>V<sub>1</sub> = (0.100 mol/L × 0.250 L) / (1.00 mol/L)</bdi>.",
+            "חשבו את המונה: <bdi>0.100 × 0.250 = 0.0250 mol</bdi> (מספר המולים של <bdi>HCl</bdi> שצריך).",
+            "חלקו ב־<bdi>M<sub>1</sub></bdi>: <bdi>0.0250 mol / 1.00 mol/L = 0.0250 L</bdi>.",
+            "המירו את <bdi>V<sub>1</sub></bdi> למיליליטרים, אם כך תמדדו בפיפטה: <bdi>0.0250 L × 1000 mL/L = 25.0 mL</bdi>.",
+            "ספרות משמעותיות: ל־<bdi>0.100</bdi>, ל־<bdi>250.</bdi> ול־<bdi>1.00</bdi> יש 3 ספרות משמעותיות כל אחד. התשובה: מדדו <bdi>25.0 mL</bdi> של <bdi>1.00 M HCl</bdi> והוסיפו מים עד שהנפח הכולל יהיה <bdi>250. mL</bdi>."
+          ]
+        }
+      },
+      {
+        "id": "check-stoich",
+        "heading": "בדקו את עצמכם",
+        "paragraphs": [],
+        "check": {
+          "title": "בדקו את עצמכם",
+          "items": [
+            {
+              "q": "ב־<bdi>N<sub>2</sub> + 3 H<sub>2</sub> → 2 NH<sub>3</sub></bdi>, כמה מולים של <bdi>NH<sub>3</sub></bdi> נוצרים מ־<bdi>6.0 mol H<sub>2</sub></bdi> אם <bdi>N<sub>2</sub></bdi> בעודף?",
+              "a": "<bdi>6.0 mol H<sub>2</sub> × (2 mol NH<sub>3</sub>)/(3 mol H<sub>2</sub>) = 4.0 mol NH<sub>3</sub></bdi>."
+            },
+            {
+              "q": "מהי המסה המולרית של <bdi>CO<sub>2</sub></bdi> עם <bdi>C = 12.01</bdi> ו־<bdi>O = 16.00</bdi>?",
+              "a": "<bdi>12.01 + 2×16.00 = 44.01 g/mol</bdi>."
+            },
+            {
+              "q": "אתם צריכים <bdi>500. mL</bdi> של <bdi>0.200 M NaCl</bdi> מתמיסת אב של <bdi>1.00 M</bdi>. איזה נפח מתמיסת האב לוקחים?",
+              "a": "<bdi>V<sub>1</sub> = (0.200 × 0.500 L)/1.00 = 0.100 L = 100. mL</bdi> מתמיסת האב, ואז מהלים ל־<bdi>500. mL</bdi>."
+            }
+          ],
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק."
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t4-q1": {
+      "q": "<bdi>10.0 g</bdi> של <bdi>H<sub>2</sub></bdi> מגיבים עם <bdi>64.0 g</bdi> של <bdi>O<sub>2</sub></bdi> ויוצרים מים (<bdi>2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O</bdi>). איזה מגיב הוא המגיב המגביל <bdi>(limiting reagent)</bdi>, ואיזו מסה של מים יכולה להיווצר?",
+      "given": [
+        "m(H<sub>2</sub>) = 10.0 g, M = 2.016 g/mol",
+        "m(O<sub>2</sub>) = 64.0 g, M = 32.00 g/mol",
+        "M(H<sub>2</sub>O) = 18.02 g/mol"
+      ],
+      "answer": "<bdi>O<sub>2</sub></bdi> הוא המגביל, <bdi>72.1 g</bdi> של <bdi>H<sub>2</sub>O</bdi>",
+      "steps": [
+        "<bdi>n(H<sub>2</sub>) = 10.0 / 2.016 = 4.96 mol</bdi>; <bdi>n(O<sub>2</sub>) = 64.0 / 32.00 = 2.00 mol</bdi>",
+        "<bdi>2.00 mol O<sub>2</sub></bdi> דורשים <bdi>4.00 mol H<sub>2</sub></bdi>, ויש <bdi>4.96 mol</bdi> זמינים, ולכן <bdi>O<sub>2</sub></bdi> הוא המגביל",
+        "<bdi>n(H<sub>2</sub>O) = 2 × 2.00 = 4.00 mol</bdi>",
+        "<bdi>m = 4.00 mol × 18.02 g/mol = 72.1 g</bdi>"
+      ]
+    },
+    "t4-q2": {
+      "q": "<bdi>25.0 mL</bdi> של <bdi>6.00 M HCl</bdi> מוהלים במים עד נפח סופי של <bdi>150.0 mL</bdi>. מהו הריכוז <bdi>(concentration)</bdi> החדש?",
+      "given": [
+        "c<sub>1</sub> = 6.00 M",
+        "V<sub>1</sub> = 25.0 mL",
+        "V<sub>2</sub> = 150.0 mL"
+      ],
+      "answer": "1.00 M",
+      "steps": [
+        "מספר המולים של המומס נשאר זהה: <bdi>c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub></bdi>",
+        "c<sub>2</sub> = (6.00 M × 25.0 mL) / 150.0 mL = 1.00 M"
+      ]
+    },
+    "t4-q3": {
+      "q": "חימום <bdi>5.00 g</bdi> של <bdi>CaCO<sub>3</sub></bdi> (<bdi>CaCO<sub>3</sub> → CaO + CO<sub>2</sub></bdi>) נותן <bdi>2.50 g</bdi> של <bdi>CaO</bdi>. מהו אחוז התפוקה <bdi>(percent yield)</bdi>?",
+      "given": [
+        "m(CaCO<sub>3</sub>) = 5.00 g, M = 100.09 g/mol",
+        "M(CaO) = 56.08 g/mol",
+        "תפוקה בפועל <bdi>(actual yield)</bdi> = <bdi>2.50 g CaO</bdi>"
+      ],
+      "answer": "89.2%",
+      "steps": [
+        "<bdi>n(CaCO<sub>3</sub>) = 5.00 / 100.09 = 0.04996 mol</bdi>, ולכן נוצרים <bdi>0.04996 mol</bdi> של <bdi>CaO</bdi> (יחס <bdi>1:1</bdi>)",
+        "תפוקה תיאורטית <bdi>(theoretical yield)</bdi> = <bdi>0.04996 mol × 56.08 g/mol = 2.80 g</bdi>",
+        "אחוז התפוקה = <bdi>2.50 / 2.80 × 100% = 89.2%</bdi>"
+      ]
+    },
+    "t4-q4": {
+      "q": "אזנו את משוואת השריפה <bdi>(combustion)</bdi> של פרופאן: <bdi>C<sub>3</sub>H<sub>8</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O</bdi>.",
+      "answer": "C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O",
+      "explanation": "אזנו קודם את <bdi>C</bdi> (3 <bdi>CO<sub>2</sub></bdi>), אחר כך את <bdi>H</bdi> (4 <bdi>H<sub>2</sub>O</bdi>), ואת <bdi>O</bdi> אחרון: <bdi>3×2 + 4 = 10</bdi> אטומי <bdi>O</bdi>, ולכן 5 <bdi>O<sub>2</sub></bdi>."
+    },
+    "t4-q5": {
+      "q": "נכון או לא נכון: המגיב הנמצא במסה קטנה יותר הוא תמיד המגיב המגביל <bdi>(limiting reagent)</bdi>.",
+      "answer": "לא נכון",
+      "explanation": "המגיב המגביל תלוי במולים וביחס המולים במשוואה המאוזנת, ולא במסה. המירו כל מסה למולים והשוו ליחס הסטויכיומטרי."
+    }
+  }
+}

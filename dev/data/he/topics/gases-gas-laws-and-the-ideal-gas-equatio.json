@@ -1,0 +1,242 @@
+{
+  "topic_id": "gases-gas-laws-and-the-ideal-gas-equatio",
+  "name": "גזים: חוקי הגזים וחוק הגזים האידאליים",
+  "reading": {
+    "sections": [
+      {
+        "id": "gas-laws",
+        "heading": "חוקי הגזים האמפיריים",
+        "paragraphs": [
+          "גזים <bdi>(gas)</bdi> הם ברובם חלל ריק. הנפח <bdi>(volume)</bdi>, הלחץ <bdi>(pressure)</bdi>, הטמפרטורה <bdi>(temperature)</bdi> והכמות שלהם קשורים בחוקים פשוטים כשהגז מתנהג באופן אידאלי.",
+          "חוק בויל <bdi>(Boyle's law)</bdi>: כש־<bdi>n</bdi> ו־<bdi>T</bdi> קבועים, <bdi>P</bdi> עומד ביחס הפוך ל־<bdi>V</bdi>. <bdi>PV = constant</bdi>. מכפילים את הלחץ ומחצים את הנפח.",
+          "חוק שארל <bdi>(Charles's law)</bdi>: כש־<bdi>n</bdi> ו־<bdi>P</bdi> קבועים, <bdi>V</bdi> עומד ביחס ישר לטמפרטורה המוחלטת <bdi>T</bdi> בקלווין <bdi>(Kelvin)</bdi>. <bdi>V/T = constant</bdi>. השתמשו בקלווין ולעולם לא ב־<bdi>°C</bdi> לבדו במשוואות גזים.",
+          "חוק אבוגדרו <bdi>(Avogadro's law)</bdi>: כש־<bdi>T</bdi> ו־<bdi>P</bdi> קבועים, <bdi>V</bdi> עומד ביחס ישר ל־<bdi>n</bdi>. נפחים שווים של גזים אידאליים באותם <bdi>T</bdi> ו־<bdi>P</bdi> מכילים מספר שווה של מולים.",
+          "המירו <bdi>°C</bdi> ל־<bdi>K</bdi> בעזרת <bdi>T(K) = t(°C) + 273.15</bdi>. בעבודה עם שלוש ספרות משמעותיות <bdi>(significant figure)</bdi> אפשר להשתמש ב־<bdi>25.0 °C → 298.2 K</bdi>, ובבעיות רבות משתמשים ב־<bdi>298 K</bdi>.",
+          "צורה משולבת בלי <bdi>n</bdi>: <bdi>P<sub>1</sub>V<sub>1</sub>/T<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>/T<sub>2</sub></bdi> עבור כמות קבועה של גז אידאלי. צמצמו כל גודל שאינו משתנה.",
+          "תנאי תקן <bdi>(standard temperature and pressure)</bdi>, או <bdi>STP</bdi>, בספרי מבוא רבים הם <bdi>0 °C</bdi> (<bdi>273.15 K</bdi>) ו־<bdi>1 atm</bdi>. בתנאי תקן, מול אחד של גז אידאלי תופס כ־<bdi>22.4 L</bdi>. (בטבלאות מודרניות מסוימות משתמשים ב־<bdi>1 bar</bdi>, ולכן השתמשו בהגדרה שהבעיה קובעת.)",
+          "בשפת המעבדה: מזרק עם אוויר לכוד מתכווץ כשדוחפים את הבוכנה (מעלים את <bdi>P</bdi>), וזה חוק בויל. בלון מתכווץ במקפיא (מורידים את <bdi>T</bdi> כש־<bdi>P</bdi> כמעט קבוע), וזה חוק שארל.",
+          "המירו תמיד צלזיוס לקלווין לפני כל משוואת גזים. כתיבת <bdi>T = 25 °C</bdi> בתוך <bdi>PV = nRT</bdi> היא אחת הטעויות הנפוצות ביותר בבחינות."
+        ],
+        "why": "שלושת החוקים האלה מתחברים למשוואת הגז האידאלי שתשתמשו בה כל הזמן בסטויכיומטריה ובחישובי מעבדה."
+      },
+      {
+        "id": "ideal-gas-equation",
+        "heading": "חוק הגזים האידאליים <bdi>(ideal gas law)</bdi>",
+        "paragraphs": [
+          "חוק הגזים האידאליים: <bdi>PV = nRT</bdi>. <bdi>P</bdi> הוא לחץ, <bdi>V</bdi> נפח, <bdi>n</bdi> כמות במולים, <bdi>T</bdi> טמפרטורה בקלווין ו־<bdi>R</bdi> קבוע הגזים <bdi>(gas constant)</bdi>.",
+          "התאימו את <bdi>R</bdi> ליחידות שלכם. בחירה נפוצה: <bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi> כש־<bdi>P</bdi> באטמוספרות <bdi>(atmosphere)</bdi> ו־<bdi>V</bdi> בליטרים. אפשרות אחרת: <bdi>R = 8.314 J·mol<sup>−1</sup>·K<sup>−1</sup></bdi> = <bdi>8.314 Pa·m<sup>3</sup>·mol<sup>−1</sup>·K<sup>−1</sup></bdi>. אם <bdi>P</bdi> ב־<bdi>torr</bdi>, המירו קודם ל־<bdi>atm</bdi> (<bdi>760 torr = 1 atm</bdi>) או השתמשו ב־<bdi>R</bdi> מתאים.",
+          "סידורים של הנוסחה: <bdi>P = nRT/V</bdi>, <bdi>V = nRT/P</bdi>, <bdi>n = PV/RT</bdi>, <bdi>T = PV/nR</bdi>. כתבו תמיד יחידות בהצבה כדי שיצטמצמו.",
+          "אם <bdi>V</bdi> ב־<bdi>mL</bdi>, המירו ל־<bdi>L</bdi> לפני השימוש ב־<bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi>. אם <bdi>P</bdi> ב־<bdi>torr</bdi>, חלקו ב־760 כדי לקבל <bdi>atm</bdi>.",
+          "<bdi>R</bdi> נפוץ אחר: <bdi>62.36 L·torr·mol<sup>−1</sup>·K<sup>−1</sup></bdi> אם משאירים את <bdi>P</bdi> ב־<bdi>torr</bdi> ואת <bdi>V</bdi> ב־<bdi>L</bdi>. בחרו מערכת אחת והישארו בתוכה.",
+          "אפשר לפתור כל משתנה אחד אם שלושת האחרים ידועים. סמנו את הנעלם, כתבו את הנוסחה המסודרת, הציבו עם יחידות ואז חשבו.",
+          "ספרות משמעותיות: טמפרטורות כמו <bdi>25 °C → 298 K</bdi> כבר מגבילות את הדיוק <bdi>(precision)</bdi>, ולכן אל תדווחו עשר ספרות מהמחשבון.",
+          "בדיקה מהירה אחרי חישוב <bdi>P</bdi>: אם יש בערך <bdi>1 mol</bdi> בערך ב־<bdi>25 L</bdi> בטמפרטורת החדר, <bdi>P</bdi> צריך להיות קרוב ל־<bdi>1 atm</bdi>. אם התשובה שלכם <bdi>50 atm</bdi> או <bdi>0.01 atm</bdi>, קראו שוב את המספרים."
+        ],
+        "worked": {
+          "title": "לחץ של <bdi>2.50 mol</bdi> גז ב־<bdi>10.0 L</bdi> ב־<bdi>25.0 °C</bdi>",
+          "steps": [
+            "המירו טמפרטורה: <bdi>T = 25.0 + 273.15 = 298.15 K</bdi>.",
+            "בחרו <bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi> כי <bdi>V</bdi> ב־<bdi>L</bdi> ורוצים את <bdi>P</bdi> ב־<bdi>atm</bdi>.",
+            "כתבו <bdi>P = nRT / V</bdi>.",
+            "הציבו: <bdi>P = (2.50 mol)(0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup>)(298.15 K) / (10.0 L)</bdi>.",
+            "חשבו <bdi>nR = 2.50 × 0.082057 = 0.2051425</bdi>.",
+            "הכפילו ב־<bdi>T</bdi>: <bdi>0.2051425 × 298.15 = 61.163</bdi>.",
+            "חלקו ב־<bdi>V</bdi>: <bdi>61.163 / 10.0 = 6.1163 atm</bdi>.",
+            "ספרות משמעותיות: <bdi>2.50</bdi>, <bdi>10.0</bdi> ו־<bdi>25.0</bdi> תומכים בשלוש ספרות משמעותיות.",
+            "התשובה הסופית: <bdi>6.12 atm</bdi>."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "נפח של <bdi>0.500 mol O<sub>2</sub></bdi> ב־<bdi>1.00 atm</bdi> וב־<bdi>273 K</bdi>",
+            "steps": [
+              "חשבו: <bdi>V = nRT/P = (0.500)(0.082057)(273) / 1.00</bdi>.",
+              "<bdi>0.500 × 0.082057 = 0.0410285</bdi>.",
+              "<bdi>0.0410285 × 273 = 11.201 L</bdi>.",
+              "זה תואם לנפח המולרי <bdi>(molar volume)</bdi> <bdi>22.4 L/mol</bdi> כפול <bdi>0.500 mol</bdi>.",
+              "התשובה הסופית: <bdi>11.2 L</bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "molar-mass-density",
+        "heading": "מסה מולרית וצפיפות",
+        "paragraphs": [
+          "מ־<bdi>PV = nRT</bdi> ומ־<bdi>n = m/M</bdi> (מסה חלקי מסה מולרית <bdi>(molar mass)</bdi>) מקבלים <bdi>PM = dRT</bdi>, או <bdi>d = PM/RT</bdi>, כאשר <bdi>d</bdi> היא צפיפות <bdi>(density)</bdi> מסה (<bdi>m/V</bdi>). כש־<bdi>T</bdi> ו־<bdi>P</bdi> קבועים, הצפיפות עומדת ביחס ישר למסה המולרית.",
+          "בגלל זה <bdi>CO<sub>2</sub></bdi> (<bdi>44.01 g/mol</bdi>) צפוף יותר מ־<bdi>N<sub>2</sub></bdi> (<bdi>28.02 g/mol</bdi>) בתנאי אותו חדר, ובגלל זה מטף כיבוי עם <bdi>CO<sub>2</sub></bdi> יכול לדחוק חמצן מקרוב לרצפה.",
+          "אפשר גם למצוא מסה מולרית לא ידועה: מדדו <bdi>m</bdi>, <bdi>V</bdi>, <bdi>P</bdi>, <bdi>T</bdi> של דגימת גז, ואז <bdi>M = mRT / PV</bdi>.",
+          "באותם <bdi>T</bdi> ו־<bdi>P</bdi>, לגז האידאלי הצפוף יותר תמיד יש מסה מולרית גדולה יותר. דירוג צפיפויות הוא אם כן פשוט דירוג ערכי <bdi>M</bdi>.",
+          "עבור אוויר ≈ <bdi>29 g/mol</bdi>, כל גז עם <bdi>M > 29</bdi> נוטה לשקוע באוויר (באותם <bdi>T</bdi>,<bdi>P</bdi>), וגז עם <bdi>M < 29</bdi> נוטה לעלות, בהתעלמות מזרמי אוויר ומהפרשי טמפרטורה.",
+          "מסה מולרית ניסויית של נוזל נדיף: שקלו בקבוק, הוסיפו נוזל, חממו כדי להתאדות ולמלא את הבקבוק באדים ב־<bdi>T</bdi> וב־<bdi>P</bdi> ידועים, ושקלו שוב. <bdi>M = mRT/PV</bdi>.",
+          "שימו לב ליחידות הצפיפות. <bdi>g/L</bdi> נפוץ ממשוואה זו עם <bdi>R = 0.082057</bdi>. אם הבעיה רוצה <bdi>g/mL</bdi>, חלקו ב־1000."
+        ],
+        "worked": {
+          "title": "צפיפות <bdi>CO<sub>2</sub></bdi> ב־<bdi>1.00 atm</bdi> וב־<bdi>298 K</bdi>",
+          "steps": [
+            "<bdi>M(CO<sub>2</sub>) = 12.01 + 2(16.00) = 44.01 g/mol</bdi>.",
+            "השתמשו ב־<bdi>d = PM / RT</bdi> עם <bdi>R = 0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup></bdi>.",
+            "<bdi>d = (1.00 atm)(44.01 g/mol) / [(0.082057 L·atm·mol<sup>−1</sup>·K<sup>−1</sup>)(298 K)]</bdi>.",
+            "מכנה: <bdi>0.082057 × 298 = 24.453</bdi>.",
+            "<bdi>d = 44.01 / 24.453 = 1.800 g/L</bdi>.",
+            "התשובה הסופית: <bdi>1.80 g/L</bdi> (3 ספרות משמעותיות)."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "מסה מולרית מ־<bdi>0.882 g</bdi> שתופסים <bdi>0.500 L</bdi> ב־<bdi>1.00 atm</bdi> וב־<bdi>300. K</bdi>",
+            "steps": [
+              "חשבו: <bdi>M = mRT / PV</bdi>.",
+              "<bdi>M = (0.882 g)(0.082057)(300.) / [(1.00)(0.500)]</bdi>.",
+              "מונה: <bdi>0.882 × 0.082057 × 300 = 21.712</bdi>.",
+              "חלקו ב־<bdi>0.500</bdi>: <bdi>M = 43.4 g/mol</bdi>.",
+              "התשובה הסופית: <bdi>43.4 g/mol</bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dalton",
+        "heading": "חוק דלתון ללחצים חלקיים",
+        "paragraphs": [
+          "בתערובת של גזים אידאליים, כל גז מתנהג כאילו הוא לבדו תופס את הנפח. חוק דלתון <bdi>(Dalton's law)</bdi>: <bdi>P<sub>total</sub> = P<sub>1</sub> + P<sub>2</sub> + … = Σ P<sub>i</sub></bdi>.",
+          "השבר המולי <bdi>(mole fraction)</bdi> של גז <bdi>i</bdi>: <bdi>x<sub>i</sub> = n<sub>i</sub> / n<sub>total</sub></bdi>. אז הלחץ החלקי <bdi>(partial pressure)</bdi> הוא <bdi>P<sub>i</sub> = x<sub>i</sub> P<sub>total</sub></bdi>. וגם <bdi>x<sub>i</sub> = P<sub>i</sub> / P<sub>total</sub></bdi>.",
+          "איסוף גז מעל מים: הלחץ הכולל כולל אדי מים. <bdi>P<sub>gas</sub> = P<sub>total</sub> − P<sub>H<sub>2</sub>O</sub></bdi> (חפשו את לחץ האדים <bdi>(vapor pressure)</bdi> של מים בטמפרטורה הזאת).",
+          "שברים מוליים בתערובת מסתכמים תמיד ב־1. לחצים חלקיים מסתכמים תמיד ב־<bdi>P<sub>total</sub></bdi>. שתי הבדיקות האלה תופסות שגיאות חישוב רבות.",
+          "כשבעיה נותנת אחוזי נפח של גזים שמעורבבים באותם <bdi>T</bdi> ו־<bdi>P</bdi>, אחוז הנפח שווה לאחוז המולים בגזים אידאליים.",
+          "גז יבש פירושו שכבר הפחתתם אדי מים. גז רטוב פירושו ש־<bdi>P<sub>total</sub></bdi> כולל את <bdi>P<sub>H<sub>2</sub>O</sub></bdi>.",
+          "דוגמה: <bdi>H<sub>2</sub></bdi> שנאסף מעל מים ב־<bdi>25 °C</bdi> כשהברומטר <bdi>758 torr</bdi>. <bdi>P<sub>H<sub>2</sub>O</sub> ≈ 23.8 torr</bdi> ב־<bdi>25 °C</bdi>. אז <bdi>P<sub>H<sub>2</sub></sub> = 758 − 23.8 = 734.2 torr</bdi>."
+        ],
+        "worked": {
+          "title": "הלחץ החלקי של <bdi>O<sub>2</sub></bdi>",
+          "steps": [
+            "נתון: <bdi>n(N<sub>2</sub>) = 0.400 mol</bdi>, <bdi>n(O<sub>2</sub>) = 0.100 mol</bdi>, <bdi>P<sub>total</sub> = 2.00 atm</bdi>.",
+            "חשבו: <bdi>n<sub>total</sub> = 0.400 + 0.100 = 0.500 mol</bdi>.",
+            "<bdi>x(O<sub>2</sub>) = 0.100 / 0.500 = 0.200</bdi>.",
+            "חשבו: <bdi>P(O<sub>2</sub>) = x(O<sub>2</sub>) × P<sub>total</sub> = 0.200 × 2.00 atm = 0.400 atm</bdi>.",
+            "בדקו: <bdi>P(N<sub>2</sub>) = 0.800 × 2.00 = 1.60 atm</bdi>. הסכום הוא <bdi>2.00 atm</bdi>.",
+            "התשובה הסופית: <bdi>0.400 atm</bdi>."
+          ]
+        },
+        "mistake": {
+          "wrong": "שימוש בטמפרטורה בצלזיוס ישירות ב־<bdi>PV = nRT</bdi> (למשל הצבת <bdi>T = 25</bdi> במקום <bdi>298</bdi>).",
+          "whyWrong": "חוקי הגזים נובעים מיחס ישר לטמפרטורה מוחלטת. הצבת 25 במקום 298 מקטינה את <bdi>T</bdi> פי 12 בערך ומקלקלת את <bdi>P</bdi> או את <bdi>V</bdi>.",
+          "correct": "המירו תמיד לקלווין קודם: <bdi>T = t(°C) + 273.15</bdi>."
+        }
+      },
+      {
+        "id": "gas-stoichiometry",
+        "heading": "גזים בסטויכיומטריה של תגובות",
+        "paragraphs": [
+          "שלבו משוואה מאוזנת עם <bdi>PV = nRT</bdi>. מסלול נפוץ: מצאו מולים של גז מ־<bdi>P</bdi>, <bdi>V</bdi>, <bdi>T</bdi>, עברו ליחס מולים והמירו את החומר השני לגרמים או לנפח גז חדש.",
+          "באותם <bdi>T</bdi> ו־<bdi>P</bdi>, יחסי נפחי גזים שווים ליחסי מולים בגזים אידאליים. זה מאפשר לדלג על חישוב מולים ביניים כשכל המינים שמעניינים אתכם הם גזים באותם תנאים.",
+          "אם התוצר והמגיב שניהם גזים באותם <bdi>T</bdi> ו־<bdi>P</bdi>, הנפחים נובעים ישירות מהמקדמים. דוגמה: <bdi>N<sub>2</sub> + 3 H<sub>2</sub> → 2 NH<sub>3</sub></bdi> פירושה ש־<bdi>1 L N<sub>2</sub></bdi> מגיב עם <bdi>3 L H<sub>2</sub></bdi> ליצירת <bdi>2 L NH<sub>3</sub></bdi> (אידאלי, אותם <bdi>T</bdi>,<bdi>P</bdi>).",
+          "אם התנאים שונים, המירו כל גז למולים בעזרת <bdi>PV = nRT</bdi> לפני החלת יחס המולים.",
+          "מגיב מגביל <bdi>(limiting reagent)</bdi> עדיין חל. המירו כל מגיב למולים (עם <bdi>PV = nRT</bdi> לגזים), ואז ראו איזה מגיב נגמר ראשון לפי יחסי המולים.",
+          "דווחו נפחי גזים רק ב־<bdi>T</bdi> וב־<bdi>P</bdi> שנקבעו. ״ליטרים של <bdi>O<sub>2</sub></bdi>״ בלי תנאים אינו שלם.",
+          "גשר מסה־נפח: גרמים → מולים (מסה מולרית) → יחס מולים → מולי גז → נפח מ־<bdi>PV = nRT</bdi>. שמרו על שרשרת ברורה כך שהיחידות יצטמצמו בכל שלב."
+        ],
+        "worked": {
+          "title": "נפח <bdi>O<sub>2</sub></bdi> ב־<bdi>1.00 atm</bdi> וב־<bdi>298 K</bdi> מ־<bdi>2.00 g KClO<sub>3</sub></bdi> (<bdi>2 KClO<sub>3</sub> → 2 KCl + 3 O<sub>2</sub></bdi>)",
+          "steps": [
+            "מסה מולרית של <bdi>KClO<sub>3</sub> = 39.10 + 35.45 + 3(16.00) = 122.55 g/mol</bdi>.",
+            "מולי <bdi>KClO<sub>3</sub> = 2.00 g / 122.55 g/mol = 0.01632 mol</bdi>.",
+            "יחס מולים: <bdi>3 mol O<sub>2</sub> / 2 mol KClO<sub>3</sub></bdi>.",
+            "מולי <bdi>O<sub>2</sub> = 0.01632 × (3/2) = 0.02448 mol</bdi>.",
+            "חשבו: <bdi>V = nRT/P = (0.02448)(0.082057)(298) / 1.00 = 0.599 L</bdi>.",
+            "ספרות משמעותיות מ־<bdi>2.00 g</bdi> → 3 ספרות משמעותיות: <bdi>0.599 L</bdi>.",
+            "התשובה הסופית: <bdi>0.599 L O<sub>2</sub></bdi>."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "ליטרים של <bdi>H<sub>2</sub></bdi> בתנאי תקן מ־<bdi>2.00 g Zn</bdi> עם <bdi>HCl</bdi> בעודף (<bdi>Zn + 2 HCl → ZnCl<sub>2</sub> + H<sub>2</sub></bdi>)",
+            "steps": [
+              "מולי <bdi>Zn = 2.00 / 65.38 = 0.03059 mol</bdi>.",
+              "יחס מולים <bdi>1:1</bdi> → <bdi>0.03059 mol H<sub>2</sub></bdi>.",
+              "בתנאי תקן, <bdi>V = n × 22.4 L/mol = 0.03059 × 22.4 = 0.685 L</bdi>.",
+              "או <bdi>V = nRT/P</bdi> עם <bdi>T = 273.15 K</bdi>, <bdi>P = 1 atm</bdi> → תשובה באותו סדר גודל.",
+              "התשובה הסופית: <bdi>0.685 L H<sub>2</sub></bdi> (3 ספרות משמעותיות)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-gases",
+        "heading": "בדקו את עצמכם",
+        "check": {
+          "title": "בדקו את עצמכם",
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
+          "items": [
+            {
+              "q": "כמה קלווין הם <bdi>0 °C</bdi>?",
+              "a": "<bdi>273.15 K</bdi>."
+            },
+            {
+              "q": "לגז יש <bdi>P = 2.00 atm</bdi>, <bdi>V = 5.00 L</bdi>, <bdi>T = 300. K</bdi>. מצאו את <bdi>n</bdi> (<bdi>R = 0.082057</bdi>).",
+              "a": "<bdi>n = PV/RT = (2.00×5.00)/(0.082057×300) = 0.406 mol</bdi>."
+            },
+            {
+              "q": "בתערובת, <bdi>x(He) = 0.25</bdi> ו־<bdi>P<sub>total</sub> = 4.0 atm</bdi>. מהו <bdi>P(He)</bdi>?",
+              "a": "<bdi>P(He) = 0.25 × 4.0 = 1.0 atm</bdi>."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t7-q1": {
+      "q": "איזה לחץ <bdi>(pressure)</bdi> מפעילים <bdi>2.50 mol</bdi> של גז אידאלי <bdi>(ideal gas)</bdi> במיכל של <bdi>10.0 L</bdi> ב־<bdi>25.0 °C</bdi>?",
+      "given": [
+        "n = 2.50 mol",
+        "V = 10.0 L",
+        "T = 25.0 °C = 298.15 K",
+        "R = 0.08206 L·atm/(mol·K)"
+      ],
+      "answer": "<bdi>6.12 atm</bdi>",
+      "steps": [
+        "כתבו <bdi>P = nRT / V</bdi>",
+        "P = (2.50 × 0.08206 × 298.15) / 10.0 = 6.12 atm"
+      ]
+    },
+    "t7-q2": {
+      "q": "באותה טמפרטורה ובאותו לחץ, לאיזה גז יש מסה גדולה יותר: <bdi>1.0 L</bdi> של <bdi>CO<sub>2</sub></bdi> או <bdi>1.0 L</bdi> של <bdi>N<sub>2</sub></bdi>?",
+      "answer": "<bdi>1.0 L</bdi> של <bdi>CO<sub>2</sub></bdi>",
+      "explanation": "נפחים שווים של גזים באותם <bdi>T</bdi> ו־<bdi>P</bdi> מכילים אותו מספר מולים (עיקרון אבוגדרו <bdi>(Avogadro's law)</bdi>). ל־<bdi>CO<sub>2</sub></bdi> (<bdi>44.01 g/mol</bdi>) מסה מולרית גדולה יותר מאשר ל־<bdi>N<sub>2</sub></bdi> (<bdi>28.02 g/mol</bdi>), ולכן אותו מספר מולים שוקל יותר."
+    },
+    "t7-q3": {
+      "q": "תערובת גזים מכילה <bdi>0.400 mol N<sub>2</sub></bdi> ו־<bdi>0.100 mol O<sub>2</sub></bdi> בלחץ כולל של <bdi>2.00 atm</bdi>. מהו הלחץ החלקי <bdi>(partial pressure)</bdi> של <bdi>O<sub>2</sub></bdi>?",
+      "given": [
+        "n(N<sub>2</sub>) = 0.400 mol",
+        "n(O<sub>2</sub>) = 0.100 mol",
+        "הלחץ הכולל: <bdi>P(total) = 2.00 atm</bdi>"
+      ],
+      "answer": "<bdi>0.400 atm</bdi>",
+      "steps": [
+        "השבר המולי x(O<sub>2</sub>) = 0.100 / (0.400 + 0.100) = 0.200",
+        "הציבו: <bdi>P(O<sub>2</sub>) = x(O<sub>2</sub>) × P(total) = 0.200 × 2.00 atm = 0.400 atm</bdi>"
+      ]
+    },
+    "t7-q4": {
+      "q": "גז בלחץ קבוע מחומם מ־<bdi>10 °C</bdi> ל־<bdi>20 °C</bdi>. האם הנפח שלו מוכפל? הסבירו.",
+      "answer": "לא, הוא עולה רק בכ־<bdi>3.5%</bdi>",
+      "explanation": "חוק שארל <bdi>(Charles's law)</bdi> משתמש בטמפרטורה מוחלטת. הטמפרטורה עוברת מ־<bdi>283 K</bdi> ל־<bdi>293 K</bdi>, ולכן <bdi>V<sub>2</sub>/V<sub>1</sub> = 293/283 ≈ 1.035</bdi> ולא <bdi>2</bdi>."
+    },
+    "t7-q5": {
+      "q": "איזה נפח <bdi>(volume)</bdi> של <bdi>O<sub>2</sub></bdi>, שנמדד ב־<bdi>0 °C</bdi> וב־<bdi>1.00 atm</bdi>, נוצר כש־<bdi>12.25 g</bdi> של <bdi>KClO<sub>3</sub></bdi> מתפרקים לגמרי (<bdi>2KClO<sub>3</sub> → 2KCl + 3O<sub>2</sub></bdi>)?",
+      "given": [
+        "m(KClO<sub>3</sub>) = 12.25 g",
+        "M(KClO<sub>3</sub>) = 122.55 g/mol",
+        "T = 273.15 K, P = 1.00 atm",
+        "R = 0.08206 L·atm/(mol·K)"
+      ],
+      "answer": "<bdi>3.36 L</bdi>",
+      "steps": [
+        "n(KClO<sub>3</sub>) = 12.25 / 122.55 = 0.09996 mol",
+        "n(O<sub>2</sub>) = 0.09996 × 3/2 = 0.1499 mol",
+        "חשבו את הנפח: <bdi>V = nRT / P = 0.1499 × 0.08206 × 273.15 / 1.00 = 3.36 L</bdi>"
+      ]
+    }
+  }
+}
