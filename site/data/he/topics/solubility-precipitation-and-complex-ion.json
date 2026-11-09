@@ -1,0 +1,249 @@
+{
+  "topic_id": "solubility-precipitation-and-complex-ion",
+  "name": "מסיסות, שיקוע ויונים קומפלקסיים",
+  "reading": {
+    "sections": [
+      {
+        "id": "ksp",
+        "heading": "<bdi>K<sub>sp</sub></bdi> ומסיסות מולרית <bdi>(molar solubility)</bdi>",
+        "paragraphs": [
+          "עבור מלח <bdi>(salt)</bdi> מסיס במעט <bdi>M<sub>m</sub>X<sub>x</sub>(s) ⇌ m M<sup>n+</sup>(aq) + x X<sup>y−</sup>(aq)</bdi>, מכפלת המסיסות <bdi>(solubility product)</bdi> היא <bdi>K<sub>sp</sub> = [M]<sup>m</sup>[X]<sup>x</sup></bdi>. המוצק אינו מופיע ב־<bdi>K</bdi>.",
+          "המסיסות המולרית <bdi>s</bdi> היא מספר המולים של המוצק שמתמוסס בליטר תמיסה (כדי לקבל תמיסה רוויה <bdi>(saturated solution)</bdi>). קשרו בין <bdi>s</bdi> לריכוזי היונים בעזרת הסטויכיומטריה של משוואת ההמסה.",
+          "דוגמה: <bdi>AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup></bdi>, <bdi>K<sub>sp</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>] = s<sup>2</sup></bdi>, ולכן <bdi>s = √K<sub>sp</sub></bdi>.",
+          "דוגמה: <bdi>PbCl<sub>2</sub>(s) ⇌ Pb<sup>2+</sup> + 2 Cl<sup>−</sup></bdi>, <bdi>K<sub>sp</sub> = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup> = (s)(2s)<sup>2</sup> = 4s<sup>3</sup></bdi>, ולכן <bdi>s = (K<sub>sp</sub>/4)<sup>1/3</sup></bdi>.",
+          "ערכי <bdi>K<sub>sp</sub></bdi> תלויים בטמפרטורה. השתמשו בערך מהטבלה שמתאים לטמפרטורה של הבעיה (לרוב <bdi>25 °C</bdi>).",
+          "השוואה ישירה של מספרי <bdi>K<sub>sp</sub></bdi> מדרגת מסיסות רק כשלמלחים אותה סטויכיומטריית יונים (שניהם <bdi>MX</bdi>, או שניהם <bdi>MX<sub>2</sub></bdi> וכן הלאה). אחרת השוו את המסיסויות המולריות <bdi>s</bdi>.",
+          "יחידות: מבחינה תרמודינמית <bdi>K<sub>sp</sub></bdi> חסר ממדים, אבל בקורס הזה מתייחסים לערכי הריכוז כמספרים כשהיחידות <bdi>mol/L</bdi> משתמעות.",
+          "רוויה פירושה שיווי משקל עם מוצק לא מומס. תמיסה צלולה יכולה עדיין להיות בלתי רוויה <bdi>(unsaturated)</bdi>, רוויה, או (לזמן קצר) רוויית־יתר <bdi>(supersaturated)</bdi>. נוכחות של מוצק שנשאר היא הסימן הבטוח לרוויה.",
+          "מ־<bdi>s</bdi> שנמדדה אפשר לחשב את <bdi>K<sub>sp</sub></bdi>. מ־<bdi>K<sub>sp</sub></bdi> אפשר לנבא את <bdi>s</bdi>. בבחינות שואלים בשני הכיוונים.",
+          "שימו לב לחזקה במלחים מסוג <bdi>MX<sub>2</sub></bdi> ו־<bdi>M<sub>2</sub>X</bdi>. שכחה של <bdi>2s</bdi> ושל הריבוע היא טעות האלגברה הנפוצה ביותר.",
+          "עבור מלחים מסוג <bdi>M<sub>2</sub>X</bdi> כמו <bdi>Ag<sub>2</sub>CrO<sub>4</sub></bdi>: <bdi>Ag<sub>2</sub>CrO<sub>4</sub>(s) ⇌ 2 Ag<sup>+</sup> + CrO<sub>4</sub><sup>2−</sup></bdi>, <bdi>K<sub>sp</sub> = (2s)<sup>2</sup>(s) = 4s<sup>3</sup></bdi>. זו אותה משפחת אלגברה כמו של <bdi>PbCl<sub>2</sub></bdi>, רק עם יונים אחרים.",
+          "אל תבלבלו בין מסיסות (<bdi>g/L</bdi> או <bdi>mol/L</bdi>) לבין <bdi>K<sub>sp</sub></bdi>. הן קשורות דרך הסטויכיומטריה, אבל אינן אותו מספר.",
+          "טבלאות טמפרטורה חשובות לתכנון מעבדה. חימום מעלה לעיתים קרובות את <bdi>K<sub>sp</sub></bdi> של מוצקים יוניים רבים, ולכן תמיסות חמות יכולות להחזיק יותר מלח לפני שהוא מתגבש בקירור.",
+          "תמיסה רוויה של מלח מסיס במעט נראית “ריקה” ממוצק אחרי סינון, אבל ריכוזי היונים קבועים על ידי <bdi>K<sub>sp</sub></bdi>. הוספה של גביש זרע זעיר לתמיסה רוויית־יתר יכולה לגרום להפרשת מוצק פתאומית.",
+          "כשכותבים ביטויי <bdi>K<sub>sp</sub></bdi>, השמיטו מים ומוצקים. כללו רק יונים מימיים. המטען אינו מופיע במפורש, אבל הסטויכיומטריה חייבת להתאים למשוואת ההמסה המאוזנת."
+        ],
+        "why": "כל חיזוי של שיקוע וכל בעיית שיקוע סלקטיבי מתחילים בביטוי <bdi>K<sub>sp</sub></bdi> נכון ובקשר בין <bdi>s</bdi> לריכוזי היונים.",
+        "worked": {
+          "title": "<bdi>s</bdi> של <bdi>AgCl</bdi> אם <bdi>K<sub>sp</sub> = 1.8 × 10<sup>−10</sup></bdi>",
+          "steps": [
+            "<bdi>AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup></bdi>.",
+            "<bdi>K<sub>sp</sub> = s · s = s<sup>2</sup> = 1.8 × 10<sup>−10</sup></bdi>.",
+            "<bdi>s = √(1.8 × 10<sup>−10</sup>) = 1.3 × 10<sup>−5</sup> M</bdi>.",
+            "כלומר <bdi>[Ag<sup>+</sup>] = [Cl<sup>−</sup>] = 1.3 × 10<sup>−5</sup> M</bdi> במים טהורים."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "<bdi>s</bdi> של <bdi>PbCl<sub>2</sub></bdi> אם <bdi>K<sub>sp</sub> = 1.7 × 10<sup>−5</sup></bdi>",
+            "steps": [
+              "<bdi>PbCl<sub>2</sub>(s) ⇌ Pb<sup>2+</sup> + 2 Cl<sup>−</sup></bdi>.",
+              "<bdi>K<sub>sp</sub> = (s)(2s)<sup>2</sup> = 4s<sup>3</sup> = 1.7 × 10<sup>−5</sup></bdi>.",
+              "<bdi>s<sup>3</sup> = 4.25 × 10<sup>−6</sup></bdi>.",
+              "<bdi>s ≈ 1.6 × 10<sup>−2</sup> M</bdi>.",
+              "<bdi>[Cl<sup>−</sup>] = 2s ≈ 3.2 × 10<sup>−2</sup> M</bdi>."
+            ]
+          },
+          {
+            "title": "<bdi>K<sub>sp</sub></bdi> מתוך <bdi>s = 1.3 × 10<sup>−4</sup> M</bdi> עבור <bdi>AgBr</bdi> (<bdi>MX</bdi>)",
+            "steps": [
+              "<bdi>AgBr(s) ⇌ Ag<sup>+</sup> + Br<sup>−</sup></bdi>.",
+              "<bdi>K<sub>sp</sub> = s<sup>2</sup> = (1.3×10<sup>−4</sup>)<sup>2</sup> = 1.7 × 10<sup>−8</sup></bdi>.",
+              "השוו לערך מהטבלה כדי לבדוק את המדידה שלכם.",
+              "אותו חישוב כמו ב־<bdi>AgCl</bdi>, רק המספר משתנה."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "precipitate-q",
+        "heading": "האם יהיה שיקוע <bdi>(precipitation)</bdi>? <bdi>Q</bdi> לעומת <bdi>K<sub>sp</sub></bdi>",
+        "paragraphs": [
+          "כשתמיסות מתערבבות, חשבו את מנת התגובה <bdi>(reaction quotient)</bdi> <bdi>Q</bdi> עם ריכוזי היונים אחרי המיהול. השוו את <bdi>Q</bdi> ל־<bdi>K<sub>sp</sub></bdi>.",
+          "אם <bdi>Q < K<sub>sp</sub></bdi>, התמיסה בלתי רוויה: אין משקע <bdi>(precipitate)</bdi> (עוד מוצק יכול להתמוסס).",
+          "אם <bdi>Q = K<sub>sp</sub></bdi>, התמיסה רוויה: בשיווי משקל עם המוצק.",
+          "אם <bdi>Q > K<sub>sp</sub></bdi>, התמיסה רוויית־יתר ביחס למוצק: נוצר משקע עד ש־<bdi>Q</bdi> יורד אל <bdi>K<sub>sp</sub></bdi>.",
+          "קודם מיהול: אם <bdi>10.0 mL</bdi> של <bdi>0.010 M AgNO<sub>3</sub></bdi> מתערבבים עם <bdi>10.0 mL</bdi> של <bdi>0.010 M NaCl</bdi>, ריכוז כל יון נעשה חצי לפני שמרכיבים את <bdi>Q</bdi>.",
+          "אפקט היון המשותף <bdi>(common-ion effect)</bdi>: <bdi>Cl<sup>−</sup></bdi> שמוסיפים מקטין את המסיסות של <bdi>AgCl</bdi>, כי המכפלה <bdi>[Ag<sup>+</sup>][Cl<sup>−</sup>]</bdi> עדיין חייבת להיות שווה ל־<bdi>K<sub>sp</sub></bdi>.",
+          "גם ה־<bdi>pH</bdi> יכול להשפיע כשהאניון בסיסי (<bdi>F<sup>−</sup></bdi>, <bdi>CO<sub>3</sub><sup>2−</sup></bdi>, <bdi>S<sup>2−</sup></bdi> וכן הלאה). חומצה הופכת את האניון לחומצה הצמודה שלו ויכולה להמיס את המוצק.",
+          "שיקוע סלקטיבי <bdi>(selective precipitation)</bdi> משתמש בהבדלים בין ערכי <bdi>K<sub>sp</sub></bdi>. ריכוזי יון סולפיד שנשלטים על ידי <bdi>pH</bdi> יכולים להפריד בין <bdi>Cu<sup>2+</sup></bdi> לבין <bdi>Zn<sup>2+</sup></bdi> בניתוח איכותי <bdi>(qualitative analysis)</bdi> קלאסי.",
+          "כששני משקעים אפשריים מתחרים, זה שדורש מכפלת יונים קטנה יותר (ביחס ל־<bdi>K<sub>sp</sub></bdi> שלו) נוטה להיווצר ראשון כשמוסיפים מגיב לאט.",
+          "מכפלת היונים <bdi>Q</bdi> היא באותה צורה כמו <bdi>K<sub>sp</sub></bdi>, אבל עם הריכוזים שיש לכם עכשיו, לא בהכרח ערכי שיווי משקל.",
+          "אם הבעיה נותנת מסות ונפחים, המירו למולריות לפני שמרכיבים את <bdi>Q</bdi>. גרמים אינם יכולים להיכנס ישירות לביטוי של <bdi>K<sub>sp</sub></bdi>.",
+          "בחישובי יון משותף בדרך כלל מניחים שריכוז היון שהוסף גדול בהרבה מ־<bdi>s</bdi>, ולכן ריכוז היון המשותף שווה בקירוב לערך ההתחלתי שהוסף. אם ההנחה הזו נכשלת (יון שהוסף בכמות זעירה, <bdi>K<sub>sp</sub></bdi> גדול יותר), פתרו את המשוואה הריבועית או הקובית המדויקת.",
+          "מסיסות שתלויה ב־<bdi>pH</bdi> מופיעה ב־<bdi>CaF<sub>2</sub></bdi>, ב־<bdi>CaCO<sub>3</sub></bdi> ובהידרוקסידים של מתכות. הורדת <bdi>pH</bdi> מפרוטנת את <bdi>F<sup>−</sup></bdi>, את <bdi>CO<sub>3</sub><sup>2−</sup></bdi> או את <bdi>OH<sup>−</sup></bdi> ומושכת עוד מוצק אל התמיסה.",
+          "כתבו בכל פעם החלטה בשורה אחת: <bdi>Q ? K<sub>sp</sub></bdi>. הקפת ההשוואה במעגל על הדף מונעת טעויות מסוג “חישבתי את <bdi>Q</bdi> אבל שכחתי מה זה אומר” בלחץ זמן."
+        ],
+        "worked": {
+          "title": "ערבוב <bdi>50.0 mL</bdi> של <bdi>0.0100 M Pb(NO<sub>3</sub>)<sub>2</sub></bdi> עם <bdi>50.0 mL</bdi> של <bdi>0.100 M NaCl</bdi>, כאשר <bdi>K<sub>sp</sub>(PbCl<sub>2</sub>) = 1.7 × 10<sup>−5</sup></bdi>",
+          "steps": [
+            "אחרי הערבוב, הנפח הכולל הוא <bdi>100.0 mL</bdi>.",
+            "<bdi>[Pb<sup>2+</sup>] = 0.0100 × (50/100) = 0.00500 M</bdi>.",
+            "<bdi>[Cl<sup>−</sup>] = 0.100 × (50/100) = 0.0500 M</bdi>.",
+            "<bdi>Q = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup> = (0.00500)(0.0500)<sup>2</sup> = 1.25 × 10<sup>−5</sup></bdi>.",
+            "<bdi>Q = 1.25 × 10<sup>−5</sup> < K<sub>sp</sub> = 1.7 × 10<sup>−5</sup></bdi> ← אין משקע.",
+            "<bdi>[Cl<sup>−</sup>]</bdi> גבוה מעט יותר היה מעביר את <bdi>Q</bdi> מעל <bdi>K<sub>sp</sub></bdi>."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "יון משותף: מסיסות <bdi>AgCl</bdi> ב־<bdi>0.100 M NaCl</bdi>",
+            "steps": [
+              "נסמן <bdi>s = [Ag<sup>+</sup>]</bdi> מהמסת <bdi>AgCl</bdi>. <bdi>[Cl<sup>−</sup>] ≈ 0.100 + s ≈ 0.100</bdi> (כש־<bdi>s</bdi> זעיר).",
+              "<bdi>K<sub>sp</sub> = [Ag<sup>+</sup>][Cl<sup>−</sup>] ≈ s(0.100) = 1.8 × 10<sup>−10</sup></bdi>.",
+              "<bdi>s = 1.8 × 10<sup>−9</sup> M</bdi>.",
+              "קטן בהרבה מ־<bdi>1.3 × 10<sup>−5</sup> M</bdi> במים טהורים."
+            ]
+          },
+          {
+            "title": "האם <bdi>AgCl</bdi> נוצר אם <bdi>[Ag<sup>+</sup>]=1.0×10<sup>−5</sup></bdi> ו־<bdi>[Cl<sup>−</sup>]=1.0×10<sup>−5</sup></bdi>? <bdi>K<sub>sp</sub>=1.8×10<sup>−10</sup></bdi>",
+            "steps": [
+              "<bdi>Q = (1.0×10<sup>−5</sup>)(1.0×10<sup>−5</sup>) = 1.0×10<sup>−10</sup></bdi>.",
+              "<bdi>Q < K<sub>sp</sub></bdi> ← אין משקע.",
+              "העלו כל אחד מהריכוזים בערך פי שניים ו־<bdi>Q</bdi> יחצה את <bdi>K<sub>sp</sub></bdi>.",
+              "תמיד ציינו את ההשוואה במפורש על הדף."
+            ]
+          }
+        ],
+        "mistake": {
+          "wrong": "שימוש בריכוזי תמיסות האב לפני הערבוב בחישוב <bdi>Q</bdi>.",
+          "whyWrong": "ערבוב מדלל כל יון. <bdi>Q</bdi> משתמש בריכוזים בתמיסה המשולבת.",
+          "correct": "מהלו קודם בעזרת <bdi>V<sub>ion</sub>/V<sub>total</sub></bdi>, אחר כך הרכיבו את <bdi>Q</bdi>, ואז השוו ל־<bdi>K<sub>sp</sub></bdi>."
+        }
+      },
+      {
+        "id": "complex-ions",
+        "heading": "יונים קומפלקסיים <bdi>(complex ion)</bdi> ומסיסות לכאורה",
+        "paragraphs": [
+          "יון קומפלקסי נוצר כשיון מתכת קושר ליגנדים <bdi>(ligand)</bdi> כמו <bdi>NH<sub>3</sub></bdi>, <bdi>OH<sup>−</sup></bdi> או <bdi>CN<sup>−</sup></bdi>. דוגמה: <bdi>Ag<sup>+</sup> + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>.",
+          "קבוע ההיווצרות <bdi>(formation constant)</bdi> <bdi>K<sub>f</sub></bdi> גדול עבור קומפלקסים רבים של אמינים וציאנידים. <bdi>K<sub>f</sub></bdi> גדול פירושו שהקומפלקס מועדף.",
+          "היווצרות קומפלקס יכולה להמיס משקע: <bdi>AgCl(s)</bdi> מתמוסס באמוניה מימית כי <bdi>Ag<sup>+</sup></bdi> חופשי נמשך אל <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>, ולכן מתמוסס עוד מוצק כדי להשלים את <bdi>Ag<sup>+</sup></bdi>.",
+          "המסה כוללת של <bdi>AgCl</bdi> ב־<bdi>NH<sub>3</sub></bdi> משלבת את <bdi>K<sub>sp</sub></bdi> ואת <bdi>K<sub>f</sub></bdi>. קבוע שיווי המשקל נטו הוא <bdi>K = K<sub>sp</sub> · K<sub>f</sub></bdi> עבור <bdi>AgCl(s) + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + Cl<sup>−</sup></bdi>.",
+          "מספר הקואורדינציה <bdi>(coordination number)</bdi> הוא מספר אטומי התורם של הליגנדים שקשורים למתכת. <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi> הוא ליניארי עם מספר קואורדינציה <bdi>2</bdi>.",
+          "בבחינות, כתבו את נוסחת הקומפלקס עם סוגריים מרובעים והמטען מחוצה להם: <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>, <bdi>[Fe(CN)<sub>6</sub>]<sup>4−</sup></bdi>, <bdi>[Cu(NH<sub>3</sub>)<sub>4</sub>]<sup>2+</sup></bdi>.",
+          "ליגנדים הם בסיסי לואיס <bdi>(Lewis base)</bdi>, ויון המתכת הוא חומצת לואיס <bdi>(Lewis acid)</bdi>. אמוניה, ציאניד והידרוקסיד הם ליגנדים נפוצים בקורס.",
+          "המסה של הידרוקסידים אמפוטריים <bdi>(amphoteric)</bdi> ב־<bdi>OH<sup>−</sup></bdi> עודף (שיוצרת מינים כמו <bdi>[Al(OH)<sub>4</sub>]<sup>−</sup></bdi>) היא דרך נוספת של היווצרות קומפלקס שמעלה את המסיסות לכאורה.",
+          "כתבו ערכי <bdi>K<sub>f</sub></bdi> מדורגים כשבעיה נותנת אותם. <bdi>K<sub>f</sub></bdi> הכולל הוא מכפלת הקבועים המדורגים.",
+          "היווצרות <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi> היא הסיבה לכך שכסף כלורי מתמוסס באמוניה בתכנית הניתוח האיכותי, ואילו כסף יודי (עם <bdi>K<sub>sp</sub></bdi> קטן בהרבה) עשוי שלא להתמוסס באותה קלות באותו ריכוז <bdi>NH<sub>3</sub></bdi>.",
+          "מטעני קומפלקסים שווים למטען המתכת ועוד מטעני הליגנדים. <bdi>NH<sub>3</sub></bdi> ניטרלי, ולכן <bdi>Ag<sup>+</sup></bdi> ועוד שני <bdi>NH<sub>3</sub></bdi> נשאר <bdi>+1</bdi>. ליגנדים <bdi>CN<sup>−</sup></bdi> יוצרים קומפלקסים שליליים גדולים כמו <bdi>[Fe(CN)<sub>6</sub>]<sup>4−</sup></bdi>.",
+          "באיור של הנושא הזה, <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi> הוא ליניארי. הגאומטריה נגזרת ממספר הקואורדינציה ומספר אלקטרוני ה־d בקומפלקסים רבים של מתכות מעבר, אבל קומפלקס האמין של כסף(I) הוא המקרה הליניארי הפשוט שאתם צריכים כאן."
+        ],
+        "worked": {
+          "title": "<bdi>K</bdi> נטו להמסת <bdi>AgCl</bdi> ב־<bdi>NH<sub>3</sub></bdi>",
+          "steps": [
+            "<bdi>K<sub>sp</sub>: AgCl(s) ⇌ Ag<sup>+</sup> + Cl<sup>−</sup></bdi>.",
+            "<bdi>K<sub>f</sub>: Ag<sup>+</sup> + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>.",
+            "חברו: <bdi>AgCl(s) + 2 NH<sub>3</sub> ⇌ [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> + Cl<sup>−</sup></bdi>.",
+            "<bdi>K<sub>net</sub> = K<sub>sp</sub> · K<sub>f</sub></bdi>.",
+            "<bdi>K<sub>f</sub></bdi> גדול יכול להפוך את <bdi>K<sub>net</sub></bdi> לגדול מספיק כדי ש־<bdi>AgCl</bdi> יתמוסס."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "סימון הקומפלקס באיור",
+            "steps": [
+              "כסף במרכז קושר שני ליגנדים <bdi>NH<sub>3</sub></bdi>.",
+              "מטען כולל <bdi>+1</bdi>, נוסחה <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>.",
+              "מספר קואורדינציה <bdi>2</bdi>, גאומטריה ליניארית.",
+              "זה המין שמעלה את המסיסות לכאורה של כסף באמוניה."
+            ]
+          },
+          {
+            "title": "מדוע <bdi>AgCl</bdi> מתמוסס ב־<bdi>NH<sub>3</sub></bdi> אבל לא ב־<bdi>NaNO<sub>3</sub></bdi>",
+            "steps": [
+              "<bdi>NaNO<sub>3</sub></bdi> מוסיף רק יונים צופים <bdi>(spectator ion)</bdi>, ו־<bdi>[Ag<sup>+</sup>][Cl<sup>−</sup>]</bdi> עדיין מוגבל על ידי <bdi>K<sub>sp</sub></bdi>.",
+              "<bdi>NH<sub>3</sub></bdi> קושר את <bdi>Ag<sup>+</sup></bdi> ל־<bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi> ומוריד את <bdi>[Ag<sup>+</sup>]</bdi> החופשי.",
+              "<bdi>AgCl</bdi> מוצק מתמוסס כדי להחזיר את המכפלה של <bdi>K<sub>sp</sub></bdi> עד שהליגנדים נעשים נדירים.",
+              "ניטרט אינו יכול למלא כאן את תפקיד הליגנד."
+            ]
+          },
+          {
+            "title": "סדר גודל: <bdi>K<sub>net</sub> = K<sub>sp</sub> K<sub>f</sub></bdi>",
+            "steps": [
+              "נניח <bdi>K<sub>sp</sub>(AgCl) = 1.8×10<sup>−10</sup></bdi> ו־<bdi>K<sub>f</sub>([Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>) ≈ 1.7×10<sup>7</sup></bdi>.",
+              "<bdi>K<sub>net</sub> ≈ 1.8×10<sup>−10</sup> × 1.7×10<sup>7</sup> ≈ 3×10<sup>−3</sup></bdi>.",
+              "לא עצום, אבל גדול מספיק כדי ש־<bdi>[NH<sub>3</sub>]</bdi> בינוני ימיס כמות ניכרת של <bdi>AgCl</bdi>.",
+              "מלחים עם <bdi>K<sub>sp</sub></bdi> קטן יותר דורשים <bdi>K<sub>f</sub></bdi> גדול יותר או ריכוז ליגנד גבוה יותר."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-solubility",
+        "heading": "בדקו את עצמכם",
+        "paragraphs": [],
+        "check": {
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
+          "items": [
+            {
+              "q": "מהו ביטוי <bdi>K<sub>sp</sub></bdi> עבור <bdi>PbCl<sub>2</sub></bdi>?",
+              "a": "<bdi>K<sub>sp</sub> = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup></bdi>."
+            },
+            {
+              "q": "אם <bdi>Q > K<sub>sp</sub></bdi>, מה קורה?",
+              "a": "נוצר משקע עד ש־<bdi>Q = K<sub>sp</sub></bdi>."
+            },
+            {
+              "q": "מדוע <bdi>AgCl</bdi> מתמוסס ב־<bdi>NH<sub>3</sub></bdi>?",
+              "a": "<bdi>Ag<sup>+</sup></bdi> יוצר את <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi> ומוריד את <bdi>[Ag<sup>+</sup>]</bdi> החופשי, ולכן מתמוסס עוד מוצק."
+            },
+            {
+              "q": "מהו הקשר בין <bdi>K<sub>sp</sub></bdi> ל־<bdi>s</bdi> עבור מלח <bdi>MX</bdi>?",
+              "a": "<bdi>K<sub>sp</sub> = s<sup>2</sup></bdi>, ולכן <bdi>s = √K<sub>sp</sub></bdi>."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t21-q1": {
+      "q": "המסיסות המולרית <bdi>(molar solubility)</bdi> של <bdi>CaF<sub>2</sub></bdi> במים היא <bdi>2.1 × 10<sup>−4</sup> M</bdi>. חשבו את <bdi>K<sub>sp</sub></bdi>.",
+      "given": [
+        "<bdi>s = 2.1 × 10<sup>−4</sup> M</bdi>",
+        "<bdi>CaF<sub>2</sub>(s) ⇌ Ca<sup>2+</sup> + 2F<sup>−</sup></bdi>"
+      ],
+      "answer": "<bdi>K<sub>sp</sub> = 3.7 × 10<sup>−11</sup></bdi>",
+      "steps": [
+        "<bdi>[Ca<sup>2+</sup>] = s, [F<sup>−</sup>] = 2s</bdi>",
+        "<bdi>K<sub>sp</sub> = s(2s)<sup>2</sup> = 4s<sup>3</sup></bdi>",
+        "<bdi>K<sub>sp</sub> = 4(2.1 × 10<sup>−4</sup>)<sup>3</sup> = 3.7 × 10<sup>−11</sup></bdi>"
+      ]
+    },
+    "t21-q2": {
+      "q": "<bdi>K<sub>sp</sub></bdi> של <bdi>Ag<sub>2</sub>CrO<sub>4</sub></bdi> הוא <bdi>1.1 × 10<sup>−12</sup></bdi>. מהי המסיסות המולרית <bdi>(molar solubility)</bdi> שלו במים טהורים?",
+      "given": [
+        "<bdi>K<sub>sp</sub> = 1.1 × 10<sup>−12</sup></bdi>",
+        "<bdi>Ag<sub>2</sub>CrO<sub>4</sub>(s) ⇌ 2Ag<sup>+</sup> + CrO<sub>4</sub><sup>2−</sup></bdi>"
+      ],
+      "answer": "<bdi>6.5 × 10<sup>−5</sup> M</bdi>",
+      "steps": [
+        "<bdi>[Ag<sup>+</sup>] = 2s, [CrO<sub>4</sub><sup>2−</sup>] = s</bdi>, ולכן <bdi>K<sub>sp</sub> = 4s<sup>3</sup></bdi>",
+        "<bdi>s = (1.1 × 10<sup>−12</sup> / 4)<sup>1/3</sup> = 6.5 × 10<sup>−5</sup> M</bdi>"
+      ]
+    },
+    "t21-q3": {
+      "q": "מערבבים <bdi>100.0 mL</bdi> של <bdi>0.0010 M Pb(NO<sub>3</sub>)<sub>2</sub></bdi> עם <bdi>100.0 mL</bdi> של <bdi>0.0020 M NaCl</bdi>. האם יהיה שיקוע <bdi>(precipitation)</bdi> של <bdi>PbCl<sub>2</sub></bdi>?",
+      "given": [
+        "<bdi>K<sub>sp</sub>(PbCl<sub>2</sub>) = 1.6 × 10<sup>−5</sup></bdi>",
+        "הנפח הכולל <bdi>= 200.0 mL</bdi>"
+      ],
+      "answer": "לא. <bdi>Q = 5.0 × 10<sup>−10</sup> < K<sub>sp</sub></bdi>",
+      "steps": [
+        "הערבוב מקטין כל ריכוז בחצי: <bdi>[Pb<sup>2+</sup>] = 5.0 × 10<sup>−4</sup> M</bdi>, <bdi>[Cl<sup>−</sup>] = 1.0 × 10<sup>−3</sup> M</bdi>",
+        "<bdi>Q = [Pb<sup>2+</sup>][Cl<sup>−</sup>]<sup>2</sup> = 5.0 × 10<sup>−4</sup> × (1.0 × 10<sup>−3</sup>)<sup>2</sup> = 5.0 × 10<sup>−10</sup></bdi>",
+        "<bdi>Q < K<sub>sp</sub></bdi>, ולכן לא נוצר משקע"
+      ]
+    },
+    "t21-q4": {
+      "q": "איזה מהמלחים מסיס יותר בתמיסה חומצית מאשר במים טהורים: <bdi>AgCl</bdi> או <bdi>CaCO<sub>3</sub></bdi>? הסבירו.",
+      "answer": "<bdi>CaCO<sub>3</sub></bdi>",
+      "explanation": "<bdi>CO<sub>3</sub><sup>2−</sup></bdi> הוא אניון בסיסי. <bdi>H<sup>+</sup></bdi> הופך אותו ל־<bdi>HCO<sub>3</sub><sup>−</sup></bdi> (ואחר כך ל־<bdi>CO<sub>2</sub></bdi>), מה שמוציא אותו משיווי המשקל ומסיט את ההמסה ימינה. <bdi>Cl<sup>−</sup></bdi> הוא הבסיס הצמוד של חומצה חזקה, ולכן חומצה אינה משפיעה על המסיסות של <bdi>AgCl</bdi>."
+    },
+    "t21-q5": {
+      "q": "<bdi>AgCl</bdi> כמעט אינו מתמוסס במים אבל מתמוסס באמוניה מימית. מדוע?",
+      "answer": "<bdi>Ag<sup>+</sup></bdi> יוצר את היון הקומפלקסי <bdi>(complex ion)</bdi> <bdi>[Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup></bdi>",
+      "explanation": "<bdi>NH<sub>3</sub></bdi> קושר את <bdi>Ag<sup>+</sup></bdi> עם קבוע היווצרות גדול <bdi>(formation constant)</bdi>, ולכן <bdi>[Ag<sup>+</sup>]</bdi> החופשי נשאר נמוך מאוד. <bdi>Q</bdi> של <bdi>AgCl</bdi> יורד מתחת ל־<bdi>K<sub>sp</sub></bdi>, ומתמוסס עוד מוצק."
+    }
+  }
+}

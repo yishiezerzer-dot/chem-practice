@@ -1,0 +1,249 @@
+{
+  "topic_id": "electrochemistry",
+  "name": "אלקטרוכימיה",
+  "reading": {
+    "sections": [
+      {
+        "id": "galvanic",
+        "heading": "תאים גלווניים ופוטנציאל <bdi>E°</bdi>",
+        "paragraphs": [
+          "תא גלווני <bdi>(galvanic cell)</bdi> (או תא וולטאי) הופך תגובת חמצון־חיזור ספונטנית <bdi>(spontaneous)</bdi> לזרם חשמלי. החמצון מתרחש באנודה <bdi>(anode)</bdi> והחיזור מתרחש בקתודה <bdi>(cathode)</bdi>. בחוט החיצוני האלקטרונים זורמים מהאנודה לקתודה.",
+          "גשר מלח <bdi>(salt bridge)</bdi> (או מחסום נקבובי) שומר על איזון המטען בכך שהוא מאפשר ליונים לנדוד. בלעדיו המטען היה מצטבר והזרם היה נעצר.",
+          "סימון התא <bdi>(cell notation)</bdi> נכתב משמאל לימין: האנודה, יון האנודה, גשר המלח <bdi>(||)</bdi>, יון הקתודה ואז הקתודה. דוגמה: <bdi>Zn(s)|Zn<sup>2+</sup>(aq)||Cu<sup>2+</sup>(aq)|Cu(s)</bdi>.",
+          "פוטנציאל תא תקני <bdi>(standard cell potential)</bdi>: <bdi>E°<sub>cell</sub> = E°<sub>cathode</sub> − E°<sub>anode</sub></bdi>, בעזרת פוטנציאלי חיזור תקניים <bdi>(standard reduction potential)</bdi>. באופן שקול <bdi>E°<sub>cell</sub> = E°<sub>red</sub> + E°<sub>ox</sub></bdi> כאשר <bdi>E°<sub>ox</sub> = −E°<sub>red</sub></bdi> של זוג האנודה.",
+          "עבור <bdi>Zn/Cu</bdi>: <bdi>E°(Cu<sup>2+</sup>/Cu) = +0.34 V</bdi> ו־<bdi>E°(Zn<sup>2+</sup>/Zn) = −0.76 V</bdi>. <bdi>E°<sub>cell</sub> = 0.34 − (−0.76) = 1.10 V</bdi>.",
+          "<bdi>E°<sub>cell</sub></bdi> חיובי פירושו שהתגובה כפי שנכתבה ספונטנית בתנאים תקניים (כל יון בריכוז של כ־<bdi>1 M</bdi>, גזים ב־<bdi>1 bar</bdi>, <bdi>25 °C</bdi>).",
+          "לעולם אל תכפילו ערכי <bdi>E°</bdi> שבטבלה במקדמים סטויכיומטריים. פוטנציאלים הם גדלים אינטנסיביים. את <bdi>ΔG</bdi> כן מכפילים במספר האלקטרונים.",
+          "פוטנציאל חיזור חיובי יותר פירושו נטייה חזקה יותר להיחזר (מחמצן <bdi>(oxidizing agent)</bdi> חזק יותר, הנמצא בצד שמאל של הזוג). ל־<bdi>F<sub>2</sub></bdi> הערך גבוה ול־<bdi>Li<sup>+</sup></bdi> הוא נמוך מאוד.",
+          "היונים הצופים <bdi>(spectator ion)</bdi> בגשר המלח הם לרוב <bdi>K<sup>+</sup></bdi>, <bdi>Na<sup>+</sup></bdi>, <bdi>NO<sub>3</sub><sup>−</sup></bdi> או <bdi>Cl<sup>−</sup></bdi>, שנבחרים כך שלא יישקעו על האלקטרודה ולא ייצרו משקע בלתי צפוי.",
+          "אם בבעיה מופיעים ערכי <bdi>E°</bdi> של כמה זוגות, בחרו בזוג בעל הערך החיובי ביותר כחיזור בקתודה ובזוג בעל הערך השלילי ביותר כחמצון באנודה, כדי לקבל את התא הספונטני.",
+          "ברישום בקווים האנודה נמצאת משמאל בהסכמה. אם מחליפים בין שמאל לימין, כותבים את התא ההפוך וסימן ה־<bdi>E</bdi> מתהפך.",
+          "אלקטרודות אינרטיות (<bdi>Pt</bdi>, גרפיט) מופיעות כששתי הצורות, המחומצנת והמחוזרת, נמצאות בתמיסה, כמו בזוג <bdi>Fe<sup>3+</sup>/Fe<sup>2+</sup></bdi> על פלטינה.",
+          "תא <bdi>Zn/Cu</bdi> באיור מראה זרימת אלקטרונים דרך החוט לכיוון הנחושת, אנודת <bdi>Zn</bdi> שמתמוססת, <bdi>Cu</bdi> שמשקיעה על הקתודה, ו־<bdi>E°<sub>cell</sub> = 1.10 V</bdi> בתנאים תקניים."
+        ],
+        "why": "שרטוטי תאים וחישובי <bdi>E°</bdi> הם כרטיס הכניסה לבעיות של <bdi>ΔG°</bdi>, של <bdi>K</bdi> ושל נרנסט. טעויות סימן מתחילות בדרך כלל כאן.",
+        "worked": {
+          "title": "חישוב <bdi>E°</bdi> עבור <bdi>Zn(s) + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu(s)</bdi>",
+          "steps": [
+            "חיזור (בקתודה): <bdi>Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu</bdi>, <bdi>E° = +0.34 V</bdi>.",
+            "חמצון (באנודה): <bdi>Zn → Zn<sup>2+</sup> + 2 e<sup>−</sup></bdi>, על סמך <bdi>E°<sub>red</sub>(Zn<sup>2+</sup>/Zn) = −0.76 V</bdi>.",
+            "<bdi>E°<sub>cell</sub> = 0.34 − (−0.76) = 1.10 V</bdi>.",
+            "האלקטרונים בחוט נעים מ־<bdi>Zn</bdi> לכיוון <bdi>Cu</bdi>.",
+            "גשר המלח: אניונים נעים לחצי התא של האנודה וקטיונים נעים לחצי התא של הקתודה."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "לאיזה כיוון זורמים האלקטרונים?",
+            "steps": [
+              "האנודה היא <bdi>Zn</bdi> (חמצון).",
+              "הקתודה היא <bdi>Cu</bdi> (חיזור).",
+              "אלקטרונים: אלקטרודת <bdi>Zn</bdi> ← חוט ← אלקטרודת <bdi>Cu</bdi>.",
+              "אם תהפכו בדמיונכם את חיבורי החוט, סימן ה־<bdi>E</bdi> מתהפך והתא כבר אינו גלווני כפי שנכתב."
+            ]
+          },
+          {
+            "title": "תא ספונטני מ־<bdi>Ag<sup>+</sup>/Ag</bdi> (<bdi>E° = 0.80 V</bdi>) ומ־<bdi>Fe<sup>2+</sup>/Fe</bdi> (<bdi>E° = −0.44 V</bdi>)",
+            "steps": [
+              "קתודה: <bdi>Ag<sup>+</sup> + e<sup>−</sup> → Ag</bdi> (<bdi>E°</bdi> חיובי יותר).",
+              "אנודה: <bdi>Fe → Fe<sup>2+</sup> + 2 e<sup>−</sup></bdi>.",
+              "איזנו אלקטרונים: <bdi>2 Ag<sup>+</sup> + Fe → 2 Ag + Fe<sup>2+</sup></bdi>.",
+              "<bdi>E°<sub>cell</sub> = 0.80 − (−0.44) = 1.24 V</bdi>.",
+              "אל תכפילו את <bdi>0.80</bdi> ב־2."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "thermo-links",
+        "heading": "<bdi>ΔG°</bdi>, <bdi>K</bdi> ו־<bdi>E°</bdi>",
+        "paragraphs": [
+          "הקשרים: <bdi>ΔG° = −n F E°<sub>cell</sub></bdi> ו־<bdi>ΔG° = −RT ln K</bdi>. בשילוב: <bdi>n F E°<sub>cell</sub> = RT ln K</bdi>, או <bdi>E°<sub>cell</sub> = (RT/nF) ln K</bdi>.",
+          "<bdi>F</bdi> (קבוע פאראדיי <bdi>(Faraday constant)</bdi>) <bdi>≈ 96485 C/mol e<sup>−</sup></bdi>. <bdi>n</bdi> הוא מספר מולי האלקטרונים שעוברים במשוואה המאוזנת כפי שנכתבה.",
+          "<bdi>E°<sub>cell</sub></bdi> חיובי <bdi>↔</bdi> <bdi>ΔG°</bdi> שלילי <bdi>↔</bdi> <bdi>K > 1</bdi> (התוצרים מועדפים במצב התקני).",
+          "ב־<bdi>25 °C</bdi> יש צורה נוחה עם לוגריתם עשרוני: <bdi>E° = (0.0592 V / n) log K</bdi>, ולכן <bdi>log K = n E° / 0.0592</bdi>.",
+          "<bdi>n</bdi> גדול או <bdi>E°</bdi> גדול הופכים את <bdi>K</bdi> לעצום. לכן תגובות גלווניות רבות ״הולכות עד הסוף״ לכל מטרה מעשית.",
+          "שימו לב ליחידות: <bdi>ΔG</bdi> ב־<bdi>J</bdi> כש־<bdi>F</bdi> ב־<bdi>C/mol</bdi> ו־<bdi>E</bdi> ב־<bdi>V</bdi> (כי <bdi>1 J = 1 C·V</bdi>).",
+          "קבוע פאראדיי מקשר בין כמות החומר למטען. זכרו ש־<bdi>F ≈ 96485 C/mol</bdi>, ובחלק מהבעיות מעגלים ל־<bdi>96500</bdi>.",
+          "כשמבקשים את <bdi>ΔG°</bdi> ב־<bdi>kJ</bdi>, חלקו את ה־<bdi>J</bdi> ב־<bdi>1000</bdi> ושימו לב לסימן. <bdi>E°</bdi> חיובי חייב לתת <bdi>ΔG°</bdi> שלילי.",
+          "מכיוון ש־<bdi>K</bdi> תלוי באופן מעריכי ב־<bdi>nE°</bdi>, שינוי של <bdi>0.1 V</bdi> ב־<bdi>E°</bdi> כש־<bdi>n = 2</bdi> משנה את <bdi>log K</bdi> בכ־<bdi>3.4</bdi>. גם הבדלי פוטנציאל קטנים מביאים ליחסי שיווי משקל גדולים.",
+          "מצבים תקניים חשובים: <bdi>1 M</bdi> ו־<bdi>1 bar</bdi> הם ההתייחסות שמאחורי <bdi>E°</bdi>. מי ים או דם רחוקים מאוד מהמצב התקני, ולכן בעבודה מדויקת תיקוני נרנסט אינם בגדר רשות."
+        ],
+        "worked": {
+          "title": "<bdi>ΔG°</bdi> ו־<bdi>K</bdi> עבור תא <bdi>Zn/Cu</bdi> (<bdi>n = 2</bdi>, <bdi>E° = 1.10 V</bdi>)",
+          "steps": [
+            "<bdi>ΔG° = −n F E° = −(2)(96485 C/mol)(1.10 V)</bdi>.",
+            "<bdi>ΔG° = −2.123 × 10<sup>5</sup> J/mol = −212 kJ/mol</bdi> (למול של תגובה כפי שנכתבה).",
+            "<bdi>log K = n E° / 0.0592 = 2(1.10)/0.0592 = 37.2</bdi>.",
+            "<bdi>K = 10<sup>37.2</sup> ≈ 1.6 × 10<sup>37</sup></bdi> (עצום, התוצרים מועדפים).",
+            "סימנים: <bdi>E° > 0</bdi>, <bdi>ΔG° < 0</bdi>, <bdi>K ≫ 1</bdi>, וכולם עקביים."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "חישוב <bdi>E°</bdi> מתוך <bdi>K</bdi>",
+            "steps": [
+              "נניח ש־<bdi>n = 2</bdi> ו־<bdi>K = 1.0 × 10<sup>10</sup></bdi>.",
+              "<bdi>E° = (0.0592/2) log(1.0×10<sup>10</sup>) = 0.0296 × 10 = 0.296 V</bdi>.",
+              "בדיקה: <bdi>E°</bdi> חיובי תואם ל־<bdi>K > 1</bdi>."
+            ]
+          }
+        ],
+        "mistake": {
+          "wrong": "הכפלת <bdi>E°</bdi> ב־<bdi>n</bdi> באותו אופן שמכפילים את <bdi>ΔG</bdi>.",
+          "whyWrong": "<bdi>E°</bdi> הוא גודל אינטנסיבי. <bdi>n</bdi> שייך ל־<bdi>ΔG° = −nFE°</bdi> ולגורם של נרנסט, ולא כמכפיל של הפוטנציאל שבטבלה עצמו.",
+          "correct": "השאירו את <bdi>E°</bdi> כפי שהוא בטבלה. הציבו את <bdi>n</bdi> רק ב־<bdi>−nFE°</bdi> וב־<bdi>(0.0592/n) log Q</bdi>."
+        }
+      },
+      {
+        "id": "nernst-faraday",
+        "heading": "משוואת נרנסט ואלקטרוליזה לפי פאראדיי",
+        "paragraphs": [
+          "בתנאים לא תקניים משתמשים במשוואת נרנסט <bdi>(Nernst equation)</bdi>. ב־<bdi>25 °C</bdi>: <bdi>E = E° − (0.0592/n) log Q</bdi>.",
+          "<bdi>Q</bdi> הוא מנת התגובה <bdi>(reaction quotient)</bdi> של תגובת התא כפי שנכתבה. מוצקים ונוזלים טהורים נחשבים <bdi>1</bdi>. עבור יונים מימיים מציבים ריכוזים ועבור גזים מציבים לחצים (ב־<bdi>bar</bdi>).",
+          "אם <bdi>Q < 1</bdi> (המגיבים מועדפים במובן המנה), <bdi>log Q</bdi> שלילי ו־<bdi>E > E°</bdi>. אם <bdi>Q > 1</bdi>, אז <bdi>E < E°</bdi>.",
+          "בשיווי משקל <bdi>Q = K</bdi> ו־<bdi>E = 0</bdi>, ומכאן חוזרים אל <bdi>E° = (0.0592/n) log K</bdi>.",
+          "אלקטרוליזה <bdi>(electrolysis)</bdi> מניעה תגובה לא ספונטנית בעזרת ספק כוח חיצוני. האלקטרונים עדיין נכנסים בקתודה (חיזור) ויוצאים באנודה (חמצון), אבל עכשיו סימני האלקטרודות שונים מהמקרה הגלווני באופן שימושי, ולכן עקבו אחרי חצאי התגובות בקפידה.",
+          "חוק פאראדיי: מולי <bdi>e<sup>−</sup></bdi> שווים למטען חלקי <bdi>F</bdi>, כלומר <bdi>(I t) / F</bdi>, כש־<bdi>I</bdi> באמפר ו־<bdi>t</bdi> בשניות (כי <bdi>1 A·s = 1 C</bdi>). קשרו בין מולי <bdi>e<sup>−</sup></bdi> למולי התוצר בעזרת הסטויכיומטריה של חצי התגובה.",
+          "דוגמה: <bdi>Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu</bdi> דורש <bdi>2 mol e<sup>−</sup></bdi> לכל מול של <bdi>Cu</bdi> שמשקיע.",
+          "בתאי ריכוז <bdi>(concentration cell)</bdi> <bdi>E° = 0</bdi> כי אותו זוג מופיע בשני הצדדים. אז <bdi>E = −(0.0592/n) log Q</bdi>, והוא מונע רק על ידי יחס הריכוזים.",
+          "באלקטרוליזה של <bdi>NaCl</bdi> מימי, ייתכן שמים יחוזרו או יחומצנו במקום <bdi>Na<sup>+</sup></bdi> או <bdi>Cl<sup>−</sup></bdi>, בהתאם לפוטנציאלים ולמתח היתר. קראו בעיון את התוצרים שהבעיה מציינת.",
+          "יעילות זרם קטנה מ־<bdi>100%</bdi> פירושה שחלק מהמטען יצר תוצרי לוואי. בבעיות פאראדיי בבחינה מניחים בדרך כלל יעילות של <bdi>100%</bdi>, אלא אם נאמר אחרת.",
+          "עבור גזים ב־<bdi>Q</bdi>, השתמשו בלחץ ב־<bdi>bar</bdi> (בקירוב <bdi>atm</bdi> בקורס הזה, אלא אם נאמר אחרת). לדוגמה, <bdi>2 H<sup>+</sup> + 2 e<sup>−</sup> → H<sub>2</sub></bdi> משתמש ב־<bdi>P<sub>H<sub>2</sub></sub></bdi> ב־<bdi>Q</bdi>.",
+          "בבעיות של ציפוי אלקטרוליטי מבקשים לפעמים עובי. המירו מסה לנפח בעזרת הצפיפות, ואז עובי הוא נפח חלקי שטח. זו סטויכיומטריה בתוספת גאומטריה, שעדיין מונעת על ידי חוק פאראדיי.",
+          "כשנתונים זרם וזמן, המירו דקות לשניות לפני השימוש ב־<bdi>Q = I t</bdi>. ערבוב דקות עם אמפרים הוא שגיאת יחידות שקטה שהורסת חישובי פאראדיי."
+        ],
+        "worked": {
+          "title": "נרנסט עבור <bdi>Zn|Zn<sup>2+</sup>(0.100 M)||Cu<sup>2+</sup>(1.00 M)|Cu</bdi>",
+          "steps": [
+            "תגובת התא: <bdi>Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu</bdi>. <bdi>n = 2</bdi>. <bdi>E° = 1.10 V</bdi>.",
+            "<bdi>Q = [Zn<sup>2+</sup>]/[Cu<sup>2+</sup>] = 0.100/1.00 = 0.100</bdi>.",
+            "<bdi>E = 1.10 − (0.0592/2) log(0.100) = 1.10 − 0.0296(−1) = 1.10 + 0.0296 = 1.13 V</bdi>.",
+            "<bdi>E > E°</bdi> כי <bdi>Q < 1</bdi>."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "מסת <bdi>Cu</bdi> שמשקיע זרם של <bdi>2.00 A</bdi> במשך <bdi>1.00 h</bdi>",
+            "steps": [
+              "מטען = <bdi>I t = (2.00 A)(3600 s) = 7200 C</bdi>.",
+              "מולי <bdi>e<sup>−</sup> = 7200 / 96485 ≈ 0.0746 mol e<sup>−</sup></bdi>.",
+              "<bdi>Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu</bdi> ← מולי <bdi>Cu = 0.0746 / 2 = 0.0373 mol</bdi>.",
+              "מסה = <bdi>0.0373 × 63.55 g/mol ≈ 2.37 g</bdi>."
+            ]
+          },
+          {
+            "title": "הזמן לציפוי <bdi>1.00 g Ag</bdi> (<bdi>Ag<sup>+</sup> + e<sup>−</sup> → Ag</bdi>) בזרם של <bdi>1.50 A</bdi>",
+            "steps": [
+              "מולי <bdi>Ag = 1.00 / 107.87 ≈ 0.00927 mol</bdi>.",
+              "מולי <bdi>e<sup>−</sup> = 0.00927</bdi> (אלקטרון אחד לכל <bdi>Ag</bdi>).",
+              "מטען = <bdi>0.00927 × 96485 ≈ 894 C</bdi>.",
+              "<bdi>t = Q / I = 894 / 1.50 ≈ 596 s ≈ 9.93 min</bdi>."
+            ]
+          },
+          {
+            "title": "תא ריכוז: <bdi>Cu|Cu<sup>2+</sup>(0.010 M)||Cu<sup>2+</sup>(1.0 M)|Cu</bdi>",
+            "steps": [
+              "אותו זוג בשני הצדדים ← <bdi>E° = 0</bdi>.",
+              "הכיוון הספונטני: חיזור בחצי התא של <bdi>1.0 M</bdi> וחמצון בחצי התא של <bdi>0.010 M</bdi>.",
+              "<bdi>Q = [Cu<sup>2+</sup>]<sub>dilute</sub> / [Cu<sup>2+</sup>]<sub>concentrated</sub> = 0.010/1.0 = 0.010</bdi>, ו־<bdi>n = 2</bdi>.",
+              "<bdi>E = 0 − (0.0592/2) log(0.010) = 0.0592 V</bdi>.",
+              "מתכת <bdi>Cu</bdi> מתמוססת בחצי התא המדולל ומשקיעה בחצי התא המרוכז."
+            ]
+          },
+          {
+            "title": "המטען להשקעת <bdi>0.500 g Au</bdi> מ־<bdi>Au<sup>3+</sup></bdi> (<bdi>Au<sup>3+</sup> + 3 e<sup>−</sup> → Au</bdi>)",
+            "steps": [
+              "מולי <bdi>Au = 0.500 / 196.97 ≈ 0.00254 mol</bdi>.",
+              "מולי <bdi>e<sup>−</sup> = 3 × 0.00254 = 0.00762 mol</bdi>.",
+              "מטען = <bdi>0.00762 × 96485 ≈ 735 C</bdi>.",
+              "ב־<bdi>0.500 A</bdi>, <bdi>t = 735 / 0.500 = 1470 s ≈ 24.5 min</bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-electrochemistry",
+        "heading": "בדקו את עצמכם",
+        "paragraphs": [],
+        "check": {
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
+          "items": [
+            {
+              "q": "מהו <bdi>E°<sub>cell</sub></bdi> של <bdi>Zn/Cu</bdi> כש־<bdi>E°(Cu) = +0.34 V</bdi> ו־<bdi>E°(Zn) = −0.76 V</bdi>?",
+              "a": "<bdi>1.10 V</bdi>."
+            },
+            {
+              "q": "מהו הקשר בין <bdi>ΔG°</bdi> ל־<bdi>E°</bdi>?",
+              "a": "<bdi>ΔG° = −n F E°</bdi>."
+            },
+            {
+              "q": "מהי משוואת נרנסט ב־<bdi>25 °C</bdi>?",
+              "a": "<bdi>E = E° − (0.0592/n) log Q</bdi>."
+            },
+            {
+              "q": "כמה מולי אלקטרונים עוברים בזרם <bdi>I</bdi> במשך זמן <bdi>t</bdi>?",
+              "a": "<bdi>n<sub>e</sub> = I t / F</bdi> (<bdi>I</bdi> ב־<bdi>A</bdi>, <bdi>t</bdi> ב־<bdi>s</bdi>, <bdi>F ≈ 96485 C/mol</bdi>)."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t22-q1": {
+      "q": "חשבו את <bdi>E°<sub>cell</sub></bdi> של תא גלווני <bdi>(galvanic cell)</bdi> שבנוי מ־<bdi>Zn|Zn<sup>2+</sup></bdi> ומ־<bdi>Cu<sup>2+</sup>|Cu</bdi>.",
+      "given": [
+        "E°(Cu<sup>2+</sup>/Cu) = +0.34 V",
+        "E°(Zn<sup>2+</sup>/Zn) = −0.76 V"
+      ],
+      "answer": "<bdi>E°<sub>cell</sub> = +1.10 V</bdi>",
+      "steps": [
+        "ל־<bdi>Cu<sup>2+</sup></bdi> פוטנציאל החיזור הגבוה יותר, ולכן הוא הקתודה <bdi>(cathode)</bdi> ו־<bdi>Zn</bdi> הוא האנודה <bdi>(anode)</bdi>",
+        "<bdi>E°<sub>cell</sub> = E°<sub>cathode</sub> − E°<sub>anode</sub></bdi>",
+        "<bdi>E°<sub>cell</sub> = 0.34 − (−0.76) = +1.10 V</bdi>"
+      ]
+    },
+    "t22-q2": {
+      "q": "לתגובת חמצון־חיזור יש <bdi>E°<sub>cell</sub></bdi> חיובי. מה זה אומר על <bdi>ΔG°</bdi> ועל <bdi>K</bdi>?",
+      "answer": "<bdi>ΔG° < 0</bdi> ו־<bdi>K > 1</bdi>",
+      "explanation": "<bdi>ΔG° = −nFE°</bdi>, ולכן <bdi>E°</bdi> חיובי פירושו <bdi>ΔG°</bdi> שלילי. מכיוון ש־<bdi>ΔG° = −RT ln K</bdi>, <bdi>ΔG°</bdi> שלילי פירושו <bdi>ln K > 0</bdi>, ולכן <bdi>K > 1</bdi> והתוצרים מועדפים בשיווי משקל."
+    },
+    "t22-q3": {
+      "q": "מצאו את הפוטנציאל ב־<bdi>25 °C</bdi> של התא <bdi>Zn(s)|Zn<sup>2+</sup>(1.0 M)||Cu<sup>2+</sup>(0.010 M)|Cu(s)</bdi> בעזרת משוואת נרנסט <bdi>(Nernst equation)</bdi>.",
+      "given": [
+        "<bdi>E°<sub>cell</sub> = 1.10 V</bdi>",
+        "n = 2",
+        "[Zn<sup>2+</sup>] = 1.0 M, [Cu<sup>2+</sup>] = 0.010 M",
+        "<bdi>RT/F × ln10 = 0.05916 V</bdi> ב־<bdi>25 °C</bdi>"
+      ],
+      "answer": "<bdi>E = 1.04 V</bdi>",
+      "steps": [
+        "תגובת התא: <bdi>Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu</bdi>, ולכן <bdi>Q = [Zn<sup>2+</sup>]/[Cu<sup>2+</sup>] = 1.0 / 0.010 = 100</bdi>",
+        "נרנסט: <bdi>E = E° − (0.05916 / n) log Q</bdi>",
+        "<bdi>E = 1.10 − (0.05916 / 2)(2.00) = 1.10 − 0.059 = 1.04 V</bdi>"
+      ]
+    },
+    "t22-q4": {
+      "q": "זרם של <bdi>2.00 A</bdi> עובר בתמיסת <bdi>CuSO<sub>4</sub></bdi> במשך <bdi>30.0 min</bdi>. איזו מסת נחושת מושקעת בקתודה?",
+      "given": [
+        "I = 2.00 A",
+        "t = 30.0 min = 1800. s",
+        "Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu",
+        "F = 96485 C/mol, M(Cu) = 63.55 g/mol"
+      ],
+      "answer": "<bdi>1.19 g</bdi>",
+      "steps": [
+        "Q = It = 2.00 × 1800. = 3.60 × 10<sup>3</sup> C",
+        "n(e<sup>−</sup>) = 3600 / 96485 = 0.03731 mol",
+        "n(Cu) = 0.03731 / 2 = 0.01866 mol",
+        "m = 0.01866 × 63.55 = 1.19 g"
+      ]
+    },
+    "t22-q5": {
+      "q": "בתא גלווני <bdi>Zn/Cu</bdi>, איזו אלקטרודה היא האנודה, לאיזה כיוון זורמים האלקטרונים בחוט החיצוני, ומה תפקידו של גשר המלח <bdi>(salt bridge)</bdi>?",
+      "answer": "<bdi>Zn</bdi> היא האנודה, האלקטרונים זורמים מ־<bdi>Zn</bdi> אל <bdi>Cu</bdi>, וגשר המלח שומר על ניטרליות חשמלית בשני התאים",
+      "explanation": "חמצון (<bdi>Zn → Zn<sup>2+</sup> + 2e<sup>−</sup></bdi>) מתרחש באנודה, והאלקטרונים עוברים דרך החוט אל קתודת ה־<bdi>Cu</bdi>, שם <bdi>Cu<sup>2+</sup></bdi> מחוזר. יונים נעים דרך גשר המלח כדי לאזן את המטען שמצטבר בכל חצי תא, וכך הזרם ממשיך לזרום."
+    }
+  }
+}

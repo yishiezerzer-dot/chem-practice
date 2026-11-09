@@ -8,6 +8,14 @@
     "en": "acid"
   },
   {
+    "he": "קבוע חומציות",
+    "en": "acid dissociation constant"
+  },
+  {
+    "he": "אנרגיית שפעול",
+    "en": "activation energy"
+  },
+  {
     "he": "תפוקה בפועל",
     "en": "actual yield"
   },
@@ -28,6 +36,14 @@
     "en": "amount of substance"
   },
   {
+    "he": "אמפיפרוטי",
+    "en": "amphiprotic"
+  },
+  {
+    "he": "אמפוטרי",
+    "en": "amphoteric"
+  },
+  {
     "he": "אנליט",
     "en": "analyte"
   },
@@ -40,12 +56,20 @@
     "en": "anion"
   },
   {
+    "he": "אנודה",
+    "en": "anode"
+  },
+  {
     "he": "אורביטל אנטי־קושר",
     "en": "antibonding orbital"
   },
   {
     "he": "תמיסה מימית",
     "en": "aqueous solution"
+  },
+  {
+    "he": "משוואת ארניוס",
+    "en": "Arrhenius equation"
   },
   {
     "he": "אטמוספרה",
@@ -72,8 +96,16 @@
     "en": "Aufbau principle"
   },
   {
+    "he": "אוטואיוניזציה",
+    "en": "autoionization"
+  },
+  {
     "he": "מסה אטומית ממוצעת",
     "en": "average atomic mass"
+  },
+  {
+    "he": "קצב ממוצע",
+    "en": "average rate"
   },
   {
     "he": "קבוע אבוגדרו",
@@ -148,6 +180,10 @@
     "en": "buffer"
   },
   {
+    "he": "קיבולת חציצה",
+    "en": "buffer capacity"
+  },
+  {
     "he": "ביורטה",
     "en": "buret"
   },
@@ -164,8 +200,16 @@
     "en": "catalyst"
   },
   {
+    "he": "קתודה",
+    "en": "cathode"
+  },
+  {
     "he": "קטיון",
     "en": "cation"
+  },
+  {
+    "he": "סימון תא",
+    "en": "cell notation"
   },
   {
     "he": "חוק שארל",
@@ -196,12 +240,24 @@
     "en": "coefficient"
   },
   {
+    "he": "תאוריית ההתנגשויות",
+    "en": "collision theory"
+  },
+  {
     "he": "שריפה",
     "en": "combustion"
   },
   {
+    "he": "אפקט היון המשותף",
+    "en": "common-ion effect"
+  },
+  {
     "he": "משוואה יונית מלאה",
     "en": "complete ionic equation"
+  },
+  {
+    "he": "יון קומפלקסי",
+    "en": "complex ion"
   },
   {
     "he": "תרכובת",
@@ -216,6 +272,22 @@
     "en": "concentration"
   },
   {
+    "he": "תא ריכוז",
+    "en": "concentration cell"
+  },
+  {
+    "he": "חומצה צמודה",
+    "en": "conjugate acid"
+  },
+  {
+    "he": "זוג חומצה־בסיס צמוד",
+    "en": "conjugate acid-base pair"
+  },
+  {
+    "he": "בסיס צמוד",
+    "en": "conjugate base"
+  },
+  {
     "he": "הצמדה",
     "en": "conjugation"
   },
@@ -226,6 +298,10 @@
   {
     "he": "מקדם המרה",
     "en": "conversion factor"
+  },
+  {
+    "he": "מספר קואורדינציה",
+    "en": "coordination number"
   },
   {
     "he": "אלקטרון ליבה",
@@ -250,6 +326,10 @@
   {
     "he": "דיאמגנטי",
     "en": "diamagnetic"
+  },
+  {
+    "he": "חוק קצב דיפרנציאלי",
+    "en": "differential rate law"
   },
   {
     "he": "דיפוזיה",
@@ -292,6 +372,10 @@
     "en": "elastic collision"
   },
   {
+    "he": "אלקטרוליזה",
+    "en": "electrolysis"
+  },
+  {
     "he": "אלקטרוליט",
     "en": "electrolyte"
   },
@@ -326,6 +410,10 @@
   {
     "he": "יסוד",
     "en": "element"
+  },
+  {
+    "he": "שלב אלמנטרי",
+    "en": "elementary step"
   },
   {
     "he": "פליטה",
@@ -380,6 +468,10 @@
     "en": "exothermic"
   },
   {
+    "he": "קבוע פאראדיי",
+    "en": "Faraday constant"
+  },
+  {
     "he": "החוק הראשון",
     "en": "first law"
   },
@@ -396,6 +488,10 @@
     "en": "formal charge"
   },
   {
+    "he": "קבוע היווצרות",
+    "en": "formation constant"
+  },
+  {
     "he": "מסת נוסחה",
     "en": "formula mass"
   },
@@ -406,6 +502,10 @@
   {
     "he": "תדירות",
     "en": "frequency"
+  },
+  {
+    "he": "תא גלווני",
+    "en": "galvanic cell"
   },
   {
     "he": "גז",
@@ -432,6 +532,14 @@
     "en": "group"
   },
   {
+    "he": "נקודת חצי שקילות",
+    "en": "half-equivalence point"
+  },
+  {
+    "he": "זמן מחצית חיים",
+    "en": "half-life"
+  },
+  {
     "he": "חצי תגובה",
     "en": "half-reaction"
   },
@@ -446,6 +554,10 @@
   {
     "he": "קיבול חום",
     "en": "heat capacity"
+  },
+  {
+    "he": "משוואת הנדרסון־הסלבך",
+    "en": "Henderson–Hasselbalch equation"
   },
   {
     "he": "חוק הס",
@@ -480,6 +592,10 @@
     "en": "hydrogen bond"
   },
   {
+    "he": "הידרוליזה",
+    "en": "hydrolysis"
+  },
+  {
     "he": "גז אידאלי",
     "en": "ideal gas"
   },
@@ -492,8 +608,20 @@
     "en": "indicator"
   },
   {
+    "he": "משיכה אינדוקטיבית",
+    "en": "inductive withdrawal"
+  },
+  {
     "he": "אינו מסיס",
     "en": "insoluble"
+  },
+  {
+    "he": "חוק קצב אינטגרלי",
+    "en": "integrated rate law"
+  },
+  {
+    "he": "תוצר ביניים",
+    "en": "intermediate"
   },
   {
     "he": "כוח בין־מולקולרי",
@@ -552,8 +680,28 @@
     "en": "leading zero"
   },
   {
+    "he": "אפקט ההשוואה",
+    "en": "leveling effect"
+  },
+  {
+    "he": "חומצת לואיס",
+    "en": "Lewis acid"
+  },
+  {
+    "he": "בסיס לואיס",
+    "en": "Lewis base"
+  },
+  {
+    "he": "הגדרת לואיס",
+    "en": "Lewis definition"
+  },
+  {
     "he": "מבנה לואיס",
     "en": "Lewis structure"
+  },
+  {
+    "he": "ליגנד",
+    "en": "ligand"
   },
   {
     "he": "מגיב מגביל",
@@ -608,6 +756,10 @@
     "en": "measurement"
   },
   {
+    "he": "שיטת הקצבים ההתחלתיים",
+    "en": "method of initial rates"
+  },
+  {
     "he": "מיקרו־מצב",
     "en": "microstate"
   },
@@ -618,6 +770,10 @@
   {
     "he": "מסה מולרית",
     "en": "molar mass"
+  },
+  {
+    "he": "מסיסות מולרית",
+    "en": "molar solubility"
   },
   {
     "he": "נפח מולרי",
@@ -660,8 +816,16 @@
     "en": "molecular shape"
   },
   {
+    "he": "מולקולריות",
+    "en": "molecularity"
+  },
+  {
     "he": "מולקולה",
     "en": "molecule"
+  },
+  {
+    "he": "משוואת נרנסט",
+    "en": "Nernst equation"
   },
   {
     "he": "משוואה יונית נטו",
@@ -704,6 +868,10 @@
     "en": "orbital"
   },
   {
+    "he": "סדר תגובה",
+    "en": "order"
+  },
+  {
     "he": "חמצון",
     "en": "oxidation"
   },
@@ -714,6 +882,10 @@
   {
     "he": "מחמצן",
     "en": "oxidizing agent"
+  },
+  {
+    "he": "חומצה אוקסיגנית",
+    "en": "oxoacid"
   },
   {
     "he": "פרמגנטי",
@@ -734,6 +906,10 @@
   {
     "he": "הרכב באחוזי מסה",
     "en": "percent composition"
+  },
+  {
+    "he": "אחוז יינון",
+    "en": "percent ionization"
   },
   {
     "he": "אחוז תפוקה",
@@ -788,6 +964,14 @@
     "en": "polyatomic ion"
   },
   {
+    "he": "חומצה פוליפרוטית",
+    "en": "polyprotic acid"
+  },
+  {
+    "he": "גורם קדם־מעריכי",
+    "en": "pre-exponential factor"
+  },
+  {
     "he": "משקע",
     "en": "precipitate"
   },
@@ -824,12 +1008,32 @@
     "en": "proton"
   },
   {
+    "he": "ניתוח איכותי",
+    "en": "qualitative analysis"
+  },
+  {
     "he": "מספר קוונטי",
     "en": "quantum number"
   },
   {
+    "he": "קבוע קצב",
+    "en": "rate constant"
+  },
+  {
+    "he": "חוק קצב",
+    "en": "rate law"
+  },
+  {
+    "he": "שלב קובע קצב",
+    "en": "rate-determining step"
+  },
+  {
     "he": "מגיב",
     "en": "reactant"
+  },
+  {
+    "he": "מנגנון תגובה",
+    "en": "reaction mechanism"
   },
   {
     "he": "מנת תגובה",
@@ -880,12 +1084,24 @@
     "en": "salt"
   },
   {
+    "he": "גשר מלח",
+    "en": "salt bridge"
+  },
+  {
+    "he": "תמיסה רוויה",
+    "en": "saturated solution"
+  },
+  {
     "he": "כתיב מדעי",
     "en": "scientific notation"
   },
   {
     "he": "החוק השני",
     "en": "second law"
+  },
+  {
+    "he": "שיקוע סלקטיבי",
+    "en": "selective precipitation"
   },
   {
     "he": "קליפה",
@@ -902,6 +1118,10 @@
   {
     "he": "ספרה משמעותית",
     "en": "significant figure"
+  },
+  {
+    "he": "מכפלת מסיסות",
+    "en": "solubility product"
   },
   {
     "he": "כלל מסיסות",
@@ -944,8 +1164,16 @@
     "en": "spontaneous"
   },
   {
+    "he": "פוטנציאל תא תקני",
+    "en": "standard cell potential"
+  },
+  {
     "he": "אנתלפיית היווצרות סטנדרטית",
     "en": "standard enthalpy of formation"
+  },
+  {
+    "he": "פוטנציאל חיזור תקני",
+    "en": "standard reduction potential"
   },
   {
     "he": "תמיסה סטנדרטית",
@@ -980,6 +1208,14 @@
     "en": "stoichiometry"
   },
   {
+    "he": "חומצה חזקה",
+    "en": "strong acid"
+  },
+  {
+    "he": "בסיס חזק",
+    "en": "strong base"
+  },
+  {
     "he": "אלקטרוליט חזק",
     "en": "strong electrolyte"
   },
@@ -998,6 +1234,10 @@
   {
     "he": "תת־קליפה",
     "en": "subshell"
+  },
+  {
+    "he": "רוויית־יתר",
+    "en": "supersaturated"
   },
   {
     "he": "סביבה",
@@ -1028,6 +1268,10 @@
     "en": "titration"
   },
   {
+    "he": "עקומת טיטרציה",
+    "en": "titration curve"
+  },
+  {
     "he": "אפס בסוף המספר",
     "en": "trailing zero"
   },
@@ -1054,6 +1298,10 @@
   {
     "he": "אלקטרון בודד",
     "en": "unpaired electron"
+  },
+  {
+    "he": "בלתי רוויה",
+    "en": "unsaturated"
   },
   {
     "he": "אלקטרון ערכיות",
@@ -1086,6 +1334,14 @@
   {
     "he": "מספר גל",
     "en": "wavenumber"
+  },
+  {
+    "he": "חומצה חלשה",
+    "en": "weak acid"
+  },
+  {
+    "he": "בסיס חלש",
+    "en": "weak base"
   },
   {
     "he": "אלקטרוליט חלש",
