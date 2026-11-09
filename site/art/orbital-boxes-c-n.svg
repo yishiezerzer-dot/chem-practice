@@ -1,52 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300" role="img" aria-label="Orbital box diagrams for carbon and nitrogen showing Hund rule">
-<rect width="520" height="300" fill="#FFFFFF"/>
-<text x="260" y="24" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">Orbital box diagrams — Hund’s rule</text>
-<text x="40" y="60" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">C (Z=6): 1s² 2s² 2p²</text>
-<text x="54.0" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">1s</text>
-<rect x="40" y="80" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="50" y1="102" x2="50" y2="86" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="50,86 46,92 54,92" fill="#1A1A1A"/>
-<line x1="58" y1="86" x2="58" y2="102" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="58,102 54,96 62,96" fill="#1A1A1A"/>
-<text x="100.0" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">2s</text>
-<rect x="86" y="80" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="96" y1="102" x2="96" y2="86" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="96,86 92,92 100,92" fill="#1A1A1A"/>
-<line x1="104" y1="86" x2="104" y2="102" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="104,102 100,96 108,96" fill="#1A1A1A"/>
-<text x="180.0" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">2p</text>
-<rect x="132" y="80" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="146.0" y1="102" x2="146.0" y2="86" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="146.0,86 142.0,92 150.0,92" fill="#1A1A1A"/>
-<rect x="166" y="80" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="180.0" y1="102" x2="180.0" y2="86" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="180.0,86 176.0,92 184.0,92" fill="#1A1A1A"/>
-<rect x="200" y="80" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<text x="40" y="130" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">2 unpaired e⁻ (Hund: separate before pairing)</text>
-<text x="40" y="170" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">N (Z=7): 1s² 2s² 2p³</text>
-<text x="54.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">1s</text>
-<rect x="40" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="50" y1="212" x2="50" y2="196" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="50,196 46,202 54,202" fill="#1A1A1A"/>
-<line x1="58" y1="196" x2="58" y2="212" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="58,212 54,206 62,206" fill="#1A1A1A"/>
-<text x="100.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">2s</text>
-<rect x="86" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="96" y1="212" x2="96" y2="196" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="96,196 92,202 100,202" fill="#1A1A1A"/>
-<line x1="104" y1="196" x2="104" y2="212" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="104,212 100,206 108,206" fill="#1A1A1A"/>
-<text x="180.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#1A1A1A">2p</text>
-<rect x="132" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="146.0" y1="212" x2="146.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="146.0,196 142.0,202 150.0,202" fill="#1A1A1A"/>
-<rect x="166" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="180.0" y1="212" x2="180.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="180.0,196 176.0,202 184.0,202" fill="#1A1A1A"/>
-<rect x="200" y="190" width="28" height="28" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
-<line x1="214.0" y1="212" x2="214.0" y2="196" stroke="#1A1A1A" stroke-width="2"/>
-<polygon points="214.0,196 210.0,202 218.0,202" fill="#1A1A1A"/>
-<text x="40" y="240" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">3 unpaired e⁻ — half-filled 2p (extra stability)</text>
-<text x="260" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Each box = one orbital; arrows = electron spin (↑ / ↓).</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 276" width="520" height="276" role="img" aria-label="Orbital boxes for carbon and nitrogen stacked by energy">
+<rect width="520" height="276" fill="#FFFFFF"/>
+<text x="260.0" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">Orbital box diagrams: Hund’s rule</text>
+<text x="128.0" y="198.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">1s</text>
+<rect x="137.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="146.0" y1="201" x2="146.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="146.0,185 142.0,192 150.0,192" fill="#1A1A1A"/><line x1="154.0" y1="185" x2="154.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="154.0,201 150.0,194 158.0,194" fill="#1A1A1A"/>
+<text x="128.0" y="158.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2s</text>
+<rect x="137.0" y="140" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="146.0" y1="161" x2="146.0" y2="150" stroke="#1A1A1A" stroke-width="2"/><polygon points="146.0,145 142.0,152 150.0,152" fill="#1A1A1A"/><line x1="154.0" y1="145" x2="154.0" y2="156" stroke="#1A1A1A" stroke-width="2"/><polygon points="154.0,161 150.0,154 158.0,154" fill="#1A1A1A"/>
+<text x="97.0" y="118.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2p</text>
+<rect x="106.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="119.0" y1="121" x2="119.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="119.0,105 115.0,112 123.0,112" fill="#1A1A1A"/>
+<rect x="137.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="150.0" y1="121" x2="150.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="150.0,105 146.0,112 154.0,112" fill="#1A1A1A"/>
+<rect x="168.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="150" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">C (Z = 6)</text>
+<text x="150" y="81" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">1s² 2s² 2p²</text>
+<text x="150" y="232" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#17754A">2 unpaired e⁻</text>
+<text x="348.0" y="198.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">1s</text>
+<rect x="357.0" y="180" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="366.0" y1="201" x2="366.0" y2="190" stroke="#1A1A1A" stroke-width="2"/><polygon points="366.0,185 362.0,192 370.0,192" fill="#1A1A1A"/><line x1="374.0" y1="185" x2="374.0" y2="196" stroke="#1A1A1A" stroke-width="2"/><polygon points="374.0,201 370.0,194 378.0,194" fill="#1A1A1A"/>
+<text x="348.0" y="158.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2s</text>
+<rect x="357.0" y="140" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="366.0" y1="161" x2="366.0" y2="150" stroke="#1A1A1A" stroke-width="2"/><polygon points="366.0,145 362.0,152 370.0,152" fill="#1A1A1A"/><line x1="374.0" y1="145" x2="374.0" y2="156" stroke="#1A1A1A" stroke-width="2"/><polygon points="374.0,161 370.0,154 378.0,154" fill="#1A1A1A"/>
+<text x="317.0" y="118.0" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#1A1A1A">2p</text>
+<rect x="326.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="339.0" y1="121" x2="339.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="339.0,105 335.0,112 343.0,112" fill="#1A1A1A"/>
+<rect x="357.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="370.0" y1="121" x2="370.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="370.0,105 366.0,112 374.0,112" fill="#1A1A1A"/>
+<rect x="388.0" y="100" width="26" height="26" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="1.5"/><line x1="401.0" y1="121" x2="401.0" y2="110" stroke="#1A1A1A" stroke-width="2"/><polygon points="401.0,105 397.0,112 405.0,112" fill="#1A1A1A"/>
+<text x="370" y="62" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">N (Z = 7)</text>
+<text x="370" y="81" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">1s² 2s² 2p³</text>
+<text x="370" y="232" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#17754A">3 unpaired e⁻ (half-filled 2p)</text>
+<text x="260.0" y="262" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#5F6B7A">Higher boxes = higher energy. Hund: fill 2p singly before pairing.</text>
 </svg>

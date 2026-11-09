@@ -897,7 +897,7 @@
           ],
           "figure": {
             "src": "art/orbital-shapes-1s-2p-3d.svg",
-            "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, and a four-leaf 3d clover (dx2−y2 style)."
+            "alt": "Schematic orbital shapes: spherical 1s, dumbbell 2p with plus and minus lobes, a four-leaf 3d clover (dx2−y2 style), and a 3d dz2 dumbbell with a ring around its middle."
           },
           "why": "Orbital shapes matter later for bonding: which orbitals overlap, and at what angle, sets molecular geometry."
         },
@@ -1367,7 +1367,7 @@
           "why": "Shape and polarity control boiling points, solubility, and how molecules pack. VSEPR is the fast prediction tool before you meet hybridization.",
           "figure": {
             "src": "art/vsepr-sf4-seesaw.svg",
-            "alt": "Three-dimensional seesaw shape of SF4 from trigonal bipyramidal electron geometry with an equatorial lone pair, and a net dipole arrow showing the molecule is polar."
+            "alt": "Three-dimensional seesaw shape of SF4 from trigonal bipyramidal electron geometry with an equatorial lone pair; axial F–S–F bent to about 173° and equatorial F–S–F squeezed to about 102°; the molecule is labeled polar (μ ≈ 0.63 D)."
           },
           "worked": {
             "title": "Shape and polarity of SF₄",
