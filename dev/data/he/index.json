@@ -1,0 +1,7 @@
+{
+  "lang": "he",
+  "note": "Hebrew content overlay. English in data/*.json stays the source of truth. One file per topic in topics/<topic id>.json; list each translated topic id here. Missing topics, sections, cards or fields fall back to English.",
+  "topics": [
+    "measurement-units-and-significant-figure"
+  ]
+}
