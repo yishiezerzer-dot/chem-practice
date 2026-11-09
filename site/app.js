@@ -58,7 +58,9 @@ function overlay(en, he) {
 const qL = q => { if (!isHe()) return q; const h = HE[q.topic]?.questions?.[q.id]; return h ? overlay(q, h) : { ...q, _en: true }; };
 function readingL(tid) {
   const r = readingOf(tid); if (!r || !isHe()) return r;
-  const hr = HE[tid]?.reading; if (!hr) return { ...r, _en: true };
+  const hr = HE[tid]?.reading;
+  // Whole reading untranslated: every section is English too (`_all` = the one tag under the title is enough).
+  if (!hr) return { ...r, _en: true, sections: (r.sections || []).map(s => ({ ...s, _en: true, _all: true })) };
   const byId = Object.fromEntries((hr.sections || []).map(s => [s.id, s]));
   return { ...r, sections: (r.sections || []).map(s => byId[s.id] ? overlay(s, byId[s.id]) : { ...s, _en: true }) };
 }
@@ -69,6 +71,8 @@ const bookRef = t => ltr(esc(ref(t)));
 const fbAttr = x => x && x._en ? ' dir="ltr" lang="en"' : '';
 const enOnly = x => x && x._en ? `<span class="tag en-only">${esc(T('englishOnly'))}</span> ` : '';
 /** Card text: English renders as before; in Hebrew mode, lines without Hebrew letters (formulas, numbers) are isolated left-to-right. */
+/** Heading/label text: Hebrew may carry <bdi>(English term)</bdi>; English stays escaped as before. */
+const hd = s => isHe() ? fmtRich(s) : esc(s);
 const tx = s => !isHe() ? esc(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
 
 const plain = x => String(x == null ? '' : x).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
@@ -198,8 +202,8 @@ function renderWorked(w) {
 function renderSection(sec, i, t) {
   let h = '';
   const aid = secAnchorId(sec, i);
-  if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${esc(sec.heading)}</h3>`;
-  if (sec._en) h += `<p class="cap" style="margin:0 0 8px">${enOnly(sec)}</p>`;
+  if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${hd(sec.heading)}</h3>`;
+  if (sec._en && !sec._all) h += `<p class="cap" style="margin:0 0 8px">${enOnly(sec)}</p>`;
   (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${fmtRich(p)}</p>`; });
   if (sec.why) {
     h += `<div class="callout callout-why" data-why="1"><div class="cap">${esc(T('whyMatters'))}</div><p class="rp" style="margin:0">${fmtRich(sec.why)}</p></div>`;
@@ -221,7 +225,7 @@ function renderSection(sec, i, t) {
     const headingIsCheck = /check yourself/i.test(sec.heading || '') || /check yourself/i.test(chk.title || '') || (!!chk.title && chk.title === sec.heading);
     h += `<div class="callout callout-check" data-check="1">`;
     // Avoid a second "Check yourself" when the section H3 already says it
-    if (chk.title && !headingIsCheck) h += `<div class="cap">${esc(chk.title)}</div>`;
+    if (chk.title && !headingIsCheck) h += `<div class="cap">${hd(chk.title)}</div>`;
     if (chk.intro) h += `<p class="rp" style="margin:0 0 8px">${fmtRich(chk.intro)}</p>`;
     h += `<ol class="check-list">`;
     chk.items.forEach((it, qi) => {
@@ -356,7 +360,7 @@ function reading(tid) {
       secs.forEach((sec, i) => {
         const aid = secAnchorId(sec, i);
         const label = sec.heading || T('sectionN', i + 1);
-        h += `<li${fbAttr(sec)}><a class="rtoc-link" href="#${esc(aid)}">${esc(label)}</a></li>`;
+        h += `<li${fbAttr(sec)}><a class="rtoc-link" href="#${esc(aid)}">${hd(label)}</a></li>`;
       });
       h += `</ol></nav>`;
     }
@@ -452,8 +456,9 @@ function reveal(q, t) {
   const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
   const gap = (n) => esc(rest < n ? T('atEnd') : T('inCards', n));
   const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
-  // Hebrew steps: Hebrew lines use the reading markup; formula-only lines keep the English step layout, isolated left-to-right.
-  const step = s => !isHe() ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtStep(s));
+  // Hebrew steps: Hebrew lines use the reading markup; formula-only lines are isolated left-to-right.
+  // A formula-only line is one unbreakable left-to-right unit (CSS lets it scroll sideways); English-fallback cards keep the English layout.
+  const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(esc(s));
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${fbAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
