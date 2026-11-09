@@ -69,6 +69,9 @@ const tName = t => isHe() ? (HE[t.id]?.name || t.topic_he || t.topic_en) : t.top
 const ltr = html => isHe() ? `<bdi dir="ltr">${html}</bdi>` : html;
 const bookRef = t => ltr(esc(ref(t)));
 const fbAttr = x => x && x._en ? ' dir="ltr" lang="en"' : '';
+// Hebrew mode, translated content only: explicit RTL so a leading LTR isolate cannot flip the paragraph direction. English output is unchanged.
+const dirAttr = x => x && x._en ? fbAttr(x) : isHe() ? ' dir="rtl"' : '';
+const rtlList = x => isHe() && !(x && x._en) ? ' dir="rtl"' : '';
 const enOnly = x => x && x._en ? `<span class="tag en-only">${esc(T('englishOnly'))}</span> ` : '';
 /** Card text: English renders as before; in Hebrew mode, lines without Hebrew letters (formulas, numbers) are isolated left-to-right. */
 /** Heading/label text: Hebrew may carry <bdi>(English term)</bdi>; English stays escaped as before. */
@@ -194,10 +197,10 @@ function secAnchorId(sec, i) {
   const base = String(sec.heading || 'section').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   return (base || 'section') + '-' + i;
 }
-function renderWorked(w) {
+function renderWorked(w, fb) {
   if (!w) return '';
   const steps = (w.steps || []).map(s => `<li>${fmtRich(s)}</li>`).join('');
-  return `<div class="worked" data-worked="1"><div class="cap">${esc(T('workedExample'))}</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
+  return `<div class="worked" data-worked="1"><div class="cap">${esc(T('workedExample'))}</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps"${rtlList({ _en: fb })}>${steps}</ol></div>`;
 }
 function renderSection(sec, i, t) {
   let h = '';
@@ -211,7 +214,7 @@ function renderSection(sec, i, t) {
   const works = [];
   if (sec.worked) works.push(sec.worked);
   (sec.workedExamples || []).forEach(w => works.push(w));
-  works.forEach(w => { h += renderWorked(w); });
+  works.forEach(w => { h += renderWorked(w, sec._en); });
   if (sec.mistake) {
     const m = sec.mistake;
     h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">${esc(T('commonMistake'))}</div>`;
@@ -356,7 +359,7 @@ function reading(tid) {
   } else {
     const secs = r.sections || [];
     if (secs.length) {
-      h += `<nav class="rtoc" id="readingToc" aria-label="${esc(T('inThisReading'))}"><div class="cap">${esc(T('inThisReading'))}</div><ol class="rtoc-list">`;
+      h += `<nav class="rtoc" id="readingToc" aria-label="${esc(T('inThisReading'))}"><div class="cap">${esc(T('inThisReading'))}</div><ol class="rtoc-list"${isHe() ? (r._en ? ' dir="ltr"' : ' dir="rtl"') : ''}>`;
       secs.forEach((sec, i) => {
         const aid = secAnchorId(sec, i);
         const label = sec.heading || T('sectionN', i + 1);
@@ -412,7 +415,7 @@ function topic(tid) {
   const t = topicOf(tid), qs = qsFor(tid); setTop(tName(t), true);
   let h = `<div class="meta">${bookRef(t)}</div><h2>${esc(tName(t))}</h2>`;
   h += `<button class="link" id="reopenReading" style="padding-inline:0;margin-bottom:8px">${esc(T('readAgain'))}</button>`;
-  qs.forEach((q, i) => { const c = S.cards[q.id], lq = qL(q); h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow"${fbAttr(lq)}>${tx(lq.q)}</span><span class="cap">${esc(c ? (isDue(q.id) ? T('due') : T('done')) : T('new'))}</span></div>`; });
+  qs.forEach((q, i) => { const c = S.cards[q.id], lq = qL(q); h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow"${dirAttr(lq)}>${tx(lq.q)}</span><span class="cap">${esc(c ? (isDue(q.id) ? T('due') : T('done')) : T('new'))}</span></div>`; });
   h += `<div class="sticky"><button class="btn" id="go">${esc(T('startPractice', qs.length))}</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   $('#reopenReading').onclick = () => go('reading', tid);
@@ -430,7 +433,7 @@ function card() {
   setTop(T('cardNofM', done + 1, ss.total), true); $('#bar div').style.width = (100 * done / ss.total) + '%';
   const tip = esc(calc ? T('tipCalc') : T('tipConcept'));
   let h = `<div class="cap">${esc(tName(t))} · <span class="tag">${esc(calc ? T('calculation') : T('concept'))}</span> ${enOnly(q)}</div>
-  <div class="card" style="margin-top:8px"><div${fbAttr(q)}><p style="margin:0">${tx(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">${esc(T('given'))}</div>${q.given.map(g => `<div>${tx(g)}</div>`).join('')}</div>` : ''}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
+  <div class="card" style="margin-top:8px"><div${dirAttr(q)}><p style="margin:0">${tx(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">${esc(T('given'))}</div>${q.given.map(g => `<div>${tx(g)}</div>`).join('')}</div>` : ''}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
   ${S.hideTips ? `<div class="cap tipline">${tip}</div>` : `<div class="tipbox"><span aria-hidden="true">💡</span><span class="grow">${tip}</span><button class="link" id="hideTips" style="padding:0 4px;min-height:24px">${esc(T('hideTips'))}</button></div>`}
   <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show">${esc(T('showAnswer'))}</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
@@ -459,9 +462,9 @@ function reveal(q, t) {
   // Hebrew steps: Hebrew lines use the reading markup; formula-only lines are isolated left-to-right.
   // A formula-only line is one unbreakable left-to-right unit (CSS lets it scroll sideways); English-fallback cards keep the English layout.
   const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
-  $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${fbAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
+  $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${dirAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
-  ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
+  ${q.type === 'calc' ? `<ol class="steps"${rtlList(q)}>${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
   <div class="meta">${ltr(`📖 Atkins 8e · ${esc(q.ref)}`)}</div>${q.reviewed ? '' : `<div class="cap">${esc(T('draft'))}</div>`}</div>`;
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>${esc(T('didnt'))}</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>${esc(T('unsure'))}</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>${esc(T('knew'))}</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
@@ -485,7 +488,7 @@ function end() {
   const ids = Object.keys(ss.worst), first = ids.filter(i => ss.worst[i] === 'knew').length;
   const hard = ids.filter(i => ss.worst[i] !== 'knew').sort((a, b) => rank[ss.worst[b]] - rank[ss.worst[a]]).slice(0, 3);
   app.innerHTML = `<div class="fade"><h2>${esc(T('topicDone'))}</h2><div class="card"><div>${esc(T('firstTry'))}: <b>${first}</b> · ${esc(T('anotherGo'))}: <b>${ids.length - first}</b></div></div>
-  ${hard.length ? `<div class="meta">${esc(T('hardest'))}</div>${hard.map(i => { const lq = qL(qOf(i)); return `<div class="row" style="cursor:default"><span class="grow"${fbAttr(lq)}>${tx(lq.q)}</span></div>`; }).join('')}` : ''}
+  ${hard.length ? `<div class="meta">${esc(T('hardest'))}</div>${hard.map(i => { const lq = qL(qOf(i)); return `<div class="row" style="cursor:default"><span class="grow"${dirAttr(lq)}>${tx(lq.q)}</span></div>`; }).join('')}` : ''}
   <div class="sticky"><button class="btn" id="home">${esc(T('backToTopics'))}</button>${hard.length ? `<button class="btn sec" id="again" style="margin-top:8px">${esc(T('reviewHardest'))}</button>` : ''}</div></div>`;
   const t = ss.topic; S.session = null; save();
   $('#home').onclick = () => go('home');
