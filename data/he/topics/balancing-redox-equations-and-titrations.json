@@ -1,0 +1,228 @@
+{
+  "topic_id": "balancing-redox-equations-and-titrations",
+  "name": "איזון תגובות חמצון־חיזור וטיטרציות",
+  "reading": {
+    "sections": [
+      {
+        "id": "acidic-half",
+        "heading": "שיטת חצאי התגובות בתמיסה חומצית",
+        "paragraphs": [
+          "שיטת חצאי התגובות <bdi>(half-reaction)</bdi> מפצלת תהליך חמצון־חיזור לחמצון ולחיזור, מאזנת כל חצי בנפרד ואז מחברת אותם כך שהאלקטרונים מצטמצמים.",
+          "בתמיסה חומצית ארגז הכלים הוא: איזנו קודם אטומים שאינם <bdi>O</bdi> ו־<bdi>H</bdi>. איזנו את <bdi>O</bdi> בעזרת <bdi>H<sub>2</sub>O</bdi>. איזנו את <bdi>H</bdi> בעזרת <bdi>H<sup>+</sup></bdi> (או <bdi>H<sub>3</sub>O<sup>+</sup></bdi>). איזנו מטען בעזרת אלקטרונים.",
+          "הכפילו חצאי תגובה שלמים במספרים שלמים כך שמספרי האלקטרונים יהיו שווים. חברו. צמצמו את האלקטרונים ואת כל מין שמופיע בשני האגפים.",
+          "בדקו בסוף: האטומים מאוזנים, המטען מאוזן והאלקטרונים נעלמו. אם המטען לא מתאזן, בדרך כלל מקדם האלקטרונים שגוי.",
+          "דוגמאות חומציות נפוצות: <bdi>MnO<sub>4</sub><sup>−</sup> → Mn<sup>2+</sup></bdi>, <bdi>Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> → Cr<sup>3+</sup></bdi> ו־<bdi>NO<sub>3</sub><sup>−</sup> → NO</bdi>. כל אחת צריכה מים ו־<bdi>H<sup>+</sup></bdi> בצדדים הנכונים.",
+          "השאירו יונים רב־אטומיים שלמים רק כשהם לא משתנים. אחרי ש־<bdi>Mn</bdi> ב־<bdi>MnO<sub>4</sub><sup>−</sup></bdi> הופך ל־<bdi>Mn<sup>2+</sup></bdi>, צריך לאזן את החמצנים בעזרת מים.",
+          "כתבו חצי תגובה אחד עד הסוף לפני שנוגעים בשני. ערבוב שלבים בין החצאים הוא הדרך המהירה ביותר לאבד חמצן או אלקטרון.",
+          "אם הבעיה נותנת רק נוסחאות בלי לציין את התווך, חפשו <bdi>H<sup>+</sup></bdi> או <bdi>OH<sup>−</sup></bdi> בין המגיבים או התוצרים, או קראו את המילים ״תמיסה חומצית״ ו״תמיסה בסיסית״.",
+          "פרמנגנט בחומצה הופך ל־<bdi>Mn<sup>2+</sup></bdi> (כמעט חסר צבע). בתנאים ניטרליים או בסיסיים הוא נעצר לרוב ב־<bdi>MnO<sub>2</sub></bdi> (מוצק חום). התוצר מגלה באיזה איזון להשתמש.",
+          "אחרי חיבור החצאים, צמצמו קודם את האלקטרונים ואז את המים, את <bdi>H<sup>+</sup></bdi> או כל מין אחר שמופיע בשני האגפים. השאירו את הצורה היונית נטו, אלא אם השאלה מבקשת משוואה מולקולרית עם יונים נגדיים צופים.",
+          "אם חצי תגובה נראה מאוזן באטומים אבל לא במטען, חסרים בו אלקטרונים. אל תמציאו מקדמים אקראיים ל־<bdi>H<sub>2</sub>O</bdi> כדי ״לתקן״ מטען.",
+          "נהלו טבלת מטען מצטברת אחרי כל שלב. אם האטומים מתאזנים והמטען לא, האלקטרונים שגויים או שדילגתם על מקדם של <bdi>H<sup>+</sup></bdi>."
+        ],
+        "why": "חצאי תגובה הופכים את רישום האלקטרונים לגלוי. ניחוש מקדמים במשוואה השלמה מסתיר את שגיאות המטען עד הסוף.",
+        "worked": {
+          "title": "איזנו <bdi>MnO<sub>4</sub><sup>−</sup> + Fe<sup>2+</sup> → Mn<sup>2+</sup> + Fe<sup>3+</sup></bdi> (תמיסה חומצית)",
+          "steps": [
+            "חיזור: <bdi>MnO<sub>4</sub><sup>−</sup> → Mn<sup>2+</sup></bdi>. הוסיפו <bdi>4 H<sub>2</sub>O</bdi> בצד ימין כדי לאזן <bdi>O</bdi>.",
+            "הוסיפו <bdi>8 H<sup>+</sup></bdi> בצד שמאל כדי לאזן <bdi>H</bdi>: <bdi>MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O</bdi>.",
+            "מטען שמאל = <bdi>−1 + 8 = +7</bdi> ומטען ימין = <bdi>+2</bdi>. הוסיפו <bdi>5 e<sup>−</sup></bdi> בצד שמאל: <bdi>MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 5 e<sup>−</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O</bdi>.",
+            "חמצון: <bdi>Fe<sup>2+</sup> → Fe<sup>3+</sup> + e<sup>−</sup></bdi>.",
+            "הכפילו את החמצון ב־5: <bdi>5 Fe<sup>2+</sup> → 5 Fe<sup>3+</sup> + 5 e<sup>−</sup></bdi>.",
+            "חברו: <bdi>MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 5 Fe<sup>2+</sup> → Mn<sup>2+</sup> + 4 H<sub>2</sub>O + 5 Fe<sup>3+</sup></bdi>.",
+            "בדקו מטען: שמאל <bdi>−1 + 8 + 10 = +17</bdi>, ימין <bdi>+2 + 15 = +17</bdi>. האטומים מתאזנים."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "איזנו <bdi>Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + Cl<sup>−</sup> → Cr<sup>3+</sup> + Cl<sub>2</sub></bdi> (תמיסה חומצית)",
+            "steps": [
+              "חיזור: <bdi>Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> → 2 Cr<sup>3+</sup></bdi>. הוסיפו <bdi>7 H<sub>2</sub>O</bdi> בצד ימין.",
+              "הוסיפו <bdi>14 H<sup>+</sup></bdi> בצד שמאל. מטען: שמאל <bdi>−2 + 14 = +12</bdi>, ימין <bdi>+6</bdi>. הוסיפו <bdi>6 e<sup>−</sup></bdi> בצד שמאל.",
+              "חמצון: <bdi>2 Cl<sup>−</sup> → Cl<sub>2</sub> + 2 e<sup>−</sup></bdi>.",
+              "הכפילו את החמצון ב־3 כדי לקבל <bdi>6 e<sup>−</sup></bdi>.",
+              "חברו ופשטו: <bdi>Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + 14 H<sup>+</sup> + 6 Cl<sup>−</sup> → 2 Cr<sup>3+</sup> + 7 H<sub>2</sub>O + 3 Cl<sub>2</sub></bdi>.",
+              "וודאו אטומים ומטען (<bdi>+6</bdi> בשני האגפים)."
+            ]
+          },
+          {
+            "title": "האלקטרונים הנדרשים: <bdi>SO<sub>3</sub><sup>2−</sup> → SO<sub>4</sub><sup>2−</sup></bdi> בחומצה",
+            "steps": [
+              "<bdi>S</bdi> עובר מ־<bdi>+4</bdi> ל־<bdi>+6</bdi>, כלומר חמצון. כל <bdi>S</bdi> מאבד <bdi>2 e<sup>−</sup></bdi>.",
+              "איזנו <bdi>O</bdi>: <bdi>SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup></bdi>.",
+              "איזנו <bdi>H</bdi>: <bdi>SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup> + 2 H<sup>+</sup></bdi>.",
+              "מטען: שמאל <bdi>−2</bdi>, ימין <bdi>−2 + 2 = 0</bdi>. הוסיפו <bdi>2 e<sup>−</sup></bdi> בצד ימין.",
+              "חצי התגובה: <bdi>SO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O → SO<sub>4</sub><sup>2−</sup> + 2 H<sup>+</sup> + 2 e<sup>−</sup></bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "basic-half",
+        "heading": "איזון בתמיסה בסיסית",
+        "paragraphs": [
+          "דרך אחת אמינה: איזנו כאילו התמיסה חומצית, ואז המירו את <bdi>H<sup>+</sup></bdi> למים בעזרת <bdi>OH<sup>−</sup></bdi>.",
+          "אחרי האיזון החומצי, הוסיפו לשני האגפים אותו מספר של <bdi>OH<sup>−</sup></bdi> כמספר ה־<bdi>H<sup>+</sup></bdi> שיש לכם. כל זוג <bdi>H<sup>+</sup> + OH<sup>−</sup></bdi> הופך ל־<bdi>H<sub>2</sub>O</bdi>.",
+          "צמצמו מולקולות מים עודפות שמופיעות עכשיו בשני האגפים. בדקו שוב את המטען.",
+          "בחלק מהספרים מאזנים את <bdi>O</bdi> ואת <bdi>H</bdi> ישירות בבסיס בעזרת <bdi>OH<sup>−</sup></bdi> ו־<bdi>H<sub>2</sub>O</bdi>. שתי השיטות טובות אם המשוואה הסופית נכונה.",
+          "תווך בסיסי מופיע עם היפוכלוריט, עם מי חמצן בכימיית אקונומיקה ועם חמצונים אורגניים רבים. החישוב זהה, ורק רישום החומצה והבסיס משתנה.",
+          "אם המשוואה הסופית שלכם עדיין מראה <bdi>H<sup>+</sup></bdi> בתשובה ״בסיסית״, עצרתם מוקדם מדי.",
+          "אחרי ההמרה לבסיס, סרקו את המשוואה אחר <bdi>H<sup>+</sup></bdi> שנשאר. אם נשאר כזה, פספסתם זוגות של <bdi>OH<sup>−</sup></bdi>.",
+          "יש בעיות שמתחילות משלד שכבר יש בו <bdi>OH<sup>−</sup></bdi>. אפשר עדיין ללכת בדרך של איזון חומצי והמרה, אבל בדקו את מקדם ה־<bdi>OH<sup>−</sup></bdi> הסופי מול סגנון התשובה במפתח.",
+          "בעיות של מי חמצון בסיסי ואקונומיקה מסתירות לעיתים קרובות את התווך ברשימת המרכיבים (<bdi>NaOH</bdi> נוכח). עדיין איזנו אלקטרונים במפורש, כי ניחוש מקדמים לפי אטומי חמצן בלבד נכשל כשהמטען לא מתאים."
+        ],
+        "worked": {
+          "title": "איזנו <bdi>MnO<sub>4</sub><sup>−</sup> + I<sup>−</sup> → MnO<sub>2</sub> + I<sub>2</sub></bdi> (תמיסה בסיסית)",
+          "steps": [
+            "איזנו קודם כחומצי. חיזור: <bdi>MnO<sub>4</sub><sup>−</sup> + 4 H<sup>+</sup> + 3 e<sup>−</sup> → MnO<sub>2</sub> + 2 H<sub>2</sub>O</bdi>.",
+            "חמצון: <bdi>2 I<sup>−</sup> → I<sub>2</sub> + 2 e<sup>−</sup></bdi>.",
+            "השוו אלקטרונים (כפולה משותפת מזערית 6): הכפילו את החיזור ב־2 ואת החמצון ב־3.",
+            "סכום חומצי: <bdi>2 MnO<sub>4</sub><sup>−</sup> + 8 H<sup>+</sup> + 6 I<sup>−</sup> → 2 MnO<sub>2</sub> + 4 H<sub>2</sub>O + 3 I<sub>2</sub></bdi>.",
+            "הוסיפו <bdi>8 OH<sup>−</sup></bdi> לשני האגפים. הפכו <bdi>8 H<sup>+</sup> + 8 OH<sup>−</sup></bdi> ל־<bdi>8 H<sub>2</sub>O</bdi> בצד שמאל.",
+            "צמצמו <bdi>4 H<sub>2</sub>O</bdi> מכל אגף. הצורה הבסיסית נטו: <bdi>2 MnO<sub>4</sub><sup>−</sup> + 4 H<sub>2</sub>O + 6 I<sup>−</sup> → 2 MnO<sub>2</sub> + 3 I<sub>2</sub> + 8 OH<sup>−</sup></bdi>.",
+            "בדקו מטען: שמאל <bdi>−2 − 6 = −8</bdi>, ימין <bdi>−8</bdi>. האטומים מתאזנים."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "בדיקה מהירה: המרת צורת <bdi>H<sup>+</sup></bdi> לצורה בסיסית",
+            "steps": [
+              "נניח שיש לכם <bdi>… + 2 H<sup>+</sup> → …</bdi> במשוואה חומצית.",
+              "הוסיפו <bdi>2 OH<sup>−</sup></bdi> לשני האגפים.",
+              "החליפו <bdi>2 H<sup>+</sup> + 2 OH<sup>−</sup></bdi> ב־<bdi>2 H<sub>2</sub>O</bdi> בצד שמאל.",
+              "צמצמו מים אם יש בשני האגפים.",
+              "וודאו שלא נשאר <bdi>H<sup>+</sup></bdi>."
+            ]
+          }
+        ],
+        "mistake": {
+          "wrong": "הוספת <bdi>OH<sup>−</sup></bdi> לאגף אחד בלבד ״כי התמיסה בסיסית״.",
+          "whyWrong": "צריך להוסיף אותו מספר של <bdi>OH<sup>−</sup></bdi> לשני האגפים, אחרת משנים את איזון המטען נטו שכבר תיקנתם.",
+          "correct": "הוסיפו <bdi>OH<sup>−</sup></bdi> בשווה לשני האגפים, צרו מים מ־<bdi>H<sup>+</sup> + OH<sup>−</sup></bdi> ואז צמצמו מים עודפים."
+        }
+      },
+      {
+        "id": "redox-titration",
+        "heading": "סטויכיומטריה של טיטרציית חמצון־חיזור",
+        "paragraphs": [
+          "טיטרציית חמצון־חיזור <bdi>(titration)</bdi> משתמשת במשוואה מאוזנת כדי לקשר בין מולים של טיטרנט <bdi>(titrant)</bdi> למולים של אנליט <bdi>(analyte)</bdi> דרך יחס האלקטרונים.",
+          "זוג קלאסי: <bdi>MnO<sub>4</sub><sup>−</sup></bdi> סגול מחמצן <bdi>Fe<sup>2+</sup></bdi> בחומצה. נקודת הסיום <bdi>(end point)</bdi> היא הצבע הוורוד המתמשך הראשון מעודף זעיר של <bdi>MnO<sub>4</sub><sup>−</sup></bdi>.",
+          "מהמשוואה המאוזנת, <bdi>1 mol MnO<sub>4</sub><sup>−</sup></bdi> מגיב עם <bdi>5 mol Fe<sup>2+</sup></bdi>. יחס <bdi>1:5</bdi> הזה מניע כל חישוב ריכוז.",
+          "זוג נפוץ אחר: <bdi>I<sub>2</sub></bdi> עם <bdi>S<sub>2</sub>O<sub>3</sub><sup>2−</sup></bdi> (תיוסולפט), ביחס <bdi>1 I<sub>2</sub> : 2 S<sub>2</sub>O<sub>3</sub><sup>2−</sup></bdi>.",
+          "נוהל: מצאו את מולי הטיטרנט מ־<bdi>M × V</bdi> (בליטרים). המירו למולי אנליט בעזרת יחס המולים. חלקו בנפח האנליט (בליטרים) כדי לקבל מולריות <bdi>(molarity)</bdi>, או המירו לגרמים אם התבקשתם.",
+          "נפחים ב־<bdi>mL</bdi> חייבים להפוך ל־<bdi>L</bdi> לפני ההכפלה ב־<bdi>mol/L</bdi>, או שאפשר להישאר בעקביות ב־<bdi>mmol</bdi>.",
+          "תיקוני ריק ונפחי מחוון חשובים בעבודה מעבדתית מדויקת. בסטויכיומטריה של בחינה התמקדו ביחס המולים ובהמרות יחידות.",
+          "אם גם ריכוז האנליט וגם ריכוז הטיטרנט אינם ידועים, אי אפשר לסיים בטיטרציה אחת. קודם צריך סטנדרטיזציה <bdi>(standardization)</bdi> של הטיטרנט מול תקן ראשוני <bdi>(primary standard)</bdi>.",
+          "דווחו את ריכוז האנליט עם מספר הספרות המשמעותיות הנכון מקריאות הביורטה <bdi>(buret)</bdi> ומהמולריות של הטיטרנט. ספרות נפח אחרונות מביורטת זכוכית תומכות בדרך כלל בשתי ספרות אחרי הנקודה העשרונית ב־<bdi>mL</bdi>."
+        ],
+        "worked": {
+          "title": "ריכוז <bdi>Fe<sup>2+</sup></bdi> מטיטרציה עם <bdi>KMnO<sub>4</sub></bdi>",
+          "steps": [
+            "נתונים: <bdi>25.00 mL</bdi> של תמיסת <bdi>Fe<sup>2+</sup></bdi> דורשים <bdi>18.40 mL</bdi> של <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0200 M</bdi>. תנאים חומציים, והתוצר הוא <bdi>Mn<sup>2+</sup></bdi>.",
+            "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.01840 L × 0.0200 mol/L = 3.68 × 10<sup>−4</sup> mol</bdi>.",
+            "יחס מולים: <bdi>5 Fe<sup>2+</sup> / 1 MnO<sub>4</sub><sup>−</sup></bdi>, ולכן מולי <bdi>Fe<sup>2+</sup></bdi> = <bdi>5 × 3.68 × 10<sup>−4</sup> = 1.84 × 10<sup>−3</sup> mol</bdi>.",
+            "מולריות <bdi>Fe<sup>2+</sup></bdi> = <bdi>(1.84 × 10<sup>−3</sup> mol) / 0.02500 L = 0.0736 M</bdi>.",
+            "ספרות משמעותיות: <bdi>0.0200</bdi> והנפחים תומכים בשלוש ספרות משמעותיות, ולכן <bdi>0.0736 M</bdi>."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "מסת <bdi>Fe</bdi> בדגימת עפרה",
+            "steps": [
+              "אותו יחס: מולי <bdi>Fe</bdi> = <bdi>5 ×</bdi> מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi>.",
+              "נניח שנצרכו <bdi>2.50 × 10<sup>−4</sup> mol MnO<sub>4</sub><sup>−</sup></bdi>.",
+              "מולי <bdi>Fe</bdi> = <bdi>1.25 × 10<sup>−3</sup></bdi>.",
+              "מסת <bdi>Fe</bdi> = <bdi>1.25 × 10<sup>−3</sup> × 55.85 g/mol = 0.0698 g</bdi>."
+            ]
+          },
+          {
+            "title": "נפח <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0500 M</bdi> לטיטרציה של <bdi>20.0 mL</bdi> של <bdi>Fe<sup>2+</sup></bdi> בריכוז <bdi>0.100 M</bdi>",
+            "steps": [
+              "מולי <bdi>Fe<sup>2+</sup></bdi> = <bdi>0.0200 L × 0.100 mol/L = 0.00200 mol</bdi>.",
+              "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.00200 / 5 = 4.00 × 10<sup>−4</sup> mol</bdi>.",
+              "נפח = מולים / <bdi>M</bdi> = <bdi>4.00 × 10<sup>−4</sup> / 0.0500 = 0.00800 L = 8.00 mL</bdi>.",
+              "בדקו: ל־<bdi>Fe</bdi> ריכוז גבוה יותר והיחס דורש <bdi>5 Fe</bdi> על כל <bdi>MnO<sub>4</sub><sup>−</sup></bdi>, ולכן צפוי נפח טיטרנט קטן יותר."
+            ]
+          },
+          {
+            "title": "גרמי <bdi>Fe</bdi> מ־<bdi>22.50 mL</bdi> של <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.0250 M</bdi>",
+            "steps": [
+              "מולי <bdi>MnO<sub>4</sub><sup>−</sup></bdi> = <bdi>0.02250 × 0.0250 = 5.625 × 10<sup>−4</sup> mol</bdi>.",
+              "מולי <bdi>Fe</bdi> = <bdi>5 × 5.625 × 10<sup>−4</sup> = 2.8125 × 10<sup>−3</sup> mol</bdi>.",
+              "מסת <bdi>Fe</bdi> = <bdi>2.8125 × 10<sup>−3</sup> × 55.85 ≈ 0.157 g</bdi>.",
+              "ההנחה: כל הברזל הוא <bdi>Fe<sup>2+</sup></bdi> בחומצה והיחס הוא <bdi>1:5</bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-redox",
+        "heading": "בדקו את עצמכם",
+        "check": {
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
+          "items": [
+            { "q": "בתמיסה חומצית, מה מוסיפים כדי לאזן חמצן?", "a": "<bdi>H<sub>2</sub>O</bdi> בצד שזקוק לחמצן." },
+            { "q": "מהו יחס המולים <bdi>Fe<sup>2+</sup> : MnO<sub>4</sub><sup>−</sup></bdi> בחומצה כשהתוצר הוא <bdi>Mn<sup>2+</sup></bdi>?", "a": "<bdi>5 : 1</bdi>." },
+            { "q": "איך ממירים איזון חומצי לאיזון בסיסי?", "a": "מוסיפים <bdi>OH<sup>−</sup></bdi> לשני האגפים כדי לנטרל את <bdi>H<sup>+</sup></bdi>, יוצרים מים ומצמצמים את העודפים." },
+            { "q": "למה נקודת הסיום של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> היא ורודה?", "a": "עודף זעיר של <bdi>MnO<sub>4</sub><sup>−</sup></bdi> סגול נשאר אחרי ש־<bdi>Fe<sup>2+</sup></bdi> נגמר." }
+          ]
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t6-q1": {
+      "q": "איזנו בתמיסה חומצית: <bdi>MnO<sub>4</sub><sup>−</sup> + Fe<sup>2+</sup> → Mn<sup>2+</sup> + Fe<sup>3+</sup></bdi>.",
+      "answer": "MnO<sub>4</sub><sup>−</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup> → Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O",
+      "explanation": "<bdi>Mn</bdi> עובר מ־<bdi>+7</bdi> ל־<bdi>+2</bdi> (מקבל <bdi>5 e<sup>−</sup></bdi>), וכל <bdi>Fe</bdi> מאבד <bdi>1 e<sup>−</sup></bdi>, ולכן צריך <bdi>5 Fe<sup>2+</sup></bdi>. איזנו <bdi>O</bdi> בעזרת <bdi>4 H<sub>2</sub>O</bdi> ו־<bdi>H</bdi> בעזרת <bdi>8 H<sup>+</sup></bdi>. אז בשני האגפים המטען הוא <bdi>+17</bdi>."
+    },
+    "t6-q2": {
+      "q": "איזנו בתמיסה בסיסית: <bdi>MnO<sub>4</sub><sup>−</sup> + I<sup>−</sup> → MnO<sub>2</sub> + I<sub>2</sub></bdi>.",
+      "answer": "2MnO<sub>4</sub><sup>−</sup> + 6I<sup>−</sup> + 4H<sub>2</sub>O → 2MnO<sub>2</sub> + 3I<sub>2</sub> + 8OH<sup>−</sup>",
+      "explanation": "כל <bdi>Mn</bdi> מקבל <bdi>3 e<sup>−</sup></bdi> וכל <bdi>I<sub>2</sub></bdi> שנוצר משחרר <bdi>2 e<sup>−</sup></bdi>, ולכן <bdi>2 MnO<sub>4</sub><sup>−</sup></bdi> מתאימים ל־<bdi>3 I<sub>2</sub></bdi> (<bdi>6 e<sup>−</sup></bdi>). איזון בחומצה ואז הוספת <bdi>OH<sup>−</sup></bdi> לשני האגפים כדי לנטרל את <bdi>H<sup>+</sup></bdi> נותנים <bdi>4 H<sub>2</sub>O</bdi> בשמאל ו־<bdi>8 OH<sup>−</sup></bdi> בימין. המטען הוא <bdi>−8</bdi> בשני האגפים."
+    },
+    "t6-q3": {
+      "q": "<bdi>25.00 mL</bdi> של תמיסת <bdi>Fe<sup>2+</sup></bdi> דורשים <bdi>18.40 mL</bdi> של <bdi>KMnO<sub>4</sub></bdi> בריכוז <bdi>0.02000 M</bdi> כדי להגיע לנקודת הסיום <bdi>(end point)</bdi> (<bdi>MnO<sub>4</sub><sup>−</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup> → Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O</bdi>). מהו <bdi>[Fe<sup>2+</sup>]</bdi>?",
+      "given": [
+        "V(Fe<sup>2+</sup>) = 25.00 mL",
+        "V(MnO<sub>4</sub><sup>−</sup>) = 18.40 mL",
+        "c(MnO<sub>4</sub><sup>−</sup>) = 0.02000 M"
+      ],
+      "answer": "<bdi>0.07360 M</bdi>",
+      "steps": [
+        "n(MnO<sub>4</sub><sup>−</sup>) = 0.01840 L × 0.02000 M = 3.680 × 10<sup>−4</sup> mol",
+        "n(Fe<sup>2+</sup>) = 5 × 3.680 × 10<sup>−4</sup> = 1.840 × 10<sup>−3</sup> mol",
+        "[Fe<sup>2+</sup>] = 1.840 × 10<sup>−3</sup> mol / 0.02500 L = 0.07360 M"
+      ]
+    },
+    "t6-q4": {
+      "q": "<bdi>20.00 mL</bdi> של תמיסת <bdi>H<sub>2</sub>SO<sub>4</sub></bdi> מנוטרלת על ידי <bdi>32.50 mL</bdi> של <bdi>NaOH</bdi> בריכוז <bdi>0.1000 M</bdi>. מהו ריכוז <bdi>(concentration)</bdi> ה־<bdi>H<sub>2</sub>SO<sub>4</sub></bdi>?",
+      "given": [
+        "V(H<sub>2</sub>SO<sub>4</sub>) = 20.00 mL",
+        "V(NaOH) = 32.50 mL",
+        "c(NaOH) = 0.1000 M"
+      ],
+      "answer": "<bdi>0.08125 M</bdi>",
+      "steps": [
+        "H<sub>2</sub>SO<sub>4</sub> + 2NaOH → Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O",
+        "n(NaOH) = 0.03250 L × 0.1000 M = 3.250 × 10<sup>−3</sup> mol",
+        "n(H<sub>2</sub>SO<sub>4</sub>) = 3.250 × 10<sup>−3</sup> / 2 = 1.625 × 10<sup>−3</sup> mol",
+        "c = 1.625 × 10<sup>−3</sup> mol / 0.02000 L = 0.08125 M"
+      ]
+    },
+    "t6-q5": {
+      "q": "דגימה של <bdi>0.5106 g</bdi> <bdi>KHP</bdi> (אשלגן מימן פתלט, חומצה חד־פרוטונית) דורשת <bdi>24.35 mL</bdi> של <bdi>NaOH</bdi> כדי להגיע לנקודת הסיום <bdi>(end point)</bdi>. מהו ריכוז ה־<bdi>NaOH</bdi>?",
+      "given": [
+        "m(KHP) = 0.5106 g",
+        "M(KHP) = 204.22 g/mol",
+        "V(NaOH) = 24.35 mL"
+      ],
+      "answer": "<bdi>0.1027 M</bdi>",
+      "steps": [
+        "n(KHP) = 0.5106 / 204.22 = 2.500 × 10<sup>−3</sup> mol",
+        "<bdi>KHP</bdi> מגיב ביחס 1:1 עם <bdi>NaOH</bdi>, ולכן n(NaOH) = 2.500 × 10<sup>−3</sup> mol",
+        "c = 2.500 × 10<sup>−3</sup> mol / 0.02435 L = 0.1027 M"
+      ]
+    }
+  }
+}

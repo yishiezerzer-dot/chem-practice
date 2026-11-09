@@ -165,3 +165,18 @@ Model rule: every Claude prompt names its model at the top. Heavy model for new 
 - 2026-11-09: Yishi approved all 15 Chem Sketcher drawings. Seven were redrawn under the same names (orbital-shapes-1s-2p-3d, fe56-fe3-nucleus, orbital-boxes-c-n, orbital-boxes-cr-fe3, unpaired-ca-zn2-fe2, vsepr-sf4-seesaw, lewis-h2o-co2-sf4); old versions are in art/_prev/. After C2b merges: App Maker pushes the 7 new SVGs to a branch, and Claude swaps them in (round C2c).
 - 2026-11-09: C2b is live on dev (5c64b79). Weekend review notes now come in as GitHub issues labeled review. C2c was sent to Claude: the 7 redrawn SVGs and wrapping for card step text that was cut off on phones.
 - 2026-11-09: C2c is live on dev (104a2ed). All 15 drawings are approved and live. Claude stays idle until Yishi sends weekend review issues.
+
+## Hebrew style rules
+(Copy Humanizer review of H1 sample, 2026-11-09; rule 10 Yishi, 2026-11-09)
+Applies to H2 and every later Hebrew topic. The shared glossary is `data/he/glossary.json` and the checker is `tools/check-he.js` (run it per batch; all topics must PASS).
+
+1. Write it the way a Hebrew lecturer would say it, with no English calques. Use סולם or קנה מידה, not סקאלה. Use מחשבים or מבודדים, not פותרים את. Use לפני עיגול, not גולמי. Use אפשר לסדר את הנוסחה גם כך, not סידורים מחדש.
+2. Use ספרת העשיריות and ספרת המאיות, not מקום ה... Use בהגדרה, not לפי הגדרה.
+3. Steps lists use one voice, imperative plural (כתבו, הציבו, חשבו). The impersonal form is fine in paragraphs.
+4. No semicolons in Hebrew prose, except between two bdi formulas.
+5. English goes in brackets only on the first use of a term in each reading and each card. Never add a second bracket for the same term. Write the English in dictionary form, singular and lowercase, e.g. (mole). Proper unit names keep their capital, e.g. (Kelvin).
+6. One Hebrew term per concept everywhere. Keep the shared glossary at `data/he/glossary.json` and grow it with each batch.
+7. No Hebrew inside formulas. Use chemical formulas instead, e.g. m(H<sub>2</sub>O), not m(מים).
+8. Always use <sup> and <sub>, never raw ³ or ₂ characters.
+9. Quoted UI labels must match the Hebrew UI strings exactly. Use לחצו, not הקישו.
+10. Trailing zeros = אפסים בסוף המספר everywhere (Yishi, 2026-11-09). Do not use נגררים.

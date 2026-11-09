@@ -1,0 +1,206 @@
+{
+  "topic_id": "types-of-reactions-in-aqueous-solution",
+  "name": "סוגי תגובות בתמיסה מימית",
+  "reading": {
+    "sections": [
+      {
+        "id": "electrolytes",
+        "heading": "אלקטרוליטים ומה שמסיס",
+        "paragraphs": [
+          "אלקטרוליט <bdi>(electrolyte)</bdi> הוא מומס שיוצר יונים במים ומאפשר לתמיסה להוליך חשמל. לא־אלקטרוליט <bdi>(nonelectrolyte)</bdi> מתמוסס כמולקולות ואינו מעלה את המוליכות באופן ניכר (סוכר הוא הדוגמה הקלאסית).",
+          "אלקטרוליטים חזקים <bdi>(strong electrolyte)</bdi> מתפרקים ליונים באופן מלא כל כך במים מדוללים, שבמשוואות יוניות נטו כותבים אותם כמפורקים לגמרי. לקבוצה הזאת שייכים חומצות חזקות (<bdi>HCl</bdi>, <bdi>HBr</bdi>, <bdi>HI</bdi>, <bdi>HNO<sub>3</sub></bdi>, <bdi>H<sub>2</sub>SO<sub>4</sub></bdi> בפרוטון הראשון שלה, <bdi>HClO<sub>4</sub></bdi>), בסיסים חזקים מסיסים (הידרוקסידים של קבוצה 1, וגם <bdi>Ba(OH)<sub>2</sub></bdi>, <bdi>Sr(OH)<sub>2</sub></bdi> ו־<bdi>Ca(OH)<sub>2</sub></bdi> כשהוא מומס) ומלחים יוניים מסיסים.",
+          "אלקטרוליטים חלשים <bdi>(weak electrolyte)</bdi> מתיינים רק חלקית. הדוגמאות הרגילות הן חומצות חלשות (חומצה אצטית, <bdi>HF</bdi>) ובסיסים חלשים (אמוניה). במשוואות יוניות נטו כותבים אותם כמולקולות, אלא אם מבצעים חישוב שיווי משקל.",
+          "כללי המסיסות <bdi>(solubility rules)</bdi> הם מסנן מעשי ולא תאוריה עמוקה. כל המלחים של קבוצה 1 ושל <bdi>NH<sub>4</sub><sup>+</sup></bdi> מסיסים. כל הניטרטים ורוב האצטטים מסיסים. רוב המלחים של <bdi>Cl<sup>−</sup></bdi>, <bdi>Br<sup>−</sup></bdi> ו־<bdi>I<sup>−</sup></bdi> מסיסים, חוץ ממלחים של <bdi>Ag<sup>+</sup></bdi>, <bdi>Pb<sup>2+</sup></bdi> ו־<bdi>Hg<sub>2</sub><sup>2+</sup></bdi>. רוב הסולפטים מסיסים, חוץ ממלחים של <bdi>Ba<sup>2+</sup></bdi>, <bdi>Pb<sup>2+</sup></bdi>, <bdi>Ca<sup>2+</sup></bdi> (גבולי) ו־<bdi>Sr<sup>2+</sup></bdi>. רוב הקרבונטים, הפוספטים והסולפידים אינם מסיסים, חוץ ממלחים של קבוצה 1 או של <bdi>NH<sub>4</sub><sup>+</sup></bdi>. רוב ההידרוקסידים אינם מסיסים, חוץ מאלה של קבוצה 1 ושל <bdi>Ba<sup>2+</sup></bdi> (ההידרוקסידים של Ca ושל Sr מסיסים מעט).",
+          "כשמערבבים שתי תמיסות מימיות של מלחים, בדקו אם זוג יונים יכול ליצור מוצק שאינו מסיס. אם כן, המוצק הזה הוא המשקע <bdi>(precipitate)</bdi>. אם כל הצימודים האפשריים מסיסים, לא מתרחשת תגובת שיקוע.",
+          "הריכוז אחרי הערבוב חשוב בהמשך, בעבודה עם <bdi>K<sub>sp</sub></bdi>: מדללים כל יון בנפח הכולל לפני שמשווים את <bdi>Q</bdi> ל־<bdi>K<sub>sp</sub></bdi>. בנושא הזה מספיקים כללי המסיסות האיכותיים כדי לחזות איזה מוצק מופיע.",
+          "כתיבת מצבי הצבירה <bdi>(aq)</bdi>, <bdi>(s)</bdi>, <bdi>(l)</bdi>, <bdi>(g)</bdi> היא חלק מהתשובה בבחינות. השמטה שלהם עולה בנקודות קלות גם כשהנוסחאות נכונות.",
+          "בדיקה עצמית מהירה: אם במשוואה ה״יונית נטו״ שלכם עדיין מופיעים <bdi>Na<sup>+</sup></bdi> או <bdi>NO<sub>3</sub><sup>−</sup></bdi> בשני האגפים, לא סיימתם לצמצם את היונים הצופים <bdi>(spectator ion)</bdi>.",
+          "הדגמות מוליכות הן איכותיות. נורה בהירה פירושה הרבה יונים ניידים, נורה עמומה פירושה מעט יונים, וחושך פירושו כמעט אפס. הריכוז עדיין משנה: אלקטרוליט חזק מדולל יכול להיראות חלש יותר מאלקטרוליט חלש מרוכז בהדגמה רשלנית.",
+          "את החומצות החזקות כדאי לשנן כרשימה קצרה ולא להמציא תאוריה במקום. <bdi>H<sub>2</sub>SO<sub>4</sub></bdi> חזקה בפרוטון הראשון שלה. <bdi>HSO<sub>4</sub><sup>−</sup></bdi> היא חומצה חלשה יחסית עם <bdi>K<sub>a</sub></bdi> משלה, וזה יהיה חשוב בהמשך בעבודה עם תמיסות חוצצות <bdi>(buffer)</bdi> וחומצות רב־פרוטוניות.",
+          "מוצקים יוניים שאינם מסיסים הם עדיין יוניים בגביש. הם אלקטרוליטים חלשים במובן המעשי, כי כמעט אין יונים שנכנסים לתמיסה עד שתגובה (חומצה, יצירת קומפלקס) מושכת אותם פנימה.",
+          "כשהשאלה אומרת ״כתבו את המשוואה היונית נטו״, הבודקים מחפשים צמצום של יונים צופים, מטענים נכונים ומצבי צבירה. משוואה מולקולרית לבדה לא מספיקה."
+        ],
+        "why": "משוואות יוניות נטו וכל בעיית שיקוע או חומצה־בסיס בהמשך מתחילות בידיעה אילו מינים הם באמת יונים במים ואילו נשארים מולקולריים.",
+        "worked": {
+          "title": "סווגו את <bdi>NaCl</bdi>, <bdi>CH<sub>3</sub>COOH</bdi> ו־<bdi>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></bdi>",
+          "steps": [
+            "<bdi>NaCl</bdi> הוא מלח יוני שמתמוסס לגמרי, כלומר אלקטרוליט חזק. כתבו <bdi>Na<sup>+</sup>(aq) + Cl<sup>−</sup>(aq)</bdi>.",
+            "<bdi>CH<sub>3</sub>COOH</bdi> (חומצה אצטית) היא חומצה חלשה, כלומר אלקטרוליט חלש. רובה מולקולות עם מעט <bdi>H<sub>3</sub>O<sup>+</sup></bdi> ו־<bdi>CH<sub>3</sub>COO<sup>−</sup></bdi>.",
+            "<bdi>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></bdi> (גלוקוז) מתמוסס כמולקולות בלי יונים, כלומר לא־אלקטרוליט.",
+            "בדקו: רק האלקטרוליט החזק צריך להדליק נורת מוליכות בבהירות בהדגמה פשוטה."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "האם <bdi>AgNO<sub>3</sub>(aq) + NaCl(aq)</bdi> ייצרו משקע?",
+            "steps": [
+              "היונים הנוכחים: <bdi>Ag<sup>+</sup></bdi>, <bdi>NO<sub>3</sub><sup>−</sup></bdi>, <bdi>Na<sup>+</sup></bdi>, <bdi>Cl<sup>−</sup></bdi>.",
+              "המוצקים האפשריים: <bdi>AgCl</bdi>, <bdi>AgNO<sub>3</sub></bdi>, <bdi>NaCl</bdi>, <bdi>NaNO<sub>3</sub></bdi>.",
+              "<bdi>AgNO<sub>3</sub></bdi>, <bdi>NaCl</bdi> ו־<bdi>NaNO<sub>3</sub></bdi> מסיסים. <bdi>AgCl</bdi> אינו מסיס (היוצא מן הכלל בכלוריד).",
+              "המשקע: <bdi>AgCl(s)</bdi>. היונים הצופים: <bdi>Na<sup>+</sup></bdi> ו־<bdi>NO<sub>3</sub><sup>−</sup></bdi>."
+            ]
+          },
+          {
+            "title": "חזו את המשקע: <bdi>BaCl<sub>2</sub>(aq) + Na<sub>2</sub>SO<sub>4</sub>(aq)</bdi>",
+            "steps": [
+              "היונים: <bdi>Ba<sup>2+</sup></bdi>, <bdi>Cl<sup>−</sup></bdi>, <bdi>Na<sup>+</sup></bdi>, <bdi>SO<sub>4</sub><sup>2−</sup></bdi>.",
+              "<bdi>BaSO<sub>4</sub></bdi> אינו מסיס (היוצא מן הכלל בסולפט). <bdi>NaCl</bdi> מסיס.",
+              "המשקע הוא <bdi>BaSO<sub>4</sub>(s)</bdi>.",
+              "המשוואה היונית נטו: <bdi>Ba<sup>2+</sup>(aq) + SO<sub>4</sub><sup>2−</sup>(aq) → BaSO<sub>4</sub>(s)</bdi>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "net-ionic",
+        "heading": "שיקוע ומשוואות יוניות נטו",
+        "paragraphs": [
+          "שלוש רמות של משוואה מספרות סיפורים שונים. המשוואה המולקולרית <bdi>(molecular equation)</bdi> מציגה תרכובות כאילו הנוסחאות שלמות. המשוואה היונית המלאה <bdi>(complete ionic equation)</bdi> מציגה אלקטרוליטים חזקים כיונים. המשוואה היונית נטו <bdi>(net ionic equation)</bdi> משמיטה את היונים הצופים ושומרת רק את מה שמשתנה.",
+          "יונים צופים הם יונים שמופיעים באותה צורה בשני האגפים. צמצמו אותם. מה שנשאר הוא הכימיה עצמה: לרוב מוצק שנוצר, אלקטרוליט חלש שנוצר או גז שנוצר.",
+          "סתירה <bdi>(neutralization)</bdi> של חומצה בבסיס במים היא לרוב <bdi>H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup> → 2 H<sub>2</sub>O</bdi> (או <bdi>H<sup>+</sup> + OH<sup>−</sup> → H<sub>2</sub>O</bdi>). כשמעורבת חומצה חלשה, השאירו את החומצה החלשה כמולקולה באגף שמאל.",
+          "תגובות שיוצרות גז מופיעות כשקרבונט או סולפיט פוגשים חומצה חזקה: <bdi>CO<sub>3</sub><sup>2−</sup> + 2 H<sub>3</sub>O<sup>+</sup> → CO<sub>2</sub>(g) + 3 H<sub>2</sub>O</bdi> (הסטויכיומטריה של המים תלויה באופן הספירה).",
+          "בדקו תמיד איזון מטען ואיזון אטומים במשוואה היונית נטו. תלמידים מצמצמים לא פעם יון שאינו באמת צופה, כי כתבו אותו עם מקדם שגוי.",
+          "כללי המסיסות קובעים מהו המוצק. המטען והאטומים קובעים אם הרישום היוני שלכם ישר.",
+          "כשנוצרת חומצה חלשה, השאירו אותה מולקולרית בצד התוצרים. דוגמה: <bdi>H<sub>3</sub>O<sup>+</sup> + CH<sub>3</sub>COO<sup>−</sup> → CH<sub>3</sub>COOH + H<sub>2</sub>O</bdi> מראה סתירה שיוצרת רכיב של תמיסה חוצצת.",
+          "בדקו שוב את המקדמים <bdi>(coefficient)</bdi> לפני הצמצום. צמצום של <bdi>2 NO<sub>3</sub><sup>−</sup></bdi> מול <bdi>1 NO<sub>3</sub><sup>−</sup></bdi> הוא שגיאת רישום ולא כימיה.",
+          "תגובות שיקוע, חומצה־בסיס ויצירת גז יכולות להופיע כולן באותה סדרת תרגילים. סווגו קודם ורק אחר כך כתבו את המשוואות. לתגובות חמצון־חיזור יש ארגז כלים משלהן בקריאה הבאה."
+        ],
+        "worked": {
+          "title": "משוואה יונית נטו עבור <bdi>Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2 KI(aq)</bdi>",
+          "steps": [
+            "משוואה מולקולרית: <bdi>Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2 KI(aq) → PbI<sub>2</sub>(s) + 2 KNO<sub>3</sub>(aq)</bdi>.",
+            "משוואה יונית מלאה: <bdi>Pb<sup>2+</sup>(aq) + 2 NO<sub>3</sub><sup>−</sup>(aq) + 2 K<sup>+</sup>(aq) + 2 I<sup>−</sup>(aq) → PbI<sub>2</sub>(s) + 2 K<sup>+</sup>(aq) + 2 NO<sub>3</sub><sup>−</sup>(aq)</bdi>.",
+            "צמצמו את היונים הצופים <bdi>K<sup>+</sup></bdi> ו־<bdi>NO<sub>3</sub><sup>−</sup></bdi>.",
+            "משוואה יונית נטו: <bdi>Pb<sup>2+</sup>(aq) + 2 I<sup>−</sup>(aq) → PbI<sub>2</sub>(s)</bdi>.",
+            "בדקו: האטומים והמטען (<bdi>+2</bdi> בשמאל, <bdi>0</bdi> בימין עבור המוצק) תואמים ליצירת <bdi>PbI<sub>2</sub></bdi> ניטרלי."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "משוואה יונית נטו עבור <bdi>NH<sub>3</sub>(aq) + HCl(aq)</bdi>",
+            "steps": [
+              "<bdi>HCl</bdi> חזקה, ולכן כתבו <bdi>H<sub>3</sub>O<sup>+</sup> + Cl<sup>−</sup></bdi>. <bdi>NH<sub>3</sub></bdi> היא בסיס חלש, ולכן השאירו <bdi>NH<sub>3</sub></bdi>.",
+              "התמונה המולקולרית: <bdi>NH<sub>3</sub>(aq) + HCl(aq) → NH<sub>4</sub>Cl(aq)</bdi>.",
+              "משוואה יונית מלאה: <bdi>NH<sub>3</sub>(aq) + H<sub>3</sub>O<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → NH<sub>4</sub><sup>+</sup>(aq) + Cl<sup>−</sup>(aq) + H<sub>2</sub>O(l)</bdi> (רישום המים עשוי להשתנות).",
+              "צמצמו את <bdi>Cl<sup>−</sup></bdi>. נטו: <bdi>NH<sub>3</sub>(aq) + H<sub>3</sub>O<sup>+</sup>(aq) → NH<sub>4</sub><sup>+</sup>(aq) + H<sub>2</sub>O(l)</bdi>.",
+              "אל תכתבו כאן <bdi>H<sup>+</sup> + OH<sup>−</sup></bdi>, כי אין בסיס חזק."
+            ]
+          },
+          {
+            "title": "משוואה יונית נטו עבור <bdi>Na<sub>2</sub>CO<sub>3</sub>(aq) + 2 HCl(aq)</bdi>",
+            "steps": [
+              "משוואה מולקולרית: <bdi>Na<sub>2</sub>CO<sub>3</sub> + 2 HCl → 2 NaCl + H<sub>2</sub>O + CO<sub>2</sub>(g)</bdi>.",
+              "משוואה יונית: <bdi>2 Na<sup>+</sup> + CO<sub>3</sub><sup>2−</sup> + 2 H<sub>3</sub>O<sup>+</sup> + 2 Cl<sup>−</sup> → 2 Na<sup>+</sup> + 2 Cl<sup>−</sup> + 3 H<sub>2</sub>O + CO<sub>2</sub></bdi> (מספר המים עשוי להשתנות בין ספרים).",
+              "צמצמו את <bdi>Na<sup>+</sup></bdi> ואת <bdi>Cl<sup>−</sup></bdi>.",
+              "נטו: <bdi>CO<sub>3</sub><sup>2−</sup>(aq) + 2 H<sub>3</sub>O<sup>+</sup>(aq) → CO<sub>2</sub>(g) + 3 H<sub>2</sub>O(l)</bdi>.",
+              "התפתחות גז היא הרמז הנראה לעין שזו אינה תגובת שיקוע פשוטה."
+            ]
+          }
+        ],
+        "mistake": {
+          "wrong": "כתיבת <bdi>Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl</bdi> וגם צמצום של <bdi>Ag<sup>+</sup></bdi> כי ״כסף מופיע בשני האגפים״ של משוואה יונית מלאה שגויה.",
+          "whyWrong": "יונים צופים חייבים להיות מינים זהים עם אותו מקדם בשני האגפים. <bdi>Ag<sup>+</sup></bdi> נצרך כש־<bdi>AgCl</bdi> נוצר, ולכן אינו צופה.",
+          "correct": "צמצמו רק יונים שבאמת אינם עושים דבר. השאירו <bdi>Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s)</bdi> כמשוואה היונית נטו."
+        }
+      },
+      {
+        "id": "redox-solution",
+        "heading": "חמצון־חיזור בתמיסה מימית",
+        "paragraphs": [
+          "חמצון <bdi>(oxidation)</bdi> הוא אובדן אלקטרונים וחיזור <bdi>(reduction)</bdi> הוא קבלת אלקטרונים. המחמצן <bdi>(oxidizing agent)</bdi> הוא המין שמחוזר. המחזר <bdi>(reducing agent)</bdi> הוא המין שמתחמצן.",
+          "בתגובות מימיות מתעדים לרוב את מספרי החמצון <bdi>(oxidation state)</bdi> כדי לזהות את העברת האלקטרונים. כללי אצבע: צורה יסודית היא <bdi>0</bdi>. מטען של יון חד־אטומי שווה למספר החמצון שלו. חמצן הוא בדרך כלל <bdi>−2</bdi> (בפרוקסידים <bdi>−1</bdi>). מימן הוא בדרך כלל <bdi>+1</bdi> עם אל־מתכות.",
+          "תגובת תחלוף <bdi>(displacement reaction)</bdi> כמו <bdi>Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s)</bdi> היא דוגמה נקייה לחמצון־חיזור. אבץ מתחמצן (<bdi>0 → +2</bdi>). נחושת(II) מחוזרת (<bdi>+2 → 0</bdi>).",
+          "לא כל תגובה מימית היא חמצון־חיזור. שיקוע של <bdi>AgCl</bdi> אינו כולל שינוי במספר חמצון. גם סתירה של חומצה חזקה בבסיס חזק אינה חמצון־חיזור.",
+          "כששיקוע וחמצון־חיזור שניהם אפשריים, זהו אותם בנפרד. פריטים רבים בבחינות מערבבים בכוונה שאלת מסיסות עם תיוג של מחמצן.",
+          "בקביעת המחמצן והמחזר, ציינו את כל המין שנותן או מקבל אלקטרונים ולא רק את סמל היסוד בדיעבד.",
+          "מספרי חמצון הם כלי רישום ולא מטענים ממשיים על אטומים במולקולות קוולנטיות. הם עדיין מסמנים נכון איזה יסוד מתחמצן ואיזה מחוזר.",
+          "בחמצון בעזרת דיכרומט או פרמנגנט בתמיסה חומצית, הנושא הבא עוסק באיזון האלקטרונים. כאן התמקדו בתיוג המחמצן והמחזר ובזיהוי אם התגובה היא חמצון־חיזור בכלל."
+        ],
+        "worked": {
+          "title": "המחמצן והמחזר ב־<bdi>Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s)</bdi>",
+          "steps": [
+            "מספרי חמצון: <bdi>Zn</bdi> עובר מ־<bdi>0</bdi> ל־<bdi>+2</bdi> (חמצון). <bdi>Cu</bdi> עובר מ־<bdi>+2</bdi> ל־<bdi>0</bdi> (חיזור).",
+            "אלקטרונים: <bdi>Zn</bdi> מאבד <bdi>2 e<sup>−</sup></bdi> ו־<bdi>Cu<sup>2+</sup></bdi> מקבל <bdi>2 e<sup>−</sup></bdi>.",
+            "המחזר: <bdi>Zn(s)</bdi> (הוא מתחמצן). המחמצן: <bdi>Cu<sup>2+</sup>(aq)</bdi> (הוא מחוזר).",
+            "המשוואה היונית נטו כבר כתובה. היונים הצופים של המלחים המקוריים הושמטו."
+          ]
+        },
+        "workedExamples": [
+          {
+            "title": "האם <bdi>Ba<sup>2+</sup> + SO<sub>4</sub><sup>2−</sup> → BaSO<sub>4</sub>(s)</bdi> היא חמצון־חיזור?",
+            "steps": [
+              "מספרי חמצון: <bdi>Ba</bdi> נשאר <bdi>+2</bdi>, <bdi>S</bdi> נשאר <bdi>+6</bdi> בסולפט, <bdi>O</bdi> נשאר <bdi>−2</bdi>.",
+              "אף יסוד לא משנה מספר חמצון.",
+              "זה שיקוע בלבד ולא חמצון־חיזור.",
+              "מחמצן ומחזר אינם רלוונטיים."
+            ]
+          },
+          {
+            "title": "המחמצן והמחזר ב־<bdi>2 Br<sup>−</sup> + Cl<sub>2</sub> → Br<sub>2</sub> + 2 Cl<sup>−</sup></bdi>",
+            "steps": [
+              "<bdi>Br</bdi> עובר מ־<bdi>−1</bdi> ל־<bdi>0</bdi> (חמצון). <bdi>Cl</bdi> עובר מ־<bdi>0</bdi> ל־<bdi>−1</bdi> (חיזור).",
+              "המחזר: <bdi>Br<sup>−</sup></bdi>. המחמצן: <bdi>Cl<sub>2</sub></bdi>.",
+              "זהו תחלוף של הלוגן, נפוץ בבדיקות הליד מימיות.",
+              "לא נוצר משקע. ייתכן שינוי צבע (ברום)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-aqueous",
+        "heading": "בדקו את עצמכם",
+        "check": {
+          "intro": "נסו לפתור בלי להסתכל אחורה, ואז לחצו על “הצגת תשובה” כדי לבדוק.",
+          "items": [
+            { "q": "סווגו את <bdi>HF(aq)</bdi>: אלקטרוליט חזק, אלקטרוליט חלש או לא־אלקטרוליט?", "a": "אלקטרוליט חלש (חומצה חלשה)." },
+            { "q": "מהי המשוואה היונית נטו עבור <bdi>AgNO<sub>3</sub>(aq) + NaCl(aq)</bdi>?", "a": "<bdi>Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s)</bdi>." },
+            { "q": "ב־<bdi>Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu</bdi>, מהו המחמצן?", "a": "<bdi>Cu<sup>2+</sup></bdi> (הוא מחוזר)." },
+            { "q": "תנו דוגמה אחת לכלוריד מסיס ואחת לכלוריד שאינו מסיס.", "a": "מסיס: <bdi>NaCl</bdi> (או רוב הכלורידים). אינו מסיס: <bdi>AgCl</bdi> (וגם <bdi>PbCl<sub>2</sub></bdi>, <bdi>Hg<sub>2</sub>Cl<sub>2</sub></bdi>)." }
+          ]
+        }
+      }
+    ]
+  },
+  "questions": {
+    "t5-q1": {
+      "q": "כתבו את המשוואה היונית נטו <bdi>(net ionic equation)</bdi> לערבוב תמיסות מימיות של <bdi>AgNO<sub>3</sub></bdi> ו־<bdi>NaCl</bdi>.",
+      "answer": "Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq) → AgCl(s)",
+      "explanation": "<bdi>AgCl</bdi> אינו מסיס, ולכן הוא שוקע. <bdi>Na<sup>+</sup></bdi> ו־<bdi>NO<sub>3</sub><sup>−</sup></bdi> נשארים מומסים ולא משתנים, ולכן הם יונים צופים <bdi>(spectator ion)</bdi> ואינם נכתבים."
+    },
+    "t5-q2": {
+      "q": "סווגו כל אחד מהחומרים הבאים כאלקטרוליט חזק <bdi>(strong electrolyte)</bdi>, אלקטרוליט חלש <bdi>(weak electrolyte)</bdi> או לא־אלקטרוליט <bdi>(nonelectrolyte)</bdi> במים: <bdi>KNO<sub>3</sub></bdi>, <bdi>HF</bdi>, <bdi>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></bdi> (גלוקוז).",
+      "answer": "<bdi>KNO<sub>3</sub></bdi>: אלקטרוליט חזק, <bdi>HF</bdi>: אלקטרוליט חלש, גלוקוז: לא־אלקטרוליט",
+      "explanation": "<bdi>KNO<sub>3</sub></bdi> הוא תרכובת יונית מסיסה ומתפרק לגמרי. <bdi>HF</bdi> היא חומצה חלשה שמתיינת רק חלקית. גלוקוז מתמוסס כמולקולות ניטרליות ואינו יוצר יונים."
+    },
+    "t5-q3": {
+      "q": "בתגובה <bdi>Zn(s) + Cu<sup>2+</sup>(aq) → Zn<sup>2+</sup>(aq) + Cu(s)</bdi>, זהו את המחמצן <bdi>(oxidizing agent)</bdi> ואת המחזר <bdi>(reducing agent)</bdi>.",
+      "answer": "המחמצן: <bdi>Cu<sup>2+</sup></bdi>, המחזר: <bdi>Zn</bdi>",
+      "explanation": "<bdi>Zn</bdi> מאבד אלקטרונים (<bdi>0 → +2</bdi>), ולכן הוא מתחמצן והוא המחזר. <bdi>Cu<sup>2+</sup></bdi> מקבל אלקטרונים (<bdi>+2 → 0</bdi>), ולכן הוא מחוזר והוא המחמצן."
+    },
+    "t5-q4": {
+      "q": "מהו ריכוז <bdi>(concentration)</bdi> יוני הסולפט בתמיסה של <bdi>Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></bdi> בריכוז <bdi>0.150 M</bdi> (הניחו התפרקות מלאה)?",
+      "given": [
+        "c(Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>) = 0.150 M"
+      ],
+      "answer": "<bdi>0.450 M SO<sub>4</sub><sup>2−</sup></bdi>",
+      "steps": [
+        "Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> → 2Al<sup>3+</sup> + 3SO<sub>4</sub><sup>2−</sup>",
+        "[SO<sub>4</sub><sup>2−</sup>] = 3 × 0.150 M = 0.450 M"
+      ]
+    },
+    "t5-q5": {
+      "q": "מוסיפים עודף של תמיסת <bdi>NaCl</bdi> ל־<bdi>50.0 mL</bdi> של <bdi>AgNO<sub>3</sub></bdi> בריכוז <bdi>0.100 M</bdi>. איזו מסה של <bdi>AgCl</bdi> שוקעת?",
+      "given": [
+        "V = 50.0 mL",
+        "c(AgNO<sub>3</sub>) = 0.100 M",
+        "M(AgCl) = 143.32 g/mol"
+      ],
+      "answer": "<bdi>0.717 g</bdi>",
+      "steps": [
+        "התגובה Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl היא ביחס 1:1, ולכן n(AgCl) = n(Ag<sup>+</sup>)",
+        "n(Ag<sup>+</sup>) = 0.0500 L × 0.100 M = 5.00 × 10<sup>−3</sup> mol",
+        "m = 5.00 × 10<sup>−3</sup> mol × 143.32 g/mol = 0.717 g"
+      ]
+    }
+  }
+}

@@ -173,11 +173,13 @@ Order top to bottom:
 - Empty state: "No weak spots yet. Do a few cards and check back."
 
 ## 11. Hebrew + English (RTL)
-- **v1 ships English only.** Hebrew layout rules below are for the post-v1 pass; keep `dir` and logical CSS ready, but do not ship Hebrew strings in v1.
-- Use `dir="rtl"` on the html element for Hebrew; layout uses logical properties (margin-inline-start etc.), so icons, back arrow and the rating order mirror.
-- Formulas, equations, units and numbers stay LTR inside RTL text (wrap math in `dir="ltr"` spans).
-- Chemistry terms: show the English term in parentheses after the Hebrew the first time on a card.
-- Toggle in top bar, saved in browser. Content needs both languages per question; missing translation falls back to English with a small "English only" tag.
+- Hebrew is the default: `<html lang="he" dir="rtl">`. The **EN** toggle in the top bar (`#langBtn`) switches to English and back; the choice is saved in localStorage `chemPractice.lang`. Progress is shared across both languages.
+- Layout uses logical properties (margin-inline-start etc.), so icons, back arrow and the rating order mirror. Step numbers and section-list numbers sit on the right in Hebrew.
+- Hebrew content is an overlay in `data/he/` laid over the English by id. Anything not translated falls back to English, shown LTR with an "English only" (באנגלית בלבד) tag.
+- Formulas, equations, units and numbers stay LTR inside RTL text, isolated in `<bdi>`.
+- Chemistry terms: Hebrew first, English in brackets the first time in each reading and card, e.g. צפיפות <bdi>(density)</bdi>.
+- Home group headers are Hebrew (יסודות / חלק N). Book references stay "Atkins 8e", drawing labels and the issue-form labels stay English.
+- Style rules live in PLAN.md "Hebrew style rules"; shared terms in `data/he/glossary.json`.
 
 ## 12. Accessibility
 - Contrast 4.5:1 for text; focus ring 2 px primary with 2 px offset; all buttons reachable by keyboard.
