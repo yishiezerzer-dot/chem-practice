@@ -88,3 +88,8 @@ dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 .rtoc{scroll-margin-top:calc(56px + 12px)}
 .report-btn{display:inline-block;color:var(--primary);font-size:13px;line-height:18px;text-decoration:underline;padding:15px 0}
 @media (max-width:430px){.steps .nw{white-space:normal}}
+
+/* Hebrew / RTL (H1) */
+bdi[dir=ltr]{unicode-bidi:isolate}
+.lang-btn{font-size:13px;padding:8px 10px}
+.en-only{color:var(--muted);font-size:13px;line-height:18px}

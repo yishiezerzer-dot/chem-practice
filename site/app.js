@@ -3,7 +3,16 @@ const KEY = 'chemPractice.v1', INTERVALS = [1, 3, 7], DAY = 864e5;
 let TOPICS = [], QS = [], READINGS = {}, S, view = 'home', viewArg = null;
 const $ = s => document.querySelector(s), app = $('#app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-/** Allow trusted reading markup: <sub>, <sup>, <span class="nw">…</span>. Everything else is escaped. */
+
+// Language: Hebrew by default, English on request. Saved apart from progress, which both languages share.
+const LANG_KEY = 'chemPractice.lang';
+let LANG = (() => { try { return localStorage.getItem(LANG_KEY) === 'en' ? 'en' : 'he'; } catch { return 'he'; } })();
+let HE = {}; // topic id -> Hebrew overlay (data/he/topics/<id>.json)
+const isHe = () => LANG === 'he';
+const HEB = /[֐-׿]/;
+/** UI string from site/i18n/<lang>.js; a missing key falls back to English. */
+const T = (k, ...a) => { const L = window.I18N[LANG] || {}; const s = k in L ? L[k] : window.I18N.en[k]; return typeof s === 'function' ? s(...a) : s; };
+/** Allow trusted reading markup: <sub>, <sup>, <span class="nw">…</span>, <bdi>…</bdi> (rendered left-to-right). Everything else is escaped. */
 const fmtRich = s => {
   const slots = [];
   const put = html => { slots.push(html); return `\0${slots.length - 1}\0`; };
@@ -14,6 +23,7 @@ const fmtRich = s => {
     str = str.replace(/<(sub|sup)>([^<]*)<\/\1>/g, (_, t, c) => put('<' + t + '>' + esc(c) + '</' + t + '>'));
   } while (str !== prev);
   str = str.replace(/<span class="nw">([^<]*)<\/span>/g, (_, c) => put('<span class="nw">' + esc(c) + '</span>'));
+  str = str.replace(/<bdi>([^<]*)<\/bdi>/g, (_, c) => put('<bdi dir="ltr">' + esc(c) + '</bdi>'));
   str = esc(str);
   do {
     prev = str;
@@ -31,27 +41,85 @@ const qsFor = tid => QS.filter(q => q.topic === tid);
 const isDue = id => S.cards[id] && S.cards[id].due <= today();
 const ref = t => { const u = t.textbook_units.map(x => x.unit === 'F' ? 'Fundamentals' : x.unit === 'MT' ? 'Major Techniques' : 'Focus ' + x.unit).join(' + '), ts = t.textbook_topics.map(x => x.topic); return u + ' · Topic' + (ts.length > 1 ? 's ' : ' ') + ts.join(', '); };
 const readingOf = tid => READINGS[tid] || null;
+
+// Hebrew content overlay: English stays the source; Hebrew fields replace matching English ones by id.
+// Anything missing in Hebrew falls back to English and is marked `_en` (shown left-to-right with an "English only" tag).
+const KEEP_EN = new Set(['id', 'topic', 'type', 'ref', 'reviewed', 'topic_id', 'src']);
+function overlay(en, he) {
+  if (he == null) return en;
+  if (Array.isArray(en)) return Array.isArray(he) ? en.map((x, i) => i < he.length ? overlay(x, he[i]) : x) : en;
+  if (en && typeof en === 'object') {
+    const o = { ...en };
+    for (const k in en) if (!KEEP_EN.has(k) && he && typeof he === 'object' && k in he) o[k] = overlay(en[k], he[k]);
+    return o;
+  }
+  return typeof he === typeof en ? he : en;
+}
+const qL = q => { if (!isHe()) return q; const h = HE[q.topic]?.questions?.[q.id]; return h ? overlay(q, h) : { ...q, _en: true }; };
+function readingL(tid) {
+  const r = readingOf(tid); if (!r || !isHe()) return r;
+  const hr = HE[tid]?.reading; if (!hr) return { ...r, _en: true };
+  const byId = Object.fromEntries((hr.sections || []).map(s => [s.id, s]));
+  return { ...r, sections: (r.sections || []).map(s => byId[s.id] ? overlay(s, byId[s.id]) : { ...s, _en: true }) };
+}
+const tName = t => isHe() ? (HE[t.id]?.name || t.topic_he || t.topic_en) : t.topic_en;
+// Book references stay English (Atkins 8e); keep them left-to-right inside Hebrew pages.
+const ltr = html => isHe() ? `<bdi dir="ltr">${html}</bdi>` : html;
+const bookRef = t => ltr(esc(ref(t)));
+const fbAttr = x => x && x._en ? ' dir="ltr" lang="en"' : '';
+const enOnly = x => x && x._en ? `<span class="tag en-only">${esc(T('englishOnly'))}</span> ` : '';
+/** Card text: English renders as before; in Hebrew mode, lines without Hebrew letters (formulas, numbers) are isolated left-to-right. */
+const tx = s => !isHe() ? esc(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
+
 const plain = x => String(x == null ? '' : x).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 const clip = (x, n = 300) => { x = plain(x); return x.length > n ? x.slice(0, n - 1).trimEnd() + '…' : x; };
 // Prefilled GitHub issue link (no backend, no token); the reader finishes and submits it on GitHub.
-function reportBtn(t, kind, id, text) {
+// `fb` = the student saw the English fallback inside the Hebrew site.
+function reportBtn(t, kind, id, text, fb) {
   const tn = plain(t.topic_en), isCard = kind === 'card';
-  const q = [['title', `Review: ${tn} – ${id}`],
+  const q = [['title', `Review (${LANG}): ${tn} – ${id}`],
     ['body', `Topic: ${tn} (${t.id})
+Language: ${LANG}${fb ? ' (content shown in English)' : ''}
 ${isCard ? 'Card' : 'Reading section'}: ${id}
 ${isCard ? 'Question' : 'Section'}: ${clip(text)}
 
 What's wrong:
 `],
     ['labels', 'review']].map(([k, v]) => k + '=' + encodeURIComponent(v)).join('&');
-  return `<a class="report-btn" href="https://github.com/yishiezerzer-dot/chem-practice/issues/new?${q}" target="_blank" rel="noopener noreferrer" aria-label="Report a problem with ${isCard ? 'card' : 'section'} ${esc(id)}">Report a problem</a>`;
+  return `<a class="report-btn" href="https://github.com/yishiezerzer-dot/chem-practice/issues/new?${q}" target="_blank" rel="noopener noreferrer" aria-label="${esc(T('reportLabel', isCard, id))}">${esc(T('report'))}</a>`;
+}
+
+function applyLang() {
+  const html = document.documentElement;
+  html.lang = LANG; html.dir = isHe() ? 'rtl' : 'ltr';
+  document.title = T('docTitle');
+  $('#back').setAttribute('aria-label', T('back')); $('#back').textContent = T('backArrow');
+  $('#secBtn').textContent = T('sections');
+  $('#weakBtn').textContent = T('weakTopics');
+  const lb = $('#langBtn'); lb.textContent = T('langToggle'); lb.setAttribute('aria-label', T('langToggleLabel'));
+  lb.lang = isHe() ? 'en' : 'he';
+}
+function setLang(l) {
+  LANG = l === 'en' ? 'en' : 'he';
+  try { localStorage.setItem(LANG_KEY, LANG); } catch (_) {}
+  applyLang(); closeLightbox();
+  if (view === 'end') return go('home'); // the finished session is already cleared, so the end screen can't redraw
+  render(); window.scrollTo(0, 0);
+}
+async function loadHe() {
+  try {
+    const idx = await fetch('data/he/index.json').then(x => x.json());
+    const files = await Promise.all((idx.topics || []).map(id => fetch(`data/he/topics/${id}.json`).then(x => x.ok ? x.json() : null).catch(() => null)));
+    files.forEach(f => { if (f && f.topic_id) HE[f.topic_id] = f; });
+  } catch (_) { HE = {}; }
 }
 
 async function init() {
   const [t, q, r] = await Promise.all([
     fetch('data/topics.json').then(x => x.json()),
     fetch('data/questions.json').then(x => x.json()),
-    fetch('data/readings.json').then(x => x.json())
+    fetch('data/readings.json').then(x => x.json()),
+    loadHe()
   ]);
   TOPICS = t.topics.slice().sort((a, b) => a.order - b.order);
   QS = q.questions;
@@ -66,6 +134,8 @@ async function init() {
     else go('home');
   };
   $('#weakBtn').onclick = () => go('weak');
+  $('#langBtn').onclick = () => setLang(isHe() ? 'en' : 'he');
+  applyLang();
   $('#importFile').onchange = doImport;
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && $('#lightbox')) { e.preventDefault(); closeLightbox(); return; }
@@ -88,25 +158,25 @@ function setTop(title, back) {
 function render() { ({ home, reading, topic, card, end, weak })[view](viewArg); }
 
 function home() {
-  setTop('Chem Practice', false);
+  setTop(T('appTitle'), false);
   const due = QS.filter(q => isDue(q.id)), dueTopics = new Set(due.map(q => q.topic)).size;
   const rated = Object.keys(S.cards).length;
   const since = S.lastExport || S.firstRating;
   const nudge = rated >= 20 && since && Date.now() - since >= 7 * DAY && Date.now() > S.nudgeHide;
-  let h = `<div class="meta">69107 · Introduction to Chemistry</div><h2>Pick a topic</h2>`;
+  let h = `<div class="meta">${esc(T('course'))}</div><h2>${esc(T('pickTopic'))}</h2>`;
   const ss = S.session;
-  if (ss && ss.queue.length) h += `<div class="card"><div class="cap">In progress</div><div>${esc(ss.topic === 'due' ? 'Review due' : topicOf(ss.topic).topic_en)}</div><div class="meta">${ss.queue.length} cards left</div><button class="btn" id="resume" style="margin-top:12px">Resume</button></div>`;
-  if (due.length) h += `<div class="card"><div>${due.length} card${due.length > 1 ? 's' : ''} due across ${dueTopics} topic${dueTopics > 1 ? 's' : ''}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">Review due</button></div>`;
+  if (ss && ss.queue.length) h += `<div class="card"><div class="cap">${esc(T('inProgress'))}</div><div>${esc(ss.topic === 'due' ? T('reviewDue') : tName(topicOf(ss.topic)))}</div><div class="meta">${esc(T('cardsLeft', ss.queue.length))}</div><button class="btn" id="resume" style="margin-top:12px">${esc(T('resume'))}</button></div>`;
+  if (due.length) h += `<div class="card"><div>${esc(T('dueAcross', due.length, dueTopics))}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">${esc(T('reviewDue'))}</button></div>`;
   let lastSect = '';
   for (const t of TOPICS) {
     const sect = t.textbook_units[0].unit === 'F' ? 'Fundamentals' : 'Focus ' + t.textbook_units[0].unit;
-    if (sect !== lastSect) { h += `<div class="sect">${esc(sect)}</div>`; lastSect = sect; }
+    if (sect !== lastSect) { h += `<div class="sect">${ltr(esc(sect))}</div>`; lastSect = sect; }
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
-    h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(t.topic_en)}</div><div class="cap">${esc(ref(t))} · <span class="nw">${knew}/${n} learned</span></div></span>${d ? `<span class="badge" aria-label="${d} due">${d}</span>` : ''}</button>`
-           : `<div class="row" aria-disabled="true"><span class="num">${t.order}</span><span class="grow"><div class="meta">${esc(t.topic_en)}</div><div class="cap">${esc(ref(t))} · Coming soon</div></span></div>`;
+    h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(tName(t))}</div><div class="cap">${bookRef(t)} · <span class="nw">${esc(T('learned', knew, n))}</span></div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
+           : `<div class="row" aria-disabled="true"><span class="num">${t.order}</span><span class="grow"><div class="meta">${esc(tName(t))}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
   }
-  if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>Back up your progress</span><button class="link" id="nudgeX" aria-label="Dismiss">✕</button></div>`;
-  h += `<p class="cap" style="margin-top:24px">Progress is saved on this device only.</p><button class="link" id="exp">Export progress</button><button class="link" id="imp">Import progress</button>`;
+  if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>${esc(T('backupNudge'))}</span><button class="link" id="nudgeX" aria-label="${esc(T('dismiss'))}">✕</button></div>`;
+  h += `<p class="cap" style="margin-top:24px">${esc(T('savedHere'))}</p><button class="link" id="exp">${esc(T('exportProgress'))}</button><button class="link" id="imp">${esc(T('importProgress'))}</button>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
   $('#resume') && ($('#resume').onclick = () => go('card'));
@@ -123,15 +193,16 @@ function secAnchorId(sec, i) {
 function renderWorked(w) {
   if (!w) return '';
   const steps = (w.steps || []).map(s => `<li>${fmtRich(s)}</li>`).join('');
-  return `<div class="worked" data-worked="1"><div class="cap">Worked example</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
+  return `<div class="worked" data-worked="1"><div class="cap">${esc(T('workedExample'))}</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps">${steps}</ol></div>`;
 }
 function renderSection(sec, i, t) {
   let h = '';
   const aid = secAnchorId(sec, i);
   if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${esc(sec.heading)}</h3>`;
+  if (sec._en) h += `<p class="cap" style="margin:0 0 8px">${enOnly(sec)}</p>`;
   (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${fmtRich(p)}</p>`; });
   if (sec.why) {
-    h += `<div class="callout callout-why" data-why="1"><div class="cap">Why this matters</div><p class="rp" style="margin:0">${fmtRich(sec.why)}</p></div>`;
+    h += `<div class="callout callout-why" data-why="1"><div class="cap">${esc(T('whyMatters'))}</div><p class="rp" style="margin:0">${fmtRich(sec.why)}</p></div>`;
   }
   const works = [];
   if (sec.worked) works.push(sec.worked);
@@ -139,15 +210,15 @@ function renderSection(sec, i, t) {
   works.forEach(w => { h += renderWorked(w); });
   if (sec.mistake) {
     const m = sec.mistake;
-    h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">Common mistake</div>`;
-    if (m.wrong) h += `<p class="rp"><strong>Wrong approach.</strong> ${fmtRich(m.wrong)}</p>`;
-    if (m.whyWrong) h += `<p class="rp"><strong>Why that's wrong.</strong> ${fmtRich(m.whyWrong)}</p>`;
-    if (m.correct) h += `<p class="rp"><strong>Do this instead.</strong> ${fmtRich(m.correct)}</p>`;
+    h += `<div class="callout callout-mistake" data-mistake="1"><div class="cap">${esc(T('commonMistake'))}</div>`;
+    if (m.wrong) h += `<p class="rp"><strong>${esc(T('wrongApproach'))}</strong> ${fmtRich(m.wrong)}</p>`;
+    if (m.whyWrong) h += `<p class="rp"><strong>${esc(T('whyWrong'))}</strong> ${fmtRich(m.whyWrong)}</p>`;
+    if (m.correct) h += `<p class="rp"><strong>${esc(T('doInstead'))}</strong> ${fmtRich(m.correct)}</p>`;
     h += `</div>`;
   }
   if (sec.check && (sec.check.items || []).length) {
     const chk = sec.check;
-    const headingIsCheck = /check yourself/i.test(sec.heading || '') || /check yourself/i.test(chk.title || '');
+    const headingIsCheck = /check yourself/i.test(sec.heading || '') || /check yourself/i.test(chk.title || '') || (!!chk.title && chk.title === sec.heading);
     h += `<div class="callout callout-check" data-check="1">`;
     // Avoid a second "Check yourself" when the section H3 already says it
     if (chk.title && !headingIsCheck) h += `<div class="cap">${esc(chk.title)}</div>`;
@@ -156,7 +227,7 @@ function renderSection(sec, i, t) {
     chk.items.forEach((it, qi) => {
       const aid = `check-a-${i}-${qi}`;
       h += `<li><div class="check-q">${fmtRich(it.q || '')}</div>`;
-      h += `<button type="button" class="btn-show-ans" data-show-ans="1" aria-expanded="false" aria-controls="${aid}">Show answer</button>`;
+      h += `<button type="button" class="btn-show-ans" data-show-ans="1" aria-expanded="false" aria-controls="${aid}">${esc(T('showAnswer'))}</button>`;
       h += `<div class="check-a" id="${aid}" hidden>${fmtRich(it.a || '')}</div></li>`;
     });
     h += `</ol></div>`;
@@ -167,20 +238,20 @@ function renderSection(sec, i, t) {
   }
   if (sec.figure) {
     if (sec.figure.src) {
-      const alt = esc(sec.figure.alt || 'Figure');
+      const alt = esc(sec.figure.alt || T('figure'));
       const src = sec.figure.src;
       const full = src.replace(/\.svg$/i, '.png');
-      h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button><div class="rsketch-hint">Tap to enlarge</div></div>`;
+      h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button><div class="rsketch-hint">${esc(T('tapToEnlarge'))}</div></div>`;
     } else if (sec.figure.status === 'pending-sketch') {
       h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }
   }
-  h += reportBtn(t, 'section', sec.id || 's' + (i + 1), sec.heading || '');
+  h += reportBtn(t, 'section', sec.id || 's' + (i + 1), sec.heading || '', sec._en);
   return h;
 }
 
 function figPlaceholder(note, attr = '') {
-  return `<div class="placeholder" ${attr}><div class="cap">Figure coming soon</div><p class="rp" style="margin:4px 0 0">${esc(note || 'Chem Sketcher will add this drawing.')}</p></div>`;
+  return `<div class="placeholder" ${attr}><div class="cap">${esc(T('figureSoon'))}</div><p class="rp" style="margin:4px 0 0">${esc(note || T('sketcherNote'))}</p></div>`;
 }
 // Missing or failed sketch images: swap the broken <img> for the dashed placeholder (DESIGN §3b).
 // Capture phase, because image error events do not bubble.
@@ -221,7 +292,7 @@ function closeLightbox() {
 }
 function openLightbox(fromBtn) {
   const img = fromBtn.querySelector('img.rsketch') || fromBtn;
-  const alt = img.getAttribute('alt') || 'Figure';
+  const alt = img.getAttribute('alt') || T('figure');
   const full = img.getAttribute('data-full') || img.getAttribute('src') || '';
   const inlineW = Math.max(1, img.getBoundingClientRect().width || img.clientWidth || 320);
   const targetW = Math.max(inlineW * 2, 361); // 2× page CSS width, larger than 360 viewport
@@ -230,11 +301,12 @@ function openLightbox(fromBtn) {
   const lb = document.createElement('div');
   lb.id = 'lightbox';
   lb.className = 'lightbox';
+  lb.dir = 'ltr'; // drawings and their scroll position stay left-to-right in both languages
   lb.setAttribute('role', 'dialog');
   lb.setAttribute('aria-modal', 'true');
   lb.setAttribute('aria-label', alt);
   lb.dataset.inlineWidth = String(inlineW);
-  lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="Close">✕</button>`
+  lb.innerHTML = `<button type="button" class="lightbox-close" aria-label="${esc(T('close'))}">✕</button>`
     + `<div class="lightbox-scroll" data-lightbox-scroll="1">`
     + `<img src="${esc(full)}" alt="${esc(alt)}" style="width:${targetW}px;max-width:none;height:auto" data-lightbox-img="1" data-fallback="${esc(img.getAttribute('src') || '')}"/>`
     + `</div>`;
@@ -268,33 +340,34 @@ function wireSketchLightbox() {
 }
 
 function reading(tid) {
-  const t = topicOf(tid), r = readingOf(tid), qs = qsFor(tid);
-  setTop('Reading', true);
-  let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
+  const t = topicOf(tid), r = readingL(tid), qs = qsFor(tid);
+  setTop(T('reading'), true);
+  let h = `<div class="meta">${bookRef(t)}</div><h2>${esc(tName(t))}</h2>`;
   // Order under H1: Draft badge → Skip to cards → In this reading TOC
-  if (r && !r.reviewed) h += `<div class="cap" data-draft-badge="1">Draft, not checked yet</div>`;
-  h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">Skip to cards</button></div>`;
+  if (r && !r.reviewed) h += `<div class="cap" data-draft-badge="1">${esc(T('draft'))}</div>`;
+  if (r && r._en) h += `<div class="cap">${enOnly(r)}</div>`;
+  h += `<div class="read-actions"><button class="link" id="skipCards" style="padding-inline:0">${esc(T('skipToCards'))}</button></div>`;
   if (!r) {
-    h += `<div class="card"><p class="rp">No reading for this topic yet.</p></div>`;
+    h += `<div class="card"><p class="rp">${esc(T('noReading'))}</p></div>`;
   } else {
     const secs = r.sections || [];
     if (secs.length) {
-      h += `<nav class="rtoc" id="readingToc" aria-label="In this reading"><div class="cap">In this reading</div><ol class="rtoc-list">`;
+      h += `<nav class="rtoc" id="readingToc" aria-label="${esc(T('inThisReading'))}"><div class="cap">${esc(T('inThisReading'))}</div><ol class="rtoc-list">`;
       secs.forEach((sec, i) => {
         const aid = secAnchorId(sec, i);
-        const label = sec.heading || ('Section ' + (i + 1));
-        h += `<li><a class="rtoc-link" href="#${esc(aid)}">${esc(label)}</a></li>`;
+        const label = sec.heading || T('sectionN', i + 1);
+        h += `<li${fbAttr(sec)}><a class="rtoc-link" href="#${esc(aid)}">${esc(label)}</a></li>`;
       });
       h += `</ol></nav>`;
     }
     h += `<div class="reading">`;
     secs.forEach((sec, i) => {
       const aid = secAnchorId(sec, i);
-      h += `<section class="rsec" id="sec-${esc(aid)}">${renderSection(sec, i, t)}</section>`;
+      h += `<section class="rsec" id="sec-${esc(aid)}"${fbAttr(sec)}>${renderSection(sec, i, t)}</section>`;
     });
     h += `</div>`;
   }
-  h += `<div class="sticky" id="readEnd"><button class="btn" id="startPractice">Start practice (${qs.length} cards)</button></div>`;
+  h += `<div class="sticky" id="readEnd"><button class="btn" id="startPractice">${esc(T('startPractice', qs.length))}</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   $('#skipCards').onclick = () => { stopReadProgress(); go('topic', tid); };
   $('#startPractice').onclick = () => { stopReadProgress(); start(tid, qs.map(q => q.id)); };
@@ -312,7 +385,7 @@ function reading(tid) {
       const next = !open;
       btn.setAttribute('aria-expanded', next ? 'true' : 'false');
       ans.hidden = !next;
-      btn.textContent = next ? 'Hide answer' : 'Show answer';
+      btn.textContent = next ? T('hideAnswer') : T('showAnswer');
     };
   });
   const secBtn = $('#secBtn');
@@ -332,11 +405,11 @@ function reading(tid) {
 }
 
 function topic(tid) {
-  const t = topicOf(tid), qs = qsFor(tid); setTop(t.topic_en, true);
-  let h = `<div class="meta">${esc(ref(t))}</div><h2>${esc(t.topic_en)}</h2>`;
-  h += `<button class="link" id="reopenReading" style="padding-inline:0;margin-bottom:8px">Read the section again</button>`;
-  qs.forEach((q, i) => { const c = S.cards[q.id]; h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow">${esc(q.q)}</span><span class="cap">${c ? (isDue(q.id) ? 'Due' : '✓ Done') : 'New'}</span></div>`; });
-  h += `<div class="sticky"><button class="btn" id="go">Start practice (${qs.length} cards)</button></div>`;
+  const t = topicOf(tid), qs = qsFor(tid); setTop(tName(t), true);
+  let h = `<div class="meta">${bookRef(t)}</div><h2>${esc(tName(t))}</h2>`;
+  h += `<button class="link" id="reopenReading" style="padding-inline:0;margin-bottom:8px">${esc(T('readAgain'))}</button>`;
+  qs.forEach((q, i) => { const c = S.cards[q.id], lq = qL(q); h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow"${fbAttr(lq)}>${tx(lq.q)}</span><span class="cap">${esc(c ? (isDue(q.id) ? T('due') : T('done')) : T('new'))}</span></div>`; });
+  h += `<div class="sticky"><button class="btn" id="go">${esc(T('startPractice', qs.length))}</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   $('#reopenReading').onclick = () => go('reading', tid);
   $('#go').onclick = () => start(tid, qs.map(q => q.id));
@@ -348,14 +421,14 @@ const rank = { knew: 0, unsure: 1, didnt: 2 };
 function nextStep(id, worst) { const c = S.cards[id]; const cur = c ? c.step : -1; return worst === 'didnt' ? 0 : worst === 'unsure' ? Math.max(cur, 0) : Math.min(cur + 1, 2); }
 function card() {
   const ss = S.session; if (!ss || !ss.queue.length) return go('home');
-  const q = qOf(ss.queue[0]), t = topicOf(q.topic), calc = q.type === 'calc';
+  const q = qL(qOf(ss.queue[0])), t = topicOf(q.topic), calc = q.type === 'calc';
   const done = ss.total - new Set(ss.queue).size;
-  setTop(`Card ${done + 1} of ${ss.total}`, true); $('#bar div').style.width = (100 * done / ss.total) + '%';
-  const tip = calc ? 'Solve it in your notebook first, then check.' : 'Answer it in your head first, then check.';
-  let h = `<div class="cap">${esc(t.topic_en)} · <span class="tag">${calc ? 'Calculation' : 'Concept'}</span></div>
-  <div class="card" style="margin-top:8px"><p style="margin:0">${esc(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">Given</div>${q.given.map(g => `<div>${esc(g)}</div>`).join('')}</div>` : ''}${reportBtn(t, 'card', q.id, q.q)}</div>
-  ${S.hideTips ? `<div class="cap tipline">${tip}</div>` : `<div class="tipbox"><span aria-hidden="true">💡</span><span class="grow">${tip}</span><button class="link" id="hideTips" style="padding:0 4px;min-height:24px">Hide tips</button></div>`}
-  <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show">Show answer</button></div>`;
+  setTop(T('cardNofM', done + 1, ss.total), true); $('#bar div').style.width = (100 * done / ss.total) + '%';
+  const tip = esc(calc ? T('tipCalc') : T('tipConcept'));
+  let h = `<div class="cap">${esc(tName(t))} · <span class="tag">${esc(calc ? T('calculation') : T('concept'))}</span> ${enOnly(q)}</div>
+  <div class="card" style="margin-top:8px"><div${fbAttr(q)}><p style="margin:0">${tx(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">${esc(T('given'))}</div>${q.given.map(g => `<div>${tx(g)}</div>`).join('')}</div>` : ''}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
+  ${S.hideTips ? `<div class="cap tipline">${tip}</div>` : `<div class="tipbox"><span aria-hidden="true">💡</span><span class="grow">${tip}</span><button class="link" id="hideTips" style="padding:0 4px;min-height:24px">${esc(T('hideTips'))}</button></div>`}
+  <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show">${esc(T('showAnswer'))}</button></div>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   $('#hideTips') && ($('#hideTips').onclick = () => { S.hideTips = true; save(); card(); });
   $('#show').onclick = () => reveal(q, t);
@@ -371,19 +444,21 @@ function fmtStep(s) {
 function qImage(q) {
   if (!q.image) return '';
   const src = esc(q.image);
-  const alt = esc(q.imageAlt || 'Answer figure');
+  const alt = esc(q.imageAlt || T('answerFigure'));
   return `<div class="qimg"><img src="${src}" alt="${alt}" loading="lazy"></div>`;
 }
 function reveal(q, t) {
   document.querySelectorAll('.tipbox, .tipline').forEach(e => e.remove());
   const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
-  const gap = (n) => rest < n ? 'at the end' : `~${n} cards`;
-  const ns = nextStep(q.id, worst), knewLbl = `Next: in ${INTERVALS[ns]} day${INTERVALS[ns] > 1 ? 's' : ''}`;
-  $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">Answer</div><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${esc(q.answer)}</span>` : esc(q.answer)}</div>
+  const gap = (n) => esc(rest < n ? T('atEnd') : T('inCards', n));
+  const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
+  // Hebrew steps: Hebrew lines use the reading markup; formula-only lines keep the English step layout, isolated left-to-right.
+  const step = s => !isHe() ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtStep(s));
+  $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${fbAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
-  ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${fmtStep(s)}</li>`).join('')}</ol>` : `<p>${esc(q.explanation)}</p>`}
-  <div class="meta">📖 Atkins 8e · ${esc(q.ref)}</div>${q.reviewed ? '' : '<div class="cap">Draft, not checked yet</div>'}</div>`;
-  $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>Didn't know</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>Unsure</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>Knew it</b><small>${knewLbl}</small></button></div>`;
+  ${q.type === 'calc' ? `<ol class="steps">${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
+  <div class="meta">${ltr(`📖 Atkins 8e · ${esc(q.ref)}`)}</div>${q.reviewed ? '' : `<div class="cap">${esc(T('draft'))}</div>`}</div>`;
+  $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>${esc(T('didnt'))}</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>${esc(T('unsure'))}</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>${esc(T('knew'))}</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
   const top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16; scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 }
@@ -404,9 +479,9 @@ function end() {
   const ss = S.session; setTop('', true); $('#back').hidden = true;
   const ids = Object.keys(ss.worst), first = ids.filter(i => ss.worst[i] === 'knew').length;
   const hard = ids.filter(i => ss.worst[i] !== 'knew').sort((a, b) => rank[ss.worst[b]] - rank[ss.worst[a]]).slice(0, 3);
-  app.innerHTML = `<div class="fade"><h2>Topic done</h2><div class="card"><div>Got it first try: <b>${first}</b> · Needed another go: <b>${ids.length - first}</b></div></div>
-  ${hard.length ? `<div class="meta">Hardest cards</div>${hard.map(i => `<div class="row" style="cursor:default"><span class="grow">${esc(qOf(i).q)}</span></div>`).join('')}` : ''}
-  <div class="sticky"><button class="btn" id="home">Back to topics</button>${hard.length ? '<button class="btn sec" id="again" style="margin-top:8px">Review hardest again</button>' : ''}</div></div>`;
+  app.innerHTML = `<div class="fade"><h2>${esc(T('topicDone'))}</h2><div class="card"><div>${esc(T('firstTry'))}: <b>${first}</b> · ${esc(T('anotherGo'))}: <b>${ids.length - first}</b></div></div>
+  ${hard.length ? `<div class="meta">${esc(T('hardest'))}</div>${hard.map(i => { const lq = qL(qOf(i)); return `<div class="row" style="cursor:default"><span class="grow"${fbAttr(lq)}>${tx(lq.q)}</span></div>`; }).join('')}` : ''}
+  <div class="sticky"><button class="btn" id="home">${esc(T('backToTopics'))}</button>${hard.length ? `<button class="btn sec" id="again" style="margin-top:8px">${esc(T('reviewHardest'))}</button>` : ''}</div></div>`;
   const t = ss.topic; S.session = null; save();
   $('#home').onclick = () => go('home');
   $('#again') && ($('#again').onclick = () => start(t, hard));
@@ -422,12 +497,12 @@ function weak() {
     (n >= 10 ? rows : few).push({ t, k, u, d, n, score: (d * 2 + u) / n });
   }
   rows.sort((a, b) => b.score - a.score || b.d - a.d);
-  const row = x => `<div class="card"><div>${esc(x.t.topic_en)}</div><div class="cap">${esc(ref(x.t))}</div><div class="stack" role="img" aria-label="${x.d} didn't know, ${x.u} unsure, ${x.k} knew"><span style="width:${100 * x.d / x.n}%;background:var(--didnt)"></span><span style="width:${100 * x.u / x.n}%;background:var(--unsure)"></span><span style="width:${100 * x.k / x.n}%;background:var(--knew)"></span></div><div class="cap">${x.d} didn't know · ${x.u} unsure · ${x.k} knew</div><button class="btn sec" data-t="${x.t.id}" style="margin-top:8px">Practice</button></div>`;
-  let h = '<h2>Weak topics</h2>';
-  if (!rows.length && !few.length) h += '<p class="meta">No weak spots yet. Do a few cards and check back.</p>';
+  const row = x => `<div class="card"><div>${esc(tName(x.t))}</div><div class="cap">${bookRef(x.t)}</div><div class="stack" role="img" aria-label="${esc(T('weakCounts', x.d, x.u, x.k))}"><span style="width:${100 * x.d / x.n}%;background:var(--didnt)"></span><span style="width:${100 * x.u / x.n}%;background:var(--unsure)"></span><span style="width:${100 * x.k / x.n}%;background:var(--knew)"></span></div><div class="cap">${esc(T('weakCounts', x.d, x.u, x.k))}</div><button class="btn sec" data-t="${x.t.id}" style="margin-top:8px">${esc(T('practice'))}</button></div>`;
+  let h = `<h2>${esc(T('weakTopics'))}</h2>`;
+  if (!rows.length && !few.length) h += `<p class="meta">${esc(T('noWeak'))}</p>`;
   h += rows.map(row).join('');
-  if (few.length) h += `<div class="sect">Not enough practice yet</div>` + few.map(row).join('');
-  h += `<p class="cap">Topics you haven't tried don't show here.</p>`;
+  if (few.length) h += `<div class="sect">${esc(T('notEnough'))}</div>` + few.map(row).join('');
+  h += `<p class="cap">${esc(T('untriedHidden'))}</p>`;
   app.innerHTML = `<div class="fade">${h}</div>`;
   app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
 }
@@ -440,9 +515,9 @@ function doExport() {
 function doImport(e) {
   const f = e.target.files[0]; if (!f) return; e.target.value = '';
   f.text().then(txt => {
-    let data; try { data = JSON.parse(txt); if (!data.cards) throw 0; } catch { alert("That file doesn't look like a Chem Practice backup."); return; }
+    let data; try { data = JSON.parse(txt); if (!data.cards) throw 0; } catch { alert(T('badBackup')); return; }
     const dlg = document.createElement('dialog');
-    dlg.innerHTML = `<p>This will replace your progress on this device.</p><div style="display:flex;gap:8px"><button class="btn sec" value="no">Cancel</button><button class="btn" value="yes">Replace</button></div>`;
+    dlg.innerHTML = `<p>${esc(T('replaceWarn'))}</p><div style="display:flex;gap:8px"><button class="btn sec" value="no">${esc(T('cancel'))}</button><button class="btn" value="yes">${esc(T('replace'))}</button></div>`;
     document.body.append(dlg); dlg.showModal();
     dlg.querySelectorAll('button').forEach(b => b.onclick = () => { if (b.value === 'yes') { S = fresh(data); save(); go('home'); } dlg.close(); dlg.remove(); });
   });
