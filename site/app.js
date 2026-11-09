@@ -12,19 +12,46 @@ const isHe = () => LANG === 'he';
 const HEB = /[֐-׿]/;
 /** UI string from site/i18n/<lang>.js; a missing key falls back to English. */
 const T = (k, ...a) => { const L = window.I18N[LANG] || {}; const s = k in L ? L[k] : window.I18N.en[k]; return typeof s === 'function' ? s(...a) : s; };
+/** Hebrew mode: a formula isolate becomes an LTR chain that wraps only between pieces, never inside one. Pieces start at a
+ *  top-level " = ", " ⇌ ", " → " or " ≈ " (outside brackets); a piece over FX_MAX visible characters is split before " + ",
+ *  then at spaces. Inside a piece spaces are non-breaking (CSS overflow-wrap:anywhere is the last resort). `c` is raw text
+ *  where <sub>/<sup> are already \0n\0 placeholders (counted by their visible text). A formula of at most FX_MAX visible
+ *  characters, or one piece, stays a single .fx (no .fxc). */
+const FX_MAX = 28;
+const fxVis = (c, slots) => c.replace(/\0(\d+)\0/g, (_, i) => slots[i].replace(/<[^>]*>/g, '')).length;
+function fxSplit(c, ops) {
+  const out = []; let depth = 0, from = 0;
+  for (let i = 0; i < c.length; i++) {
+    const ch = c[i];
+    if (ch === '(' || ch === '[') depth++; else if (ch === ')' || ch === ']') depth = Math.max(0, depth - 1);
+    else if (depth === 0 && ch === ' ' && i > from && ops.some(o => c.startsWith(o, i))) { out.push(c.slice(from, i)); from = i + 1; }
+  }
+  out.push(c.slice(from));
+  return out;
+}
+function fxChain(c, slots) {
+  const OPS = [' = ', ' ⇌ ', ' → ', ' ≈ '];
+  let pieces = fxVis(c, slots) <= FX_MAX ? [c] : fxSplit(c, OPS);
+  pieces = pieces.flatMap(p => fxVis(p, slots) <= FX_MAX ? [p] : fxSplit(p, [' + ']))
+    .flatMap(p => fxVis(p, slots) <= FX_MAX ? [p] : fxSplit(p, [' ']));
+  const fx = p => '<bdi dir="ltr" class="fx">' + esc(p.replace(/ /g, '\xa0')) + '</bdi>';
+  return pieces.length === 1 ? fx(pieces[0]) : '<bdi dir="ltr" class="fxc">' + pieces.map(fx).join(' ') + '</bdi>';
+}
 /** Allow trusted reading markup: <sub>, <sup>, <span class="nw">…</span>, <bdi>…</bdi> (rendered left-to-right). Everything else is escaped. */
 const fmtRich = s => {
   const slots = [];
   const put = html => { slots.push(html); return `\0${slots.length - 1}\0`; };
   // Hebrew mode safety net (H2b): isolate any formula/Latin run the data left unwrapped (site/bidi.js). English is untouched.
   let str = isHe() && window.heWrap ? window.heWrap(String(s)) : String(s);
+  // Hebrew mode: a prefix + maqaf stays on the line with the formula that follows it (word joiner = no break after ־).
+  if (isHe()) str = str.replace(/־<bdi>/g, '־\u2060<bdi>');
   let prev;
   do {
     prev = str;
     str = str.replace(/<(sub|sup)>([^<]*)<\/\1>/g, (_, t, c) => put('<' + t + '>' + esc(c) + '</' + t + '>'));
   } while (str !== prev);
   str = str.replace(/<span class="nw">([^<]*)<\/span>/g, (_, c) => put('<span class="nw">' + esc(c) + '</span>'));
-  str = str.replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (_, c) => put('<bdi dir="ltr" class="fx">' + esc(c) + '</bdi>'));
+  str = str.replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (_, c) => put(isHe() ? fxChain(c, slots) : '<bdi dir="ltr" class="fx">' + esc(c) + '</bdi>'));
   str = esc(str);
   do {
     prev = str;
@@ -77,7 +104,9 @@ const enOnly = x => x && x._en ? `<span class="tag en-only">${esc(T('englishOnly
 /** Card text: English renders as before; in Hebrew mode, lines without Hebrew letters (formulas, numbers) are isolated left-to-right. */
 /** Heading/label text: Hebrew may carry <bdi>(English term)</bdi>; English stays escaped as before. */
 const hd = s => isHe() ? fmtRich(s) : esc(s);
-const tx = s => !isHe() ? esc(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
+// Hebrew card line with no Hebrew letters: the whole line is one equation chain (wraps only between pieces).
+const fmtLine = s => fmtRich(/<bdi>/.test(s) ? s : '<bdi>' + s + '</bdi>');
+const tx = s => !isHe() ? esc(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtLine(s));
 
 const plain = x => String(x == null ? '' : x).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 const clip = (x, n = 300) => { x = plain(x); return x.length > n ? x.slice(0, n - 1).trimEnd() + '…' : x; };
@@ -462,7 +491,7 @@ function reveal(q, t) {
   const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   // Hebrew steps: Hebrew lines use the reading markup; formula-only lines are isolated left-to-right.
   // A formula-only line is one unbreakable left-to-right unit (CSS lets it scroll sideways); English-fallback cards keep the English layout.
-  const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtRich(s));
+  const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtLine(s));
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${dirAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps"${rtlList(q)}>${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
