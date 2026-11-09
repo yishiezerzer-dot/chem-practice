@@ -128,8 +128,16 @@ Setup: Claude Code builds only, on branch `claude/<milestone>` in https://github
 - Done when every issue Yishi reports with Report a problem is fixed in the data files and marked in a `REVIEW_LOG.md` (proof: the log).
 - Done when reviewed items have `reviewed: true` and lose the Draft label (proof: screenshot).
 
+**C2b: Fix-note button on every card and reading** (model: lighter; approved by Yishi 2026-11-09; Chem Sketcher drawings come right after)
+Why: Yishi reviews on weekends and wants every problem he spots saved in one place so nothing is forgotten.
+- Done when every flashcard and every reading section has a "Report a problem" button that opens a new GitHub issue prefilled with the topic, card or section id, and a box for what's wrong (proof: screenshot of a card and a reading with the button).
+- Done when a test report shows up in the repo's Issues list with the right id in it (proof: issue link).
+- Done when C2 rounds read open issues instead of REVIEW_LOG.md, and each fix closes its issue (proof: one closed issue).
+
 **C3: Production release prep** (model: lighter, since it's mostly a careful copy to `main`)
 - Done when `main` has a release build of the reviewed content, with nothing labeled Draft (proof: diff summary).
 - Done when production goes live only after Yishi says go (proof: his message + link).
 
 Model rule: every Claude prompt names its model at the top. Heavy model for new features or big rewrites, a lighter one for data edits, copy fixes, and routine steps. Yishi has the final say.
+
+- 2026-11-09: Yishi checked most of the chemistry: the calculation methods are right; exact numbers don't matter for now. He'll keep reviewing on weekends through the in-app button (C2b proposed).
