@@ -1,6 +1,10 @@
 [
   {
     "he": "בליעה",
+    "en": "absorbance"
+  },
+  {
+    "he": "בליעה",
     "en": "absorption"
   },
   {
@@ -133,7 +137,7 @@
   },
   {
     "he": "חוק בר־למברט",
-    "en": "Beer-Lambert law"
+    "en": "Beer–Lambert law"
   },
   {
     "he": "בלוק",
@@ -318,6 +322,10 @@
   {
     "he": "מנוון",
     "en": "degenerate"
+  },
+  {
+    "he": "לא ממוקם",
+    "en": "delocalized"
   },
   {
     "he": "צפיפות",
@@ -756,6 +764,10 @@
     "en": "measurement"
   },
   {
+    "he": "היתוך",
+    "en": "melting"
+  },
+  {
     "he": "שיטת הקצבים ההתחלתיים",
     "en": "method of initial rates"
   },
@@ -852,12 +864,20 @@
     "en": "nonelectrolyte"
   },
   {
+    "he": "לא־מתכת",
+    "en": "nonmetal"
+  },
+  {
     "he": "גרעין",
     "en": "nucleus"
   },
   {
     "he": "נוקליד",
     "en": "nuclide"
+  },
+  {
+    "he": "אוקטהדרי",
+    "en": "octahedral"
   },
   {
     "he": "אוקטט",
@@ -1060,6 +1080,10 @@
     "en": "resonance"
   },
   {
+    "he": "היבריד תהודה",
+    "en": "resonance hybrid"
+  },
+  {
     "he": "מבנה תהודה",
     "en": "resonance structure"
   },
@@ -1156,7 +1180,7 @@
     "en": "spin"
   },
   {
-    "he": "מספר הספין הקוונטי",
+    "he": "מספר קוונטי של ספין",
     "en": "spin quantum number"
   },
   {
@@ -1164,7 +1188,7 @@
     "en": "spontaneous"
   },
   {
-    "he": "פוטנציאל תא תקני",
+    "he": "פוטנציאל תא סטנדרטי",
     "en": "standard cell potential"
   },
   {
@@ -1172,7 +1196,7 @@
     "en": "standard enthalpy of formation"
   },
   {
-    "he": "פוטנציאל חיזור תקני",
+    "he": "פוטנציאל חיזור סטנדרטי",
     "en": "standard reduction potential"
   },
   {
@@ -1250,6 +1274,10 @@
   {
     "he": "טמפרטורה",
     "en": "temperature"
+  },
+  {
+    "he": "טטראהדרי",
+    "en": "tetrahedral"
   },
   {
     "he": "תפוקה תיאורטית",

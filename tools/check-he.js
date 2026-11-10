@@ -97,6 +97,10 @@ function checkTopic(id, fixture) {
   // Latin, Greek, math or formula runs outside a <bdi> in Hebrew prose (rule and exceptions: see site/bidi.js).
   const loose = strs.filter(s => heWrap(s) !== s);
   rec(loose.length === 0, `formula/Latin runs outside <bdi>: ${loose.length} strings` + loose.slice(0, 3).map(x => `\n         ${x.slice(0, 90)}`).join(''));
+  // A coefficient or sign just outside a formula <bdi> lands on the wrong side in RTL ('4 H2O' reads 'H2O 4', '+7' reads '7+'): pull it into the bdi.
+  const lonely = strs.filter(s => HEB.test(s) && /(?<![\d.,\-−+A-Za-z>\/])(?<!מחזור )\d+ <bdi>(?=[A-Z(])/.test(s) ||
+    HEB.test(s) && /(?<![\w.>])[+−]\d/.test(s.replace(/<bdi>(?:[^<]|<(?!\/?bdi>))*<\/bdi>/g, m => ' '.repeat(m.length))));
+  rec(lonely.length === 0, `coefficient or sign outside <bdi>: ${lonely.length} strings` + lonely.slice(0, 3).map(x => `\n         ${x.slice(0, 90)}`).join(''));
   if (fixture) return { lines, fails };
 
   rec(index.includes(id), 'listed in data/he/index.json');
@@ -111,7 +115,7 @@ if (selfTest) {
   const fx = rd('tools/fixtures/he-broken.json');
   const { lines, fails } = checkTopic(fx.topic_id, fx);
   console.log(lines.join('\n'));
-  const expect = ['untranslated fields', 'sections:', 'cards:', 'raw super/subscript', 'Hebrew letters inside', 'semicolons', 'formula/Latin runs'];
+  const expect = ['untranslated fields', 'sections:', 'cards:', 'raw super/subscript', 'Hebrew letters inside', 'semicolons', 'formula/Latin runs', 'coefficient or sign'];
   const missed = expect.filter(e => !fails.some(f => f.startsWith(e)));
   console.log(`\nself-test: ${expect.length - missed.length}/${expect.length} rules caught their planted fault${missed.length ? ' — MISSED: ' + missed.join(', ') : ''}`);
   process.exit(missed.length ? 1 : 0);
