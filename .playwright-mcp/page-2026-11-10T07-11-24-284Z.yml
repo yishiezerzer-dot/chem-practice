@@ -1,0 +1,6 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "תרגול כימיה" [level=1] [ref=e3]
+    - button "נושאים חלשים" [ref=e4] [cursor=pointer]
+    - button "English (אנגלית)" [ref=e5] [cursor=pointer]: EN
+  - main [ref=e6]

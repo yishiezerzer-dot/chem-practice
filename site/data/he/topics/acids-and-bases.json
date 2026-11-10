@@ -15,17 +15,17 @@
           "בכל תגובת חומצה־בסיס, זהו שני זוגות צמודים. החומצה החזקה יותר והבסיס החזק יותר נמצאים בצד אחד, ושיווי המשקל מוטה לטובת החומצה החלשה יותר והבסיס החלש יותר.",
           "אפקט ההשוואה <bdi>(leveling effect)</bdi>: במים כל החומצות החזקות נראות חזקות באותה מידה, כי כולן הופכות באופן מלא ל־<bdi>H<sub>3</sub>O<sup>+</sup></bdi>.",
           "אוטואיוניזציה <bdi>(autoionization)</bdi> פירושה שהמים תמיד תורמים מעט <bdi>H<sub>3</sub>O<sup>+</sup></bdi> ו־<bdi>OH<sup>−</sup></bdi>. בריכוזים רגילים של חומצה חזקה (לפחות כ־<bdi>10<sup>−5</sup> M</bdi>) התרומה הזו זניחה לעומת החומצה.",
-          "כתבו את העברת הפרוטון כמשוואה מאוזנת לפני שאתם עוברים לערכי <bdi>K<sub>a</sub></bdi>. טעויות במלאי המינים הן המקור העיקרי לזוגות צמודים שגויים.",
-          "יונים אמפיפרוטיים <bdi>(amphiprotic)</bdi> כמו <bdi>HCO<sub>3</sub><sup>−</sup></bdi> יכולים למסור או לקלוט <bdi>H<sup>+</sup></bdi>. התפקיד שמנצח תלוי ביחס בין <bdi>K<sub>a</sub></bdi> ל־<bdi>K<sub>b</sub></bdi> של אותו יון, בהשוואה לבן הזוג."
+          "כתבו את העברת הפרוטון כמשוואה מאוזנת לפני שאתם עוברים לערכי <bdi>K<sub>a</sub></bdi>. טעויות ברשימת המינים הן המקור העיקרי לזוגות צמודים שגויים.",
+          "יונים אמפיפרוטיים <bdi>(amphiprotic)</bdi> כמו <bdi>HCO<sub>3</sub><sup>−</sup></bdi> יכולים למסור או לקלוט <bdi>H<sup>+</sup></bdi>. התפקיד הדומיננטי תלוי ביחס בין <bdi>K<sub>a</sub></bdi> ל־<bdi>K<sub>b</sub></bdi> של אותו יון, בהשוואה לבן הזוג."
         ],
-        "why": "זוגות צמודים וניהול ערכי <bdi>K<sub>a</sub></bdi> ו־<bdi>K<sub>b</sub></bdi> הם עמוד השדרה של כל בעיית <bdi>pH</bdi> של חומצה חלשה.",
+        "why": "זוגות צמודים והחישוב עם ערכי <bdi>K<sub>a</sub></bdi> ו־<bdi>K<sub>b</sub></bdi> הם עמוד השדרה של כל שאלת <bdi>pH</bdi> של חומצה חלשה.",
         "worked": {
           "title": "זיהוי הצמודים עבור <bdi>HNO<sub>2</sub> + H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + NO<sub>2</sub><sup>−</sup></bdi>",
           "steps": [
             "<bdi>HNO<sub>2</sub></bdi> מוסרת <bdi>H<sup>+</sup></bdi> ← חומצה. הבסיס הצמוד שלה הוא <bdi>NO<sub>2</sub><sup>−</sup></bdi>.",
             "<bdi>H<sub>2</sub>O</bdi> קולטת <bdi>H<sup>+</sup></bdi> ← בסיס. החומצה הצמודה שלו היא <bdi>H<sub>3</sub>O<sup>+</sup></bdi>.",
             "זוג חומצה/בסיס 1: <bdi>HNO<sub>2</sub> / NO<sub>2</sub><sup>−</sup></bdi>. זוג 2: <bdi>H<sub>3</sub>O<sup>+</sup> / H<sub>2</sub>O</bdi>.",
-            "התשובה הסופית: <bdi>HNO<sub>2</sub></bdi> עם <bdi>NO<sub>2</sub><sup>−</sup></bdi> ו־<bdi>H<sub>3</sub>O<sup>+</sup></bdi> עם <bdi>H<sub>2</sub>O</bdi>."
+            "תשובה סופית: <bdi>HNO<sub>2</sub></bdi> עם <bdi>NO<sub>2</sub><sup>−</sup></bdi> ו־<bdi>H<sub>3</sub>O<sup>+</sup></bdi> עם <bdi>H<sub>2</sub>O</bdi>."
           ]
         }
       },
@@ -35,22 +35,22 @@
         "paragraphs": [
           "מים עוברים אוטואיוניזציה: <bdi>2 H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup></bdi> עם <bdi>K<sub>w</sub> = [H<sub>3</sub>O<sup>+</sup>][OH<sup>−</sup>] = 1.0 × 10<sup>−14</sup></bdi> ב־<bdi>25 °C</bdi>. במים טהורים <bdi>[H<sub>3</sub>O<sup>+</sup>] = [OH<sup>−</sup>] = 1.0 × 10<sup>−7</sup> M</bdi>.",
           "<bdi>pH = −log[H<sub>3</sub>O<sup>+</sup>]</bdi> ו־<bdi>pOH = −log[OH<sup>−</sup>]</bdi>, ובנוסף <bdi>pH + pOH = 14.00</bdi> ב־<bdi>25 °C</bdi>. וכן <bdi>pK<sub>a</sub> = −log K<sub>a</sub></bdi>.",
-          "חומצות חזקות במים (הרשימה הנפוצה): <bdi>HCl</bdi>, <bdi>HBr</bdi>, <bdi>HI</bdi>, <bdi>HNO<sub>3</sub></bdi>, <bdi>HClO<sub>4</sub></bdi> ו־<bdi>H<sub>2</sub>SO<sub>4</sub></bdi> עבור הפרוטון הראשון. בסיסים חזקים <bdi>(strong base)</bdi>: הידרוקסידים של קבוצה 1 (<bdi>NaOH</bdi>, <bdi>KOH</bdi> וכן הלאה) והידרוקסידים של קבוצה 2 הכבדים (<bdi>Ba(OH)<sub>2</sub></bdi> וכן הלאה).",
-          "עבור חומצה חד־פרוטית חזקה ומהולה בריכוז <bdi>C<sub>a</sub></bdi>: <bdi>[H<sub>3</sub>O<sup>+</sup>] ≈ C<sub>a</sub></bdi> ו־<bdi>pH = −log C<sub>a</sub></bdi>. זה נכון אלא אם התמיסה מהולה במיוחד, ואז תרומת המים משנה.",
+          "חומצות חזקות במים (הרשימה הנפוצה): <bdi>HCl</bdi>, <bdi>HBr</bdi>, <bdi>HI</bdi>, <bdi>HNO<sub>3</sub></bdi>, <bdi>HClO<sub>4</sub></bdi> ו־<bdi>H<sub>2</sub>SO<sub>4</sub></bdi> עבור הפרוטון הראשון. בסיסים חזקים <bdi>(strong base)</bdi>: הידרוקסידים של קבוצה 1 (<bdi>NaOH</bdi>, <bdi>KOH</bdi> וכן הלאה) וההידרוקסידים של המתכות הכבדות בקבוצה 2 (<bdi>Ba(OH)<sub>2</sub></bdi> וכן הלאה).",
+          "עבור חומצה חד־פרוטית חזקה ומהולה בריכוז <bdi>C<sub>a</sub></bdi>: <bdi>[H<sub>3</sub>O<sup>+</sup>] ≈ C<sub>a</sub></bdi> ו־<bdi>pH = −log C<sub>a</sub></bdi>. זה נכון אלא אם התמיסה מהולה במיוחד, ואז אי אפשר להזניח את תרומת המים.",
           "עבור בסיס חזק בריכוז <bdi>C<sub>b</sub></bdi>: <bdi>[OH<sup>−</sup>] ≈ C<sub>b</sub></bdi> (או <bdi>2 C<sub>b</sub></bdi> עבור <bdi>Ba(OH)<sub>2</sub></bdi>), ואז <bdi>pOH = −log[OH<sup>−</sup>]</bdi> ו־<bdi>pH = 14 − pOH</bdi>.",
           "<bdi>pH 7</bdi> הוא ניטרלי רק ב־<bdi>25 °C</bdi>, שבו <bdi>K<sub>w</sub> = 1.0 × 10<sup>−14</sup></bdi>. בטמפרטורה גבוהה יותר <bdi>K<sub>w</sub></bdi> גדל וה־<bdi>pH</bdi> הניטרלי יורד מתחת ל־7, אף ש־<bdi>[H<sub>3</sub>O<sup>+</sup>] = [OH<sup>−</sup>]</bdi>.",
           "ספרות משמעותיות <bdi>(significant figure)</bdi> ב־<bdi>pH</bdi>: מספר הספרות אחרי הנקודה העשרונית ב־<bdi>pH</bdi> שווה למספר הספרות המשמעותיות בריכוז. <bdi>−log(0.025) = 1.60</bdi> כולל שתי ספרות אחרי הנקודה, כי ל־<bdi>0.025</bdi> יש שתי ספרות משמעותיות.",
-          "עבור <bdi>Ba(OH)<sub>2</sub></bdi> זכרו את הגורם 2 עבור ההידרוקסיד. עבור <bdi>H<sub>2</sub>SO<sub>4</sub></bdi> בקורסי מבוא מתייחסים לרוב לפרוטון הראשון כאל חזק ומעריכים <bdi>[H<sub>3</sub>O<sup>+</sup>] ≈ C</bdi> בתמיסות מהולות, אלא אם הבעיה מבקשת את שני השלבים.",
+          "עבור <bdi>Ba(OH)<sub>2</sub></bdi> זכרו את הגורם 2 עבור ההידרוקסיד. עבור <bdi>H<sub>2</sub>SO<sub>4</sub></bdi> בקורסי מבוא מתייחסים לרוב לפרוטון הראשון כאל חזק ומעריכים <bdi>[H<sub>3</sub>O<sup>+</sup>] ≈ C</bdi> בתמיסות מהולות, אלא אם השאלה מבקשת את שני השלבים.",
           "מד־<bdi>pH</bdi> מציג ערכים עשרוניים. בכל זאת הראו בעבודה הכתובה את ההצבה של <bdi>−log</bdi>, כדי שיהיה ברור מאיפה בא הריכוז.",
           "כתיב מדעי <bdi>(scientific notation)</bdi> עוזר: <bdi>−log(3.0 × 10<sup>−4</sup>) = 4 − log(3.0) = 4 − 0.48 = 3.52</bdi>. תרגלו את התבנית הזו עד שתהיה אוטומטית.",
-          "אם ריכוז חומצה חזקה הוא <bdi>1.0 × 10<sup>−8</sup> M</bdi>, אי אפשר להתעלם מהמים: ה־<bdi>pH</bdi> קרוב ל־<bdi>6.98</bdi> ולא ל־<bdi>8</bdi>. בבעיות רגילות בקורס הריכוז בדרך כלל גבוה מ־<bdi>10<sup>−6</sup> M</bdi>, ולכן הכלל הפשוט עובד."
+          "אם ריכוז חומצה חזקה הוא <bdi>1.0 × 10<sup>−8</sup> M</bdi>, אי אפשר להתעלם מהמים: ה־<bdi>pH</bdi> קרוב ל־<bdi>6.98</bdi> ולא ל־<bdi>8</bdi>. בשאלות רגילות בקורס הריכוז בדרך כלל גבוה מ־<bdi>10<sup>−6</sup> M</bdi>, ולכן הכלל הפשוט עובד."
         ],
         "worked": {
           "title": "<bdi>pH</bdi> של <bdi>0.025 M HNO<sub>3</sub></bdi>",
           "steps": [
             "<bdi>HNO<sub>3</sub></bdi> חזקה ← <bdi>[H<sub>3</sub>O<sup>+</sup>] = 0.025 M</bdi>.",
             "<bdi>pH = −log(0.025) = 1.60</bdi>.",
-            "התשובה הסופית: <bdi>pH = 1.60</bdi>.",
+            "תשובה סופית: <bdi>pH = 1.60</bdi>.",
             "בדיקה: <bdi>10<sup>−1.60</sup> = 0.025</bdi>, וכך מקבלים בחזרה את הריכוז."
           ]
         },
@@ -61,7 +61,7 @@
               "<bdi>Ba(OH)<sub>2</sub> → Ba<sup>2+</sup> + 2 OH<sup>−</sup></bdi>, ולכן <bdi>[OH<sup>−</sup>] = 0.020 M</bdi>.",
               "<bdi>pOH = −log(0.020) = 1.70</bdi>.",
               "<bdi>pH = 14.00 − 1.70 = 12.30</bdi>.",
-              "התשובה הסופית: <bdi>pH = 12.30</bdi>."
+              "תשובה סופית: <bdi>pH = 12.30</bdi>."
             ]
           }
         ]
@@ -79,10 +79,10 @@
           "אחוז היינון <bdi>(percent ionization)</bdi> הוא <bdi>([H<sup>+</sup>]/C<sub>a</sub>) × 100%</bdi>. מיהול של חומצה חלשה מגדיל את אחוז היינון, אף ש־<bdi>pH</bdi> בדרך כלל עולה (התמיסה פחות חומצית).",
           "חומצות פוליפרוטיות <bdi>(polyprotic acid)</bdi> (<bdi>H<sub>2</sub>SO<sub>4</sub></bdi>, <bdi>H<sub>2</sub>CO<sub>3</sub></bdi>) מוסרות פרוטונים בשלבים, עם <bdi>K<sub>a1</sub> ≫ K<sub>a2</sub></bdi>. עבור הערכות <bdi>pH</bdi> רבות של <bdi>H<sub>2</sub>CO<sub>3</sub></bdi> בקורסי מבוא, <bdi>K<sub>a1</sub></bdi> לבדו מספיק לקירוב ראשון.",
           "כשמלח של חומצה חלשה ובסיס חלש מתמוסס, השוו את <bdi>K<sub>a</sub></bdi> של הקטיון ל־<bdi>K<sub>b</sub></bdi> של האניון כדי לנבא אם התמיסה חומצית או בסיסית.",
-          "טבלת <bdi>ICE</bdi> לחומצות חלשות נראית כמו בפרק שיווי המשקל: התחלתי <bdi>C, 0, 0</bdi>. שינוי <bdi>−x, +x, +x</bdi>. שיווי משקל <bdi>C−x, x, x</bdi>. אז <bdi>K<sub>a</sub> = x<sup>2</sup>/(C−x)</bdi>.",
-          "אם הקירוב נכשל (<bdi>x/C > 5%</bdi>), פתרו את המשוואה הריבועית: <bdi>x<sup>2</sup> + K<sub>a</sub> x − K<sub>a</sub> C = 0</bdi>.",
+          "טבלת <bdi>ICE</bdi> לחומצות חלשות נראית כמו בנושא שיווי המשקל: התחלתי <bdi>C, 0, 0</bdi>. שינוי <bdi>−x, +x, +x</bdi>. שיווי משקל <bdi>C−x, x, x</bdi>. אז <bdi>K<sub>a</sub> = x<sup>2</sup>/(C−x)</bdi>.",
+          "אם הקירוב לא תקף (<bdi>x/C > 5%</bdi>), פתרו את המשוואה הריבועית: <bdi>x<sup>2</sup> + K<sub>a</sub> x − K<sub>a</sub> C = 0</bdi>.",
           "הידרוליזה של מלח: <bdi>A<sup>−</sup> + H<sub>2</sub>O ⇌ HA + OH<sup>−</sup></bdi> עם <bdi>K<sub>b</sub> = K<sub>w</sub>/K<sub>a</sub></bdi>. אז <bdi>[OH<sup>−</sup>] ≈ √(K<sub>b</sub> C<sub>salt</sub>)</bdi> בתמיסות מהולות של <bdi>NaA</bdi>.",
-          "תמיסות חוצצות <bdi>(buffer)</bdi> (הנושא הבא) מערבבות במכוון <bdi>HA</bdi> ו־<bdi>A<sup>−</sup></bdi> כך ש־<bdi>pH ≈ pK<sub>a</sub> + log([A<sup>−</sup>]/[HA])</bdi>. מיומנויות ה־<bdi>ICE</bdi> של חומצות חלשות שכאן הן החימום לקראת זה.",
+          "בתמיסות חוצצות <bdi>(buffer)</bdi> (הנושא הבא) מערבבים במכוון <bdi>HA</bdi> ו־<bdi>A<sup>−</sup></bdi> כך ש־<bdi>pH ≈ pK<sub>a</sub> + log([A<sup>−</sup>]/[HA])</bdi>. מיומנויות ה־<bdi>ICE</bdi> של חומצות חלשות שכאן הן הכנה לנושא הזה.",
           "ההבדל בין חזק לחלש נוגע למידת ההתפרקות, לא לריכוז. חומצה חזקה מהולה יכולה לתת <bdi>pH</bdi> גבוה יותר מחומצה חלשה מרוכזת. חשבו ואל תניחו."
         ],
         "worked": {
@@ -93,7 +93,7 @@
             "<bdi>x<sup>2</sup> = 1.8 × 10<sup>−6</sup> → x = 1.34 × 10<sup>−3</sup></bdi>.",
             "בדקו: <bdi>x/0.100 = 1.3% < 5%</bdi> ← תקין.",
             "<bdi>pH = −log(1.34 × 10<sup>−3</sup>) = 2.87</bdi>.",
-            "התשובה הסופית: <bdi>pH ≈ 2.87</bdi>.",
+            "תשובה סופית: <bdi>pH ≈ 2.87</bdi>.",
             "אפשר לבדוק גם במדויק (לא חובה): <bdi>x<sup>2</sup> + (1.8×10<sup>−5</sup>)x − (1.8×10<sup>−6</sup>) = 0</bdi>.",
             "שורש המשוואה הריבועית הוא אותו <bdi>1.34×10<sup>−3</sup></bdi> גם כאן, וזה מאשר את הקירוב."
           ]
@@ -103,21 +103,21 @@
             "title": "<bdi>K<sub>b</sub></bdi> של אצטט אם <bdi>K<sub>a</sub> = 1.8 × 10<sup>−5</sup></bdi> לחומצה אצטית",
             "steps": [
               "<bdi>K<sub>b</sub> = K<sub>w</sub> / K<sub>a</sub> = (1.0 × 10<sup>−14</sup>) / (1.8 × 10<sup>−5</sup>) = 5.6 × 10<sup>−10</sup></bdi>.",
-              "התשובה הסופית: <bdi>K<sub>b</sub> = 5.6 × 10<sup>−10</sup></bdi>."
+              "תשובה סופית: <bdi>K<sub>b</sub> = 5.6 × 10<sup>−10</sup></bdi>."
             ]
           },
           {
             "title": "האם <bdi>0.10 M NH<sub>4</sub>Cl</bdi> חומצי, בסיסי או ניטרלי?",
             "steps": [
               "<bdi>NH<sub>4</sub>Cl → NH<sub>4</sub><sup>+</sup> + Cl<sup>−</sup></bdi>.",
-              "<bdi>Cl<sup>−</sup></bdi> הוא הצמוד של <bdi>HCl</bdi> החזקה ← בסיס זניח.",
+              "<bdi>Cl<sup>−</sup></bdi> הוא הבסיס הצמוד של <bdi>HCl</bdi> החזקה ← בסיס זניח.",
               "<bdi>NH<sub>4</sub><sup>+</sup></bdi> הוא החומצה הצמודה של <bdi>NH<sub>3</sub></bdi> החלשה ← חומצה חלשה.",
-              "התשובה הסופית: חומצי."
+              "תשובה סופית: חומצי."
             ]
           }
         ],
         "mistake": {
-          "wrong": "שימוש ב־<bdi>[H<sup>+</sup>] = K<sub>a</sub></bdi> עבור חומצה חלשה, או התייחסות לחומצה חלשה כאל חזקה עם <bdi>[H<sup>+</sup>] = C<sub>a</sub></bdi>.",
+          "wrong": "משתמשים ב־<bdi>[H<sup>+</sup>] = K<sub>a</sub></bdi> עבור חומצה חלשה, או מתייחסים לחומצה חלשה כאל חזקה עם <bdi>[H<sup>+</sup>] = C<sub>a</sub></bdi>.",
           "whyWrong": "<bdi>K<sub>a</sub></bdi> הוא מנה ולא ריכוז יוני המימן. חומצות חלשות מתפרקות רק חלקית, ולכן <bdi>[H<sup>+</sup>]</bdi> קטן בהרבה מ־<bdi>C<sub>a</sub></bdi>.",
           "correct": "כתבו <bdi>K<sub>a</sub> = x<sup>2</sup>/(C − x)</bdi>, בצעו קירוב אם הוא תקף, ואז <bdi>pH = −log x</bdi>."
         }
@@ -142,7 +142,7 @@
             "שתיהן חומצות אוקסיגניות של כלור.",
             "ל־<bdi>HClO<sub>3</sub></bdi> יש יותר אטומי <bdi>O</bdi> ← יותר משיכת אלקטרונים ← בסיס צמוד יציב יותר.",
             "<bdi>HClO<sub>3</sub></bdi> היא החומצה החזקה יותר (<bdi>K<sub>a</sub></bdi> גדול יותר).",
-            "התשובה הסופית: <bdi>HClO<sub>3</sub> > HClO<sub>2</sub></bdi>.",
+            "תשובה סופית: <bdi>HClO<sub>3</sub> > HClO<sub>2</sub></bdi>.",
             "אותו אטום מרכזי ואותו סוג מטען ← מספר אטומי החמצן הוא הרמז המבני המכריע כאן."
           ]
         },

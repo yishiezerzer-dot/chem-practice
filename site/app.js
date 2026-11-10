@@ -95,7 +95,9 @@ function readingL(tid) {
 const tName = t => isHe() ? (HE[t.id]?.name || t.topic_he || t.topic_en) : t.topic_en;
 // Book references stay English (Atkins 8e); keep them left-to-right inside Hebrew pages.
 const ltr = html => isHe() ? `<bdi dir="ltr">${html}</bdi>` : html;
-const bookRef = t => ltr(esc(ref(t)));
+// Hebrew mode: the unit and topic words are Hebrew (פרק N · נושאים …); only the codes stay left-to-right.
+const refHe = t => t.textbook_units.map(x => esc(x.unit === 'F' ? T('sectFundamentals') : x.unit === 'MT' ? T('refMT') : T('sectFocus', x.unit))).join(' + ') + ' · ' + T('refTopic', t.textbook_topics.length) + ' <bdi dir="ltr">' + esc(t.textbook_topics.map(x => x.topic).join(', ')) + '</bdi>';
+const bookRef = t => isHe() ? refHe(t) : esc(ref(t));
 const fbAttr = x => x && x._en ? ' dir="ltr" lang="en"' : '';
 // Hebrew mode, translated content only: explicit RTL so a leading LTR isolate cannot flip the paragraph direction. English output is unchanged.
 const dirAttr = x => x && x._en ? fbAttr(x) : isHe() ? ' dir="rtl"' : '';
@@ -209,7 +211,7 @@ function home() {
     const unit = t.textbook_units[0].unit;
     if (unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
-    h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(tName(t))}</div><div class="cap">${bookRef(t)} · <span class="nw">${esc(T('learned', knew, n))}</span></div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
+    h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(tName(t))}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
            : `<div class="row" aria-disabled="true"><span class="num">${t.order}</span><span class="grow"><div class="meta">${esc(tName(t))}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
   }
   if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>${esc(T('backupNudge'))}</span><button class="link" id="nudgeX" aria-label="${esc(T('dismiss'))}">✕</button></div>`;
