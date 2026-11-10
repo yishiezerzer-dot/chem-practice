@@ -180,6 +180,24 @@ Applies to H2 and every later Hebrew topic. The shared glossary is `data/he/glos
 8. Always use <sup> and <sub>, never raw ³ or ₂ characters.
 9. Quoted UI labels must match the Hebrew UI strings exactly. Use לחצו, not הקישו.
 10. Trailing zeros = אפסים בסוף המספר everywhere (Yishi, 2026-11-09). Do not use נגררים.
+(Added in H3 from Copy Humanizer's review, docs/H3-humanizer-fixes.md section 1; rules 11-26.)
+11. "problem" = שאלה or תרגיל, never בעיה (בעיה means a trouble). Construct form: שאלת.
+12. "net" = כולל, or drop it. נטו only inside the fixed term משוואה יונית נטו. Not דיפול נקי or מטען נקי.
+13. No bookkeeping or "clean/messy" calques. Use ספירה or חישוב, ברור, לא נוח. Not חשבונאי, נקי, מבולגן, להתנקות.
+14. "Solve for x" = מצאו, חשבו or בודדו את x, not פתרו עבור.
+15. No drama verbs for approximations, buffers or trends: לא תקף or לא עובד (not נכשל), קיבולת החציצה נגמרת (not נשברת), יורדת מאוד (not קורסת), גובר על (not מנצח), תקפה (not משתלטת), ישנה צבע (not יתהפך).
+16. "Silent error" = טעות שקשה לזהות or שקל לפספס, not טעות שקטה.
+17. Other calques to avoid: מתכון (use הרכב or סדר עבודה), סיפור (תהליך or חישוב), ארגז כלים (עובדים כך), הישארו עם (השתמשו ב), חווה (יש לו or פועלים עליו), לוקח יותר זמן (צריך יותר זמן), צנוע (קטן), עדיין חל (גם כאן צריך), פוטונים עדינים or חזקים (בעלי אנרגיה נמוכה or גבוהה), בדיקת כיתה (הדגמה בכיתה).
+18. An inanimate subject does not "use" or "do" something. Use an impersonal verb: בתערובות אמיתיות משתמשים ב־, not תערובות משתמשות ב־.
+19. Voice in mistake.wrong: present impersonal plural (מחשבים, שוכחים, משתמשים ב־…). Not a noun phrase (שימוש ב…) and not an infinitive (לספור…).
+20. One Hebrew word per concept (non-glossary): פאזה (not מופע); היתוך (not התכה or נמס); ממריא (not מתאדה or מומריא); מיהול, מהול (not מדולל or מדלל; דליל for a low-pressure gas); הכלאה (not היברידיזציה); היבריד תהודה; לא ממוקם (not מפולג); הסטה (not הסחה); שוקע, intransitive (not משקיע); always הבסיס הצמוד or החומצה הצמודה, never a bare הצמוד; טטראהדר־ and אוקטהדר־.
+21. המסת X (dissolving X), not המסה של X (which reads as "the mass of X").
+22. נושא for a topic, never פרק. פרק is only the UI section label (פרק N).
+23. English in brackets goes right after the term, before any adjective: קבוע היווצרות (formation constant) גדול. Headings and topic names do not count as first use.
+24. Spelling: לעיתים (not לעתים), ודאו (not וודאו), שריפה, פלנק, סטודנטים (not תלמידים), and gender agreement (שתי אונות, היא תרכובת).
+25. Step label = "תשובה סופית:" everywhere (not "התשובה הסופית:"). Applied in H3.
+26. Quotation marks are “…” throughout, never ״…״ (gershayim). Applied in H3.
+Decisions from Yishi, 2026-11-09 (H3): standard = סטנדרטי everywhere (תנאי תקן stays only for STP); בליעה is used for both absorption and absorbance, with the English in brackets only on first use.
 H2 batch 2 (claude/h2-batch2 3623b95, includes batch 1): 13/13 topics pass check-he, Focus = פרק N. More English issues for the weekend review: t10-q1 4.087e-19 J vs 4.086 in the reading; R_H 1.097e7 vs 1.0974e7; t11-q2 "six unpaired in 3d5" (check the card: if it's Cr, 3d5 4s1, all six really are unpaired, so the translator's note may be wrong); O=O 498 vs 496 (t13-q2); a typo in real gases, "attractions particles stick together more".
 H2 batch 3 (claude/h2-batch3 ac95d79, from dev 8590ea8): 18/18 topics pass. English issues for the weekend review: the equilibrium ICE paragraph 3 has a placeholder, "x ≈ √(K × something)" (a visible bug, fix it in the first English fix round); in P<sub>CO</sub>₂ the 2 sits outside the sub tag; Clausius-Clapeyron uses 373/363 K vs 373.15/353.15 K in t16-q3; loose phrasing on inert gas at constant volume, "K = 1 balanced mix" and dipole vs dispersion; the spectroscopy reading refers to an unnamed schematic.
 H2 batch 4 (claude/h2-batch4 5a07451, includes batch 3): all 23 topics in Hebrew, check-he 23/23 PASS, 338 glossary terms. Planner decision: the buffers topic keeps the glossary-matching name תמיסות חוצצות, מחוונים ועקומות טיטרציה. English issues for the weekend review: the AgBr example uses Ksp 1.7e-8, but the real value is about 5e-13 (a real error, top of the English fix list); acetic acid pKa 4.74 vs 4.75 (t20-q1, t20-q2); PbCl2 Ksp 1.7e-5 vs 1.6e-5 (t21-q3); H2SO4 polyprotic/strong and HSO4- called amphoteric; Nernst 0.0592 vs 0.05916; t23-q3 missing parentheses; loose wording in electrolysis and the salt bridge.

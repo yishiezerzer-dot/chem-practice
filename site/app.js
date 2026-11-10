@@ -51,7 +51,15 @@ const fmtRich = s => {
     str = str.replace(/<(sub|sup)>([^<]*)<\/\1>/g, (_, t, c) => put('<' + t + '>' + esc(c) + '</' + t + '>'));
   } while (str !== prev);
   str = str.replace(/<span class="nw">([^<]*)<\/span>/g, (_, c) => put('<span class="nw">' + esc(c) + '</span>'));
-  str = str.replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (_, c) => put(isHe() ? fxChain(c, slots) : '<bdi dir="ltr" class="fx">' + esc(c) + '</bdi>'));
+  if (isHe()) {
+    // Hebrew mode (H3b): a formula is an atomic inline-block, so a line may break right next to it. Wrap the formula together with
+    // the "(" / "[" just before it and the . , : ; ! ? ) ] just after it in one nowrap span (.pg), so they wrap only as a unit.
+    // A multi-piece chain (.fxc) keeps its own white-space:normal, so it still wraps between its pieces; .pg only controls the edges.
+    str = str.replace(/([(\[]*)<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>([.,:;!?)\]]*)/g, (_, a, c, z) => {
+      const h = fxChain(c, slots);
+      return put(a || z ? '<span class="pg">' + esc(a) + h + esc(z) + '</span>' : h);
+    });
+  } else str = str.replace(/<bdi>((?:[^<]|<(?!\/?bdi>))*)<\/bdi>/g, (_, c) => put('<bdi dir="ltr" class="fx">' + esc(c) + '</bdi>'));
   str = esc(str);
   do {
     prev = str;
