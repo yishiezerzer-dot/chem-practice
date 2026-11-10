@@ -37,6 +37,7 @@ ol.steps{padding-inline-start:24px}ol.steps li{margin-bottom:8px}
 dialog{border:1px solid var(--border);border-radius:12px;max-width:340px}
 .nudge{display:flex;align-items:center;justify-content:space-between;background:var(--tip);border-radius:8px;padding:4px 12px;font-size:15px}
 .nw{white-space:nowrap}
+.pg{white-space:nowrap}
 
 /* Reading screen */
 .rh{font-size:20px;line-height:28px;margin:24px 0 8px}
