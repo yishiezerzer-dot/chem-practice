@@ -205,7 +205,7 @@
       "steps": [
         "ארניוס: <bdi>ln(k<sub>2</sub>/k<sub>1</sub>) = (E<sub>a</sub>/R)(1/T<sub>1</sub> − 1/T<sub>2</sub>)</bdi>",
         "<bdi>1/300. − 1/310. = 1.075 × 10<sup>−4</sup> K<sup>−1</sup></bdi>",
-        "<bdi>E<sub>a</sub> = 8.314 × ln 2 / 1.075 × 10<sup>−4</sup> = 5.36 × 10<sup>4</sup> J/mol = 53.6 kJ/mol</bdi>"
+        "<bdi>E<sub>a</sub> = 8.314 × ln 2 / (1.075 × 10<sup>−4</sup>) = 5.36 × 10<sup>4</sup> J/mol = 53.6 kJ/mol</bdi>"
       ]
     },
     "t23-q4": {

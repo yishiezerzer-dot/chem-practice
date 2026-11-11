@@ -1395,12 +1395,12 @@
    "given": [
     "[HA] = 0.150 M",
     "[A⁻] = 0.250 M",
-    "pKa = 4.75"
+    "pKa = 4.74"
    ],
-   "answer": "pH = 4.97",
+   "answer": "pH = 4.96",
    "steps": [
     "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA])",
-    "pH = 4.75 + log(0.250 / 0.150) = 4.75 + 0.22 = 4.97"
+    "pH = 4.74 + log(0.250 / 0.150) = 4.74 + 0.22 = 4.96"
    ],
    "ref": "Focus 6, Topic 6G",
    "reviewed": false
@@ -1413,12 +1413,12 @@
    "given": [
     "n(HA) = n(A⁻) = 0.100 mol",
     "n(OH⁻) added = 0.010 mol",
-    "pKa = 4.75"
+    "pKa = 4.74"
    ],
-   "answer": "pH = 4.84",
+   "answer": "pH = 4.83",
    "steps": [
     "OH⁻ converts HA to A⁻: n(HA) = 0.090 mol, n(A⁻) = 0.110 mol",
-    "pH = 4.75 + log(0.110 / 0.090) = 4.75 + 0.087 = 4.84",
+    "pH = 4.74 + log(0.110 / 0.090) = 4.74 + 0.087 = 4.83",
     "The pH rose by only 0.09, which shows the buffer working"
    ],
    "ref": "Focus 6, Topic 6G",
@@ -1505,7 +1505,7 @@
    "type": "calc",
    "q": "100.0 mL of 0.0010 M Pb(NO₃)₂ is mixed with 100.0 mL of 0.0020 M NaCl. Will PbCl₂ precipitate?",
    "given": [
-    "Ksp(PbCl₂) = 1.6 × 10⁻⁵",
+    "Ksp(PbCl₂) = 1.7 × 10⁻⁵",
     "Total volume = 200.0 mL"
    ],
    "answer": "No; Q = 5.0 × 10⁻¹⁰ < Ksp",
@@ -1574,13 +1574,13 @@
     "E°cell = 1.10 V",
     "n = 2",
     "[Zn²⁺] = 1.0 M, [Cu²⁺] = 0.010 M",
-    "RT/F × ln10 = 0.05916 V at 25 °C"
+    "RT/F × ln10 = 0.0592 V at 25 °C"
    ],
    "answer": "E = 1.04 V",
    "steps": [
     "Cell reaction: Zn + Cu²⁺ → Zn²⁺ + Cu, so Q = [Zn²⁺]/[Cu²⁺] = 1.0 / 0.010 = 100",
-    "Nernst: E = E° − (0.05916 / n) log Q",
-    "E = 1.10 − (0.05916 / 2)(2.00) = 1.10 − 0.059 = 1.04 V"
+    "Nernst: E = E° − (0.0592 / n) log Q",
+    "E = 1.10 − (0.0592 / 2)(2.00) = 1.10 − 0.0592 = 1.04 V"
    ],
    "ref": "Focus 6, Topic 6N",
    "reviewed": false
@@ -1666,7 +1666,7 @@
    "steps": [
     "Arrhenius: ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂)",
     "1/300. − 1/310. = 1.075 × 10⁻⁴ K⁻¹",
-    "Ea = 8.314 × ln 2 / 1.075 × 10⁻⁴ = 5.36 × 10⁴ J/mol = 53.6 kJ/mol"
+    "Ea = 8.314 × ln 2 / (1.075 × 10⁻⁴) = 5.36 × 10⁴ J/mol = 53.6 kJ/mol"
    ],
    "ref": "Focus 7, Topic 7D",
    "reviewed": false
