@@ -1723,13 +1723,13 @@
             "Boiling happens throughout the liquid when vapor pressure equals external pressure. Evaporation happens only at the surface and can occur below the boiling point."
           ],
           "worked": {
-            "title": "Find P₂ if P₁ = 1.00 atm at T₁ = 373 K, ΔH<sub>vap</sub> = 40.7 kJ/mol, T₂ = 363 K",
+            "title": "Find P₂ if P₁ = 1.00 atm at T₁ = 373.15 K (100.0 °C), ΔH<sub>vap</sub> = 40.7 kJ/mol, T₂ = 363.15 K (90.0 °C)",
             "steps": [
               "This is water near its normal boiling point. ΔH<sub>vap</sub> = 40.7 kJ/mol = 4.07 × 10⁴ J/mol.",
               "Write ln(P₂/P₁) = −(ΔH<sub>vap</sub>/R)(1/T₂ − 1/T₁).",
               "R = 8.314 <span class=\"nw\">J·mol⁻¹·K⁻¹</span>.",
-              "Compute 1/T₂ − 1/T₁ = 1/363 − 1/373.",
-              "1/363 = 0.0027548. 1/373 = 0.0026810. Difference = 0.0000738 K⁻¹.",
+              "Compute 1/T₂ − 1/T₁ = 1/363.15 − 1/373.15.",
+              "1/363.15 = 0.0027537. 1/373.15 = 0.0026799. Difference = 0.0000738 K⁻¹.",
               "ΔH<sub>vap</sub>/R = 40700 / 8.314 = 4895.4 K.",
               "−(ΔH<sub>vap</sub>/R)(difference) = −(4895.4)(0.0000738) = −0.361.",
               "ln(P₂/1.00) = −0.361. P₂ = e<sup>−0.361</sup> = 0.697 atm.",
@@ -2357,8 +2357,8 @@
             "The reaction quotient Q uses the same algebraic form with current (not necessarily equilibrium) values. Compare Q with K: if Q < K, the forward reaction is favored until equilibrium; if Q > K, the reverse; if Q = K, the system is at equilibrium.",
             "K<sub>p</sub> uses partial pressures (often in bar, or atm when that matches the standard used in the problem). For ideal gases, K<sub>p</sub> = K<sub>c</sub> (RT)<sup>Δn</sup> where Δn = (c + d) − (a + b) counting gas moles only, and R = 0.082057 <span class=\"nw\">L·atm·mol⁻¹·K⁻¹</span> when pressures are in atm and concentrations in mol/L.",
             "K depends only on temperature for a given reaction. Catalysts and the amounts you mix change how fast you get there or the position along the path, but they do not change K itself at fixed T.",
-            "Writing K: products over reactants, each concentration or pressure raised to its coefficient. Never put solid CaCO₃ or liquid H₂O into K<sub>c</sub> for heterogeneous equilibria like CaCO₃(s) ⇌ CaO(s) + CO₂(g); there K<sub>p</sub> = P<sub>CO</sub>₂.",
-            "Large K means products dominate at equilibrium. Small K means reactants dominate. K = 1 means a balanced mix under the standard-state convention.",
+            "Writing K: products over reactants, each concentration or pressure raised to its coefficient. Never put solid CaCO₃ or liquid H₂O into K<sub>c</sub> for heterogeneous equilibria like CaCO₃(s) ⇌ CaO(s) + CO₂(g); there K<sub>p</sub> = P<sub>CO<sub>2</sub></sub>.",
+            "Large K means products dominate at equilibrium. Small K means reactants dominate. K = 1 means ΔG° = 0 (ln K = 0): at equilibrium the product-to-reactant ratio, with each term raised to its coefficient, is exactly 1. That does not mean equal amounts: for A ⇌ 2B with K = 1, [B]²/[A] = 1, so [A] and [B] differ unless both are 1 M.",
             "Numerical values of K depend on how the equation is written. Double every coefficient and you square K. Reverse the equation and K becomes 1/K. Always match K to the equation on the page.",
             "Partial pressures in K<sub>p</sub> must use the same pressure unit the tabulated K<sub>p</sub> assumes. Mixing bar and atm without converting creates silent errors.",
             "Q uses the same formula as K but with the concentrations or pressures you have right now. Updating one species changes Q instantly; K stays put until temperature changes.",
@@ -2396,7 +2396,7 @@
           "paragraphs": [
             "An ICE table organizes Initial concentrations (or moles in a known volume), the Change in terms of x using stoichiometry, and Equilibrium values as Initial + Change.",
             "Substitute the equilibrium row into the K expression and solve for x. Then back-substitute to get each equilibrium concentration.",
-            "Approximation: if K is small and the initial reactant concentration C is not tiny, x ≈ √(K × something) may be ≪ C. Check that x/C < about 0.05 (5% rule) before you trust the approximation; otherwise solve the exact quadratic.",
+            "Approximation: if K is small and the initial reactant concentration C is not tiny, x ≈ √(K × C) may be ≪ C. For the worked example below, x ≈ √(2.0 × 10⁻⁶ × 0.20) = √(4.0 × 10⁻⁷) = 6.3 × 10⁻⁴ M, far smaller than C = 0.20 M. Check that x/C < about 0.05 (5% rule) before you trust the approximation; otherwise solve the exact quadratic.",
             "Units: keep a consistent concentration unit (usually mol/L). For K<sub>p</sub> problems, use partial pressures in the unit your K<sub>p</sub> expects.",
             "When the stoichiometry is 1:1:1 with a moderate K, you often get a quadratic equation ax² + bx + c = 0. Use x = [−b ± √(b² − 4ac)] / (2a) and keep the root that makes physical sense (concentrations ≥ 0).",
             "Starting from pure products is fine: then x measures reverse change. Always define x clearly in the Change row.",
@@ -2503,7 +2503,7 @@
               },
               {
                 "q": "Write K<sub>c</sub> for CaCO₃(s) ⇌ CaO(s) + CO₂(g).",
-                "a": "K<sub>c</sub> = [CO₂] (solids omitted). Equivalently K<sub>p</sub> = P<sub>CO</sub>₂."
+                "a": "K<sub>c</sub> = [CO₂] (solids omitted). Equivalently K<sub>p</sub> = P<sub>CO<sub>2</sub></sub>."
               }
             ]
           }
@@ -2851,7 +2851,7 @@
           "paragraphs": [
             "Brønsted–Lowry: an acid donates H⁺; a base accepts H⁺. After the transfer, the acid has become its conjugate base, and the base has become its conjugate acid.",
             "Example: in NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, water acts as an acid and NH₃ as a base. NH₄⁺ is the conjugate acid of NH₃; OH⁻ is the conjugate base of H₂O.",
-            "Amphoteric species (like water or HSO₄⁻) can act as acid or base depending on the partner.",
+            "Amphiprotic species (like water or HCO₃⁻) can donate or accept a proton, so they act as an acid or a base depending on the partner. In water, HSO₄⁻ acts only as a weak acid.",
             "Lewis definition (broader): acid accepts an electron pair; base donates an electron pair. BF₃ + NH₃ is a Lewis acid–base example without H⁺ transfer.",
             "Stronger acids have weaker conjugate bases. In water, strong acids donate H⁺ completely.",
             "In any acid–base reaction, identify two conjugate pairs. The stronger acid and stronger base sit on one side; equilibrium favors the weaker acid and weaker base.",
@@ -2919,7 +2919,7 @@
             "Salt examples: NaA (from weak HA) gives a basic solution (A⁻ hydrolyzes). NH₄Cl gives an acidic solution (NH₄⁺ is a weak acid).",
             "Acetic acid Ka ≈ 1.8 × 10⁻⁵ is the usual textbook value; always prefer the table your exam provides.",
             "Percent ionization = ([H⁺]/C<sub>a</sub>) × 100%. Diluting a weak acid raises percent ionization even though pH usually rises (less acidic).",
-            "Polyprotic acids (H₂SO₄, H₂CO₃) donate protons in steps with Ka₁ ≫ Ka₂. For many intro pH estimates of H₂CO₃, Ka₁ alone is enough for a first pass.",
+            "Polyprotic acids (H₂SO₄, H₂CO₃) donate protons in steps. For H₂CO₃, Ka₁ ≫ Ka₂, and Ka₁ alone is enough for many intro pH estimates. For H₂SO₄ the first ionization is strong (complete) and the second, HSO₄⁻ → SO₄²⁻, is weak.",
             "When a salt of a weak acid and weak base dissolves, compare Ka of the cation with Kb of the anion to predict acidic vs basic.",
             "ICE for weak acids looks like the equilibrium chapter: Initial C, 0, 0; Change −x, +x, +x; Equilibrium C−x, x, x. Then Ka = x²/(C−x).",
             "If the approximation fails (x/C > 5%), solve the quadratic: x² + Ka x − Ka C = 0.",
@@ -3149,7 +3149,7 @@
           },
           "workedExamples": [
             {
-              "title": "Equivalence pH sketch for 25.0 mL of 0.100 M acetic + 0.100 M NaOH",
+              "title": "pH at the equivalence point: 25.0 mL of 0.100 M acetic acid + 0.100 M NaOH",
               "steps": [
                 "Equivalence volume of NaOH = 25.0 mL. Total volume = 50.0 mL.",
                 "Moles A<sup>−</sup> = 0.00250. [A<sup>−</sup>] = 0.00250 / 0.0500 = 0.0500 M.",
@@ -3431,10 +3431,10 @@
               ]
             },
             {
-              "title": "K<sub>sp</sub> from s = 1.3 × 10<sup>−4</sup> M for AgBr (MX)",
+              "title": "K<sub>sp</sub> from s = 7.1 × 10<sup>−7</sup> M for AgBr (MX)",
               "steps": [
                 "AgBr(s) ⇌ Ag<sup>+</sup> + Br<sup>−</sup>.",
-                "K<sub>sp</sub> = s<sup>2</sup> = (1.3×10<sup>−4</sup>)<sup>2</sup> = 1.7 × 10<sup>−8</sup>.",
+                "K<sub>sp</sub> = s<sup>2</sup> = (7.1×10<sup>−7</sup>)<sup>2</sup> = 5.0 × 10<sup>−13</sup>.",
                 "Compare with a table value to check your measurement.",
                 "Same math as AgCl; only the number changes."
               ]
@@ -4104,13 +4104,14 @@
             "In conjugated π systems, the HOMO–LUMO gap shrinks as the chain lengthens. A smaller gap means a longer λ<sub>max</sub> (bathochromic shift).",
             "When λ<sub>max</sub> moves into the visible, the compound absorbs some visible wavelengths and looks colored. The color you see is roughly complementary to what is absorbed.",
             "Enough conjugation (or a strong push-pull chromophore) and a once UV-only absorber becomes a dye. Organic electronics and natural pigments both lean on this idea.",
-            "The schematic chart for this topic shows λ<sub>max</sub> rising with conjugation length. Treat the y-axis as qualitative; the trend direction is the point.",
+            "The chart “λ_max vs conjugation (schematic, not to scale)” plots λ<sub>max</sub> against n, the number of conjugated double bonds, from n = 2 to n = 6. It shows λ<sub>max</sub> rising with conjugation length. Treat the y-axis as qualitative; the trend direction is the point.",
             "Solvent, protonation, and metal binding can also move λ<sub>max</sub>. Report conditions when you quote a spectrum.",
             "Not every colored compound is a long polyene. Charge-transfer bands and metal d–d transitions also land in the visible. Still, the gap ↔ λ link is the same."
           ],
           "figure": {
             "src": "art/homo-lumo-conjugation.svg",
-            "alt": "Qualitative HOMO–LUMO gaps for ethene, butadiene, and hexatriene showing the gap shrinking as conjugation lengthens, which shifts absorption to longer wavelength."
+            "alt": "Qualitative HOMO–LUMO gaps for ethene, butadiene, and hexatriene showing the gap shrinking as conjugation lengthens, which shifts absorption to longer wavelength.",
+            "caption": "Figure: HOMO–LUMO gaps for ethene, butadiene and hexatriene. The gap shrinks as conjugation lengthens, so absorption moves to longer wavelength."
           },
           "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 168\" role=\"img\" aria-label=\"λ_max vs conjugation (schematic, not to scale)\"><text data-chart-title=\"1\" x=\"160.0\" y=\"14\" text-anchor=\"middle\" font-size=\"15\" fill=\"#5F6B7A\">λ_max vs conjugation (schematic, not to scale)</text><g data-chart-key=\"1\"><rect x=\"28\" y=\"28\" width=\"12\" height=\"12\" fill=\"#2B5FD9\" rx=\"2\"/><text x=\"44\" y=\"34\" font-size=\"13\" fill=\"#5F6B7A\" dominant-baseline=\"central\">λ_max trend</text></g><path d=\"M 28.0,117.0 L 94.0,103.5 L 160.0,90.0 L 226.0,76.5 L 292.0,64.8\" fill=\"none\" stroke=\"#2B5FD9\" stroke-width=\"2\"/><circle cx=\"28.0\" cy=\"117.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"94.0\" cy=\"103.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"160.0\" cy=\"90.0\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"226.0\" cy=\"76.5\" r=\"4\" fill=\"#2B5FD9\"/><circle cx=\"292.0\" cy=\"64.8\" r=\"4\" fill=\"#2B5FD9\"/><text x=\"28.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=2</text><text x=\"94.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=3</text><text x=\"160.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=4</text><text x=\"226.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=5</text><text x=\"292.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5F6B7A\">n=6</text></svg>",
           "worked": {
@@ -4132,7 +4133,8 @@
                 "Final answer: Dye B has the longer λ<sub>max</sub>."
               ]
             }
-          ]
+          ],
+          "svgCaption": "Chart: λ<sub>max</sub> rises as the number of conjugated double bonds n goes from 2 to 6 (schematic; y-axis qualitative)."
         },
         {
           "id": "check-spectroscopy",

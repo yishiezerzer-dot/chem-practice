@@ -86,13 +86,13 @@
           "רתיחה מתרחשת בכל נפח הנוזל כשלחץ האדים שווה ללחץ החיצוני. התאדות מתרחשת רק על פני השטח ויכולה להתרחש מתחת לנקודת הרתיחה."
         ],
         "worked": {
-          "title": "מצאו את <bdi>P<sub>2</sub></bdi> אם <bdi>P<sub>1</sub> = 1.00 atm</bdi> ב־<bdi>T<sub>1</sub> = 373 K</bdi>, <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol</bdi>, <bdi>T<sub>2</sub> = 363 K</bdi>",
+          "title": "מצאו את <bdi>P<sub>2</sub></bdi> אם <bdi>P<sub>1</sub> = 1.00 atm</bdi> ב־<bdi>T<sub>1</sub> = 373.15 K</bdi>, <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol</bdi>, <bdi>T<sub>2</sub> = 363.15 K</bdi>",
           "steps": [
             "אלה מים ליד נקודת הרתיחה הנורמלית שלהם. <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol = 4.07 × 10<sup>4</sup> J/mol</bdi>.",
             "כתבו <bdi>ln(P<sub>2</sub>/P<sub>1</sub>) = −(ΔH<sub>vap</sub>/R)(1/T<sub>2</sub> − 1/T<sub>1</sub>)</bdi>.",
             "<bdi>R = 8.314 J·mol<sup>−1</sup>·K<sup>−1</sup></bdi>.",
-            "חשבו <bdi>1/T<sub>2</sub> − 1/T<sub>1</sub> = 1/363 − 1/373</bdi>.",
-            "<bdi>1/363 = 0.0027548</bdi>. <bdi>1/373 = 0.0026810</bdi>. ההפרש = <bdi>0.0000738 K<sup>−1</sup></bdi>.",
+            "חשבו <bdi>1/T<sub>2</sub> − 1/T<sub>1</sub> = 1/363.15 − 1/373.15</bdi>.",
+            "<bdi>1/363.15 = 0.0027537</bdi>. <bdi>1/373.15 = 0.0026799</bdi>. ההפרש = <bdi>0.0000738 K<sup>−1</sup></bdi>.",
             "<bdi>ΔH<sub>vap</sub>/R = 40700 / 8.314 = 4895.4 K</bdi>.",
             "הציבו את ההפרש: <bdi>−(4895.4)(0.0000738) = −0.361</bdi>.",
             "<bdi>ln(P<sub>2</sub>/1.00) = −0.361. P<sub>2</sub> = e<sup>−0.361</sup> = 0.697 atm</bdi>.",

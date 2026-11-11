@@ -281,14 +281,14 @@ function renderSection(sec, i, t) {
   }
   if (sec.svg) {
     // Trusted inline SVG from our own readings.json (not user input)
-    h += `<div class="rfig" role="figure">${sec.svg}</div>`;
+    h += `<div class="rfig" role="figure">${sec.svg}${sec.svgCaption ? `<p class="rcap">${fmtRich(sec.svgCaption)}</p>` : ''}</div>`;
   }
   if (sec.figure) {
     if (sec.figure.src) {
       const alt = esc(sec.figure.alt || T('figure'));
       const src = sec.figure.src;
       const full = src.replace(/\.svg$/i, '.png');
-      h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button><div class="rsketch-hint">${esc(T('tapToEnlarge'))}</div></div>`;
+      h += `<div class="rfig" role="figure"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img class="rsketch" src="${esc(src)}" data-full="${esc(full)}" alt="${alt}" loading="lazy" decoding="async"/></button>${sec.figure.caption ? `<p class="rcap">${fmtRich(sec.figure.caption)}</p>` : ''}<div class="rsketch-hint">${esc(T('tapToEnlarge'))}</div></div>`;
     } else if (sec.figure.status === 'pending-sketch') {
       h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }

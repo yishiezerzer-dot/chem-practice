@@ -191,12 +191,12 @@
       "given": [
         "<bdi>[HA] = 0.150 M</bdi>",
         "<bdi>[A<sup>−</sup>] = 0.250 M</bdi>",
-        "<bdi>pK<sub>a</sub> = 4.75</bdi>"
+        "<bdi>pK<sub>a</sub> = 4.74</bdi>"
       ],
-      "answer": "<bdi>pH = 4.97</bdi>",
+      "answer": "<bdi>pH = 4.96</bdi>",
       "steps": [
         "משוואת הנדרסון־הסלבך <bdi>(Henderson–Hasselbalch equation)</bdi>: <bdi>pH = pK<sub>a</sub> + log([A<sup>−</sup>]/[HA])</bdi>",
-        "<bdi>pH = 4.75 + log(0.250 / 0.150) = 4.75 + 0.22 = 4.97</bdi>"
+        "<bdi>pH = 4.74 + log(0.250 / 0.150) = 4.74 + 0.22 = 4.96</bdi>"
       ]
     },
     "t20-q2": {
@@ -204,12 +204,12 @@
       "given": [
         "<bdi>n(HA) = n(A<sup>−</sup>) = 0.100 mol</bdi>",
         "<bdi>n(OH<sup>−</sup>) = 0.010 mol</bdi> (נוסף)",
-        "<bdi>pK<sub>a</sub> = 4.75</bdi>"
+        "<bdi>pK<sub>a</sub> = 4.74</bdi>"
       ],
-      "answer": "<bdi>pH = 4.84</bdi>",
+      "answer": "<bdi>pH = 4.83</bdi>",
       "steps": [
         "<bdi>OH<sup>−</sup></bdi> הופך <bdi>HA</bdi> ל־<bdi>A<sup>−</sup></bdi>: <bdi>n(HA) = 0.090 mol</bdi>, <bdi>n(A<sup>−</sup>) = 0.110 mol</bdi>",
-        "<bdi>pH = 4.75 + log(0.110 / 0.090) = 4.75 + 0.087 = 4.84</bdi>",
+        "<bdi>pH = 4.74 + log(0.110 / 0.090) = 4.74 + 0.087 = 4.83</bdi>",
         "ה־<bdi>pH</bdi> עלה רק ב־<bdi>0.09</bdi>, וזה מראה את התמיסה החוצצת בפעולה"
       ]
     },
