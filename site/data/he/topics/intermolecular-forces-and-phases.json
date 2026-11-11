@@ -86,7 +86,7 @@
           "רתיחה מתרחשת בכל נפח הנוזל כשלחץ האדים שווה ללחץ החיצוני. התאדות מתרחשת רק על פני השטח ויכולה להתרחש מתחת לנקודת הרתיחה."
         ],
         "worked": {
-          "title": "מצאו את <bdi>P<sub>2</sub></bdi> אם <bdi>P<sub>1</sub> = 1.00 atm</bdi> ב־<bdi>T<sub>1</sub> = 373.15 K</bdi>, <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol</bdi>, <bdi>T<sub>2</sub> = 363.15 K</bdi>",
+          "title": "מצאו את <bdi>P<sub>2</sub></bdi> אם <bdi>P<sub>1</sub> = 1.00 atm</bdi> ב־<bdi>T<sub>1</sub> = 373.15 K</bdi> (<bdi>100.0 °C</bdi>), <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol</bdi>, <bdi>T<sub>2</sub> = 363.15 K</bdi> (<bdi>90.0 °C</bdi>)",
           "steps": [
             "אלה מים ליד נקודת הרתיחה הנורמלית שלהם. <bdi>ΔH<sub>vap</sub> = 40.7 kJ/mol = 4.07 × 10<sup>4</sup> J/mol</bdi>.",
             "כתבו <bdi>ln(P<sub>2</sub>/P<sub>1</sub>) = −(ΔH<sub>vap</sub>/R)(1/T<sub>2</sub> − 1/T<sub>1</sub>)</bdi>.",

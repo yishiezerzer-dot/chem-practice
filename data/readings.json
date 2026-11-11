@@ -2858,7 +2858,7 @@
             "Leveling effect: in water, all strong acids look equally strong because they all convert fully to H₃O⁺.",
             "Autoionization means water always contributes a little H₃O⁺ and OH⁻. For ordinary strong-acid concentrations (≥ about 10⁻⁵ M), that contribution is negligible compared with the acid.",
             "Write the proton transfer as a balanced equation before you chase Ka values. Species inventory mistakes are the main source of wrong conjugate pairs.",
-            "Amphiprotic ions like HCO₃⁻ can donate or accept H⁺. Which role wins depends on Ka vs Kb for that ion compared with the partner."
+            "For an ion like HCO₃⁻, which role wins depends on Ka vs Kb for that ion compared with the partner."
           ],
           "why": "Conjugate pairs and Ka/Kb bookkeeping are the spine of every weak-acid pH problem.",
           "worked": {
