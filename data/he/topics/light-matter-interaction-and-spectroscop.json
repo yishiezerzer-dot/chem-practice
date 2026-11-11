@@ -164,7 +164,7 @@
         ],
         "svgCaption": "תרשים: <bdi>λ<sub>max</sub></bdi> עולה כשמספר הקשרים הכפולים המצומדים <bdi>n</bdi> גדל מ־<bdi>2</bdi> עד <bdi>6</bdi> (סכמטי, ציר ה־<bdi>y</bdi> איכותי).",
         "figure": {
-          "caption": "איור: פערי <bdi>HOMO–LUMO</bdi> של <bdi>C<sub>2</sub>H<sub>4</sub></bdi>, <bdi>C<sub>4</sub>H<sub>6</sub></bdi> ו־<bdi>C<sub>6</sub>H<sub>8</sub></bdi>. הפער מצטמצם ככל שההצמדה ארוכה יותר, ולכן הבליעה זזה לאורך גל ארוך יותר."
+          "caption": "איור: פערי <bdi>HOMO–LUMO</bdi> של <bdi>C<sub>2</sub>H<sub>4</sub>, C<sub>4</sub>H<sub>6</sub>, C<sub>6</sub>H<sub>8</sub></bdi>. הפער מצטמצם ככל שההצמדה ארוכה יותר, ולכן הבליעה זזה לאורך גל ארוך יותר."
         }
       },
       {
