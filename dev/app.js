@@ -112,8 +112,8 @@ const dirAttr = x => x && x._en ? fbAttr(x) : isHe() ? ' dir="rtl"' : '';
 const rtlList = x => isHe() && !(x && x._en) ? ' dir="rtl"' : '';
 const enOnly = x => x && x._en ? `<span class="tag en-only">${esc(T('englishOnly'))}</span> ` : '';
 /** Card text: English renders as before; in Hebrew mode, lines without Hebrew letters (formulas, numbers) are isolated left-to-right. */
-/** Heading/label text: Hebrew may carry <bdi>(English term)</bdi>; English stays escaped as before. */
-const hd = s => isHe() ? fmtRich(s) : esc(s);
+/** Heading/label text: same trusted markup as body text (<sub>, <sup>, and in Hebrew <bdi>(English term)</bdi>); everything else is escaped. */
+const hd = fmtRich;
 // Hebrew card line with no Hebrew letters: the whole line is one equation chain (wraps only between pieces).
 const fmtLine = s => fmtRich(/<bdi>/.test(s) ? s : '<bdi>' + s + '</bdi>');
 const tx = s => !isHe() ? esc(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtLine(s));
