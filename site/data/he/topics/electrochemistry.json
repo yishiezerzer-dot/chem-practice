@@ -215,13 +215,13 @@
         "<bdi>E°<sub>cell</sub> = 1.10 V</bdi>",
         "n = 2",
         "[Zn<sup>2+</sup>] = 1.0 M, [Cu<sup>2+</sup>] = 0.010 M",
-        "<bdi>RT/F × ln10 = 0.05916 V</bdi> ב־<bdi>25 °C</bdi>"
+        "<bdi>RT/F × ln10 = 0.0592 V</bdi> ב־<bdi>25 °C</bdi>"
       ],
       "answer": "<bdi>E = 1.04 V</bdi>",
       "steps": [
         "תגובת התא: <bdi>Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu</bdi>, ולכן <bdi>Q = [Zn<sup>2+</sup>]/[Cu<sup>2+</sup>] = 1.0 / 0.010 = 100</bdi>",
-        "נרנסט: <bdi>E = E° − (0.05916 / n) log Q</bdi>",
-        "<bdi>E = 1.10 − (0.05916 / 2)(2.00) = 1.10 − 0.059 = 1.04 V</bdi>"
+        "נרנסט: <bdi>E = E° − (0.0592 / n) log Q</bdi>",
+        "<bdi>E = 1.10 − (0.0592 / 2)(2.00) = 1.10 − 0.0592 = 1.04 V</bdi>"
       ]
     },
     "t22-q4": {
