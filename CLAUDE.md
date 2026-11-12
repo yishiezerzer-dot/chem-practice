@@ -9,6 +9,8 @@ Whenever Claude finishes a task or round, gets blocked, needs Yishi's input or a
 - Keep the summary short; never put secrets, tokens or file contents in it. Show only the HTTP status when reporting a post.
 - If the file is missing, a value is empty, or the post fails, stop and tell Yishi.
 
+**Automatic hooks:** the Stop and Notification hooks in `.claude/settings.json` run `tools/notify-hook.ps1`, which sends this post by itself when Claude stops or waits (done, plan ready, question, permission). Do not also send a manual post for the same stop (no double pings). Use the manual snippet below only as a fallback, when the hook failed (it prints one line such as `notify-hook: post failed`) or did not fire.
+
 ```powershell
 $kv=@{}; Get-Content 'C:\Users\owner\.grokbot\claude-hook.env' | ForEach-Object { if ($_ -match '^\s*([A-Z_]+)\s*=\s*(.*)$') { $kv[$matches[1]] = $matches[2].Trim().Trim('"').Trim("'") } }
 $auth = $kv.HOOK_AUTH_HEADER -replace '^\s*Authorization:\s*',''
