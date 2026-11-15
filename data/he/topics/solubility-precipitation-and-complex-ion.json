@@ -57,7 +57,7 @@
       },
       {
         "id": "precipitate-q",
-        "heading": "האם יהיה שיקוע <bdi>(precipitation)</bdi>? <bdi>Q</bdi> לעומת <bdi>K<sub>sp</sub></bdi>",
+        "heading": "שיקוע <bdi>(precipitation)</bdi>: <bdi>Q</bdi> לעומת <bdi>K<sub>sp</sub></bdi>",
         "paragraphs": [
           "כשתמיסות מתערבבות, חשבו את מנת התגובה <bdi>(reaction quotient)</bdi> <bdi>Q</bdi> עם ריכוזי היונים אחרי המיהול. השוו את <bdi>Q</bdi> ל־<bdi>K<sub>sp</sub></bdi>.",
           "אם <bdi>Q < K<sub>sp</sub></bdi>, התמיסה בלתי רוויה: אין משקע <bdi>(precipitate)</bdi> (עוד מוצק יכול להתמוסס).",
