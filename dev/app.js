@@ -319,11 +319,11 @@ document.addEventListener('error', e => {
 function updateReadProgress() {
   const max = document.documentElement.scrollHeight - innerHeight;
   const pct = max > 0 ? Math.min(100, Math.max(0, 100 * scrollY / max)) : 0;
-  const fill = $('#bar div'); if (fill) fill.style.width = pct + '%';
+  const fill = $('#bar div'); if (fill) fill.style.transform = 'scaleX(' + pct / 100 + ')';
 }
 function stopReadProgress() {
   removeEventListener('scroll', updateReadProgress);
-  const fill = $('#bar div'); if (fill && view !== 'card') fill.style.width = '0%';
+  const fill = $('#bar div'); if (fill && view !== 'card') fill.style.transform = 'scaleX(0)';
 }
 
 let lightboxReturnFocus = null;
@@ -445,7 +445,7 @@ function reading(tid) {
       window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
     };
   }
-  $('#bar div').style.width = '0%';
+  $('#bar div').style.transform = 'scaleX(0)';
   removeEventListener('scroll', updateReadProgress);
   addEventListener('scroll', updateReadProgress, { passive: true });
   updateReadProgress();
@@ -470,7 +470,7 @@ function card() {
   const ss = S.session; if (!ss || !ss.queue.length) return go('home');
   const q = qL(qOf(ss.queue[0])), t = topicOf(q.topic), calc = q.type === 'calc';
   const done = ss.total - new Set(ss.queue).size;
-  setTop(T('cardNofM', done + 1, ss.total), true); $('#bar div').style.width = (100 * done / ss.total) + '%';
+  setTop(T('cardNofM', done + 1, ss.total), true); $('#bar div').style.transform = 'scaleX(' + done / ss.total + ')';
   const tip = esc(calc ? T('tipCalc') : T('tipConcept'));
   let h = `<div class="cap">${esc(tName(t))} · <span class="tag">${esc(calc ? T('calculation') : T('concept'))}</span> ${enOnly(q)}</div>
   <div class="card" style="margin-top:8px"><div${dirAttr(q)}><p style="margin:0">${tx(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">${esc(T('given'))}</div>${q.given.map(g => `<div>${tx(g)}</div>`).join('')}</div>` : ''}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
