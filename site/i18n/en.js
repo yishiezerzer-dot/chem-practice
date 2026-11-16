@@ -14,6 +14,10 @@ window.I18N.en = Object.freeze({
 
   course: '69107 · Introduction to Chemistry',
   pickTopic: 'Pick a topic',
+  pickCourse: 'Pick a course',
+  allCourses: 'All courses',
+  courseProgress: (k, n, d) => `${k} of ${n} topics started, ${d} card${d === 1 ? '' : 's'} due today`,
+  chapterRef: ch => `ch. ${ch}`,
   inProgress: 'In progress',
   reviewDue: 'Review due',
   cardsLeft: n => `${n} cards left`,

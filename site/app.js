@@ -1,6 +1,7 @@
-// Chem Practice v1 — plain JS, progress saved in localStorage.
-const KEY = 'chemPractice.v1', INTERVALS = [1, 3, 7], DAY = 864e5;
+// Chem Practice — plain JS, progress saved in localStorage, one slot per course (site/store.js).
+const INTERVALS = [1, 3, 7], DAY = 864e5, Store = window.ChemStore;
 let TOPICS = [], QS = [], READINGS = {}, S, view = 'home', viewArg = null;
+let COURSES = [], DATA = {}, COURSE = null; // course list, per-course data { topics, qs, readings, he }, current course
 const $ = s => document.querySelector(s), app = $('#app');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -68,9 +69,8 @@ const fmtRich = s => {
   return str;
 };
 const today = () => new Date(new Date().toDateString()).getTime();
-const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
-const save = () => localStorage.setItem(KEY, JSON.stringify(S));
-const fresh = s => Object.assign({ cards: {}, session: null, hideTips: false, lastExport: null, firstRating: null, nudgeHide: 0 }, s);
+const save = () => Store.saveState(localStorage, COURSE.id, S);
+const fresh = Store.fresh;
 const qOf = id => QS.find(q => q.id === id);
 const topicOf = id => TOPICS.find(t => t.id === id);
 const qsFor = tid => QS.filter(q => q.topic === tid);
@@ -105,7 +105,7 @@ const tName = t => isHe() ? (HE[t.id]?.name || t.topic_he || t.topic_en) : t.top
 const ltr = html => isHe() ? `<bdi dir="ltr">${html}</bdi>` : html;
 // Hebrew mode: the unit and topic words are Hebrew (פרק N · נושאים …); only the codes stay left-to-right.
 const refHe = t => t.textbook_units.map(x => esc(x.unit === 'F' ? T('sectFundamentals') : x.unit === 'MT' ? T('refMT') : T('sectFocus', x.unit))).join(' + ') + ' · ' + T('refTopic', t.textbook_topics.length) + ' <bdi dir="ltr">' + esc(t.textbook_topics.map(x => x.topic).join(', ')) + '</bdi>';
-const bookRef = t => isHe() ? refHe(t) : esc(ref(t));
+const bookRef = t => COURSE.id !== Store.GEN ? `${ltr(esc(COURSE.book))} · ${isHe() ? T('chapterRef', `<bdi dir="ltr">${esc(t.solomons_chapter)}</bdi>`) : esc(T('chapterRef', t.solomons_chapter))}` : isHe() ? refHe(t) : esc(ref(t));
 const fbAttr = x => x && x._en ? ' dir="ltr" lang="en"' : '';
 // Hebrew mode, translated content only: explicit RTL so a leading LTR isolate cannot flip the paragraph direction. English output is unchanged.
 const dirAttr = x => x && x._en ? fbAttr(x) : isHe() ? ' dir="rtl"' : '';
@@ -125,7 +125,8 @@ const clip = (x, n = 300) => { x = plain(x); return x.length > n ? x.slice(0, n 
 function reportBtn(t, kind, id, text, fb) {
   const tn = plain(t.topic_en), isCard = kind === 'card';
   const q = [['title', `Review (${LANG}): ${tn} – ${id}`],
-    ['body', `Topic: ${tn} (${t.id})
+    ['body', `Course: ${COURSE.number} ${COURSE.name_en}
+Topic: ${tn} (${t.id})
 Language: ${LANG}${fb ? ' (content shown in English)' : ''}
 ${isCard ? 'Card' : 'Reading section'}: ${id}
 ${isCard ? 'Question' : 'Section'}: ${clip(text)}
@@ -153,31 +154,44 @@ function setLang(l) {
   if (view === 'end') return go('home'); // the finished session is already cleared, so the end screen can't redraw
   render(); window.scrollTo(0, 0);
 }
-async function loadHe() {
+async function loadHe(dir) {
+  const he = {};
   try {
-    const idx = await fetch('data/he/index.json').then(x => x.json());
-    const files = await Promise.all((idx.topics || []).map(id => fetch(`data/he/topics/${id}.json`).then(x => x.ok ? x.json() : null).catch(() => null)));
-    files.forEach(f => { if (f && f.topic_id) HE[f.topic_id] = f; });
-  } catch (_) { HE = {}; }
+    const idx = await fetch(`${dir}he/index.json`).then(x => x.json());
+    const files = await Promise.all((idx.topics || []).map(id => fetch(`${dir}he/topics/${id}.json`).then(x => x.ok ? x.json() : null).catch(() => null)));
+    files.forEach(f => { if (f && f.topic_id) he[f.topic_id] = f; });
+  } catch (_) {}
+  return he;
+}
+async function loadCourse(c) {
+  const [t, q, r, he] = await Promise.all([
+    fetch(`${c.dir}topics.json`).then(x => x.json()),
+    fetch(`${c.dir}questions.json`).then(x => x.json()),
+    fetch(`${c.dir}readings.json`).then(x => x.json()),
+    loadHe(c.dir)
+  ]);
+  DATA[c.id] = { topics: t.topics.slice().sort((a, b) => a.order - b.order), qs: q.questions, readings: r.readings || {}, he };
+}
+/** Switch the screens to one course: its data and its own progress slot. Remembers it as the last course picked. */
+function enterCourse(id) {
+  COURSE = COURSES.find(c => c.id === id);
+  ({ topics: TOPICS, qs: QS, readings: READINGS, he: HE } = DATA[id]);
+  S = fresh(Store.loadState(localStorage, id));
+  try { localStorage.setItem(Store.K.course, id); } catch (_) {}
 }
 
 async function init() {
-  const [t, q, r] = await Promise.all([
-    fetch('data/topics.json').then(x => x.json()),
-    fetch('data/questions.json').then(x => x.json()),
-    fetch('data/readings.json').then(x => x.json()),
-    loadHe()
-  ]);
-  TOPICS = t.topics.slice().sort((a, b) => a.order - b.order);
-  QS = q.questions;
-  READINGS = r.readings || {};
-  S = fresh(load());
+  try { Store.migrate(localStorage); } catch (_) {} // one-time copy of v1 progress into General Chemistry (site/store.js)
+  COURSES = (await fetch('data/courses.json').then(x => x.json())).courses;
+  await Promise.all(COURSES.map(c => loadCourse(c).catch(() => {}))); // a course whose files fail to load is left out
+  COURSES = COURSES.filter(c => DATA[c.id]);
   $('#back').onclick = () => {
     if (view === 'card') {
       if (S.session?.topic === 'due') go('home');
       else go('topic', S.session?.topic);
     } else if (view === 'topic') go('reading', viewArg);
     else if (view === 'reading') go('home');
+    else if (view === 'home') go('courses');
     else go('home');
   };
   $('#weakBtn').onclick = () => go('weak');
@@ -191,36 +205,58 @@ async function init() {
     if (b && $(b)) $(b).click();
     if ((e.key === ' ' || e.key === 'Enter') && $('#show') && document.activeElement === document.body) { e.preventDefault(); $('#show').click(); }
   });
-  go('home');
+  let last = null; try { last = localStorage.getItem(Store.K.course); } catch (_) {}
+  if (DATA[last]) { enterCourse(last); go('home'); } else go('courses');
 }
 function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgress(); view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
 function setTop(title, back) {
   $('#title').textContent = title;
   $('#back').hidden = !back;
+  $('#back').setAttribute('aria-label', view === 'home' ? T('allCourses') : T('back'));
   $("#weakBtn").hidden = view !== "home";
   const sec = $('#secBtn');
   if (sec) sec.hidden = view !== 'reading';
   $('#bar').hidden = !(view === 'card' || view === 'reading');
 }
-function render() { ({ home, reading, topic, card, end, weak })[view](viewArg); }
+function render() {
+  document.title = view === 'courses' ? T('appTitle') : COURSE.id === Store.GEN ? T('docTitle') : T('appTitle') + ' · ' + COURSE.number;
+  ({ courses, home, reading, topic, card, end, weak })[view](viewArg);
+}
+
+// Course picker (O1). Progress line per course comes from that course's own slot.
+function courses() {
+  setTop(T('appTitle'), false);
+  let h = `<h2>${esc(T('pickCourse'))}</h2>`;
+  for (const c of COURSES) {
+    const st = Store.loadState(localStorage, c.id), d = DATA[c.id];
+    const topicOfCard = Object.fromEntries(d.qs.map(q => [q.id, q.topic]));
+    const started = new Set(Object.keys(st.cards).map(id => topicOfCard[id]).filter(Boolean)).size;
+    const due = Object.keys(st.cards).filter(id => topicOfCard[id] && st.cards[id].due <= today()).length;
+    h += `<button class="row course-pick" data-c="${esc(c.id)}"><span class="grow"><div>${esc(isHe() ? c.name_he : c.name_en)}</div><div class="cap">${esc(c.number)} · ${ltr(esc(c.book))}</div><div class="cap">${esc(T('courseProgress', started, d.topics.length, due))}</div></span></button>`;
+  }
+  app.innerHTML = `<div class="fade">${h}</div>`;
+  app.querySelectorAll('[data-c]').forEach(b => b.onclick = () => { enterCourse(b.dataset.c); go('home'); });
+}
 
 function home() {
-  setTop(T('appTitle'), false);
+  setTop(T('appTitle'), true);
   const due = QS.filter(q => isDue(q.id)), dueTopics = new Set(due.map(q => q.topic)).size;
   const rated = Object.keys(S.cards).length;
   const since = S.lastExport || S.firstRating;
   const nudge = rated >= 20 && since && Date.now() - since >= 7 * DAY && Date.now() > S.nudgeHide;
-  let h = `<div class="meta">${esc(T('course'))}</div><h2>${esc(T('pickTopic'))}</h2>`;
+  const gen = COURSE.id === Store.GEN;
+  let h = `<div class="meta">${esc(gen ? T('course') : `${COURSE.number} · ${isHe() ? COURSE.name_he : COURSE.name_en}`)}</div><h2>${esc(T('pickTopic'))}</h2>`;
   const ss = S.session;
   if (ss && ss.queue.length) h += `<div class="card"><div class="cap">${esc(T('inProgress'))}</div><div>${esc(ss.topic === 'due' ? T('reviewDue') : tName(topicOf(ss.topic)))}</div><div class="meta">${esc(T('cardsLeft', ss.queue.length))}</div><button class="btn" id="resume" style="margin-top:12px">${esc(T('resume'))}</button></div>`;
   if (due.length) h += `<div class="card"><div>${esc(T('dueAcross', due.length, dueTopics))}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">${esc(T('reviewDue'))}</button></div>`;
   let lastSect = '';
   for (const t of TOPICS) {
-    const unit = t.textbook_units[0].unit;
-    if (unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
+    const unit = gen ? t.textbook_units[0].unit : '';
+    if (gen && unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
+    const nm = gen ? esc(tName(t)) : hd(tName(t)), num = gen ? t.order : esc(t.tutorial ?? t.order), numCls = gen ? 'num' : 'num num-o';
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
-    h += n ? `<button class="row" data-t="${t.id}"><span class="num">${t.order}</span><span class="grow"><div>${esc(tName(t))}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
-           : `<div class="row" aria-disabled="true"><span class="num">${t.order}</span><span class="grow"><div class="meta">${esc(tName(t))}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
+    h += n ? `<button class="row" data-t="${t.id}"><span class="${numCls}">${num}</span><span class="grow"><div>${nm}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
+           : `<div class="row" aria-disabled="true"><span class="${numCls}">${num}</span><span class="grow"><div class="meta">${nm}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
   }
   if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>${esc(T('backupNudge'))}</span><button class="link" id="nudgeX" aria-label="${esc(T('dismiss'))}">✕</button></div>`;
   h += `<p class="cap" style="margin-top:24px">${esc(T('savedHere'))}</p><button class="link" id="exp">${esc(T('exportProgress'))}</button><button class="link" id="imp">${esc(T('importProgress'))}</button>`;
@@ -555,19 +591,22 @@ function weak() {
   app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
 }
 
+// One export file holds every course; an old (v1) file still imports into General Chemistry (site/store.js).
 function doExport() {
-  S.lastExport = Date.now(); save();
-  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(S, null, 1)], { type: 'application/json' }));
+  save();
+  const data = Store.buildExport(localStorage, COURSES.map(c => c.id), Date.now());
+  S = fresh(Store.loadState(localStorage, COURSE.id));
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' }));
   a.download = 'chem-practice-progress.json'; a.click(); render();
 }
 function doImport(e) {
   const f = e.target.files[0]; if (!f) return; e.target.value = '';
   f.text().then(txt => {
-    let data; try { data = JSON.parse(txt); if (!data.cards) throw 0; } catch { alert(T('badBackup')); return; }
+    let plan; try { plan = Store.parseImport(JSON.parse(txt), COURSES.map(c => c.id)); if (!plan) throw 0; } catch { alert(T('badBackup')); return; }
     const dlg = document.createElement('dialog');
     dlg.innerHTML = `<p>${esc(T('replaceWarn'))}</p><div style="display:flex;gap:8px"><button class="btn sec" value="no">${esc(T('cancel'))}</button><button class="btn" value="yes">${esc(T('replace'))}</button></div>`;
     document.body.append(dlg); dlg.showModal();
-    dlg.querySelectorAll('button').forEach(b => b.onclick = () => { if (b.value === 'yes') { S = fresh(data); save(); go('home'); } dlg.close(); dlg.remove(); });
+    dlg.querySelectorAll('button').forEach(b => b.onclick = () => { if (b.value === 'yes') { Store.writeImport(localStorage, plan); S = fresh(Store.loadState(localStorage, COURSE.id)); go('home'); } dlg.close(); dlg.remove(); });
   });
 }
 init();

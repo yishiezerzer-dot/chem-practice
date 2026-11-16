@@ -106,3 +106,7 @@ html[lang=he] bdi.fx{display:inline-block;max-width:100%;vertical-align:bottom;w
 ol.steps[dir=rtl]{overflow-x:visible}
 .lang-btn{font-size:13px;padding:8px 10px}
 .en-only{color:var(--muted);font-size:13px;line-height:18px}
+/* Course picker (O1) */
+.course-pick{min-height:96px;padding:16px;flex-direction:column;align-items:stretch;justify-content:center;gap:4px}
+.course-pick .grow>div:first-child{font-size:20px;line-height:28px;font-weight:600}
+.num-o{width:auto;min-width:32px;padding:0 6px;border-radius:16px;white-space:nowrap}

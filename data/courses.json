@@ -1,0 +1,21 @@
+{
+ "note": "Course list. Each course's files live in its own folder (dir). General Chemistry stays in data/ and data/he/ unchanged.",
+ "courses": [
+  {
+   "id": "gen",
+   "number": "69107",
+   "name_en": "General Chemistry",
+   "name_he": "כימיה כללית",
+   "book": "Atkins 8e",
+   "dir": "data/"
+  },
+  {
+   "id": "organic1",
+   "number": "69128",
+   "name_en": "Organic Chemistry 1",
+   "name_he": "כימיה אורגנית 1",
+   "book": "Solomons 11e",
+   "dir": "data/organic1/"
+  }
+ ]
+}

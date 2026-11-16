@@ -1,0 +1,5 @@
+{
+ "lang": "he",
+ "note": "Hebrew overlay for Organic Chemistry 1, same layout as data/he/. Topic names already carry Hebrew in topics.json (topic_he). List translated topic ids here once readings exist.",
+ "topics": []
+}
