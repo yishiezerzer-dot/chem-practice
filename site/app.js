@@ -191,7 +191,6 @@ async function init() {
       else go('topic', S.session?.topic);
     } else if (view === 'topic') go('reading', viewArg);
     else if (view === 'reading') go('home');
-    else if (view === 'home') go('courses');
     else go('home');
   };
   $('#weakBtn').onclick = () => go('weak');
@@ -212,7 +211,6 @@ function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgres
 function setTop(title, back) {
   $('#title').textContent = title;
   $('#back').hidden = !back;
-  $('#back').setAttribute('aria-label', view === 'home' ? T('allCourses') : T('back'));
   $("#weakBtn").hidden = view !== "home";
   const sec = $('#secBtn');
   if (sec) sec.hidden = view !== 'reading';
@@ -239,13 +237,13 @@ function courses() {
 }
 
 function home() {
-  setTop(T('appTitle'), true);
+  setTop(T('appTitle'), false);
   const due = QS.filter(q => isDue(q.id)), dueTopics = new Set(due.map(q => q.topic)).size;
   const rated = Object.keys(S.cards).length;
   const since = S.lastExport || S.firstRating;
   const nudge = rated >= 20 && since && Date.now() - since >= 7 * DAY && Date.now() > S.nudgeHide;
   const gen = COURSE.id === Store.GEN;
-  let h = `<div class="meta">${esc(gen ? T('course') : `${COURSE.number} · ${isHe() ? COURSE.name_he : COURSE.name_en}`)}</div><h2>${esc(T('pickTopic'))}</h2>`;
+  let h = `<button class="link all-courses" id="allCourses" type="button"><span aria-hidden="true">${esc(T('backArrow'))}</span>${esc(T('allCourses'))}</button><div class="meta">${esc(gen ? T('course') : `${COURSE.number} · ${isHe() ? COURSE.name_he : COURSE.name_en}`)}</div><h2>${esc(T('pickTopic'))}</h2>`;
   const ss = S.session;
   if (ss && ss.queue.length) h += `<div class="card"><div class="cap">${esc(T('inProgress'))}</div><div>${esc(ss.topic === 'due' ? T('reviewDue') : tName(topicOf(ss.topic)))}</div><div class="meta">${esc(T('cardsLeft', ss.queue.length))}</div><button class="btn" id="resume" style="margin-top:12px">${esc(T('resume'))}</button></div>`;
   if (due.length) h += `<div class="card"><div>${esc(T('dueAcross', due.length, dueTopics))}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">${esc(T('reviewDue'))}</button></div>`;
@@ -263,6 +261,7 @@ function home() {
   app.innerHTML = `<div class="fade">${h}</div>`;
   app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => go('reading', b.dataset.t));
   $('#resume') && ($('#resume').onclick = () => go('card'));
+  $('#allCourses').onclick = () => go('courses');
   $('#reviewDue') && ($('#reviewDue').onclick = () => start('due', due.map(q => q.id)));
   $('#nudgeX') && ($('#nudgeX').onclick = () => { S.nudgeHide = Date.now() + 7 * DAY; save(); render(); });
   $('#exp').onclick = doExport; $('#imp').onclick = () => $('#importFile').click();
