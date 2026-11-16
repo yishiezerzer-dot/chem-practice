@@ -13,6 +13,10 @@ window.I18N.he = Object.freeze({
 
   course: '69107 · מבוא לכימיה',
   pickTopic: 'בחרו נושא',
+  pickCourse: 'בחרו קורס',
+  allCourses: 'כל הקורסים',
+  courseProgress: (k, n, d) => (k === 1 ? `התחלתם נושא אחד מתוך ${n}` : `התחלתם ${k} מתוך ${n} נושאים`) + ', ' + (d === 1 ? 'כרטיס אחד לחזרה היום' : `${d} כרטיסים לחזרה היום`),
+  chapterRef: ch => `פרק ${ch}`,
   inProgress: 'בתהליך',
   reviewDue: 'חזרה על כרטיסים',
   cardsLeft: n => n === 1 ? 'נשאר כרטיס אחד' : `נשארו ${n} כרטיסים`,
