@@ -255,5 +255,192 @@ check('(f) parseImport returns null for non-objects (null, string, number, undef
   for (const x of [null, 'abc', 42, undefined]) eq(parseImport(x, ['gen', 'organic1']), null);
 });
 
+// ---------- (g) old tab writes v1 after migration (syncV1) ----------
+{
+  const { syncV1 } = store;
+  const ORG = 'chemPractice.v2.organic1', ORG_RAW = JSON.stringify({ cards: { 'o-1-q1': { step: 1, hist: [[NOW, 'knew']], due: midnight(3), fresh: false } } });
+  class RecordingStorage extends FakeStorage {
+    constructor(init) { super(init); this.log = []; this.failKey = null; }
+    setItem(k, v) { this.log.push(['set', k]); if (k === this.failKey) { const e = new Error('quota'); e.name = 'QuotaExceededError'; throw e; } super.setItem(k, v); }
+    removeItem(k) { this.log.push(['remove', k]); super.removeItem(k); }
+  }
+  const audit = []; // one record per syncV1 call in this section
+  function runSync(ls) {
+    const org = ls.getItem(ORG), v1 = ls.getItem(V1);
+    ls.log.length = 0;
+    const res = syncV1(ls);
+    const rec = { res, ops: ls.log.slice(), orgSame: ls.getItem(ORG) === org, v1Same: ls.getItem(V1) === v1 };
+    audit.push(rec); return rec;
+  }
+  const hasV1Op = rec => rec.ops.some(([, k]) => k === V1);
+  const unionSorted = (...hs) => {
+    const seen = new Set(), out = [];
+    for (const e of [].concat(...hs)) { const k = JSON.stringify(e); if (!seen.has(k)) { seen.add(k); out.push(e); } }
+    return out.sort((a, b) => a[0] - b[0]);
+  };
+  const noDup = h => new Set(h.map(e => JSON.stringify(e))).size === h.length;
+  const isSorted = h => h.every((e, i) => !i || h[i - 1][0] <= e[0]);
+  const newStore = () => { const ls = new RecordingStorage({ [V1]: V1_RAW }); migrate(ls); ls.setItem(ORG, ORG_RAW); return ls; };
+
+  // (a) old tab rates cards of one topic (incl. a card not yet in gen) and writes v1
+  const ls = newStore();
+  const oldTab = JSON.parse(ls.getItem(V1));
+  const a0 = id(tA, 0), a1 = id(tA, 1), a2 = id(tA, 2);
+  oldTab.cards[a0].hist.push([NOW + 1000, 'didnt']); Object.assign(oldTab.cards[a0], { step: 0, due: midnight(1), fresh: true });
+  oldTab.cards[a1].hist.push([NOW + 2000, 'knew']); Object.assign(oldTab.cards[a1], { step: 1, due: midnight(3), fresh: true });
+  oldTab.cards[a2] = { step: 2, hist: [[NOW + 3000, 'knew']], due: midnight(14), fresh: false };
+  const wPre = weakCounts(loadState(ls, 'gen'), questions, NOW);
+  ls.setItem(V1, JSON.stringify(oldTab));
+  let rA;
+  check('(g)(a) old-tab write after migration: syncV1 returns "merged"', () => { rA = runSync(ls); eq(rA.res, 'merged'); });
+  check('(g)(a) gen has the old tab\'s step/due/fresh/hist for the three rated cards (incl. the card new to gen)', () => {
+    const st = loadState(ls, 'gen');
+    for (const cid of [a0, a1, a2]) eq(st.cards[cid], Object.assign({}, oldTab.cards[cid], { hist: unionSorted(oldTab.cards[cid].hist) }), cid); // fixture hists are not all in time order; merge sorts them
+  });
+  check('(g)(a) untouched cards and non-card fields of gen are unchanged', () => {
+    const st = loadState(ls, 'gen');
+    for (const cid of [id(tA, 0), id(tA, 1), id(tA, 2)]) assert(cid in st.cards);
+    for (const cid of [id(tB, 1), id(tC, 0), id(tC, 1), id(tC, 2)]) eq(st.cards[cid], Object.assign({}, S.cards[cid], { hist: unionSorted(S.cards[cid].hist) }), cid);
+    eq(st.session, S.session); eq(st.hideTips, true); eq(st.lastExport, S.lastExport); eq(st.firstRating, S.firstRating); eq(st.nudgeHide, 2);
+  });
+  check('(g)(a) weak-topic counts mirror the new ratings (and differ from before the sync)', () => {
+    const wNow = weakCounts(loadState(ls, 'gen'), questions, NOW);
+    eq(wNow, weakCounts(oldTab, questions, NOW));
+    assert(JSON.stringify(wNow) !== JSON.stringify(wPre));
+    const cnt = t => { const x = wNow[t], p = wPre[t] || { k: 0, u: 0, d: 0 }; return [x.k - p.k, x.u - p.u, x.d - p.d]; };
+    eq(cnt(tA), [2, 0, 1]); // two new 'knew' (a1, a2) and one new 'didnt' (a0) in topic A
+  });
+  check('(g)(a) gen hists are sorted with no duplicates', () => {
+    for (const c of Object.values(loadState(ls, 'gen').cards)) { assert(isSorted(c.hist)); assert(noDup(c.hist)); }
+  });
+
+  // (c) part 1: second run is a no-op
+  const snapMerged = ls.snapshot();
+  check('(g)(c) second syncV1 right after a merge returns "unchanged"', () => { eq(runSync(ls).res, 'unchanged'); });
+  check('(g)(c) whole storage snapshot identical after the no-op run (every key and value)', () => eq(ls.snapshot(), snapMerged));
+  check('(g)(c) the no-op run made no writes at all', () => eq(audit[audit.length - 1].ops, []));
+
+  // (c) part 2: v1 rewritten byte-different but card-identical (only session changed)
+  const v1Obj = JSON.parse(ls.getItem(V1));
+  v1Obj.session = { topic: tA, queue: [], total: 1, worst: {}, seen: {} };
+  ls.setItem(V1, JSON.stringify(v1Obj));
+  const genBefore = ls.getItem(GEN_KEY);
+  check('(g)(c) v1 changed only in session: syncV1 returns "same"', () => eq(runSync(ls).res, 'same'));
+  check('(g)(c) "same": gen slot byte-identical, session of gen not taken from v1', () => {
+    eq(ls.getItem(GEN_KEY), genBefore); eq(loadState(ls, 'gen').session, S.session);
+  });
+  check('(g)(c) "same": no write to gen slot', () => assert(!audit[audit.length - 1].ops.some(([, k]) => k === GEN_KEY)));
+  check('(g)(c) call after "same" returns "unchanged" (fingerprint recorded)', () => eq(runSync(ls).res, 'unchanged'));
+
+  // (b) newer review wins either way round, in the same run
+  const lb = newStore();
+  const X = id(tC, 0), Y = id(tC, 2), Z = id(tB, 1);
+  const v1b = JSON.parse(lb.getItem(V1));
+  const xNew = [NOW + 5000, 'knew'], yNew = [NOW + 6000, 'didnt'], yExtra = [ago(70), 'unsure'], zExtra = [ago(50), 'didnt'];
+  Object.assign(v1b.cards[X], { step: 2, due: midnight(9), fresh: false }); v1b.cards[X].hist.push(xNew);       // X newer in v1
+  v1b.cards[Y].hist.unshift(yExtra);                                                                            // Y older in v1 but has an extra old entry
+  v1b.cards[Z].hist.unshift(zExtra); Object.assign(v1b.cards[Z], { step: 0, due: midnight(30), fresh: false }); // Z: same last review (tie)
+  const g = loadState(lb, 'gen');                                                                               // Y newer in v2.gen
+  Object.assign(g.cards[Y], { step: 0, due: midnight(1), fresh: true }); g.cards[Y].hist.push(yNew);
+  saveState(lb, 'gen', g);
+  const genY = JSON.parse(lb.getItem(GEN_KEY)).cards[Y], genZ = JSON.parse(lb.getItem(GEN_KEY)).cards[Z];
+  lb.setItem(V1, JSON.stringify(v1b));
+  let rB;
+  check('(g)(b) mixed run: syncV1 returns "merged"', () => { rB = runSync(lb); eq(rB.res, 'merged'); });
+  const stB = () => loadState(lb, 'gen');
+  check('(g)(b) card X newer in v1: v1 step/due/fresh win, hist is the sorted union', () => {
+    const c = stB().cards[X];
+    eq([c.step, c.due, c.fresh], [2, midnight(9), false]);
+    eq(c.hist, unionSorted(S.cards[X].hist, [xNew]));
+  });
+  check('(g)(b) card Y newer in gen: gen step/due/fresh win, hist is the sorted union incl. v1\'s extra entry', () => {
+    const c = stB().cards[Y];
+    eq([c.step, c.due, c.fresh], [0, midnight(1), true]);
+    eq(c.hist, unionSorted(genY.hist, [yExtra]));
+    assert(c.hist.some(e => JSON.stringify(e) === JSON.stringify(yExtra)) && c.hist.some(e => JSON.stringify(e) === JSON.stringify(yNew)));
+  });
+  check('(g)(b) tie on last review: gen\'s step/due/fresh kept, hist still the union', () => {
+    const c = stB().cards[Z];
+    eq([c.step, c.due, c.fresh], [genZ.step, genZ.due, genZ.fresh]);
+    eq(c.hist, unionSorted(genZ.hist, [zExtra]));
+  });
+  check('(g)(b) every merged hist is sorted by time with identical entries kept once', () => {
+    for (const cid of [X, Y, Z]) { const h = stB().cards[cid].hist; assert(isSorted(h), cid + ' sorted'); assert(noDup(h), cid + ' no dup'); }
+  });
+  check('(g)(b) gen-only cards unchanged; other fields keep gen values', () => {
+    const st = stB();
+    eq(st.cards[id(tA, 0)], S.cards[id(tA, 0)]); eq(st.session, S.session); eq(st.nudgeHide, 2); eq(st.lastExport, S.lastExport);
+  });
+
+  // other fields keep gen's values even when v1 differs in them
+  {
+    const lo = newStore(); const o = JSON.parse(lo.getItem(V1));
+    Object.assign(o, { hideTips: false, lastExport: 1, firstRating: 2, nudgeHide: 9, session: null });
+    o.cards[id(tA, 1)].hist.push([NOW + 9000, 'knew']);
+    lo.setItem(V1, JSON.stringify(o));
+    check('(g) v1 with different session/hideTips/lastExport/firstRating/nudgeHide: merged, those fields keep gen\'s values', () => {
+      eq(runSync(lo).res, 'merged');
+      const st = loadState(lo, 'gen');
+      eq(st.session, S.session); eq(st.hideTips, true); eq(st.lastExport, S.lastExport); eq(st.firstRating, S.firstRating); eq(st.nudgeHide, 2);
+    });
+  }
+
+  // (g) edge cases
+  {
+    const e = new RecordingStorage();
+    check('(g) no v1 at all: "no-v1" and no writes', () => { const r = runSync(e); eq(r.res, 'no-v1'); eq(r.ops, []); eq(e.snapshot(), {}); });
+    const e2 = new RecordingStorage({ [GEN_KEY]: V1_RAW });
+    check('(g) gen present but no v1: "no-v1" and no writes', () => { const r = runSync(e2); eq(r.res, 'no-v1'); eq(r.ops, []); });
+  }
+  {
+    const nu = new RecordingStorage({ [V1]: V1_RAW }); nu.failKey = GEN_KEY;
+    check('(g) setup: copy fails so GC stays on v1 (migrate "fallback")', () => { eq(migrate(nu), 'fallback'); eq(nu.getItem(GEN_KEY), null); });
+    nu.failKey = null;
+    const snap = nu.snapshot();
+    check('(g) GC slot not in use (no gen slot, v1 exists): "not-in-use" and no writes', () => {
+      const r = runSync(nu); eq(r.res, 'not-in-use'); eq(r.ops, []); eq(nu.snapshot(), snap);
+    });
+  }
+  {
+    const wf = newStore();
+    const v = JSON.parse(wf.getItem(V1)); v.cards[id(tA, 1)].hist.push([NOW + 7000, 'knew']); wf.setItem(V1, JSON.stringify(v));
+    const genRaw = wf.getItem(GEN_KEY); wf.failKey = GEN_KEY;
+    let r;
+    check('(g) setItem throws for gen during sync: "write-failed"', () => { r = runSync(wf); eq(r.res, 'write-failed'); });
+    check('(g) write-failed: gen byte-identical, v1seen not written, v1 untouched', () => {
+      eq(wf.getItem(GEN_KEY), genRaw); eq(wf.getItem(K.v1seen), null); assert(!r.ops.some(([, k]) => k === K.v1seen)); assert(r.v1Same);
+    });
+    wf.failKey = null;
+    check('(g) write-failed: next call retries and returns "merged"; v1seen then recorded', () => {
+      eq(runSync(wf).res, 'merged'); assert(wf.getItem(K.v1seen) !== null);
+      eq(loadState(wf, 'gen').cards[id(tA, 1)].hist.slice(-1)[0], [NOW + 7000, 'knew']);
+    });
+  }
+
+  // (d) + (e) over every syncV1 call in this section
+  check('(g)(d) organic1 slot byte-identical after every syncV1 call in this section', () => {
+    assert(audit.length >= 10, 'expected many calls, got ' + audit.length);
+    audit.forEach((r, i) => assert(r.orgSame, 'call #' + i + ' (' + r.res + ') changed organic1'));
+    eq(ls.getItem(ORG), ORG_RAW); eq(lb.getItem(ORG), ORG_RAW);
+  });
+  check('(g)(d) no syncV1 call ever wrote or removed the organic1 key', () => {
+    audit.forEach((r, i) => assert(!r.ops.some(([, k]) => k === ORG), 'call #' + i));
+  });
+  check('(g)(e) no setItem/removeItem on chemPractice.v1 during any syncV1 call', () => {
+    audit.forEach((r, i) => assert(!hasV1Op(r), 'call #' + i + ' (' + r.res + ') touched v1'));
+  });
+  check('(g)(e) v1 string identical before/after every syncV1 call', () => {
+    audit.forEach((r, i) => assert(r.v1Same, 'call #' + i));
+  });
+  check('(g)(e) the only keys syncV1 ever wrote are gen and v1seen', () => {
+    const keys = new Set(audit.flatMap(r => r.ops.map(([op, k]) => op + ':' + k)));
+    eq([...keys].sort(), ['set:' + GEN_KEY, 'set:' + K.v1seen].sort());
+  });
+  check('(g) all result codes seen: merged, unchanged, same, no-v1, not-in-use, write-failed', () => {
+    const seen = new Set(audit.map(r => r.res));
+    for (const c of ['merged', 'unchanged', 'same', 'no-v1', 'not-in-use', 'write-failed']) assert(seen.has(c), c);
+  });
+}
+
 console.log(`\n${passed}/${total} checks passed`);
 process.exit(passed === total ? 0 : 1);

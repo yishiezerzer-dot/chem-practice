@@ -6,6 +6,7 @@
     v1: 'chemPractice.v1',                 // v1 slot (General Chemistry only). After a good copy it is a backup and is never written again.
     course: 'chemPractice.course',         // last course picked
     migrated: 'chemPractice.v2.migrated',  // information only: when the copy happened; nothing reads it
+    v1seen: 'chemPractice.v2.v1seen',      // fingerprint of the v1 slot at the last merge (syncV1), to spot old-tab writes
     slot: id => 'chemPractice.v2.' + id    // per-course progress: chemPractice.v2.gen, chemPractice.v2.organic1
   };
   const fresh = s => Object.assign({ cards: {}, session: null, hideTips: false, lastExport: null, firstRating: null, nudgeHide: 0 }, s);
@@ -49,6 +50,45 @@
     if (get(ls, K.v1) !== null) return K.v1;
     return g;
   }
+  /** Old tab still open after the upgrade: it keeps writing the v1 slot. Merges v1 cards that changed since the last
+   *  merge into the General Chemistry slot. Never writes or deletes v1; never touches another course.
+   *  Per card, the side with the more recent review (last hist timestamp) gives step, due and fresh; the rating
+   *  history is the union of both sides (same [time, rating] entry kept once), so every rating counts for weak topics.
+   *  Returns 'no-v1' | 'not-in-use' (GC still runs on v1: copy not done or failed) | 'unchanged' (v1 same as last time,
+   *  no writes) | 'same' (v1 changed, nothing new for GC) | 'merged' | 'write-failed' (GC slot left as it was; retried next time). */
+  function syncV1(ls) {
+    const raw = get(ls, K.v1);
+    if (raw === null) return 'no-v1';
+    if (genKey(ls) !== K.slot(GEN)) return 'not-in-use';
+    const seen = fingerprint(raw);
+    if (get(ls, K.v1seen) === seen) return 'unchanged';
+    const old = parseObj(raw), gen = parseObj(get(ls, K.slot(GEN)));
+    let result = 'same';
+    if (old && old.cards && typeof old.cards === 'object') {
+      const cards = Object.assign({}, gen.cards);
+      for (const id in old.cards) { const m = mergeCard(cards[id], old.cards[id]); if (m) cards[id] = m; }
+      if (!same(cards, gen.cards || {})) {
+        try { ls.setItem(K.slot(GEN), JSON.stringify(Object.assign({}, gen, { cards }))); } catch (_) { return 'write-failed'; }
+        result = 'merged';
+      }
+    }
+    try { ls.setItem(K.v1seen, seen); } catch (_) {}
+    return result;
+  }
+  const lastTs = c => { const h = c && Array.isArray(c.hist) ? c.hist : []; return h.length ? +h[h.length - 1][0] || 0 : 0; };
+  /** Merged card, or null when the GC card `g` already has everything in the v1 card `o`. */
+  function mergeCard(g, o) {
+    if (!o || typeof o !== 'object') return null;
+    if (!g) return o;
+    const win = lastTs(o) > lastTs(g) ? o : g, seen = new Set(), hist = [];
+    for (const e of [].concat(g.hist || [], o.hist || [])) { const k = JSON.stringify(e); if (!seen.has(k)) { seen.add(k); hist.push(e); } }
+    hist.sort((a, b) => (+a[0] || 0) - (+b[0] || 0));
+    const m = Object.assign({}, win, { hist });
+    return same(m, g) ? null : m;
+  }
+  // Length + FNV-1a hash of the v1 string: changes whenever an old tab saves.
+  function fingerprint(s) { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return s.length + ':' + h.toString(16); }
+
   const keyFor = (ls, course) => course === GEN ? genKey(ls) : K.slot(course);
   const loadState = (ls, course) => fresh(parseObj(get(ls, keyFor(ls, course))) || {});
   const saveState = (ls, course, state) => ls.setItem(keyFor(ls, course), JSON.stringify(state));
@@ -75,7 +115,7 @@
   }
   const writeImport = (ls, plan) => { for (const id in plan) saveState(ls, id, plan[id]); return Object.keys(plan); };
 
-  const API = { GEN, K, fresh, same, migrate, genKey, keyFor, loadState, saveState, buildExport, parseImport, writeImport };
+  const API = { GEN, K, fresh, same, migrate, syncV1, genKey, keyFor, loadState, saveState, buildExport, parseImport, writeImport };
   if (typeof module === 'object' && module.exports) module.exports = API;
   if (root) root.ChemStore = API;
 })(typeof window !== 'undefined' ? window : null);

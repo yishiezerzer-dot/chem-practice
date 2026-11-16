@@ -182,6 +182,7 @@ function enterCourse(id) {
 
 async function init() {
   try { Store.migrate(localStorage); } catch (_) {} // one-time copy of v1 progress into General Chemistry (site/store.js)
+  try { Store.syncV1(localStorage); } catch (_) {} // ratings an old-version tab saved to v1 since then
   COURSES = (await fetch('data/courses.json').then(x => x.json())).courses;
   await Promise.all(COURSES.map(c => loadCourse(c).catch(() => {}))); // a course whose files fail to load is left out
   COURSES = COURSES.filter(c => DATA[c.id]);
@@ -203,6 +204,14 @@ async function init() {
     const b = { '1': '.r-didnt', '2': '.r-unsure', '3': '.r-knew' }[e.key];
     if (b && $(b)) $(b).click();
     if ((e.key === ' ' || e.key === 'Enter') && $('#show') && document.activeElement === document.body) { e.preventDefault(); $('#show').click(); }
+  });
+  // An old-version tab saved to v1 while this tab is open: merge it, refresh the cards in memory (so the next save keeps them).
+  addEventListener('storage', e => {
+    if (e.key !== Store.K.v1) return;
+    let r; try { r = Store.syncV1(localStorage); } catch (_) { return; }
+    if (r !== 'merged') return;
+    if (COURSE && COURSE.id === Store.GEN) S.cards = Store.loadState(localStorage, Store.GEN).cards;
+    if (view === 'home' || view === 'weak' || view === 'courses') render();
   });
   let last = null; try { last = localStorage.getItem(Store.K.course); } catch (_) {}
   if (DATA[last]) { enterCourse(last); go('home'); } else go('courses');
@@ -253,8 +262,8 @@ function home() {
     if (gen && unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
     const nm = gen ? esc(tName(t)) : hd(tName(t)), num = gen ? t.order : esc(t.tutorial ?? t.order), numCls = gen ? 'num' : 'num num-o';
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
-    h += n ? `<button class="row" data-t="${t.id}"><span class="${numCls}">${num}</span><span class="grow"><div>${nm}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
-           : `<div class="row" aria-disabled="true"><span class="${numCls}">${num}</span><span class="grow"><div class="meta">${nm}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
+    h += n ? `<button class="row" data-t="${t.id}"><span class="${numCls}"${gen ? "" : " dir=\"ltr\""}>${num}</span><span class="grow"><div>${nm}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
+           : `<div class="row" aria-disabled="true"><span class="${numCls}"${gen ? "" : " dir=\"ltr\""}>${num}</span><span class="grow"><div class="meta">${nm}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
   }
   if (nudge) h += `<div class="nudge" style="margin-top:16px"><span>${esc(T('backupNudge'))}</span><button class="link" id="nudgeX" aria-label="${esc(T('dismiss'))}">✕</button></div>`;
   h += `<p class="cap" style="margin-top:24px">${esc(T('savedHere'))}</p><button class="link" id="exp">${esc(T('exportProgress'))}</button><button class="link" id="imp">${esc(T('importProgress'))}</button>`;
