@@ -38,5 +38,73 @@
  {
   "he": "כתיבת מולקולות",
   "en": "writing molecules"
+ },
+ {
+  "he": "שרשרת ראשית",
+  "en": "parent chain"
+ },
+ {
+  "he": "מתמיר",
+  "en": "substituent"
+ },
+ {
+  "he": "מיקום",
+  "en": "locant"
+ },
+ {
+  "he": "נוסחת קווים",
+  "en": "bond-line structure"
+ },
+ {
+  "he": "הלוגן",
+  "en": "halogen"
+ },
+ {
+  "he": "קבוצת אלקיל",
+  "en": "alkyl group"
+ },
+ {
+  "he": "מתיל",
+  "en": "methyl"
+ },
+ {
+  "he": "בדיקה",
+  "en": "UI: Check"
+ },
+ {
+  "he": "שליחה",
+  "en": "UI: Submit"
+ },
+ {
+  "he": "התשובה שלך",
+  "en": "UI: Your answer"
+ },
+ {
+  "he": "התשובה הנכונה",
+  "en": "UI: The correct answer"
+ },
+ {
+  "he": "הבחירה שלך",
+  "en": "UI: Your choice"
+ },
+ {
+  "he": "רב־ברירה",
+  "en": "UI: Multiple choice"
+ },
+ {
+  "he": "הקלדת תשובה",
+  "en": "UI: Type the answer"
+ },
+ {
+  "he": "מחברת",
+  "en": "UI: Notebook"
+ },
+ {
+  "he": "אפשרויות",
+  "en": "UI: Choices"
+ },
+ {
+  "he": "ציירו את התשובה במחברת שלכם, ואז לחצו על הצגת תשובה.",
+  "en": "UI: drawing prompt"
  }
 ]

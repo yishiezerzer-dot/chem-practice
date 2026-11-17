@@ -111,3 +111,21 @@ ol.steps[dir=rtl]{overflow-x:visible}
 .course-pick .grow>div:first-child{font-size:20px;line-height:28px;font-weight:600}
 .num-o{width:40px;min-width:40px;padding:0;border-radius:16px;white-space:nowrap;letter-spacing:-.02em}
 .all-courses{display:inline-flex;align-items:center;gap:6px;margin:-12px 0 0;margin-inline-start:-8px;text-decoration:none;font-weight:600}
+/* Organic card types (O2): multiple choice, typed answer, notebook */
+.opic{margin:12px 0 0;text-align:center}.opic img{max-width:100%;height:auto;max-height:200px}
+.choices{display:grid;gap:8px;margin-top:12px}
+.choice{display:block;width:100%;min-height:48px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;text-align:start;cursor:pointer}
+.choice[aria-checked=true]{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.choice:disabled{cursor:default;opacity:1;color:var(--text)}
+.choice.right{border-color:var(--knew);box-shadow:0 0 0 1px var(--knew)}.choice.wrong{border-color:var(--didnt);box-shadow:0 0 0 1px var(--didnt)}
+.choice>*{display:block}.choice .tname{width:fit-content;max-width:100%}.choice .mark,.choice .why{margin-top:4px}.choice .opic{margin:4px 0 0}.choice .opic img{max-height:120px}
+.choice .mark{font-size:13px;line-height:18px;font-weight:700}.choice.right .mark{color:var(--knew)}.choice.wrong .mark{color:var(--didnt)}
+.choice .why{font-size:13px;line-height:18px;color:var(--muted)}
+.typed{display:block;width:100%;min-height:48px;margin-top:4px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;font-size:17px;text-align:left}
+.typed-l{display:block;margin-top:12px}
+.tname{display:inline-block;max-width:100%;overflow-x:auto;white-space:nowrap;vertical-align:bottom}
+.cmp{display:grid;gap:8px;margin-bottom:8px}.cmp .tname{font-size:20px;line-height:28px;font-weight:700}
+.verdict{font-weight:700;margin-bottom:4px}
+.cmp>div,.choices>.choice{min-width:0}.nb{white-space:nowrap}
+/* Organic cards: a Hebrew formula sits on the text baseline. Aligned to the line bottom (rule above), a formula with a <sub> is taller than the line and gets lifted, so CH3 read as a superscript. */
+html[lang=he] .ocard bdi.fx{vertical-align:baseline}
