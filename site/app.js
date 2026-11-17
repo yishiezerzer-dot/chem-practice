@@ -101,6 +101,9 @@ function readingL(tid) {
   return { ...r, sections: (r.sections || []).map(s => byId[s.id] ? overlay(s, byId[s.id]) : { ...s, _en: true }) };
 }
 const tName = t => isHe() ? (HE[t.id]?.name || t.topic_he || t.topic_en) : t.topic_en;
+// Topic name as HTML / as plain text: General Chemistry names are plain text (escaped as before); Organic names carry <bdi>/<sub> markup.
+const tHtml = t => COURSE.id === Store.GEN ? esc(tName(t)) : hd(tName(t));
+const tText = t => COURSE.id === Store.GEN ? tName(t) : plain(tName(t));
 // Book references stay English (Atkins 8e); keep them left-to-right inside Hebrew pages.
 const ltr = html => isHe() ? `<bdi dir="ltr">${html}</bdi>` : html;
 // Hebrew mode: the unit and topic words are Hebrew (פרק N · נושאים …); only the codes stay left-to-right.
@@ -254,13 +257,13 @@ function home() {
   const gen = COURSE.id === Store.GEN;
   let h = `<button class="link all-courses" id="allCourses" type="button"><span aria-hidden="true">${esc(T('backArrow'))}</span>${esc(T('allCourses'))}</button><div class="meta">${esc(gen ? T('course') : `${COURSE.number} · ${isHe() ? COURSE.name_he : COURSE.name_en}`)}</div><h2>${esc(T('pickTopic'))}</h2>`;
   const ss = S.session;
-  if (ss && ss.queue.length) h += `<div class="card"><div class="cap">${esc(T('inProgress'))}</div><div>${esc(ss.topic === 'due' ? T('reviewDue') : tName(topicOf(ss.topic)))}</div><div class="meta">${esc(T('cardsLeft', ss.queue.length))}</div><button class="btn" id="resume" style="margin-top:12px">${esc(T('resume'))}</button></div>`;
+  if (ss && ss.queue.length) h += `<div class="card"><div class="cap">${esc(T('inProgress'))}</div><div>${ss.topic === 'due' ? esc(T('reviewDue')) : tHtml(topicOf(ss.topic))}</div><div class="meta">${esc(T('cardsLeft', ss.queue.length))}</div><button class="btn" id="resume" style="margin-top:12px">${esc(T('resume'))}</button></div>`;
   if (due.length) h += `<div class="card"><div>${esc(T('dueAcross', due.length, dueTopics))}</div><button class="btn sec" id="reviewDue" style="margin-top:12px">${esc(T('reviewDue'))}</button></div>`;
   let lastSect = '';
   for (const t of TOPICS) {
     const unit = gen ? t.textbook_units[0].unit : '';
     if (gen && unit !== lastSect) { const sect = unit === 'F' ? T('sectFundamentals') : T('sectFocus', unit); h += `<div class="sect">${isHe() ? esc(sect) : ltr(esc(sect))}</div>`; lastSect = unit; }
-    const nm = gen ? esc(tName(t)) : hd(tName(t)), num = gen ? t.order : esc(t.tutorial ?? t.order), numCls = gen ? 'num' : 'num num-o';
+    const nm = tHtml(t), num = gen ? t.order : esc(t.tutorial ?? t.order), numCls = gen ? 'num' : 'num num-o';
     const qs = qsFor(t.id), n = qs.length, knew = qs.filter(q => { const h = S.cards[q.id]?.hist; return h && h[h.length - 1][1] === 'knew'; }).length, d = qs.filter(q => isDue(q.id)).length;
     h += n ? `<button class="row" data-t="${t.id}"><span class="${numCls}"${gen ? "" : " dir=\"ltr\""}>${num}</span><span class="grow"><div>${nm}</div><div class="cap">${bookRef(t)} ${isHe() ? `<span class="nw">· ${esc(T('learned', knew, n))}</span>` : `· <span class="nw">${esc(T('learned', knew, n))}</span>`}</div></span>${d ? `<span class="badge" aria-label="${esc(T('dueBadge', d))}">${d}</span>` : ''}</button>`
            : `<div class="row" aria-disabled="true"><span class="${numCls}"${gen ? "" : " dir=\"ltr\""}>${num}</span><span class="grow"><div class="meta">${nm}</div><div class="cap">${bookRef(t)} · ${esc(T('comingSoon'))}</div></span></div>`;
@@ -433,7 +436,7 @@ function wireSketchLightbox() {
 function reading(tid) {
   const t = topicOf(tid), r = readingL(tid), qs = qsFor(tid);
   setTop(T('reading'), true);
-  let h = `<div class="meta">${bookRef(t)}</div><h2>${esc(tName(t))}</h2>`;
+  let h = `<div class="meta">${bookRef(t)}</div><h2>${tHtml(t)}</h2>`;
   // Order under H1: Draft badge → Skip to cards → In this reading TOC
   if (r && !r.reviewed) h += `<div class="cap" data-draft-badge="1">${esc(T('draft'))}</div>`;
   if (r && r._en) h += `<div class="cap">${enOnly(r)}</div>`;
@@ -496,8 +499,8 @@ function reading(tid) {
 }
 
 function topic(tid) {
-  const t = topicOf(tid), qs = qsFor(tid); setTop(tName(t), true);
-  let h = `<div class="meta">${bookRef(t)}</div><h2>${esc(tName(t))}</h2>`;
+  const t = topicOf(tid), qs = qsFor(tid); setTop(tText(t), true);
+  let h = `<div class="meta">${bookRef(t)}</div><h2>${tHtml(t)}</h2>`;
   h += `<button class="link" id="reopenReading" style="padding-inline:0;margin-bottom:8px">${esc(T('readAgain'))}</button>`;
   qs.forEach((q, i) => { const c = S.cards[q.id], lq = qL(q); h += `<div class="row" style="cursor:default"><span class="num">${i + 1}</span><span class="grow"${dirAttr(lq)}>${tx(lq.q)}</span><span class="cap">${esc(c ? (isDue(q.id) ? T('due') : T('done')) : T('new'))}</span></div>`; });
   h += `<div class="sticky"><button class="btn" id="go">${esc(T('startPractice', qs.length))}</button></div>`;
@@ -515,8 +518,9 @@ function card() {
   const q = qL(qOf(ss.queue[0])), t = topicOf(q.topic), calc = q.type === 'calc';
   const done = ss.total - new Set(ss.queue).size;
   setTop(T('cardNofM', done + 1, ss.total), true); $('#bar div').style.transform = 'scaleX(' + done / ss.total + ')';
+  if (O_TYPES.has(q.type)) return cardO(q, t);
   const tip = esc(calc ? T('tipCalc') : T('tipConcept'));
-  let h = `<div class="cap">${esc(tName(t))} · <span class="tag">${esc(calc ? T('calculation') : T('concept'))}</span> ${enOnly(q)}</div>
+  let h = `<div class="cap">${tHtml(t)} · <span class="tag">${esc(calc ? T('calculation') : T('concept'))}</span> ${enOnly(q)}</div>
   <div class="card" style="margin-top:8px"><div${dirAttr(q)}><p style="margin:0">${tx(q.q)}</p>${calc && q.given ? `<div class="given"><div class="cap">${esc(T('given'))}</div>${q.given.map(g => `<div>${tx(g)}</div>`).join('')}</div>` : ''}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
   ${S.hideTips ? `<div class="cap tipline">${tip}</div>` : `<div class="tipbox"><span aria-hidden="true">💡</span><span class="grow">${tip}</span><button class="link" id="hideTips" style="padding:0 4px;min-height:24px">${esc(T('hideTips'))}</button></div>`}
   <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show">${esc(T('showAnswer'))}</button></div>`;
@@ -540,19 +544,82 @@ function qImage(q) {
 }
 function reveal(q, t) {
   document.querySelectorAll('.tipbox, .tipline').forEach(e => e.remove());
-  const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
-  const gap = (n) => esc(rest < n ? T('atEnd') : T('inCards', n));
-  const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   // Hebrew steps: Hebrew lines use the reading markup; formula-only lines are isolated left-to-right.
   // A formula-only line is one unbreakable left-to-right unit (CSS lets it scroll sideways); English-fallback cards keep the English layout.
   const step = s => !isHe() || q._en ? fmtStep(s) : HEB.test(s) ? fmtRich(s) : ltr(fmtLine(s));
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${dirAttr(q)}><div class="ans">${q.type === 'calc' ? `<span class="ansbox">${tx(q.answer)}</span>` : tx(q.answer)}</div>
   ${qImage(q)}
   ${q.type === 'calc' ? `<ol class="steps"${rtlList(q)}>${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : `<p>${tx(q.explanation)}</p>`}</div>
-  <div class="meta">${ltr(`📖 Atkins 8e · ${esc(q.ref)}`)}</div>${q.reviewed ? '' : `<div class="cap">${esc(T('draft'))}</div>`}</div>`;
+  ${bookLine(q)}</div>`;
+  rateBar(q);
+}
+// Book line under an answer, and the self-rating bar (shared by every card type).
+const bookLine = q => `<div class="meta">${ltr(`📖 ${esc(COURSE.book)} · ${esc(q.ref)}`)}</div>${q.reviewed ? '' : `<div class="cap">${esc(T('draft'))}</div>`}`;
+function rateBar(q) {
+  const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
+  const gap = (n) => esc(rest < n ? T('atEnd') : T('inCards', n));
+  const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>${esc(T('didnt'))}</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>${esc(T('unsure'))}</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>${esc(T('knew'))}</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
   const top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16; scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+
+// Organic card types (O2). mc: pick a choice, Check marks right/wrong; typed: type a name, Submit shows it next to the
+// correct answer (no grading); notebook: draw on paper, then Show answer. All end with the same self-rating (rate()),
+// which is what feeds spaced repetition and weak topics; right/wrong never sets the rating.
+const O_TYPES = new Set(['mc', 'typed', 'notebook']);
+// Picture { file, smiles, alt }: a file in the course folder's img/ (labelled placeholders now; O3 redraws the same file from the SMILES).
+const pic = p => p && p.file ? `<figure class="opic"><img src="${esc(COURSE.dir + 'img/' + p.file)}" alt="${esc(plain(p.alt))}"></figure>` : '';
+// IUPAC names and typed answers: one left-to-right line that never wraps; a name too long for the screen scrolls sideways.
+const nameHtml = s => `<bdi dir="ltr" lang="en" class="tname">${esc(s)}</bdi>`;
+// English text: keep a hyphenated name with locants (1-bromo-3-methylbutane, 2,3-dimethylpentane) on one line.
+const keepNames = html => html.replace(/[^\s<>]*\d[^\s<>]*-[^\s<>]+|[^\s<>]+-[^\s<>]*\d[^\s<>]*/g, m => `<span class="nb">${m}</span>`);
+const txO = s => isHe() ? tx(s) : keepNames(tx(s));
+const choiceHtml = c => (c.text ? (HEB.test(c.text) ? fmtRich(c.text) : nameHtml(c.text)) : '') + pic(c.image);
+function cardO(q, t) {
+  let body = `<p style="margin:0">${txO(q.q)}</p>${pic(q.q_image)}`;
+  if (q.type === 'mc') body += `<div class="choices" role="radiogroup" aria-label="${esc(T('choices'))}">${q.choices.map((c, i) => `<button class="choice" type="button" role="radio" aria-checked="false" data-i="${i}">${choiceHtml(c)}</button>`).join('')}</div>`;
+  else if (q.type === 'typed') body += `<label class="cap typed-l" for="typed">${esc(T('yourAnswer'))}</label><input id="typed" class="typed" type="text" dir="ltr" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">`;
+  else body += `<p class="cap" style="margin:12px 0 0">${esc(T('drawFirst'))}</p>`;
+  const btn = q.type === 'mc' ? T('check') : q.type === 'typed' ? T('submit') : T('showAnswer');
+  app.innerHTML = `<div class="fade"><div class="cap">${tHtml(t)} · <span class="tag">${esc(T('type_' + q.type))}</span> ${enOnly(q)}</div>
+  <div class="card" style="margin-top:8px"><div${dirAttr(q)}>${body}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
+  <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show"${q.type === 'notebook' ? '' : ' disabled'}>${esc(btn)}</button></div></div>`;
+  const show = $('#show');
+  if (q.type === 'mc') app.querySelectorAll('.choice').forEach(b => b.onclick = () => {
+    app.querySelectorAll('.choice').forEach(x => x.setAttribute('aria-checked', x === b)); show.disabled = false;
+  });
+  if (q.type === 'typed') {
+    const inp = $('#typed'); // an empty or blank answer does not count: Submit stays disabled
+    inp.oninput = () => { show.disabled = !inp.value.trim(); };
+    inp.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); if (inp.value.trim()) show.click(); } };
+  }
+  show.onclick = () => {
+    if (q.type === 'mc') { const p = app.querySelector('.choice[aria-checked="true"]'); if (p) revealO(q, t, +p.dataset.i); }
+    else if (q.type === 'typed') { const v = $('#typed').value.trim(); if (v) revealO(q, t, v); }
+    else revealO(q, t);
+  };
+}
+function revealO(q, t, res) {
+  const step = s => !isHe() || q._en ? keepNames(fmtStep(s)) : HEB.test(s) ? fmtRich(s) : ltr(fmtLine(s));
+  let top = '';
+  if (q.type === 'mc') {
+    const ok = res === q.right;
+    app.querySelectorAll('.choice').forEach((b, i) => {
+      b.disabled = true;
+      if (i === q.right) b.classList.add('right'); else if (i === res) b.classList.add('wrong');
+      const mark = i === q.right ? T('rightChoice') : i === res ? T('yourChoice') : '', why = q.choices[i].why;
+      b.insertAdjacentHTML('beforeend', (mark ? `<span class="mark">${esc(mark)}</span>` : '') + (why ? `<span class="why">${txO(why)}</span>` : ''));
+    });
+    top = `<div class="verdict">${esc(ok ? T('mcRight') : T('mcWrong'))}</div><div class="ans">${nameHtml(q.answer)}</div>`;
+  } else if (q.type === 'typed') {
+    $('#typed').hidden = true; app.querySelector('.typed-l').hidden = true;
+    top = `<div class="cmp"><div><div class="cap">${esc(T('yourAnswer'))}</div>${nameHtml(res)}</div><div><div class="cap">${esc(T('correctAnswer'))}</div>${nameHtml(q.answer)}</div></div>`;
+  } else top = `<div class="ans">${nameHtml(q.answer)}</div>${pic(q.answer_image)}`;
+  $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${dirAttr(q)}>${top}
+  ${q.steps ? `<ol class="steps"${rtlList(q)}>${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : ''}</div>
+  ${bookLine(q)}</div>`;
+  rateBar(q);
 }
 function rate(id, r) {
   const ss = S.session; ss.queue.shift();
@@ -589,7 +656,7 @@ function weak() {
     (n >= 10 ? rows : few).push({ t, k, u, d, n, score: (d * 2 + u) / n });
   }
   rows.sort((a, b) => b.score - a.score || b.d - a.d);
-  const row = x => `<div class="card"><div>${esc(tName(x.t))}</div><div class="cap">${bookRef(x.t)}</div><div class="stack" role="img" aria-label="${esc(T('weakCounts', x.d, x.u, x.k))}"><span style="width:${100 * x.d / x.n}%;background:var(--didnt)"></span><span style="width:${100 * x.u / x.n}%;background:var(--unsure)"></span><span style="width:${100 * x.k / x.n}%;background:var(--knew)"></span></div><div class="cap">${esc(T('weakCounts', x.d, x.u, x.k))}</div><button class="btn sec" data-t="${x.t.id}" style="margin-top:8px">${esc(T('practice'))}</button></div>`;
+  const row = x => `<div class="card"><div>${tHtml(x.t)}</div><div class="cap">${bookRef(x.t)}</div><div class="stack" role="img" aria-label="${esc(T('weakCounts', x.d, x.u, x.k))}"><span style="width:${100 * x.d / x.n}%;background:var(--didnt)"></span><span style="width:${100 * x.u / x.n}%;background:var(--unsure)"></span><span style="width:${100 * x.k / x.n}%;background:var(--knew)"></span></div><div class="cap">${esc(T('weakCounts', x.d, x.u, x.k))}</div><button class="btn sec" data-t="${x.t.id}" style="margin-top:8px">${esc(T('practice'))}</button></div>`;
   let h = `<h2>${esc(T('weakTopics'))}</h2>`;
   if (!rows.length && !few.length) h += `<p class="meta">${esc(T('noWeak'))}</p>`;
   h += rows.map(row).join('');
