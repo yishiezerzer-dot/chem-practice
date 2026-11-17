@@ -561,10 +561,20 @@ function rateBar(q, endVisible) {
   const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>${esc(T('didnt'))}</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>${esc(T('unsure'))}</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>${esc(T('knew'))}</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
-  let top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16;
+  const ans = $('#answer'), behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
   // Organic cards: the end of the answer (book line, status line) never stays under the sticky rating bar.
-  if (endVisible) top = Math.max(top, $('#answer').getBoundingClientRect().bottom + scrollY + 8 - (innerHeight - $('#act').offsetHeight));
-  scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  const target = () => { const r = ans.getBoundingClientRect(), top = r.top + scrollY - 56 - 16; return endVisible ? Math.max(top, r.bottom + scrollY + 8 - (innerHeight - $('#act').offsetHeight)) : top; };
+  scrollTo({ top: target(), behavior });
+  if (!endVisible) return;
+  // A picture still loading has no height yet, so the end moves down when it arrives. Once per picture (load or error),
+  // scroll down to the new target, unless the student has touched, scrolled or pressed a key since the reveal.
+  let user = false; const mark = () => { user = true; };
+  ['wheel', 'touchstart', 'keydown'].forEach(ev => addEventListener(ev, mark, { once: true, passive: true }));
+  ans.querySelectorAll('img').forEach(im => {
+    if (im.complete) return;
+    const again = () => { if (!user && ans.isConnected) { const t = target(); if (t > scrollY + 1) scrollTo({ top: t, behavior }); } };
+    im.addEventListener('load', again, { once: true }); im.addEventListener('error', again, { once: true });
+  });
 }
 
 // Organic card types (O2). mc: pick a choice, Check marks right/wrong; typed: type a name, Submit shows it next to the
