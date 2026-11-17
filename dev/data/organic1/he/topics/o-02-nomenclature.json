@@ -1,0 +1,55 @@
+{
+  "topic_id": "o-02-nomenclature",
+  "questions": {
+    "o-sample-mc": {
+      "q": "מהו השם לפי <bdi>IUPAC</bdi> של המולקולה הזאת?",
+      "q_image": {
+        "alt": "תמונה זמנית של המולקולה: <bdi>2-methylbutane</bdi>"
+      },
+      "choices": [
+        {
+          "why": "אותה שרשרת, אבל ממוספרת מהקצה הלא נכון. ממספרים מהקצה הקרוב יותר לענף, ולכן המתיל מקבל מיקום <bdi>(locant)</bdi> <bdi>2</bdi> ולא <bdi>3</bdi>."
+        },
+        {
+          "why": "נכון. השרשרת הארוכה ביותר כוללת <bdi>4</bdi> פחמנים (<bdi>butane</bdi>), וכשממספרים מהקצה הקרוב יותר לענף, המתיל נמצא על <bdi>C2</bdi>."
+        },
+        {
+          "why": "אם מציירים לפי השם הזה, מתקבלת אותה מולקולה, אבל השרשרת שנבחרה קצרה מדי. השרשרת הארוכה ביותר כוללת <bdi>4</bdi> פחמנים ולא <bdi>3</bdi>, ולכן השרשרת הראשית <bdi>(parent chain)</bdi> היא <bdi>butane</bdi> והשם הוא <bdi>2-methylbutane</bdi>."
+        },
+        {
+          "why": "אם מציירים לפי השם הזה, מתקבלת אותה מולקולה, אבל השרשרת שנבחרה קצרה מדי. קבוצת האתיל מאריכה את השרשרת הארוכה ביותר ל־<bdi>4</bdi> פחמנים, ולכן השרשרת הראשית היא <bdi>butane</bdi>.",
+          "image": {
+            "alt": "תמונה זמנית: <bdi>2-ethylpropane</bdi> מצויר לפי השם"
+          }
+        }
+      ],
+      "steps": [
+        "מצאו את השרשרת הרציפה הארוכה ביותר של פחמנים: <bdi>4</bdi> פחמנים, ולכן השרשרת הראשית היא <bdi>butane</bdi>.",
+        "הענף היחיד הוא קבוצת <bdi>CH<sub>3</sub></bdi>: מתמיר <bdi>(substituent)</bdi> מסוג מתיל.",
+        "מספרו את השרשרת מהקצה הקרוב יותר לענף: המתיל נמצא על <bdi>C2</bdi>.",
+        "כתבו את המיקום ואת התחילית לפני שם השרשרת הראשית: <bdi>2-methylbutane</bdi>."
+      ]
+    },
+    "o-sample-typed": {
+      "q": "כתבו את השם לפי <bdi>IUPAC</bdi> של <bdi>(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>Br</bdi>.",
+      "steps": [
+        "מצאו את השרשרת הארוכה ביותר: ל־<bdi>BrCH<sub>2</sub>–CH<sub>2</sub>–CH(CH<sub>3</sub>)–CH<sub>3</sub></bdi> יש <bdi>4</bdi> פחמנים, ולכן השרשרת הראשית <bdi>(parent chain)</bdi> היא <bdi>butane</bdi>.",
+        "המתמירים <bdi>(substituent)</bdi> הם <bdi>Br</bdi> (<bdi>bromo</bdi>) ו־<bdi>CH<sub>3</sub></bdi> (<bdi>methyl</bdi>). גם הלוגנים נכתבים כתחילית, כמו קבוצות אלקיל.",
+        "מספרו כך שהמיקומים <bdi>(locant)</bdi> יהיו הנמוכים ביותר: מהקצה של <bdi>Br</bdi> הם <bdi>1</bdi> ו־<bdi>3</bdi>, ומהקצה השני <bdi>2</bdi> ו־<bdi>4</bdi>. לכן <bdi>Br</bdi> נמצא על <bdi>C1</bdi> והמתיל על <bdi>C3</bdi>.",
+        "סדרו את התחיליות לפי סדר אלפביתי (<bdi>bromo</bdi> לפני <bdi>methyl</bdi>): <bdi>1-bromo-3-methylbutane</bdi>."
+      ]
+    },
+    "o-sample-notebook": {
+      "q": "ציירו במחברת את נוסחת הקווים <bdi>(bond-line structure)</bdi> של <bdi>2,3-dimethylpentane</bdi>.",
+      "answer_image": {
+        "alt": "תמונה זמנית של התשובה: נוסחת הקווים של <bdi>2,3-dimethylpentane</bdi>"
+      },
+      "steps": [
+        "השרשרת הראשית היא <bdi>pentane</bdi>: ציירו זיגזג של <bdi>5</bdi> פחמנים. כל פינה וכל קצה של קו הם פחמן אחד.",
+        "מספרו את השרשרת מקצה אחד, מ־<bdi>C1</bdi> עד <bdi>C5</bdi>.",
+        "הוסיפו קו קצר (מתיל) על <bdi>C2</bdi> ועוד אחד על <bdi>C3</bdi>.",
+        "בדקו: בסך הכול <bdi>7</bdi> פחמנים (<bdi>C<sub>7</sub>H<sub>16</sub></bdi>), והשרשרת הארוכה ביותר עדיין <bdi>5</bdi> פחמנים."
+      ]
+    }
+  }
+}
