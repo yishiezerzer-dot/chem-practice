@@ -152,6 +152,21 @@ function checkOverlay(index, files, enCards, ctx) {
   return out;
 }
 
+// ---- Hebrew formula layout in Organic cards (style.css + app.js) ----
+// In Hebrew a formula is an inline-block isolate (html[lang=he] bdi.fx). Aligned to the line bottom, a formula with a
+// <sub> is taller than the line and gets lifted, so "CH" floats above the Hebrew text and the 3 reads as a superscript.
+// Organic cards must align formulas to the text baseline: cardO marks its card .ocard, and style.css sets
+// html[lang=he] .ocard bdi.fx { vertical-align: baseline }.
+function checkFormulaAlign(css, appJs) {
+  const out = [], flat = css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ');
+  const rules = [...flat.matchAll(/([^{}]+)\{([^{}]*)\}/g)].map(m => ({ sel: m[1].split(',').map(x => x.trim()), body: m[2] }));
+  const ok = rules.some(r => r.sel.includes('html[lang=he] .ocard bdi.fx') && /(^|;)\s*vertical-align\s*:\s*baseline\s*(;|$)/.test(r.body.trim()));
+  if (!ok) out.push({ rule: 'formula-baseline', id: 'site/style.css', msg: 'no "html[lang=he] .ocard bdi.fx { vertical-align: baseline }" rule: Hebrew formulas with <sub> are lifted off the line' });
+  const m = appJs.match(/function cardO\([\s\S]*?\n\}/);
+  if (!m || !/class="fade ocard"/.test(m[0])) out.push({ rule: 'formula-baseline', id: 'site/app.js', msg: 'cardO does not mark its card with class "ocard"' });
+  return out;
+}
+
 // ---- reporting ----
 function group(label, problems, okLines) {
   const lines = okLines.map(t => `  ok   ${t}`);
@@ -180,6 +195,9 @@ if (process.argv[2] !== '--self-test') {
   const { index, files } = loadOverlay();
   const op = checkOverlay(index, files, org ? org.cards : [], fsCtx);
   groups.push(group('organic1 Hebrew overlay', op, op.length ? [] : [`${index.topics.length} topic(s) valid`]));
+  const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8'), appJs = fs.readFileSync(path.join(root, 'site/app.js'), 'utf8');
+  const fp = checkFormulaAlign(css, appJs);
+  groups.push(group('organic1 Hebrew formula baseline', fp, fp.length ? [] : ['formulas in Organic cards sit on the text baseline']));
   for (const g of groups) { console.log(`${g.failed ? 'FAIL' : 'PASS'} ${g.label}`); console.log(g.lines.join('\n')); }
   const failed = groups.filter(g => g.failed).length;
   console.log(`\n${groups.length - failed}/${groups.length} groups PASS`);
@@ -244,6 +262,19 @@ for (const [rule, name, mutate, ctx] of cases) {
 for (const [rule, name, mutate] of hcases) {
   const ov = baseOverlay(clone(org.cards)); mutate(ov);
   report(name, rule, checkOverlay(ov.idx, ov.files, org.cards, okCtx));
+}
+{ // formula baseline: the real files must pass, then each planted copy must fail
+  const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8'), appJs = fs.readFileSync(path.join(root, 'site/app.js'), 'utf8');
+  const base = checkFormulaAlign(css, appJs);
+  if (base.length) { console.log('formula baseline: real files not clean, cannot plant'); process.exit(1); }
+  const fcases = [
+    ['Organic formulas aligned to the line bottom (O2b bug)', css.replace('html[lang=he] .ocard bdi.fx{vertical-align:baseline}', 'html[lang=he] .ocard bdi.fx{vertical-align:bottom}'), appJs],
+    ['Organic card not marked .ocard', css, appJs.replace('class="fade ocard"', 'class="fade"')],
+  ];
+  for (const [name, c, a] of fcases) {
+    if (c === css && a === appJs) { console.log(`  NOT PLANTED ${name}`); total++; continue; }
+    report(name, 'formula-baseline', checkFormulaAlign(c, a));
+  }
 }
 console.log(`\nself-test: ${caught}/${total} rules caught their planted fault`);
 process.exit(caught === total ? 0 : 1);

@@ -555,13 +555,16 @@ function reveal(q, t) {
 }
 // Book line under an answer, and the self-rating bar (shared by every card type).
 const bookLine = q => `<div class="meta">${ltr(`📖 ${esc(COURSE.book)} · ${esc(q.ref)}`)}</div>${q.reviewed ? '' : `<div class="cap">${esc(T('draft'))}</div>`}`;
-function rateBar(q) {
+function rateBar(q, endVisible) {
   const ss = S.session, rest = ss.queue.length - 1, worst = ss.worst[q.id] || 'knew';
   const gap = (n) => esc(rest < n ? T('atEnd') : T('inCards', n));
   const ns = nextStep(q.id, worst), knewLbl = esc(T('nextIn', INTERVALS[ns]));
   $('#act').innerHTML = `<div class="rate"><button class="r-didnt" data-r="didnt"><b>${esc(T('didnt'))}</b><small>${gap(3)}</small></button><button class="r-unsure" data-r="unsure"><b>${esc(T('unsure'))}</b><small>${gap(8)}</small></button><button class="r-knew" data-r="knew"><b>${esc(T('knew'))}</b><small>${knewLbl}</small></button></div>`;
   $('#act').querySelectorAll('button').forEach(b => b.onclick = () => rate(q.id, b.dataset.r));
-  const top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16; scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  let top = $('#answer').getBoundingClientRect().top + scrollY - 56 - 16;
+  // Organic cards: the end of the answer (book line, status line) never stays under the sticky rating bar.
+  if (endVisible) top = Math.max(top, $('#answer').getBoundingClientRect().bottom + scrollY + 8 - (innerHeight - $('#act').offsetHeight));
+  scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 }
 
 // Organic card types (O2). mc: pick a choice, Check marks right/wrong; typed: type a name, Submit shows it next to the
@@ -595,7 +598,7 @@ function cardO(q, t) {
   else if (q.type === 'typed') body += `<label class="cap typed-l" for="typed">${esc(T('yourAnswer'))}</label><input id="typed" class="typed" type="text" dir="ltr" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">`;
   else body += `<p class="cap" style="margin:12px 0 0">${esc(T('drawFirst'))}</p>`;
   const btn = q.type === 'mc' ? T('check') : q.type === 'typed' ? T('submit') : T('showAnswer');
-  app.innerHTML = `<div class="fade"><div class="cap">${tHtml(t)} · <span class="tag">${esc(T('type_' + q.type))}</span> ${enOnly(q)}</div>
+  app.innerHTML = `<div class="fade ocard"><div class="cap">${tHtml(t)} · <span class="tag">${esc(T('type_' + q.type))}</span> ${enOnly(q)}</div>
   <div class="card" style="margin-top:8px"><div${dirAttr(q)}>${body}</div>${reportBtn(t, 'card', q.id, q.q, q._en)}</div>
   <div id="rev"></div><div class="sticky" id="act"><button class="btn" id="show"${q.type === 'notebook' ? '' : ' disabled'}>${esc(btn)}</button></div></div>`;
   const show = $('#show');
@@ -632,7 +635,7 @@ function revealO(q, t, res) {
   $('#rev').innerHTML = `<div class="card fade" id="answer"><div class="cap">${esc(T('answer'))}</div><div${dirAttr(q)}>${top}
   ${q.steps ? `<ol class="steps"${rtlList(q)}>${q.steps.map(s => `<li>${step(s)}</li>`).join('')}</ol>` : ''}</div>
   ${bookLine(q)}</div>`;
-  rateBar(q);
+  rateBar(q, true);
 }
 function rate(id, r) {
   const ss = S.session; ss.queue.shift();
