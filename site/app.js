@@ -219,7 +219,7 @@ async function init() {
   let last = null; try { last = localStorage.getItem(Store.K.course); } catch (_) {}
   if (DATA[last]) { enterCourse(last); go('home'); } else go('courses');
 }
-function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgress(); view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
+function go(v, arg) { if (view === 'reading' && v !== 'reading') stopReadProgress(); viewN++; view = v; viewArg = arg; render(); window.scrollTo(0, 0); }
 function setTop(title, back) {
   $('#title').textContent = title;
   $('#back').hidden = !back;
@@ -575,10 +575,23 @@ const nameHtml = s => `<bdi dir="ltr" lang="en" class="tname">${esc(s)}</bdi>`;
 // English text: keep a hyphenated name with locants (1-bromo-3-methylbutane, 2,3-dimethylpentane) on one line.
 const keepNames = html => html.replace(/[^\s<>]*\d[^\s<>]*-[^\s<>]+|[^\s<>]+-[^\s<>]*\d[^\s<>]*/g, m => `<span class="nb">${m}</span>`);
 const txO = s => isHe() ? tx(s) : keepNames(tx(s));
+// Multiple choice order: shuffled once per view of a card. go() counts views, so a re-render within the same view
+// (a language switch, a tap, Check) keeps the order, and the next time the card is shown it is shuffled again.
+// Each button keeps the choice's index in the data, so right/wrong marking follows the choice, not its position.
+let viewN = 0, mcOrder = { key: '', ord: [] };
+function choiceOrder(q) {
+  const key = viewN + ':' + q.id;
+  if (mcOrder.key !== key) {
+    const o = q.choices.map((_, i) => i);
+    for (let i = o.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [o[i], o[j]] = [o[j], o[i]]; }
+    mcOrder = { key, ord: o };
+  }
+  return mcOrder.ord;
+}
 const choiceHtml = c => (c.text ? (HEB.test(c.text) ? fmtRich(c.text) : nameHtml(c.text)) : '') + pic(c.image);
 function cardO(q, t) {
   let body = `<p style="margin:0">${txO(q.q)}</p>${pic(q.q_image)}`;
-  if (q.type === 'mc') body += `<div class="choices" role="radiogroup" aria-label="${esc(T('choices'))}">${q.choices.map((c, i) => `<button class="choice" type="button" role="radio" aria-checked="false" data-i="${i}">${choiceHtml(c)}</button>`).join('')}</div>`;
+  if (q.type === 'mc') body += `<div class="choices" role="radiogroup" aria-label="${esc(T('choices'))}">${choiceOrder(q).map(i => `<button class="choice" type="button" role="radio" aria-checked="false" data-i="${i}">${choiceHtml(q.choices[i])}</button>`).join('')}</div>`;
   else if (q.type === 'typed') body += `<label class="cap typed-l" for="typed">${esc(T('yourAnswer'))}</label><input id="typed" class="typed" type="text" dir="ltr" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">`;
   else body += `<p class="cap" style="margin:12px 0 0">${esc(T('drawFirst'))}</p>`;
   const btn = q.type === 'mc' ? T('check') : q.type === 'typed' ? T('submit') : T('showAnswer');
@@ -605,8 +618,8 @@ function revealO(q, t, res) {
   let top = '';
   if (q.type === 'mc') {
     const ok = res === q.right;
-    app.querySelectorAll('.choice').forEach((b, i) => {
-      b.disabled = true;
+    app.querySelectorAll('.choice').forEach(b => {
+      const i = +b.dataset.i; b.disabled = true;
       if (i === q.right) b.classList.add('right'); else if (i === res) b.classList.add('wrong');
       const mark = i === q.right ? T('rightChoice') : i === res ? T('yourChoice') : '', why = q.choices[i].why;
       b.insertAdjacentHTML('beforeend', (mark ? `<span class="mark">${esc(mark)}</span>` : '') + (why ? `<span class="why">${txO(why)}</span>` : ''));

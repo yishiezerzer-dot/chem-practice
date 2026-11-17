@@ -13,7 +13,7 @@
    "choices": [
     { "text": "3-methylbutane", "why": "Same chain, numbered from the wrong end. Number from the end nearer the branch, so the methyl gets locant 2, not 3." },
     { "text": "2-methylbutane", "why": "Right. The longest chain has 4 carbons (butane), and numbering from the end nearer the branch puts the methyl on C2." },
-    { "text": "isopentane", "why": "This is the common name of the same molecule, not its IUPAC name." },
+    { "text": "1,1-dimethylpropane", "why": "Drawn as named, this is the same molecule, but the chain chosen is too short: the longest chain has four carbons, not three, so the parent is butane and the name is 2-methylbutane." },
     { "text": "2-ethylpropane", "image": { "file": "o-sample-mc-c4.svg", "smiles": "CC(C)CC", "alt": "Placeholder picture: 2-ethylpropane drawn as named" }, "why": "Drawn as named, this is the same molecule, but the chain chosen is too short. The ethyl group extends the longest chain to 4 carbons, so the parent is butane." }
    ],
    "right": 1,
@@ -57,7 +57,7 @@
     "Add a short line (a methyl) at C2 and another at C3.",
     "Check: 7 carbons in all (C₇H₁₆), and the longest chain is still 5 carbons."
    ],
-   "ref": "1.17",
+   "ref": "1.7",
    "reviewed": false,
    "picture_check": { "status": "placeholder", "checked_by": null, "date": null, "note": "Labelled placeholder picture; the real structure drawn from the SMILES comes in O3." }
   }
