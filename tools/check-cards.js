@@ -24,6 +24,18 @@ const fsCtx = {
     if (!fs.existsSync(b)) return 'site-missing';
     return fs.readFileSync(a).equals(fs.readFileSync(b)) ? 'ok' : 'site-differs';
   },
+  // {width, height} from the SVG root (width/height attrs, else viewBox), or null if unreadable
+  svgSize(dir, file) {
+    const f = path.join(root, dir, 'img', file);
+    if (!fs.existsSync(f)) return null;
+    const m = fs.readFileSync(f, 'utf8').match(/<svg\b[^>]*>/i);
+    if (!m) return null;
+    const attr = n => { const a = m[0].match(new RegExp(`\\s${n}\\s*=\\s*["']([^"']*)["']`, 'i')); return a ? a[1] : null; };
+    const w = attr('width'), h = attr('height');
+    if (w && h && !isNaN(parseFloat(w)) && !isNaN(parseFloat(h))) return { width: parseFloat(w), height: parseFloat(h) };
+    const vb = (attr('viewBox') || '').trim().split(/[\s,]+/).map(Number);
+    return vb.length === 4 && vb.every(n => !isNaN(n)) ? { width: vb[2], height: vb[3] } : null;
+  },
   siteSame(rel) {
     const a = path.join(root, rel), b = path.join(root, 'site', rel);
     return fs.existsSync(a) && fs.existsSync(b) && fs.readFileSync(a).equals(fs.readFileSync(b));
@@ -40,6 +52,43 @@ function checkPicture(p, where, dir, ctx, bad) {
   }
   if (!nonEmpty(p.smiles)) bad('picture', `${where}.smiles: empty`);
   if (!nonEmpty(p.alt)) bad('picture', `${where}.alt: empty`);
+  // picture-size: source, pixel size, must match the SVG's own size, and fit a 360px screen (<= 296 wide)
+  if (p.source !== 'auto' && p.source !== 'sketch') bad('picture-size', `${where}.source: must be "auto" or "sketch"`);
+  const posInt = n => Number.isInteger(n) && n > 0;
+  if (!posInt(p.width) || !posInt(p.height)) bad('picture-size', `${where}: width and height must be positive integers`);
+  else {
+    if (p.width > 296) bad('picture-size', `${where}.width ${p.width}: wider than 296 (scaled down at a 360px screen)`);
+    const s = isStr(p.file) && /\.svg$/i.test(p.file) && ctx.svgSize ? ctx.svgSize(dir, p.file) : null;
+    if (s && (s.width !== p.width || s.height !== p.height)) bad('picture-size', `${where}: size ${p.width}x${p.height} differs from ${p.file} (${s.width}x${s.height})`);
+  }
+}
+/** Pictures from a list (picture set / readings). Returns [{id, rule, msg}]. */
+function checkPictureSet(set, dir, ctx) {
+  const out = [], seen = new Set();
+  const list = Array.isArray(set && set.pictures) ? set.pictures : null;
+  if (!list) return [{ id: 'pictures.json', rule: 'picture-set', msg: '.pictures must be an array' }];
+  list.forEach((p, i) => {
+    const id = isObj(p) && isStr(p.id) ? p.id : `#${i}`;
+    const bad = (rule, msg) => out.push({ id, rule, msg });
+    if (!isObj(p)) return bad('picture-set', 'not an object');
+    if (!nonEmpty(p.id)) bad('picture-set', 'id: empty');
+    else {
+      if (seen.has(p.id)) bad('picture-set', 'duplicate id'); seen.add(p.id);
+      if (!p.id.startsWith('o-pic-')) bad('picture-set', 'id must start with "o-pic-"');
+      if (p.file !== p.id + '.svg') bad('picture-set', `file must be "${p.id}.svg"`);
+    }
+    checkPicture(p, 'picture', dir, ctx, bad);
+  });
+  return out;
+}
+function checkReadingPictures(readings, dir, ctx) {
+  const out = [];
+  for (const [topic, r] of Object.entries((readings && readings.readings) || {})) {
+    (isObj(r) && Array.isArray(r.sections) ? r.sections : []).forEach((s, i) => {
+      if (s && s.picture !== undefined) checkPicture(s.picture, `sections[${i}].picture`, dir, ctx, (rule, msg) => out.push({ id: topic, rule, msg }));
+    });
+  }
+  return out;
 }
 const validPicture = (p, dir, ctx) => { let ok = true; checkPicture(p, '', dir, ctx, () => { ok = false; }); return ok; };
 
@@ -135,6 +184,7 @@ function checkOverlay(index, files, enCards, ctx) {
       if (!isObj(h)) continue;
       for (const k of HE_FORBIDDEN) if (k in h) bad(c.id, 'forbidden-key', `key "${k}" must not appear`);
       walk(h, '', (s, p) => { void s; if (/(^|\.)(file|smiles)$/.test(p)) bad(c.id, 'forbidden-key', `${p} must not appear`); });
+      (function keys(o, p) { if (Array.isArray(o)) o.forEach((v, i) => keys(v, `${p}[${i}]`)); else if (isObj(o)) for (const k of Object.keys(o)) { const q = p ? `${p}.${k}` : k; if (['source', 'width', 'height'].includes(k)) bad(c.id, 'forbidden-key', `${q} must not appear (comes from the English data)`); keys(o[k], q); } })(h, '');
       if (Array.isArray(h.choices)) h.choices.forEach((ch, j) => { if (ch && 'text' in ch) bad(c.id, 'forbidden-key', `choices[${j}].text must not appear`); });
       for (const k of ['steps', 'choices']) {
         if (h[k] !== undefined && (!Array.isArray(h[k]) || h[k].length !== (c[k] || []).length)) bad(c.id, 'array-length', `${k}: length en=${(c[k] || []).length} he=${Array.isArray(h[k]) ? h[k].length : 'not an array'}`);
@@ -164,6 +214,18 @@ function checkFormulaAlign(css, appJs) {
   if (!ok) out.push({ rule: 'formula-baseline', id: 'site/style.css', msg: 'no "html[lang=he] .ocard bdi.fx { vertical-align: baseline }" rule: Hebrew formulas with <sub> are lifted off the line' });
   const m = appJs.match(/function cardO\([\s\S]*?\n\}/);
   if (!m || !/class="fade ocard"/.test(m[0])) out.push({ rule: 'formula-baseline', id: 'site/app.js', msg: 'cardO does not mark its card with class "ocard"' });
+  return out;
+}
+
+// General Chemistry (and everything outside .ocard): the global rule html[lang=he] bdi.fx must sit on the baseline too.
+function checkFormulaAlignGen(css) {
+  const flat = css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ');
+  const rules = [...flat.matchAll(/([^{}]+)\{([^{}]*)\}/g)].map(m => ({ sel: m[1].split(',').map(x => x.trim()), body: m[2] }));
+  const mine = rules.filter(r => r.sel.includes('html[lang=he] bdi.fx'));
+  const va = r => [...r.body.matchAll(/(?:^|;)\s*vertical-align\s*:\s*([^;]*?)\s*(?=;|$)/g)].map(m => m[1]);
+  const out = [];
+  if (!mine.some(r => va(r).includes('baseline'))) out.push({ rule: 'formula-baseline-gen', id: 'site/style.css', msg: 'no "html[lang=he] bdi.fx { vertical-align: baseline }" rule: General Chemistry Hebrew formulas are lifted off the line' });
+  for (const r of mine) for (const v of va(r)) if (v !== 'baseline') out.push({ rule: 'formula-baseline-gen', id: 'site/style.css', msg: `"html[lang=he] bdi.fx" declares vertical-align: ${v}` });
   return out;
 }
 
@@ -198,6 +260,18 @@ if (process.argv[2] !== '--self-test') {
   const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8'), appJs = fs.readFileSync(path.join(root, 'site/app.js'), 'utf8');
   const fp = checkFormulaAlign(css, appJs);
   groups.push(group('organic1 Hebrew formula baseline', fp, fp.length ? [] : ['formulas in Organic cards sit on the text baseline']));
+  const gp = checkFormulaAlignGen(css);
+  groups.push(group('gen Hebrew formula baseline', gp, gp.length ? [] : ['Hebrew formulas in General Chemistry sit on the text baseline']));
+  if (fs.existsSync(path.join(root, 'data/organic1/pictures.json'))) {
+    const set = rd('data/organic1/pictures.json'), pp = checkPictureSet(set, 'data/organic1/', fsCtx);
+    if (!fsCtx.siteSame('data/organic1/pictures.json')) pp.push({ id: 'pictures.json', rule: 'picture-set', msg: 'site/ copy missing or not byte-identical' });
+    groups.push(group('organic1 picture set', pp, pp.length ? [] : [`${set.pictures.length} pictures valid`]));
+  } else groups.push(group('organic1 picture set', [], ['data/organic1/pictures.json not present: skipped']));
+  if (fs.existsSync(path.join(root, 'data/organic1/readings.json'))) {
+    const rdg = rd('data/organic1/readings.json'), rp = checkReadingPictures(rdg, 'data/organic1/', fsCtx);
+    const n = Object.values(rdg.readings || {}).reduce((a, r) => a + ((r && r.sections) || []).filter(s => s && s.picture !== undefined).length, 0);
+    groups.push(group('organic1 reading pictures', rp, rp.length ? [] : [`${n} reading pictures valid`]));
+  } else groups.push(group('organic1 reading pictures', [], ['data/organic1/readings.json not present: skipped']));
   for (const g of groups) { console.log(`${g.failed ? 'FAIL' : 'PASS'} ${g.label}`); console.log(g.lines.join('\n')); }
   const failed = groups.filter(g => g.failed).length;
   console.log(`\n${groups.length - failed}/${groups.length} groups PASS`);
@@ -275,6 +349,34 @@ for (const [rule, name, mutate] of hcases) {
     if (c === css && a === appJs) { console.log(`  NOT PLANTED ${name}`); total++; continue; }
     report(name, 'formula-baseline', checkFormulaAlign(c, a));
   }
+}
+{ // picture size/source, picture set, Hebrew size keys, General Chemistry formula baseline
+  const real = ['data/organic1/pictures.json'].filter(f => fs.existsSync(path.join(root, f))).map(rd)[0];
+  const fixture = { pictures: [1, 2].map(n => ({ id: `o-pic-t${n}`, source: 'auto', file: `o-pic-t${n}.svg`, smiles: 'CC', alt: 'a', width: 100, height: 50 })) };
+  const setBase = real || fixture;
+  const sctx = { ...okCtx, svgSize: () => null };
+  const pb = [...checkCourse(org.course, clone(org.cards), org.topics, sctx, new Map()), ...checkPictureSet(setBase, org.course.dir, sctx), ...checkReadingPictures({ readings: {} }, org.course.dir, sctx)];
+  if (pb.length) { console.log('picture baseline not clean:\n' + pb.slice(0, 10).map(x => `  ${x.id} [${x.rule}] ${x.msg}`).join('\n')); process.exit(1); }
+  const pcases = [
+    ['picture without width', p => { delete p.width; }],
+    ['picture width differs from its SVG file', p => { p.width = 120; }, true],
+    ['picture with unknown source', p => { p.source = 'scan'; }],
+    ['picture wider than 296', p => { p.width = 400; }],
+  ];
+  let p = null;
+  for (const [name, mutate, cx] of pcases) {
+    const b = clone(org.cards), card = find(b, 'mc'); p = card.q_image; mutate(p);
+    const c2 = cx ? { ...okCtx, svgSize: () => ({ width: 1, height: 1 }) } : sctx;
+    report(name, 'picture-size', checkCourse(org.course, b, org.topics, c2, new Map()));
+  }
+  { const s = clone(setBase); s.pictures.push({ ...s.pictures[0] }); report('picture set: duplicate id', 'picture-set', checkPictureSet(s, org.course.dir, sctx)); }
+  { const ov = baseOverlay(clone(org.cards)); const t = Object.keys(ov.files)[0], id = Object.keys(ov.files[t].questions)[0]; ov.files[t].questions[id].q_image = { alt: 'תמונה', width: 100 };
+    report('Hebrew overlay with a width key', 'forbidden-key', checkOverlay(ov.idx, ov.files, org.cards, okCtx)); }
+  { const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8');
+    if (checkFormulaAlignGen(css).length) { console.log('gen formula baseline: real css not clean, cannot plant'); process.exit(1); }
+    const bad = css.replace(/(html\[lang=he\] bdi\.fx\{[^}]*?)vertical-align:baseline/, '$1vertical-align:bottom');
+    if (bad === css) { console.log('  NOT PLANTED General Chemistry formulas aligned to the line bottom'); total++; }
+    else report('General Chemistry formulas aligned to the line bottom', 'formula-baseline-gen', checkFormulaAlignGen(bad)); }
 }
 console.log(`\nself-test: ${caught}/${total} rules caught their planted fault`);
 process.exit(caught === total ? 0 : 1);

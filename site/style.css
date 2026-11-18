@@ -102,7 +102,8 @@ ol.rtoc-list[dir=rtl]>li{counter-increment:rtoc;position:relative;padding-right:
 ol.steps[dir=rtl]>li::before{content:counter(step) ".";position:absolute;right:0;direction:ltr;unicode-bidi:isolate}
 ol.rtoc-list[dir=rtl]>li::before{content:counter(rtoc) ".";position:absolute;right:0;direction:ltr;unicode-bidi:isolate}
 html[lang=he] bdi.fxc{display:inline;white-space:normal;unicode-bidi:isolate}
-html[lang=he] bdi.fx{display:inline-block;max-width:100%;vertical-align:bottom;white-space:normal;overflow-wrap:anywhere}
+/* Baseline, not bottom: aligned to the line bottom, a formula with a <sub> is taller than the line and gets lifted, so CO2 reads as a superscript (bottom was needed only while the piece was a sideways-scrolling box, before H2c). */
+html[lang=he] bdi.fx{display:inline-block;max-width:100%;vertical-align:baseline;white-space:normal;overflow-wrap:anywhere}
 ol.steps[dir=rtl]{overflow-x:visible}
 .lang-btn{font-size:13px;padding:8px 10px}
 .en-only{color:var(--muted);font-size:13px;line-height:18px}
@@ -112,13 +113,14 @@ ol.steps[dir=rtl]{overflow-x:visible}
 .num-o{width:40px;min-width:40px;padding:0;border-radius:16px;white-space:nowrap;letter-spacing:-.02em}
 .all-courses{display:inline-flex;align-items:center;gap:6px;margin:-12px 0 0;margin-inline-start:-8px;text-decoration:none;font-weight:600}
 /* Organic card types (O2): multiple choice, typed answer, notebook */
-.opic{margin:12px 0 0;text-align:center}.opic img{max-width:100%;height:auto;max-height:200px}
+.opic{margin:12px 0 0;text-align:center}.opic img{display:block;margin:0 auto;max-width:100%;height:auto}
+.opic-miss{display:flex;align-items:center;justify-content:center;max-width:100%;margin:0 auto;padding:4px 8px;border:1px dashed var(--muted);border-radius:8px;background:var(--bg);text-align:center;overflow:hidden}
 .choices{display:grid;gap:8px;margin-top:12px}
 .choice{display:block;width:100%;min-height:48px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;text-align:start;cursor:pointer}
 .choice[aria-checked=true]{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
 .choice:disabled{cursor:default;opacity:1;color:var(--text)}
 .choice.right{border-color:var(--knew);box-shadow:0 0 0 1px var(--knew)}.choice.wrong{border-color:var(--didnt);box-shadow:0 0 0 1px var(--didnt)}
-.choice>*{display:block}.choice .tname{width:fit-content;max-width:100%}.choice .mark,.choice .why{margin-top:4px}.choice .opic{margin:4px 0 0}.choice .opic img{max-height:120px}
+.choice>*{display:block}.choice .tname{width:fit-content;max-width:100%}.choice .mark,.choice .why{margin-top:4px}.choice .opic{margin:4px 0 0}
 .choice .mark{font-size:13px;line-height:18px;font-weight:700}.choice.right .mark{color:var(--knew)}.choice.wrong .mark{color:var(--didnt)}
 .choice .why{font-size:13px;line-height:18px;color:var(--muted)}
 .typed{display:block;width:100%;min-height:48px;margin-top:4px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font:inherit;font-size:17px;text-align:left}
