@@ -340,6 +340,7 @@ function renderSection(sec, i, t) {
       h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }
   }
+  if (sec.picture) h += pic(sec.picture); // Organic readings: the same picture entry as on cards
   h += reportBtn(t, 'section', sec.id || 's' + (i + 1), sec.heading || '', sec._en);
   return h;
 }
@@ -356,6 +357,10 @@ document.addEventListener('error', e => {
     const fb = img.getAttribute('data-fallback');
     if (fb && img.getAttribute('src') !== fb) img.setAttribute('src', fb);
     else closeLightbox();
+    return;
+  }
+  if (img.parentElement && img.parentElement.matches('figure.opic')) { // Organic picture: same box, placeholder inside
+    img.outerHTML = picMissing({ alt: img.getAttribute('alt'), width: img.getAttribute('width'), height: img.getAttribute('height') });
     return;
   }
   const box = img.closest('.rfig, .qimg');
@@ -566,12 +571,14 @@ function rateBar(q, endVisible) {
   const target = () => { const r = ans.getBoundingClientRect(), top = r.top + scrollY - 56 - 16; return endVisible ? Math.max(top, r.bottom + scrollY + 8 - (innerHeight - $('#act').offsetHeight)) : top; };
   scrollTo({ top: target(), behavior });
   if (!endVisible) return;
-  // A picture still loading has no height yet, so the end moves down when it arrives. Once per picture (load or error),
-  // scroll down to the new target, unless the student has touched, scrolled or pressed a key since the reveal.
+  // A picture with width/height (O3) has its box reserved, so nothing moves when it arrives: no second scroll.
+  // Fallback for a picture without a size: it has no height while loading, so the end moves down when it arrives. Once per
+  // such picture (load or error), scroll down to the new target, unless the student has touched, scrolled or pressed a key.
+  const late = [...ans.querySelectorAll('img')].filter(im => !im.complete && !(im.getAttribute('width') && im.getAttribute('height')));
+  if (!late.length) return;
   let user = false; const mark = () => { user = true; };
   ['wheel', 'touchstart', 'keydown'].forEach(ev => addEventListener(ev, mark, { once: true, passive: true }));
-  ans.querySelectorAll('img').forEach(im => {
-    if (im.complete) return;
+  late.forEach(im => {
     const again = () => { if (!user && ans.isConnected) { const t = target(); if (t > scrollY + 1) scrollTo({ top: t, behavior }); } };
     im.addEventListener('load', again, { once: true }); im.addEventListener('error', again, { once: true });
   });
@@ -581,8 +588,12 @@ function rateBar(q, endVisible) {
 // correct answer (no grading); notebook: draw on paper, then Show answer. All end with the same self-rating (rate()),
 // which is what feeds spaced repetition and weak topics; right/wrong never sets the rating.
 const O_TYPES = new Set(['mc', 'typed', 'notebook']);
-// Picture { file, smiles, alt }: a file in the course folder's img/ (labelled placeholders now; O3 redraws the same file from the SMILES).
-const pic = p => p && p.file ? `<figure class="opic"><img src="${esc(COURSE.dir + 'img/' + p.file)}" alt="${esc(plain(p.alt))}"></figure>` : '';
+// Picture { source, file, smiles, alt, width, height }: a file in the course folder's img/, drawn from the SMILES by
+// tools/make-pictures.py (source "auto") or a Chem Sketcher file (source "sketch"). width/height reserve the box before
+// the picture loads. No file, or a file that fails to load: the same box shows "Picture not available" instead.
+const picBox = p => p.width && p.height ? { attr: ` width="${+p.width}" height="${+p.height}"`, css: `width:${+p.width}px;aspect-ratio:${+p.width}/${+p.height}` } : { attr: '', css: '' };
+const picMissing = p => `<div class="opic-miss" data-missing-pic="1" role="img" aria-label="${esc(plain(p.alt || ''))}" style="${picBox(p).css}"><span class="cap">${esc(T('pictureMissing'))}</span></div>`;
+const pic = p => p ? `<figure class="opic">${p.file ? `<img src="${esc(COURSE.dir + 'img/' + p.file)}" alt="${esc(plain(p.alt))}"${picBox(p).attr}>` : picMissing(p)}</figure>` : '';
 // IUPAC names and typed answers: one left-to-right line that never wraps; a name too long for the screen scrolls sideways.
 const nameHtml = s => `<bdi dir="ltr" lang="en" class="tname">${esc(s)}</bdi>`;
 // English text: keep a hyphenated name with locants (1-bromo-3-methylbutane, 2,3-dimethylpentane) on one line.
