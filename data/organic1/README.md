@@ -13,4 +13,4 @@ topics.json, questions.json, readings.json and he/ (index.json, glossary.json).
   readings.json (sections[].picture) and pictures.json (the sample set). source "auto": `py tools/make-pictures.py`
   draws img/<file> from the SMILES (RDKit) and writes width/height; source "sketch": a Chem Sketcher SVG in img/,
   which the tool never redraws (it only reads its size). Run the tool after any picture change; `--check` reports
-  anything out of date. Review log: art/organic1/REVIEW.md; all sample pictures: site/pictures.html.
+  anything out of date. Review log: art/organic1/REVIEW.md; all sample pictures: tools/pictures.html (local only, not in the site).

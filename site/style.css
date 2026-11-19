@@ -129,5 +129,3 @@ ol.steps[dir=rtl]{overflow-x:visible}
 .cmp{display:grid;gap:8px;margin-bottom:8px}.cmp .tname{font-size:20px;line-height:28px;font-weight:700}
 .verdict{font-weight:700;margin-bottom:4px}
 .cmp>div,.choices>.choice{min-width:0}.nb{white-space:nowrap}
-/* Organic cards: a Hebrew formula sits on the text baseline. Aligned to the line bottom (rule above), a formula with a <sub> is taller than the line and gets lifted, so CH3 read as a superscript. */
-html[lang=he] .ocard bdi.fx{vertical-align:baseline}

@@ -11,3 +11,14 @@ Flashcard study site for HUJI 69107 Intro to Chemistry (Atkins 8e).
 - `shots/` has the test screenshots. Tests live in `/workspace/pwtest/` (`chem-m4.mjs`, `chem-m5.mjs`, `chem-reading.mjs`).
 - `backups/` keeps copies from before big changes.
 - Dev site: https://yishiezerzer-dot.github.io/chem-practice/dev/ (production root stays "Coming soon" until Yishi says go).
+
+## Organic 1 pictures
+
+Automatic Organic 1 molecule pictures are built with RDKit 2026.03.5 by `tools/make-pictures.py`, from the SMILES in data/organic1/questions.json, readings.json and pictures.json.
+It writes the SVGs into data/organic1/img/, writes each picture's width and height, and copies the JSON and pictures to site/data/organic1/. The same RDKit version gives byte-identical files.
+Setup: RDKit is the pip package `rdkit`, pinned with `py -m pip install rdkit==2026.03.5`.
+Run these from the repo root:
+- Regenerate: `py tools/make-pictures.py`
+- Check only: `py tools/make-pictures.py --check` (changes nothing; exits 1 if a picture or a size is out of date; a Chem Sketcher sketch that is not drawn yet is listed as PENDING, not as a problem).
+
+The local sample viewer is `tools/pictures.html` (not part of the published site): from the repo root run `py -m http.server 8130 --bind 127.0.0.1`, then open http://127.0.0.1:8130/tools/pictures.html (add `?lang=he` for Hebrew).

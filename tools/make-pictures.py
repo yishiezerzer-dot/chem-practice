@@ -6,6 +6,7 @@ Every picture entry in data/organic1/questions.json, readings.json and pictures.
 - source "auto": this tool draws data/organic1/img/<file> from the SMILES with RDKit (bond-line drawing,
   black on transparent, labels in English, text drawn as outlines so every phone shows the same picture).
 - source "sketch": a Chem Sketcher SVG file in data/organic1/img/. This tool never changes it; it only reads its size.
+  A sketch entry with no width/height whose file is not there yet is listed as PENDING, not as a problem.
 For both, the tool writes width and height (the picture's pixel size) into the entry, so the page can reserve the
 space before the picture loads, and copies the pictures and the JSON files byte for byte to site/data/organic1/.
 
@@ -110,7 +111,7 @@ def set_size(text, file, w, h):
 
 def main():
     check = '--check' in sys.argv
-    problems, wrote = [], []
+    problems, wrote, pending = [], [], []
     img = os.path.join(ROOT, DIR, 'img')
     for name in JSON_FILES:
         src = os.path.join(ROOT, DIR, name)
@@ -131,7 +132,10 @@ def main():
                         wrote.append(p['file'])
             elif p['source'] == 'sketch':
                 if not os.path.exists(f):
-                    problems.append('%s: sketch file %s is missing' % (name, p['file']))
+                    if 'width' in p or 'height' in p:
+                        problems.append('%s: sketch file %s is missing' % (name, p['file']))
+                    else:  # not drawn yet: no size, so the page shows the missing-picture placeholder
+                        pending.append('%s: %s (Chem Sketcher file not drawn yet)' % (name, p['file']))
                     continue
                 w, h = svg_size(open(f, encoding='utf-8').read())
             else:
@@ -152,9 +156,11 @@ def main():
         dst = os.path.join(ROOT, 'site', DIR, 'img')
         for f in os.listdir(img):
             shutil.copyfile(os.path.join(img, f), os.path.join(dst, f))
+    for p in pending:
+        print('PENDING', p)
     for p in problems:
         print('PROBLEM', p)
-    print(('checked' if check else 'built') + ': %d file(s) %s, %d problem(s)' % (len(wrote), 'written' if wrote else 'changed', len(problems)))
+    print(('checked' if check else 'built') + ': %d file(s) %s, %d problem(s), %d pending sketch(es)' % (len(wrote), 'written' if wrote else 'changed', len(problems), len(pending)))
     sys.exit(1 if problems else 0)
 
 

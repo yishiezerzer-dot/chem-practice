@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<!-- Local review page (O3b): lives in tools/, outside the published site/. Serve the repo root and open /tools/pictures.html. -->
 <title>Sample pictures: Organic Chemistry 1</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../site/style.css">
 <style>
 .pic{display:block;max-width:100%;height:auto;margin:0 auto}
 figure{margin:0 0 12px}
@@ -47,7 +48,7 @@ code{overflow-wrap:anywhere}
     return d;
   }
 
-  fetch('data/organic1/pictures.json').then(function (r) { return r.json(); }).then(function (j) {
+  fetch('../site/data/organic1/pictures.json').then(function (r) { return r.json(); }).then(function (j) {
     var list = document.getElementById('list');
     j.pictures.forEach(function (p) {
       var card = document.createElement('div');
@@ -56,7 +57,7 @@ code{overflow-wrap:anywhere}
       fig.dir = 'ltr';
       var img = document.createElement('img');
       img.className = 'pic';
-      img.src = 'data/organic1/img/' + p.file;
+      img.src = '../site/data/organic1/img/' + p.file;
       img.width = p.width;
       img.height = p.height;
       img.alt = p.alt;
