@@ -53,6 +53,7 @@ window.I18N.he = Object.freeze({
   figure: 'איור',
   tapToEnlarge: 'לחצו להגדלה',
   figureSoon: 'האיור יתווסף בקרוב',
+  pictureMissing: 'התמונה לא זמינה',
   sketcherNote: 'Chem Sketcher יוסיף את האיור הזה.',
   close: 'סגירה',
   englishOnly: 'באנגלית בלבד',

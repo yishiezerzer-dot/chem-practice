@@ -52,6 +52,7 @@ window.I18N.en = Object.freeze({
   figure: 'Figure',
   tapToEnlarge: 'Tap to enlarge',
   figureSoon: 'Figure coming soon',
+  pictureMissing: 'Picture not available',
   sketcherNote: 'Chem Sketcher will add this drawing.',
   close: 'Close',
   englishOnly: 'English only',

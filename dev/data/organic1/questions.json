@@ -1,7 +1,7 @@
 {
  "meta": {
   "note": "Organic cards. Every card id starts with o- (o-<tutorial>-q<n>) so it can never clash with General Chemistry ids. Cards whose id starts with o-sample- are layout samples (reviewed: false), to be replaced when the topic is written.",
-  "types": "mc = multiple choice (choices + right); typed = type the name, then compare with answer (no grading); notebook = draw in the notebook, then reveal answer_image. Pictures: { file (in data/organic1/img/), smiles, alt }. picture_check records who checked the pictures."
+  "types": "mc = multiple choice (choices + right); typed = type the name, then compare with answer (no grading); notebook = draw in the notebook, then reveal answer_image. Pictures: { source, file (in data/organic1/img/), smiles, alt, width, height }. source \"auto\": tools/make-pictures.py draws the file from the SMILES and writes width/height; source \"sketch\": a Chem Sketcher SVG file, never redrawn; a sketch whose file is not drawn yet has no width/height and shows the missing-picture placeholder. width/height (pixel size of the picture) let the page reserve the space before it loads. picture_check records who checked the pictures: none (no pictures), placeholder (stand-in drawings), unchecked (real pictures not yet reviewed by Chem Sketcher), checked (needs checked_by and date)."
  },
  "questions": [
   {
@@ -9,12 +9,12 @@
    "topic": "o-02-nomenclature",
    "type": "mc",
    "q": "What is the IUPAC name of this molecule?",
-   "q_image": { "file": "o-sample-mc-q.svg", "smiles": "CC(C)CC", "alt": "Placeholder picture of the molecule: 2-methylbutane" },
+   "q_image": { "source": "auto", "file": "o-sample-mc-q.svg", "smiles": "CC(C)CC", "alt": "Bond-line structure: a chain of four carbons with a one-carbon branch on the second carbon", "width": 133, "height": 96 },
    "choices": [
     { "text": "3-methylbutane", "why": "Same chain, numbered from the wrong end. Number from the end nearer the branch, so the methyl gets locant 2, not 3." },
     { "text": "2-methylbutane", "why": "Right. The longest chain has 4 carbons (butane), and numbering from the end nearer the branch puts the methyl on C2." },
     { "text": "1,1-dimethylpropane", "why": "Drawn as named, this is the same molecule, but the chain chosen is too short: the longest chain has four carbons, not three, so the parent is butane and the name is 2-methylbutane." },
-    { "text": "2-ethylpropane", "image": { "file": "o-sample-mc-c4.svg", "smiles": "CC(C)CC", "alt": "Placeholder picture: 2-ethylpropane drawn as named" }, "why": "Drawn as named, this is the same molecule, but the chain chosen is too short. The ethyl group extends the longest chain to 4 carbons, so the parent is butane." }
+    { "text": "2-ethylpropane", "image": { "source": "sketch", "file": "o-sample-mc-2-ethylpropane.svg", "smiles": "CC(CC)C", "alt": "Bond-line structure drawn as the name 2-ethylpropane says: a three-carbon chain with a two-carbon (ethyl) branch on the middle carbon", "width": 133, "height": 96 }, "why": "Drawn as named, this is the same molecule, but the chain chosen is too short. The ethyl group extends the longest chain to 4 carbons, so the parent is butane." }
    ],
    "right": 1,
    "answer": "2-methylbutane",
@@ -26,7 +26,7 @@
    ],
    "ref": "4.3",
    "reviewed": false,
-   "picture_check": { "status": "placeholder", "checked_by": null, "date": null, "note": "Labelled placeholder pictures; real structures drawn from the SMILES come in O3." }
+   "picture_check": { "status": "unchecked", "checked_by": null, "date": null, "note": "The question picture is drawn automatically from the SMILES (O3), not yet checked by Chem Sketcher. The 2-ethylpropane choice picture is the Chem Sketcher drawing o-sample-mc-2-ethylpropane.svg, drawn as named and approved by Yishi (O3c), not yet reviewed by Chem Sketcher." }
   },
   {
    "id": "o-sample-typed",
@@ -50,7 +50,7 @@
    "type": "notebook",
    "q": "Draw the bond-line structure of 2,3-dimethylpentane in your notebook.",
    "answer": "2,3-dimethylpentane",
-   "answer_image": { "file": "o-sample-notebook-a.svg", "smiles": "CC(C)C(C)CC", "alt": "Placeholder picture of the answer: bond-line structure of 2,3-dimethylpentane" },
+   "answer_image": { "source": "auto", "file": "o-sample-notebook-a.svg", "smiles": "CC(C)C(C)CC", "alt": "Bond-line structure of 2,3-dimethylpentane: a five-carbon zigzag with a methyl branch on the second and on the third carbon", "width": 162, "height": 130 },
    "steps": [
     "Parent pentane: draw a zigzag of 5 carbons. Each corner and each line end is one carbon.",
     "Number the chain from one end, C1 to C5.",
@@ -59,7 +59,7 @@
    ],
    "ref": "1.7",
    "reviewed": false,
-   "picture_check": { "status": "placeholder", "checked_by": null, "date": null, "note": "Labelled placeholder picture; the real structure drawn from the SMILES comes in O3." }
+   "picture_check": { "status": "unchecked", "checked_by": null, "date": null, "note": "Automatic picture drawn from the SMILES (O3), not yet checked by Chem Sketcher." }
   }
  ]
 }
