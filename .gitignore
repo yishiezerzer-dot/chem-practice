@@ -2,3 +2,5 @@ backups/
 shots/
 vault/
 sources/
+.playwright-mcp/
+.impeccable/

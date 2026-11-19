@@ -18,4 +18,4 @@ To view them all on one page, run `py -m http.server 8130 --bind 127.0.0.1` from
 
 When a picture here is checked, change its `picture_check` in data/organic1/pictures.json from `unchecked` to `checked` (then run `py tools/make-pictures.py` to copy it to site/).
 
-Still to draw (Chem Sketcher, source "sketch"): `data/organic1/img/o-sample-mc-2-ethylpropane.svg`, the 2-ethylpropane choice on the o-sample-mc card, drawn as named (a three-carbon chain with an ethyl branch on carbon 2). Yishi approves the file before it goes into the repo; until then the choice shows the missing-picture placeholder.
+Chem Sketcher file (source "sketch"): `data/organic1/img/o-sample-mc-2-ethylpropane.svg`, the 2-ethylpropane choice on the o-sample-mc card, drawn as named (a three-carbon chain with an ethyl branch on carbon 2). Approved by Yishi and added in O3c (83x92); not yet reviewed here.

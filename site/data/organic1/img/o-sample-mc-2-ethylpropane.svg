@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="92" viewBox="0 0 82.89 92.00">
+  <!-- o-sample-mc-2-ethylpropane: literal 2-ethylpropane (propane zigzag + ethyl at C2); all angles 120° -->
+  <line x1="12.00" y1="80.00" x2="41.44" y2="63.00" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>
+  <line x1="41.44" y1="63.00" x2="70.89" y2="80.00" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>
+  <line x1="41.44" y1="63.00" x2="41.44" y2="29.00" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>
+  <line x1="41.44" y1="29.00" x2="70.89" y2="12.00" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>
+</svg>
