@@ -14,7 +14,7 @@
     { "text": "3-methylbutane", "why": "Same chain, numbered from the wrong end. Number from the end nearer the branch, so the methyl gets locant 2, not 3." },
     { "text": "2-methylbutane", "why": "Right. The longest chain has 4 carbons (butane), and numbering from the end nearer the branch puts the methyl on C2." },
     { "text": "1,1-dimethylpropane", "why": "Drawn as named, this is the same molecule, but the chain chosen is too short: the longest chain has four carbons, not three, so the parent is butane and the name is 2-methylbutane." },
-    { "text": "2-ethylpropane", "image": { "source": "sketch", "file": "o-sample-mc-2-ethylpropane.svg", "smiles": "CC(CC)C", "alt": "Bond-line structure drawn as the name 2-ethylpropane says: a three-carbon chain with a two-carbon (ethyl) branch on the middle carbon", "width": 83, "height": 92 }, "why": "Drawn as named, this is the same molecule, but the chain chosen is too short. The ethyl group extends the longest chain to 4 carbons, so the parent is butane." }
+    { "text": "2-ethylpropane", "image": { "source": "sketch", "file": "o-sample-mc-2-ethylpropane.svg", "smiles": "CC(CC)C", "alt": "Bond-line structure drawn as the name 2-ethylpropane says: a three-carbon chain with a two-carbon (ethyl) branch on the middle carbon", "width": 133, "height": 96 }, "why": "Drawn as named, this is the same molecule, but the chain chosen is too short. The ethyl group extends the longest chain to 4 carbons, so the parent is butane." }
    ],
    "right": 1,
    "answer": "2-methylbutane",
