@@ -1,6 +1,392 @@
 {
  "meta": {
-  "note": "Organic readings (none yet)."
+  "note": "Organic readings. o-00-review holds the General Chemistry review half (O-T0a); the drawing-molecules half (O-T0b) will be appended as further sections. Pictures: same picture entries as on cards, in sections[].picture, sections[].pictures[] and worked/workedExamples[].picture."
  },
- "readings": {}
+ "readings": {
+  "o-00-review": {
+   "topic_id": "o-00-review",
+   "reviewed": false,
+   "sections": [
+    {
+     "id": "atoms-isotopes",
+     "heading": "Atoms, atomic number, mass number and isotopes",
+     "paragraphs": [
+      "Every atom has a tiny, dense nucleus made of protons (charge +1 each) and neutrons (no charge), surrounded by electrons (charge −1 each). A proton and a neutron each have a mass of about 1 atomic mass unit (u). An electron is about 1/1836 of that, so almost all of an atom's mass sits in the nucleus.",
+      "The atomic number, Z, is the number of protons. Z decides which element the atom is: every carbon atom has Z = 6 and every chlorine atom has Z = 17. In a neutral atom the number of electrons equals Z, because the positive and negative charges must cancel.",
+      "The mass number, A, is the number of protons plus the number of neutrons: A = Z + N, where N is the number of neutrons. So the number of neutrons is N = A − Z. The mass number is written as a superscript on the left of the symbol: ¹²C is carbon with A = 12.",
+      "Isotopes are atoms of the same element (same Z) with different numbers of neutrons (different A). ¹²C, ¹³C and ¹⁴C all have 6 protons, with 6, 7 and 8 neutrons. Isotopes have the same number of electrons, so they react in the same way. They differ only in mass.",
+      "An ion has gained or lost electrons, never protons. A charge of n− means n extra electrons, and n+ means n missing electrons, so electrons = Z − (charge). For Cl⁻: electrons = 17 − (−1) = 18.",
+      "The atomic mass printed on the periodic table (35.45 for Cl) is a weighted average over the natural isotopes, which is why it is almost never a whole number.",
+      "In the book: Solomons 11e, section 1.2."
+     ],
+     "workedExamples": [
+      {
+       "title": "Protons, neutrons and electrons in ³⁷Cl⁻",
+       "steps": [
+        "Find Z: chlorine is element 17, so Z = 17 and the ion has 17 protons.",
+        "Read A from the superscript: A = 37.",
+        "Neutrons: N = A − Z = 37 − 17 = 20.",
+        "Electrons: the charge is 1−, so the ion has one electron more than the neutral atom: 17 − (−1) = 18.",
+        "Final answer: 17 protons, 20 neutrons and 18 electrons."
+       ]
+      },
+      {
+       "title": "Average atomic mass of chlorine",
+       "steps": [
+        "Natural chlorine is 75.76% ³⁵Cl (mass 34.969 u) and 24.24% ³⁷Cl (mass 36.966 u).",
+        "Turn each percentage into a fraction: 0.7576 and 0.2424. Together they add up to 1.",
+        "Multiply each isotope's mass by its fraction: 34.969 u × 0.7576 = 26.493 u, and 36.966 u × 0.2424 = 8.961 u.",
+        "Add the two parts: 26.493 u + 8.961 u = 35.454 u.",
+        "Final answer: about 35.45 u. It is closer to 35 than to 37 because ³⁵Cl is the more common isotope."
+       ]
+      }
+     ],
+     "mistake": {
+      "wrong": "Taking the mass number as the number of neutrons, for example 37 neutrons in ³⁷Cl.",
+      "whyWrong": "A counts protons and neutrons together, so it is always larger than the number of neutrons (except for ¹H, which has no neutrons at all).",
+      "correct": "Subtract the protons: N = A − Z = 37 − 17 = 20 neutrons."
+     }
+    },
+    {
+     "id": "lewis-formal-charge",
+     "heading": "Lewis structures and formal charge",
+     "paragraphs": [
+      "Only valence electrons, the electrons of the outermost shell, take part in bonding. For the elements in organic chemistry the number of valence electrons is: H 1, C 4, N 5, O 6, F and Cl 7.",
+      "Atoms share electrons until each has a full valence shell: 8 electrons (an octet) for C, N, O and the halogens, and 2 electrons for H. A shared pair of electrons is a covalent bond, drawn as a line. An unshared pair on one atom is a lone pair, drawn as two dots.",
+      "To draw a Lewis structure, work in five steps. Step 1: add up the valence electrons of all the atoms, then subtract one electron for each + charge and add one for each − charge. Step 2: draw the skeleton. H and the halogens make one bond and sit at the ends, and carbon atoms form the backbone. Step 3: join the atoms with single bonds and subtract 2 electrons for every bond. Step 4: place the remaining electrons as lone pairs, on the outer atoms first. Step 5: if an atom still has fewer than 8 electrons, move a lone pair of a neighbor into the bond between them, making a double or a triple bond.",
+      "Formal charge compares the electrons around one atom in the structure with the neutral atom: formal charge = (valence electrons) − (nonbonding electrons) − ½ × (bonding electrons). Nonbonding electrons are the dots on that atom. Bonding electrons are 2 for every bond line that touches that atom.",
+      "Two checks catch most mistakes. First, the formal charges of all the atoms add up to the overall charge of the molecule or ion. Second, in neutral organic molecules the usual patterns all have formal charge 0: C with 4 bonds, N with 3 bonds and 1 lone pair, O with 2 bonds and 2 lone pairs, a halogen with 1 bond and 3 lone pairs, and H with 1 bond. An atom that breaks its pattern carries a formal charge, for example O with 3 bonds and 1 lone pair is +1.",
+      "In the book: Solomons 11e, sections 1.3–1.5."
+     ],
+     "workedExamples": [
+      {
+       "title": "Lewis structure of CO₂",
+       "steps": [
+        "Count valence electrons: C has 4 and each O has 6. Total = 4 + 2 × 6 = 16.",
+        "Skeleton: C is less electronegative than O, so C goes in the center: O–C–O.",
+        "Two single bonds use 2 × 2 = 4 electrons. Left: 16 − 4 = 12.",
+        "Give each O three lone pairs (6 electrons each). That uses all 12. Each O now has 8 electrons, but C has only 4 (two bonds).",
+        "C needs 4 more electrons. Move one lone pair of each O into its bond with C, making two double bonds: O=C=O. Now C has 4 bonds (8 electrons), and each O has 2 bonds and 2 lone pairs (8 electrons).",
+        "Formal charge of each O: 6 − 4 − ½ × 4 = 0. Formal charge of C: 4 − 0 − ½ × 8 = 0.",
+        "Check: 0 + 0 + 0 = 0, the charge of CO₂. Final structure: O=C=O with two lone pairs on each O, all formal charges 0."
+       ],
+       "picture": {"source": "sketch", "file": "t0-lewis-co2.svg", "smiles": "O=C=O", "alt": "Lewis structure of carbon dioxide: O=C=O with two double bonds, two lone pairs on each oxygen, and a formal charge of 0 on every atom.", "width": 203, "height": 141}
+      },
+      {
+       "title": "Lewis structure of ClCH₂C≡CH (3-chloroprop-1-yne)",
+       "steps": [
+        "Count valence electrons: 3 C × 4 = 12, 3 H × 1 = 3, and Cl has 7. Total = 12 + 3 + 7 = 22.",
+        "Skeleton from the formula: Cl is on the CH₂ carbon, that carbon is bonded to the second carbon, and the second carbon is bonded to the third carbon, which carries the last H: Cl–CH₂–C–C–H.",
+        "Single bonds: C–Cl, two C–H on the CH₂ carbon, two C–C bonds and the last C–H. That is 6 bonds, 12 electrons. Left: 22 − 12 = 10.",
+        "Give Cl three lone pairs (6 electrons), so Cl has 8. Left: 10 − 6 = 4.",
+        "The two right-hand carbons have only 2 bonds each (4 electrons). Use the last 4 electrons as two more bonds between these two carbons, making a triple bond: C≡C.",
+        "Count again: 8 bonds × 2 = 16 electrons, plus 3 lone pairs × 2 = 6 electrons, gives 22, the number we started with. Every C has 4 bonds, Cl has 1 bond and 3 lone pairs, and each H has 1 bond.",
+        "Formal charges: Cl = 7 − 6 − ½ × 2 = 0, each C = 4 − 0 − ½ × 8 = 0, each H = 1 − 0 − ½ × 2 = 0. All formal charges are 0."
+       ],
+       "picture": {"source": "sketch", "file": "t0-lewis-ch2clcch.svg", "smiles": "ClCC#C", "alt": "Lewis structure of 3-chloroprop-1-yne, ClCH₂C≡CH: chlorine with three lone pairs bonded to a CH₂ carbon, then a carbon–carbon triple bond ending in C–H. All formal charges are 0.", "width": 214, "height": 184}
+      },
+      {
+       "title": "Lewis structure of H₃O⁺",
+       "steps": [
+        "Count valence electrons: O has 6, three H have 3, and the + charge removes 1. Total = 6 + 3 − 1 = 8.",
+        "Skeleton: H makes only one bond, so O is in the center with three H atoms around it.",
+        "Three O–H bonds use 6 electrons. Left: 8 − 6 = 2. Put them on O as one lone pair.",
+        "Check the shells: O has 3 bonds (6 electrons) and 1 lone pair (2 electrons), 8 in all. Each H has 2.",
+        "Formal charge of O: 6 − 2 − ½ × 6 = 6 − 2 − 3 = +1. Formal charge of each H: 1 − 0 − ½ × 2 = 0.",
+        "Check: +1 + 0 + 0 + 0 = +1, the charge of the ion. The positive charge sits on O, not on an H."
+       ],
+       "picture": {"source": "sketch", "file": "t0-lewis-h3o.svg", "smiles": "[OH3+]", "alt": "Lewis structure of the hydronium ion, H₃O⁺: oxygen with three O–H bonds and one lone pair, and a formal charge of +1 on oxygen.", "width": 282, "height": 166}
+      },
+      {
+       "title": "Lewis structure of H₂CO₃ (carbonic acid)",
+       "steps": [
+        "Count valence electrons: 2 H = 2, C = 4, 3 O = 18. Total = 24.",
+        "Skeleton: C in the center with three O atoms around it. In an oxyacid the acidic H atoms sit on O, so two of the O atoms carry one H each.",
+        "Single bonds: three C–O and two O–H, 5 bonds, 10 electrons. Left: 24 − 10 = 14.",
+        "Complete the O atoms. Each OH oxygen has 2 bonds and needs 2 lone pairs (4 electrons each, 8 for both). The O without H has 1 bond and needs 3 lone pairs (6 electrons). 8 + 6 = 14, so all the electrons are used.",
+        "C has only 3 bonds (6 electrons). Move one lone pair of the O without H into its bond with C, making C=O. Now C has 4 bonds and that O has 2 bonds and 2 lone pairs.",
+        "Why that O: if an OH oxygen made the double bond instead, it would have 3 bonds and a +1 formal charge, and the O without H would keep 3 lone pairs and a −1 formal charge. A structure with all formal charges 0 is better.",
+        "Formal charges: C = 4 − 0 − ½ × 8 = 0, the C=O oxygen = 6 − 4 − ½ × 4 = 0, each OH oxygen = 6 − 4 − ½ × 4 = 0, each H = 0. Final structure: one C=O and two C–O–H groups, two lone pairs on every O, all formal charges 0."
+       ],
+       "picture": {"source": "sketch", "file": "t0-lewis-h2co3.svg", "smiles": "OC(=O)O", "alt": "Lewis structure of carbonic acid, H₂CO₃: a central carbon with one C=O and two C–O–H groups, two lone pairs on every oxygen, and all formal charges 0.", "width": 192, "height": 197}
+      }
+     ],
+     "mistake": {
+      "wrong": "Forgetting the charge of an ion when counting electrons, for example counting 9 electrons for H₃O⁺.",
+      "whyWrong": "A + charge means one electron is missing. With 9 electrons the count is odd, so no structure can give every atom a full shell, and the formal charges will not add up to +1.",
+      "correct": "Subtract one electron for each + charge and add one for each − charge before drawing: H₃O⁺ has 6 + 3 − 1 = 8 valence electrons."
+     }
+    },
+    {
+     "id": "orbitals-hybridization",
+     "heading": "Atomic orbitals and hybridization",
+     "paragraphs": [
+      "Electrons in atoms occupy orbitals, regions of space where an electron is likely to be found. An s orbital is a sphere around the nucleus. A p orbital has two lobes on opposite sides of the nucleus, with a node (a place of zero electron density) at the nucleus between them. The three 2p orbitals, 2px, 2py and 2pz, point along three axes at 90° to each other.",
+      "The two lobes of a p orbital have opposite phase (opposite sign of the wave function), shown in two colors in the drawings. Phase is not electric charge. It matters when orbitals overlap: lobes of the same phase reinforce each other and build a bond.",
+      "Carbon's ground-state configuration is 1s² 2s² 2p². It shows only two unpaired electrons, yet carbon almost always forms four bonds, and the four C–H bonds of CH₄ are identical and point to the corners of a tetrahedron. Hybridization explains this: the 2s orbital and some or all of the 2p orbitals of the same atom mix to form new, equivalent hybrid orbitals.",
+      "sp³: the 2s orbital and all three 2p orbitals mix into four sp³ hybrid orbitals. Each has one large lobe and one small lobe. The four large lobes point to the corners of a tetrahedron, 109.5° apart, which is as far apart as four directions can be. Each sp³ orbital of carbon holds one electron and can form one bond.",
+      "sp²: the 2s orbital and two of the 2p orbitals mix into three sp² hybrids that lie in one plane, 120° apart (trigonal planar). One 2p orbital is left unhybridized, perpendicular to that plane.",
+      "sp: the 2s orbital and one 2p orbital mix into two sp hybrids that point in opposite directions, 180° apart (linear). Two 2p orbitals are left unhybridized, perpendicular to that line and to each other.",
+      "A quick rule: count the electron groups around the atom. Each bonded atom is one group, whether the bond is single, double or triple, and each lone pair is one group. 4 groups → sp³, 3 groups → sp², 2 groups → sp. The rule works for C, N, O and the halogens.",
+      "Hydrogen is never hybridized. Its valence shell has only one orbital, the 1s orbital, so there is nothing to mix. Every bond to H uses H's 1s orbital, and in labels and answers H gets no hybridization.",
+      "In the book: Solomons 11e, sections 1.9–1.14."
+     ],
+     "picture": {"source": "sketch", "file": "t0-hybrid-c-sp3.svg", "smiles": "C", "alt": "Carbon's 2s orbital and its three 2p orbitals combining into four equivalent sp³ hybrid orbitals that point to the corners of a tetrahedron, 109.5° apart.", "width": 1075, "height": 442},
+     "worked": {
+      "title": "Hybridization of carbon in CH₄",
+      "steps": [
+       "Count the electron groups on C: four bonded H atoms and no lone pairs, 4 groups.",
+       "4 groups → sp³: the 2s orbital and the three 2p orbitals of carbon mix into four sp³ hybrids.",
+       "Each sp³ hybrid of carbon overlaps with the 1s orbital of one H to make a C–H bond. H keeps its 1s orbital.",
+       "The four bonds point to the corners of a tetrahedron, so every H–C–H angle is 109.5°."
+      ]
+     },
+     "mistake": {
+      "wrong": "Labeling the hydrogen atoms with a hybridization along with C, N and O.",
+      "whyWrong": "Hybridization mixes an s orbital with p orbitals of the same shell. Hydrogen's valence shell has only the 1s orbital, so there is nothing to mix.",
+      "correct": "Give a hybridization only to atoms with p orbitals in the valence shell, such as C, N, O and the halogens. Hydrogen always bonds with its 1s orbital."
+     }
+    },
+    {
+     "id": "sigma-pi",
+     "heading": "σ and π bonds: the C=O bond",
+     "paragraphs": [
+      "A covalent bond forms where two orbitals overlap and their electrons are shared. Orbitals can overlap in two ways.",
+      "σ (sigma) bond: the orbitals overlap head-on, along the line joining the two nuclei (the bond axis), and the electron density is highest on that axis. Every single bond is a σ bond, and every double or triple bond contains exactly one σ bond.",
+      "π (pi) bond: two parallel, unhybridized p orbitals overlap side-on, above and below the bond axis. The electron density lies in two regions, one on each side of the axis, with a node on the axis itself. A π bond forms only between atoms already joined by a σ bond.",
+      "So a double bond is 1 σ + 1 π, and a triple bond is 1 σ + 2 π. The two π bonds of a triple bond lie at 90° to each other.",
+      "Hybrid orbitals form σ bonds and hold lone pairs. Unhybridized p orbitals form π bonds. That is why the number of π bonds a carbon makes tells you its hybridization: no π bond → sp³, one π bond → sp², two π bonds → sp.",
+      "Look at one C=O bond of CO₂. Carbon has 2 electron groups (the two O atoms), so it is sp. Each oxygen has 3 electron groups (the carbon and two lone pairs), so it is sp². The σ bond comes from a carbon sp hybrid overlapping head-on with an oxygen sp² hybrid. The π bond comes from an unhybridized 2p orbital on carbon overlapping side-on with the parallel unhybridized 2p orbital on oxygen. Carbon has a second unhybridized 2p orbital, at 90° to the first, which makes the π bond to the other oxygen.",
+      "Side-on overlap is smaller than head-on overlap, so a π bond is weaker than a σ bond. Turning one end of a double bond would twist the two p orbitals out of line and break the π bond, so atoms do not rotate freely around a double bond.",
+      "In the book: Solomons 11e, sections 1.12–1.14."
+     ],
+     "pictures": [
+      {"source": "sketch", "file": "t0-sigma-co.svg", "smiles": "O=C=O", "alt": "σ bond in C=O: a carbon sp hybrid orbital and an oxygen sp² hybrid orbital overlapping head-on, along the line between the two nuclei.", "width": 730, "height": 480},
+      {"source": "sketch", "file": "t0-pi-co.svg", "smiles": "O=C=O", "alt": "π bond in C=O: an unhybridized 2p orbital on carbon and one on oxygen, parallel to each other, overlapping side-on above and below the bond axis.", "width": 730, "height": 480}
+     ],
+     "worked": {
+      "title": "Count the σ and π bonds in ClCH₂C≡CH",
+      "steps": [
+       "List the bonds from the Lewis structure: C–Cl, two C–H on the CH₂ carbon, the C–C single bond, the C≡C triple bond and the last C–H.",
+       "Each single bond is 1 σ: C–Cl, the two C–H, C–C and the last C–H give 5 σ bonds.",
+       "The triple bond is 1 σ + 2 π.",
+       "Total: 5 + 1 = 6 σ bonds and 2 π bonds.",
+       "Check with hybridization: each alkyne carbon makes 2 π bonds, so it is sp. The CH₂ carbon makes no π bond, so it is sp³."
+      ]
+     }
+    },
+    {
+     "id": "vsepr-parent-shapes",
+     "heading": "VSEPR: parent geometry and molecular shape",
+     "paragraphs": [
+      "VSEPR (valence-shell electron-pair repulsion) predicts shapes from one idea: the electron groups around a central atom repel each other, so they spread out as far apart as possible.",
+      "Step 1: count the electron groups on the atom: the bonded atoms plus the lone pairs. A double or a triple bond counts as one group, because all its electrons sit between the same two atoms.",
+      "Step 2: the number of groups gives the parent geometry (also called the electron geometry). 2 groups → linear, 180°. 3 groups → trigonal planar, 120°. 4 groups → tetrahedral, 109.5°.",
+      "Step 3: the molecular shape describes only where the atoms are. A lone pair takes up one corner of the parent geometry, but it is not counted when the shape is named. With no lone pairs, the molecular shape is the parent geometry itself.",
+      "4 groups with 1 lone pair (3 bonded atoms): the atoms occupy three corners of the tetrahedron and the lone pair the fourth. The central atom sits at the top of a pyramid whose base is the three outer atoms, so the shape is trigonal pyramidal. Example: NH₃, with H–N–H angles of about 107°.",
+      "4 groups with 2 lone pairs (2 bonded atoms): only two corners of the tetrahedron hold atoms. The three atoms form a V, so the shape is bent. Example: H₂O, with an H–O–H angle of about 104.5°.",
+      "A lone pair is held by only one nucleus, so it spreads out more and pushes harder than a bonding pair. That is why the angles in NH₃ and H₂O are a little smaller than 109.5°.",
+      "In the book: Solomons 11e, section 1.16."
+     ],
+     "pictures": [
+      {"source": "sketch", "file": "t0-shape-pyramidal.svg", "smiles": "N", "alt": "NH₃ drawn inside its tetrahedral parent shape: nitrogen with three N–H bonds and a lone pair on the fourth corner, so the molecule is trigonal pyramidal.", "width": 270, "height": 502},
+      {"source": "sketch", "file": "t0-shape-bent.svg", "smiles": "O", "alt": "H₂O drawn inside its tetrahedral parent shape: oxygen with two O–H bonds and two lone pairs on the other two corners, so the molecule is bent.", "width": 279, "height": 488}
+     ],
+     "mistake": {
+      "wrong": "Calling NH₃ tetrahedral because nitrogen has four electron groups.",
+      "whyWrong": "Tetrahedral is the parent geometry of the four electron groups. The molecular shape names only the positions of the atoms, and one corner holds a lone pair, not an atom.",
+      "correct": "Give both when asked: the parent geometry of NH₃ is tetrahedral, and its molecular shape is trigonal pyramidal."
+     }
+    },
+    {
+     "id": "shape-analysis",
+     "heading": "Hybridization and shape, atom by atom",
+     "paragraphs": [
+      "For every atom other than hydrogen, use the same three steps: count the electron groups (bonded atoms plus lone pairs), read the hybridization and the parent geometry from that count, then name the shape from the bonded atoms only. Hydrogen gets no hybridization and no shape: it has one bond and nothing to arrange around it.",
+      "Electron groups → hybridization → parent geometry: 4 → sp³ → tetrahedral (109.5°). 3 → sp² → trigonal planar (120°). 2 → sp → linear (180°).",
+      "Then leave out the lone pairs. With 4 groups, 0, 1, 2 or 3 lone pairs give a tetrahedral, trigonal pyramidal, bent or linear shape. With 3 groups, 0, 1 or 2 lone pairs give a trigonal planar, bent or linear shape. With 2 groups the shape is linear.",
+      "An atom bonded to only one other atom is described as linear around it, whatever its parent geometry, because two atoms always lie on one line. That is the case for the oxygens of CO₂, the C=O oxygen of H₂CO₃ and the chlorine of ClCH₂C≡CH.",
+      "In the book: Solomons 11e, sections 1.12–1.16."
+     ],
+     "workedExamples": [
+      {
+       "title": "Hybridization and shape in CO₂",
+       "steps": [
+        "C: 2 electron groups (the two O atoms, no lone pairs). 2 groups → sp, linear. O=C=O is a straight line, 180°.",
+        "Each O: 3 electron groups (the C atom and two lone pairs). 3 groups → sp², parent geometry trigonal planar.",
+        "Each O is bonded to only one atom, so the geometry at O is linear. Its two lone pairs are not part of the shape.",
+        "Result: C sp, linear. Each O sp², linear, derived from trigonal planar."
+       ],
+       "picture": {"source": "sketch", "file": "t0-shape-co2.svg", "smiles": "O=C=O", "alt": "CO₂ labeled with hybridization and shape: carbon sp and linear, each oxygen sp² and linear, derived from trigonal planar.", "width": 460, "height": 341}
+      },
+      {
+       "title": "Hybridization and shape in ClCH₂C≡CH",
+       "steps": [
+        "Cl: 4 electron groups (the C atom and three lone pairs) → sp³, parent geometry tetrahedral. Cl is bonded to only one atom, so the geometry at Cl is linear.",
+        "CH₂ carbon: 4 electron groups (Cl, two H and the next C, no lone pairs) → sp³, tetrahedral, 109.5°.",
+        "Middle carbon: 2 electron groups (the CH₂ carbon and the other alkyne carbon, the triple bond counts once) → sp, linear, 180°.",
+        "End carbon: 2 electron groups (the other alkyne carbon and H) → sp, linear, 180°.",
+        "The three H atoms are not hybridized: each uses its 1s orbital for its one bond."
+       ],
+       "picture": {"source": "sketch", "file": "t0-shape-ch2clcch.svg", "smiles": "ClCC#C", "alt": "ClCH₂C≡CH labeled with hybridization and shape: Cl sp³ and linear, derived from tetrahedral. The CH₂ carbon sp³ and tetrahedral. Both alkyne carbons sp and linear. The hydrogens carry no hybridization label.", "width": 422, "height": 409}
+      },
+      {
+       "title": "Hybridization and shape in H₃O⁺",
+       "steps": [
+        "O: 4 electron groups (three H atoms and one lone pair) → sp³, parent geometry tetrahedral.",
+        "Leave the lone pair out of the name: the three H atoms form the base of a pyramid with O at the top. The shape is trigonal pyramidal, derived from tetrahedral, like NH₃.",
+        "The H atoms are not hybridized."
+       ],
+       "picture": {"source": "sketch", "file": "t0-shape-h3o.svg", "smiles": "[OH3+]", "alt": "H₃O⁺ drawn in 3D: oxygen with three O–H bonds, one lone pair and a +1 formal charge, labeled sp³ and trigonal pyramidal, derived from tetrahedral.", "width": 435, "height": 391}
+      },
+      {
+       "title": "Hybridization and shape in H₂CO₃",
+       "steps": [
+        "C: 3 electron groups (three O atoms, no lone pairs) → sp², trigonal planar, 120°.",
+        "C=O oxygen: 3 electron groups (the C atom and two lone pairs) → sp², parent geometry trigonal planar. It is bonded to only one atom, so the geometry at this O is linear.",
+        "Each OH oxygen: 4 electron groups (C, H and two lone pairs) → sp³, parent geometry tetrahedral. Two bonded atoms and two lone pairs, so the shape at this O is bent.",
+        "The two H atoms are not hybridized."
+       ],
+       "picture": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² and linear, derived from trigonal planar, the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 567}
+      }
+     ]
+    },
+    {
+     "id": "constitutional-isomers",
+     "heading": "Constitutional isomers",
+     "paragraphs": [
+      "A molecular formula counts atoms: C₂H₆O means 2 carbons, 6 hydrogens and 1 oxygen. It says nothing about which atom is bonded to which.",
+      "Connectivity (also called constitution) is the order in which the atoms are bonded to each other. Different connectivities can share one molecular formula.",
+      "Constitutional isomers are different compounds with the same molecular formula and different connectivity. Because their atoms are joined differently, they usually have different properties: different functional groups, boiling points and reactions.",
+      "The classic pair is ethanol, CH₃CH₂OH, and dimethyl ether, CH₃OCH₃. Both are C₂H₆O. In ethanol the O is bonded to a C and an H (an O–H group, an alcohol). In dimethyl ether the O is bonded to two C atoms (an ether). Ethanol boils at 78 °C and dimethyl ether at −24 °C.",
+      "To decide whether two structures are constitutional isomers, work in two steps. Step 1: write each molecular formula by counting C, H and every other atom. If the formulas differ, stop: they are not isomers. Step 2: if the formulas match, compare connectivity. Follow the bonds atom by atom. If they match, even when one drawing is rotated, flipped or bent differently, it is the same compound drawn twice. If they differ, the two are constitutional isomers.",
+      "A shortcut for counting hydrogens in compounds of C, H and O: an open-chain compound with n carbons and only single bonds has 2n + 2 hydrogens (an O atom does not change this). Every ring and every double bond removes 2 hydrogens. So any compound with 3 carbons, 1 oxygen and one ring or one double bond (C=C or C=O) is C₃H₆O.",
+      "Two compounds with the same formula and the same connectivity that differ only in their arrangement in space, such as cis- and trans-1,2-dibromoethene, are stereoisomers, not constitutional isomers.",
+      "In the book: Solomons 11e, section 1.6."
+     ],
+     "workedExamples": [
+      {
+       "title": "Are butane and 2-methylpropane constitutional isomers?",
+       "steps": [
+        "Butane, CH₃CH₂CH₂CH₃: 4 carbons, and 3 + 2 + 2 + 3 = 10 hydrogens. Formula C₄H₁₀.",
+        "2-Methylpropane, CH(CH₃)₃: 4 carbons, and 1 + 3 × 3 = 10 hydrogens. Formula C₄H₁₀.",
+        "The formulas match, so compare connectivity. In butane the four carbons form one unbranched chain, and no carbon is bonded to more than 2 other carbons.",
+        "In 2-methylpropane the central carbon is bonded to 3 other carbons: the chain is branched.",
+        "Same formula, different connectivity: they are constitutional isomers."
+       ]
+      },
+      {
+       "title": "Are CH₃CH₂CH₂OH and HOCH₂CH₂CH₃ constitutional isomers?",
+       "steps": [
+        "Formulas: both are C₃H₈O.",
+        "Connectivity: start at the O and follow the bonds. Both give O–C–C–C, with the OH on an end carbon.",
+        "The second formula is the first one written from right to left. Same connectivity, so it is the same compound, propan-1-ol, not an isomer."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dipoles-polarity",
+     "heading": "Bond dipoles and molecular polarity",
+     "paragraphs": [
+      "Electronegativity is an atom's pull on the electrons of a bond. On the Pauling scale: F 4.0, O 3.5, N 3.0, Cl 3.0, Br 2.8, C 2.5, H 2.1, B 2.0.",
+      "When two bonded atoms differ in electronegativity, the shared electrons sit closer to the more electronegative atom. That atom gets a partial negative charge (δ−) and the other atom a partial positive charge (δ+). The bond is polar and has a bond dipole.",
+      "A bond dipole is drawn as an arrow with a cross on its tail. The crossed tail sits at the δ+ end and the head points to the δ− end, so the arrow runs from + to −.",
+      "The dipole moment of the whole molecule, μ, is the vector sum of all its bond dipoles: add the arrows head to tail, taking both their length and their direction into account. Equal arrows that point in opposite directions cancel.",
+      "That is why the shape matters. A molecule with polar bonds is still nonpolar (μ = 0) if its shape makes the bond dipoles cancel exactly. If they do not cancel, the molecule is polar, and the net μ points toward its negative side.",
+      "A lone pair adds to μ as well: it is electron density on one side of the atom, so it moves the negative end of the molecule toward itself, as in NH₃ and H₂O.",
+      "In the book: Solomons 11e, sections 2.2–2.3."
+     ],
+     "workedExamples": [
+      {
+       "title": "NH₃: the dipoles add",
+       "steps": [
+        "Bond dipoles: N (3.0) is more electronegative than H (2.1), so each N–H arrow points from H (δ+) to N (δ−).",
+        "Shape: 4 electron groups with 1 lone pair, so NH₃ is trigonal pyramidal, with the three H atoms below N.",
+        "The three N–H arrows all tilt up toward N. Their sideways parts cancel, because they point 120° apart around the axis, but their upward parts add.",
+        "The lone pair on top of N adds in the same direction.",
+        "Result: NH₃ is polar, and its net μ points toward N and the lone pair."
+       ],
+       "picture": {"source": "sketch", "file": "t0-dipole-nh3.svg", "smiles": "N", "alt": "NH₃ with three bond dipole arrows pointing from H to N, and a blue net dipole arrow pointing toward nitrogen and its lone pair.", "width": 328, "height": 255}
+      },
+      {
+       "title": "BF₃: the dipoles cancel",
+       "steps": [
+        "Bond dipoles: F (4.0) is much more electronegative than B (2.0), so each B–F bond is very polar, with the arrow from B to F.",
+        "Shape: B has 3 electron groups and no lone pair, so BF₃ is trigonal planar, with the F atoms 120° apart.",
+        "Three equal arrows 120° apart in one plane add up to zero: placed head to tail, they close a triangle and end where they started.",
+        "Result: μ = 0. BF₃ has polar bonds but is a nonpolar molecule."
+       ],
+       "picture": {"source": "sketch", "file": "t0-dipole-bf3.svg", "smiles": "FB(F)F", "alt": "Trigonal planar BF₃ with three equal B→F dipole arrows 120° apart that cancel, labeled μ = 0.", "width": 386, "height": 320}
+      },
+      {
+       "title": "trans-1,2-dibromoethene: the dipoles cancel",
+       "steps": [
+        "Bond dipoles: Br (2.8) is more electronegative than C (2.5), so each C–Br arrow points from C to Br. The C–H dipoles are small (C 2.5, H 2.1).",
+        "Shape: each carbon of the C=C has 3 electron groups (sp², trigonal planar), so all six atoms lie in one plane.",
+        "In the trans isomer the two Br atoms are on opposite sides of the double bond, so the two C→Br arrows are equal and point in exactly opposite directions.",
+        "They cancel, and so do the two small C–H dipoles.",
+        "Result: μ = 0 for trans-1,2-dibromoethene."
+       ],
+       "picture": {"source": "sketch", "file": "t0-dipole-trans-12-dibromoethene.svg", "smiles": "Br/C=C/Br", "alt": "trans-1,2-dibromoethene with the two C→Br dipole arrows pointing in opposite directions, labeled μ = 0.", "width": 310, "height": 326}
+      },
+      {
+       "title": "cis-1,2-dibromoethene: the dipoles add",
+       "steps": [
+        "Same bonds and the same planar shape as the trans isomer.",
+        "In the cis isomer both Br atoms are on the same side of the double bond, so both C→Br arrows point toward that side.",
+        "Along the C=C axis their parts cancel (one points left, the other right), but their parts toward the Br side add. The small C–H dipoles point the same way.",
+        "Result: cis-1,2-dibromoethene is polar, and its net μ points toward the two bromines.",
+        "Same formula and same connectivity but different polarity: cis and trans are stereoisomers, and the polar cis isomer boils higher."
+       ],
+       "picture": {"source": "sketch", "file": "t0-dipole-cis-12-dibromoethene.svg", "smiles": "Br/C=C\\Br", "alt": "cis-1,2-dibromoethene with both C→Br dipole arrows on the bromine side and a blue net dipole arrow pointing toward the bromines.", "width": 405, "height": 293}
+      }
+     ]
+    },
+    {
+     "id": "imf-solvents",
+     "heading": "Intermolecular forces and common solvents",
+     "paragraphs": [
+      "Intermolecular forces are attractions between separate molecules. They are much weaker than covalent bonds, but they decide boiling points, melting points and solubility: boiling a liquid pulls its molecules apart without breaking any of their bonds.",
+      "London dispersion forces act between all molecules. Electrons are always moving, so at any instant a molecule can have a small temporary dipole. It induces a matching dipole in a neighbor, and the two attract. Larger molecules, with more electrons and more surface in contact, have stronger dispersion forces. That is why boiling points rise from methane to hexane, and why an unbranched chain boils higher than a compact, branched isomer.",
+      "Dipole–dipole forces act between polar molecules: the δ+ end of one molecule attracts the δ− end of the next. They come on top of dispersion forces, so a polar molecule usually boils higher than a nonpolar molecule of similar size.",
+      "A hydrogen bond is an especially strong dipole–dipole attraction. It needs an H bonded to N, O or F (the donor, where the very polar bond leaves H strongly δ+) and a lone pair on an N, O or F atom of a neighboring molecule (the acceptor). Water, alcohols, carboxylic acids and amines with N–H bonds form hydrogen bonds with each other.",
+      "Solubility follows the rule “like dissolves like”. To dissolve, the new solute–solvent attractions must replace the solute–solute and solvent–solvent attractions that are lost. Polar and hydrogen-bonding solutes dissolve in polar solvents, and nonpolar solutes dissolve in nonpolar solvents.",
+      "Polar protic solvents have an O–H or N–H bond, so they can donate hydrogen bonds: water, methanol, ethanol and acetic acid. They dissolve salts and polar compounds well and surround anions with hydrogen bonds.",
+      "Polar aprotic solvents are polar, with a large dipole that often comes from a C=O, S=O or C≡N bond, but they have no O–H or N–H, so they cannot donate hydrogen bonds (they can still accept them): acetone, dimethyl sulfoxide (DMSO), N,N-dimethylformamide (DMF) and acetonitrile. They dissolve many polar compounds and salts, but they surround anions much less than protic solvents do.",
+      "Nonpolar solvents have little or no dipole and attract only by dispersion forces: hexane, benzene, toluene and carbon tetrachloride (CCl₄). They dissolve nonpolar compounds such as hydrocarbons, oils and fats.",
+      "Water and hexane do not mix: hexane cannot form hydrogen bonds, so mixing would break hydrogen bonds between water molecules without anything as strong in return. Ethanol mixes with water in any ratio, because its O–H group forms hydrogen bonds with water. As the carbon chain of an alcohol gets longer, the nonpolar part takes over and solubility in water falls: octan-1-ol barely dissolves.",
+      "In the book: Solomons 11e, sections 2.13–2.14. Polar protic and polar aprotic solvents come back in Chapter 6, in substitution reactions."
+     ],
+     "workedExamples": [
+      {
+       "title": "Which boils highest: CH₃CH₂CH₃, CH₃OCH₃ or CH₃CH₂OH?",
+       "steps": [
+        "The molar masses are almost equal (44, 46 and 46 g/mol), so the dispersion forces are similar and the other forces decide.",
+        "CH₃CH₂CH₃ (propane) has only C–C and C–H bonds and is nonpolar: dispersion forces only.",
+        "CH₃OCH₃ (dimethyl ether) has two polar C–O bonds in a bent C–O–C, so the molecule is polar: dipole–dipole forces. It has no O–H, so one ether molecule cannot donate a hydrogen bond to another.",
+        "CH₃CH₂OH (ethanol) has an O–H bond, so each molecule can donate and accept hydrogen bonds, the strongest of the three forces.",
+        "Order of boiling points: propane (−42 °C) < dimethyl ether (−24 °C) < ethanol (78 °C)."
+       ]
+      },
+      {
+       "title": "Classify the solvents water, methanol, acetone, DMSO and hexane",
+       "steps": [
+        "Water, H–O–H: polar and has O–H bonds → polar protic.",
+        "Methanol, CH₃OH: polar and has an O–H bond → polar protic.",
+        "Acetone, (CH₃)₂C=O: a polar C=O bond and no O–H or N–H → polar aprotic.",
+        "DMSO, (CH₃)₂S=O: a polar S=O bond and no O–H or N–H → polar aprotic.",
+        "Hexane, CH₃(CH₂)₄CH₃: only C–C and C–H bonds → nonpolar."
+       ]
+      }
+     ],
+     "mistake": {
+      "wrong": "Counting every molecule that contains H and O as a hydrogen-bond donor, for example dimethyl ether or acetone.",
+      "whyWrong": "A donor needs an H bonded directly to N, O or F. In CH₃OCH₃ and in acetone every H is on carbon, and a C–H bond is not polar enough.",
+      "correct": "Look for O–H, N–H or F–H. Ethers and ketones can only accept hydrogen bonds, with the lone pairs on their O, for example from water."
+     }
+    }
+   ]
+  }
+ }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="473.76" height="567.04" viewBox="-35.52 -33.12 473.76 567.04" role="img" aria-label="Shapes around the atoms of carbonic acid">
+<!-- t0-shape-h2co3; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="-35.52" y="-33.12" width="473.76" height="567.04" fill="#FFFFFF"/>
+<line x1="246.95" y1="130.00" x2="246.95" y2="116.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="253.05" y1="130.00" x2="253.05" y2="116.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="240.00" y1="140.00" x2="226.00" y2="140.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="260.00" y1="140.00" x2="274.00" y2="140.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="207.34" y1="145.00" x2="193.05" y2="153.25" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="292.66" y1="145.00" x2="306.95" y2="153.25" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="250.00" y="145.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">C</text>
+<text x="250.00" y="111.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="216.00" y="145.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="284.00" y="145.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="186.56" y="162.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="313.44" y="162.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="236.50" cy="109.10" r="2.15" fill="#E00000"/>
+<circle cx="236.50" cy="102.90" r="2.15" fill="#E00000"/>
+<circle cx="263.50" cy="102.90" r="2.15" fill="#E00000"/>
+<circle cx="263.50" cy="109.10" r="2.15" fill="#E00000"/>
+<circle cx="221.40" cy="152.76" r="2.15" fill="#E00000"/>
+<circle cx="215.29" cy="153.83" r="2.15" fill="#E00000"/>
+<circle cx="212.90" cy="126.50" r="2.15" fill="#E00000"/>
+<circle cx="219.10" cy="126.50" r="2.15" fill="#E00000"/>
+<circle cx="284.71" cy="153.83" r="2.15" fill="#E00000"/>
+<circle cx="278.60" cy="152.76" r="2.15" fill="#E00000"/>
+<circle cx="280.90" cy="126.50" r="2.15" fill="#E00000"/>
+<circle cx="287.10" cy="126.50" r="2.15" fill="#E00000"/>
+<line x1="258.00" y1="154.00" x2="290.00" y2="190.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
+<text x="296.00" y="214.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">C: sp²,</text>
+<text x="296.00" y="236.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">trigonal planar</text>
+<line x1="250.00" y1="86.00" x2="250.00" y2="38.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
+<text x="250.00" y="8.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">carbonyl O: sp², linear</text>
+<text x="250.00" y="30.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(from trigonal planar)</text>
+<line x1="210.00" y1="158.00" x2="170.00" y2="194.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
+<text x="162.00" y="193.70" text-anchor="end" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">OH oxygen: sp³, bent</text>
+<text x="162.00" y="215.70" text-anchor="end" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(from tetrahedral)</text>
+<text x="250.00" y="310.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Carbonyl O: 3 electron groups give</text>
+<text x="250.00" y="334.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a trigonal planar parent shape.</text>
+<text x="250.00" y="358.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Only one atom is bonded,</text>
+<text x="250.00" y="382.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so it is linear.</text>
+<text x="250.00" y="406.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">OH oxygen: 4 electron groups give</text>
+<text x="250.00" y="430.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a tetrahedral parent shape.</text>
+<text x="250.00" y="454.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">2 lone pairs are not counted,</text>
+<text x="250.00" y="478.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so it is bent.</text>
+<text x="250.00" y="502.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Hydrogen is not hybridized.</text>
+</svg>

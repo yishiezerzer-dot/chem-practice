@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="327.68" height="254.56" viewBox="36.16 56.80 327.68 254.56" role="img" aria-label="Ammonia with bond dipoles and net dipole moment mu">
+<!-- t0-dipole-nh3; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="36.16" y="56.80" width="327.68" height="254.56" fill="#FFFFFF"/>
+<line x1="160.60" y1="151.58" x2="145.10" y2="145.94" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<polygon points="174.23,156.54 185.04,164.31 187.51,157.54" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.4" stroke-linejoin="round"/>
+<line x1="168.25" y1="158.52" x2="169.75" y2="158.93" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="167.13" y1="160.69" x2="169.64" y2="161.36" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="166.02" y1="162.86" x2="169.52" y2="163.80" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="164.90" y1="165.03" x2="169.40" y2="166.23" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="163.79" y1="167.20" x2="169.28" y2="168.67" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="162.67" y1="169.36" x2="169.17" y2="171.10" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="170.00" y="160.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#0000E0">N</text>
+<text x="138.05" y="148.97" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="201.31" y="172.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="161.38" y="192.78" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<line x1="136.59" y1="162.00" x2="152.10" y2="167.64" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="159.15,170.20 150.94,170.81 153.25,164.47" fill="#333333" stroke="#333333" stroke-width="0.3" stroke-linejoin="round"/>
+<line x1="139.17" y1="169.53" x2="143.41" y2="157.88" stroke="#333333" stroke-width="1.8" stroke-linecap="butt"/>
+<line x1="203.77" y1="146.01" x2="188.27" y2="140.37" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="181.22,137.80 189.42,137.19 187.11,143.54" fill="#333333" stroke="#333333" stroke-width="0.3" stroke-linejoin="round"/>
+<line x1="201.19" y1="138.47" x2="196.95" y2="150.12" stroke="#333333" stroke-width="1.8" stroke-linecap="butt"/>
+<line x1="181.90" y1="187.86" x2="186.17" y2="171.92" stroke="#333333" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="188.11,164.68 189.43,172.80 182.91,171.05" fill="#333333" stroke="#333333" stroke-width="0.3" stroke-linejoin="round"/>
+<line x1="189.18" y1="184.63" x2="177.21" y2="181.43" stroke="#333333" stroke-width="1.8" stroke-linecap="butt"/>
+<circle cx="166.50" cy="137.00" r="2.15" fill="#0000E0"/>
+<circle cx="173.50" cy="137.00" r="2.15" fill="#0000E0"/>
+<line x1="245.00" y1="210.00" x2="245.00" y2="94.00" stroke="#0B57D0" stroke-width="2.2" stroke-linecap="round"/>
+<polygon points="245.00,85.00 249.05,94.00 240.95,94.00" fill="#0B57D0" stroke="#0B57D0" stroke-width="0.3" stroke-linejoin="round"/>
+<line x1="251.50" y1="205.00" x2="238.50" y2="205.00" stroke="#0B57D0" stroke-width="2.2" stroke-linecap="butt"/>
+<text x="261.00" y="141.25" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="13" font-weight="italic" fill="#0B57D0">μ</text>
+<text x="200.00" y="280.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="#5F6B7A">NH₃   net μ toward N (and the lone pair)</text>
+</svg>

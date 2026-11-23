@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="281.76" height="165.60" viewBox="9.12 53.76 281.76 165.60" role="img" aria-label="Lewis structure of hydronium with formal charge on oxygen">
+<!-- t0-lewis-h3o; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="9.12" y="53.76" width="281.76" height="165.60" fill="#FFFFFF"/>
+<line x1="140.00" y1="105.00" x2="123.50" y2="105.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="160.00" y1="105.00" x2="176.50" y2="105.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="153.42" y1="114.40" x2="159.06" y2="129.90" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="150.00" y="110.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="116.00" y="110.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="184.00" y="110.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="161.63" y="142.55" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="146.90" cy="90.00" r="2.15" fill="#E00000"/>
+<circle cx="153.10" cy="90.00" r="2.15" fill="#E00000"/>
+<circle cx="172.00" cy="91.00" r="8.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.2"/>
+<text x="172.00" y="96.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">+</text>
+<text x="150.00" y="188.00" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#5F6B7A">H₃O⁺   formal charge +1 on O</text>
+</svg>

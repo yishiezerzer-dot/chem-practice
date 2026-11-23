@@ -25,7 +25,7 @@ JSON_FILES = ['questions.json', 'readings.json', 'pictures.json']
 BOND = 34          # pixels per bond: the same scale in every automatic picture
 PAD = 22           # room around the atoms for labels, charges and wedge ends
 MIN_W, MIN_H = 120, 80
-MAX_W = 296        # card text width at a 360px screen: wider pictures would be scaled down
+MAX_W = 296        # card text width at a 360px screen: wider automatic (RDKit) pictures would be scaled down; sketches may be wider
 
 rdDepictor.SetPreferCoordGen(True)
 
@@ -59,14 +59,28 @@ def draw(smiles):
     return svg, w, h
 
 
+def _px(v):
+    """CSS length of an SVG width/height attribute in px: a number, "px", or "pt" (x 4/3). Other units: unreadable."""
+    m = re.fullmatch(r'\s*(\d+\.?\d*|\.\d+)\s*(px|pt)?\s*', v, re.I)
+    if not m:
+        raise ValueError('unreadable SVG length %r (only a number, px or pt)' % v)
+    return float(m.group(1)) * 4 / 3 if (m.group(2) or '').lower() == 'pt' else float(m.group(1))
+
+
+def _round(x):
+    return int(x + 0.5)  # round half up, same as Math.round in check-cards.js (not Python's banker's round)
+
+
 def svg_size(text):
+    """Root <svg> size in whole px: width/height (unit-less, px or pt), else the viewBox. Same rule as check-cards.js svgSize."""
     root = re.search(r'<svg\b[^>]*>', text, re.S).group(0)
-    wm, hm = re.search(r'\bwidth=[\'"]([\d.]+)(px)?[\'"]', root), re.search(r'\bheight=[\'"]([\d.]+)(px)?[\'"]', root)
-    if wm and hm:
-        return round(float(wm.group(1))), round(float(hm.group(1)))
+    attr = lambda n: (re.search(r'(?<![\w:-])%s\s*=\s*[\'"]([^\'"]*)[\'"]' % n, root) or [None, None])[1]
+    w, h = attr('width'), attr('height')
+    if w is not None and h is not None:
+        return _round(_px(w)), _round(_px(h))
     vb = re.search(r'\bviewBox=[\'"][\d.\-]+[ ,]+[\d.\-]+[ ,]+([\d.]+)[ ,]+([\d.]+)[\'"]', root)
     if vb:
-        return round(float(vb.group(1))), round(float(vb.group(2)))
+        return _round(float(vb.group(1))), _round(float(vb.group(2)))
     raise ValueError('no width/height or viewBox')
 
 
@@ -141,7 +155,7 @@ def main():
             else:
                 problems.append('%s: %s has unknown source %r' % (name, p['file'], p['source']))
                 continue
-            if w > MAX_W:
+            if p['source'] == 'auto' and w > MAX_W:
                 problems.append('%s: %s is %dpx wide, more than %dpx: it would be scaled down at 360px' % (name, p['file'], w, MAX_W))
             if p.get('width') != w or p.get('height') != h:
                 if check:

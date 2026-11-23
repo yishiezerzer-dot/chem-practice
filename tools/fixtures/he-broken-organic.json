@@ -1,0 +1,35 @@
+{
+  "_note": "Test fixture for node tools/check-he.js --self-test (Organic path). Deliberately broken; never listed in data/organic1/he/index.json. _en_reading stands in for an English reading so the section checks run even when the topic has none.",
+  "topic_id": "o-02-nomenclature",
+  "_en_reading": {
+    "sections": [
+      {
+        "id": "chain-and-branch",
+        "heading": "The longest chain",
+        "paragraphs": ["Find the longest chain of carbons.", "Name the branches as prefixes."],
+        "picture": { "source": "sketch", "file": "x.svg", "smiles": "CC", "alt": "Bond-line structure of butane" }
+      }
+    ]
+  },
+  "reading": {
+    "sections": [
+      {
+        "id": "no-such-section",
+        "heading": "The longest chain",
+        "paragraphs": ["Find the longest chain of carbons.", "Name the branches as prefixes."],
+        "picture": { "alt": "Bond-line structure of butane" }
+      },
+      {
+        "id": "extra-section",
+        "heading": "ספירת פחמנים; ואז מספור <bdi>שרשרת</bdi>",
+        "paragraphs": ["יש 2 <bdi>H<sub>2</sub>O</bdi>", "מים H₂O ושמות כמו methylbutane חייבים <bdi>לעטוף</bdi>"]
+      }
+    ]
+  },
+  "questions": {
+    "o-sample-mc": {
+      "q": "What is the IUPAC name of this molecule?",
+      "choices": [{ "why": "Wrong numbering." }]
+    }
+  }
+}

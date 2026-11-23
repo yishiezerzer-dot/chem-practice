@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="434.56" height="391.36" viewBox="79.52 30.56 434.56 391.36" role="img" aria-label="Trigonal pyramidal shape of hydronium, derived from tetrahedral">
+<!-- t0-shape-h3o; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="79.52" y="30.56" width="434.56" height="391.36" fill="#FFFFFF"/>
+<line x1="190.60" y1="136.58" x2="175.10" y2="130.94" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<polygon points="204.43,140.78 217.77,146.79 219.02,139.70" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.4" stroke-linejoin="round"/>
+<line x1="197.95" y1="143.36" x2="199.41" y2="143.89" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="196.65" y1="145.42" x2="199.08" y2="146.31" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="195.35" y1="147.48" x2="198.75" y2="148.72" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="194.05" y1="149.55" x2="198.42" y2="151.14" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="192.75" y1="151.61" x2="198.10" y2="153.55" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<line x1="191.44" y1="153.67" x2="197.77" y2="155.97" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="200.00" y="145.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="168.05" y="133.97" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="234.15" y="151.62" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="188.60" y="176.91" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="196.90" cy="124.00" r="2.15" fill="#E00000"/>
+<circle cx="203.10" cy="124.00" r="2.15" fill="#E00000"/>
+<circle cx="200.00" cy="104.00" r="8.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.2"/>
+<text x="200.00" y="109.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#1A1A1A">+</text>
+<line x1="216.00" y1="122.00" x2="278.00" y2="72.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
+<text x="286.00" y="71.70" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">O: sp³, trigonal pyramidal</text>
+<text x="286.00" y="93.70" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(from tetrahedral)</text>
+<text x="240.00" y="270.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">4 electron groups give</text>
+<text x="240.00" y="294.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a tetrahedral parent shape.</text>
+<text x="240.00" y="318.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">The lone pair is not counted</text>
+<text x="240.00" y="342.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">in the molecular shape,</text>
+<text x="240.00" y="366.00" text-anchor="middle" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so H₃O⁺ is trigonal pyramidal.</text>
+<text x="240.00" y="390.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Hydrogen is not hybridized.</text>
+</svg>
