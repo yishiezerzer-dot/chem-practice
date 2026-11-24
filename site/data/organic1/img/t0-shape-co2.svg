@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="459.52" height="340.96" viewBox="90.72 -1.12 459.52 340.96" role="img" aria-label="Linear shape of carbon dioxide with hybridization labels">
+<svg xmlns="http://www.w3.org/2000/svg" width="469.28" height="316.96" viewBox="83.20 -1.12 469.28 316.96" role="img" aria-label="Linear shape of carbon dioxide with hybridization labels">
 <!-- t0-shape-co2; original Chem Sketcher drawing; encoding=UTF-8 -->
-<rect x="90.72" y="-1.12" width="459.52" height="340.96" fill="#FFFFFF"/>
+<rect x="83.20" y="-1.12" width="469.28" height="316.96" fill="#FFFFFF"/>
 <line x1="182.00" y1="106.95" x2="230.00" y2="106.95" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
 <line x1="182.00" y1="113.05" x2="230.00" y2="113.05" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
 <line x1="250.00" y1="106.95" x2="298.00" y2="106.95" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
@@ -20,11 +20,10 @@
 <line x1="240.00" y1="94.00" x2="248.00" y2="48.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
 <text x="254.00" y="40.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">C: sp, linear</text>
 <line x1="324.00" y1="114.00" x2="350.00" y2="148.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
-<text x="356.00" y="172.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">O: sp², linear</text>
-<text x="356.00" y="194.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(from trigonal planar)</text>
+<text x="356.00" y="172.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">O: sp²</text>
+<text x="356.00" y="194.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(no molecular shape)</text>
 <text x="240.00" y="210.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="#5F6B7A">O=C=O is linear (180°)</text>
-<text x="240.00" y="236.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">3 electron groups at O give</text>
-<text x="240.00" y="260.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a trigonal planar parent shape.</text>
-<text x="240.00" y="284.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Only one atom is bonded,</text>
-<text x="240.00" y="308.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so the geometry at O is linear.</text>
+<text x="240.00" y="236.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">O: 3 electron groups, so sp².</text>
+<text x="240.00" y="260.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">O is an end atom with one bond,</text>
+<text x="240.00" y="284.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so it has no molecular shape.</text>
 </svg>

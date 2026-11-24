@@ -226,12 +226,12 @@
   "id": "o-0-q6",
   "topic": "o-00-review",
   "type": "notebook",
-  "q": "In your notebook, draw H₂CO₃ and label every atom except H with its hybridization and the shape around it. For each kind of oxygen, also name the parent geometry its shape is derived from.",
+  "q": "In your notebook, draw H₂CO₃ and label every atom except H with its hybridization and, if it has one, its molecular shape. For the OH oxygens, also name the parent geometry their shape is derived from.",
   "answer": "C sp² · O= sp² · OH sp³",
-  "answer_image": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² and linear, derived from trigonal planar, the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 567},
+  "answer_image": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² with no molecular shape, because it is an end atom with one bond, and the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 543},
   "steps": [
    "C: 3 electron groups (three O, no lone pairs) → sp², trigonal planar, 120°.",
-   "C=O oxygen: 3 electron groups (C and two lone pairs) → sp², parent trigonal planar. Only one bonded atom, so its geometry is linear.",
+   "C=O oxygen: 3 electron groups (C and two lone pairs) → sp². Only one bonded atom, so it is an end atom with no molecular shape.",
    "Each OH oxygen: 4 electron groups (C, H and two lone pairs) → sp³, parent tetrahedral. Two bonded atoms, so its shape is bent.",
    "Lone pairs count as electron groups for the hybridization and the parent geometry, but not in the name of the shape.",
    "The H atoms get no label: hydrogen is not hybridized."

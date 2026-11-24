@@ -182,7 +182,7 @@
       "VSEPR (valence-shell electron-pair repulsion) predicts shapes from one idea: the electron groups around a central atom repel each other, so they spread out as far apart as possible.",
       "Step 1: count the electron groups on the atom: the bonded atoms plus the lone pairs. A double or a triple bond counts as one group, because all its electrons sit between the same two atoms.",
       "Step 2: the number of groups gives the parent geometry (also called the electron geometry). 2 groups → linear, 180°. 3 groups → trigonal planar, 120°. 4 groups → tetrahedral, 109.5°.",
-      "Step 3: the molecular shape describes only where the atoms are. A lone pair takes up one corner of the parent geometry, but it is not counted when the shape is named. With no lone pairs, the molecular shape is the parent geometry itself.",
+      "Step 3: the molecular shape describes only where the atoms are. A lone pair takes up one corner of the parent geometry, but it is not counted when the shape is named. With no lone pairs, the molecular shape is the parent geometry itself. A molecular shape needs at least two atoms bonded to the central atom, so an atom bonded to only one other atom has no molecular shape.",
       "4 groups with 1 lone pair (3 bonded atoms): the atoms occupy three corners of the tetrahedron and the lone pair the fourth. The central atom sits at the top of a pyramid whose base is the three outer atoms, so the shape is trigonal pyramidal. Example: NH₃, with H–N–H angles of about 107°.",
       "4 groups with 2 lone pairs (2 bonded atoms): only two corners of the tetrahedron hold atoms. The three atoms form a V, so the shape is bent. Example: H₂O, with an H–O–H angle of about 104.5°.",
       "A lone pair is held by only one nucleus, so it spreads out more and pushes harder than a bonding pair. That is why the angles in NH₃ and H₂O are a little smaller than 109.5°.",
@@ -204,8 +204,8 @@
      "paragraphs": [
       "For every atom other than hydrogen, use the same three steps: count the electron groups (bonded atoms plus lone pairs), read the hybridization and the parent geometry from that count, then name the shape from the bonded atoms only. Hydrogen gets no hybridization and no shape: it has one bond and nothing to arrange around it.",
       "Electron groups → hybridization → parent geometry: 4 → sp³ → tetrahedral (109.5°). 3 → sp² → trigonal planar (120°). 2 → sp → linear (180°).",
-      "Then leave out the lone pairs. With 4 groups, 0, 1, 2 or 3 lone pairs give a tetrahedral, trigonal pyramidal, bent or linear shape. With 3 groups, 0, 1 or 2 lone pairs give a trigonal planar, bent or linear shape. With 2 groups the shape is linear.",
-      "An atom bonded to only one other atom is described as linear around it, whatever its parent geometry, because two atoms always lie on one line. That is the case for the oxygens of CO₂, the C=O oxygen of H₂CO₃ and the chlorine of ClCH₂C≡CH.",
+      "Then leave out the lone pairs. With 4 groups, 0, 1 or 2 lone pairs give a tetrahedral, trigonal pyramidal or bent shape. With 3 groups, 0 or 1 lone pair gives a trigonal planar or bent shape. With 2 groups and no lone pairs the shape is linear.",
+      "An atom bonded to only one other atom (an end atom) gets a hybridization from its electron groups but no molecular shape, because a shape needs at least two bonded atoms around it. That is the case for the oxygens of CO₂, the C=O oxygen of H₂CO₃ and the chlorine of ClCH₂C≡CH.",
       "In the book: Solomons 11e, sections 1.12–1.16."
      ],
      "workedExamples": [
@@ -213,22 +213,22 @@
        "title": "Hybridization and shape in CO₂",
        "steps": [
         "C: 2 electron groups (the two O atoms, no lone pairs). 2 groups → sp, linear. O=C=O is a straight line, 180°.",
-        "Each O: 3 electron groups (the C atom and two lone pairs). 3 groups → sp², parent geometry trigonal planar.",
-        "Each O is bonded to only one atom, so the geometry at O is linear. Its two lone pairs are not part of the shape.",
-        "Result: C sp, linear. Each O sp², linear, derived from trigonal planar."
+        "Each O: 3 electron groups (the C atom and two lone pairs). 3 groups → sp².",
+        "Each O is bonded to only one atom, so it is an end atom and has no molecular shape.",
+        "Result: C sp, linear. Each O sp², with no molecular shape."
        ],
-       "picture": {"source": "sketch", "file": "t0-shape-co2.svg", "smiles": "O=C=O", "alt": "CO₂ labeled with hybridization and shape: carbon sp and linear, each oxygen sp² and linear, derived from trigonal planar.", "width": 460, "height": 341}
+       "picture": {"source": "sketch", "file": "t0-shape-co2.svg", "smiles": "O=C=O", "alt": "CO₂ labeled with hybridization and shape: carbon sp and linear, with O=C=O at 180°, and each oxygen sp² with no molecular shape, because it is an end atom with one bond.", "width": 469, "height": 317}
       },
       {
        "title": "Hybridization and shape in ClCH₂C≡CH",
        "steps": [
-        "Cl: 4 electron groups (the C atom and three lone pairs) → sp³, parent geometry tetrahedral. Cl is bonded to only one atom, so the geometry at Cl is linear.",
+        "Cl: 4 electron groups (the C atom and three lone pairs) → sp³. Cl is bonded to only one atom, so it is an end atom and has no molecular shape.",
         "CH₂ carbon: 4 electron groups (Cl, two H and the next C, no lone pairs) → sp³, tetrahedral, 109.5°.",
         "Middle carbon: 2 electron groups (the CH₂ carbon and the other alkyne carbon, the triple bond counts once) → sp, linear, 180°.",
         "End carbon: 2 electron groups (the other alkyne carbon and H) → sp, linear, 180°.",
         "The three H atoms are not hybridized: each uses its 1s orbital for its one bond."
        ],
-       "picture": {"source": "sketch", "file": "t0-shape-ch2clcch.svg", "smiles": "ClCC#C", "alt": "ClCH₂C≡CH labeled with hybridization and shape: Cl sp³ and linear, derived from tetrahedral. The CH₂ carbon sp³ and tetrahedral. Both alkyne carbons sp and linear. The hydrogens carry no hybridization label.", "width": 422, "height": 409}
+       "picture": {"source": "sketch", "file": "t0-shape-ch2clcch.svg", "smiles": "ClCC#C", "alt": "ClCH₂C≡CH labeled with hybridization and shape: Cl sp³ with no molecular shape, because it is an end atom with one bond. The CH₂ carbon sp³ and tetrahedral. Both alkyne carbons sp and linear. The hydrogens carry no hybridization label.", "width": 438, "height": 385}
       },
       {
        "title": "Hybridization and shape in H₃O⁺",
@@ -243,11 +243,11 @@
        "title": "Hybridization and shape in H₂CO₃",
        "steps": [
         "C: 3 electron groups (three O atoms, no lone pairs) → sp², trigonal planar, 120°.",
-        "C=O oxygen: 3 electron groups (the C atom and two lone pairs) → sp², parent geometry trigonal planar. It is bonded to only one atom, so the geometry at this O is linear.",
+        "C=O oxygen: 3 electron groups (the C atom and two lone pairs) → sp². It is bonded to only one atom, so it is an end atom and has no molecular shape.",
         "Each OH oxygen: 4 electron groups (C, H and two lone pairs) → sp³, parent geometry tetrahedral. Two bonded atoms and two lone pairs, so the shape at this O is bent.",
         "The two H atoms are not hybridized."
        ],
-       "picture": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² and linear, derived from trigonal planar, the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 567}
+       "picture": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² with no molecular shape, because it is an end atom with one bond, and the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 543}
       }
      ]
     },

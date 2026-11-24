@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="422.40" height="408.96" viewBox="17.44 -1.12 422.40 408.96" role="img" aria-label="Shape and hybridization of 3-chloroprop-1-yne">
+<svg xmlns="http://www.w3.org/2000/svg" width="437.60" height="384.96" viewBox="2.24 -1.12 437.60 384.96" role="img" aria-label="Shape and hybridization of 3-chloroprop-1-yne">
 <!-- t0-shape-ch2clcch; original Chem Sketcher drawing; encoding=UTF-8 -->
-<rect x="17.44" y="-1.12" width="422.40" height="408.96" fill="#FFFFFF"/>
+<rect x="2.24" y="-1.12" width="437.60" height="384.96" fill="#FFFFFF"/>
 <line x1="177.00" y1="120.00" x2="190.00" y2="120.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
 <polygon points="202.38,116.18 211.69,108.08 205.58,104.27" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0.4" stroke-linejoin="round"/>
 <line x1="201.37" y1="123.66" x2="202.69" y2="122.84" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="butt"/>
@@ -29,17 +29,16 @@
 <circle cx="162.90" cy="105.00" r="2.15" fill="#007A00"/>
 <circle cx="169.10" cy="105.00" r="2.15" fill="#007A00"/>
 <line x1="148.00" y1="130.00" x2="114.00" y2="170.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
-<text x="114.00" y="194.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">Cl: sp³, linear</text>
-<text x="114.00" y="216.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(from tetrahedral)</text>
+<text x="114.00" y="194.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">Cl: sp³</text>
+<text x="114.00" y="216.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">(no molecular shape)</text>
 <line x1="188.00" y1="102.00" x2="152.00" y2="48.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
 <text x="152.00" y="40.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">C: sp³, tetrahedral</text>
 <line x1="236.00" y1="138.00" x2="278.00" y2="186.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
 <text x="284.00" y="210.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">C: sp, linear</text>
 <line x1="276.00" y1="104.00" x2="310.00" y2="62.00" stroke="#5F6B7A" stroke-width="1.15" stroke-linecap="round"/>
 <text x="316.00" y="54.00" text-anchor="start" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#1A1A1A">C: sp, linear</text>
-<text x="234.00" y="280.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Cl: 4 electron groups give</text>
-<text x="234.00" y="304.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a tetrahedral parent shape.</text>
-<text x="234.00" y="328.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Only one atom is bonded,</text>
-<text x="234.00" y="352.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so the geometry at Cl is linear.</text>
-<text x="234.00" y="376.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Hydrogens are not hybridized.</text>
+<text x="234.00" y="280.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Cl: 4 electron groups, so sp³.</text>
+<text x="234.00" y="304.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Cl is an end atom with one bond,</text>
+<text x="234.00" y="328.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so it has no molecular shape.</text>
+<text x="234.00" y="352.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Hydrogens are not hybridized.</text>
 </svg>
