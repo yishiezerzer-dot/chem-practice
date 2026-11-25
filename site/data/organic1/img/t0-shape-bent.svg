@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="279.36" height="487.68" viewBox="120.32 -5.76 279.36 487.68" role="img" aria-label="Bent shape derived from a tetrahedron">
+<!-- t0-shape-bent; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="120.32" y="-5.76" width="279.36" height="487.68" fill="#FFFFFF"/>
+<line x1="259.32" y1="157.81" x2="282.00" y2="146.89" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="242.52" y1="168.81" x2="204.30" y2="224.00" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="255.84" y1="166.26" x2="315.70" y2="224.00" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="268.69" y1="168.88" x2="204.30" y2="224.00" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="282.01" y1="171.42" x2="315.70" y2="224.00" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="204.30" y1="224.00" x2="315.70" y2="224.00" stroke="#C5CAD1" stroke-width="1.15" stroke-linecap="butt" stroke-dasharray="3.5 3"/>
+<line x1="251.81" y1="190.74" x2="210.44" y2="219.70" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="268.19" y1="190.74" x2="309.56" y2="219.70" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="260.00" y="192.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#E00000">O</text>
+<text x="204.30" y="230.30" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="315.70" y="230.30" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="241.88" cy="160.35" r="2.4" fill="#E00000"/>
+<circle cx="252.76" cy="155.28" r="2.4" fill="#E00000"/>
+<circle cx="272.29" cy="156.98" r="2.4" fill="#E00000"/>
+<circle cx="282.12" cy="163.87" r="2.4" fill="#E00000"/>
+<text x="260.00" y="36.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#1A1A1A">Bent</text>
+<text x="260.00" y="60.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#5F6B7A">derived from tetrahedral</text>
+<text x="260.00" y="330.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">4 electron groups give</text>
+<text x="260.00" y="354.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">a tetrahedral parent shape.</text>
+<text x="260.00" y="378.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">Lone pairs are not counted</text>
+<text x="260.00" y="402.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">in the molecular shape,</text>
+<text x="260.00" y="426.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">so 2 lone pairs make it bent.</text>
+<text x="260.00" y="450.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="18" font-weight="normal" fill="#5F6B7A">(Example: H₂O)</text>
+</svg>

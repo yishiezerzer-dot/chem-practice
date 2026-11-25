@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192.48" height="197.12" viewBox="73.76 42.40 192.48 197.12" role="img" aria-label="Lewis structure of carbonic acid with formal charges">
+<!-- t0-lewis-h2co3; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="73.76" y="42.40" width="192.48" height="197.12" fill="#FFFFFF"/>
+<line x1="166.95" y1="100.00" x2="166.95" y2="86.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="173.05" y1="100.00" x2="173.05" y2="86.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="160.00" y1="110.00" x2="146.00" y2="110.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="180.00" y1="110.00" x2="194.00" y2="110.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="127.34" y1="115.00" x2="113.05" y2="123.25" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="212.66" y1="115.00" x2="226.95" y2="123.25" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="170.00" y="115.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">C</text>
+<text x="170.00" y="81.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="136.00" y="115.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="204.00" y="115.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#E00000">O</text>
+<text x="106.56" y="132.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="233.44" y="132.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="156.50" cy="79.10" r="2.15" fill="#E00000"/>
+<circle cx="156.50" cy="72.90" r="2.15" fill="#E00000"/>
+<circle cx="183.50" cy="72.90" r="2.15" fill="#E00000"/>
+<circle cx="183.50" cy="79.10" r="2.15" fill="#E00000"/>
+<circle cx="141.40" cy="122.76" r="2.15" fill="#E00000"/>
+<circle cx="135.29" cy="123.83" r="2.15" fill="#E00000"/>
+<circle cx="132.90" cy="96.50" r="2.15" fill="#E00000"/>
+<circle cx="139.10" cy="96.50" r="2.15" fill="#E00000"/>
+<circle cx="204.71" cy="123.83" r="2.15" fill="#E00000"/>
+<circle cx="198.60" cy="122.76" r="2.15" fill="#E00000"/>
+<circle cx="200.90" cy="96.50" r="2.15" fill="#E00000"/>
+<circle cx="207.10" cy="96.50" r="2.15" fill="#E00000"/>
+<text x="170.00" y="210.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="#5F6B7A">H₂CO₃</text>
+</svg>

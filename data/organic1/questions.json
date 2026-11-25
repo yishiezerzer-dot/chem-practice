@@ -60,6 +60,311 @@
    "ref": "1.7",
    "reviewed": false,
    "picture_check": { "status": "unchecked", "checked_by": null, "date": null, "note": "Automatic picture drawn from the SMILES (O3), not yet checked by Chem Sketcher." }
-  }
+  },
+ {
+  "id": "o-0-q1",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "How many neutrons are in the ion ³⁷Cl⁻?",
+  "choices": [
+   {
+    "text": "20",
+    "why": "Right. Chlorine has Z = 17, so N = A − Z = 37 − 17 = 20. The 1− charge changes the number of electrons, not the number of neutrons."
+   },
+   {
+    "text": "17",
+    "why": "17 is Z, the number of protons. The number of neutrons is A − Z."
+   },
+   {
+    "text": "18",
+    "why": "18 is the number of electrons in Cl⁻ (17 + 1). The charge changes only the electrons."
+   },
+   {
+    "text": "37",
+    "why": "37 is the mass number A: protons and neutrons together. Subtract Z = 17 to get the neutrons."
+   }
+  ],
+  "right": 0,
+  "answer": "20",
+  "steps": [
+   "Chlorine is element 17, so Z = 17 (17 protons).",
+   "The superscript is the mass number: A = 37.",
+   "Neutrons: N = A − Z = 37 − 17 = 20.",
+   "The 1− charge means one extra electron (18 electrons) and does not change the nucleus."
+  ],
+  "ref": "1.2",
+  "reviewed": false,
+  "picture_check": {"status": "none", "checked_by": null, "date": null, "note": "No pictures on this card."}
+ },
+ {
+  "id": "o-0-q2",
+  "topic": "o-00-review",
+  "type": "notebook",
+  "q": "Draw the Lewis structure of carbonic acid, H₂CO₃, in your notebook. Show every lone pair and give the formal charge of each atom.",
+  "answer": "(HO)₂C=O",
+  "answer_image": {"source": "sketch", "file": "t0-lewis-h2co3.svg", "smiles": "OC(=O)O", "alt": "Lewis structure of carbonic acid, H₂CO₃: a central carbon with one C=O and two C–O–H groups, two lone pairs on every oxygen, and all formal charges 0.", "width": 192, "height": 197},
+  "steps": [
+   "Count valence electrons: 2 H + C + 3 O = 2 + 4 + 18 = 24.",
+   "Skeleton: C in the center bonded to three O atoms, with one H on each of two O atoms. These 5 single bonds use 10 electrons, leaving 14.",
+   "Give each OH oxygen 2 lone pairs and the O without H 3 lone pairs: 4 + 4 + 6 = 14 electrons, all used.",
+   "C has only 3 bonds, so move one lone pair of the O without H into a C=O double bond. Every atom now has a full shell.",
+   "Formal charges: C = 4 − 0 − ½ × 8 = 0, each O = 6 − 4 − ½ × 4 = 0, each H = 1 − 0 − ½ × 2 = 0. All formal charges are 0."
+  ],
+  "ref": "1.5",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q3",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "What is the hybridization of each carbon in ClCH₂C≡CH, from the CH₂ carbon to the carbon at the end?",
+  "q_image": {"source": "sketch", "file": "t0-lewis-ch2clcch.svg", "smiles": "ClCC#C", "alt": "Lewis structure of 3-chloroprop-1-yne, ClCH₂C≡CH: chlorine with three lone pairs bonded to a CH₂ carbon, then a carbon–carbon triple bond ending in C–H. All formal charges are 0.", "width": 214, "height": 184},
+  "choices": [
+   {
+    "text": "sp³, sp, sp",
+    "why": "Right. The CH₂ carbon has 4 electron groups (Cl, two H and C), so it is sp³. Each alkyne carbon has 2 electron groups, because the triple bond counts once, so both are sp."
+   },
+   {
+    "text": "sp³, sp², sp²",
+    "why": "The triple bond counts as one electron group, so each alkyne carbon has 2 groups, not 3. Two groups → sp. sp² fits a carbon in a C=C double bond."
+   },
+   {
+    "text": "sp², sp, sp",
+    "why": "The CH₂ carbon has four single bonds (4 electron groups) and no π bond, so it is sp³, not sp²."
+   },
+   {
+    "text": "sp, sp, sp",
+    "why": "Only a carbon with 2 electron groups (two π bonds) is sp. The CH₂ carbon has 4 groups, so it is sp³."
+   }
+  ],
+  "right": 0,
+  "answer": "sp³, sp, sp",
+  "steps": [
+   "CH₂ carbon: bonded to Cl, two H and the next C, no lone pairs: 4 electron groups → sp³.",
+   "Middle carbon: bonded to the CH₂ carbon and the end carbon. The triple bond counts once, so 2 electron groups → sp.",
+   "End carbon: bonded to the middle carbon and one H: 2 electron groups → sp.",
+   "Check with π bonds: each alkyne carbon has 2 π bonds (sp), and the CH₂ carbon has none (sp³). The H atoms are not hybridized."
+  ],
+  "ref": "1.14",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q4",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "What is the molecular shape around the oxygen of the hydronium ion, H₃O⁺?",
+  "q_image": {"source": "sketch", "file": "t0-lewis-h3o.svg", "smiles": "[OH3+]", "alt": "Lewis structure of the hydronium ion, H₃O⁺: oxygen with three O–H bonds and one lone pair, and a formal charge of +1 on oxygen.", "width": 282, "height": 166},
+  "choices": [
+   {
+    "text": "trigonal pyramidal",
+    "why": "Right. O has 4 electron groups (3 H and 1 lone pair), so the parent geometry is tetrahedral. The lone pair is not counted in the shape, so O and the three H atoms form a pyramid."
+   },
+   {
+    "text": "tetrahedral",
+    "why": "Tetrahedral is the parent geometry of the 4 electron groups. The molecular shape names only atoms, and one corner holds a lone pair."
+   },
+   {
+    "text": "trigonal planar",
+    "why": "Trigonal planar needs 3 electron groups and no lone pair, as in BF₃. The O in H₃O⁺ has a fourth group, its lone pair, which pushes the H atoms out of one plane."
+   },
+   {
+    "text": "bent",
+    "why": "Bent means 2 bonded atoms, as in H₂O. H₃O⁺ has 3 H atoms bonded to O."
+   }
+  ],
+  "right": 0,
+  "answer": "trigonal pyramidal",
+  "steps": [
+   "Count the electron groups on O: 3 bonded H atoms and 1 lone pair, 4 groups.",
+   "4 groups → parent geometry tetrahedral (O is sp³).",
+   "Name the shape from the atoms only: O with 3 H atoms and the lone pair on the fourth corner is trigonal pyramidal.",
+   "The H atoms are not hybridized."
+  ],
+  "ref": "1.16",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q5",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "In CO₂, which two orbitals overlap head-on to form the σ bond of each C=O?",
+  "q_image": {"source": "sketch", "file": "t0-lewis-co2.svg", "smiles": "O=C=O", "alt": "Lewis structure of carbon dioxide: O=C=O with two double bonds, two lone pairs on each oxygen, and a formal charge of 0 on every atom.", "width": 203, "height": 141},
+  "choices": [
+   {
+    "text": "C sp + O sp²",
+    "why": "Right. C has 2 electron groups, so it is sp. Each O has 3 electron groups (C and two lone pairs), so it is sp². The σ bond is the head-on overlap of these two hybrid orbitals."
+   },
+   {
+    "text": "C sp² + O sp²",
+    "why": "The carbon of CO₂ has only 2 electron groups (the two O atoms), so it is sp, not sp²."
+   },
+   {
+    "text": "C 2p + O 2p",
+    "why": "Side-on overlap of two unhybridized 2p orbitals forms the π bond of C=O, not the σ bond."
+   },
+   {
+    "text": "C sp³ + O sp³",
+    "why": "sp³ needs 4 electron groups. In CO₂ the carbon has 2 and each O has 3."
+   }
+  ],
+  "right": 0,
+  "answer": "C sp + O sp²",
+  "steps": [
+   "Carbon: 2 electron groups (the two O atoms, no lone pairs) → sp.",
+   "Each oxygen: 3 electron groups (the C atom and two lone pairs) → sp².",
+   "σ bond: a carbon sp hybrid overlaps head-on with an oxygen sp² hybrid, along the C–O axis.",
+   "π bond: an unhybridized 2p orbital on C overlaps side-on with the parallel 2p orbital on O. Carbon's second 2p orbital makes the π bond to the other O."
+  ],
+  "ref": "1.14",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q6",
+  "topic": "o-00-review",
+  "type": "notebook",
+  "q": "In your notebook, draw H₂CO₃ and label every atom except H with its hybridization and, if it has one, its molecular shape. For the OH oxygens, also name the parent geometry their shape is derived from.",
+  "answer": "C sp² · O= sp² · OH sp³",
+  "answer_image": {"source": "sketch", "file": "t0-shape-h2co3.svg", "smiles": "OC(=O)O", "alt": "H₂CO₃ labeled with hybridization and shape: carbon sp² and trigonal planar, the C=O oxygen sp² with no molecular shape, because it is an end atom with one bond, and the OH oxygens sp³ and bent, derived from tetrahedral. The hydrogens carry no hybridization label.", "width": 474, "height": 543},
+  "steps": [
+   "C: 3 electron groups (three O, no lone pairs) → sp², trigonal planar, 120°.",
+   "C=O oxygen: 3 electron groups (C and two lone pairs) → sp². Only one bonded atom, so it is an end atom with no molecular shape.",
+   "Each OH oxygen: 4 electron groups (C, H and two lone pairs) → sp³, parent tetrahedral. Two bonded atoms, so its shape is bent.",
+   "Lone pairs count as electron groups for the hybridization and the parent geometry, but not in the name of the shape.",
+   "The H atoms get no label: hydrogen is not hybridized."
+  ],
+  "ref": "1.16",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q7",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "Which of these molecules has a dipole moment of zero (μ = 0)?",
+  "choices": [
+   {
+    "text": "BF₃",
+    "why": "Right. Each B–F bond is polar, but the three equal bond dipoles point 120° apart in one plane (trigonal planar), so they cancel."
+   },
+   {
+    "text": "NH₃",
+    "why": "NH₃ is trigonal pyramidal. The three N–H dipoles all tilt toward N and add, together with the lone pair, so μ is not zero."
+   },
+   {
+    "text": "H₂O",
+    "why": "H₂O is bent. Both O–H dipoles point toward O and do not cancel, so μ is not zero."
+   },
+   {
+    "text": "cis-1,2-dibromoethene",
+    "why": "Both Br atoms are on the same side of the C=C, so the two C→Br dipoles add toward the bromines. The trans isomer is the one with μ = 0."
+   }
+  ],
+  "right": 0,
+  "answer": "BF₃",
+  "steps": [
+   "Find the polar bonds: B–F, N–H, O–H and C–Br are all polar, so polarity depends on the shape.",
+   "BF₃ is trigonal planar: three equal dipoles 120° apart cancel, μ = 0.",
+   "NH₃ (trigonal pyramidal) and H₂O (bent): the dipoles point toward the central atom and add.",
+   "cis-1,2-dibromoethene: both C→Br dipoles point to the same side and add. Only BF₃ has μ = 0."
+  ],
+  "ref": "2.3",
+  "reviewed": false,
+  "picture_check": {"status": "none", "checked_by": null, "date": null, "note": "No pictures on this card."}
+ },
+ {
+  "id": "o-0-q8",
+  "topic": "o-00-review",
+  "type": "notebook",
+  "q": "Draw each compound in your notebook and write its molecular formula: A oxetane, B cyclobutanol, C allyl alcohol (prop-2-en-1-ol), D cyclopropylmethanol, E cyclopropanol. Then group the ones that are constitutional isomers of each other.",
+  "answer": "A, C, E: C₃H₆O · B, D: C₄H₈O",
+  "answer_image": {"source": "sketch", "file": "t0-isomers-q2.svg", "smiles": "C1COC1.OC1CCC1.C=CCO.OCC1CC1.OC1CC1", "alt": "Five structures with their molecular formulas: A oxetane C₃H₆O, B cyclobutanol C₄H₈O, C allyl alcohol C₃H₆O, D cyclopropylmethanol C₄H₈O, E cyclopropanol C₃H₆O.", "width": 508, "height": 474},
+  "steps": [
+   "A, oxetane: a four-membered ring of 3 C and 1 O. Each ring carbon has 2 H, so 6 H. Formula C₃H₆O.",
+   "B, cyclobutanol: a four-carbon ring with OH on one carbon. 3 CH₂ (6 H) + 1 CH (1 H) + the OH hydrogen = 8 H. Formula C₄H₈O.",
+   "C, allyl alcohol, CH₂=CH–CH₂–OH: 3 C and 2 + 1 + 2 + 1 = 6 H. Formula C₃H₆O.",
+   "D, cyclopropylmethanol: a three-carbon ring with a CH₂OH group. Ring 2 + 2 + 1 = 5 H, CH₂ 2 H, OH 1 H, 8 H in all. Formula C₄H₈O.",
+   "E, cyclopropanol: a three-carbon ring with OH on one carbon. 2 + 2 + 1 + 1 = 6 H. Formula C₃H₆O.",
+   "Check with the 2n + 2 rule: each compound has one ring or one C=C, so H = 2n + 2 − 2 = 2n: 6 H for 3 C and 8 H for 4 C.",
+   "Same formula, different connectivity: A, C and E are constitutional isomers of each other (C₃H₆O), and so are B and D (C₄H₈O). A compound from one group is not an isomer of one from the other, because the formulas differ."
+  ],
+  "ref": "1.6",
+  "reviewed": false,
+  "picture_check": {"status": "checked", "checked_by": "Chem Sketcher", "date": "2026-11-23", "note": "O-T0a v3 drawing by Chem Sketcher, approved by Yishi 2026-11-23."}
+ },
+ {
+  "id": "o-0-q9",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "Which pair are constitutional isomers?",
+  "choices": [
+   {
+    "text": "ethanol and dimethyl ether",
+    "why": "Right. Both are C₂H₆O. In ethanol the O is bonded to C and H (C–O–H), and in dimethyl ether to two C atoms (C–O–C): same formula, different connectivity."
+   },
+   {
+    "text": "butane and 2-methylbutane",
+    "why": "The formulas differ: butane is C₄H₁₀ and 2-methylbutane is C₅H₁₂. Isomers must have the same formula."
+   },
+   {
+    "text": "cis- and trans-1,2-dibromoethene",
+    "why": "Same formula and the same connectivity, BrCH=CHBr. They differ only in their arrangement in space, so they are stereoisomers, not constitutional isomers."
+   },
+   {
+    "text": "propane and propene",
+    "why": "The formulas differ: propane is C₃H₈ and propene is C₃H₆."
+   }
+  ],
+  "right": 0,
+  "answer": "ethanol and dimethyl ether",
+  "steps": [
+   "Write each formula first: ethanol C₂H₆O and dimethyl ether C₂H₆O. butane C₄H₁₀ and 2-methylbutane C₅H₁₂. propane C₃H₈ and propene C₃H₆. Both dibromoethenes are C₂H₂Br₂.",
+   "Keep only the pairs with the same formula: ethanol with dimethyl ether, and the two dibromoethenes.",
+   "Compare connectivity: ethanol is C–C–O–H and dimethyl ether is C–O–C, so the bonding differs.",
+   "The cis and trans dibromoethenes are both Br–C=C–Br with the same bonds: stereoisomers.",
+   "Constitutional isomers: ethanol and dimethyl ether."
+  ],
+  "ref": "1.6",
+  "reviewed": false,
+  "picture_check": {"status": "none", "checked_by": null, "date": null, "note": "No pictures on this card."}
+ },
+ {
+  "id": "o-0-q10",
+  "topic": "o-00-review",
+  "type": "mc",
+  "q": "Which of these solvents is polar aprotic?",
+  "choices": [
+   {
+    "text": "acetone",
+    "why": "Right. Acetone has a polar C=O bond (a large dipole) but no O–H or N–H, so it cannot donate hydrogen bonds."
+   },
+   {
+    "text": "methanol",
+    "why": "Methanol has an O–H bond, so it donates hydrogen bonds: it is polar protic."
+   },
+   {
+    "text": "water",
+    "why": "Water has two O–H bonds: it is polar protic."
+   },
+   {
+    "text": "hexane",
+    "why": "Hexane has only C–C and C–H bonds: it is nonpolar, with dispersion forces only."
+   }
+  ],
+  "right": 0,
+  "answer": "acetone",
+  "steps": [
+   "Polar protic solvents have an O–H or N–H bond and donate hydrogen bonds: water and methanol.",
+   "Nonpolar solvents have only C–C and C–H bonds: hexane.",
+   "Polar aprotic solvents are polar but have no O–H or N–H: acetone, with its polar C=O and every H on carbon.",
+   "Answer: acetone is polar aprotic."
+  ],
+  "ref": "2.13",
+  "reviewed": false,
+  "picture_check": {"status": "none", "checked_by": null, "date": null, "note": "No pictures on this card."}
+ }
  ]
 }

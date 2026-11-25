@@ -287,7 +287,7 @@ function secAnchorId(sec, i) {
 function renderWorked(w, fb) {
   if (!w) return '';
   const steps = (w.steps || []).map(s => `<li>${fmtRich(s)}</li>`).join('');
-  return `<div class="worked" data-worked="1"><div class="cap">${esc(T('workedExample'))}</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps"${rtlList({ _en: fb })}>${steps}</ol></div>`;
+  return `<div class="worked" data-worked="1"><div class="cap">${esc(T('workedExample'))}</div><div class="worked-title">${fmtRich(w.title || '')}</div><ol class="steps"${rtlList({ _en: fb })}>${steps}</ol>${picsR(w)}</div>`;
 }
 function renderSection(sec, i, t) {
   let h = '';
@@ -295,6 +295,7 @@ function renderSection(sec, i, t) {
   if (sec.heading) h += `<h3 class="rh" id="${esc(aid)}">${hd(sec.heading)}</h3>`;
   if (sec._en && !sec._all) h += `<p class="cap" style="margin:0 0 8px">${enOnly(sec)}</p>`;
   (sec.paragraphs || []).forEach(p => { h += `<p class="rp">${fmtRich(p)}</p>`; });
+  h += picsR(sec); // Organic readings: pictures right after the text that introduces them
   if (sec.why) {
     h += `<div class="callout callout-why" data-why="1"><div class="cap">${esc(T('whyMatters'))}</div><p class="rp" style="margin:0">${fmtRich(sec.why)}</p></div>`;
   }
@@ -340,7 +341,6 @@ function renderSection(sec, i, t) {
       h += figPlaceholder(sec.figure.note, 'data-pending-sketch="1"');
     }
   }
-  if (sec.picture) h += pic(sec.picture); // Organic readings: the same picture entry as on cards
   h += reportBtn(t, 'section', sec.id || 's' + (i + 1), sec.heading || '', sec._en);
   return h;
 }
@@ -359,8 +359,10 @@ document.addEventListener('error', e => {
     else closeLightbox();
     return;
   }
-  if (img.parentElement && img.parentElement.matches('figure.opic')) { // Organic picture: same box, placeholder inside
-    img.outerHTML = picMissing({ alt: img.getAttribute('alt'), width: img.getAttribute('width'), height: img.getAttribute('height') });
+  const of = img.closest('figure.opic');
+  if (of) { // Organic picture (card, or reading figure inside its enlarge button): same box, placeholder inside
+    const hint = of.querySelector('.rsketch-hint'); if (hint) hint.remove();
+    (img.closest('.rsketch-btn') || img).outerHTML = picMissing({ alt: img.getAttribute('alt'), width: img.getAttribute('width'), height: img.getAttribute('height') });
     return;
   }
   const box = img.closest('.rfig, .qimg');
@@ -390,7 +392,7 @@ function closeLightbox() {
   lightboxReturnFocus = null;
 }
 function openLightbox(fromBtn) {
-  const img = fromBtn.querySelector('img.rsketch') || fromBtn;
+  const img = fromBtn.querySelector('img') || fromBtn;
   const alt = img.getAttribute('alt') || T('figure');
   const full = img.getAttribute('data-full') || img.getAttribute('src') || '';
   const inlineW = Math.max(1, img.getBoundingClientRect().width || img.clientWidth || 320);
@@ -594,6 +596,14 @@ const O_TYPES = new Set(['mc', 'typed', 'notebook']);
 const picBox = p => p.width && p.height ? { attr: ` width="${+p.width}" height="${+p.height}"`, css: `width:${+p.width}px;aspect-ratio:${+p.width}/${+p.height}` } : { attr: '', css: '' };
 const picMissing = p => `<div class="opic-miss" data-missing-pic="1" role="img" aria-label="${esc(plain(p.alt || ''))}" style="${picBox(p).css}"><span class="cap">${esc(T('pictureMissing'))}</span></div>`;
 const pic = p => p ? `<figure class="opic">${p.file ? `<img src="${esc(COURSE.dir + 'img/' + p.file)}" alt="${esc(plain(p.alt))}"${picBox(p).attr}>` : picMissing(p)}</figure>` : '';
+// Organic reading figure: the same picture entry, scaled to the column (never enlarged), with tap to enlarge (lightbox).
+const picR = p => {
+  if (!p || !p.file) return pic(p);
+  const src = esc(COURSE.dir + 'img/' + p.file);
+  return `<figure class="opic rpic"><button type="button" class="rsketch-btn" data-sketch-btn="1"><img src="${src}" data-full="${src}" alt="${esc(plain(p.alt))}"${picBox(p).attr} loading="lazy" decoding="async"></button><div class="rsketch-hint">${esc(T('tapToEnlarge'))}</div></figure>`;
+};
+// A reading section or worked example may carry one picture and/or a list of pictures.
+const picsR = x => (x.picture ? picR(x.picture) : '') + (x.pictures || []).map(picR).join('');
 // IUPAC names and typed answers: one left-to-right line that never wraps; a name too long for the screen scrolls sideways.
 const nameHtml = s => `<bdi dir="ltr" lang="en" class="tname">${esc(s)}</bdi>`;
 // English text: keep a hyphenated name with locants (1-bromo-3-methylbutane, 2,3-dimethylpentane) on one line.

@@ -24,17 +24,19 @@ const fsCtx = {
     if (!fs.existsSync(b)) return 'site-missing';
     return fs.readFileSync(a).equals(fs.readFileSync(b)) ? 'ok' : 'site-differs';
   },
-  // {width, height} from the SVG root (width/height attrs, else viewBox), or null if unreadable
+  // {width, height} in whole px from the SVG root, or null if unreadable. width/height: a number, "px" or "pt" (x 4/3, CSS px);
+  // any other unit (%, em, mm ...) is unreadable. Missing width/height: the viewBox. Rounded half up. Same rule as svg_size in make-pictures.py.
   svgSize(dir, file) {
     const f = path.join(root, dir, 'img', file);
     if (!fs.existsSync(f)) return null;
     const m = fs.readFileSync(f, 'utf8').match(/<svg\b[^>]*>/i);
     if (!m) return null;
-    const attr = n => { const a = m[0].match(new RegExp(`\\s${n}\\s*=\\s*["']([^"']*)["']`, 'i')); return a ? a[1] : null; };
+    const attr = n => { const a = m[0].match(new RegExp(`(?<![\\w:-])${n}\\s*=\\s*["']([^"']*)["']`, 'i')); return a ? a[1] : null; };
+    const px = v => { const u = /^\s*(\d+\.?\d*|\.\d+)\s*(px|pt)?\s*$/i.exec(v); return u ? (u[2] && u[2].toLowerCase() === 'pt' ? Number(u[1]) * 4 / 3 : Number(u[1])) : NaN; };
     const w = attr('width'), h = attr('height');
-    if (w && h && !isNaN(parseFloat(w)) && !isNaN(parseFloat(h))) return { width: parseFloat(w), height: parseFloat(h) };
+    if (w !== null && h !== null) { const a = px(w), b = px(h); return isNaN(a) || isNaN(b) ? null : { width: Math.round(a), height: Math.round(b) }; }
     const vb = (attr('viewBox') || '').trim().split(/[\s,]+/).map(Number);
-    return vb.length === 4 && vb.every(n => !isNaN(n)) ? { width: vb[2], height: vb[3] } : null;
+    return vb.length === 4 && vb.every(n => !isNaN(n)) ? { width: Math.round(vb[2]), height: Math.round(vb[3]) } : null;
   },
   siteSame(rel) {
     const a = path.join(root, rel), b = path.join(root, 'site', rel);
@@ -57,13 +59,13 @@ function checkPicture(p, where, dir, ctx, bad) {
   }
   if (!nonEmpty(p.smiles)) bad('picture', `${where}.smiles: empty`);
   if (!nonEmpty(p.alt)) bad('picture', `${where}.alt: empty`);
-  // picture-size: source, pixel size, must match the SVG's own size, and fit a 360px screen (<= 296 wide)
+  // picture-size: source, pixel size, must match the SVG's own size; automatic (RDKit) pictures must fit a 360px screen (<= 296 wide), sketches may be wider
   if (p.source !== 'auto' && p.source !== 'sketch') bad('picture-size', `${where}.source: must be "auto" or "sketch"`);
   if (pending) return;
   const posInt = n => Number.isInteger(n) && n > 0;
   if (!posInt(p.width) || !posInt(p.height)) bad('picture-size', `${where}: width and height must be positive integers`);
   else {
-    if (p.width > 296) bad('picture-size', `${where}.width ${p.width}: wider than 296 (scaled down at a 360px screen)`);
+    if (p.source === 'auto' && p.width > 296) bad('picture-size', `${where}.width ${p.width}: wider than 296 (scaled down at a 360px screen)`);
     const s = isStr(p.file) && /\.svg$/i.test(p.file) && ctx.svgSize ? ctx.svgSize(dir, p.file) : null;
     if (s && (s.width !== p.width || s.height !== p.height)) bad('picture-size', `${where}: size ${p.width}x${p.height} differs from ${p.file} (${s.width}x${s.height})`);
   }
@@ -88,13 +90,19 @@ function checkPictureSet(set, dir, ctx) {
   });
   return out;
 }
+/** Every picture object (has "source" and "file") anywhere inside node, with its path: sections[2].workedExamples[0].picture. */
+function findPictures(node, p, out) {
+  if (Array.isArray(node)) node.forEach((v, i) => findPictures(v, `${p}[${i}]`, out));
+  else if (isObj(node)) {
+    if ('source' in node && 'file' in node) out.push({ p: node, path: p });
+    else for (const k of Object.keys(node)) findPictures(node[k], p ? `${p}.${k}` : k, out);
+  }
+  return out;
+}
 function checkReadingPictures(readings, dir, ctx) {
   const out = [];
-  for (const [topic, r] of Object.entries((readings && readings.readings) || {})) {
-    (isObj(r) && Array.isArray(r.sections) ? r.sections : []).forEach((s, i) => {
-      if (s && s.picture !== undefined) checkPicture(s.picture, `sections[${i}].picture`, dir, ctx, (rule, msg) => out.push({ id: topic, rule, msg }));
-    });
-  }
+  for (const [topic, r] of Object.entries((readings && readings.readings) || {}))
+    for (const { p, path: where } of findPictures(r, '', [])) checkPicture(p, where, dir, ctx, (rule, msg) => out.push({ id: topic, rule, msg }));
   return out;
 }
 const validPicture = (p, dir, ctx) => { let ok = true; checkPicture(p, '', dir, ctx, () => { ok = false; }); return ok; };
@@ -175,14 +183,42 @@ function semicolons(s0) {
 }
 const needsHebrew = p => /^(q|steps\[\d+\]|choices\[\d+\]\.why|(.*\.)?alt)$/.test(p);
 
-/** index = {topics:[ids]}, files = {topicId: parsed json | undefined}, enCards = all Organic cards. */
-function checkOverlay(index, files, enCards, ctx) {
+const HE_RD_FORBIDDEN = ['file', 'smiles', 'source', 'width', 'height'];
+const FORMULA_ONLY = /^<bdi>(?:(?!<\/?bdi>)[\s\S])*<\/bdi>\.?$/;   // a string that is exactly one <bdi> formula needs no Hebrew
+const rdNeedsHebrew = p => /(^|\.)(heading|title|alt)$|(^|\.)(paragraphs|steps)\[\d+\]$/.test(p);
+const RD_ARRAYS = /(^|\.)(paragraphs|steps|workedExamples|pictures|items)$/;
+/** Hebrew reading overlay of one topic (reading = he.reading, en = English reading or undefined). bad(rule, msg). */
+function checkHeReading(reading, en, bad) {
+  const hs = isObj(reading) && Array.isArray(reading.sections) ? reading.sections : null;
+  if (!hs) return bad('reading-sections', 'reading.sections must be an array');
+  const eIds = en && Array.isArray(en.sections) ? en.sections.map(s => s && s.id) : null, hIds = hs.map(s => isObj(s) ? s.id : undefined);
+  if (!eIds) bad('reading-sections', 'Hebrew reading but no English reading for this topic');
+  else if (eIds.length !== hIds.length || eIds.some((x, i) => x !== hIds[i])) bad('reading-sections', `section ids/order differ: en=[${eIds.join(',')}] he=[${hIds.join(',')}]`);
+  (function keys(o, p) { if (Array.isArray(o)) o.forEach((v, i) => keys(v, `${p}[${i}]`)); else if (isObj(o)) for (const k of Object.keys(o)) { const q = p ? `${p}.${k}` : k; if (HE_RD_FORBIDDEN.includes(k)) bad('forbidden-key', `reading.${q} must not appear (comes from the English data)`); keys(o[k], q); } })(hs, 'sections');
+  walk(hs, 'sections', (s, p) => {
+    if (/(^|\.)id$/.test(p)) return;                       // section ids are Latin on purpose
+    if (SUPSUB.test(s)) bad('supsub', `reading.${p}: raw sub/superscript character`);
+    SUPSUB.lastIndex = 0;
+    for (const m of s.matchAll(/<bdi>([\s\S]*?)<\/bdi>/g)) if (HEB.test(m[1])) bad('bdi-hebrew', `reading.${p}: Hebrew letters inside <bdi>`);
+    if (semicolons(s)) bad('semicolon', `reading.${p}: semicolon outside <bdi>`);
+    if (heWrap(s) !== s) bad('wrap', `reading.${p}: Latin/formula run outside <bdi>: ${s.slice(0, 60)}`);
+    if (rdNeedsHebrew(p) && !HEB.test(s) && !FORMULA_ONLY.test(s.trim())) bad('needs-hebrew', `reading.${p}: no Hebrew letters`);
+  });
+  if (eIds) hs.forEach((h, i) => (function cmp(e, x, p) {   // arrays present on both sides keep their length
+    if (Array.isArray(e) && Array.isArray(x)) { if (RD_ARRAYS.test(p) && e.length !== x.length) bad('array-length', `reading.${p}: length en=${e.length} he=${x.length}`); e.forEach((v, j) => cmp(v, x[j], `${p}[${j}]`)); }
+    else if (isObj(e) && isObj(x)) for (const k of Object.keys(x)) if (k in e) cmp(e[k], x[k], `${p}.${k}`);
+  })(en.sections.find(s => s && s.id === (isObj(h) ? h.id : undefined)), h, `sections[${i}]`));
+}
+
+/** index = {topics:[ids]}, files = {topicId: parsed json | undefined}, enCards = all Organic cards, enReadings = {topicId: English reading}. */
+function checkOverlay(index, files, enCards, ctx, enReadings) {
   const out = [];
   for (const tid of index.topics || []) {
     const bad = (id, rule, msg) => out.push({ id: id || tid, rule, msg });
     const f = files[tid];
     if (!f) { bad(tid, 'file', `data/organic1/he/topics/${tid}.json missing`); continue; }
     if (!ctx.siteSame(`data/organic1/he/topics/${tid}.json`)) bad(tid, 'site-copy', 'site/ copy missing or not byte-identical');
+    if ('reading' in f) checkHeReading(f.reading, (enReadings || {})[tid], (rule, msg) => bad(tid, rule, msg));
     const hq = f.questions;
     if (!isObj(hq)) { bad(tid, 'file', '.questions map missing'); continue; }
     const en = enCards.filter(c => c.topic === tid), enIds = new Set(en.map(c => c.id));
@@ -251,6 +287,7 @@ function loadAll() {
   const courses = rd('data/courses.json').courses;
   return courses.map(c => ({ course: c, cards: rd(c.dir + 'questions.json').questions, topics: rd(c.dir + 'topics.json').topics }));
 }
+const loadEnReadings = () => fs.existsSync(path.join(root, 'data/organic1/readings.json')) ? rd('data/organic1/readings.json').readings || {} : {};
 function loadOverlay() {
   const index = rd('data/organic1/he/index.json');
   const files = {};
@@ -266,7 +303,7 @@ if (process.argv[2] !== '--self-test') {
   }
   const org = all.find(a => a.course.id === 'organic1');
   const { index, files } = loadOverlay();
-  const op = checkOverlay(index, files, org ? org.cards : [], fsCtx);
+  const op = checkOverlay(index, files, org ? org.cards : [], fsCtx, loadEnReadings());
   groups.push(group('organic1 Hebrew overlay', op, op.length ? [] : [`${index.topics.length} topic(s) valid`]));
   const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8');
   const fp = checkFormulaAlign(css);
@@ -280,7 +317,7 @@ if (process.argv[2] !== '--self-test') {
   } else groups.push(group('organic1 picture set', [], ['data/organic1/pictures.json not present: skipped']));
   if (fs.existsSync(path.join(root, 'data/organic1/readings.json'))) {
     const rdg = rd('data/organic1/readings.json'), rp = checkReadingPictures(rdg, 'data/organic1/', fsCtx);
-    const n = Object.values(rdg.readings || {}).reduce((a, r) => a + ((r && r.sections) || []).filter(s => s && s.picture !== undefined).length, 0);
+    const n = Object.values(rdg.readings || {}).reduce((a, r) => a + findPictures(r, '', []).length, 0);
     groups.push(group('organic1 reading pictures', rp, rp.length ? [] : [`${n} reading pictures valid`]));
   } else groups.push(group('organic1 reading pictures', [], ['data/organic1/readings.json not present: skipped']));
   for (const g of groups) { console.log(`${g.failed ? 'FAIL' : 'PASS'} ${g.label}`); console.log(g.lines.join('\n')); }
@@ -296,8 +333,19 @@ const gen = all.find(a => a.course.id === 'gen'), org = all.find(a => a.course.i
 const okCtx = { imgState: (d, f) => fsCtx.imgState(d, f) === 'missing' ? 'missing' : 'ok', siteSame: () => true }; // real file presence (a sketch not drawn yet stays missing)
 const find = (cards, t) => cards.find(c => c.type === t);
 const baseCards = () => ({ gen: clone(gen.cards), org: clone(org.cards) });
-// Valid synthetic Hebrew overlay built from the English cards (independent of the real overlay's state).
-function baseOverlay(enCards) {
+const FX = 'o-zz-fixture';   // synthetic topic that always carries a reading, so the reading cases run even before Organic has real readings
+const fxPic = { source: 'sketch', file: 'f.svg', smiles: 'CC', alt: 'picture', width: 100, height: 50 };
+const fxReading = () => ({ sections: [{ id: 's1', heading: 'Heading', paragraphs: ['One.', 'Two.'], workedExamples: [{ title: 'Example', steps: ['Step one', 'Step two'], picture: { ...fxPic } }] }] });
+// Valid Hebrew reading node built from an English one: same shape, every string Hebrew, pictures reduced to their alt, ids kept.
+function heFrom(e, k) {
+  if (isStr(e)) return k === 'id' ? e : 'טקסט';
+  if (Array.isArray(e)) return e.map(v => heFrom(v, k));
+  if (!isObj(e)) return undefined;
+  if ('source' in e && 'file' in e) return { alt: 'תמונה' };
+  const o = {}; for (const key of Object.keys(e)) { const v = heFrom(e[key], key); if (v !== undefined) o[key] = v; } return o;
+}
+// Valid synthetic Hebrew overlay built from the English cards and readings (independent of the real overlay's state).
+function baseOverlay(enCards, realReadings) {
   const idx = { topics: [...new Set(enCards.map(c => c.topic))] }, files = {};
   for (const t of idx.topics) {
     files[t] = { questions: {} };
@@ -309,8 +357,15 @@ function baseOverlay(enCards) {
       files[t].questions[c.id] = h;
     }
   }
-  return { idx, files };
+  const enReadings = { ...realReadings, [FX]: fxReading() };
+  for (const t of Object.keys(enReadings)) {
+    if (!isObj(enReadings[t]) || !Array.isArray(enReadings[t].sections)) continue;
+    if (!files[t]) { idx.topics.push(t); files[t] = { questions: {} }; }
+    files[t].reading = { sections: heFrom(enReadings[t].sections) };
+  }
+  return { idx, files, enReadings };
 }
+const realReadings = loadEnReadings();
 const cases = [
   ['id-unique', 'duplicate id', ({ g, o }) => { o[1].id = g[0].id; }],
   ['id-prefix', 'Organic id without o-', ({ o }) => { o[0].id = 'x-sample-mc'; }],
@@ -333,12 +388,23 @@ const hcases = [
   ['wrap', 'Hebrew string with Latin outside <bdi>', h => { const t = Object.keys(h.files)[0], id = Object.keys(h.files[t].questions)[0]; h.files[t].questions[id].q = 'מה השם של methylbutane'; }],
   ['cards', 'Hebrew overlay missing a card', h => { const t = Object.keys(h.files)[0]; delete h.files[t].questions[Object.keys(h.files[t].questions)[0]]; }],
   ['array-length', 'Hebrew steps length differs', h => { const t = Object.keys(h.files)[0], id = Object.keys(h.files[t].questions)[0]; h.files[t].questions[id].steps.pop(); }],
+  // Hebrew reading overlay (the synthetic topic FX always has a reading; the English side is h.enReadings)
+  ['forbidden-key', 'Hebrew reading overlay picture with a file key', h => { h.files[FX].reading.sections[0].workedExamples[0].picture.file = 'f.svg'; }],
+  ['supsub', 'Hebrew reading string with raw subscript', h => { h.files[FX].reading.sections[0].paragraphs[0] = 'מים H₂O'; }],
+  ['reading-sections', 'Hebrew reading section id differs', h => { h.files[FX].reading.sections[0].id = 'zzz'; }],
+  ['reading-sections', 'Hebrew reading has an extra section', h => { h.files[FX].reading.sections.push({ id: 's2', heading: 'כותרת' }); }],
+  ['array-length', 'Hebrew reading paragraphs length differs', h => { h.files[FX].reading.sections[0].paragraphs.pop(); }],
+  ['array-length', 'Hebrew reading worked-example steps length differs', h => { h.files[FX].reading.sections[0].workedExamples[0].steps.pop(); }],
+  ['needs-hebrew', 'Hebrew reading paragraph without Hebrew letters', h => { h.files[FX].reading.sections[0].paragraphs[1] = 'plain English'; }],
+  ['wrap', 'Hebrew reading string with Latin outside <bdi>', h => { h.files[FX].reading.sections[0].heading = 'כותרת methylbutane'; }],
+  ['bdi-hebrew', 'Hebrew reading with Hebrew letters inside <bdi>', h => { h.files[FX].reading.sections[0].paragraphs[0] = 'טקסט <bdi>שלום</bdi>'; }],
+  ['semicolon', 'Hebrew reading with a semicolon outside <bdi>', h => { h.files[FX].reading.sections[0].paragraphs[0] = 'טקסט; עוד טקסט'; }],
 ];
 let caught = 0, total = 0;
 const report = (name, rule, probs) => { total++; const hit = probs.some(p => p.rule === rule); if (hit) caught++; console.log(`  ${hit ? 'ok  ' : 'MISSED'} ${name} -> [${rule}]`); };
 { // baseline must be clean, otherwise a "caught" fault could be noise
-  const b = baseCards(), seen = new Map(), ov = baseOverlay(b.org);
-  const p = [...checkCourse(gen.course, b.gen, gen.topics, okCtx, seen), ...checkCourse(org.course, b.org, org.topics, okCtx, seen), ...checkOverlay(ov.idx, ov.files, b.org, okCtx)];
+  const b = baseCards(), seen = new Map(), ov = baseOverlay(b.org, realReadings);
+  const p = [...checkCourse(gen.course, b.gen, gen.topics, okCtx, seen), ...checkCourse(org.course, b.org, org.topics, okCtx, seen), ...checkOverlay(ov.idx, ov.files, b.org, okCtx, ov.enReadings)];
   if (p.length) { console.log('baseline not clean:\n' + p.slice(0, 10).map(x => `  ${x.id} [${x.rule}] ${x.msg}`).join('\n')); process.exit(1); }
 }
 for (const [rule, name, mutate, ctx] of cases) {
@@ -347,8 +413,8 @@ for (const [rule, name, mutate, ctx] of cases) {
   report(name, rule, [...checkCourse(gen.course, b.gen, gen.topics, ctx || okCtx, seen), ...checkCourse(org.course, b.org, org.topics, ctx || okCtx, seen)]);
 }
 for (const [rule, name, mutate] of hcases) {
-  const ov = baseOverlay(clone(org.cards)); mutate(ov);
-  report(name, rule, checkOverlay(ov.idx, ov.files, org.cards, okCtx));
+  const ov = baseOverlay(clone(org.cards), realReadings); mutate(ov);
+  report(name, rule, checkOverlay(ov.idx, ov.files, org.cards, okCtx, ov.enReadings));
 }
 { // formula baseline: the real files must pass, then each planted copy must fail
   const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8');
@@ -374,7 +440,7 @@ for (const [rule, name, mutate] of hcases) {
     ['picture without width', p => { delete p.width; }],
     ['picture width differs from its SVG file', p => { p.width = 120; }, true],
     ['picture with unknown source', p => { p.source = 'scan'; }],
-    ['picture wider than 296', p => { p.width = 400; }],
+    ['picture wider than 296', p => { p.source = 'auto'; p.width = 400; }],   // automatic (RDKit) pictures keep the 296 limit
   ];
   let p = null;
   for (const [name, mutate, cx] of pcases) {
@@ -382,10 +448,25 @@ for (const [rule, name, mutate] of hcases) {
     const c2 = cx ? { ...okCtx, svgSize: () => ({ width: 1, height: 1 }) } : sctx;
     report(name, 'picture-size', checkCourse(org.course, b, org.topics, c2, new Map()));
   }
+  { // a sketch picture may be wider than 296 (must be accepted), also nested inside a reading; reading pictures are found anywhere
+    const wide = { source: 'sketch', file: 'wide.svg', smiles: 'CC', alt: 'a', width: 806, height: 331 }, wctx = { ...okCtx, imgState: () => 'ok', svgSize: (d, f) => f === 'wide.svg' ? { width: 806, height: 331 } : null };
+    const b = clone(org.cards); find(b, 'mc').q_image = { ...wide };
+    const accepted = !checkCourse(org.course, b, org.topics, wctx, new Map()).some(x => x.rule === 'picture-size');
+    const nested = { readings: { 'o-x': { sections: [{ id: 's1', pictures: [{ ...wide }], worked: { picture: { ...wide } }, workedExamples: [{ picture: { ...wide } }] }] } } };
+    const rp = checkReadingPictures(nested, org.course.dir, wctx), found = findPictures(nested, '', []).length;
+    const ok1 = accepted && rp.length === 0 && found === 3;
+    total++; if (ok1) caught++;
+    console.log(`  ${ok1 ? 'ok  ' : 'MISSED'} sketch picture wider than 296 is accepted (card picture, and ${found} nested reading pictures)`);
+    nested.readings['o-x'].sections[0].workedExamples[0].picture = { ...wide, source: 'auto' };
+    const rp2 = checkReadingPictures(nested, org.course.dir, wctx);
+    report('reading picture nested in workedExamples (auto, wider than 296)', 'picture-size', rp2);
+    const pathOk = rp2.some(x => x.msg.startsWith('sections[0].workedExamples[0].picture'));
+    total++; if (pathOk) caught++;
+    console.log(`  ${pathOk ? 'ok  ' : 'MISSED'} reading picture problem names its path sections[0].workedExamples[0].picture`); }
   { const s = clone(setBase); s.pictures.push({ ...s.pictures[0] }); report('picture set: duplicate id', 'picture-set', checkPictureSet(s, org.course.dir, sctx)); }
   { const s = clone(setBase); s.pictures[0].picture_check = 'maybe'; report('picture set: bad picture_check', 'picture-set', checkPictureSet(s, org.course.dir, sctx)); }
-  { const ov = baseOverlay(clone(org.cards)); const t = Object.keys(ov.files)[0], id = Object.keys(ov.files[t].questions)[0]; ov.files[t].questions[id].q_image = { alt: 'תמונה', width: 100 };
-    report('Hebrew overlay with a width key', 'forbidden-key', checkOverlay(ov.idx, ov.files, org.cards, okCtx)); }
+  { const ov = baseOverlay(clone(org.cards), realReadings); const t = Object.keys(ov.files)[0], id = Object.keys(ov.files[t].questions)[0]; ov.files[t].questions[id].q_image = { alt: 'תמונה', width: 100 };
+    report('Hebrew overlay with a width key', 'forbidden-key', checkOverlay(ov.idx, ov.files, org.cards, okCtx, ov.enReadings)); }
   { const css = fs.readFileSync(path.join(root, 'site/style.css'), 'utf8');
     if (checkFormulaAlignGen(css).length) { console.log('gen formula baseline: real css not clean, cannot plant'); process.exit(1); }
     const bad = css.replace(/(html\[lang=he\] bdi\.fx\{[^}]*?)vertical-align:baseline/, '$1vertical-align:bottom');
