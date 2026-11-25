@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="213.92" height="183.68" viewBox="60.80 33.60 213.92 183.68" role="img" aria-label="Lewis structure of 3-chloroprop-1-yne with formal charges">
+<!-- t0-lewis-ch2clcch; original Chem Sketcher drawing; encoding=UTF-8 -->
+<rect x="60.80" y="33.60" width="213.92" height="183.68" fill="#FFFFFF"/>
+<line x1="117.00" y1="100.00" x2="130.00" y2="100.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="142.59" y1="90.34" x2="146.86" y2="74.40" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="142.59" y1="109.66" x2="146.86" y2="125.60" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="150.00" y1="100.00" x2="164.00" y2="100.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="184.00" y1="100.00" x2="198.00" y2="100.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="184.00" y1="96.80" x2="198.00" y2="96.80" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="184.00" y1="103.20" x2="198.00" y2="103.20" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<line x1="218.00" y1="100.00" x2="234.50" y2="100.00" stroke="#1A1A1A" stroke-width="2.0" stroke-linecap="butt"/>
+<text x="106.00" y="105.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#007A00">Cl</text>
+<text x="140.00" y="105.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">C</text>
+<text x="174.00" y="105.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">C</text>
+<text x="208.00" y="105.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">C</text>
+<text x="148.80" y="72.76" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="148.80" y="138.44" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<text x="242.00" y="105.60" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#1A1A1A">H</text>
+<circle cx="109.10" cy="115.00" r="2.15" fill="#007A00"/>
+<circle cx="102.90" cy="115.00" r="2.15" fill="#007A00"/>
+<circle cx="91.00" cy="103.10" r="2.15" fill="#007A00"/>
+<circle cx="91.00" cy="96.90" r="2.15" fill="#007A00"/>
+<circle cx="102.90" cy="85.00" r="2.15" fill="#007A00"/>
+<circle cx="109.10" cy="85.00" r="2.15" fill="#007A00"/>
+<text x="190.00" y="188.00" text-anchor="middle" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="#5F6B7A">ClCH₂C≡CH</text>
+</svg>

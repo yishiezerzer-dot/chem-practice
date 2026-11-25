@@ -106,5 +106,81 @@
  {
   "he": "ציירו את התשובה במחברת שלכם, ואז לחצו על הצגת תשובה.",
   "en": "UI: drawing prompt"
+ },
+ {
+  "he": "אונה",
+  "en": "lobe"
+ },
+ {
+  "he": "קשר קוולנטי",
+  "en": "covalent bond"
+ },
+ {
+  "he": "ליניארי",
+  "en": "linear"
+ },
+ {
+  "he": "משולש מישורי",
+  "en": "trigonal planar"
+ },
+ {
+  "he": "פירמידה משולשת",
+  "en": "trigonal pyramidal"
+ },
+ {
+  "he": "זוויתי",
+  "en": "bent"
+ },
+ {
+  "he": "מומנט דיפול",
+  "en": "dipole moment"
+ },
+ {
+  "he": "איזומר קונסטיטוציוני",
+  "en": "constitutional isomer"
+ },
+ {
+  "he": "סטריאואיזומר",
+  "en": "stereoisomer"
+ },
+ {
+  "he": "קישוריות",
+  "en": "connectivity"
+ },
+ {
+  "he": "קבוצה פונקציונלית",
+  "en": "functional group"
+ },
+ {
+  "he": "אלכוהול",
+  "en": "alcohol"
+ },
+ {
+  "he": "אתר",
+  "en": "ether"
+ },
+ {
+  "he": "קטון",
+  "en": "ketone"
+ },
+ {
+  "he": "אלקין",
+  "en": "alkyne"
+ },
+ {
+  "he": "חומצה קרבוקסילית",
+  "en": "carboxylic acid"
+ },
+ {
+  "he": "אמין",
+  "en": "amine"
+ },
+ {
+  "he": "קוטבי פרוטי",
+  "en": "polar protic"
+ },
+ {
+  "he": "קוטבי אפרוטי",
+  "en": "polar aprotic"
  }
 ]

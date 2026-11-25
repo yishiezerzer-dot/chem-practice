@@ -2,6 +2,7 @@
  "lang": "he",
  "note": "Hebrew overlay for Organic Chemistry 1, same layout as data/he/. Topic names already carry Hebrew in topics.json (topic_he). topics/<id>.json holds the Hebrew card translations (questions) and, later, readings; list each translated topic id here.",
  "topics": [
+  "o-00-review",
   "o-02-nomenclature"
  ]
 }
